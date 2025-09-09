@@ -5,12 +5,12 @@
 
 ### Available Operations
 
-* [GlobalOncallReminderRulesDeleteGlobalOncallReminderRules](#globaloncallreminderrulesdeleteglobaloncallreminderrules) - Delete Global Oncall Reminder Rules
-* [GlobalOncallReminderRulesGetGlobalOncallReminderRules](#globaloncallreminderrulesgetglobaloncallreminderrules) - Get Global Oncall Reminder Rules
-* [GlobalOncallReminderRulesCreateGlobalOncallReminderRules](#globaloncallreminderrulescreateglobaloncallreminderrules) - Create Global Oncall Reminder Rules
-* [GlobalOncallReminderRulesUpdateGlobalOncallReminderRules](#globaloncallreminderrulesupdateglobaloncallreminderrules) - Update Global Oncall Reminder Rules
+* [Delete](#delete) - Delete Global Oncall Reminder Rules
+* [List](#list) - Get Global Oncall Reminder Rules
+* [Create](#create) - Create Global Oncall Reminder Rules
+* [Update](#update) - Update Global Oncall Reminder Rules
 
-## GlobalOncallReminderRulesDeleteGlobalOncallReminderRules
+## Delete
 
 Delete Global Oncall Reminder Rules
 
@@ -23,7 +23,7 @@ package main
 import(
 	"context"
 	"os"
-	squadcastsdk "github.com/SquadcastHub/squadcast-sdk-go"
+	squadcastsdk "github.com/SquadcastHub/squadcast-sdk-go/squadcastv1"
 	"log"
 )
 
@@ -34,7 +34,7 @@ func main() {
         squadcastsdk.WithSecurity(os.Getenv("SQUADCASTSDK_BEARER_AUTH")),
     )
 
-    res, err := s.GlobalOncallReminderRules.GlobalOncallReminderRulesDeleteGlobalOncallReminderRules(ctx, "<id>")
+    res, err := s.GlobalOncallReminderRules.Delete(ctx, "<id>")
     if err != nil {
         log.Fatal(err)
     }
@@ -73,7 +73,7 @@ func main() {
 | apierrors.GlobalOncallReminderRulesDeleteGlobalOncallReminderRulesGatewayTimeoutError      | 504                                                                                        | application/json                                                                           |
 | apierrors.APIError                                                                         | 4XX, 5XX                                                                                   | \*/\*                                                                                      |
 
-## GlobalOncallReminderRulesGetGlobalOncallReminderRules
+## List
 
 Get Global Oncall Reminder Rules
 
@@ -86,7 +86,7 @@ package main
 import(
 	"context"
 	"os"
-	squadcastsdk "github.com/SquadcastHub/squadcast-sdk-go"
+	squadcastsdk "github.com/SquadcastHub/squadcast-sdk-go/squadcastv1"
 	"log"
 )
 
@@ -97,7 +97,7 @@ func main() {
         squadcastsdk.WithSecurity(os.Getenv("SQUADCASTSDK_BEARER_AUTH")),
     )
 
-    res, err := s.GlobalOncallReminderRules.GlobalOncallReminderRulesGetGlobalOncallReminderRules(ctx, "<id>")
+    res, err := s.GlobalOncallReminderRules.List(ctx, "<id>")
     if err != nil {
         log.Fatal(err)
     }
@@ -136,7 +136,7 @@ func main() {
 | apierrors.GlobalOncallReminderRulesGetGlobalOncallReminderRulesGatewayTimeoutError      | 504                                                                                     | application/json                                                                        |
 | apierrors.APIError                                                                      | 4XX, 5XX                                                                                | \*/\*                                                                                   |
 
-## GlobalOncallReminderRulesCreateGlobalOncallReminderRules
+## Create
 
 Create Global Oncall Reminder Rules
 
@@ -149,8 +149,8 @@ package main
 import(
 	"context"
 	"os"
-	squadcastsdk "github.com/SquadcastHub/squadcast-sdk-go"
-	"github.com/SquadcastHub/squadcast-sdk-go/models/components"
+	squadcastsdk "github.com/SquadcastHub/squadcast-sdk-go/squadcastv1"
+	"github.com/SquadcastHub/squadcast-sdk-go/squadcastv1/models/components"
 	"log"
 )
 
@@ -161,7 +161,7 @@ func main() {
         squadcastsdk.WithSecurity(os.Getenv("SQUADCASTSDK_BEARER_AUTH")),
     )
 
-    res, err := s.GlobalOncallReminderRules.GlobalOncallReminderRulesCreateGlobalOncallReminderRules(ctx, components.V3GlobalOncallReminderRulesCreateGlobalOncallReminderRulesRequest{
+    res, err := s.GlobalOncallReminderRules.Create(ctx, components.V3GlobalOncallReminderRulesCreateGlobalOncallReminderRulesRequest{
         IsEnabled: true,
         OwnerID: "<id>",
         Rules: []components.V3GlobalOncallReminderRulesRule{},
@@ -204,7 +204,7 @@ func main() {
 | apierrors.GlobalOncallReminderRulesCreateGlobalOncallReminderRulesGatewayTimeoutError      | 504                                                                                        | application/json                                                                           |
 | apierrors.APIError                                                                         | 4XX, 5XX                                                                                   | \*/\*                                                                                      |
 
-## GlobalOncallReminderRulesUpdateGlobalOncallReminderRules
+## Update
 
 Update Global Oncall Reminder Rules
 
@@ -217,8 +217,8 @@ package main
 import(
 	"context"
 	"os"
-	squadcastsdk "github.com/SquadcastHub/squadcast-sdk-go"
-	"github.com/SquadcastHub/squadcast-sdk-go/models/components"
+	squadcastsdk "github.com/SquadcastHub/squadcast-sdk-go/squadcastv1"
+	"github.com/SquadcastHub/squadcast-sdk-go/squadcastv1/models/components"
 	"log"
 )
 
@@ -229,7 +229,7 @@ func main() {
         squadcastsdk.WithSecurity(os.Getenv("SQUADCASTSDK_BEARER_AUTH")),
     )
 
-    res, err := s.GlobalOncallReminderRules.GlobalOncallReminderRulesUpdateGlobalOncallReminderRules(ctx, "<id>", components.V3GlobalOncallReminderRulesUpdateGlobalOncallReminderRulesRequest{
+    res, err := s.GlobalOncallReminderRules.Update(ctx, "<id>", components.V3GlobalOncallReminderRulesUpdateGlobalOncallReminderRulesRequest{
         IsEnabled: true,
         Rules: []components.V3GlobalOncallReminderRulesRule{},
     })

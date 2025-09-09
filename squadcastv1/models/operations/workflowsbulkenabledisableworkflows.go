@@ -3,7 +3,7 @@
 package operations
 
 import (
-	"github.com/SquadcastHub/squadcast-sdk-go/models/components"
+	"github.com/SquadcastHub/squadcast-sdk-go/squadcastv1/models/components"
 )
 
 // WorkflowsBulkEnabledisableWorkflowsResponseBody - There is no content to send for this request, but the headers may be useful.

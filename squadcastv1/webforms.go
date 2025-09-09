@@ -6,13 +6,13 @@ import (
 	"bytes"
 	"context"
 	"fmt"
-	"github.com/SquadcastHub/squadcast-sdk-go/internal/config"
-	"github.com/SquadcastHub/squadcast-sdk-go/internal/hooks"
-	"github.com/SquadcastHub/squadcast-sdk-go/internal/utils"
-	"github.com/SquadcastHub/squadcast-sdk-go/models/apierrors"
-	"github.com/SquadcastHub/squadcast-sdk-go/models/components"
-	"github.com/SquadcastHub/squadcast-sdk-go/models/operations"
-	"github.com/SquadcastHub/squadcast-sdk-go/retry"
+	"github.com/SquadcastHub/squadcast-sdk-go/squadcastv1/internal/config"
+	"github.com/SquadcastHub/squadcast-sdk-go/squadcastv1/internal/hooks"
+	"github.com/SquadcastHub/squadcast-sdk-go/squadcastv1/internal/utils"
+	"github.com/SquadcastHub/squadcast-sdk-go/squadcastv1/models/apierrors"
+	"github.com/SquadcastHub/squadcast-sdk-go/squadcastv1/models/components"
+	"github.com/SquadcastHub/squadcast-sdk-go/squadcastv1/models/operations"
+	"github.com/SquadcastHub/squadcast-sdk-go/squadcastv1/retry"
 	"net/http"
 	"net/url"
 )
@@ -31,10 +31,10 @@ func newWebforms(rootSDK *SquadcastSDK, sdkConfig config.SDKConfiguration, hooks
 	}
 }
 
-// WebformsGetAllWebforms - Get All Webforms
+// GetAll - Get All Webforms
 // Returns all webforms of the given `owner_id` (teamId) in the request param.
 // Requires `access_token` as a `Bearer {{token}}` in the `Authorization` header with `read` scope.
-func (s *Webforms) WebformsGetAllWebforms(ctx context.Context, ownerID string, pageNumber *string, pageSize *string, opts ...operations.Option) (*operations.WebformsGetAllWebformsResponse, error) {
+func (s *Webforms) GetAll(ctx context.Context, ownerID string, pageNumber *string, pageSize *string, opts ...operations.Option) (*operations.WebformsGetAllWebformsResponse, error) {
 	request := operations.WebformsGetAllWebformsRequest{
 		OwnerID:    ownerID,
 		PageNumber: pageNumber,
@@ -523,10 +523,10 @@ func (s *Webforms) WebformsGetAllWebforms(ctx context.Context, ownerID string, p
 
 }
 
-// WebformsCreateWebform - Create Webform
+// Create Webform
 // Add a webform to the organization. Returns the webform object in response.
 // Requires `access_token` as a `Bearer {{token}}` in the `Authorization` header with `user-write` scope.
-func (s *Webforms) WebformsCreateWebform(ctx context.Context, request components.V3WebformsCreateOrUpdateWebformRequest, opts ...operations.Option) (*operations.WebformsCreateWebformResponse, error) {
+func (s *Webforms) Create(ctx context.Context, request components.V3WebformsCreateOrUpdateWebformRequest, opts ...operations.Option) (*operations.WebformsCreateWebformResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -1012,10 +1012,10 @@ func (s *Webforms) WebformsCreateWebform(ctx context.Context, request components
 
 }
 
-// WebformsUpdateWebform - Update Webform
+// Update Webform
 // Update a webform to the organization. Returns the webform object in response.
 // Requires `access_token` as a `Bearer {{token}}` in the `Authorization` header with `user-write` scope.
-func (s *Webforms) WebformsUpdateWebform(ctx context.Context, webformID int64, v3WebformsCreateOrUpdateWebformRequest components.V3WebformsCreateOrUpdateWebformRequest, opts ...operations.Option) (*operations.WebformsUpdateWebformResponse, error) {
+func (s *Webforms) Update(ctx context.Context, webformID int64, v3WebformsCreateOrUpdateWebformRequest components.V3WebformsCreateOrUpdateWebformRequest, opts ...operations.Option) (*operations.WebformsUpdateWebformResponse, error) {
 	request := operations.WebformsUpdateWebformRequest{
 		WebformID:                              webformID,
 		V3WebformsCreateOrUpdateWebformRequest: v3WebformsCreateOrUpdateWebformRequest,
@@ -1506,10 +1506,10 @@ func (s *Webforms) WebformsUpdateWebform(ctx context.Context, webformID int64, v
 
 }
 
-// WebformsRemoveWebform - Remove Webform
+// Remove Webform
 // Remove a webform from the organization.
 // Requires `access_token` as a `Bearer {{token}}` in the `Authorization` header with `user-write` scope.
-func (s *Webforms) WebformsRemoveWebform(ctx context.Context, webformID int64, ownerID *string, opts ...operations.Option) (*operations.WebformsRemoveWebformResponse, error) {
+func (s *Webforms) Remove(ctx context.Context, webformID int64, ownerID *string, opts ...operations.Option) (*operations.WebformsRemoveWebformResponse, error) {
 	request := operations.WebformsRemoveWebformRequest{
 		WebformID: webformID,
 		OwnerID:   ownerID,
@@ -1997,10 +1997,10 @@ func (s *Webforms) WebformsRemoveWebform(ctx context.Context, webformID int64, o
 
 }
 
-// WebformsGetWebformByID - Get Webform By ID
+// Get Webform By ID
 // Returns a webform details of the given `webformId` in the request param.
 // Requires `access_token` as a `Bearer {{token}}` in the `Authorization` header with `read` scope.
-func (s *Webforms) WebformsGetWebformByID(ctx context.Context, webformID int64, ownerID *string, opts ...operations.Option) (*operations.WebformsGetWebformByIDResponse, error) {
+func (s *Webforms) Get(ctx context.Context, webformID int64, ownerID *string, opts ...operations.Option) (*operations.WebformsGetWebformByIDResponse, error) {
 	request := operations.WebformsGetWebformByIDRequest{
 		WebformID: webformID,
 		OwnerID:   ownerID,

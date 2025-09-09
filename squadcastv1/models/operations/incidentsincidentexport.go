@@ -3,8 +3,8 @@
 package operations
 
 import (
-	"github.com/SquadcastHub/squadcast-sdk-go/internal/utils"
-	"github.com/SquadcastHub/squadcast-sdk-go/models/components"
+	"github.com/SquadcastHub/squadcast-sdk-go/squadcastv1/internal/utils"
+	"github.com/SquadcastHub/squadcast-sdk-go/squadcastv1/models/components"
 	"time"
 )
 

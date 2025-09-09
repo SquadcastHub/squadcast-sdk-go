@@ -14,7 +14,7 @@ import (
 	"time"
 	"unsafe"
 
-	"github.com/SquadcastHub/squadcast-sdk-go/types"
+	"github.com/SquadcastHub/squadcast-sdk-go/squadcastv1/types"
 
 	"github.com/ericlagergren/decimal"
 )

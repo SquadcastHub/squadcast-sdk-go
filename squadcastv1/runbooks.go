@@ -6,13 +6,13 @@ import (
 	"bytes"
 	"context"
 	"fmt"
-	"github.com/SquadcastHub/squadcast-sdk-go/internal/config"
-	"github.com/SquadcastHub/squadcast-sdk-go/internal/hooks"
-	"github.com/SquadcastHub/squadcast-sdk-go/internal/utils"
-	"github.com/SquadcastHub/squadcast-sdk-go/models/apierrors"
-	"github.com/SquadcastHub/squadcast-sdk-go/models/components"
-	"github.com/SquadcastHub/squadcast-sdk-go/models/operations"
-	"github.com/SquadcastHub/squadcast-sdk-go/retry"
+	"github.com/SquadcastHub/squadcast-sdk-go/squadcastv1/internal/config"
+	"github.com/SquadcastHub/squadcast-sdk-go/squadcastv1/internal/hooks"
+	"github.com/SquadcastHub/squadcast-sdk-go/squadcastv1/internal/utils"
+	"github.com/SquadcastHub/squadcast-sdk-go/squadcastv1/models/apierrors"
+	"github.com/SquadcastHub/squadcast-sdk-go/squadcastv1/models/components"
+	"github.com/SquadcastHub/squadcast-sdk-go/squadcastv1/models/operations"
+	"github.com/SquadcastHub/squadcast-sdk-go/squadcastv1/retry"
 	"net/http"
 	"net/url"
 )
@@ -31,10 +31,10 @@ func newRunbooks(rootSDK *SquadcastSDK, sdkConfig config.SDKConfiguration, hooks
 	}
 }
 
-// RunbooksGetAllRunbooksByTeam - Get All Runbooks By Team
+// ListByTeam - Get All Runbooks By Team
 // Returns all the runbooks of the team.
 // Requires `access_token` as a `Bearer {{token}}` in the `Authorization` header with `read` scope.
-func (s *Runbooks) RunbooksGetAllRunbooksByTeam(ctx context.Context, opts ...operations.Option) (*operations.RunbooksGetAllRunbooksByTeamResponse, error) {
+func (s *Runbooks) ListByTeam(ctx context.Context, opts ...operations.Option) (*operations.RunbooksGetAllRunbooksByTeamResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -513,10 +513,10 @@ func (s *Runbooks) RunbooksGetAllRunbooksByTeam(ctx context.Context, opts ...ope
 
 }
 
-// RunbooksCreateRunbook - Create Runbook
+// Create Runbook
 // Add runbook to the team. Returns the runbook object in response.
 // Requires `access_token` as a `Bearer {{token}}` in the `Authorization` header with `user-write` scope.
-func (s *Runbooks) RunbooksCreateRunbook(ctx context.Context, request components.V3RunbooksCreateRunbookRequest, opts ...operations.Option) (*operations.RunbooksCreateRunbookResponse, error) {
+func (s *Runbooks) Create(ctx context.Context, request components.V3RunbooksCreateRunbookRequest, opts ...operations.Option) (*operations.RunbooksCreateRunbookResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -1002,10 +1002,10 @@ func (s *Runbooks) RunbooksCreateRunbook(ctx context.Context, request components
 
 }
 
-// RunbooksRemoveRunbook - Remove Runbook
+// Remove Runbook
 // Remove runbook from team.
 // Requires `access_token` as a `Bearer {{token}}` in the `Authorization` header with `user-write` scope.
-func (s *Runbooks) RunbooksRemoveRunbook(ctx context.Context, runbookID string, opts ...operations.Option) (*operations.RunbooksRemoveRunbookResponse, error) {
+func (s *Runbooks) Remove(ctx context.Context, runbookID string, opts ...operations.Option) (*operations.RunbooksRemoveRunbookResponse, error) {
 	request := operations.RunbooksRemoveRunbookRequest{
 		RunbookID: runbookID,
 	}
@@ -1483,10 +1483,10 @@ func (s *Runbooks) RunbooksRemoveRunbook(ctx context.Context, runbookID string, 
 
 }
 
-// RunbooksGetRunbookByID - Get Runbook By ID
+// GetByID - Get Runbook By ID
 // Returns a runbook details of the given `runbookID` in the request param.
 // Requires `access_token` as a `Bearer {{token}}` in the `Authorization` header with `read` scope.
-func (s *Runbooks) RunbooksGetRunbookByID(ctx context.Context, runbookID string, opts ...operations.Option) (*operations.RunbooksGetRunbookByIDResponse, error) {
+func (s *Runbooks) GetByID(ctx context.Context, runbookID string, opts ...operations.Option) (*operations.RunbooksGetRunbookByIDResponse, error) {
 	request := operations.RunbooksGetRunbookByIDRequest{
 		RunbookID: runbookID,
 	}
@@ -1969,10 +1969,10 @@ func (s *Runbooks) RunbooksGetRunbookByID(ctx context.Context, runbookID string,
 
 }
 
-// RunbooksUpdateRunbook - Update Runbook
+// Update Runbook
 // Update runbook details.
 // Requires `access_token` as a `Bearer {{token}}` in the `Authorization` header with `user-write` scope.
-func (s *Runbooks) RunbooksUpdateRunbook(ctx context.Context, runbookID string, v3RunbooksUpdateRunbookRequest components.V3RunbooksUpdateRunbookRequest, opts ...operations.Option) (*operations.RunbooksUpdateRunbookResponse, error) {
+func (s *Runbooks) Update(ctx context.Context, runbookID string, v3RunbooksUpdateRunbookRequest components.V3RunbooksUpdateRunbookRequest, opts ...operations.Option) (*operations.RunbooksUpdateRunbookResponse, error) {
 	request := operations.RunbooksUpdateRunbookRequest{
 		RunbookID:                      runbookID,
 		V3RunbooksUpdateRunbookRequest: v3RunbooksUpdateRunbookRequest,

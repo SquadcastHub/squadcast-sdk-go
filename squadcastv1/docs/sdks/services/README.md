@@ -5,17 +5,24 @@
 
 ### Available Operations
 
-* [ServicesGetServices](#servicesgetservices) - Get All Services
-* [ServicesCreateService](#servicescreateservice) - Create Service
-* [ServicesGetServicesByName](#servicesgetservicesbyname) - Get Services By Name
-* [ServicesGetServiceByID](#servicesgetservicebyid) - Get Service By ID
-* [ServicesUpdateService](#servicesupdateservice) - Update Service
-* [ServicesDeleteService](#servicesdeleteservice) - Delete Service
-* [ServicesCreateOrUpdateAPTAConfig](#servicescreateorupdateaptaconfig) - Auto Pause Transient Alerts (APTA)
-* [ServicesCreateOrUpdateIAGConfig](#servicescreateorupdateiagconfig) - Intelligent Alert Grouping (IAG)
-* [ServicesDelayedNotificationConfig](#servicesdelayednotificationconfig) - Delayed Notification Config
+* [List](#list) - Get All Services
+* [Create](#create) - Create Service
+* [GetByName](#getbyname) - Get Services By Name
+* [GetByID](#getbyid) - Get Service By ID
+* [Update](#update) - Update Service
+* [Delete](#delete) - Delete Service
+* [CreateOrUpdateAptaConfig](#createorupdateaptaconfig) - Auto Pause Transient Alerts (APTA)
+* [UpsertIagConfig](#upsertiagconfig) - Intelligent Alert Grouping (IAG)
+* [UpdateNotificationDelayConfig](#updatenotificationdelayconfig) - Delayed Notification Config
+* [CreateOrUpdateDependencies](#createorupdatedependencies) - Create or Update Dependencies
+* [CreateOrUpdateNotificationTemplateOverlay](#createorupdatenotificationtemplateoverlay) - Create or Update Notification Template Overlay
+* [GetAllDedupKeyOverlays](#getalldedupkeyoverlays) - Get All Dedup Key Overlay by Service
+* [UpdateDedupKeyOverlay](#updatededupkeyoverlay) - Update Dedup Key Overlay
+* [GetRoutingRules](#getroutingrules) - Get Routing Rules
+* [CreateOrUpdateSuppressionRules](#createorupdatesuppressionrules) - Create or Update Suppression Rules
+* [CreateOrUpdateTaggingRules](#createorupdatetaggingrules) - Create or Update Tagging Rules
 
-## ServicesGetServices
+## List
 
 Get All Services
 
@@ -28,7 +35,7 @@ package main
 import(
 	"context"
 	"os"
-	squadcastsdk "github.com/SquadcastHub/squadcast-sdk-go"
+	squadcastsdk "github.com/SquadcastHub/squadcast-sdk-go/squadcastv1"
 	"log"
 )
 
@@ -39,7 +46,7 @@ func main() {
         squadcastsdk.WithSecurity(os.Getenv("SQUADCASTSDK_BEARER_AUTH")),
     )
 
-    res, err := s.Services.ServicesGetServices(ctx, nil, nil, nil)
+    res, err := s.Services.List(ctx, nil, nil, nil)
     if err != nil {
         log.Fatal(err)
     }
@@ -80,7 +87,7 @@ func main() {
 | apierrors.ServicesGetServicesGatewayTimeoutError      | 504                                                   | application/json                                      |
 | apierrors.APIError                                    | 4XX, 5XX                                              | \*/\*                                                 |
 
-## ServicesCreateService
+## Create
 
 Create Service
 
@@ -93,8 +100,8 @@ package main
 import(
 	"context"
 	"os"
-	squadcastsdk "github.com/SquadcastHub/squadcast-sdk-go"
-	"github.com/SquadcastHub/squadcast-sdk-go/models/components"
+	squadcastsdk "github.com/SquadcastHub/squadcast-sdk-go/squadcastv1"
+	"github.com/SquadcastHub/squadcast-sdk-go/squadcastv1/models/components"
 	"log"
 )
 
@@ -105,7 +112,7 @@ func main() {
         squadcastsdk.WithSecurity(os.Getenv("SQUADCASTSDK_BEARER_AUTH")),
     )
 
-    res, err := s.Services.ServicesCreateService(ctx, "<id>", components.V3ServicesCreateServiceRequest{
+    res, err := s.Services.Create(ctx, "<id>", components.V3ServicesCreateServiceRequest{
         Name: "<value>",
         EscalationPolicyID: "<id>",
     })
@@ -148,7 +155,7 @@ func main() {
 | apierrors.ServicesCreateServiceGatewayTimeoutError      | 504                                                     | application/json                                        |
 | apierrors.APIError                                      | 4XX, 5XX                                                | \*/\*                                                   |
 
-## ServicesGetServicesByName
+## GetByName
 
 Get Services By Name
 
@@ -161,7 +168,7 @@ package main
 import(
 	"context"
 	"os"
-	squadcastsdk "github.com/SquadcastHub/squadcast-sdk-go"
+	squadcastsdk "github.com/SquadcastHub/squadcast-sdk-go/squadcastv1"
 	"log"
 )
 
@@ -172,7 +179,7 @@ func main() {
         squadcastsdk.WithSecurity(os.Getenv("SQUADCASTSDK_BEARER_AUTH")),
     )
 
-    res, err := s.Services.ServicesGetServicesByName(ctx, "<value>", "<id>")
+    res, err := s.Services.GetByName(ctx, "<value>", "<id>")
     if err != nil {
         log.Fatal(err)
     }
@@ -212,7 +219,7 @@ func main() {
 | apierrors.ServicesGetServicesByNameGatewayTimeoutError      | 504                                                         | application/json                                            |
 | apierrors.APIError                                          | 4XX, 5XX                                                    | \*/\*                                                       |
 
-## ServicesGetServiceByID
+## GetByID
 
 Get Service By ID
 
@@ -225,7 +232,7 @@ package main
 import(
 	"context"
 	"os"
-	squadcastsdk "github.com/SquadcastHub/squadcast-sdk-go"
+	squadcastsdk "github.com/SquadcastHub/squadcast-sdk-go/squadcastv1"
 	"log"
 )
 
@@ -236,7 +243,7 @@ func main() {
         squadcastsdk.WithSecurity(os.Getenv("SQUADCASTSDK_BEARER_AUTH")),
     )
 
-    res, err := s.Services.ServicesGetServiceByID(ctx, "<id>")
+    res, err := s.Services.GetByID(ctx, "<id>")
     if err != nil {
         log.Fatal(err)
     }
@@ -275,7 +282,7 @@ func main() {
 | apierrors.ServicesGetServiceByIDGatewayTimeoutError      | 504                                                      | application/json                                         |
 | apierrors.APIError                                       | 4XX, 5XX                                                 | \*/\*                                                    |
 
-## ServicesUpdateService
+## Update
 
 Update Service
 
@@ -288,8 +295,8 @@ package main
 import(
 	"context"
 	"os"
-	squadcastsdk "github.com/SquadcastHub/squadcast-sdk-go"
-	"github.com/SquadcastHub/squadcast-sdk-go/models/components"
+	squadcastsdk "github.com/SquadcastHub/squadcast-sdk-go/squadcastv1"
+	"github.com/SquadcastHub/squadcast-sdk-go/squadcastv1/models/components"
 	"log"
 )
 
@@ -300,7 +307,7 @@ func main() {
         squadcastsdk.WithSecurity(os.Getenv("SQUADCASTSDK_BEARER_AUTH")),
     )
 
-    res, err := s.Services.ServicesUpdateService(ctx, "<id>", components.V3ServicesUpdateServiceRequest{})
+    res, err := s.Services.Update(ctx, "<id>", components.V3ServicesUpdateServiceRequest{})
     if err != nil {
         log.Fatal(err)
     }
@@ -340,7 +347,7 @@ func main() {
 | apierrors.ServicesUpdateServiceGatewayTimeoutError      | 504                                                     | application/json                                        |
 | apierrors.APIError                                      | 4XX, 5XX                                                | \*/\*                                                   |
 
-## ServicesDeleteService
+## Delete
 
 Delete Service
 
@@ -353,7 +360,7 @@ package main
 import(
 	"context"
 	"os"
-	squadcastsdk "github.com/SquadcastHub/squadcast-sdk-go"
+	squadcastsdk "github.com/SquadcastHub/squadcast-sdk-go/squadcastv1"
 	"log"
 )
 
@@ -364,7 +371,7 @@ func main() {
         squadcastsdk.WithSecurity(os.Getenv("SQUADCASTSDK_BEARER_AUTH")),
     )
 
-    res, err := s.Services.ServicesDeleteService(ctx, "<id>")
+    res, err := s.Services.Delete(ctx, "<id>")
     if err != nil {
         log.Fatal(err)
     }
@@ -403,7 +410,7 @@ func main() {
 | apierrors.ServicesDeleteServiceGatewayTimeoutError      | 504                                                     | application/json                                        |
 | apierrors.APIError                                      | 4XX, 5XX                                                | \*/\*                                                   |
 
-## ServicesCreateOrUpdateAPTAConfig
+## CreateOrUpdateAptaConfig
 
 Auto Pause Transient Alerts (APTA)
 
@@ -416,8 +423,8 @@ package main
 import(
 	"context"
 	"os"
-	squadcastsdk "github.com/SquadcastHub/squadcast-sdk-go"
-	"github.com/SquadcastHub/squadcast-sdk-go/models/components"
+	squadcastsdk "github.com/SquadcastHub/squadcast-sdk-go/squadcastv1"
+	"github.com/SquadcastHub/squadcast-sdk-go/squadcastv1/models/components"
 	"log"
 )
 
@@ -428,7 +435,7 @@ func main() {
         squadcastsdk.WithSecurity(os.Getenv("SQUADCASTSDK_BEARER_AUTH")),
     )
 
-    res, err := s.Services.ServicesCreateOrUpdateAPTAConfig(ctx, "<id>", components.V3ServicesAPTAConfigRequest{
+    res, err := s.Services.CreateOrUpdateAptaConfig(ctx, "<id>", components.V3ServicesAPTAConfigRequest{
         IsEnabled: false,
         TimeoutInMins: 680029,
     })
@@ -471,7 +478,7 @@ func main() {
 | apierrors.ServicesCreateOrUpdateAPTAConfigGatewayTimeoutError      | 504                                                                | application/json                                                   |
 | apierrors.APIError                                                 | 4XX, 5XX                                                           | \*/\*                                                              |
 
-## ServicesCreateOrUpdateIAGConfig
+## UpsertIagConfig
 
 Intelligent Alert Grouping (IAG)
 
@@ -484,8 +491,8 @@ package main
 import(
 	"context"
 	"os"
-	squadcastsdk "github.com/SquadcastHub/squadcast-sdk-go"
-	"github.com/SquadcastHub/squadcast-sdk-go/models/components"
+	squadcastsdk "github.com/SquadcastHub/squadcast-sdk-go/squadcastv1"
+	"github.com/SquadcastHub/squadcast-sdk-go/squadcastv1/models/components"
 	"log"
 )
 
@@ -496,7 +503,7 @@ func main() {
         squadcastsdk.WithSecurity(os.Getenv("SQUADCASTSDK_BEARER_AUTH")),
     )
 
-    res, err := s.Services.ServicesCreateOrUpdateIAGConfig(ctx, "<id>", components.V3ServicesIAGConfigRequest{
+    res, err := s.Services.UpsertIagConfig(ctx, "<id>", components.V3ServicesIAGConfigRequest{
         IsEnabled: true,
         RollingWindowInMins: 246036,
     })
@@ -539,7 +546,7 @@ func main() {
 | apierrors.ServicesCreateOrUpdateIAGConfigGatewayTimeoutError      | 504                                                               | application/json                                                  |
 | apierrors.APIError                                                | 4XX, 5XX                                                          | \*/\*                                                             |
 
-## ServicesDelayedNotificationConfig
+## UpdateNotificationDelayConfig
 
 Delayed Notification Config
 
@@ -552,8 +559,8 @@ package main
 import(
 	"context"
 	"os"
-	squadcastsdk "github.com/SquadcastHub/squadcast-sdk-go"
-	"github.com/SquadcastHub/squadcast-sdk-go/models/components"
+	squadcastsdk "github.com/SquadcastHub/squadcast-sdk-go/squadcastv1"
+	"github.com/SquadcastHub/squadcast-sdk-go/squadcastv1/models/components"
 	"log"
 )
 
@@ -564,7 +571,7 @@ func main() {
         squadcastsdk.WithSecurity(os.Getenv("SQUADCASTSDK_BEARER_AUTH")),
     )
 
-    res, err := s.Services.ServicesDelayedNotificationConfig(ctx, "<id>", components.V3ServicesNotificationDelayConfigRequest{
+    res, err := s.Services.UpdateNotificationDelayConfig(ctx, "<id>", components.V3ServicesNotificationDelayConfigRequest{
         IsEnabled: false,
     })
     if err != nil {
@@ -605,3 +612,482 @@ func main() {
 | apierrors.ServicesDelayedNotificationConfigServiceUnavailableError  | 503                                                                 | application/json                                                    |
 | apierrors.ServicesDelayedNotificationConfigGatewayTimeoutError      | 504                                                                 | application/json                                                    |
 | apierrors.APIError                                                  | 4XX, 5XX                                                            | \*/\*                                                               |
+
+## CreateOrUpdateDependencies
+
+Create or Update Dependencies
+
+### Example Usage
+
+<!-- UsageSnippet language="go" operationID="Dependencies_createOrUpdateDependencies" method="post" path="/v3/services/{serviceID}/dependencies" -->
+```go
+package main
+
+import(
+	"context"
+	"os"
+	squadcastsdk "github.com/SquadcastHub/squadcast-sdk-go/squadcastv1"
+	"github.com/SquadcastHub/squadcast-sdk-go/squadcastv1/models/components"
+	"log"
+)
+
+func main() {
+    ctx := context.Background()
+
+    s := squadcastsdk.New(
+        squadcastsdk.WithSecurity(os.Getenv("SQUADCASTSDK_BEARER_AUTH")),
+    )
+
+    res, err := s.Services.CreateOrUpdateDependencies(ctx, "<id>", components.V3ServicesDependenciesCreateOrUpdateDependenciesRequest{
+        Dependencies: []string{
+            "<value 1>",
+            "<value 2>",
+            "<value 3>",
+        },
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res.Object != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                                                                | Type                                                                                                                                                     | Required                                                                                                                                                 | Description                                                                                                                                              |
+| -------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                                                                                    | [context.Context](https://pkg.go.dev/context#Context)                                                                                                    | :heavy_check_mark:                                                                                                                                       | The context to use for the request.                                                                                                                      |
+| `serviceID`                                                                                                                                              | *string*                                                                                                                                                 | :heavy_check_mark:                                                                                                                                       | N/A                                                                                                                                                      |
+| `v3ServicesDependenciesCreateOrUpdateDependenciesRequest`                                                                                                | [components.V3ServicesDependenciesCreateOrUpdateDependenciesRequest](../../models/components/v3servicesdependenciescreateorupdatedependenciesrequest.md) | :heavy_check_mark:                                                                                                                                       | N/A                                                                                                                                                      |
+| `opts`                                                                                                                                                   | [][operations.Option](../../models/operations/option.md)                                                                                                 | :heavy_minus_sign:                                                                                                                                       | The options for this request.                                                                                                                            |
+
+### Response
+
+**[*operations.DependenciesCreateOrUpdateDependenciesResponse](../../models/operations/dependenciescreateorupdatedependenciesresponse.md), error**
+
+### Errors
+
+| Error Type                                                               | Status Code                                                              | Content Type                                                             |
+| ------------------------------------------------------------------------ | ------------------------------------------------------------------------ | ------------------------------------------------------------------------ |
+| apierrors.DependenciesCreateOrUpdateDependenciesBadRequestError          | 400                                                                      | application/json                                                         |
+| apierrors.DependenciesCreateOrUpdateDependenciesUnauthorizedError        | 401                                                                      | application/json                                                         |
+| apierrors.DependenciesCreateOrUpdateDependenciesPaymentRequiredError     | 402                                                                      | application/json                                                         |
+| apierrors.DependenciesCreateOrUpdateDependenciesForbiddenError           | 403                                                                      | application/json                                                         |
+| apierrors.DependenciesCreateOrUpdateDependenciesNotFoundError            | 404                                                                      | application/json                                                         |
+| apierrors.DependenciesCreateOrUpdateDependenciesConflictError            | 409                                                                      | application/json                                                         |
+| apierrors.DependenciesCreateOrUpdateDependenciesUnprocessableEntityError | 422                                                                      | application/json                                                         |
+| apierrors.DependenciesCreateOrUpdateDependenciesInternalServerError      | 500                                                                      | application/json                                                         |
+| apierrors.DependenciesCreateOrUpdateDependenciesBadGatewayError          | 502                                                                      | application/json                                                         |
+| apierrors.DependenciesCreateOrUpdateDependenciesServiceUnavailableError  | 503                                                                      | application/json                                                         |
+| apierrors.DependenciesCreateOrUpdateDependenciesGatewayTimeoutError      | 504                                                                      | application/json                                                         |
+| apierrors.APIError                                                       | 4XX, 5XX                                                                 | \*/\*                                                                    |
+
+## CreateOrUpdateNotificationTemplateOverlay
+
+Create or Update Notification Template Overlay
+
+### Example Usage
+
+<!-- UsageSnippet language="go" operationID="Overlay_createOrUpdateNotificationTemplateOverlay" method="put" path="/v3/services/{serviceID}/overlays/custom-content/{alertSource}" -->
+```go
+package main
+
+import(
+	"context"
+	"os"
+	squadcastsdk "github.com/SquadcastHub/squadcast-sdk-go/squadcastv1"
+	"github.com/SquadcastHub/squadcast-sdk-go/squadcastv1/models/components"
+	"log"
+)
+
+func main() {
+    ctx := context.Background()
+
+    s := squadcastsdk.New(
+        squadcastsdk.WithSecurity(os.Getenv("SQUADCASTSDK_BEARER_AUTH")),
+    )
+
+    res, err := s.Services.CreateOrUpdateNotificationTemplateOverlay(ctx, "<id>", "<value>", components.V3ServicesOverlayUpdateCustomContentTemplateOverlayRequest{
+        OverlayTemplateType: "<value>",
+        MessageOverlay: components.MessageOverlay{
+            Template: "<value>",
+        },
+        DescriptionOverlay: components.DescriptionOverlay{
+            Template: "<value>",
+        },
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res.Object != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                                                                      | Type                                                                                                                                                           | Required                                                                                                                                                       | Description                                                                                                                                                    |
+| -------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                                                                                          | [context.Context](https://pkg.go.dev/context#Context)                                                                                                          | :heavy_check_mark:                                                                                                                                             | The context to use for the request.                                                                                                                            |
+| `serviceID`                                                                                                                                                    | *string*                                                                                                                                                       | :heavy_check_mark:                                                                                                                                             | N/A                                                                                                                                                            |
+| `alertSource`                                                                                                                                                  | *string*                                                                                                                                                       | :heavy_check_mark:                                                                                                                                             | N/A                                                                                                                                                            |
+| `v3ServicesOverlayUpdateCustomContentTemplateOverlayRequest`                                                                                                   | [components.V3ServicesOverlayUpdateCustomContentTemplateOverlayRequest](../../models/components/v3servicesoverlayupdatecustomcontenttemplateoverlayrequest.md) | :heavy_check_mark:                                                                                                                                             | N/A                                                                                                                                                            |
+| `opts`                                                                                                                                                         | [][operations.Option](../../models/operations/option.md)                                                                                                       | :heavy_minus_sign:                                                                                                                                             | The options for this request.                                                                                                                                  |
+
+### Response
+
+**[*operations.OverlayCreateOrUpdateNotificationTemplateOverlayResponse](../../models/operations/overlaycreateorupdatenotificationtemplateoverlayresponse.md), error**
+
+### Errors
+
+| Error Type                                                                         | Status Code                                                                        | Content Type                                                                       |
+| ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
+| apierrors.OverlayCreateOrUpdateNotificationTemplateOverlayBadRequestError          | 400                                                                                | application/json                                                                   |
+| apierrors.OverlayCreateOrUpdateNotificationTemplateOverlayUnauthorizedError        | 401                                                                                | application/json                                                                   |
+| apierrors.OverlayCreateOrUpdateNotificationTemplateOverlayPaymentRequiredError     | 402                                                                                | application/json                                                                   |
+| apierrors.OverlayCreateOrUpdateNotificationTemplateOverlayForbiddenError           | 403                                                                                | application/json                                                                   |
+| apierrors.OverlayCreateOrUpdateNotificationTemplateOverlayNotFoundError            | 404                                                                                | application/json                                                                   |
+| apierrors.OverlayCreateOrUpdateNotificationTemplateOverlayConflictError            | 409                                                                                | application/json                                                                   |
+| apierrors.OverlayCreateOrUpdateNotificationTemplateOverlayUnprocessableEntityError | 422                                                                                | application/json                                                                   |
+| apierrors.OverlayCreateOrUpdateNotificationTemplateOverlayInternalServerError      | 500                                                                                | application/json                                                                   |
+| apierrors.OverlayCreateOrUpdateNotificationTemplateOverlayBadGatewayError          | 502                                                                                | application/json                                                                   |
+| apierrors.OverlayCreateOrUpdateNotificationTemplateOverlayServiceUnavailableError  | 503                                                                                | application/json                                                                   |
+| apierrors.OverlayCreateOrUpdateNotificationTemplateOverlayGatewayTimeoutError      | 504                                                                                | application/json                                                                   |
+| apierrors.APIError                                                                 | 4XX, 5XX                                                                           | \*/\*                                                                              |
+
+## GetAllDedupKeyOverlays
+
+Get All Dedup Key Overlay by Service
+
+### Example Usage
+
+<!-- UsageSnippet language="go" operationID="Overlay_getAllDedupKeyOverlayByService" method="get" path="/v3/services/{serviceID}/overlays/dedup-key" -->
+```go
+package main
+
+import(
+	"context"
+	"os"
+	squadcastsdk "github.com/SquadcastHub/squadcast-sdk-go/squadcastv1"
+	"log"
+)
+
+func main() {
+    ctx := context.Background()
+
+    s := squadcastsdk.New(
+        squadcastsdk.WithSecurity(os.Getenv("SQUADCASTSDK_BEARER_AUTH")),
+    )
+
+    res, err := s.Services.GetAllDedupKeyOverlays(ctx, "<id>")
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res.Object != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                | Type                                                     | Required                                                 | Description                                              |
+| -------------------------------------------------------- | -------------------------------------------------------- | -------------------------------------------------------- | -------------------------------------------------------- |
+| `ctx`                                                    | [context.Context](https://pkg.go.dev/context#Context)    | :heavy_check_mark:                                       | The context to use for the request.                      |
+| `serviceID`                                              | *string*                                                 | :heavy_check_mark:                                       | N/A                                                      |
+| `opts`                                                   | [][operations.Option](../../models/operations/option.md) | :heavy_minus_sign:                                       | The options for this request.                            |
+
+### Response
+
+**[*operations.OverlayGetAllDedupKeyOverlayByServiceResponse](../../models/operations/overlaygetalldedupkeyoverlaybyserviceresponse.md), error**
+
+### Errors
+
+| Error Type                                                              | Status Code                                                             | Content Type                                                            |
+| ----------------------------------------------------------------------- | ----------------------------------------------------------------------- | ----------------------------------------------------------------------- |
+| apierrors.OverlayGetAllDedupKeyOverlayByServiceBadRequestError          | 400                                                                     | application/json                                                        |
+| apierrors.OverlayGetAllDedupKeyOverlayByServiceUnauthorizedError        | 401                                                                     | application/json                                                        |
+| apierrors.OverlayGetAllDedupKeyOverlayByServicePaymentRequiredError     | 402                                                                     | application/json                                                        |
+| apierrors.OverlayGetAllDedupKeyOverlayByServiceForbiddenError           | 403                                                                     | application/json                                                        |
+| apierrors.OverlayGetAllDedupKeyOverlayByServiceNotFoundError            | 404                                                                     | application/json                                                        |
+| apierrors.OverlayGetAllDedupKeyOverlayByServiceConflictError            | 409                                                                     | application/json                                                        |
+| apierrors.OverlayGetAllDedupKeyOverlayByServiceUnprocessableEntityError | 422                                                                     | application/json                                                        |
+| apierrors.OverlayGetAllDedupKeyOverlayByServiceInternalServerError      | 500                                                                     | application/json                                                        |
+| apierrors.OverlayGetAllDedupKeyOverlayByServiceBadGatewayError          | 502                                                                     | application/json                                                        |
+| apierrors.OverlayGetAllDedupKeyOverlayByServiceServiceUnavailableError  | 503                                                                     | application/json                                                        |
+| apierrors.OverlayGetAllDedupKeyOverlayByServiceGatewayTimeoutError      | 504                                                                     | application/json                                                        |
+| apierrors.APIError                                                      | 4XX, 5XX                                                                | \*/\*                                                                   |
+
+## UpdateDedupKeyOverlay
+
+Update Dedup Key Overlay
+
+### Example Usage
+
+<!-- UsageSnippet language="go" operationID="Overlay_updateDedupKeyOverlay" method="put" path="/v3/services/{serviceID}/overlays/dedup-key/{alertSource}" -->
+```go
+package main
+
+import(
+	"context"
+	"os"
+	squadcastsdk "github.com/SquadcastHub/squadcast-sdk-go/squadcastv1"
+	"github.com/SquadcastHub/squadcast-sdk-go/squadcastv1/models/components"
+	"log"
+)
+
+func main() {
+    ctx := context.Background()
+
+    s := squadcastsdk.New(
+        squadcastsdk.WithSecurity(os.Getenv("SQUADCASTSDK_BEARER_AUTH")),
+    )
+
+    res, err := s.Services.UpdateDedupKeyOverlay(ctx, "<id>", "<value>", components.V3ServicesOverlayUpdateDedupKeyOverlayRequest{
+        OverlayTemplateType: "<value>",
+        DedupKeyOverlay: components.DedupKeyOverlay{
+            Template: "<value>",
+            Duration: 360400,
+        },
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res.OneOf != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                                            | Type                                                                                                                                 | Required                                                                                                                             | Description                                                                                                                          |
+| ------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------ |
+| `ctx`                                                                                                                                | [context.Context](https://pkg.go.dev/context#Context)                                                                                | :heavy_check_mark:                                                                                                                   | The context to use for the request.                                                                                                  |
+| `serviceID`                                                                                                                          | *string*                                                                                                                             | :heavy_check_mark:                                                                                                                   | N/A                                                                                                                                  |
+| `alertSource`                                                                                                                        | *string*                                                                                                                             | :heavy_check_mark:                                                                                                                   | N/A                                                                                                                                  |
+| `v3ServicesOverlayUpdateDedupKeyOverlayRequest`                                                                                      | [components.V3ServicesOverlayUpdateDedupKeyOverlayRequest](../../models/components/v3servicesoverlayupdatededupkeyoverlayrequest.md) | :heavy_check_mark:                                                                                                                   | N/A                                                                                                                                  |
+| `opts`                                                                                                                               | [][operations.Option](../../models/operations/option.md)                                                                             | :heavy_minus_sign:                                                                                                                   | The options for this request.                                                                                                        |
+
+### Response
+
+**[*operations.OverlayUpdateDedupKeyOverlayResponse](../../models/operations/overlayupdatededupkeyoverlayresponse.md), error**
+
+### Errors
+
+| Error Type                                                     | Status Code                                                    | Content Type                                                   |
+| -------------------------------------------------------------- | -------------------------------------------------------------- | -------------------------------------------------------------- |
+| apierrors.OverlayUpdateDedupKeyOverlayBadRequestError          | 400                                                            | application/json                                               |
+| apierrors.OverlayUpdateDedupKeyOverlayUnauthorizedError        | 401                                                            | application/json                                               |
+| apierrors.OverlayUpdateDedupKeyOverlayPaymentRequiredError     | 402                                                            | application/json                                               |
+| apierrors.OverlayUpdateDedupKeyOverlayForbiddenError           | 403                                                            | application/json                                               |
+| apierrors.OverlayUpdateDedupKeyOverlayNotFoundError            | 404                                                            | application/json                                               |
+| apierrors.OverlayUpdateDedupKeyOverlayConflictError            | 409                                                            | application/json                                               |
+| apierrors.OverlayUpdateDedupKeyOverlayUnprocessableEntityError | 422                                                            | application/json                                               |
+| apierrors.OverlayUpdateDedupKeyOverlayInternalServerError      | 500                                                            | application/json                                               |
+| apierrors.OverlayUpdateDedupKeyOverlayBadGatewayError          | 502                                                            | application/json                                               |
+| apierrors.OverlayUpdateDedupKeyOverlayServiceUnavailableError  | 503                                                            | application/json                                               |
+| apierrors.OverlayUpdateDedupKeyOverlayGatewayTimeoutError      | 504                                                            | application/json                                               |
+| apierrors.APIError                                             | 4XX, 5XX                                                       | \*/\*                                                          |
+
+## GetRoutingRules
+
+Get Routing Rules
+
+### Example Usage
+
+<!-- UsageSnippet language="go" operationID="RoutingRules_getRoutingRules" method="get" path="/v3/services/{serviceID}/routing-rules" -->
+```go
+package main
+
+import(
+	"context"
+	"os"
+	squadcastsdk "github.com/SquadcastHub/squadcast-sdk-go/squadcastv1"
+	"log"
+)
+
+func main() {
+    ctx := context.Background()
+
+    s := squadcastsdk.New(
+        squadcastsdk.WithSecurity(os.Getenv("SQUADCASTSDK_BEARER_AUTH")),
+    )
+
+    res, err := s.Services.GetRoutingRules(ctx, "<id>")
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res.Object != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                | Type                                                     | Required                                                 | Description                                              |
+| -------------------------------------------------------- | -------------------------------------------------------- | -------------------------------------------------------- | -------------------------------------------------------- |
+| `ctx`                                                    | [context.Context](https://pkg.go.dev/context#Context)    | :heavy_check_mark:                                       | The context to use for the request.                      |
+| `serviceID`                                              | *string*                                                 | :heavy_check_mark:                                       | N/A                                                      |
+| `opts`                                                   | [][operations.Option](../../models/operations/option.md) | :heavy_minus_sign:                                       | The options for this request.                            |
+
+### Response
+
+**[*operations.RoutingRulesGetRoutingRulesResponse](../../models/operations/routingrulesgetroutingrulesresponse.md), error**
+
+### Errors
+
+| Error Type                                                    | Status Code                                                   | Content Type                                                  |
+| ------------------------------------------------------------- | ------------------------------------------------------------- | ------------------------------------------------------------- |
+| apierrors.RoutingRulesGetRoutingRulesBadRequestError          | 400                                                           | application/json                                              |
+| apierrors.RoutingRulesGetRoutingRulesUnauthorizedError        | 401                                                           | application/json                                              |
+| apierrors.RoutingRulesGetRoutingRulesPaymentRequiredError     | 402                                                           | application/json                                              |
+| apierrors.RoutingRulesGetRoutingRulesForbiddenError           | 403                                                           | application/json                                              |
+| apierrors.RoutingRulesGetRoutingRulesNotFoundError            | 404                                                           | application/json                                              |
+| apierrors.RoutingRulesGetRoutingRulesConflictError            | 409                                                           | application/json                                              |
+| apierrors.RoutingRulesGetRoutingRulesUnprocessableEntityError | 422                                                           | application/json                                              |
+| apierrors.RoutingRulesGetRoutingRulesInternalServerError      | 500                                                           | application/json                                              |
+| apierrors.RoutingRulesGetRoutingRulesBadGatewayError          | 502                                                           | application/json                                              |
+| apierrors.RoutingRulesGetRoutingRulesServiceUnavailableError  | 503                                                           | application/json                                              |
+| apierrors.RoutingRulesGetRoutingRulesGatewayTimeoutError      | 504                                                           | application/json                                              |
+| apierrors.APIError                                            | 4XX, 5XX                                                      | \*/\*                                                         |
+
+## CreateOrUpdateSuppressionRules
+
+Create or Update Suppression Rules
+
+### Example Usage
+
+<!-- UsageSnippet language="go" operationID="SuppressionRules_createOrUpdateSuppressionRules" method="post" path="/v3/services/{serviceID}/suppression-rules" -->
+```go
+package main
+
+import(
+	"context"
+	"os"
+	squadcastsdk "github.com/SquadcastHub/squadcast-sdk-go/squadcastv1"
+	"github.com/SquadcastHub/squadcast-sdk-go/squadcastv1/models/components"
+	"log"
+)
+
+func main() {
+    ctx := context.Background()
+
+    s := squadcastsdk.New(
+        squadcastsdk.WithSecurity(os.Getenv("SQUADCASTSDK_BEARER_AUTH")),
+    )
+
+    res, err := s.Services.CreateOrUpdateSuppressionRules(ctx, "<id>", components.V3ServicesSuppressionRulesCreateOrUpdateSuppressionRulesRequest{
+        Rules: []components.V3ServicesSuppressionRulesSuppressionRule{},
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res.Object != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                                                                                | Type                                                                                                                                                                     | Required                                                                                                                                                                 | Description                                                                                                                                                              |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `ctx`                                                                                                                                                                    | [context.Context](https://pkg.go.dev/context#Context)                                                                                                                    | :heavy_check_mark:                                                                                                                                                       | The context to use for the request.                                                                                                                                      |
+| `serviceID`                                                                                                                                                              | *string*                                                                                                                                                                 | :heavy_check_mark:                                                                                                                                                       | N/A                                                                                                                                                                      |
+| `v3ServicesSuppressionRulesCreateOrUpdateSuppressionRulesRequest`                                                                                                        | [components.V3ServicesSuppressionRulesCreateOrUpdateSuppressionRulesRequest](../../models/components/v3servicessuppressionrulescreateorupdatesuppressionrulesrequest.md) | :heavy_check_mark:                                                                                                                                                       | N/A                                                                                                                                                                      |
+| `opts`                                                                                                                                                                   | [][operations.Option](../../models/operations/option.md)                                                                                                                 | :heavy_minus_sign:                                                                                                                                                       | The options for this request.                                                                                                                                            |
+
+### Response
+
+**[*operations.SuppressionRulesCreateOrUpdateSuppressionRulesResponse](../../models/operations/suppressionrulescreateorupdatesuppressionrulesresponse.md), error**
+
+### Errors
+
+| Error Type                                                                       | Status Code                                                                      | Content Type                                                                     |
+| -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- |
+| apierrors.SuppressionRulesCreateOrUpdateSuppressionRulesBadRequestError          | 400                                                                              | application/json                                                                 |
+| apierrors.SuppressionRulesCreateOrUpdateSuppressionRulesUnauthorizedError        | 401                                                                              | application/json                                                                 |
+| apierrors.SuppressionRulesCreateOrUpdateSuppressionRulesPaymentRequiredError     | 402                                                                              | application/json                                                                 |
+| apierrors.SuppressionRulesCreateOrUpdateSuppressionRulesForbiddenError           | 403                                                                              | application/json                                                                 |
+| apierrors.SuppressionRulesCreateOrUpdateSuppressionRulesNotFoundError            | 404                                                                              | application/json                                                                 |
+| apierrors.SuppressionRulesCreateOrUpdateSuppressionRulesConflictError            | 409                                                                              | application/json                                                                 |
+| apierrors.SuppressionRulesCreateOrUpdateSuppressionRulesUnprocessableEntityError | 422                                                                              | application/json                                                                 |
+| apierrors.SuppressionRulesCreateOrUpdateSuppressionRulesInternalServerError      | 500                                                                              | application/json                                                                 |
+| apierrors.SuppressionRulesCreateOrUpdateSuppressionRulesBadGatewayError          | 502                                                                              | application/json                                                                 |
+| apierrors.SuppressionRulesCreateOrUpdateSuppressionRulesServiceUnavailableError  | 503                                                                              | application/json                                                                 |
+| apierrors.SuppressionRulesCreateOrUpdateSuppressionRulesGatewayTimeoutError      | 504                                                                              | application/json                                                                 |
+| apierrors.APIError                                                               | 4XX, 5XX                                                                         | \*/\*                                                                            |
+
+## CreateOrUpdateTaggingRules
+
+Create or Update Tagging Rules
+
+### Example Usage
+
+<!-- UsageSnippet language="go" operationID="TaggingRules_createOrUpdateTaggingRules" method="post" path="/v3/services/{serviceID}/tagging-rules" -->
+```go
+package main
+
+import(
+	"context"
+	"os"
+	squadcastsdk "github.com/SquadcastHub/squadcast-sdk-go/squadcastv1"
+	"github.com/SquadcastHub/squadcast-sdk-go/squadcastv1/models/components"
+	"log"
+)
+
+func main() {
+    ctx := context.Background()
+
+    s := squadcastsdk.New(
+        squadcastsdk.WithSecurity(os.Getenv("SQUADCASTSDK_BEARER_AUTH")),
+    )
+
+    res, err := s.Services.CreateOrUpdateTaggingRules(ctx, "<id>", components.V3ServicesTaggingRulesCreateOrUpdateTaggingRulesRequest{
+        Rules: []components.V3ServicesTaggingRulesTagRule{
+            components.V3ServicesTaggingRulesTagRule{},
+        },
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res.Object != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                                                                | Type                                                                                                                                                     | Required                                                                                                                                                 | Description                                                                                                                                              |
+| -------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                                                                                    | [context.Context](https://pkg.go.dev/context#Context)                                                                                                    | :heavy_check_mark:                                                                                                                                       | The context to use for the request.                                                                                                                      |
+| `serviceID`                                                                                                                                              | *string*                                                                                                                                                 | :heavy_check_mark:                                                                                                                                       | N/A                                                                                                                                                      |
+| `v3ServicesTaggingRulesCreateOrUpdateTaggingRulesRequest`                                                                                                | [components.V3ServicesTaggingRulesCreateOrUpdateTaggingRulesRequest](../../models/components/v3servicestaggingrulescreateorupdatetaggingrulesrequest.md) | :heavy_check_mark:                                                                                                                                       | N/A                                                                                                                                                      |
+| `opts`                                                                                                                                                   | [][operations.Option](../../models/operations/option.md)                                                                                                 | :heavy_minus_sign:                                                                                                                                       | The options for this request.                                                                                                                            |
+
+### Response
+
+**[*operations.TaggingRulesCreateOrUpdateTaggingRulesResponse](../../models/operations/taggingrulescreateorupdatetaggingrulesresponse.md), error**
+
+### Errors
+
+| Error Type                                                               | Status Code                                                              | Content Type                                                             |
+| ------------------------------------------------------------------------ | ------------------------------------------------------------------------ | ------------------------------------------------------------------------ |
+| apierrors.TaggingRulesCreateOrUpdateTaggingRulesBadRequestError          | 400                                                                      | application/json                                                         |
+| apierrors.TaggingRulesCreateOrUpdateTaggingRulesUnauthorizedError        | 401                                                                      | application/json                                                         |
+| apierrors.TaggingRulesCreateOrUpdateTaggingRulesPaymentRequiredError     | 402                                                                      | application/json                                                         |
+| apierrors.TaggingRulesCreateOrUpdateTaggingRulesForbiddenError           | 403                                                                      | application/json                                                         |
+| apierrors.TaggingRulesCreateOrUpdateTaggingRulesNotFoundError            | 404                                                                      | application/json                                                         |
+| apierrors.TaggingRulesCreateOrUpdateTaggingRulesConflictError            | 409                                                                      | application/json                                                         |
+| apierrors.TaggingRulesCreateOrUpdateTaggingRulesUnprocessableEntityError | 422                                                                      | application/json                                                         |
+| apierrors.TaggingRulesCreateOrUpdateTaggingRulesInternalServerError      | 500                                                                      | application/json                                                         |
+| apierrors.TaggingRulesCreateOrUpdateTaggingRulesBadGatewayError          | 502                                                                      | application/json                                                         |
+| apierrors.TaggingRulesCreateOrUpdateTaggingRulesServiceUnavailableError  | 503                                                                      | application/json                                                         |
+| apierrors.TaggingRulesCreateOrUpdateTaggingRulesGatewayTimeoutError      | 504                                                                      | application/json                                                         |
+| apierrors.APIError                                                       | 4XX, 5XX                                                                 | \*/\*                                                                    |

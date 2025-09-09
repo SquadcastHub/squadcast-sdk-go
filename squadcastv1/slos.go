@@ -6,35 +6,35 @@ import (
 	"bytes"
 	"context"
 	"fmt"
-	"github.com/SquadcastHub/squadcast-sdk-go/internal/config"
-	"github.com/SquadcastHub/squadcast-sdk-go/internal/hooks"
-	"github.com/SquadcastHub/squadcast-sdk-go/internal/utils"
-	"github.com/SquadcastHub/squadcast-sdk-go/models/apierrors"
-	"github.com/SquadcastHub/squadcast-sdk-go/models/components"
-	"github.com/SquadcastHub/squadcast-sdk-go/models/operations"
-	"github.com/SquadcastHub/squadcast-sdk-go/retry"
+	"github.com/SquadcastHub/squadcast-sdk-go/squadcastv1/internal/config"
+	"github.com/SquadcastHub/squadcast-sdk-go/squadcastv1/internal/hooks"
+	"github.com/SquadcastHub/squadcast-sdk-go/squadcastv1/internal/utils"
+	"github.com/SquadcastHub/squadcast-sdk-go/squadcastv1/models/apierrors"
+	"github.com/SquadcastHub/squadcast-sdk-go/squadcastv1/models/components"
+	"github.com/SquadcastHub/squadcast-sdk-go/squadcastv1/models/operations"
+	"github.com/SquadcastHub/squadcast-sdk-go/squadcastv1/retry"
 	"net/http"
 	"net/url"
 )
 
-type SLOs struct {
+type Slos struct {
 	rootSDK          *SquadcastSDK
 	sdkConfiguration config.SDKConfiguration
 	hooks            *hooks.Hooks
 }
 
-func newSLOs(rootSDK *SquadcastSDK, sdkConfig config.SDKConfiguration, hooks *hooks.Hooks) *SLOs {
-	return &SLOs{
+func newSlos(rootSDK *SquadcastSDK, sdkConfig config.SDKConfiguration, hooks *hooks.Hooks) *Slos {
+	return &Slos{
 		rootSDK:          rootSDK,
 		sdkConfiguration: sdkConfig,
 		hooks:            hooks,
 	}
 }
 
-// SLOGetAllSLOs - Get All SLOs
+// ListAll - Get All SLOs
 // Returns all the SLOs of the passed owner_id in the params.
 // Requires `access_token` as a `Bearer {{token}}` in the `Authorization` header with `read` scope.
-func (s *SLOs) SLOGetAllSLOs(ctx context.Context, ownerID string, offset string, limit string, opts ...operations.Option) (*operations.SLOGetAllSLOsResponse, error) {
+func (s *Slos) ListAll(ctx context.Context, ownerID string, offset string, limit string, opts ...operations.Option) (*operations.SLOGetAllSLOsResponse, error) {
 	request := operations.SLOGetAllSLOsRequest{
 		OwnerID: ownerID,
 		Offset:  offset,
@@ -523,10 +523,10 @@ func (s *SLOs) SLOGetAllSLOs(ctx context.Context, ownerID string, offset string,
 
 }
 
-// SLOCreateSLO - Create SLO
+// Create SLO
 // - This API will create SLO.
 // Requires `access_token` as a `Bearer {{token}}` in the `Authorization` header with `user-write` scope.
-func (s *SLOs) SLOCreateSLO(ctx context.Context, request components.V3SLOCreateSLORequest, opts ...operations.Option) (*operations.SLOCreateSLOResponse, error) {
+func (s *Slos) Create(ctx context.Context, request components.V3SLOCreateSLORequest, opts ...operations.Option) (*operations.SLOCreateSLOResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -1012,10 +1012,10 @@ func (s *SLOs) SLOCreateSLO(ctx context.Context, request components.V3SLOCreateS
 
 }
 
-// SLOUpdateSLO - Update SLO
+// Update SLO
 // - This API will update SLO.
 // Requires `access_token` as a `Bearer {{token}}` in the `Authorization` header with `user-write` scope.
-func (s *SLOs) SLOUpdateSLO(ctx context.Context, sloID int64, ownerID string, v3SLOCreateSLORequest components.V3SLOCreateSLORequest, opts ...operations.Option) (*operations.SLOUpdateSLOResponse, error) {
+func (s *Slos) Update(ctx context.Context, sloID int64, ownerID string, v3SLOCreateSLORequest components.V3SLOCreateSLORequest, opts ...operations.Option) (*operations.SLOUpdateSLOResponse, error) {
 	request := operations.SLOUpdateSLORequest{
 		SloID:                 sloID,
 		OwnerID:               ownerID,
@@ -1511,10 +1511,10 @@ func (s *SLOs) SLOUpdateSLO(ctx context.Context, sloID int64, ownerID string, v3
 
 }
 
-// SLORemoveSLO - Remove SLO
+// Remove SLO
 // Remove SLO from passed owner_id (team_id) in the params . Upon sccess the slo will be removed.
 // Requires `access_token` as a `Bearer {{token}}` in the `Authorization` header with `user-write` scope.
-func (s *SLOs) SLORemoveSLO(ctx context.Context, sloID int64, ownerID string, opts ...operations.Option) (*operations.SLORemoveSLOResponse, error) {
+func (s *Slos) Remove(ctx context.Context, sloID int64, ownerID string, opts ...operations.Option) (*operations.SLORemoveSLOResponse, error) {
 	request := operations.SLORemoveSLORequest{
 		SloID:   sloID,
 		OwnerID: ownerID,
@@ -2002,10 +2002,10 @@ func (s *SLOs) SLORemoveSLO(ctx context.Context, sloID int64, ownerID string, op
 
 }
 
-// SLOGetSLOByID - Get SLO By ID
+// GetByID - Get SLO By ID
 // Returns a SLO details of the given `sloID` in the request param.
 // Requires `access_token` as a `Bearer {{token}}` in the `Authorization` header with `read` scope.
-func (s *SLOs) SLOGetSLOByID(ctx context.Context, sloID int64, ownerID string, opts ...operations.Option) (*operations.SLOGetSLOByIDResponse, error) {
+func (s *Slos) GetByID(ctx context.Context, sloID int64, ownerID string, opts ...operations.Option) (*operations.SLOGetSLOByIDResponse, error) {
 	request := operations.SLOGetSLOByIDRequest{
 		SloID:   sloID,
 		OwnerID: ownerID,
@@ -2493,11 +2493,11 @@ func (s *SLOs) SLOGetSLOByID(ctx context.Context, sloID int64, ownerID string, o
 
 }
 
-// SLOMarkSLOAffected - Mark SLO Affected
+// MarkAffected - Mark SLO Affected
 // This endpoint is used for mark slo affected.
 //
 // Requires `access_token` as a `Bearer {{token}}` in the `Authorization` header with `user-write` scope.
-func (s *SLOs) SLOMarkSLOAffected(ctx context.Context, sloID int64, ownerID string, v3SLOMarkSLOAffectedRequest components.V3SLOMarkSLOAffectedRequest, opts ...operations.Option) (*operations.SLOMarkSLOAffectedResponse, error) {
+func (s *Slos) MarkAffected(ctx context.Context, sloID int64, ownerID string, v3SLOMarkSLOAffectedRequest components.V3SLOMarkSLOAffectedRequest, opts ...operations.Option) (*operations.SLOMarkSLOAffectedResponse, error) {
 	request := operations.SLOMarkSLOAffectedRequest{
 		SloID:                       sloID,
 		OwnerID:                     ownerID,
@@ -2993,9 +2993,9 @@ func (s *SLOs) SLOMarkSLOAffected(ctx context.Context, sloID int64, ownerID stri
 
 }
 
-// SLOMarkSLOFalsePositive - Mark SLO False Positive
+// MarkFalsePositive - Mark SLO False Positive
 // Value is a boolean (true or false)
-func (s *SLOs) SLOMarkSLOFalsePositive(ctx context.Context, request operations.SLOMarkSLOFalsePositiveRequest, opts ...operations.Option) (*operations.SLOMarkSLOFalsePositiveResponse, error) {
+func (s *Slos) MarkFalsePositive(ctx context.Context, request operations.SLOMarkSLOFalsePositiveRequest, opts ...operations.Option) (*operations.SLOMarkSLOFalsePositiveResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,

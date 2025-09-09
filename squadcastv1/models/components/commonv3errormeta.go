@@ -5,7 +5,7 @@ package components
 import (
 	"errors"
 	"fmt"
-	"github.com/SquadcastHub/squadcast-sdk-go/internal/utils"
+	"github.com/SquadcastHub/squadcast-sdk-go/squadcastv1/internal/utils"
 )
 
 type StatusType string

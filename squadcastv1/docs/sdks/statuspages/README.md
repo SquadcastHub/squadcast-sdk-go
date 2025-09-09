@@ -5,14 +5,18 @@
 
 ### Available Operations
 
-* [StatusPagesListStatusPages](#statuspagesliststatuspages) - List Status Pages
-* [StatusPagesCreateStatusPage](#statuspagescreatestatuspage) - Create Status Page
-* [StatusPagesDeleteStatusPageByID](#statuspagesdeletestatuspagebyid) - Delete Status Page By ID
-* [StatusPagesGetStatusPageByID](#statuspagesgetstatuspagebyid) - Get Status Page By ID
-* [StatusPagesUpdateStatusPageByID](#statuspagesupdatestatuspagebyid) - Update Status Page By ID
-* [StatusPagesListStatusPageStatuses](#statuspagesliststatuspagestatuses) - List Status Page Statuses
+* [List](#list) - List Status Pages
+* [Create](#create) - Create Status Page
+* [DeleteByID](#deletebyid) - Delete Status Page By ID
+* [GetByID](#getbyid) - Get Status Page By ID
+* [UpdateByID](#updatebyid) - Update Status Page By ID
+* [CreateIssue](#createissue) - Create Issue
+* [UpdateIssue](#updateissue) - Update Issue
+* [ListMaintenances](#listmaintenances) - List Maintenances
+* [GetMaintenanceByID](#getmaintenancebyid) - Get Maintenance By ID
+* [GetStatuses](#getstatuses) - List Status Page Statuses
 
-## StatusPagesListStatusPages
+## List
 
 List Status Pages
 
@@ -25,7 +29,7 @@ package main
 import(
 	"context"
 	"os"
-	squadcastsdk "github.com/SquadcastHub/squadcast-sdk-go"
+	squadcastsdk "github.com/SquadcastHub/squadcast-sdk-go/squadcastv1"
 	"log"
 )
 
@@ -36,7 +40,7 @@ func main() {
         squadcastsdk.WithSecurity(os.Getenv("SQUADCASTSDK_BEARER_AUTH")),
     )
 
-    res, err := s.StatusPages.StatusPagesListStatusPages(ctx, "<value>", "<value>", "<value>", "<id>")
+    res, err := s.StatusPages.List(ctx, "<value>", "<value>", "<value>", "<id>")
     if err != nil {
         log.Fatal(err)
     }
@@ -78,7 +82,7 @@ func main() {
 | apierrors.StatusPagesListStatusPagesGatewayTimeoutError      | 504                                                          | application/json                                             |
 | apierrors.APIError                                           | 4XX, 5XX                                                     | \*/\*                                                        |
 
-## StatusPagesCreateStatusPage
+## Create
 
 Create Status Page
 
@@ -91,8 +95,8 @@ package main
 import(
 	"context"
 	"os"
-	squadcastsdk "github.com/SquadcastHub/squadcast-sdk-go"
-	"github.com/SquadcastHub/squadcast-sdk-go/models/components"
+	squadcastsdk "github.com/SquadcastHub/squadcast-sdk-go/squadcastv1"
+	"github.com/SquadcastHub/squadcast-sdk-go/squadcastv1/models/components"
 	"log"
 )
 
@@ -103,7 +107,7 @@ func main() {
         squadcastsdk.WithSecurity(os.Getenv("SQUADCASTSDK_BEARER_AUTH")),
     )
 
-    res, err := s.StatusPages.StatusPagesCreateStatusPage(ctx, components.V4StatusPagesCreateStatusPageRequest{
+    res, err := s.StatusPages.Create(ctx, components.V4StatusPagesCreateStatusPageRequest{
         Name: "<value>",
         DomainName: "failing-convection.com",
         LogoURL: "https://snarling-season.info",
@@ -151,7 +155,7 @@ func main() {
 | apierrors.StatusPagesCreateStatusPageGatewayTimeoutError      | 504                                                           | application/json                                              |
 | apierrors.APIError                                            | 4XX, 5XX                                                      | \*/\*                                                         |
 
-## StatusPagesDeleteStatusPageByID
+## DeleteByID
 
 Delete Status Page By ID
 
@@ -164,7 +168,7 @@ package main
 import(
 	"context"
 	"os"
-	squadcastsdk "github.com/SquadcastHub/squadcast-sdk-go"
+	squadcastsdk "github.com/SquadcastHub/squadcast-sdk-go/squadcastv1"
 	"log"
 )
 
@@ -175,7 +179,7 @@ func main() {
         squadcastsdk.WithSecurity(os.Getenv("SQUADCASTSDK_BEARER_AUTH")),
     )
 
-    res, err := s.StatusPages.StatusPagesDeleteStatusPageByID(ctx, "<id>")
+    res, err := s.StatusPages.DeleteByID(ctx, "<id>")
     if err != nil {
         log.Fatal(err)
     }
@@ -214,7 +218,7 @@ func main() {
 | apierrors.StatusPagesDeleteStatusPageByIDGatewayTimeoutError      | 504                                                               | application/json                                                  |
 | apierrors.APIError                                                | 4XX, 5XX                                                          | \*/\*                                                             |
 
-## StatusPagesGetStatusPageByID
+## GetByID
 
 Get Status Page By ID
 
@@ -227,7 +231,7 @@ package main
 import(
 	"context"
 	"os"
-	squadcastsdk "github.com/SquadcastHub/squadcast-sdk-go"
+	squadcastsdk "github.com/SquadcastHub/squadcast-sdk-go/squadcastv1"
 	"log"
 )
 
@@ -238,7 +242,7 @@ func main() {
         squadcastsdk.WithSecurity(os.Getenv("SQUADCASTSDK_BEARER_AUTH")),
     )
 
-    res, err := s.StatusPages.StatusPagesGetStatusPageByID(ctx, "<id>")
+    res, err := s.StatusPages.GetByID(ctx, "<id>")
     if err != nil {
         log.Fatal(err)
     }
@@ -277,7 +281,7 @@ func main() {
 | apierrors.StatusPagesGetStatusPageByIDGatewayTimeoutError      | 504                                                            | application/json                                               |
 | apierrors.APIError                                             | 4XX, 5XX                                                       | \*/\*                                                          |
 
-## StatusPagesUpdateStatusPageByID
+## UpdateByID
 
 Update Status Page By ID
 
@@ -290,8 +294,8 @@ package main
 import(
 	"context"
 	"os"
-	squadcastsdk "github.com/SquadcastHub/squadcast-sdk-go"
-	"github.com/SquadcastHub/squadcast-sdk-go/models/components"
+	squadcastsdk "github.com/SquadcastHub/squadcast-sdk-go/squadcastv1"
+	"github.com/SquadcastHub/squadcast-sdk-go/squadcastv1/models/components"
 	"log"
 )
 
@@ -302,7 +306,7 @@ func main() {
         squadcastsdk.WithSecurity(os.Getenv("SQUADCASTSDK_BEARER_AUTH")),
     )
 
-    res, err := s.StatusPages.StatusPagesUpdateStatusPageByID(ctx, "<id>", components.V4StatusPagesUpdateStatusPageByIDRequest{
+    res, err := s.StatusPages.UpdateByID(ctx, "<id>", components.V4StatusPagesUpdateStatusPageByIDRequest{
         Name: "<value>",
         IsPublic: false,
         DomainName: "blank-brief.info",
@@ -354,7 +358,283 @@ func main() {
 | apierrors.StatusPagesUpdateStatusPageByIDGatewayTimeoutError      | 504                                                               | application/json                                                  |
 | apierrors.APIError                                                | 4XX, 5XX                                                          | \*/\*                                                             |
 
-## StatusPagesListStatusPageStatuses
+## CreateIssue
+
+Create Issue
+
+### Example Usage
+
+<!-- UsageSnippet language="go" operationID="Issues_createIssue" method="post" path="/v4/statuspages/{statuspageID}/issues" -->
+```go
+package main
+
+import(
+	"context"
+	"os"
+	squadcastsdk "github.com/SquadcastHub/squadcast-sdk-go/squadcastv1"
+	"github.com/SquadcastHub/squadcast-sdk-go/squadcastv1/models/components"
+	"log"
+)
+
+func main() {
+    ctx := context.Background()
+
+    s := squadcastsdk.New(
+        squadcastsdk.WithSecurity(os.Getenv("SQUADCASTSDK_BEARER_AUTH")),
+    )
+
+    res, err := s.StatusPages.CreateIssue(ctx, "<id>", components.V4StatusPagesIssuesCreateIssueRequest{
+        Title: "<value>",
+        Components: []components.V4StatusPagesIssuesCreateIssueRequestComponent{
+            components.V4StatusPagesIssuesCreateIssueRequestComponent{},
+        },
+        Issues: []components.V4StatusPagesIssuesCreateIssueRequestIssue{
+            components.V4StatusPagesIssuesCreateIssueRequestIssue{},
+        },
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res.Object != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                            | Type                                                                                                                 | Required                                                                                                             | Description                                                                                                          |
+| -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                                                | [context.Context](https://pkg.go.dev/context#Context)                                                                | :heavy_check_mark:                                                                                                   | The context to use for the request.                                                                                  |
+| `statuspageID`                                                                                                       | *string*                                                                                                             | :heavy_check_mark:                                                                                                   | N/A                                                                                                                  |
+| `v4StatusPagesIssuesCreateIssueRequest`                                                                              | [components.V4StatusPagesIssuesCreateIssueRequest](../../models/components/v4statuspagesissuescreateissuerequest.md) | :heavy_check_mark:                                                                                                   | N/A                                                                                                                  |
+| `opts`                                                                                                               | [][operations.Option](../../models/operations/option.md)                                                             | :heavy_minus_sign:                                                                                                   | The options for this request.                                                                                        |
+
+### Response
+
+**[*operations.IssuesCreateIssueResponse](../../models/operations/issuescreateissueresponse.md), error**
+
+### Errors
+
+| Error Type                                          | Status Code                                         | Content Type                                        |
+| --------------------------------------------------- | --------------------------------------------------- | --------------------------------------------------- |
+| apierrors.IssuesCreateIssueBadRequestError          | 400                                                 | application/json                                    |
+| apierrors.IssuesCreateIssueUnauthorizedError        | 401                                                 | application/json                                    |
+| apierrors.IssuesCreateIssuePaymentRequiredError     | 402                                                 | application/json                                    |
+| apierrors.IssuesCreateIssueForbiddenError           | 403                                                 | application/json                                    |
+| apierrors.IssuesCreateIssueNotFoundError            | 404                                                 | application/json                                    |
+| apierrors.IssuesCreateIssueConflictError            | 409                                                 | application/json                                    |
+| apierrors.IssuesCreateIssueUnprocessableEntityError | 422                                                 | application/json                                    |
+| apierrors.IssuesCreateIssueInternalServerError      | 500                                                 | application/json                                    |
+| apierrors.IssuesCreateIssueBadGatewayError          | 502                                                 | application/json                                    |
+| apierrors.IssuesCreateIssueServiceUnavailableError  | 503                                                 | application/json                                    |
+| apierrors.IssuesCreateIssueGatewayTimeoutError      | 504                                                 | application/json                                    |
+| apierrors.APIError                                  | 4XX, 5XX                                            | \*/\*                                               |
+
+## UpdateIssue
+
+Update Issue
+
+### Example Usage
+
+<!-- UsageSnippet language="go" operationID="Issues_updateIssue" method="put" path="/v4/statuspages/{statuspageID}/issues/{issue_id}" -->
+```go
+package main
+
+import(
+	"context"
+	"os"
+	squadcastsdk "github.com/SquadcastHub/squadcast-sdk-go/squadcastv1"
+	"github.com/SquadcastHub/squadcast-sdk-go/squadcastv1/models/components"
+	"log"
+)
+
+func main() {
+    ctx := context.Background()
+
+    s := squadcastsdk.New(
+        squadcastsdk.WithSecurity(os.Getenv("SQUADCASTSDK_BEARER_AUTH")),
+    )
+
+    res, err := s.StatusPages.UpdateIssue(ctx, "<id>", "<id>", components.V4StatusPagesIssuesUpdateIssueRequest{
+        Title: "<value>",
+        Components: []components.V4StatusPagesIssuesUpdateIssueRequestComponent{
+            components.V4StatusPagesIssuesUpdateIssueRequestComponent{},
+        },
+        Issues: []components.V4StatusPagesIssuesUpdateIssueRequestIssue{
+            components.V4StatusPagesIssuesUpdateIssueRequestIssue{},
+        },
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res.Object != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                            | Type                                                                                                                 | Required                                                                                                             | Description                                                                                                          |
+| -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                                                | [context.Context](https://pkg.go.dev/context#Context)                                                                | :heavy_check_mark:                                                                                                   | The context to use for the request.                                                                                  |
+| `statuspageID`                                                                                                       | *string*                                                                                                             | :heavy_check_mark:                                                                                                   | N/A                                                                                                                  |
+| `issueID`                                                                                                            | *string*                                                                                                             | :heavy_check_mark:                                                                                                   | N/A                                                                                                                  |
+| `v4StatusPagesIssuesUpdateIssueRequest`                                                                              | [components.V4StatusPagesIssuesUpdateIssueRequest](../../models/components/v4statuspagesissuesupdateissuerequest.md) | :heavy_check_mark:                                                                                                   | N/A                                                                                                                  |
+| `opts`                                                                                                               | [][operations.Option](../../models/operations/option.md)                                                             | :heavy_minus_sign:                                                                                                   | The options for this request.                                                                                        |
+
+### Response
+
+**[*operations.IssuesUpdateIssueResponse](../../models/operations/issuesupdateissueresponse.md), error**
+
+### Errors
+
+| Error Type                                          | Status Code                                         | Content Type                                        |
+| --------------------------------------------------- | --------------------------------------------------- | --------------------------------------------------- |
+| apierrors.IssuesUpdateIssueBadRequestError          | 400                                                 | application/json                                    |
+| apierrors.IssuesUpdateIssueUnauthorizedError        | 401                                                 | application/json                                    |
+| apierrors.IssuesUpdateIssuePaymentRequiredError     | 402                                                 | application/json                                    |
+| apierrors.IssuesUpdateIssueForbiddenError           | 403                                                 | application/json                                    |
+| apierrors.IssuesUpdateIssueNotFoundError            | 404                                                 | application/json                                    |
+| apierrors.IssuesUpdateIssueConflictError            | 409                                                 | application/json                                    |
+| apierrors.IssuesUpdateIssueUnprocessableEntityError | 422                                                 | application/json                                    |
+| apierrors.IssuesUpdateIssueInternalServerError      | 500                                                 | application/json                                    |
+| apierrors.IssuesUpdateIssueBadGatewayError          | 502                                                 | application/json                                    |
+| apierrors.IssuesUpdateIssueServiceUnavailableError  | 503                                                 | application/json                                    |
+| apierrors.IssuesUpdateIssueGatewayTimeoutError      | 504                                                 | application/json                                    |
+| apierrors.APIError                                  | 4XX, 5XX                                            | \*/\*                                               |
+
+## ListMaintenances
+
+List Maintenances
+
+### Example Usage
+
+<!-- UsageSnippet language="go" operationID="Maintenances_listMaintenances" method="get" path="/v4/statuspages/{statuspageID}/maintenance" -->
+```go
+package main
+
+import(
+	"context"
+	"os"
+	squadcastsdk "github.com/SquadcastHub/squadcast-sdk-go/squadcastv1"
+	"log"
+)
+
+func main() {
+    ctx := context.Background()
+
+    s := squadcastsdk.New(
+        squadcastsdk.WithSecurity(os.Getenv("SQUADCASTSDK_BEARER_AUTH")),
+    )
+
+    res, err := s.StatusPages.ListMaintenances(ctx, "<id>", "<value>", "<value>")
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res.V4StatusPagesMaintenancesListMaintenancesResponse != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                | Type                                                     | Required                                                 | Description                                              |
+| -------------------------------------------------------- | -------------------------------------------------------- | -------------------------------------------------------- | -------------------------------------------------------- |
+| `ctx`                                                    | [context.Context](https://pkg.go.dev/context#Context)    | :heavy_check_mark:                                       | The context to use for the request.                      |
+| `statuspageID`                                           | *string*                                                 | :heavy_check_mark:                                       | N/A                                                      |
+| `startTime`                                              | *string*                                                 | :heavy_check_mark:                                       | N/A                                                      |
+| `endTime`                                                | *string*                                                 | :heavy_check_mark:                                       | N/A                                                      |
+| `opts`                                                   | [][operations.Option](../../models/operations/option.md) | :heavy_minus_sign:                                       | The options for this request.                            |
+
+### Response
+
+**[*operations.MaintenancesListMaintenancesResponse](../../models/operations/maintenanceslistmaintenancesresponse.md), error**
+
+### Errors
+
+| Error Type                                                     | Status Code                                                    | Content Type                                                   |
+| -------------------------------------------------------------- | -------------------------------------------------------------- | -------------------------------------------------------------- |
+| apierrors.MaintenancesListMaintenancesBadRequestError          | 400                                                            | application/json                                               |
+| apierrors.MaintenancesListMaintenancesUnauthorizedError        | 401                                                            | application/json                                               |
+| apierrors.MaintenancesListMaintenancesPaymentRequiredError     | 402                                                            | application/json                                               |
+| apierrors.MaintenancesListMaintenancesForbiddenError           | 403                                                            | application/json                                               |
+| apierrors.MaintenancesListMaintenancesNotFoundError            | 404                                                            | application/json                                               |
+| apierrors.MaintenancesListMaintenancesConflictError            | 409                                                            | application/json                                               |
+| apierrors.MaintenancesListMaintenancesUnprocessableEntityError | 422                                                            | application/json                                               |
+| apierrors.MaintenancesListMaintenancesInternalServerError      | 500                                                            | application/json                                               |
+| apierrors.MaintenancesListMaintenancesBadGatewayError          | 502                                                            | application/json                                               |
+| apierrors.MaintenancesListMaintenancesServiceUnavailableError  | 503                                                            | application/json                                               |
+| apierrors.MaintenancesListMaintenancesGatewayTimeoutError      | 504                                                            | application/json                                               |
+| apierrors.APIError                                             | 4XX, 5XX                                                       | \*/\*                                                          |
+
+## GetMaintenanceByID
+
+Get Maintenance By ID
+
+### Example Usage
+
+<!-- UsageSnippet language="go" operationID="Maintenances_getMaintenanceById" method="get" path="/v4/statuspages/{statuspageID}/maintenance/{maintenance_id}" -->
+```go
+package main
+
+import(
+	"context"
+	"os"
+	squadcastsdk "github.com/SquadcastHub/squadcast-sdk-go/squadcastv1"
+	"log"
+)
+
+func main() {
+    ctx := context.Background()
+
+    s := squadcastsdk.New(
+        squadcastsdk.WithSecurity(os.Getenv("SQUADCASTSDK_BEARER_AUTH")),
+    )
+
+    res, err := s.StatusPages.GetMaintenanceByID(ctx, "<id>", "<id>")
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res.Object != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                | Type                                                     | Required                                                 | Description                                              |
+| -------------------------------------------------------- | -------------------------------------------------------- | -------------------------------------------------------- | -------------------------------------------------------- |
+| `ctx`                                                    | [context.Context](https://pkg.go.dev/context#Context)    | :heavy_check_mark:                                       | The context to use for the request.                      |
+| `statuspageID`                                           | *string*                                                 | :heavy_check_mark:                                       | N/A                                                      |
+| `maintenanceID`                                          | *string*                                                 | :heavy_check_mark:                                       | N/A                                                      |
+| `opts`                                                   | [][operations.Option](../../models/operations/option.md) | :heavy_minus_sign:                                       | The options for this request.                            |
+
+### Response
+
+**[*operations.MaintenancesGetMaintenanceByIDResponse](../../models/operations/maintenancesgetmaintenancebyidresponse.md), error**
+
+### Errors
+
+| Error Type                                                       | Status Code                                                      | Content Type                                                     |
+| ---------------------------------------------------------------- | ---------------------------------------------------------------- | ---------------------------------------------------------------- |
+| apierrors.MaintenancesGetMaintenanceByIDBadRequestError          | 400                                                              | application/json                                                 |
+| apierrors.MaintenancesGetMaintenanceByIDUnauthorizedError        | 401                                                              | application/json                                                 |
+| apierrors.MaintenancesGetMaintenanceByIDPaymentRequiredError     | 402                                                              | application/json                                                 |
+| apierrors.MaintenancesGetMaintenanceByIDForbiddenError           | 403                                                              | application/json                                                 |
+| apierrors.MaintenancesGetMaintenanceByIDNotFoundError            | 404                                                              | application/json                                                 |
+| apierrors.MaintenancesGetMaintenanceByIDConflictError            | 409                                                              | application/json                                                 |
+| apierrors.MaintenancesGetMaintenanceByIDUnprocessableEntityError | 422                                                              | application/json                                                 |
+| apierrors.MaintenancesGetMaintenanceByIDInternalServerError      | 500                                                              | application/json                                                 |
+| apierrors.MaintenancesGetMaintenanceByIDBadGatewayError          | 502                                                              | application/json                                                 |
+| apierrors.MaintenancesGetMaintenanceByIDServiceUnavailableError  | 503                                                              | application/json                                                 |
+| apierrors.MaintenancesGetMaintenanceByIDGatewayTimeoutError      | 504                                                              | application/json                                                 |
+| apierrors.APIError                                               | 4XX, 5XX                                                         | \*/\*                                                            |
+
+## GetStatuses
 
 List Status Page Statuses
 
@@ -367,7 +647,7 @@ package main
 import(
 	"context"
 	"os"
-	squadcastsdk "github.com/SquadcastHub/squadcast-sdk-go"
+	squadcastsdk "github.com/SquadcastHub/squadcast-sdk-go/squadcastv1"
 	"log"
 )
 
@@ -378,7 +658,7 @@ func main() {
         squadcastsdk.WithSecurity(os.Getenv("SQUADCASTSDK_BEARER_AUTH")),
     )
 
-    res, err := s.StatusPages.StatusPagesListStatusPageStatuses(ctx, "<id>")
+    res, err := s.StatusPages.GetStatuses(ctx, "<id>")
     if err != nil {
         log.Fatal(err)
     }

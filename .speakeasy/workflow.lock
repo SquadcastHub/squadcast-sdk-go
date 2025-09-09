@@ -2,19 +2,20 @@ speakeasyVersion: 1.613.0
 sources:
     Squadcast:
         sourceNamespace: squadcast
-        sourceRevisionDigest: sha256:c9e70a9d98fe2dc241f97e7df8a4fc5f9261dac840c75b3af889b26d578b4a81
-        sourceBlobDigest: sha256:abb8732ad7b0346dc5a0b8fc4d225d97df0bbb856c27a6764178f2d811b03d86
+        sourceRevisionDigest: sha256:8375cc433b4204b968c6606b0d583c4fccb7f1c6f01c79f84cae157cad8cda79
+        sourceBlobDigest: sha256:e3d93f27abf93dcce14b1a75d4868d2c7c8fdffd7fd937be482d81c33b7026eb
         tags:
             - latest
+            - speakeasy-sdk-regen-1757414840
             - 1.0.0
 targets:
     squadcast-sdk:
         source: Squadcast
         sourceNamespace: squadcast
-        sourceRevisionDigest: sha256:c9e70a9d98fe2dc241f97e7df8a4fc5f9261dac840c75b3af889b26d578b4a81
-        sourceBlobDigest: sha256:abb8732ad7b0346dc5a0b8fc4d225d97df0bbb856c27a6764178f2d811b03d86
+        sourceRevisionDigest: sha256:8375cc433b4204b968c6606b0d583c4fccb7f1c6f01c79f84cae157cad8cda79
+        sourceBlobDigest: sha256:e3d93f27abf93dcce14b1a75d4868d2c7c8fdffd7fd937be482d81c33b7026eb
         codeSamplesNamespace: squadcast-go-code-samples
-        codeSamplesRevisionDigest: sha256:b060ba1f983801c2d3ad425f36d14797919323bc68c823497e6f93f10e74cb6a
+        codeSamplesRevisionDigest: sha256:6fae6660c27b50c3fbd113607e97aff98bce90c19f10a1c2430957bea46a4aea
 workflow:
     workflowVersion: 1.0.0
     speakeasyVersion: latest
@@ -24,6 +25,8 @@ workflow:
                 - location: https://raw.githubusercontent.com/solarwinds-cloud/sq-squadcast-public-api-docs/main/build/openapi3/openapi.json
                   authHeader: Authorization
                   authSecret: $openapi_doc_auth_token
+            overlays:
+                - location: .speakeasy/overlay.openapi.yaml
             output: .speakeasy/out.openapi.yaml
             registry:
                 location: registry.speakeasyapi.dev/swo/incident-response/squadcast

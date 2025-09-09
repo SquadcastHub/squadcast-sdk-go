@@ -1,13 +1,13 @@
 # ServicesExtensions
-(*ServicesExtensions*)
+(*Services.Extensions*)
 
 ## Overview
 
 ### Available Operations
 
-* [ExtensionsUpdateSlackExtension](#extensionsupdateslackextension) - Update Slack Extension
+* [UpdateSlack](#updateslack) - Update Slack Extension
 
-## ExtensionsUpdateSlackExtension
+## UpdateSlack
 
 Update Slack Extension
 
@@ -20,8 +20,8 @@ package main
 import(
 	"context"
 	"os"
-	squadcastsdk "github.com/SquadcastHub/squadcast-sdk-go"
-	"github.com/SquadcastHub/squadcast-sdk-go/models/components"
+	squadcastsdk "github.com/SquadcastHub/squadcast-sdk-go/squadcastv1"
+	"github.com/SquadcastHub/squadcast-sdk-go/squadcastv1/models/components"
 	"log"
 )
 
@@ -32,7 +32,7 @@ func main() {
         squadcastsdk.WithSecurity(os.Getenv("SQUADCASTSDK_BEARER_AUTH")),
     )
 
-    res, err := s.ServicesExtensions.ExtensionsUpdateSlackExtension(ctx, "<id>", components.V3ServicesExtensionsUpdateSlackExtensionRequest{
+    res, err := s.Services.Extensions.UpdateSlack(ctx, "<id>", components.V3ServicesExtensionsUpdateSlackExtensionRequest{
         ChannelID: "<id>",
     })
     if err != nil {

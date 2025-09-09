@@ -1,19 +1,19 @@
-# SLOs
-(*SLOs*)
+# Slos
+(*Slos*)
 
 ## Overview
 
 ### Available Operations
 
-* [SLOGetAllSLOs](#slogetallslos) - Get All SLOs
-* [SLOCreateSLO](#slocreateslo) - Create SLO
-* [SLOUpdateSLO](#sloupdateslo) - Update SLO
-* [SLORemoveSLO](#sloremoveslo) - Remove SLO
-* [SLOGetSLOByID](#slogetslobyid) - Get SLO By ID
-* [SLOMarkSLOAffected](#slomarksloaffected) - Mark SLO Affected
-* [SLOMarkSLOFalsePositive](#slomarkslofalsepositive) - Mark SLO False Positive
+* [ListAll](#listall) - Get All SLOs
+* [Create](#create) - Create SLO
+* [Update](#update) - Update SLO
+* [Remove](#remove) - Remove SLO
+* [GetByID](#getbyid) - Get SLO By ID
+* [MarkAffected](#markaffected) - Mark SLO Affected
+* [MarkFalsePositive](#markfalsepositive) - Mark SLO False Positive
 
-## SLOGetAllSLOs
+## ListAll
 
 Returns all the SLOs of the passed owner_id in the params.
 Requires `access_token` as a `Bearer {{token}}` in the `Authorization` header with `read` scope.
@@ -27,7 +27,7 @@ package main
 import(
 	"context"
 	"os"
-	squadcastsdk "github.com/SquadcastHub/squadcast-sdk-go"
+	squadcastsdk "github.com/SquadcastHub/squadcast-sdk-go/squadcastv1"
 	"log"
 )
 
@@ -38,7 +38,7 @@ func main() {
         squadcastsdk.WithSecurity(os.Getenv("SQUADCASTSDK_BEARER_AUTH")),
     )
 
-    res, err := s.SLOs.SLOGetAllSLOs(ctx, "<id>", "<value>", "<value>")
+    res, err := s.Slos.ListAll(ctx, "<id>", "<value>", "<value>")
     if err != nil {
         log.Fatal(err)
     }
@@ -79,7 +79,7 @@ func main() {
 | apierrors.SLOGetAllSLOsGatewayTimeoutError      | 504                                             | application/json                                |
 | apierrors.APIError                              | 4XX, 5XX                                        | \*/\*                                           |
 
-## SLOCreateSLO
+## Create
 
 - This API will create SLO.
 Requires `access_token` as a `Bearer {{token}}` in the `Authorization` header with `user-write` scope.
@@ -93,9 +93,9 @@ package main
 import(
 	"context"
 	"os"
-	squadcastsdk "github.com/SquadcastHub/squadcast-sdk-go"
-	"github.com/SquadcastHub/squadcast-sdk-go/models/components"
-	"github.com/SquadcastHub/squadcast-sdk-go/types"
+	squadcastsdk "github.com/SquadcastHub/squadcast-sdk-go/squadcastv1"
+	"github.com/SquadcastHub/squadcast-sdk-go/squadcastv1/models/components"
+	"github.com/SquadcastHub/squadcast-sdk-go/squadcastv1/types"
 	"log"
 )
 
@@ -106,7 +106,7 @@ func main() {
         squadcastsdk.WithSecurity(os.Getenv("SQUADCASTSDK_BEARER_AUTH")),
     )
 
-    res, err := s.SLOs.SLOCreateSLO(ctx, components.V3SLOCreateSLORequest{
+    res, err := s.Slos.Create(ctx, components.V3SLOCreateSLORequest{
         Name: "<value>",
         TimeIntervalType: components.V3SLOTimeIntervalTypeRolling,
         ServiceIds: []string{
@@ -160,7 +160,7 @@ func main() {
 | apierrors.SLOCreateSLOGatewayTimeoutError      | 504                                            | application/json                               |
 | apierrors.APIError                             | 4XX, 5XX                                       | \*/\*                                          |
 
-## SLOUpdateSLO
+## Update
 
 - This API will update SLO.
 Requires `access_token` as a `Bearer {{token}}` in the `Authorization` header with `user-write` scope.
@@ -174,9 +174,9 @@ package main
 import(
 	"context"
 	"os"
-	squadcastsdk "github.com/SquadcastHub/squadcast-sdk-go"
-	"github.com/SquadcastHub/squadcast-sdk-go/models/components"
-	"github.com/SquadcastHub/squadcast-sdk-go/types"
+	squadcastsdk "github.com/SquadcastHub/squadcast-sdk-go/squadcastv1"
+	"github.com/SquadcastHub/squadcast-sdk-go/squadcastv1/models/components"
+	"github.com/SquadcastHub/squadcast-sdk-go/squadcastv1/types"
 	"log"
 )
 
@@ -187,7 +187,7 @@ func main() {
         squadcastsdk.WithSecurity(os.Getenv("SQUADCASTSDK_BEARER_AUTH")),
     )
 
-    res, err := s.SLOs.SLOUpdateSLO(ctx, 16112, "<id>", components.V3SLOCreateSLORequest{
+    res, err := s.Slos.Update(ctx, 16112, "<id>", components.V3SLOCreateSLORequest{
         Name: "<value>",
         TimeIntervalType: components.V3SLOTimeIntervalTypeRolling,
         ServiceIds: []string{
@@ -247,7 +247,7 @@ func main() {
 | apierrors.SLOUpdateSLOGatewayTimeoutError      | 504                                            | application/json                               |
 | apierrors.APIError                             | 4XX, 5XX                                       | \*/\*                                          |
 
-## SLORemoveSLO
+## Remove
 
 Remove SLO from passed owner_id (team_id) in the params . Upon sccess the slo will be removed.
 Requires `access_token` as a `Bearer {{token}}` in the `Authorization` header with `user-write` scope.
@@ -261,7 +261,7 @@ package main
 import(
 	"context"
 	"os"
-	squadcastsdk "github.com/SquadcastHub/squadcast-sdk-go"
+	squadcastsdk "github.com/SquadcastHub/squadcast-sdk-go/squadcastv1"
 	"log"
 )
 
@@ -272,7 +272,7 @@ func main() {
         squadcastsdk.WithSecurity(os.Getenv("SQUADCASTSDK_BEARER_AUTH")),
     )
 
-    res, err := s.SLOs.SLORemoveSLO(ctx, 938544, "<id>")
+    res, err := s.Slos.Remove(ctx, 938544, "<id>")
     if err != nil {
         log.Fatal(err)
     }
@@ -312,7 +312,7 @@ func main() {
 | apierrors.SLORemoveSLOGatewayTimeoutError      | 504                                            | application/json                               |
 | apierrors.APIError                             | 4XX, 5XX                                       | \*/\*                                          |
 
-## SLOGetSLOByID
+## GetByID
 
 Returns a SLO details of the given `sloID` in the request param.
 Requires `access_token` as a `Bearer {{token}}` in the `Authorization` header with `read` scope.
@@ -326,7 +326,7 @@ package main
 import(
 	"context"
 	"os"
-	squadcastsdk "github.com/SquadcastHub/squadcast-sdk-go"
+	squadcastsdk "github.com/SquadcastHub/squadcast-sdk-go/squadcastv1"
 	"log"
 )
 
@@ -337,7 +337,7 @@ func main() {
         squadcastsdk.WithSecurity(os.Getenv("SQUADCASTSDK_BEARER_AUTH")),
     )
 
-    res, err := s.SLOs.SLOGetSLOByID(ctx, 586718, "<id>")
+    res, err := s.Slos.GetByID(ctx, 586718, "<id>")
     if err != nil {
         log.Fatal(err)
     }
@@ -377,7 +377,7 @@ func main() {
 | apierrors.SLOGetSLOByIDGatewayTimeoutError      | 504                                             | application/json                                |
 | apierrors.APIError                              | 4XX, 5XX                                        | \*/\*                                           |
 
-## SLOMarkSLOAffected
+## MarkAffected
 
 This endpoint is used for mark slo affected.
 
@@ -392,8 +392,8 @@ package main
 import(
 	"context"
 	"os"
-	squadcastsdk "github.com/SquadcastHub/squadcast-sdk-go"
-	"github.com/SquadcastHub/squadcast-sdk-go/models/components"
+	squadcastsdk "github.com/SquadcastHub/squadcast-sdk-go/squadcastv1"
+	"github.com/SquadcastHub/squadcast-sdk-go/squadcastv1/models/components"
 	"log"
 )
 
@@ -404,7 +404,7 @@ func main() {
         squadcastsdk.WithSecurity(os.Getenv("SQUADCASTSDK_BEARER_AUTH")),
     )
 
-    res, err := s.SLOs.SLOMarkSLOAffected(ctx, 294670, "<id>", components.V3SLOMarkSLOAffectedRequest{
+    res, err := s.Slos.MarkAffected(ctx, 294670, "<id>", components.V3SLOMarkSLOAffectedRequest{
         IncidentID: "<id>",
         Slis: []string{
             "<value 1>",
@@ -455,7 +455,7 @@ func main() {
 | apierrors.SLOMarkSLOAffectedGatewayTimeoutError      | 504                                                  | application/json                                     |
 | apierrors.APIError                                   | 4XX, 5XX                                             | \*/\*                                                |
 
-## SLOMarkSLOFalsePositive
+## MarkFalsePositive
 
 Value is a boolean (true or false)
 
@@ -468,8 +468,8 @@ package main
 import(
 	"context"
 	"os"
-	squadcastsdk "github.com/SquadcastHub/squadcast-sdk-go"
-	"github.com/SquadcastHub/squadcast-sdk-go/models/operations"
+	squadcastsdk "github.com/SquadcastHub/squadcast-sdk-go/squadcastv1"
+	"github.com/SquadcastHub/squadcast-sdk-go/squadcastv1/models/operations"
 	"log"
 )
 
@@ -480,7 +480,7 @@ func main() {
         squadcastsdk.WithSecurity(os.Getenv("SQUADCASTSDK_BEARER_AUTH")),
     )
 
-    res, err := s.SLOs.SLOMarkSLOFalsePositive(ctx, operations.SLOMarkSLOFalsePositiveRequest{
+    res, err := s.Slos.MarkFalsePositive(ctx, operations.SLOMarkSLOFalsePositiveRequest{
         SloID: 825843,
         IncidentID: 505067,
         Value: true,

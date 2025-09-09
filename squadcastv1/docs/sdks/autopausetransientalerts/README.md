@@ -1,0 +1,71 @@
+# AutoPauseTransientAlerts
+(*Incidents.AutoPauseTransientAlerts*)
+
+## Overview
+
+### Available Operations
+
+* [MarkAsNotTransient](#markasnottransient) - Mark as Not Transient
+
+## MarkAsNotTransient
+
+Mark as Not Transient
+
+### Example Usage
+
+<!-- UsageSnippet language="go" operationID="Apta_markAsNotTransient" method="put" path="/v3/incidents/{incidentID}/mark-as-non-transient" -->
+```go
+package main
+
+import(
+	"context"
+	"os"
+	squadcastsdk "github.com/SquadcastHub/squadcast-sdk-go/squadcastv1"
+	"log"
+)
+
+func main() {
+    ctx := context.Background()
+
+    s := squadcastsdk.New(
+        squadcastsdk.WithSecurity(os.Getenv("SQUADCASTSDK_BEARER_AUTH")),
+    )
+
+    res, err := s.Incidents.AutoPauseTransientAlerts.MarkAsNotTransient(ctx, "<id>")
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res.Object != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                | Type                                                     | Required                                                 | Description                                              |
+| -------------------------------------------------------- | -------------------------------------------------------- | -------------------------------------------------------- | -------------------------------------------------------- |
+| `ctx`                                                    | [context.Context](https://pkg.go.dev/context#Context)    | :heavy_check_mark:                                       | The context to use for the request.                      |
+| `incidentID`                                             | *string*                                                 | :heavy_check_mark:                                       | N/A                                                      |
+| `opts`                                                   | [][operations.Option](../../models/operations/option.md) | :heavy_minus_sign:                                       | The options for this request.                            |
+
+### Response
+
+**[*operations.AptaMarkAsNotTransientResponse](../../models/operations/aptamarkasnottransientresponse.md), error**
+
+### Errors
+
+| Error Type                                               | Status Code                                              | Content Type                                             |
+| -------------------------------------------------------- | -------------------------------------------------------- | -------------------------------------------------------- |
+| apierrors.AptaMarkAsNotTransientBadRequestError          | 400                                                      | application/json                                         |
+| apierrors.AptaMarkAsNotTransientUnauthorizedError        | 401                                                      | application/json                                         |
+| apierrors.AptaMarkAsNotTransientPaymentRequiredError     | 402                                                      | application/json                                         |
+| apierrors.AptaMarkAsNotTransientForbiddenError           | 403                                                      | application/json                                         |
+| apierrors.AptaMarkAsNotTransientNotFoundError            | 404                                                      | application/json                                         |
+| apierrors.AptaMarkAsNotTransientConflictError            | 409                                                      | application/json                                         |
+| apierrors.AptaMarkAsNotTransientUnprocessableEntityError | 422                                                      | application/json                                         |
+| apierrors.AptaMarkAsNotTransientInternalServerError      | 500                                                      | application/json                                         |
+| apierrors.AptaMarkAsNotTransientBadGatewayError          | 502                                                      | application/json                                         |
+| apierrors.AptaMarkAsNotTransientServiceUnavailableError  | 503                                                      | application/json                                         |
+| apierrors.AptaMarkAsNotTransientGatewayTimeoutError      | 504                                                      | application/json                                         |
+| apierrors.APIError                                       | 4XX, 5XX                                                 | \*/\*                                                    |

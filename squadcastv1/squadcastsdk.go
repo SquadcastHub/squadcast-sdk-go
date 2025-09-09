@@ -7,11 +7,11 @@ package squadcastsdk
 import (
 	"context"
 	"fmt"
-	"github.com/SquadcastHub/squadcast-sdk-go/internal/config"
-	"github.com/SquadcastHub/squadcast-sdk-go/internal/hooks"
-	"github.com/SquadcastHub/squadcast-sdk-go/internal/utils"
-	"github.com/SquadcastHub/squadcast-sdk-go/models/components"
-	"github.com/SquadcastHub/squadcast-sdk-go/retry"
+	"github.com/SquadcastHub/squadcast-sdk-go/squadcastv1/internal/config"
+	"github.com/SquadcastHub/squadcast-sdk-go/squadcastv1/internal/hooks"
+	"github.com/SquadcastHub/squadcast-sdk-go/squadcastv1/internal/utils"
+	"github.com/SquadcastHub/squadcast-sdk-go/squadcastv1/models/components"
+	"github.com/SquadcastHub/squadcast-sdk-go/squadcastv1/retry"
 	"net/http"
 	"time"
 )
@@ -49,56 +49,38 @@ func Float64(f float64) *float64 { return &f }
 func Pointer[T any](v T) *T { return &v }
 
 type SquadcastSDK struct {
-	SDKVersion                            string
-	Analytics                             *Analytics
-	EscalationPolicies                    *EscalationPolicies
-	Export                                *Export
-	ExtensionsWebhooks                    *ExtensionsWebhooks
-	ExtensionsMSTeams                     *ExtensionsMSTeams
-	IncidentsCommunicationCard            *IncidentsCommunicationCard
-	GlobalEventRules                      *GlobalEventRules
-	GlobalEventRulesRulesets              *GlobalEventRulesRulesets
-	GlobalEventRulesRulesetsRules         *GlobalEventRulesRulesetsRules
-	GlobalOncallReminderRules             *GlobalOncallReminderRules
-	Incidents                             *Incidents
-	IncidentsPostmortems                  *IncidentsPostmortems
-	IncidentsRunbooks                     *IncidentsRunbooks
-	IncidentsTags                         *IncidentsTags
-	IncidentsNotes                        *IncidentsNotes
-	IncidentsIncidentActions              *IncidentsIncidentActions
-	IncidentsAdditionalResponders         *IncidentsAdditionalResponders
-	IncidentsAutoPauseTransientAlertsAPTA *IncidentsAutoPauseTransientAlertsAPTA
-	IncidentsSnoozeNotifications          *IncidentsSnoozeNotifications
-	UsersAPIToken                         *UsersAPIToken
-	Runbooks                              *Runbooks
-	Services                              *Services
-	ServicesOverlay                       *ServicesOverlay
-	ServicesDeduplicationRules            *ServicesDeduplicationRules
-	ServicesDependencies                  *ServicesDependencies
-	ServicesExtensions                    *ServicesExtensions
-	ServicesMaintenanceMode               *ServicesMaintenanceMode
-	ServicesOverlayCustomContentTemplates *ServicesOverlayCustomContentTemplates
-	ServicesOverlayDedupKeyOverlay        *ServicesOverlayDedupKeyOverlay
-	ServicesRoutingRules                  *ServicesRoutingRules
-	ServicesSuppressionRules              *ServicesSuppressionRules
-	ServicesTaggingRules                  *ServicesTaggingRules
-	SLOs                                  *SLOs
-	SquadsV3                              *SquadsV3
-	Teams                                 *Teams
-	Users                                 *Users
-	Webforms                              *Webforms
-	Workflows                             *Workflows
-	Schedule                              *Schedule
-	ScheduleExportSchedule                *ScheduleExportSchedule
-	Overrides                             *Overrides
-	Rotation                              *Rotation
-	SquadsV4                              *SquadsV4
-	StatusPages                           *StatusPages
-	StatusPagesComponents                 *StatusPagesComponents
-	StatusPagesComponentGroups            *StatusPagesComponentGroups
-	StatusPagesIssues                     *StatusPagesIssues
-	StatusPagesMaintenances               *StatusPagesMaintenances
-	StatusPagesSubscribers                *StatusPagesSubscribers
+	SDKVersion                    string
+	Analytics                     *Analytics
+	EscalationPolicies            *EscalationPolicies
+	Exports                       *Exports
+	Webhooks                      *Webhooks
+	Extensions                    *Extensions
+	Msteams                       *Msteams
+	CommunicationCards            *CommunicationCards
+	GlobalEventRules              *GlobalEventRules
+	GlobalEventRulesRulesets      *GlobalEventRulesRulesets
+	GlobalEventRulesRulesetsRules *GlobalEventRulesRulesetsRules
+	GlobalOncallReminderRules     *GlobalOncallReminderRules
+	Incidents                     *Incidents
+	Notes                         *Notes
+	IncidentActions               *IncidentActions
+	APITokens                     *APITokens
+	Tokens                        *Tokens
+	Users                         *Users
+	Runbooks                      *Runbooks
+	Services                      *Services
+	Overlays                      *Overlays
+	Slos                          *Slos
+	V3                            *V3
+	Squads                        *Squads
+	Teams                         *Teams
+	Webforms                      *Webforms
+	Workflows                     *Workflows
+	Schedules                     *Schedules
+	Overrides                     *Overrides
+	Rotations                     *Rotations
+	V4                            *V4
+	StatusPages                   *StatusPages
 
 	sdkConfiguration config.SDKConfiguration
 	hooks            *hooks.Hooks
@@ -175,9 +157,9 @@ func WithTimeout(timeout time.Duration) SDKOption {
 // New creates a new instance of the SDK with the provided options
 func New(opts ...SDKOption) *SquadcastSDK {
 	sdk := &SquadcastSDK{
-		SDKVersion: "0.0.9",
+		SDKVersion: "0.1.0",
 		sdkConfiguration: config.SDKConfiguration{
-			UserAgent:  "speakeasy-sdk/go 0.0.9 2.696.0 1.0.0 github.com/SquadcastHub/squadcast-sdk-go",
+			UserAgent:  "speakeasy-sdk/go 0.1.0 2.696.0 1.0.0 github.com/SquadcastHub/squadcast-sdk-go/squadcastv1",
 			ServerList: ServerList,
 		},
 		hooks: hooks.New(),
@@ -202,53 +184,35 @@ func New(opts ...SDKOption) *SquadcastSDK {
 
 	sdk.Analytics = newAnalytics(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.EscalationPolicies = newEscalationPolicies(sdk, sdk.sdkConfiguration, sdk.hooks)
-	sdk.Export = newExport(sdk, sdk.sdkConfiguration, sdk.hooks)
-	sdk.ExtensionsWebhooks = newExtensionsWebhooks(sdk, sdk.sdkConfiguration, sdk.hooks)
-	sdk.ExtensionsMSTeams = newExtensionsMSTeams(sdk, sdk.sdkConfiguration, sdk.hooks)
-	sdk.IncidentsCommunicationCard = newIncidentsCommunicationCard(sdk, sdk.sdkConfiguration, sdk.hooks)
+	sdk.Exports = newExports(sdk, sdk.sdkConfiguration, sdk.hooks)
+	sdk.Webhooks = newWebhooks(sdk, sdk.sdkConfiguration, sdk.hooks)
+	sdk.Extensions = newExtensions(sdk, sdk.sdkConfiguration, sdk.hooks)
+	sdk.Msteams = newMsteams(sdk, sdk.sdkConfiguration, sdk.hooks)
+	sdk.CommunicationCards = newCommunicationCards(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.GlobalEventRules = newGlobalEventRules(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.GlobalEventRulesRulesets = newGlobalEventRulesRulesets(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.GlobalEventRulesRulesetsRules = newGlobalEventRulesRulesetsRules(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.GlobalOncallReminderRules = newGlobalOncallReminderRules(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Incidents = newIncidents(sdk, sdk.sdkConfiguration, sdk.hooks)
-	sdk.IncidentsPostmortems = newIncidentsPostmortems(sdk, sdk.sdkConfiguration, sdk.hooks)
-	sdk.IncidentsRunbooks = newIncidentsRunbooks(sdk, sdk.sdkConfiguration, sdk.hooks)
-	sdk.IncidentsTags = newIncidentsTags(sdk, sdk.sdkConfiguration, sdk.hooks)
-	sdk.IncidentsNotes = newIncidentsNotes(sdk, sdk.sdkConfiguration, sdk.hooks)
-	sdk.IncidentsIncidentActions = newIncidentsIncidentActions(sdk, sdk.sdkConfiguration, sdk.hooks)
-	sdk.IncidentsAdditionalResponders = newIncidentsAdditionalResponders(sdk, sdk.sdkConfiguration, sdk.hooks)
-	sdk.IncidentsAutoPauseTransientAlertsAPTA = newIncidentsAutoPauseTransientAlertsAPTA(sdk, sdk.sdkConfiguration, sdk.hooks)
-	sdk.IncidentsSnoozeNotifications = newIncidentsSnoozeNotifications(sdk, sdk.sdkConfiguration, sdk.hooks)
-	sdk.UsersAPIToken = newUsersAPIToken(sdk, sdk.sdkConfiguration, sdk.hooks)
+	sdk.Notes = newNotes(sdk, sdk.sdkConfiguration, sdk.hooks)
+	sdk.IncidentActions = newIncidentActions(sdk, sdk.sdkConfiguration, sdk.hooks)
+	sdk.APITokens = newAPITokens(sdk, sdk.sdkConfiguration, sdk.hooks)
+	sdk.Tokens = newTokens(sdk, sdk.sdkConfiguration, sdk.hooks)
+	sdk.Users = newUsers(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Runbooks = newRunbooks(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Services = newServices(sdk, sdk.sdkConfiguration, sdk.hooks)
-	sdk.ServicesOverlay = newServicesOverlay(sdk, sdk.sdkConfiguration, sdk.hooks)
-	sdk.ServicesDeduplicationRules = newServicesDeduplicationRules(sdk, sdk.sdkConfiguration, sdk.hooks)
-	sdk.ServicesDependencies = newServicesDependencies(sdk, sdk.sdkConfiguration, sdk.hooks)
-	sdk.ServicesExtensions = newServicesExtensions(sdk, sdk.sdkConfiguration, sdk.hooks)
-	sdk.ServicesMaintenanceMode = newServicesMaintenanceMode(sdk, sdk.sdkConfiguration, sdk.hooks)
-	sdk.ServicesOverlayCustomContentTemplates = newServicesOverlayCustomContentTemplates(sdk, sdk.sdkConfiguration, sdk.hooks)
-	sdk.ServicesOverlayDedupKeyOverlay = newServicesOverlayDedupKeyOverlay(sdk, sdk.sdkConfiguration, sdk.hooks)
-	sdk.ServicesRoutingRules = newServicesRoutingRules(sdk, sdk.sdkConfiguration, sdk.hooks)
-	sdk.ServicesSuppressionRules = newServicesSuppressionRules(sdk, sdk.sdkConfiguration, sdk.hooks)
-	sdk.ServicesTaggingRules = newServicesTaggingRules(sdk, sdk.sdkConfiguration, sdk.hooks)
-	sdk.SLOs = newSLOs(sdk, sdk.sdkConfiguration, sdk.hooks)
-	sdk.SquadsV3 = newSquadsV3(sdk, sdk.sdkConfiguration, sdk.hooks)
+	sdk.Overlays = newOverlays(sdk, sdk.sdkConfiguration, sdk.hooks)
+	sdk.Slos = newSlos(sdk, sdk.sdkConfiguration, sdk.hooks)
+	sdk.V3 = newV3(sdk, sdk.sdkConfiguration, sdk.hooks)
+	sdk.Squads = newSquads(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Teams = newTeams(sdk, sdk.sdkConfiguration, sdk.hooks)
-	sdk.Users = newUsers(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Webforms = newWebforms(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Workflows = newWorkflows(sdk, sdk.sdkConfiguration, sdk.hooks)
-	sdk.Schedule = newSchedule(sdk, sdk.sdkConfiguration, sdk.hooks)
-	sdk.ScheduleExportSchedule = newScheduleExportSchedule(sdk, sdk.sdkConfiguration, sdk.hooks)
+	sdk.Schedules = newSchedules(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Overrides = newOverrides(sdk, sdk.sdkConfiguration, sdk.hooks)
-	sdk.Rotation = newRotation(sdk, sdk.sdkConfiguration, sdk.hooks)
-	sdk.SquadsV4 = newSquadsV4(sdk, sdk.sdkConfiguration, sdk.hooks)
+	sdk.Rotations = newRotations(sdk, sdk.sdkConfiguration, sdk.hooks)
+	sdk.V4 = newV4(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.StatusPages = newStatusPages(sdk, sdk.sdkConfiguration, sdk.hooks)
-	sdk.StatusPagesComponents = newStatusPagesComponents(sdk, sdk.sdkConfiguration, sdk.hooks)
-	sdk.StatusPagesComponentGroups = newStatusPagesComponentGroups(sdk, sdk.sdkConfiguration, sdk.hooks)
-	sdk.StatusPagesIssues = newStatusPagesIssues(sdk, sdk.sdkConfiguration, sdk.hooks)
-	sdk.StatusPagesMaintenances = newStatusPagesMaintenances(sdk, sdk.sdkConfiguration, sdk.hooks)
-	sdk.StatusPagesSubscribers = newStatusPagesSubscribers(sdk, sdk.sdkConfiguration, sdk.hooks)
 
 	return sdk
 }

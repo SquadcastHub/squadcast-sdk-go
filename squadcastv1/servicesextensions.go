@@ -6,13 +6,13 @@ import (
 	"bytes"
 	"context"
 	"fmt"
-	"github.com/SquadcastHub/squadcast-sdk-go/internal/config"
-	"github.com/SquadcastHub/squadcast-sdk-go/internal/hooks"
-	"github.com/SquadcastHub/squadcast-sdk-go/internal/utils"
-	"github.com/SquadcastHub/squadcast-sdk-go/models/apierrors"
-	"github.com/SquadcastHub/squadcast-sdk-go/models/components"
-	"github.com/SquadcastHub/squadcast-sdk-go/models/operations"
-	"github.com/SquadcastHub/squadcast-sdk-go/retry"
+	"github.com/SquadcastHub/squadcast-sdk-go/squadcastv1/internal/config"
+	"github.com/SquadcastHub/squadcast-sdk-go/squadcastv1/internal/hooks"
+	"github.com/SquadcastHub/squadcast-sdk-go/squadcastv1/internal/utils"
+	"github.com/SquadcastHub/squadcast-sdk-go/squadcastv1/models/apierrors"
+	"github.com/SquadcastHub/squadcast-sdk-go/squadcastv1/models/components"
+	"github.com/SquadcastHub/squadcast-sdk-go/squadcastv1/models/operations"
+	"github.com/SquadcastHub/squadcast-sdk-go/squadcastv1/retry"
 	"net/http"
 )
 
@@ -30,8 +30,8 @@ func newServicesExtensions(rootSDK *SquadcastSDK, sdkConfig config.SDKConfigurat
 	}
 }
 
-// ExtensionsUpdateSlackExtension - Update Slack Extension
-func (s *ServicesExtensions) ExtensionsUpdateSlackExtension(ctx context.Context, serviceID string, v3ServicesExtensionsUpdateSlackExtensionRequest components.V3ServicesExtensionsUpdateSlackExtensionRequest, opts ...operations.Option) (*operations.ExtensionsUpdateSlackExtensionResponse, error) {
+// UpdateSlack - Update Slack Extension
+func (s *ServicesExtensions) UpdateSlack(ctx context.Context, serviceID string, v3ServicesExtensionsUpdateSlackExtensionRequest components.V3ServicesExtensionsUpdateSlackExtensionRequest, opts ...operations.Option) (*operations.ExtensionsUpdateSlackExtensionResponse, error) {
 	request := operations.ExtensionsUpdateSlackExtensionRequest{
 		ServiceID: serviceID,
 		V3ServicesExtensionsUpdateSlackExtensionRequest: v3ServicesExtensionsUpdateSlackExtensionRequest,
