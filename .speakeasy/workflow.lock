@@ -1,0 +1,42 @@
+speakeasyVersion: 1.613.0
+sources:
+    Squadcast:
+        sourceNamespace: squadcast
+        sourceRevisionDigest: sha256:c9e70a9d98fe2dc241f97e7df8a4fc5f9261dac840c75b3af889b26d578b4a81
+        sourceBlobDigest: sha256:abb8732ad7b0346dc5a0b8fc4d225d97df0bbb856c27a6764178f2d811b03d86
+        tags:
+            - latest
+            - 1.0.0
+targets:
+    squadcast-sdk:
+        source: Squadcast
+        sourceNamespace: squadcast
+        sourceRevisionDigest: sha256:c9e70a9d98fe2dc241f97e7df8a4fc5f9261dac840c75b3af889b26d578b4a81
+        sourceBlobDigest: sha256:abb8732ad7b0346dc5a0b8fc4d225d97df0bbb856c27a6764178f2d811b03d86
+        codeSamplesNamespace: squadcast-go-code-samples
+        codeSamplesRevisionDigest: sha256:b060ba1f983801c2d3ad425f36d14797919323bc68c823497e6f93f10e74cb6a
+workflow:
+    workflowVersion: 1.0.0
+    speakeasyVersion: latest
+    sources:
+        Squadcast:
+            inputs:
+                - location: https://raw.githubusercontent.com/solarwinds-cloud/sq-squadcast-public-api-docs/main/build/openapi3/openapi.json
+                  authHeader: Authorization
+                  authSecret: $openapi_doc_auth_token
+            output: .speakeasy/out.openapi.yaml
+            registry:
+                location: registry.speakeasyapi.dev/swo/incident-response/squadcast
+    targets:
+        squadcast-sdk:
+            target: go
+            source: Squadcast
+            output: squadcastv1
+            codeSamples:
+                registry:
+                    location: registry.speakeasyapi.dev/swo/incident-response/squadcast-go-code-samples
+                labelOverride:
+                    fixedValue: Go (SDK)
+                blocking: false
+            testing:
+                enabled: false

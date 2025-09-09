@@ -1,0 +1,24 @@
+workflowVersion: 1.0.0
+speakeasyVersion: latest
+sources:
+    Squadcast:
+        inputs:
+            - location: https://raw.githubusercontent.com/solarwinds-cloud/sq-squadcast-public-api-docs/main/build/openapi3/openapi.json
+              authHeader: Authorization
+              authSecret: $openapi_doc_auth_token
+        output: .speakeasy/out.openapi.yaml
+        registry:
+            location: registry.speakeasyapi.dev/swo/incident-response/squadcast
+targets:
+    squadcast-sdk:
+        target: go
+        source: Squadcast
+        output: squadcastv1
+        codeSamples:
+            registry:
+                location: registry.speakeasyapi.dev/swo/incident-response/squadcast-go-code-samples
+            labelOverride:
+                fixedValue: Go (SDK)
+            blocking: false
+        testing:
+            enabled: false

@@ -1,0 +1,10 @@
+# V3GlobalEventRulesCreateRulesetRequest
+
+
+## Fields
+
+| Field                                                                                               | Type                                                                                                | Required                                                                                            | Description                                                                                         |
+| --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- |
+| `AlertSourceShortname`                                                                              | *string*                                                                                            | :heavy_check_mark:                                                                                  | N/A                                                                                                 |
+| `AlertSourceVersion`                                                                                | *string*                                                                                            | :heavy_check_mark:                                                                                  | N/A                                                                                                 |
+| `CatchAllAction`                                                                                    | [*components.V3GlobalEventRulesRuleAction](../../models/components/v3globaleventrulesruleaction.md) | :heavy_minus_sign:                                                                                  | N/A                                                                                                 |

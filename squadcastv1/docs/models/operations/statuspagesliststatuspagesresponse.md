@@ -1,0 +1,9 @@
+# StatusPagesListStatusPagesResponse
+
+
+## Fields
+
+| Field                                                                                                               | Type                                                                                                                | Required                                                                                                            | Description                                                                                                         |
+| ------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- |
+| `HTTPMeta`                                                                                                          | [components.HTTPMetadata](../../models/components/httpmetadata.md)                                                  | :heavy_check_mark:                                                                                                  | N/A                                                                                                                 |
+| `V4StatusPagesListStatusPagesResponse`                                                                              | [*components.V4StatusPagesListStatusPagesResponse](../../models/components/v4statuspagesliststatuspagesresponse.md) | :heavy_minus_sign:                                                                                                  | The request has succeeded.                                                                                          |
