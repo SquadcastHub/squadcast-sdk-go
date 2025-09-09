@@ -6,6 +6,8 @@ sources:
             - location: https://raw.githubusercontent.com/solarwinds-cloud/sq-squadcast-public-api-docs/main/build/openapi3/openapi.json
               authHeader: Authorization
               authSecret: $openapi_doc_auth_token
+        overlays:
+            - location: .speakeasy/overlay.openapi.yaml
         output: .speakeasy/out.openapi.yaml
         registry:
             location: registry.speakeasyapi.dev/swo/incident-response/squadcast

@@ -45,7 +45,7 @@ go:
   inputModelSuffix: input
   maxMethodParams: 4
   methodArguments: require-security-and-request
-  modulePath: github.com/SquadcastHub/squadcast-sdk-go
+  modulePath: github.com/SquadcastHub/squadcast-sdk-go/squadcastv1
   outputModelSuffix: output
   respectRequiredFields: false
   responseFormat: envelope-http
