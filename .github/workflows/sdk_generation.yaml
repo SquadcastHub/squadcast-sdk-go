@@ -28,6 +28,8 @@ jobs:
     with:
       force: ${{ github.event.inputs.force }}
       mode: pr
+      target: squadcastv1
+      speakeasy_version: latest
       signed_commits: true 
       set_version: ${{ github.event.inputs.set_version }}
     secrets:
