@@ -1,12 +1,15 @@
 lockVersion: 2.0.0
 id: e4d6be9e-a6f6-4a27-9d82-9e255dee33c5
 management:
-  docChecksum: 27dcee0b9abbdc5b823bf95b62786f80
+  docChecksum: d01a392a89770fcf91bdc28daf426c87
   docVersion: 1.0.0
   speakeasyVersion: 1.613.0
   generationVersion: 2.696.0
-  releaseVersion: 0.0.9
-  configChecksum: 48a4a6a18ba4f8f76d19189af572a250
+  releaseVersion: 0.1.0
+  configChecksum: a237f8c4841a825bf4ed31bc37841251
+  repoURL: https://github.com/SquadcastHub/squadcast-sdk-go.git
+  repoSubDirectory: squadcastv1
+  installationURL: https://github.com/SquadcastHub/squadcast-sdk-go/squadcastv1
 features:
   go:
     additionalDependencies: 0.1.0
@@ -20,7 +23,9 @@ features:
     globalSecurityCallbacks: 0.1.0
     globalSecurityFlattening: 0.1.0
     globalServerURLs: 2.82.3
+    groups: 2.81.2
     intellisenseMarkdownSupport: 0.1.0
+    nameOverrides: 2.81.2
     nullables: 0.1.1
     responseFormat: 0.1.2
     retries: 2.84.2
@@ -841,7 +846,19 @@ generatedFiles:
   - /models/operations/workflowsupdateworkflow.go
   - /models/operations/workflowsupdateworkflowaction.go
   - USAGE.md
+  - additionalresponders.go
   - analytics.go
+  - apitoken.go
+  - apitokens.go
+  - autopausetransientalerts.go
+  - circleci.go
+  - communicationcard.go
+  - communicationcards.go
+  - componentgroups.go
+  - components.go
+  - customcontent.go
+  - dedupkey.go
+  - deduplicationrules.go
   - docs/models/apierrors/additionalrespondersaddadditionalrespondersbadgatewayerror.md
   - docs/models/apierrors/additionalrespondersaddadditionalrespondersbadrequesterror.md
   - docs/models/apierrors/additionalrespondersaddadditionalrespondersconflicterror.md
@@ -4282,58 +4299,85 @@ generatedFiles:
   - docs/models/operations/workflowsupdateworkflowrequest.md
   - docs/models/operations/workflowsupdateworkflowresponse.md
   - docs/models/operations/workflowsupdateworkflowresponsebody.md
+  - docs/sdks/additionalresponders/README.md
   - docs/sdks/analytics/README.md
+  - docs/sdks/apitoken/README.md
+  - docs/sdks/apitokens/README.md
+  - docs/sdks/autopausetransientalerts/README.md
+  - docs/sdks/circleci/README.md
+  - docs/sdks/communicationcard/README.md
+  - docs/sdks/communicationcards/README.md
+  - docs/sdks/componentgroups/README.md
+  - docs/sdks/components/README.md
+  - docs/sdks/customcontent/README.md
+  - docs/sdks/dedupkey/README.md
+  - docs/sdks/deduplicationrules/README.md
   - docs/sdks/escalationpolicies/README.md
+  - docs/sdks/events/README.md
   - docs/sdks/export/README.md
+  - docs/sdks/exports/README.md
+  - docs/sdks/extensions/README.md
   - docs/sdks/extensionsmsteams/README.md
   - docs/sdks/extensionswebhooks/README.md
   - docs/sdks/globaleventrules/README.md
   - docs/sdks/globaleventrulesrulesets/README.md
   - docs/sdks/globaleventrulesrulesetsrules/README.md
   - docs/sdks/globaloncallreminderrules/README.md
+  - docs/sdks/incidentactions/README.md
   - docs/sdks/incidents/README.md
-  - docs/sdks/incidentsadditionalresponders/README.md
-  - docs/sdks/incidentsautopausetransientalertsapta/README.md
-  - docs/sdks/incidentscommunicationcard/README.md
-  - docs/sdks/incidentsincidentactions/README.md
+  - docs/sdks/incidentsactions/README.md
+  - docs/sdks/incidentscommunicationcards/README.md
   - docs/sdks/incidentsnotes/README.md
-  - docs/sdks/incidentspostmortems/README.md
   - docs/sdks/incidentsrunbooks/README.md
-  - docs/sdks/incidentssnoozenotifications/README.md
-  - docs/sdks/incidentstags/README.md
+  - docs/sdks/issues/README.md
+  - docs/sdks/maintenancemode/README.md
+  - docs/sdks/maintenances/README.md
+  - docs/sdks/members/README.md
+  - docs/sdks/msteams/README.md
+  - docs/sdks/notes/README.md
+  - docs/sdks/overlay/README.md
+  - docs/sdks/overlays/README.md
   - docs/sdks/overrides/README.md
-  - docs/sdks/rotation/README.md
+  - docs/sdks/postmortems/README.md
+  - docs/sdks/rotations/README.md
+  - docs/sdks/routingrules/README.md
+  - docs/sdks/rules/README.md
+  - docs/sdks/rulesets/README.md
+  - docs/sdks/rulesetsrules/README.md
   - docs/sdks/runbooks/README.md
-  - docs/sdks/schedule/README.md
-  - docs/sdks/scheduleexportschedule/README.md
+  - docs/sdks/schedules/README.md
+  - docs/sdks/schedulesoverrides/README.md
+  - docs/sdks/schedulesrotations/README.md
   - docs/sdks/services/README.md
-  - docs/sdks/servicesdeduplicationrules/README.md
-  - docs/sdks/servicesdependencies/README.md
   - docs/sdks/servicesextensions/README.md
-  - docs/sdks/servicesmaintenancemode/README.md
-  - docs/sdks/servicesoverlay/README.md
-  - docs/sdks/servicesoverlaycustomcontenttemplates/README.md
-  - docs/sdks/servicesoverlaydedupkeyoverlay/README.md
-  - docs/sdks/servicesroutingrules/README.md
-  - docs/sdks/servicessuppressionrules/README.md
-  - docs/sdks/servicestaggingrules/README.md
+  - docs/sdks/servicesoverlays/README.md
   - docs/sdks/slos/README.md
+  - docs/sdks/snoozenotifications/README.md
   - docs/sdks/squadcastsdk/README.md
-  - docs/sdks/squadsv3/README.md
+  - docs/sdks/squads/README.md
   - docs/sdks/squadsv4/README.md
   - docs/sdks/statuspages/README.md
-  - docs/sdks/statuspagescomponentgroups/README.md
-  - docs/sdks/statuspagescomponents/README.md
-  - docs/sdks/statuspagesissues/README.md
-  - docs/sdks/statuspagesmaintenances/README.md
-  - docs/sdks/statuspagessubscribers/README.md
+  - docs/sdks/subscribers/README.md
+  - docs/sdks/suppressionrules/README.md
+  - docs/sdks/taggingrules/README.md
+  - docs/sdks/tags/README.md
   - docs/sdks/teams/README.md
+  - docs/sdks/tokens/README.md
   - docs/sdks/users/README.md
-  - docs/sdks/usersapitoken/README.md
+  - docs/sdks/v3/README.md
+  - docs/sdks/v3squads/README.md
+  - docs/sdks/v4/README.md
+  - docs/sdks/v4squads/README.md
   - docs/sdks/webforms/README.md
+  - docs/sdks/webhook/README.md
+  - docs/sdks/webhooks/README.md
   - docs/sdks/workflows/README.md
+  - docs/sdks/workflowsactions/README.md
   - escalationpolicies.go
+  - events.go
   - export.go
+  - exports.go
+  - extensions.go
   - extensionsmsteams.go
   - extensionswebhooks.go
   - globaleventrules.go
@@ -4341,16 +4385,12 @@ generatedFiles:
   - globaleventrulesrulesetsrules.go
   - globaloncallreminderrules.go
   - go.mod
+  - incidentactions.go
   - incidents.go
-  - incidentsadditionalresponders.go
-  - incidentsautopausetransientalertsapta.go
-  - incidentscommunicationcard.go
-  - incidentsincidentactions.go
+  - incidentsactions.go
+  - incidentscommunicationcards.go
   - incidentsnotes.go
-  - incidentspostmortems.go
   - incidentsrunbooks.go
-  - incidentssnoozenotifications.go
-  - incidentstags.go
   - internal/config/sdkconfiguration.go
   - internal/hooks/hooks.go
   - internal/utils/contenttype.go
@@ -4364,45 +4404,58 @@ generatedFiles:
   - internal/utils/retries.go
   - internal/utils/security.go
   - internal/utils/utils.go
+  - issues.go
+  - maintenancemode.go
+  - maintenances.go
+  - members.go
   - models/apierrors/apierror.go
   - models/operations/options.go
+  - msteams.go
+  - notes.go
+  - overlay.go
+  - overlays.go
   - overrides.go
+  - postmortems.go
   - retry/config.go
-  - rotation.go
+  - rotations.go
+  - routingrules.go
+  - rules.go
+  - rulesets.go
+  - rulesetsrules.go
   - runbooks.go
-  - schedule.go
-  - scheduleexportschedule.go
+  - schedules.go
+  - schedulesoverrides.go
+  - schedulesrotations.go
   - services.go
-  - servicesdeduplicationrules.go
-  - servicesdependencies.go
   - servicesextensions.go
-  - servicesmaintenancemode.go
-  - servicesoverlay.go
-  - servicesoverlaycustomcontenttemplates.go
-  - servicesoverlaydedupkeyoverlay.go
-  - servicesroutingrules.go
-  - servicessuppressionrules.go
-  - servicestaggingrules.go
+  - servicesoverlays.go
   - slos.go
+  - snoozenotifications.go
   - squadcastsdk.go
-  - squadsv3.go
+  - squads.go
   - squadsv4.go
   - statuspages.go
-  - statuspagescomponentgroups.go
-  - statuspagescomponents.go
-  - statuspagesissues.go
-  - statuspagesmaintenances.go
-  - statuspagessubscribers.go
+  - subscribers.go
+  - suppressionrules.go
+  - taggingrules.go
+  - tags.go
   - teams.go
+  - tokens.go
   - types/bigint.go
   - types/date.go
   - types/datetime.go
   - types/decimal.go
   - types/pointers.go
   - users.go
-  - usersapitoken.go
+  - v3.go
+  - v3squads.go
+  - v4.go
+  - v4squads.go
   - webforms.go
+  - webhook.go
+  - webhooks.go
   - workflows.go
+  - workflowsactions.go
 examples:
   Analytics_getOrgAnalytics:
     speakeasy-default-analytics-get-org-analytics:
@@ -10915,3 +10968,463 @@ examples:
         "504":
           application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
 examplesVersion: 1.0.2
+releaseNotes: |
+  ## Go SDK Changes Detected:
+  * `SquadcastSdk.Analytics.GetOrganization()`: **Added**
+  * `SquadcastSdk.Analytics.GetTeam()`: **Added**
+  * `SquadcastSdk.EscalationPolicies.GetByTeam()`: **Added**
+  * `SquadcastSdk.EscalationPolicies.Create()`: **Added**
+  * `SquadcastSdk.EscalationPolicies.Remove()`: **Added**
+  * `SquadcastSdk.EscalationPolicies.GetById()`: **Added**
+  * `SquadcastSdk.EscalationPolicies.Update()`: **Added**
+  * `SquadcastSdk.Exports.GetDetails()`: **Added**
+  * `SquadcastSdk.Webhooks.GetAll()`: **Added**
+  * `SquadcastSdk.Webhooks.Create()`: **Added**
+  * `SquadcastSdk.Webhooks.Update()`: **Added**
+  * `SquadcastSdk.Extensions.Webhooks.Delete()`: **Added**
+  * `SquadcastSdk.Extensions.Webhooks.GetById()`: **Added**
+  * `SquadcastSdk.Extensions.Msteams.UpsertConfig()`: **Added**
+  * `SquadcastSdk.Msteams.GetConfig()`: **Added**
+  * `SquadcastSdk.CommunicationCards.CreateSlackChannel()`: **Added**
+  * `SquadcastSdk.CommunicationCards.ArchiveSlackChannel()`: **Added**
+  * `SquadcastSdk.GlobalEventRules.List()`: **Added**
+  * `SquadcastSdk.GlobalEventRules.Create()`: **Added**
+  * `SquadcastSdk.GlobalEventRules.DeleteRule()`: **Added**
+  * `SquadcastSdk.GlobalEventRules.GetById()`: **Added**
+  * `SquadcastSdk.GlobalEventRules.UpdateById()`: **Added**
+  * `SquadcastSdk.GlobalEventRules.GetRuleset()`: **Added**
+  * `SquadcastSdk.GlobalEventRules.UpdateRuleset()`: **Added**
+  * `SquadcastSdk.GlobalEventRules.UpdateRule()`: **Added**
+  * `SquadcastSdk.GlobalEventRules.Rulesets.Create()`: **Added**
+  * `SquadcastSdk.GlobalEventRules.Rulesets.Reorder()`: **Added**
+  * `SquadcastSdk.GlobalEventRules.Rulesets.ListRulesetRules()`: **Added**
+  * `SquadcastSdk.GlobalEventRules.Rulesets.Rules.Create()`: **Added**
+  * `SquadcastSdk.GlobalEventRules.Rulesets.Rules.GetById()`: **Added**
+  * `SquadcastSdk.GlobalEventRules.Rules.ReorderByIndex()`: **Added**
+  * `SquadcastSdk.GlobalEventRulesRulesets.Delete()`: **Added**
+  * `SquadcastSdk.GlobalEventRulesRulesetsRules.DeleteById()`: **Added**
+  * `SquadcastSdk.GlobalOncallReminderRules.Delete()`: **Added**
+  * `SquadcastSdk.GlobalOncallReminderRules.List()`: **Added**
+  * `SquadcastSdk.GlobalOncallReminderRules.Create()`: **Added**
+  * `SquadcastSdk.GlobalOncallReminderRules.Update()`: **Added**
+  * `SquadcastSdk.Incidents.BulkAcknowledge()`: **Added**
+  * `SquadcastSdk.Incidents.Export()`: **Added**
+  * `SquadcastSdk.Incidents.ExportAsync()`: **Added**
+  * `SquadcastSdk.Incidents.BulkUpdatePriority()`: **Added**
+  * `SquadcastSdk.Incidents.BulkResolve()`: **Added**
+  * `SquadcastSdk.Incidents.GetById()`: **Added**
+  * `SquadcastSdk.Incidents.Acknowledge()`: **Added**
+  * `SquadcastSdk.Incidents.MarkSloFalsePositive()`: **Added**
+  * `SquadcastSdk.Incidents.UpdatePriority()`: **Added**
+  * `SquadcastSdk.Incidents.Reassign()`: **Added**
+  * `SquadcastSdk.Incidents.Resolve()`: **Added**
+  * `SquadcastSdk.Incidents.GetStatusByRequestIds()`: **Added**
+  * `SquadcastSdk.Incidents.GetAllPostmortems()`: **Added**
+  * `SquadcastSdk.Incidents.MarkAsTransient()`: **Added**
+  * `SquadcastSdk.Incidents.UpdatePostmortem()`: **Added**
+  * `SquadcastSdk.Incidents.UnsnoozeNotifications()`: **Added**
+  * `SquadcastSdk.Incidents.CommunicationCards.GetAll()`: **Added**
+  * `SquadcastSdk.Incidents.CommunicationCards.Create()`: **Added**
+  * `SquadcastSdk.Incidents.CommunicationCards.Delete()`: **Added**
+  * `SquadcastSdk.Incidents.CommunicationCard.Update()`: **Added**
+  * `SquadcastSdk.Incidents.Runbooks.Attach()`: **Added**
+  * `SquadcastSdk.Incidents.Tags.Update()`: **Added**
+  * `SquadcastSdk.Incidents.Tags.Append()`: **Added**
+  * `SquadcastSdk.Incidents.Notes.Create()`: **Added**
+  * `SquadcastSdk.Incidents.Notes.Delete()`: **Added**
+  * `SquadcastSdk.Incidents.Notes.Update()`: **Added**
+  * `SquadcastSdk.Incidents.Actions.CreateJiraCloudTicket()`: **Added**
+  * `SquadcastSdk.Incidents.Actions.CreateJiraServerTicket()`: **Added**
+  * `SquadcastSdk.Incidents.Actions.CreateInServicenow()`: **Added**
+  * `SquadcastSdk.Incidents.Actions.Webhook.TriggerManually()`: **Added**
+  * `SquadcastSdk.Incidents.AdditionalResponders.Get()`: **Added**
+  * `SquadcastSdk.Incidents.AdditionalResponders.Add()`: **Added**
+  * `SquadcastSdk.Incidents.AdditionalResponders.Delete()`: **Added**
+  * `SquadcastSdk.Incidents.Events.List()`: **Added**
+  * `SquadcastSdk.Incidents.AutoPauseTransientAlerts.MarkAsNotTransient()`: **Added**
+  * `SquadcastSdk.Incidents.Postmortems.DeleteByIncident()`: **Added**
+  * `SquadcastSdk.Incidents.Postmortems.GetByIncident()`: **Added**
+  * `SquadcastSdk.Incidents.Postmortems.Create()`: **Added**
+  * `SquadcastSdk.Incidents.SnoozeNotifications.Snooze()`: **Added**
+  * `SquadcastSdk.Notes.List()`: **Added**
+  * `SquadcastSdk.IncidentActions.Circleci.Rebuild()`: **Added**
+  * `SquadcastSdk.ApiTokens.List()`: **Added**
+  * `SquadcastSdk.Tokens.CreateUserToken()`: **Added**
+  * `SquadcastSdk.Users.GetAll()`: **Added**
+  * `SquadcastSdk.Users.Add()`: **Added**
+  * `SquadcastSdk.Users.UpdateOrgLevelPermissions()`: **Added**
+  * `SquadcastSdk.Users.Delete()`: **Added**
+  * `SquadcastSdk.Users.GetRoles()`: **Added**
+  * `SquadcastSdk.Users.RemoveFromOrg()`: **Added**
+  * `SquadcastSdk.Users.GetById()`: **Added**
+  * `SquadcastSdk.Users.Update()`: **Added**
+  * `SquadcastSdk.Users.ApiToken.Remove()`: **Added**
+  * `SquadcastSdk.Runbooks.ListByTeam()`: **Added**
+  * `SquadcastSdk.Runbooks.Create()`: **Added**
+  * `SquadcastSdk.Runbooks.Remove()`: **Added**
+  * `SquadcastSdk.Runbooks.GetById()`: **Added**
+  * `SquadcastSdk.Runbooks.Update()`: **Added**
+  * `SquadcastSdk.Services.List()`: **Added**
+  * `SquadcastSdk.Services.Create()`: **Added**
+  * `SquadcastSdk.Services.GetByName()`: **Added**
+  * `SquadcastSdk.Services.GetById()`: **Added**
+  * `SquadcastSdk.Services.Update()`: **Added**
+  * `SquadcastSdk.Services.Delete()`: **Added**
+  * `SquadcastSdk.Services.CreateOrUpdateAptaConfig()`: **Added**
+  * `SquadcastSdk.Services.UpsertIagConfig()`: **Added**
+  * `SquadcastSdk.Services.UpdateNotificationDelayConfig()`: **Added**
+  * `SquadcastSdk.Services.CreateOrUpdateDependencies()`: **Added**
+  * `SquadcastSdk.Services.CreateOrUpdateNotificationTemplateOverlay()`: **Added**
+  * `SquadcastSdk.Services.GetAllDedupKeyOverlays()`: **Added**
+  * `SquadcastSdk.Services.UpdateDedupKeyOverlay()`: **Added**
+  * `SquadcastSdk.Services.GetRoutingRules()`: **Added**
+  * `SquadcastSdk.Services.CreateOrUpdateSuppressionRules()`: **Added**
+  * `SquadcastSdk.Services.CreateOrUpdateTaggingRules()`: **Added**
+  * `SquadcastSdk.Services.Overlay.GetKeyBasedDeduplicationOptin()`: **Added**
+  * `SquadcastSdk.Services.Overlay.OptInForKeyBasedDeduplication()`: **Added**
+  * `SquadcastSdk.Services.DeduplicationRules.Get()`: **Added**
+  * `SquadcastSdk.Services.DeduplicationRules.CreateOrUpdate()`: **Added**
+  * `SquadcastSdk.Services.Extensions.UpdateSlack()`: **Added**
+  * `SquadcastSdk.Services.MaintenanceMode.Get()`: **Added**
+  * `SquadcastSdk.Services.MaintenanceMode.CreateOrUpdate()`: **Added**
+  * `SquadcastSdk.Services.Overlays.GetCustomContentTemplates()`: **Added**
+  * `SquadcastSdk.Services.Overlays.GetCustomContent()`: **Added**
+  * `SquadcastSdk.Services.Overlays.GetDedupKey()`: **Added**
+  * `SquadcastSdk.Services.Overlays.CustomContent.Render()`: **Added**
+  * `SquadcastSdk.Services.Overlays.DedupKey.Render()`: **Added**
+  * `SquadcastSdk.Services.Overlays.DedupKey.Delete()`: **Added**
+  * `SquadcastSdk.Services.RoutingRules.CreateOrUpdate()`: **Added**
+  * `SquadcastSdk.Services.SuppressionRules.Get()`: **Added**
+  * `SquadcastSdk.Services.TaggingRules.Get()`: **Added**
+  * `SquadcastSdk.Overlays.DeleteNotificationTemplate()`: **Added**
+  * `SquadcastSdk.Slos.ListAll()`: **Added**
+  * `SquadcastSdk.Slos.Create()`: **Added**
+  * `SquadcastSdk.Slos.Update()`: **Added**
+  * `SquadcastSdk.Slos.Remove()`: **Added**
+  * `SquadcastSdk.Slos.GetById()`: **Added**
+  * `SquadcastSdk.Slos.MarkAffected()`: **Added**
+  * `SquadcastSdk.Slos.MarkFalsePositive()`: **Added**
+  * `SquadcastSdk.V3.Squads.ListByTeam()`: **Added**
+  * `SquadcastSdk.Squads.Create()`: **Added**
+  * `SquadcastSdk.Squads.Delete()`: **Added**
+  * `SquadcastSdk.Squads.GetById()`: **Added**
+  * `SquadcastSdk.Squads.Update()`: **Added**
+  * `SquadcastSdk.Squads.List()`: **Added**
+  * `SquadcastSdk.Squads.RemoveMember()`: **Added**
+  * `SquadcastSdk.Squads.UpdateMemberRole()`: **Added**
+  * `SquadcastSdk.Squads.UpdateName()`: **Added**
+  * `SquadcastSdk.Squads.V4.Create()`: **Added**
+  * `SquadcastSdk.Squads.V4.GetById()`: **Added**
+  * `SquadcastSdk.Teams.GetAll()`: **Added**
+  * `SquadcastSdk.Teams.Create()`: **Added**
+  * `SquadcastSdk.Teams.GetById()`: **Added**
+  * `SquadcastSdk.Teams.Update()`: **Added**
+  * `SquadcastSdk.Teams.Delete()`: **Added**
+  * `SquadcastSdk.Teams.AddMember()`: **Added**
+  * `SquadcastSdk.Teams.AddBulkMember()`: **Added**
+  * `SquadcastSdk.Teams.RemoveMember()`: **Added**
+  * `SquadcastSdk.Teams.UpdateMember()`: **Added**
+  * `SquadcastSdk.Teams.GetAllRoles()`: **Added**
+  * `SquadcastSdk.Teams.CreateRole()`: **Added**
+  * `SquadcastSdk.Teams.RemoveRole()`: **Added**
+  * `SquadcastSdk.Teams.UpdateRole()`: **Added**
+  * `SquadcastSdk.Teams.Members.GetAll()`: **Added**
+  * `SquadcastSdk.Webforms.GetAll()`: **Added**
+  * `SquadcastSdk.Webforms.Create()`: **Added**
+  * `SquadcastSdk.Webforms.Update()`: **Added**
+  * `SquadcastSdk.Webforms.Remove()`: **Added**
+  * `SquadcastSdk.Webforms.Get()`: **Added**
+  * `SquadcastSdk.Workflows.List()`: **Added**
+  * `SquadcastSdk.Workflows.Create()`: **Added**
+  * `SquadcastSdk.Workflows.BulkEnableDisable()`: **Added**
+  * `SquadcastSdk.Workflows.Delete()`: **Added**
+  * `SquadcastSdk.Workflows.GetById()`: **Added**
+  * `SquadcastSdk.Workflows.Update()`: **Added**
+  * `SquadcastSdk.Workflows.UpdateActionsOrder()`: **Added**
+  * `SquadcastSdk.Workflows.DeleteAction()`: **Added**
+  * `SquadcastSdk.Workflows.GetAction()`: **Added**
+  * `SquadcastSdk.Workflows.UpdateAction()`: **Added**
+  * `SquadcastSdk.Workflows.ToggleEnable()`: **Added**
+  * `SquadcastSdk.Workflows.GetLogs()`: **Added**
+  * `SquadcastSdk.Workflows.Actions.Create()`: **Added**
+  * `SquadcastSdk.Schedules.List()`: **Added**
+  * `SquadcastSdk.Schedules.Create()`: **Added**
+  * `SquadcastSdk.Schedules.Delete()`: **Added**
+  * `SquadcastSdk.Schedules.GetById()`: **Added**
+  * `SquadcastSdk.Schedules.Update()`: **Added**
+  * `SquadcastSdk.Schedules.PauseResume()`: **Added**
+  * `SquadcastSdk.Schedules.ChangeTimezone()`: **Added**
+  * `SquadcastSdk.Schedules.Clone()`: **Added**
+  * `SquadcastSdk.Schedules.GetIcalLink()`: **Added**
+  * `SquadcastSdk.Schedules.RefreshIcalLink()`: **Added**
+  * `SquadcastSdk.Schedules.CreateIcalLink()`: **Added**
+  * `SquadcastSdk.Schedules.CreateScheduleOverride()`: **Added**
+  * `SquadcastSdk.Schedules.DeleteRotation()`: **Added**
+  * `SquadcastSdk.Schedules.Export.DeleteIcalLink()`: **Added**
+  * `SquadcastSdk.Schedules.Overrides.List()`: **Added**
+  * `SquadcastSdk.Schedules.Overrides.Delete()`: **Added**
+  * `SquadcastSdk.Schedules.Rotations.List()`: **Added**
+  * `SquadcastSdk.Overrides.GetById()`: **Added**
+  * `SquadcastSdk.Overrides.Update()`: **Added**
+  * `SquadcastSdk.Rotations.Create()`: **Added**
+  * `SquadcastSdk.Rotations.GetById()`: **Added**
+  * `SquadcastSdk.Rotations.Update()`: **Added**
+  * `SquadcastSdk.Rotations.GetParticipants()`: **Added**
+  * `SquadcastSdk.Rotations.UpdateParticipants()`: **Added**
+  * `SquadcastSdk.V4.Squads.Update()`: **Added**
+  * `SquadcastSdk.StatusPages.List()`: **Added**
+  * `SquadcastSdk.StatusPages.Create()`: **Added**
+  * `SquadcastSdk.StatusPages.DeleteById()`: **Added**
+  * `SquadcastSdk.StatusPages.GetById()`: **Added**
+  * `SquadcastSdk.StatusPages.UpdateById()`: **Added**
+  * `SquadcastSdk.StatusPages.CreateIssue()`: **Added**
+  * `SquadcastSdk.StatusPages.UpdateIssue()`: **Added**
+  * `SquadcastSdk.StatusPages.ListMaintenances()`: **Added**
+  * `SquadcastSdk.StatusPages.GetMaintenanceById()`: **Added**
+  * `SquadcastSdk.StatusPages.GetStatuses()`: **Added**
+  * `SquadcastSdk.StatusPages.Components.List()`: **Added**
+  * `SquadcastSdk.StatusPages.Components.Create()`: **Added**
+  * `SquadcastSdk.StatusPages.Components.DeleteById()`: **Added**
+  * `SquadcastSdk.StatusPages.Components.GetById()`: **Added**
+  * `SquadcastSdk.StatusPages.Components.UpdateById()`: **Added**
+  * `SquadcastSdk.StatusPages.ComponentGroups.List()`: **Added**
+  * `SquadcastSdk.StatusPages.ComponentGroups.Create()`: **Added**
+  * `SquadcastSdk.StatusPages.ComponentGroups.DeleteById()`: **Added**
+  * `SquadcastSdk.StatusPages.ComponentGroups.GetById()`: **Added**
+  * `SquadcastSdk.StatusPages.Issues.List()`: **Added**
+  * `SquadcastSdk.StatusPages.Issues.Delete()`: **Added**
+  * `SquadcastSdk.StatusPages.Issues.GetById()`: **Added**
+  * `SquadcastSdk.StatusPages.Issues.ListStates()`: **Added**
+  * `SquadcastSdk.StatusPages.Maintenances.Create()`: **Added**
+  * `SquadcastSdk.StatusPages.Maintenances.DeleteById()`: **Added**
+  * `SquadcastSdk.StatusPages.Maintenances.UpdateById()`: **Added**
+  * `SquadcastSdk.StatusPages.Subscribers.List()`: **Added**
+  * `SquadcastSdk.Analytics.AnalyticsGetOrgAnalytics()`: **Deleted** **Breaking** :warning:
+  * `SquadcastSdk.Analytics.AnalyticsGetTeamAnalytics()`: **Deleted** **Breaking** :warning:
+  * `SquadcastSdk.EscalationPolicies.EscalationPoliciesGetEscalationPolicyByTeam()`: **Deleted** **Breaking** :warning:
+  * `SquadcastSdk.EscalationPolicies.EscalationPoliciesCreateEscalationPolicies()`: **Deleted** **Breaking** :warning:
+  * `SquadcastSdk.EscalationPolicies.EscalationPoliciesGetEscalationPolicyById()`: **Deleted** **Breaking** :warning:
+  * `SquadcastSdk.EscalationPolicies.EscalationPoliciesUpdateEscalationPolicy()`: **Deleted** **Breaking** :warning:
+  * `SquadcastSdk.EscalationPolicies.EscalationPoliciesRemoveEscalationPolicy()`: **Deleted** **Breaking** :warning:
+  * `SquadcastSdk.Export.ExportGetExportDetails()`: **Deleted** **Breaking** :warning:
+  * `SquadcastSdk.Extensions/webhooks.WebhooksGetAllWebhooks()`: **Deleted** **Breaking** :warning:
+  * `SquadcastSdk.Extensions/webhooks.WebhooksCreateWebhook()`: **Deleted** **Breaking** :warning:
+  * `SquadcastSdk.Extensions/webhooks.WebhooksGetWebhookById()`: **Deleted** **Breaking** :warning:
+  * `SquadcastSdk.Extensions/webhooks.WebhooksUpdateWebhook()`: **Deleted** **Breaking** :warning:
+  * `SquadcastSdk.Extensions/webhooks.WebhooksDeleteWebhook()`: **Deleted** **Breaking** :warning:
+  * `SquadcastSdk.Extensions/msTeams.MsTeamsGetMsteamsConfig()`: **Deleted** **Breaking** :warning:
+  * `SquadcastSdk.Extensions/msTeams.MsTeamsCreateOrUpdateMsteamsConfiguration()`: **Deleted** **Breaking** :warning:
+  * `SquadcastSdk.Incidents/communicationCard.CommunicationCardsCreateSlackChannelInCommunicationCard()`: **Deleted** **Breaking** :warning:
+  * `SquadcastSdk.Incidents/communicationCard.CommunicationCardsArchiveSlackChannel()`: **Deleted** **Breaking** :warning:
+  * `SquadcastSdk.Incidents/communicationCard.CommunicationCardsGetAllCommunicationCard()`: **Deleted** **Breaking** :warning:
+  * `SquadcastSdk.Incidents/communicationCard.CommunicationCardsCreateCommunicationCard()`: **Deleted** **Breaking** :warning:
+  * `SquadcastSdk.Incidents/communicationCard.CommunicationCardsUpdateCommunicationCard()`: **Deleted** **Breaking** :warning:
+  * `SquadcastSdk.Incidents/communicationCard.CommunicationCardsDeleteCommunicationCard()`: **Deleted** **Breaking** :warning:
+  * `SquadcastSdk.GlobalEventRules.GlobalEventRulesListGlobalEventRules()`: **Deleted** **Breaking** :warning:
+  * `SquadcastSdk.GlobalEventRules.GlobalEventRulesCreateGlobalEventRule()`: **Deleted** **Breaking** :warning:
+  * `SquadcastSdk.GlobalEventRules.GlobalEventRulesGetGlobalEventRuleById()`: **Deleted** **Breaking** :warning:
+  * `SquadcastSdk.GlobalEventRules.GlobalEventRulesDeleteGlobalEventRuleById()`: **Deleted** **Breaking** :warning:
+  * `SquadcastSdk.GlobalEventRules.GlobalEventRulesUpdateGlobalEventRuleById()`: **Deleted** **Breaking** :warning:
+  * `SquadcastSdk.GlobalEventRules/rulesets.GlobalEventRulesCreateRuleset()`: **Deleted** **Breaking** :warning:
+  * `SquadcastSdk.GlobalEventRules/rulesets.GlobalEventRulesGetRuleset()`: **Deleted** **Breaking** :warning:
+  * `SquadcastSdk.GlobalEventRules/rulesets.GlobalEventRulesDeleteGerRuleset()`: **Deleted** **Breaking** :warning:
+  * `SquadcastSdk.GlobalEventRules/rulesets.GlobalEventRulesUpdateRuleset()`: **Deleted** **Breaking** :warning:
+  * `SquadcastSdk.GlobalEventRules/rulesets.GlobalEventRulesReorderRuleset()`: **Deleted** **Breaking** :warning:
+  * `SquadcastSdk.GlobalEventRules/rulesets/rules.GlobalEventRulesListRulesetRules()`: **Deleted** **Breaking** :warning:
+  * `SquadcastSdk.GlobalEventRules/rulesets/rules.GlobalEventRulesCreateRule()`: **Deleted** **Breaking** :warning:
+  * `SquadcastSdk.GlobalEventRules/rulesets/rules.GlobalEventRulesGetRuleById()`: **Deleted** **Breaking** :warning:
+  * `SquadcastSdk.GlobalEventRules/rulesets/rules.GlobalEventRulesDeleteRuleById()`: **Deleted** **Breaking** :warning:
+  * `SquadcastSdk.GlobalEventRules/rulesets/rules.GlobalEventRulesUpdateRuleById()`: **Deleted** **Breaking** :warning:
+  * `SquadcastSdk.GlobalEventRules/rulesets/rules.GlobalEventRulesReorderRulesetByIndex()`: **Deleted** **Breaking** :warning:
+  * `SquadcastSdk.GlobalOncallReminderRules.GlobalOncallReminderRulesGetGlobalOncallReminderRules()`: **Deleted** **Breaking** :warning:
+  * `SquadcastSdk.GlobalOncallReminderRules.GlobalOncallReminderRulesUpdateGlobalOncallReminderRules()`: **Deleted** **Breaking** :warning:
+  * `SquadcastSdk.GlobalOncallReminderRules.GlobalOncallReminderRulesCreateGlobalOncallReminderRules()`: **Deleted** **Breaking** :warning:
+  * `SquadcastSdk.GlobalOncallReminderRules.GlobalOncallReminderRulesDeleteGlobalOncallReminderRules()`: **Deleted** **Breaking** :warning:
+  * `SquadcastSdk.Incidents.IncidentsBulkAcknowledgeIncidents()`: **Deleted** **Breaking** :warning:
+  * `SquadcastSdk.Incidents.IncidentsIncidentExport()`: **Deleted** **Breaking** :warning:
+  * `SquadcastSdk.Incidents.IncidentsIncidentExportAsync()`: **Deleted** **Breaking** :warning:
+  * `SquadcastSdk.Incidents.IncidentsBulkIncidentsPriorityUpdate()`: **Deleted** **Breaking** :warning:
+  * `SquadcastSdk.Incidents.IncidentsBulkResolveIncidents()`: **Deleted** **Breaking** :warning:
+  * `SquadcastSdk.Incidents.IncidentsGetIncidentById()`: **Deleted** **Breaking** :warning:
+  * `SquadcastSdk.Incidents.IncidentsAcknowledgeIncident()`: **Deleted** **Breaking** :warning:
+  * `SquadcastSdk.Incidents.IncidentsGetIncidentEvents()`: **Deleted** **Breaking** :warning:
+  * `SquadcastSdk.Incidents.IncidentsMarkIncidentSloFalsePositive()`: **Deleted** **Breaking** :warning:
+  * `SquadcastSdk.Incidents.IncidentsIncidentPriorityUpdate()`: **Deleted** **Breaking** :warning:
+  * `SquadcastSdk.Incidents.IncidentsReassignIncident()`: **Deleted** **Breaking** :warning:
+  * `SquadcastSdk.Incidents.IncidentsResolveIncident()`: **Deleted** **Breaking** :warning:
+  * `SquadcastSdk.Incidents.IncidentsGetIncidentsStatusByRequestids()`: **Deleted** **Breaking** :warning:
+  * `SquadcastSdk.Incidents/postmortems.PostmortemsGetAllPostmortems()`: **Deleted** **Breaking** :warning:
+  * `SquadcastSdk.Incidents/postmortems.PostmortemsGetPostmortemByIncident()`: **Deleted** **Breaking** :warning:
+  * `SquadcastSdk.Incidents/postmortems.PostmortemsUpdatePostmortemByIncident()`: **Deleted** **Breaking** :warning:
+  * `SquadcastSdk.Incidents/postmortems.PostmortemsCreatePostmortem()`: **Deleted** **Breaking** :warning:
+  * `SquadcastSdk.Incidents/postmortems.PostmortemsDeletePostmortemByIncident()`: **Deleted** **Breaking** :warning:
+  * `SquadcastSdk.Incidents/runbooks.RunbooksAttachRunbooks()`: **Deleted** **Breaking** :warning:
+  * `SquadcastSdk.Incidents/tags.TagsUpdateTag()`: **Deleted** **Breaking** :warning:
+  * `SquadcastSdk.Incidents/tags.TagsAppendTag()`: **Deleted** **Breaking** :warning:
+  * `SquadcastSdk.Incidents/notes.NotesGetAllNotes()`: **Deleted** **Breaking** :warning:
+  * `SquadcastSdk.Incidents/notes.NotesCreateNotes()`: **Deleted** **Breaking** :warning:
+  * `SquadcastSdk.Incidents/notes.NotesUpdateNote()`: **Deleted** **Breaking** :warning:
+  * `SquadcastSdk.Incidents/notes.NotesDeleteNote()`: **Deleted** **Breaking** :warning:
+  * `SquadcastSdk.Incidents/incidentActions.IncidentActionsRebuildAProjectInCircleci()`: **Deleted** **Breaking** :warning:
+  * `SquadcastSdk.Incidents/incidentActions.IncidentActionsCreateATicketOnJiraCloud()`: **Deleted** **Breaking** :warning:
+  * `SquadcastSdk.Incidents/incidentActions.IncidentActionsCreateATicketOnJiraServer()`: **Deleted** **Breaking** :warning:
+  * `SquadcastSdk.Incidents/incidentActions.IncidentActionsCreateAnIncidentInServicenow()`: **Deleted** **Breaking** :warning:
+  * `SquadcastSdk.Incidents/incidentActions.IncidentActionsTriggerAWebhookManually()`: **Deleted** **Breaking** :warning:
+  * `SquadcastSdk.Incidents/additionalResponders.AdditionalRespondersGetAdditionalResponders()`: **Deleted** **Breaking** :warning:
+  * `SquadcastSdk.Incidents/additionalResponders.AdditionalRespondersAddAdditionalResponders()`: **Deleted** **Breaking** :warning:
+  * `SquadcastSdk.Incidents/additionalResponders.AdditionalRespondersRemoveAdditionalResponders()`: **Deleted** **Breaking** :warning:
+  * `SquadcastSdk.Incidents/autoPauseTransientAlerts(apta).AptaMarkAsNotTransient()`: **Deleted** **Breaking** :warning:
+  * `SquadcastSdk.Incidents/autoPauseTransientAlerts(apta).AptaMarkAsTransient()`: **Deleted** **Breaking** :warning:
+  * `SquadcastSdk.Incidents/snoozeNotifications.SnoozeNotificationsSnoozeIncidentNotifications()`: **Deleted** **Breaking** :warning:
+  * `SquadcastSdk.Incidents/snoozeNotifications.SnoozeNotificationsUnsnoozeIncidentNotifications()`: **Deleted** **Breaking** :warning:
+  * `SquadcastSdk.Users/apiToken.UsersGetAllTokens()`: **Deleted** **Breaking** :warning:
+  * `SquadcastSdk.Users/apiToken.UsersCreateToken()`: **Deleted** **Breaking** :warning:
+  * `SquadcastSdk.Users/apiToken.UsersRemoveToken()`: **Deleted** **Breaking** :warning:
+  * `SquadcastSdk.Runbooks.RunbooksGetAllRunbooksByTeam()`: **Deleted** **Breaking** :warning:
+  * `SquadcastSdk.Runbooks.RunbooksCreateRunbook()`: **Deleted** **Breaking** :warning:
+  * `SquadcastSdk.Runbooks.RunbooksGetRunbookById()`: **Deleted** **Breaking** :warning:
+  * `SquadcastSdk.Runbooks.RunbooksUpdateRunbook()`: **Deleted** **Breaking** :warning:
+  * `SquadcastSdk.Runbooks.RunbooksRemoveRunbook()`: **Deleted** **Breaking** :warning:
+  * `SquadcastSdk.Services.ServicesGetServices()`: **Deleted** **Breaking** :warning:
+  * `SquadcastSdk.Services.ServicesCreateService()`: **Deleted** **Breaking** :warning:
+  * `SquadcastSdk.Services.ServicesGetServicesByName()`: **Deleted** **Breaking** :warning:
+  * `SquadcastSdk.Services.ServicesGetServiceById()`: **Deleted** **Breaking** :warning:
+  * `SquadcastSdk.Services.ServicesUpdateService()`: **Deleted** **Breaking** :warning:
+  * `SquadcastSdk.Services.ServicesDeleteService()`: **Deleted** **Breaking** :warning:
+  * `SquadcastSdk.Services.ServicesCreateOrUpdateAptaConfig()`: **Deleted** **Breaking** :warning:
+  * `SquadcastSdk.Services.ServicesCreateOrUpdateIagConfig()`: **Deleted** **Breaking** :warning:
+  * `SquadcastSdk.Services.ServicesDelayedNotificationConfig()`: **Deleted** **Breaking** :warning:
+  * `SquadcastSdk.Services/overlay.OverlayGetOptinForKeyBasedDeduplicationForAService()`: **Deleted** **Breaking** :warning:
+  * `SquadcastSdk.Services/overlay.OverlayOptinForKeyBasedDeduplicationForAService()`: **Deleted** **Breaking** :warning:
+  * `SquadcastSdk.Services/deduplicationRules.DeduplicationRulesGetDeduplicationRules()`: **Deleted** **Breaking** :warning:
+  * `SquadcastSdk.Services/deduplicationRules.DeduplicationRulesCreateOrUpdateDeduplicationRules()`: **Deleted** **Breaking** :warning:
+  * `SquadcastSdk.Services/dependencies.DependenciesCreateOrUpdateDependencies()`: **Deleted** **Breaking** :warning:
+  * `SquadcastSdk.Services/extensions.ExtensionsUpdateSlackExtension()`: **Deleted** **Breaking** :warning:
+  * `SquadcastSdk.Services/maintenanceMode.MaintenanceModeGetMaintenanceMode()`: **Deleted** **Breaking** :warning:
+  * `SquadcastSdk.Services/maintenanceMode.MaintenanceModeCreateOrUpdateMaintenanceMode()`: **Deleted** **Breaking** :warning:
+  * `SquadcastSdk.Services/overlay/customContentTemplates.OverlayGetAllCustomContentTemplateOverlayByService()`: **Deleted** **Breaking** :warning:
+  * `SquadcastSdk.Services/overlay/customContentTemplates.OverlayRenderCustomContentOverlay()`: **Deleted** **Breaking** :warning:
+  * `SquadcastSdk.Services/overlay/customContentTemplates.OverlayGetCustomContentTemplateOverlay()`: **Deleted** **Breaking** :warning:
+  * `SquadcastSdk.Services/overlay/customContentTemplates.OverlayCreateOrUpdateNotificationTemplateOverlay()`: **Deleted** **Breaking** :warning:
+  * `SquadcastSdk.Services/overlay/customContentTemplates.OverlayDeleteNotificationTemplateOverlay()`: **Deleted** **Breaking** :warning:
+  * `SquadcastSdk.Services/overlay/dedupKeyOverlay.OverlayGetAllDedupKeyOverlayByService()`: **Deleted** **Breaking** :warning:
+  * `SquadcastSdk.Services/overlay/dedupKeyOverlay.OverlayRenderDedupKeyTemplate()`: **Deleted** **Breaking** :warning:
+  * `SquadcastSdk.Services/overlay/dedupKeyOverlay.OverlayGetDedupKeyOverlayForAlertSource()`: **Deleted** **Breaking** :warning:
+  * `SquadcastSdk.Services/overlay/dedupKeyOverlay.OverlayUpdateDedupKeyOverlay()`: **Deleted** **Breaking** :warning:
+  * `SquadcastSdk.Services/overlay/dedupKeyOverlay.OverlayDeleteDedupKeyOverlay()`: **Deleted** **Breaking** :warning:
+  * `SquadcastSdk.Services/routingRules.RoutingRulesGetRoutingRules()`: **Deleted** **Breaking** :warning:
+  * `SquadcastSdk.Services/routingRules.RoutingRulesCreateOrUpdateRoutingRules()`: **Deleted** **Breaking** :warning:
+  * `SquadcastSdk.Services/suppressionRules.SuppressionRulesGetSuppressionRules()`: **Deleted** **Breaking** :warning:
+  * `SquadcastSdk.Services/suppressionRules.SuppressionRulesCreateOrUpdateSuppressionRules()`: **Deleted** **Breaking** :warning:
+  * `SquadcastSdk.Services/taggingRules.TaggingRulesGetTaggingRules()`: **Deleted** **Breaking** :warning:
+  * `SquadcastSdk.Services/taggingRules.TaggingRulesCreateOrUpdateTaggingRules()`: **Deleted** **Breaking** :warning:
+  * `SquadcastSdk.SlOs.SloGetAllSlOs()`: **Deleted** **Breaking** :warning:
+  * `SquadcastSdk.SlOs.SloCreateSlo()`: **Deleted** **Breaking** :warning:
+  * `SquadcastSdk.SlOs.SloGetSloById()`: **Deleted** **Breaking** :warning:
+  * `SquadcastSdk.SlOs.SloUpdateSlo()`: **Deleted** **Breaking** :warning:
+  * `SquadcastSdk.SlOs.SloRemoveSlo()`: **Deleted** **Breaking** :warning:
+  * `SquadcastSdk.SlOs.SloMarkSloAffected()`: **Deleted** **Breaking** :warning:
+  * `SquadcastSdk.SlOs.SloMarkSloFalsePositive()`: **Deleted** **Breaking** :warning:
+  * `SquadcastSdk.Squads/v3.SquadsGetSquadByTeam()`: **Deleted** **Breaking** :warning:
+  * `SquadcastSdk.Squads/v3.SquadsCreateSquad()`: **Deleted** **Breaking** :warning:
+  * `SquadcastSdk.Squads/v3.SquadsGetSquadById()`: **Deleted** **Breaking** :warning:
+  * `SquadcastSdk.Squads/v3.SquadsUpdateSquad()`: **Deleted** **Breaking** :warning:
+  * `SquadcastSdk.Squads/v3.SquadsDeleteSquad()`: **Deleted** **Breaking** :warning:
+  * `SquadcastSdk.Teams.TeamsGetAllTeams()`: **Deleted** **Breaking** :warning:
+  * `SquadcastSdk.Teams.TeamsCreateTeam()`: **Deleted** **Breaking** :warning:
+  * `SquadcastSdk.Teams.TeamsGetTeamById()`: **Deleted** **Breaking** :warning:
+  * `SquadcastSdk.Teams.TeamsUpdateTeam()`: **Deleted** **Breaking** :warning:
+  * `SquadcastSdk.Teams.TeamsRemoveTeam()`: **Deleted** **Breaking** :warning:
+  * `SquadcastSdk.Teams.TeamsGetAllTeamMembers()`: **Deleted** **Breaking** :warning:
+  * `SquadcastSdk.Teams.TeamsAddTeamMember()`: **Deleted** **Breaking** :warning:
+  * `SquadcastSdk.Teams.TeamsAddBulkTeamMember()`: **Deleted** **Breaking** :warning:
+  * `SquadcastSdk.Teams.TeamsRemoveTeamMember()`: **Deleted** **Breaking** :warning:
+  * `SquadcastSdk.Teams.TeamsUpdateTeamMember()`: **Deleted** **Breaking** :warning:
+  * `SquadcastSdk.Teams.TeamsGetAllTeamRoles()`: **Deleted** **Breaking** :warning:
+  * `SquadcastSdk.Teams.TeamsCreateTeamRole()`: **Deleted** **Breaking** :warning:
+  * `SquadcastSdk.Teams.TeamsUpdateTeamRole()`: **Deleted** **Breaking** :warning:
+  * `SquadcastSdk.Teams.TeamsRemoveTeamRole()`: **Deleted** **Breaking** :warning:
+  * `SquadcastSdk.Users.UsersGetAllUsers()`: **Deleted** **Breaking** :warning:
+  * `SquadcastSdk.Users.UsersAddUser()`: **Deleted** **Breaking** :warning:
+  * `SquadcastSdk.Users.UsersUpdateOrgLevelPermissions()`: **Deleted** **Breaking** :warning:
+  * `SquadcastSdk.Users.UsersDeleteUser()`: **Deleted** **Breaking** :warning:
+  * `SquadcastSdk.Users.UsersGetUserRoles()`: **Deleted** **Breaking** :warning:
+  * `SquadcastSdk.Users.UsersGetUserById()`: **Deleted** **Breaking** :warning:
+  * `SquadcastSdk.Users.UsersUpdateUserById()`: **Deleted** **Breaking** :warning:
+  * `SquadcastSdk.Users.UsersRemoveUserFromOrg()`: **Deleted** **Breaking** :warning:
+  * `SquadcastSdk.Webforms.WebformsGetAllWebforms()`: **Deleted** **Breaking** :warning:
+  * `SquadcastSdk.Webforms.WebformsCreateWebform()`: **Deleted** **Breaking** :warning:
+  * `SquadcastSdk.Webforms.WebformsGetWebformById()`: **Deleted** **Breaking** :warning:
+  * `SquadcastSdk.Webforms.WebformsUpdateWebform()`: **Deleted** **Breaking** :warning:
+  * `SquadcastSdk.Webforms.WebformsRemoveWebform()`: **Deleted** **Breaking** :warning:
+  * `SquadcastSdk.Workflows.WorkflowsListWorkflows()`: **Deleted** **Breaking** :warning:
+  * `SquadcastSdk.Workflows.WorkflowsCreateWorkflow()`: **Deleted** **Breaking** :warning:
+  * `SquadcastSdk.Workflows.WorkflowsBulkEnabledisableWorkflows()`: **Deleted** **Breaking** :warning:
+  * `SquadcastSdk.Workflows.WorkflowsGetWorkflowById()`: **Deleted** **Breaking** :warning:
+  * `SquadcastSdk.Workflows.WorkflowsDeleteWorkflow()`: **Deleted** **Breaking** :warning:
+  * `SquadcastSdk.Workflows.WorkflowsUpdateWorkflow()`: **Deleted** **Breaking** :warning:
+  * `SquadcastSdk.Workflows.WorkflowsCreateAction()`: **Deleted** **Breaking** :warning:
+  * `SquadcastSdk.Workflows.WorkflowsUpdateActionsOrder()`: **Deleted** **Breaking** :warning:
+  * `SquadcastSdk.Workflows.WorkflowsGetWorkflowActionById()`: **Deleted** **Breaking** :warning:
+  * `SquadcastSdk.Workflows.WorkflowsDeleteWorkflowAction()`: **Deleted** **Breaking** :warning:
+  * `SquadcastSdk.Workflows.WorkflowsUpdateWorkflowAction()`: **Deleted** **Breaking** :warning:
+  * `SquadcastSdk.Workflows.WorkflowsEnabledisableWorkflow()`: **Deleted** **Breaking** :warning:
+  * `SquadcastSdk.Workflows.WorkflowsGetWorkflowLogs()`: **Deleted** **Breaking** :warning:
+  * `SquadcastSdk.Schedule.SchedulesListSchedules()`: **Deleted** **Breaking** :warning:
+  * `SquadcastSdk.Schedule.SchedulesCreateSchedule()`: **Deleted** **Breaking** :warning:
+  * `SquadcastSdk.Schedule.SchedulesGetScheduleById()`: **Deleted** **Breaking** :warning:
+  * `SquadcastSdk.Schedule.SchedulesUpdateSchedule()`: **Deleted** **Breaking** :warning:
+  * `SquadcastSdk.Schedule.SchedulesDeleteSchedule()`: **Deleted** **Breaking** :warning:
+  * `SquadcastSdk.Schedule.SchedulesPauseresumeSchedule()`: **Deleted** **Breaking** :warning:
+  * `SquadcastSdk.Schedule.SchedulesChangeTimezone()`: **Deleted** **Breaking** :warning:
+  * `SquadcastSdk.Schedule.SchedulesCloneSchedule()`: **Deleted** **Breaking** :warning:
+  * `SquadcastSdk.Schedule/exportSchedule.ExportGetScheduleIcalLink()`: **Deleted** **Breaking** :warning:
+  * `SquadcastSdk.Schedule/exportSchedule.ExportCreateScheduleIcalLink()`: **Deleted** **Breaking** :warning:
+  * `SquadcastSdk.Schedule/exportSchedule.ExportDeleteIcalLink()`: **Deleted** **Breaking** :warning:
+  * `SquadcastSdk.Schedule/exportSchedule.ExportRefreshScheduleIcalLink()`: **Deleted** **Breaking** :warning:
+  * `SquadcastSdk.Overrides.OverridesListOverrides()`: **Deleted** **Breaking** :warning:
+  * `SquadcastSdk.Overrides.OverridesCreateScheduleOverride()`: **Deleted** **Breaking** :warning:
+  * `SquadcastSdk.Overrides.OverridesGetOverrideById()`: **Deleted** **Breaking** :warning:
+  * `SquadcastSdk.Overrides.OverridesUpdateScheduleOverride()`: **Deleted** **Breaking** :warning:
+  * `SquadcastSdk.Overrides.OverridesDeleteScheduleOverride()`: **Deleted** **Breaking** :warning:
+  * `SquadcastSdk.Rotation.RotationsGetScheduleRotations()`: **Deleted** **Breaking** :warning:
+  * `SquadcastSdk.Rotation.RotationsCreateRotation()`: **Deleted** **Breaking** :warning:
+  * `SquadcastSdk.Rotation.RotationsGetScheduleRotationById()`: **Deleted** **Breaking** :warning:
+  * `SquadcastSdk.Rotation.RotationsUpdateRotation()`: **Deleted** **Breaking** :warning:
+  * `SquadcastSdk.Rotation.RotationsDeleteRotation()`: **Deleted** **Breaking** :warning:
+  * `SquadcastSdk.Rotation.RotationsGetRotationParticipants()`: **Deleted** **Breaking** :warning:
+  * `SquadcastSdk.Rotation.RotationsUpdateRotationParticipants()`: **Deleted** **Breaking** :warning:
+  * `SquadcastSdk.Squads/v4.SquadsGetAllSquads()`: **Deleted** **Breaking** :warning:
+  * `SquadcastSdk.Squads/v4.SquadsCreateSquadV4()`: **Deleted** **Breaking** :warning:
+  * `SquadcastSdk.Squads/v4.SquadsGetSquadByIdV4()`: **Deleted** **Breaking** :warning:
+  * `SquadcastSdk.Squads/v4.SquadsUpdateSquadV4()`: **Deleted** **Breaking** :warning:
+  * `SquadcastSdk.Squads/v4.SquadsUpdateSquadMember()`: **Deleted** **Breaking** :warning:
+  * `SquadcastSdk.Squads/v4.SquadsRemoveSquadMember()`: **Deleted** **Breaking** :warning:
+  * `SquadcastSdk.Squads/v4.SquadsUpdateSquadName()`: **Deleted** **Breaking** :warning:
+  * `SquadcastSdk.StatusPages.StatusPagesListStatusPages()`: **Deleted** **Breaking** :warning:
+  * `SquadcastSdk.StatusPages.StatusPagesCreateStatusPage()`: **Deleted** **Breaking** :warning:
+  * `SquadcastSdk.StatusPages.StatusPagesGetStatusPageById()`: **Deleted** **Breaking** :warning:
+  * `SquadcastSdk.StatusPages.StatusPagesUpdateStatusPageById()`: **Deleted** **Breaking** :warning:
+  * `SquadcastSdk.StatusPages.StatusPagesDeleteStatusPageById()`: **Deleted** **Breaking** :warning:
+  * `SquadcastSdk.StatusPages.StatusPagesListStatusPageStatuses()`: **Deleted** **Breaking** :warning:
+  * `SquadcastSdk.StatusPages/components.ComponentsListComponents()`: **Deleted** **Breaking** :warning:
+  * `SquadcastSdk.StatusPages/components.ComponentsCreateComponent()`: **Deleted** **Breaking** :warning:
+  * `SquadcastSdk.StatusPages/components.ComponentsGetComponentById()`: **Deleted** **Breaking** :warning:
+  * `SquadcastSdk.StatusPages/components.ComponentsUpdateComponentById()`: **Deleted** **Breaking** :warning:
+  * `SquadcastSdk.StatusPages/components.ComponentsDeleteComponentById()`: **Deleted** **Breaking** :warning:
+  * `SquadcastSdk.StatusPages/componentGroups.ComponentGroupsListComponentGroups()`: **Deleted** **Breaking** :warning:
+  * `SquadcastSdk.StatusPages/componentGroups.ComponentGroupsCreateComponentGroup()`: **Deleted** **Breaking** :warning:
+  * `SquadcastSdk.StatusPages/componentGroups.ComponentGroupsGetComponentGroupById()`: **Deleted** **Breaking** :warning:
+  * `SquadcastSdk.StatusPages/componentGroups.ComponentGroupsDeleteComponentGroupById()`: **Deleted** **Breaking** :warning:
+  * `SquadcastSdk.StatusPages/issues.IssuesListIssues()`: **Deleted** **Breaking** :warning:
+  * `SquadcastSdk.StatusPages/issues.IssuesCreateIssue()`: **Deleted** **Breaking** :warning:
+  * `SquadcastSdk.StatusPages/issues.IssuesGetIssueById()`: **Deleted** **Breaking** :warning:
+  * `SquadcastSdk.StatusPages/issues.IssuesUpdateIssue()`: **Deleted** **Breaking** :warning:
+  * `SquadcastSdk.StatusPages/issues.IssuesDeleteIssueById()`: **Deleted** **Breaking** :warning:
+  * `SquadcastSdk.StatusPages/issues.IssuesListStatusPageIssueStates()`: **Deleted** **Breaking** :warning:
+  * `SquadcastSdk.StatusPages/maintenances.MaintenancesListMaintenances()`: **Deleted** **Breaking** :warning:
+  * `SquadcastSdk.StatusPages/maintenances.MaintenancesCreateMaintenance()`: **Deleted** **Breaking** :warning:
+  * `SquadcastSdk.StatusPages/maintenances.MaintenancesGetMaintenanceById()`: **Deleted** **Breaking** :warning:
+  * `SquadcastSdk.StatusPages/maintenances.MaintenancesUpdateMaintenanceById()`: **Deleted** **Breaking** :warning:
+  * `SquadcastSdk.StatusPages/maintenances.MaintenancesDeleteMaintenanceById()`: **Deleted** **Breaking** :warning:
+  * `SquadcastSdk.StatusPages/subscribers.StatusPagesListSubscribers()`: **Deleted** **Breaking** :warning:

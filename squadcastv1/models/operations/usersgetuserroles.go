@@ -3,7 +3,7 @@
 package operations
 
 import (
-	"github.com/SquadcastHub/squadcast-sdk-go/models/components"
+	"github.com/SquadcastHub/squadcast-sdk-go/squadcastv1/models/components"
 )
 
 // UsersGetUserRolesResponseBody - The request has succeeded.

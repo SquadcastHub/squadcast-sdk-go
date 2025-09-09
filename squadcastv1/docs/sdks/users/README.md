@@ -5,16 +5,16 @@
 
 ### Available Operations
 
-* [UsersGetAllUsers](#usersgetallusers) - Get All Users
-* [UsersAddUser](#usersadduser) - Add User
-* [UsersUpdateOrgLevelPermissions](#usersupdateorglevelpermissions) - Update Org Level Permissions
-* [UsersDeleteUser](#usersdeleteuser) - Delete User
-* [UsersGetUserRoles](#usersgetuserroles) - Get User Roles
-* [UsersRemoveUserFromOrg](#usersremoveuserfromorg) - Remove User From Org
-* [UsersGetUserByID](#usersgetuserbyid) - Get User By ID
-* [UsersUpdateUserByID](#usersupdateuserbyid) - Update User by userID
+* [GetAll](#getall) - Get All Users
+* [Add](#add) - Add User
+* [UpdateOrgLevelPermissions](#updateorglevelpermissions) - Update Org Level Permissions
+* [Delete](#delete) - Delete User
+* [GetRoles](#getroles) - Get User Roles
+* [RemoveFromOrg](#removefromorg) - Remove User From Org
+* [GetByID](#getbyid) - Get User By ID
+* [Update](#update) - Update User by userID
 
-## UsersGetAllUsers
+## GetAll
 
 Returns all the users of the organization.
 Requires `access_token` as a `Bearer {{token}}` in the `Authorization` header with `read` scope.
@@ -28,7 +28,7 @@ package main
 import(
 	"context"
 	"os"
-	squadcastsdk "github.com/SquadcastHub/squadcast-sdk-go"
+	squadcastsdk "github.com/SquadcastHub/squadcast-sdk-go/squadcastv1"
 	"log"
 )
 
@@ -39,7 +39,7 @@ func main() {
         squadcastsdk.WithSecurity(os.Getenv("SQUADCASTSDK_BEARER_AUTH")),
     )
 
-    res, err := s.Users.UsersGetAllUsers(ctx)
+    res, err := s.Users.GetAll(ctx)
     if err != nil {
         log.Fatal(err)
     }
@@ -77,7 +77,7 @@ func main() {
 | apierrors.UsersGetAllUsersGatewayTimeoutError      | 504                                                | application/json                                   |
 | apierrors.APIError                                 | 4XX, 5XX                                           | \*/\*                                              |
 
-## UsersAddUser
+## Add
 
 Add user to the organization with given role if not exists. Returns the user object in response.
 Requires `access_token` as a `Bearer {{token}}` in the `Authorization` header with `user-write` scope.
@@ -91,8 +91,8 @@ package main
 import(
 	"context"
 	"os"
-	squadcastsdk "github.com/SquadcastHub/squadcast-sdk-go"
-	"github.com/SquadcastHub/squadcast-sdk-go/models/components"
+	squadcastsdk "github.com/SquadcastHub/squadcast-sdk-go/squadcastv1"
+	"github.com/SquadcastHub/squadcast-sdk-go/squadcastv1/models/components"
 	"log"
 )
 
@@ -103,7 +103,7 @@ func main() {
         squadcastsdk.WithSecurity(os.Getenv("SQUADCASTSDK_BEARER_AUTH")),
     )
 
-    res, err := s.Users.UsersAddUser(ctx, components.V3UsersAddUserRequest{
+    res, err := s.Users.Add(ctx, components.V3UsersAddUserRequest{
         Email: "Clovis_Reynolds@hotmail.com",
         Role: components.V3UsersAddUserRequestRoleAccountOwner,
         FirstName: "Yvonne",
@@ -147,7 +147,7 @@ func main() {
 | apierrors.UsersAddUserGatewayTimeoutError      | 504                                            | application/json                               |
 | apierrors.APIError                             | 4XX, 5XX                                       | \*/\*                                          |
 
-## UsersUpdateOrgLevelPermissions
+## UpdateOrgLevelPermissions
 
 Update Org Level Permissions
 
@@ -160,8 +160,8 @@ package main
 import(
 	"context"
 	"os"
-	squadcastsdk "github.com/SquadcastHub/squadcast-sdk-go"
-	"github.com/SquadcastHub/squadcast-sdk-go/models/components"
+	squadcastsdk "github.com/SquadcastHub/squadcast-sdk-go/squadcastv1"
+	"github.com/SquadcastHub/squadcast-sdk-go/squadcastv1/models/components"
 	"log"
 )
 
@@ -172,7 +172,7 @@ func main() {
         squadcastsdk.WithSecurity(os.Getenv("SQUADCASTSDK_BEARER_AUTH")),
     )
 
-    res, err := s.Users.UsersUpdateOrgLevelPermissions(ctx, components.V3UsersUpdateUserAbilitiesRequest{
+    res, err := s.Users.UpdateOrgLevelPermissions(ctx, components.V3UsersUpdateUserAbilitiesRequest{
         Data: []components.V3UsersUpdateUserAbilitiesRequestData{},
     })
     if err != nil {
@@ -213,7 +213,7 @@ func main() {
 | apierrors.UsersUpdateOrgLevelPermissionsGatewayTimeoutError      | 504                                                              | application/json                                                 |
 | apierrors.APIError                                               | 4XX, 5XX                                                         | \*/\*                                                            |
 
-## UsersDeleteUser
+## Delete
 
 This API replaces the swap_user for all the entities in Squadcast with user_id provided and deletes the user.
 
@@ -226,8 +226,8 @@ package main
 import(
 	"context"
 	"os"
-	squadcastsdk "github.com/SquadcastHub/squadcast-sdk-go"
-	"github.com/SquadcastHub/squadcast-sdk-go/models/operations"
+	squadcastsdk "github.com/SquadcastHub/squadcast-sdk-go/squadcastv1"
+	"github.com/SquadcastHub/squadcast-sdk-go/squadcastv1/models/operations"
 	"log"
 )
 
@@ -238,7 +238,7 @@ func main() {
         squadcastsdk.WithSecurity(os.Getenv("SQUADCASTSDK_BEARER_AUTH")),
     )
 
-    res, err := s.Users.UsersDeleteUser(ctx, operations.UsersDeleteUserRequest{
+    res, err := s.Users.Delete(ctx, operations.UsersDeleteUserRequest{
         UserID: "<id>",
         SwapUserID: "<id>",
         SuppressIncidents: true,
@@ -282,7 +282,7 @@ func main() {
 | apierrors.UsersDeleteUserGatewayTimeoutError      | 504                                               | application/json                                  |
 | apierrors.APIError                                | 4XX, 5XX                                          | \*/\*                                             |
 
-## UsersGetUserRoles
+## GetRoles
 
 Returns all available user roles.
 Requires `access_token` as a `Bearer {{token}}` in the `Authorization` header with `read` scope.
@@ -296,7 +296,7 @@ package main
 import(
 	"context"
 	"os"
-	squadcastsdk "github.com/SquadcastHub/squadcast-sdk-go"
+	squadcastsdk "github.com/SquadcastHub/squadcast-sdk-go/squadcastv1"
 	"log"
 )
 
@@ -307,7 +307,7 @@ func main() {
         squadcastsdk.WithSecurity(os.Getenv("SQUADCASTSDK_BEARER_AUTH")),
     )
 
-    res, err := s.Users.UsersGetUserRoles(ctx)
+    res, err := s.Users.GetRoles(ctx)
     if err != nil {
         log.Fatal(err)
     }
@@ -345,7 +345,7 @@ func main() {
 | apierrors.UsersGetUserRolesGatewayTimeoutError      | 504                                                 | application/json                                    |
 | apierrors.APIError                                  | 4XX, 5XX                                            | \*/\*                                               |
 
-## UsersRemoveUserFromOrg
+## RemoveFromOrg
 
 Remove user from organization. Upon sccess the user will be removed from the organization.
 Requires `access_token` as a `Bearer {{token}}` in the `Authorization` header with `user-write` scope.
@@ -359,7 +359,7 @@ package main
 import(
 	"context"
 	"os"
-	squadcastsdk "github.com/SquadcastHub/squadcast-sdk-go"
+	squadcastsdk "github.com/SquadcastHub/squadcast-sdk-go/squadcastv1"
 	"log"
 )
 
@@ -370,7 +370,7 @@ func main() {
         squadcastsdk.WithSecurity(os.Getenv("SQUADCASTSDK_BEARER_AUTH")),
     )
 
-    res, err := s.Users.UsersRemoveUserFromOrg(ctx, "<id>")
+    res, err := s.Users.RemoveFromOrg(ctx, "<id>")
     if err != nil {
         log.Fatal(err)
     }
@@ -409,7 +409,7 @@ func main() {
 | apierrors.UsersRemoveUserFromOrgGatewayTimeoutError      | 504                                                      | application/json                                         |
 | apierrors.APIError                                       | 4XX, 5XX                                                 | \*/\*                                                    |
 
-## UsersGetUserByID
+## GetByID
 
 Returns a users details of the given `userID` in the request param.
 Requires `access_token` as a `Bearer {{token}}` in the `Authorization` header with `read` scope.
@@ -423,7 +423,7 @@ package main
 import(
 	"context"
 	"os"
-	squadcastsdk "github.com/SquadcastHub/squadcast-sdk-go"
+	squadcastsdk "github.com/SquadcastHub/squadcast-sdk-go/squadcastv1"
 	"log"
 )
 
@@ -434,7 +434,7 @@ func main() {
         squadcastsdk.WithSecurity(os.Getenv("SQUADCASTSDK_BEARER_AUTH")),
     )
 
-    res, err := s.Users.UsersGetUserByID(ctx, "<id>")
+    res, err := s.Users.GetByID(ctx, "<id>")
     if err != nil {
         log.Fatal(err)
     }
@@ -473,7 +473,7 @@ func main() {
 | apierrors.UsersGetUserByIDGatewayTimeoutError      | 504                                                | application/json                                   |
 | apierrors.APIError                                 | 4XX, 5XX                                           | \*/\*                                              |
 
-## UsersUpdateUserByID
+## Update
 
 Update User by userID.
 Requires `access_token` as a `Bearer {{token}}` in the `Authorization` header with `user-write` scope.
@@ -487,8 +487,8 @@ package main
 import(
 	"context"
 	"os"
-	squadcastsdk "github.com/SquadcastHub/squadcast-sdk-go"
-	"github.com/SquadcastHub/squadcast-sdk-go/models/components"
+	squadcastsdk "github.com/SquadcastHub/squadcast-sdk-go/squadcastv1"
+	"github.com/SquadcastHub/squadcast-sdk-go/squadcastv1/models/components"
 	"log"
 )
 
@@ -499,7 +499,7 @@ func main() {
         squadcastsdk.WithSecurity(os.Getenv("SQUADCASTSDK_BEARER_AUTH")),
     )
 
-    res, err := s.Users.UsersUpdateUserByID(ctx, "<id>", components.V3UsersUpdateUserRequest{
+    res, err := s.Users.Update(ctx, "<id>", components.V3UsersUpdateUserRequest{
         Role: components.V3UsersUpdateUserRequestRoleUser,
     })
     if err != nil {

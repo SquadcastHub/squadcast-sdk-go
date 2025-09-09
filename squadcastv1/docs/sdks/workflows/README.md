@@ -5,21 +5,20 @@
 
 ### Available Operations
 
-* [WorkflowsListWorkflows](#workflowslistworkflows) - List Workflows
-* [WorkflowsCreateWorkflow](#workflowscreateworkflow) - Create Workflow
-* [WorkflowsBulkEnabledisableWorkflows](#workflowsbulkenabledisableworkflows) - Bulk Enable/Disable Workflows
-* [WorkflowsDeleteWorkflow](#workflowsdeleteworkflow) - Delete Workflow
-* [WorkflowsGetWorkflowByID](#workflowsgetworkflowbyid) - Get Workflow By ID
-* [WorkflowsUpdateWorkflow](#workflowsupdateworkflow) - Update Workflow
-* [WorkflowsCreateAction](#workflowscreateaction) - Create Action
-* [WorkflowsUpdateActionsOrder](#workflowsupdateactionsorder) - Update Actions Order
-* [WorkflowsDeleteWorkflowAction](#workflowsdeleteworkflowaction) - Delete Workflow Action
-* [WorkflowsGetWorkflowActionByID](#workflowsgetworkflowactionbyid) - Get Workflow Action By ID
-* [WorkflowsUpdateWorkflowAction](#workflowsupdateworkflowaction) - Update Workflow Action
-* [WorkflowsEnabledisableWorkflow](#workflowsenabledisableworkflow) - Enable/Disable Workflow
-* [WorkflowsGetWorkflowLogs](#workflowsgetworkflowlogs) - Get Workflow Logs
+* [List](#list) - List Workflows
+* [Create](#create) - Create Workflow
+* [BulkEnableDisable](#bulkenabledisable) - Bulk Enable/Disable Workflows
+* [Delete](#delete) - Delete Workflow
+* [GetByID](#getbyid) - Get Workflow By ID
+* [Update](#update) - Update Workflow
+* [UpdateActionsOrder](#updateactionsorder) - Update Actions Order
+* [DeleteAction](#deleteaction) - Delete Workflow Action
+* [GetAction](#getaction) - Get Workflow Action By ID
+* [UpdateAction](#updateaction) - Update Workflow Action
+* [ToggleEnable](#toggleenable) - Enable/Disable Workflow
+* [GetLogs](#getlogs) - Get Workflow Logs
 
-## WorkflowsListWorkflows
+## List
 
 Get a list of all Workflows
 
@@ -32,8 +31,8 @@ package main
 import(
 	"context"
 	"os"
-	squadcastsdk "github.com/SquadcastHub/squadcast-sdk-go"
-	"github.com/SquadcastHub/squadcast-sdk-go/models/operations"
+	squadcastsdk "github.com/SquadcastHub/squadcast-sdk-go/squadcastv1"
+	"github.com/SquadcastHub/squadcast-sdk-go/squadcastv1/models/operations"
 	"log"
 )
 
@@ -44,7 +43,7 @@ func main() {
         squadcastsdk.WithSecurity(os.Getenv("SQUADCASTSDK_BEARER_AUTH")),
     )
 
-    res, err := s.Workflows.WorkflowsListWorkflows(ctx, operations.WorkflowsListWorkflowsRequest{
+    res, err := s.Workflows.List(ctx, operations.WorkflowsListWorkflowsRequest{
         OwnerID: "<id>",
     })
     if err != nil {
@@ -85,7 +84,7 @@ func main() {
 | apierrors.WorkflowsListWorkflowsGatewayTimeoutError      | 504                                                      | application/json                                         |
 | apierrors.APIError                                       | 4XX, 5XX                                                 | \*/\*                                                    |
 
-## WorkflowsCreateWorkflow
+## Create
 
 Create a Workflow
 
@@ -98,8 +97,8 @@ package main
 import(
 	"context"
 	"os"
-	squadcastsdk "github.com/SquadcastHub/squadcast-sdk-go"
-	"github.com/SquadcastHub/squadcast-sdk-go/models/components"
+	squadcastsdk "github.com/SquadcastHub/squadcast-sdk-go/squadcastv1"
+	"github.com/SquadcastHub/squadcast-sdk-go/squadcastv1/models/components"
 	"log"
 )
 
@@ -110,7 +109,7 @@ func main() {
         squadcastsdk.WithSecurity(os.Getenv("SQUADCASTSDK_BEARER_AUTH")),
     )
 
-    res, err := s.Workflows.WorkflowsCreateWorkflow(ctx, components.V3WorkflowsCreateWorkflowRequest{
+    res, err := s.Workflows.Create(ctx, components.V3WorkflowsCreateWorkflowRequest{
         Title: "<value>",
         OwnerID: "<id>",
         Trigger: components.V3WorkflowsWorkflowTriggerIncidentAcknowledged,
@@ -164,7 +163,7 @@ func main() {
 | apierrors.WorkflowsCreateWorkflowGatewayTimeoutError      | 504                                                       | application/json                                          |
 | apierrors.APIError                                        | 4XX, 5XX                                                  | \*/\*                                                     |
 
-## WorkflowsBulkEnabledisableWorkflows
+## BulkEnableDisable
 
 Bulk enable or disable workflows
 
@@ -177,8 +176,8 @@ package main
 import(
 	"context"
 	"os"
-	squadcastsdk "github.com/SquadcastHub/squadcast-sdk-go"
-	"github.com/SquadcastHub/squadcast-sdk-go/models/components"
+	squadcastsdk "github.com/SquadcastHub/squadcast-sdk-go/squadcastv1"
+	"github.com/SquadcastHub/squadcast-sdk-go/squadcastv1/models/components"
 	"log"
 )
 
@@ -189,7 +188,7 @@ func main() {
         squadcastsdk.WithSecurity(os.Getenv("SQUADCASTSDK_BEARER_AUTH")),
     )
 
-    res, err := s.Workflows.WorkflowsBulkEnabledisableWorkflows(ctx, components.V3WorkflowsBulkEnableDisableWorkflowsRequest{
+    res, err := s.Workflows.BulkEnableDisable(ctx, components.V3WorkflowsBulkEnableDisableWorkflowsRequest{
         OwnerID: "<id>",
         Enabled: false,
         WorkflowIds: []int{
@@ -234,7 +233,7 @@ func main() {
 | apierrors.WorkflowsBulkEnabledisableWorkflowsGatewayTimeoutError      | 504                                                                   | application/json                                                      |
 | apierrors.APIError                                                    | 4XX, 5XX                                                              | \*/\*                                                                 |
 
-## WorkflowsDeleteWorkflow
+## Delete
 
 Delete a workflow by ID
 
@@ -247,7 +246,7 @@ package main
 import(
 	"context"
 	"os"
-	squadcastsdk "github.com/SquadcastHub/squadcast-sdk-go"
+	squadcastsdk "github.com/SquadcastHub/squadcast-sdk-go/squadcastv1"
 	"log"
 )
 
@@ -258,7 +257,7 @@ func main() {
         squadcastsdk.WithSecurity(os.Getenv("SQUADCASTSDK_BEARER_AUTH")),
     )
 
-    res, err := s.Workflows.WorkflowsDeleteWorkflow(ctx, "<id>")
+    res, err := s.Workflows.Delete(ctx, "<id>")
     if err != nil {
         log.Fatal(err)
     }
@@ -297,7 +296,7 @@ func main() {
 | apierrors.WorkflowsDeleteWorkflowGatewayTimeoutError      | 504                                                       | application/json                                          |
 | apierrors.APIError                                        | 4XX, 5XX                                                  | \*/\*                                                     |
 
-## WorkflowsGetWorkflowByID
+## GetByID
 
 Get a workflow by ID
 
@@ -310,7 +309,7 @@ package main
 import(
 	"context"
 	"os"
-	squadcastsdk "github.com/SquadcastHub/squadcast-sdk-go"
+	squadcastsdk "github.com/SquadcastHub/squadcast-sdk-go/squadcastv1"
 	"log"
 )
 
@@ -321,7 +320,7 @@ func main() {
         squadcastsdk.WithSecurity(os.Getenv("SQUADCASTSDK_BEARER_AUTH")),
     )
 
-    res, err := s.Workflows.WorkflowsGetWorkflowByID(ctx, "<id>")
+    res, err := s.Workflows.GetByID(ctx, "<id>")
     if err != nil {
         log.Fatal(err)
     }
@@ -360,7 +359,7 @@ func main() {
 | apierrors.WorkflowsGetWorkflowByIDGatewayTimeoutError      | 504                                                        | application/json                                           |
 | apierrors.APIError                                         | 4XX, 5XX                                                   | \*/\*                                                      |
 
-## WorkflowsUpdateWorkflow
+## Update
 
 Update a Workflow
 
@@ -373,8 +372,8 @@ package main
 import(
 	"context"
 	"os"
-	squadcastsdk "github.com/SquadcastHub/squadcast-sdk-go"
-	"github.com/SquadcastHub/squadcast-sdk-go/models/components"
+	squadcastsdk "github.com/SquadcastHub/squadcast-sdk-go/squadcastv1"
+	"github.com/SquadcastHub/squadcast-sdk-go/squadcastv1/models/components"
 	"log"
 )
 
@@ -385,7 +384,7 @@ func main() {
         squadcastsdk.WithSecurity(os.Getenv("SQUADCASTSDK_BEARER_AUTH")),
     )
 
-    res, err := s.Workflows.WorkflowsUpdateWorkflow(ctx, "<id>", components.V3WorkflowsCreateWorkflowRequestUpdate{})
+    res, err := s.Workflows.Update(ctx, "<id>", components.V3WorkflowsCreateWorkflowRequestUpdate{})
     if err != nil {
         log.Fatal(err)
     }
@@ -425,92 +424,7 @@ func main() {
 | apierrors.WorkflowsUpdateWorkflowGatewayTimeoutError      | 504                                                       | application/json                                          |
 | apierrors.APIError                                        | 4XX, 5XX                                                  | \*/\*                                                     |
 
-## WorkflowsCreateAction
-
-Create an Action for a workflow
-
-### Example Usage
-
-<!-- UsageSnippet language="go" operationID="Workflows_createAction" method="post" path="/v3/workflows/{workflowID}/actions" -->
-```go
-package main
-
-import(
-	"context"
-	"os"
-	squadcastsdk "github.com/SquadcastHub/squadcast-sdk-go"
-	"github.com/SquadcastHub/squadcast-sdk-go/models/components"
-	"log"
-)
-
-func main() {
-    ctx := context.Background()
-
-    s := squadcastsdk.New(
-        squadcastsdk.WithSecurity(os.Getenv("SQUADCASTSDK_BEARER_AUTH")),
-    )
-
-    res, err := s.Workflows.WorkflowsCreateAction(ctx, "<id>", components.CreateV3WorkflowsActionRequestV3WorkflowsSqCreateStatusPageIssue(
-        components.V3WorkflowsSqCreateStatusPageIssue{
-            Name: components.V3WorkflowsSqCreateStatusPageIssueNameSqAddStatusPageIssue,
-            Data: components.V3WorkflowsSqCreateStatusPageIssueData{
-                ComponentAndImpact: []components.V3WorkflowsComponentAndImpact{},
-                IssueTitle: "<value>",
-                PageStatusID: 179034,
-                StatusAndMessage: []components.V3WorkflowsIssueStatusAndMessage{
-                    components.V3WorkflowsIssueStatusAndMessage{
-                        Messages: []string{
-                            "<value 1>",
-                            "<value 2>",
-                            "<value 3>",
-                        },
-                        StatusID: 692068,
-                    },
-                },
-                StatusPageID: 368871,
-            },
-        },
-    ))
-    if err != nil {
-        log.Fatal(err)
-    }
-    if res.Object != nil {
-        // handle response
-    }
-}
-```
-
-### Parameters
-
-| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
-| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
-| `ctx`                                                                                      | [context.Context](https://pkg.go.dev/context#Context)                                      | :heavy_check_mark:                                                                         | The context to use for the request.                                                        |
-| `workflowID`                                                                               | *string*                                                                                   | :heavy_check_mark:                                                                         | N/A                                                                                        |
-| `v3WorkflowsActionRequest`                                                                 | [components.V3WorkflowsActionRequest](../../models/components/v3workflowsactionrequest.md) | :heavy_check_mark:                                                                         | N/A                                                                                        |
-| `opts`                                                                                     | [][operations.Option](../../models/operations/option.md)                                   | :heavy_minus_sign:                                                                         | The options for this request.                                                              |
-
-### Response
-
-**[*operations.WorkflowsCreateActionResponse](../../models/operations/workflowscreateactionresponse.md), error**
-
-### Errors
-
-| Error Type                                              | Status Code                                             | Content Type                                            |
-| ------------------------------------------------------- | ------------------------------------------------------- | ------------------------------------------------------- |
-| apierrors.WorkflowsCreateActionBadRequestError          | 400                                                     | application/json                                        |
-| apierrors.WorkflowsCreateActionUnauthorizedError        | 401                                                     | application/json                                        |
-| apierrors.WorkflowsCreateActionPaymentRequiredError     | 402                                                     | application/json                                        |
-| apierrors.WorkflowsCreateActionForbiddenError           | 403                                                     | application/json                                        |
-| apierrors.WorkflowsCreateActionNotFoundError            | 404                                                     | application/json                                        |
-| apierrors.WorkflowsCreateActionConflictError            | 409                                                     | application/json                                        |
-| apierrors.WorkflowsCreateActionUnprocessableEntityError | 422                                                     | application/json                                        |
-| apierrors.WorkflowsCreateActionInternalServerError      | 500                                                     | application/json                                        |
-| apierrors.WorkflowsCreateActionBadGatewayError          | 502                                                     | application/json                                        |
-| apierrors.WorkflowsCreateActionServiceUnavailableError  | 503                                                     | application/json                                        |
-| apierrors.WorkflowsCreateActionGatewayTimeoutError      | 504                                                     | application/json                                        |
-| apierrors.APIError                                      | 4XX, 5XX                                                | \*/\*                                                   |
-
-## WorkflowsUpdateActionsOrder
+## UpdateActionsOrder
 
 Update action order in a workflow
 
@@ -523,8 +437,8 @@ package main
 import(
 	"context"
 	"os"
-	squadcastsdk "github.com/SquadcastHub/squadcast-sdk-go"
-	"github.com/SquadcastHub/squadcast-sdk-go/models/components"
+	squadcastsdk "github.com/SquadcastHub/squadcast-sdk-go/squadcastv1"
+	"github.com/SquadcastHub/squadcast-sdk-go/squadcastv1/models/components"
 	"log"
 )
 
@@ -535,7 +449,7 @@ func main() {
         squadcastsdk.WithSecurity(os.Getenv("SQUADCASTSDK_BEARER_AUTH")),
     )
 
-    res, err := s.Workflows.WorkflowsUpdateActionsOrder(ctx, "<id>", components.V3WorkflowsUpdateActionsOrderRequest{})
+    res, err := s.Workflows.UpdateActionsOrder(ctx, "<id>", components.V3WorkflowsUpdateActionsOrderRequest{})
     if err != nil {
         log.Fatal(err)
     }
@@ -575,7 +489,7 @@ func main() {
 | apierrors.WorkflowsUpdateActionsOrderGatewayTimeoutError      | 504                                                           | application/json                                              |
 | apierrors.APIError                                            | 4XX, 5XX                                                      | \*/\*                                                         |
 
-## WorkflowsDeleteWorkflowAction
+## DeleteAction
 
 Delete an action by action ID
 
@@ -588,7 +502,7 @@ package main
 import(
 	"context"
 	"os"
-	squadcastsdk "github.com/SquadcastHub/squadcast-sdk-go"
+	squadcastsdk "github.com/SquadcastHub/squadcast-sdk-go/squadcastv1"
 	"log"
 )
 
@@ -599,7 +513,7 @@ func main() {
         squadcastsdk.WithSecurity(os.Getenv("SQUADCASTSDK_BEARER_AUTH")),
     )
 
-    res, err := s.Workflows.WorkflowsDeleteWorkflowAction(ctx, "<id>", "<id>")
+    res, err := s.Workflows.DeleteAction(ctx, "<id>", "<id>")
     if err != nil {
         log.Fatal(err)
     }
@@ -639,7 +553,7 @@ func main() {
 | apierrors.WorkflowsDeleteWorkflowActionGatewayTimeoutError      | 504                                                             | application/json                                                |
 | apierrors.APIError                                              | 4XX, 5XX                                                        | \*/\*                                                           |
 
-## WorkflowsGetWorkflowActionByID
+## GetAction
 
 Get workflow action by ID
 
@@ -652,7 +566,7 @@ package main
 import(
 	"context"
 	"os"
-	squadcastsdk "github.com/SquadcastHub/squadcast-sdk-go"
+	squadcastsdk "github.com/SquadcastHub/squadcast-sdk-go/squadcastv1"
 	"log"
 )
 
@@ -663,7 +577,7 @@ func main() {
         squadcastsdk.WithSecurity(os.Getenv("SQUADCASTSDK_BEARER_AUTH")),
     )
 
-    res, err := s.Workflows.WorkflowsGetWorkflowActionByID(ctx, "<id>", "<id>")
+    res, err := s.Workflows.GetAction(ctx, "<id>", "<id>")
     if err != nil {
         log.Fatal(err)
     }
@@ -703,7 +617,7 @@ func main() {
 | apierrors.WorkflowsGetWorkflowActionByIDGatewayTimeoutError      | 504                                                              | application/json                                                 |
 | apierrors.APIError                                               | 4XX, 5XX                                                         | \*/\*                                                            |
 
-## WorkflowsUpdateWorkflowAction
+## UpdateAction
 
 Update an action by action ID
 
@@ -716,8 +630,8 @@ package main
 import(
 	"context"
 	"os"
-	squadcastsdk "github.com/SquadcastHub/squadcast-sdk-go"
-	"github.com/SquadcastHub/squadcast-sdk-go/models/components"
+	squadcastsdk "github.com/SquadcastHub/squadcast-sdk-go/squadcastv1"
+	"github.com/SquadcastHub/squadcast-sdk-go/squadcastv1/models/components"
 	"log"
 )
 
@@ -728,7 +642,7 @@ func main() {
         squadcastsdk.WithSecurity(os.Getenv("SQUADCASTSDK_BEARER_AUTH")),
     )
 
-    res, err := s.Workflows.WorkflowsUpdateWorkflowAction(ctx, "<id>", "<id>", components.CreateV3WorkflowsActionRequestUpdateAny(
+    res, err := s.Workflows.UpdateAction(ctx, "<id>", "<id>", components.CreateV3WorkflowsActionRequestUpdateAny(
         map[string]any{
             "name": "slack_message_channel",
         },
@@ -773,7 +687,7 @@ func main() {
 | apierrors.WorkflowsUpdateWorkflowActionGatewayTimeoutError      | 504                                                             | application/json                                                |
 | apierrors.APIError                                              | 4XX, 5XX                                                        | \*/\*                                                           |
 
-## WorkflowsEnabledisableWorkflow
+## ToggleEnable
 
 Enable or disable workflow by ID
 
@@ -786,8 +700,8 @@ package main
 import(
 	"context"
 	"os"
-	squadcastsdk "github.com/SquadcastHub/squadcast-sdk-go"
-	"github.com/SquadcastHub/squadcast-sdk-go/models/components"
+	squadcastsdk "github.com/SquadcastHub/squadcast-sdk-go/squadcastv1"
+	"github.com/SquadcastHub/squadcast-sdk-go/squadcastv1/models/components"
 	"log"
 )
 
@@ -798,7 +712,7 @@ func main() {
         squadcastsdk.WithSecurity(os.Getenv("SQUADCASTSDK_BEARER_AUTH")),
     )
 
-    res, err := s.Workflows.WorkflowsEnabledisableWorkflow(ctx, "<id>", components.V3WorkflowsEnableDisableWorkflowRequest{})
+    res, err := s.Workflows.ToggleEnable(ctx, "<id>", components.V3WorkflowsEnableDisableWorkflowRequest{})
     if err != nil {
         log.Fatal(err)
     }
@@ -838,7 +752,7 @@ func main() {
 | apierrors.WorkflowsEnabledisableWorkflowGatewayTimeoutError      | 504                                                              | application/json                                                 |
 | apierrors.APIError                                               | 4XX, 5XX                                                         | \*/\*                                                            |
 
-## WorkflowsGetWorkflowLogs
+## GetLogs
 
 Get workflow logs
 
@@ -851,7 +765,7 @@ package main
 import(
 	"context"
 	"os"
-	squadcastsdk "github.com/SquadcastHub/squadcast-sdk-go"
+	squadcastsdk "github.com/SquadcastHub/squadcast-sdk-go/squadcastv1"
 	"log"
 )
 
@@ -862,7 +776,7 @@ func main() {
         squadcastsdk.WithSecurity(os.Getenv("SQUADCASTSDK_BEARER_AUTH")),
     )
 
-    res, err := s.Workflows.WorkflowsGetWorkflowLogs(ctx, "<id>", nil, nil)
+    res, err := s.Workflows.GetLogs(ctx, "<id>", nil, nil)
     if err != nil {
         log.Fatal(err)
     }

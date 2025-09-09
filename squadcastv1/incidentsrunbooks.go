@@ -6,13 +6,13 @@ import (
 	"bytes"
 	"context"
 	"fmt"
-	"github.com/SquadcastHub/squadcast-sdk-go/internal/config"
-	"github.com/SquadcastHub/squadcast-sdk-go/internal/hooks"
-	"github.com/SquadcastHub/squadcast-sdk-go/internal/utils"
-	"github.com/SquadcastHub/squadcast-sdk-go/models/apierrors"
-	"github.com/SquadcastHub/squadcast-sdk-go/models/components"
-	"github.com/SquadcastHub/squadcast-sdk-go/models/operations"
-	"github.com/SquadcastHub/squadcast-sdk-go/retry"
+	"github.com/SquadcastHub/squadcast-sdk-go/squadcastv1/internal/config"
+	"github.com/SquadcastHub/squadcast-sdk-go/squadcastv1/internal/hooks"
+	"github.com/SquadcastHub/squadcast-sdk-go/squadcastv1/internal/utils"
+	"github.com/SquadcastHub/squadcast-sdk-go/squadcastv1/models/apierrors"
+	"github.com/SquadcastHub/squadcast-sdk-go/squadcastv1/models/components"
+	"github.com/SquadcastHub/squadcast-sdk-go/squadcastv1/models/operations"
+	"github.com/SquadcastHub/squadcast-sdk-go/squadcastv1/retry"
 	"net/http"
 )
 
@@ -30,8 +30,8 @@ func newIncidentsRunbooks(rootSDK *SquadcastSDK, sdkConfig config.SDKConfigurati
 	}
 }
 
-// RunbooksAttachRunbooks - Attach Runbooks
-func (s *IncidentsRunbooks) RunbooksAttachRunbooks(ctx context.Context, incidentID string, v3IncidentsRunbooksAttachRunbooksRequest components.V3IncidentsRunbooksAttachRunbooksRequest, opts ...operations.Option) (*operations.RunbooksAttachRunbooksResponse, error) {
+// Attach Runbooks
+func (s *IncidentsRunbooks) Attach(ctx context.Context, incidentID string, v3IncidentsRunbooksAttachRunbooksRequest components.V3IncidentsRunbooksAttachRunbooksRequest, opts ...operations.Option) (*operations.RunbooksAttachRunbooksResponse, error) {
 	request := operations.RunbooksAttachRunbooksRequest{
 		IncidentID:                               incidentID,
 		V3IncidentsRunbooksAttachRunbooksRequest: v3IncidentsRunbooksAttachRunbooksRequest,

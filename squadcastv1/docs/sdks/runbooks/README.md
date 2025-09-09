@@ -5,13 +5,13 @@
 
 ### Available Operations
 
-* [RunbooksGetAllRunbooksByTeam](#runbooksgetallrunbooksbyteam) - Get All Runbooks By Team
-* [RunbooksCreateRunbook](#runbookscreaterunbook) - Create Runbook
-* [RunbooksRemoveRunbook](#runbooksremoverunbook) - Remove Runbook
-* [RunbooksGetRunbookByID](#runbooksgetrunbookbyid) - Get Runbook By ID
-* [RunbooksUpdateRunbook](#runbooksupdaterunbook) - Update Runbook
+* [ListByTeam](#listbyteam) - Get All Runbooks By Team
+* [Create](#create) - Create Runbook
+* [Remove](#remove) - Remove Runbook
+* [GetByID](#getbyid) - Get Runbook By ID
+* [Update](#update) - Update Runbook
 
-## RunbooksGetAllRunbooksByTeam
+## ListByTeam
 
 Returns all the runbooks of the team.
 Requires `access_token` as a `Bearer {{token}}` in the `Authorization` header with `read` scope.
@@ -25,7 +25,7 @@ package main
 import(
 	"context"
 	"os"
-	squadcastsdk "github.com/SquadcastHub/squadcast-sdk-go"
+	squadcastsdk "github.com/SquadcastHub/squadcast-sdk-go/squadcastv1"
 	"log"
 )
 
@@ -36,7 +36,7 @@ func main() {
         squadcastsdk.WithSecurity(os.Getenv("SQUADCASTSDK_BEARER_AUTH")),
     )
 
-    res, err := s.Runbooks.RunbooksGetAllRunbooksByTeam(ctx)
+    res, err := s.Runbooks.ListByTeam(ctx)
     if err != nil {
         log.Fatal(err)
     }
@@ -74,7 +74,7 @@ func main() {
 | apierrors.RunbooksGetAllRunbooksByTeamGatewayTimeoutError      | 504                                                            | application/json                                               |
 | apierrors.APIError                                             | 4XX, 5XX                                                       | \*/\*                                                          |
 
-## RunbooksCreateRunbook
+## Create
 
 Add runbook to the team. Returns the runbook object in response.
 Requires `access_token` as a `Bearer {{token}}` in the `Authorization` header with `user-write` scope.
@@ -88,8 +88,8 @@ package main
 import(
 	"context"
 	"os"
-	squadcastsdk "github.com/SquadcastHub/squadcast-sdk-go"
-	"github.com/SquadcastHub/squadcast-sdk-go/models/components"
+	squadcastsdk "github.com/SquadcastHub/squadcast-sdk-go/squadcastv1"
+	"github.com/SquadcastHub/squadcast-sdk-go/squadcastv1/models/components"
 	"log"
 )
 
@@ -100,7 +100,7 @@ func main() {
         squadcastsdk.WithSecurity(os.Getenv("SQUADCASTSDK_BEARER_AUTH")),
     )
 
-    res, err := s.Runbooks.RunbooksCreateRunbook(ctx, components.V3RunbooksCreateRunbookRequest{
+    res, err := s.Runbooks.Create(ctx, components.V3RunbooksCreateRunbookRequest{
         Name: "<value>",
         Steps: []components.V3RunbooksStep{
             components.V3RunbooksStep{
@@ -147,7 +147,7 @@ func main() {
 | apierrors.RunbooksCreateRunbookGatewayTimeoutError      | 504                                                     | application/json                                        |
 | apierrors.APIError                                      | 4XX, 5XX                                                | \*/\*                                                   |
 
-## RunbooksRemoveRunbook
+## Remove
 
 Remove runbook from team.
 Requires `access_token` as a `Bearer {{token}}` in the `Authorization` header with `user-write` scope.
@@ -161,7 +161,7 @@ package main
 import(
 	"context"
 	"os"
-	squadcastsdk "github.com/SquadcastHub/squadcast-sdk-go"
+	squadcastsdk "github.com/SquadcastHub/squadcast-sdk-go/squadcastv1"
 	"log"
 )
 
@@ -172,7 +172,7 @@ func main() {
         squadcastsdk.WithSecurity(os.Getenv("SQUADCASTSDK_BEARER_AUTH")),
     )
 
-    res, err := s.Runbooks.RunbooksRemoveRunbook(ctx, "<id>")
+    res, err := s.Runbooks.Remove(ctx, "<id>")
     if err != nil {
         log.Fatal(err)
     }
@@ -211,7 +211,7 @@ func main() {
 | apierrors.RunbooksRemoveRunbookGatewayTimeoutError      | 504                                                     | application/json                                        |
 | apierrors.APIError                                      | 4XX, 5XX                                                | \*/\*                                                   |
 
-## RunbooksGetRunbookByID
+## GetByID
 
 Returns a runbook details of the given `runbookID` in the request param.
 Requires `access_token` as a `Bearer {{token}}` in the `Authorization` header with `read` scope.
@@ -225,7 +225,7 @@ package main
 import(
 	"context"
 	"os"
-	squadcastsdk "github.com/SquadcastHub/squadcast-sdk-go"
+	squadcastsdk "github.com/SquadcastHub/squadcast-sdk-go/squadcastv1"
 	"log"
 )
 
@@ -236,7 +236,7 @@ func main() {
         squadcastsdk.WithSecurity(os.Getenv("SQUADCASTSDK_BEARER_AUTH")),
     )
 
-    res, err := s.Runbooks.RunbooksGetRunbookByID(ctx, "<id>")
+    res, err := s.Runbooks.GetByID(ctx, "<id>")
     if err != nil {
         log.Fatal(err)
     }
@@ -275,7 +275,7 @@ func main() {
 | apierrors.RunbooksGetRunbookByIDGatewayTimeoutError      | 504                                                      | application/json                                         |
 | apierrors.APIError                                       | 4XX, 5XX                                                 | \*/\*                                                    |
 
-## RunbooksUpdateRunbook
+## Update
 
 Update runbook details.
 Requires `access_token` as a `Bearer {{token}}` in the `Authorization` header with `user-write` scope.
@@ -289,8 +289,8 @@ package main
 import(
 	"context"
 	"os"
-	squadcastsdk "github.com/SquadcastHub/squadcast-sdk-go"
-	"github.com/SquadcastHub/squadcast-sdk-go/models/components"
+	squadcastsdk "github.com/SquadcastHub/squadcast-sdk-go/squadcastv1"
+	"github.com/SquadcastHub/squadcast-sdk-go/squadcastv1/models/components"
 	"log"
 )
 
@@ -301,7 +301,7 @@ func main() {
         squadcastsdk.WithSecurity(os.Getenv("SQUADCASTSDK_BEARER_AUTH")),
     )
 
-    res, err := s.Runbooks.RunbooksUpdateRunbook(ctx, "<id>", components.V3RunbooksUpdateRunbookRequest{
+    res, err := s.Runbooks.Update(ctx, "<id>", components.V3RunbooksUpdateRunbookRequest{
         Name: "<value>",
         Steps: []components.V3RunbooksStep{
             components.V3RunbooksStep{

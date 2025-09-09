@@ -3,7 +3,7 @@
 package operations
 
 import (
-	"github.com/SquadcastHub/squadcast-sdk-go/models/components"
+	"github.com/SquadcastHub/squadcast-sdk-go/squadcastv1/models/components"
 )
 
 // SchedulesCreateScheduleResponseBody - The request has succeeded and a new resource has been created as a result.

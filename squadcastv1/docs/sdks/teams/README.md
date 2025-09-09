@@ -5,22 +5,21 @@
 
 ### Available Operations
 
-* [TeamsGetAllTeams](#teamsgetallteams) - Get All Teams
-* [TeamsCreateTeam](#teamscreateteam) - Create Team
-* [TeamsGetTeamByID](#teamsgetteambyid) - Get Team By ID
-* [TeamsUpdateTeam](#teamsupdateteam) - Update Team
-* [TeamsRemoveTeam](#teamsremoveteam) - Remove Team
-* [TeamsGetAllTeamMembers](#teamsgetallteammembers) - Get All Team Members
-* [TeamsAddTeamMember](#teamsaddteammember) - Add Team Member
-* [TeamsAddBulkTeamMember](#teamsaddbulkteammember) - Add Bulk Team Member
-* [TeamsRemoveTeamMember](#teamsremoveteammember) - Remove Team Member
-* [TeamsUpdateTeamMember](#teamsupdateteammember) - Update Team Member
-* [TeamsGetAllTeamRoles](#teamsgetallteamroles) - Get All Team Roles
-* [TeamsCreateTeamRole](#teamscreateteamrole) - Create Team Role
-* [TeamsRemoveTeamRole](#teamsremoveteamrole) - Remove Team Role
-* [TeamsUpdateTeamRole](#teamsupdateteamrole) - Update Team Role
+* [GetAll](#getall) - Get All Teams
+* [Create](#create) - Create Team
+* [GetByID](#getbyid) - Get Team By ID
+* [Update](#update) - Update Team
+* [Delete](#delete) - Remove Team
+* [AddMember](#addmember) - Add Team Member
+* [AddBulkMember](#addbulkmember) - Add Bulk Team Member
+* [RemoveMember](#removemember) - Remove Team Member
+* [UpdateMember](#updatemember) - Update Team Member
+* [GetAllRoles](#getallroles) - Get All Team Roles
+* [CreateRole](#createrole) - Create Team Role
+* [RemoveRole](#removerole) - Remove Team Role
+* [UpdateRole](#updaterole) - Update Team Role
 
-## TeamsGetAllTeams
+## GetAll
 
 Returns all the teams of the organization.
 Requires `access_token` as a `Bearer {{token}}` in the `Authorization` header with `read` scope.
@@ -34,7 +33,7 @@ package main
 import(
 	"context"
 	"os"
-	squadcastsdk "github.com/SquadcastHub/squadcast-sdk-go"
+	squadcastsdk "github.com/SquadcastHub/squadcast-sdk-go/squadcastv1"
 	"log"
 )
 
@@ -45,7 +44,7 @@ func main() {
         squadcastsdk.WithSecurity(os.Getenv("SQUADCASTSDK_BEARER_AUTH")),
     )
 
-    res, err := s.Teams.TeamsGetAllTeams(ctx)
+    res, err := s.Teams.GetAll(ctx)
     if err != nil {
         log.Fatal(err)
     }
@@ -83,7 +82,7 @@ func main() {
 | apierrors.TeamsGetAllTeamsGatewayTimeoutError      | 504                                                | application/json                                   |
 | apierrors.APIError                                 | 4XX, 5XX                                           | \*/\*                                              |
 
-## TeamsCreateTeam
+## Create
 
 Add team to the organization. Returns the team object in response.
 Requires `access_token` as a `Bearer {{token}}` in the `Authorization` header with `user-write` scope.
@@ -97,8 +96,8 @@ package main
 import(
 	"context"
 	"os"
-	squadcastsdk "github.com/SquadcastHub/squadcast-sdk-go"
-	"github.com/SquadcastHub/squadcast-sdk-go/models/components"
+	squadcastsdk "github.com/SquadcastHub/squadcast-sdk-go/squadcastv1"
+	"github.com/SquadcastHub/squadcast-sdk-go/squadcastv1/models/components"
 	"log"
 )
 
@@ -109,7 +108,7 @@ func main() {
         squadcastsdk.WithSecurity(os.Getenv("SQUADCASTSDK_BEARER_AUTH")),
     )
 
-    res, err := s.Teams.TeamsCreateTeam(ctx, components.V3TeamsCreateTeamRequest{
+    res, err := s.Teams.Create(ctx, components.V3TeamsCreateTeamRequest{
         Name: "<value>",
         MemberIds: []string{
             "<value 1>",
@@ -154,7 +153,7 @@ func main() {
 | apierrors.TeamsCreateTeamGatewayTimeoutError      | 504                                               | application/json                                  |
 | apierrors.APIError                                | 4XX, 5XX                                          | \*/\*                                             |
 
-## TeamsGetTeamByID
+## GetByID
 
 Returns a team details of the given `teamID` in the request param.
 Requires `access_token` as a `Bearer {{token}}` in the `Authorization` header with `read` scope.
@@ -168,7 +167,7 @@ package main
 import(
 	"context"
 	"os"
-	squadcastsdk "github.com/SquadcastHub/squadcast-sdk-go"
+	squadcastsdk "github.com/SquadcastHub/squadcast-sdk-go/squadcastv1"
 	"log"
 )
 
@@ -179,7 +178,7 @@ func main() {
         squadcastsdk.WithSecurity(os.Getenv("SQUADCASTSDK_BEARER_AUTH")),
     )
 
-    res, err := s.Teams.TeamsGetTeamByID(ctx, "<id>")
+    res, err := s.Teams.GetByID(ctx, "<id>")
     if err != nil {
         log.Fatal(err)
     }
@@ -218,7 +217,7 @@ func main() {
 | apierrors.TeamsGetTeamByIDGatewayTimeoutError      | 504                                                | application/json                                   |
 | apierrors.APIError                                 | 4XX, 5XX                                           | \*/\*                                              |
 
-## TeamsUpdateTeam
+## Update
 
 Update organization team details.
 Requires `access_token` as a `Bearer {{token}}` in the `Authorization` header with `user-write` scope.
@@ -232,8 +231,8 @@ package main
 import(
 	"context"
 	"os"
-	squadcastsdk "github.com/SquadcastHub/squadcast-sdk-go"
-	"github.com/SquadcastHub/squadcast-sdk-go/models/components"
+	squadcastsdk "github.com/SquadcastHub/squadcast-sdk-go/squadcastv1"
+	"github.com/SquadcastHub/squadcast-sdk-go/squadcastv1/models/components"
 	"log"
 )
 
@@ -244,7 +243,7 @@ func main() {
         squadcastsdk.WithSecurity(os.Getenv("SQUADCASTSDK_BEARER_AUTH")),
     )
 
-    res, err := s.Teams.TeamsUpdateTeam(ctx, "<id>", components.V3TeamsUpdateTeamRequest{
+    res, err := s.Teams.Update(ctx, "<id>", components.V3TeamsUpdateTeamRequest{
         Members: []components.V3TeamsUpdateTeamRequestMember{},
     })
     if err != nil {
@@ -286,7 +285,7 @@ func main() {
 | apierrors.TeamsUpdateTeamGatewayTimeoutError      | 504                                               | application/json                                  |
 | apierrors.APIError                                | 4XX, 5XX                                          | \*/\*                                             |
 
-## TeamsRemoveTeam
+## Delete
 
 Remove team from the organization. Upon success, the team will be removed from the organization.
 Requires `access_token` as a `Bearer {{token}}` in the `Authorization` header with `user-write` scope.
@@ -300,7 +299,7 @@ package main
 import(
 	"context"
 	"os"
-	squadcastsdk "github.com/SquadcastHub/squadcast-sdk-go"
+	squadcastsdk "github.com/SquadcastHub/squadcast-sdk-go/squadcastv1"
 	"log"
 )
 
@@ -311,7 +310,7 @@ func main() {
         squadcastsdk.WithSecurity(os.Getenv("SQUADCASTSDK_BEARER_AUTH")),
     )
 
-    res, err := s.Teams.TeamsRemoveTeam(ctx, "<id>")
+    res, err := s.Teams.Delete(ctx, "<id>")
     if err != nil {
         log.Fatal(err)
     }
@@ -350,71 +349,7 @@ func main() {
 | apierrors.TeamsRemoveTeamGatewayTimeoutError      | 504                                               | application/json                                  |
 | apierrors.APIError                                | 4XX, 5XX                                          | \*/\*                                             |
 
-## TeamsGetAllTeamMembers
-
-Returns all the team members of the organization.
-Requires `access_token` as a `Bearer {{token}}` in the `Authorization` header with `read` scope.
-
-### Example Usage
-
-<!-- UsageSnippet language="go" operationID="Teams_getAllTeamMembers" method="get" path="/v3/teams/{teamId}/members" -->
-```go
-package main
-
-import(
-	"context"
-	"os"
-	squadcastsdk "github.com/SquadcastHub/squadcast-sdk-go"
-	"log"
-)
-
-func main() {
-    ctx := context.Background()
-
-    s := squadcastsdk.New(
-        squadcastsdk.WithSecurity(os.Getenv("SQUADCASTSDK_BEARER_AUTH")),
-    )
-
-    res, err := s.Teams.TeamsGetAllTeamMembers(ctx, "<id>")
-    if err != nil {
-        log.Fatal(err)
-    }
-    if res.Object != nil {
-        // handle response
-    }
-}
-```
-
-### Parameters
-
-| Parameter                                                | Type                                                     | Required                                                 | Description                                              |
-| -------------------------------------------------------- | -------------------------------------------------------- | -------------------------------------------------------- | -------------------------------------------------------- |
-| `ctx`                                                    | [context.Context](https://pkg.go.dev/context#Context)    | :heavy_check_mark:                                       | The context to use for the request.                      |
-| `teamID`                                                 | *string*                                                 | :heavy_check_mark:                                       | N/A                                                      |
-| `opts`                                                   | [][operations.Option](../../models/operations/option.md) | :heavy_minus_sign:                                       | The options for this request.                            |
-
-### Response
-
-**[*operations.TeamsGetAllTeamMembersResponse](../../models/operations/teamsgetallteammembersresponse.md), error**
-
-### Errors
-
-| Error Type                                               | Status Code                                              | Content Type                                             |
-| -------------------------------------------------------- | -------------------------------------------------------- | -------------------------------------------------------- |
-| apierrors.TeamsGetAllTeamMembersBadRequestError          | 400                                                      | application/json                                         |
-| apierrors.TeamsGetAllTeamMembersUnauthorizedError        | 401                                                      | application/json                                         |
-| apierrors.TeamsGetAllTeamMembersPaymentRequiredError     | 402                                                      | application/json                                         |
-| apierrors.TeamsGetAllTeamMembersForbiddenError           | 403                                                      | application/json                                         |
-| apierrors.TeamsGetAllTeamMembersNotFoundError            | 404                                                      | application/json                                         |
-| apierrors.TeamsGetAllTeamMembersConflictError            | 409                                                      | application/json                                         |
-| apierrors.TeamsGetAllTeamMembersUnprocessableEntityError | 422                                                      | application/json                                         |
-| apierrors.TeamsGetAllTeamMembersInternalServerError      | 500                                                      | application/json                                         |
-| apierrors.TeamsGetAllTeamMembersBadGatewayError          | 502                                                      | application/json                                         |
-| apierrors.TeamsGetAllTeamMembersServiceUnavailableError  | 503                                                      | application/json                                         |
-| apierrors.TeamsGetAllTeamMembersGatewayTimeoutError      | 504                                                      | application/json                                         |
-| apierrors.APIError                                       | 4XX, 5XX                                                 | \*/\*                                                    |
-
-## TeamsAddTeamMember
+## AddMember
 
 Add team member to the team.
 Requires `access_token` as a `Bearer {{token}}` in the `Authorization` header with `user-write` scope.
@@ -428,8 +363,8 @@ package main
 import(
 	"context"
 	"os"
-	squadcastsdk "github.com/SquadcastHub/squadcast-sdk-go"
-	"github.com/SquadcastHub/squadcast-sdk-go/models/components"
+	squadcastsdk "github.com/SquadcastHub/squadcast-sdk-go/squadcastv1"
+	"github.com/SquadcastHub/squadcast-sdk-go/squadcastv1/models/components"
 	"log"
 )
 
@@ -440,7 +375,7 @@ func main() {
         squadcastsdk.WithSecurity(os.Getenv("SQUADCASTSDK_BEARER_AUTH")),
     )
 
-    res, err := s.Teams.TeamsAddTeamMember(ctx, "<id>", components.V3TeamsAddTeamMemberRequest{
+    res, err := s.Teams.AddMember(ctx, "<id>", components.V3TeamsAddTeamMemberRequest{
         UserID: "<id>",
         RoleIds: []string{},
     })
@@ -483,7 +418,7 @@ func main() {
 | apierrors.TeamsAddTeamMemberGatewayTimeoutError      | 504                                                  | application/json                                     |
 | apierrors.APIError                                   | 4XX, 5XX                                             | \*/\*                                                |
 
-## TeamsAddBulkTeamMember
+## AddBulkMember
 
 Add team member to the team.
 Requires `access_token` as a `Bearer {{token}}` in the `Authorization` header with `user-write` scope.
@@ -497,8 +432,8 @@ package main
 import(
 	"context"
 	"os"
-	squadcastsdk "github.com/SquadcastHub/squadcast-sdk-go"
-	"github.com/SquadcastHub/squadcast-sdk-go/models/components"
+	squadcastsdk "github.com/SquadcastHub/squadcast-sdk-go/squadcastv1"
+	"github.com/SquadcastHub/squadcast-sdk-go/squadcastv1/models/components"
 	"log"
 )
 
@@ -509,7 +444,7 @@ func main() {
         squadcastsdk.WithSecurity(os.Getenv("SQUADCASTSDK_BEARER_AUTH")),
     )
 
-    res, err := s.Teams.TeamsAddBulkTeamMember(ctx, "<id>", components.V3TeamsAddBulkTeamMemberRequest{
+    res, err := s.Teams.AddBulkMember(ctx, "<id>", components.V3TeamsAddBulkTeamMemberRequest{
         Members: []components.V3TeamsAddBulkTeamMemberRequestMember{
             components.V3TeamsAddBulkTeamMemberRequestMember{
                 UserID: "<id>",
@@ -559,7 +494,7 @@ func main() {
 | apierrors.TeamsAddBulkTeamMemberGatewayTimeoutError      | 504                                                      | application/json                                         |
 | apierrors.APIError                                       | 4XX, 5XX                                                 | \*/\*                                                    |
 
-## TeamsRemoveTeamMember
+## RemoveMember
 
 Remove team member from the team. Upon success, the team member will be removed from the team.
 Requires `access_token` as a `Bearer {{token}}` in the `Authorization` header with `user-write` scope.
@@ -573,7 +508,7 @@ package main
 import(
 	"context"
 	"os"
-	squadcastsdk "github.com/SquadcastHub/squadcast-sdk-go"
+	squadcastsdk "github.com/SquadcastHub/squadcast-sdk-go/squadcastv1"
 	"log"
 )
 
@@ -584,7 +519,7 @@ func main() {
         squadcastsdk.WithSecurity(os.Getenv("SQUADCASTSDK_BEARER_AUTH")),
     )
 
-    res, err := s.Teams.TeamsRemoveTeamMember(ctx, "<id>", "<id>")
+    res, err := s.Teams.RemoveMember(ctx, "<id>", "<id>")
     if err != nil {
         log.Fatal(err)
     }
@@ -624,7 +559,7 @@ func main() {
 | apierrors.TeamsRemoveTeamMemberGatewayTimeoutError      | 504                                                     | application/json                                        |
 | apierrors.APIError                                      | 4XX, 5XX                                                | \*/\*                                                   |
 
-## TeamsUpdateTeamMember
+## UpdateMember
 
 Update team member.
 Requires `access_token` as a `Bearer {{token}}` in the `Authorization` header with `user-write` scope.
@@ -638,8 +573,8 @@ package main
 import(
 	"context"
 	"os"
-	squadcastsdk "github.com/SquadcastHub/squadcast-sdk-go"
-	"github.com/SquadcastHub/squadcast-sdk-go/models/components"
+	squadcastsdk "github.com/SquadcastHub/squadcast-sdk-go/squadcastv1"
+	"github.com/SquadcastHub/squadcast-sdk-go/squadcastv1/models/components"
 	"log"
 )
 
@@ -650,7 +585,7 @@ func main() {
         squadcastsdk.WithSecurity(os.Getenv("SQUADCASTSDK_BEARER_AUTH")),
     )
 
-    res, err := s.Teams.TeamsUpdateTeamMember(ctx, "<id>", "<id>", components.V3TeamsUpdateTeamMemberRequest{})
+    res, err := s.Teams.UpdateMember(ctx, "<id>", "<id>", components.V3TeamsUpdateTeamMemberRequest{})
     if err != nil {
         log.Fatal(err)
     }
@@ -691,7 +626,7 @@ func main() {
 | apierrors.TeamsUpdateTeamMemberGatewayTimeoutError      | 504                                                     | application/json                                        |
 | apierrors.APIError                                      | 4XX, 5XX                                                | \*/\*                                                   |
 
-## TeamsGetAllTeamRoles
+## GetAllRoles
 
 Returns all the roles of the teamId mentioned in params.
 Requires `access_token` as a `Bearer {{token}}` in the `Authorization` header with `read` scope.
@@ -705,7 +640,7 @@ package main
 import(
 	"context"
 	"os"
-	squadcastsdk "github.com/SquadcastHub/squadcast-sdk-go"
+	squadcastsdk "github.com/SquadcastHub/squadcast-sdk-go/squadcastv1"
 	"log"
 )
 
@@ -716,7 +651,7 @@ func main() {
         squadcastsdk.WithSecurity(os.Getenv("SQUADCASTSDK_BEARER_AUTH")),
     )
 
-    res, err := s.Teams.TeamsGetAllTeamRoles(ctx, "<id>")
+    res, err := s.Teams.GetAllRoles(ctx, "<id>")
     if err != nil {
         log.Fatal(err)
     }
@@ -755,7 +690,7 @@ func main() {
 | apierrors.TeamsGetAllTeamRolesGatewayTimeoutError      | 504                                                    | application/json                                       |
 | apierrors.APIError                                     | 4XX, 5XX                                               | \*/\*                                                  |
 
-## TeamsCreateTeamRole
+## CreateRole
 
 Add team's role to the team with given ability if not exists. Returns the role object in response.
 Requires `access_token` as a `Bearer {{token}}` in the `Authorization` header with `user-write` scope.
@@ -769,8 +704,8 @@ package main
 import(
 	"context"
 	"os"
-	squadcastsdk "github.com/SquadcastHub/squadcast-sdk-go"
-	"github.com/SquadcastHub/squadcast-sdk-go/models/components"
+	squadcastsdk "github.com/SquadcastHub/squadcast-sdk-go/squadcastv1"
+	"github.com/SquadcastHub/squadcast-sdk-go/squadcastv1/models/components"
 	"log"
 )
 
@@ -781,7 +716,7 @@ func main() {
         squadcastsdk.WithSecurity(os.Getenv("SQUADCASTSDK_BEARER_AUTH")),
     )
 
-    res, err := s.Teams.TeamsCreateTeamRole(ctx, "<id>", components.V3TeamsCreateTeamRoleRequest{
+    res, err := s.Teams.CreateRole(ctx, "<id>", components.V3TeamsCreateTeamRoleRequest{
         Name: "<value>",
         Abilities: components.V3TeamsAbilities{},
     })
@@ -824,7 +759,7 @@ func main() {
 | apierrors.TeamsCreateTeamRoleGatewayTimeoutError      | 504                                                   | application/json                                      |
 | apierrors.APIError                                    | 4XX, 5XX                                              | \*/\*                                                 |
 
-## TeamsRemoveTeamRole
+## RemoveRole
 
 Remove team's role from the team. Upon success, the team's role will be removed from the team.
 Requires `access_token` as a `Bearer {{token}}` in the `Authorization` header with `user-write` scope.
@@ -838,7 +773,7 @@ package main
 import(
 	"context"
 	"os"
-	squadcastsdk "github.com/SquadcastHub/squadcast-sdk-go"
+	squadcastsdk "github.com/SquadcastHub/squadcast-sdk-go/squadcastv1"
 	"log"
 )
 
@@ -849,7 +784,7 @@ func main() {
         squadcastsdk.WithSecurity(os.Getenv("SQUADCASTSDK_BEARER_AUTH")),
     )
 
-    res, err := s.Teams.TeamsRemoveTeamRole(ctx, "<id>", "<id>")
+    res, err := s.Teams.RemoveRole(ctx, "<id>", "<id>")
     if err != nil {
         log.Fatal(err)
     }
@@ -889,7 +824,7 @@ func main() {
 | apierrors.TeamsRemoveTeamRoleGatewayTimeoutError      | 504                                                   | application/json                                      |
 | apierrors.APIError                                    | 4XX, 5XX                                              | \*/\*                                                 |
 
-## TeamsUpdateTeamRole
+## UpdateRole
 
 Update team's role abilities and name.
 Requires `access_token` as a `Bearer {{token}}` in the `Authorization` header with `user-write` scope.
@@ -903,8 +838,8 @@ package main
 import(
 	"context"
 	"os"
-	squadcastsdk "github.com/SquadcastHub/squadcast-sdk-go"
-	"github.com/SquadcastHub/squadcast-sdk-go/models/components"
+	squadcastsdk "github.com/SquadcastHub/squadcast-sdk-go/squadcastv1"
+	"github.com/SquadcastHub/squadcast-sdk-go/squadcastv1/models/components"
 	"log"
 )
 
@@ -915,7 +850,7 @@ func main() {
         squadcastsdk.WithSecurity(os.Getenv("SQUADCASTSDK_BEARER_AUTH")),
     )
 
-    res, err := s.Teams.TeamsUpdateTeamRole(ctx, "<id>", "<id>", components.V3TeamsUpdateTeamRoleRequest{})
+    res, err := s.Teams.UpdateRole(ctx, "<id>", "<id>", components.V3TeamsUpdateTeamRoleRequest{})
     if err != nil {
         log.Fatal(err)
     }

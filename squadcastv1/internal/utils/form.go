@@ -12,7 +12,7 @@ import (
 
 	"github.com/ericlagergren/decimal"
 
-	"github.com/SquadcastHub/squadcast-sdk-go/types"
+	"github.com/SquadcastHub/squadcast-sdk-go/squadcastv1/types"
 )
 
 func populateForm(paramName string, explode bool, objType reflect.Type, objValue reflect.Value, delimiter string, defaultValue *string, getFieldName func(reflect.StructField) string) url.Values {

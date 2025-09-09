@@ -6,18 +6,20 @@ import (
 	"bytes"
 	"context"
 	"fmt"
-	"github.com/SquadcastHub/squadcast-sdk-go/internal/config"
-	"github.com/SquadcastHub/squadcast-sdk-go/internal/hooks"
-	"github.com/SquadcastHub/squadcast-sdk-go/internal/utils"
-	"github.com/SquadcastHub/squadcast-sdk-go/models/apierrors"
-	"github.com/SquadcastHub/squadcast-sdk-go/models/components"
-	"github.com/SquadcastHub/squadcast-sdk-go/models/operations"
-	"github.com/SquadcastHub/squadcast-sdk-go/retry"
+	"github.com/SquadcastHub/squadcast-sdk-go/squadcastv1/internal/config"
+	"github.com/SquadcastHub/squadcast-sdk-go/squadcastv1/internal/hooks"
+	"github.com/SquadcastHub/squadcast-sdk-go/squadcastv1/internal/utils"
+	"github.com/SquadcastHub/squadcast-sdk-go/squadcastv1/models/apierrors"
+	"github.com/SquadcastHub/squadcast-sdk-go/squadcastv1/models/components"
+	"github.com/SquadcastHub/squadcast-sdk-go/squadcastv1/models/operations"
+	"github.com/SquadcastHub/squadcast-sdk-go/squadcastv1/retry"
 	"net/http"
 	"net/url"
 )
 
 type Users struct {
+	APIToken *APIToken
+
 	rootSDK          *SquadcastSDK
 	sdkConfiguration config.SDKConfiguration
 	hooks            *hooks.Hooks
@@ -28,13 +30,14 @@ func newUsers(rootSDK *SquadcastSDK, sdkConfig config.SDKConfiguration, hooks *h
 		rootSDK:          rootSDK,
 		sdkConfiguration: sdkConfig,
 		hooks:            hooks,
+		APIToken:         newAPIToken(rootSDK, sdkConfig, hooks),
 	}
 }
 
-// UsersGetAllUsers - Get All Users
+// GetAll - Get All Users
 // Returns all the users of the organization.
 // Requires `access_token` as a `Bearer {{token}}` in the `Authorization` header with `read` scope.
-func (s *Users) UsersGetAllUsers(ctx context.Context, opts ...operations.Option) (*operations.UsersGetAllUsersResponse, error) {
+func (s *Users) GetAll(ctx context.Context, opts ...operations.Option) (*operations.UsersGetAllUsersResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -513,10 +516,10 @@ func (s *Users) UsersGetAllUsers(ctx context.Context, opts ...operations.Option)
 
 }
 
-// UsersAddUser - Add User
+// Add User
 // Add user to the organization with given role if not exists. Returns the user object in response.
 // Requires `access_token` as a `Bearer {{token}}` in the `Authorization` header with `user-write` scope.
-func (s *Users) UsersAddUser(ctx context.Context, request components.V3UsersAddUserRequest, opts ...operations.Option) (*operations.UsersAddUserResponse, error) {
+func (s *Users) Add(ctx context.Context, request components.V3UsersAddUserRequest, opts ...operations.Option) (*operations.UsersAddUserResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -1002,8 +1005,8 @@ func (s *Users) UsersAddUser(ctx context.Context, request components.V3UsersAddU
 
 }
 
-// UsersUpdateOrgLevelPermissions - Update Org Level Permissions
-func (s *Users) UsersUpdateOrgLevelPermissions(ctx context.Context, request components.V3UsersUpdateUserAbilitiesRequest, opts ...operations.Option) (*operations.UsersUpdateOrgLevelPermissionsResponse, error) {
+// UpdateOrgLevelPermissions - Update Org Level Permissions
+func (s *Users) UpdateOrgLevelPermissions(ctx context.Context, request components.V3UsersUpdateUserAbilitiesRequest, opts ...operations.Option) (*operations.UsersUpdateOrgLevelPermissionsResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -1489,9 +1492,9 @@ func (s *Users) UsersUpdateOrgLevelPermissions(ctx context.Context, request comp
 
 }
 
-// UsersDeleteUser - Delete User
+// Delete User
 // This API replaces the swap_user for all the entities in Squadcast with user_id provided and deletes the user.
-func (s *Users) UsersDeleteUser(ctx context.Context, request operations.UsersDeleteUserRequest, opts ...operations.Option) (*operations.UsersDeleteUserResponse, error) {
+func (s *Users) Delete(ctx context.Context, request operations.UsersDeleteUserRequest, opts ...operations.Option) (*operations.UsersDeleteUserResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -1977,10 +1980,10 @@ func (s *Users) UsersDeleteUser(ctx context.Context, request operations.UsersDel
 
 }
 
-// UsersGetUserRoles - Get User Roles
+// GetRoles - Get User Roles
 // Returns all available user roles.
 // Requires `access_token` as a `Bearer {{token}}` in the `Authorization` header with `read` scope.
-func (s *Users) UsersGetUserRoles(ctx context.Context, opts ...operations.Option) (*operations.UsersGetUserRolesResponse, error) {
+func (s *Users) GetRoles(ctx context.Context, opts ...operations.Option) (*operations.UsersGetUserRolesResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -2459,10 +2462,10 @@ func (s *Users) UsersGetUserRoles(ctx context.Context, opts ...operations.Option
 
 }
 
-// UsersRemoveUserFromOrg - Remove User From Org
+// RemoveFromOrg - Remove User From Org
 // Remove user from organization. Upon sccess the user will be removed from the organization.
 // Requires `access_token` as a `Bearer {{token}}` in the `Authorization` header with `user-write` scope.
-func (s *Users) UsersRemoveUserFromOrg(ctx context.Context, userID string, opts ...operations.Option) (*operations.UsersRemoveUserFromOrgResponse, error) {
+func (s *Users) RemoveFromOrg(ctx context.Context, userID string, opts ...operations.Option) (*operations.UsersRemoveUserFromOrgResponse, error) {
 	request := operations.UsersRemoveUserFromOrgRequest{
 		UserID: userID,
 	}
@@ -2940,10 +2943,10 @@ func (s *Users) UsersRemoveUserFromOrg(ctx context.Context, userID string, opts 
 
 }
 
-// UsersGetUserByID - Get User By ID
+// GetByID - Get User By ID
 // Returns a users details of the given `userID` in the request param.
 // Requires `access_token` as a `Bearer {{token}}` in the `Authorization` header with `read` scope.
-func (s *Users) UsersGetUserByID(ctx context.Context, userID string, opts ...operations.Option) (*operations.UsersGetUserByIDResponse, error) {
+func (s *Users) GetByID(ctx context.Context, userID string, opts ...operations.Option) (*operations.UsersGetUserByIDResponse, error) {
 	request := operations.UsersGetUserByIDRequest{
 		UserID: userID,
 	}
@@ -3426,10 +3429,10 @@ func (s *Users) UsersGetUserByID(ctx context.Context, userID string, opts ...ope
 
 }
 
-// UsersUpdateUserByID - Update User by userID
+// Update User by userID
 // Update User by userID.
 // Requires `access_token` as a `Bearer {{token}}` in the `Authorization` header with `user-write` scope.
-func (s *Users) UsersUpdateUserByID(ctx context.Context, userID string, v3UsersUpdateUserRequest components.V3UsersUpdateUserRequest, opts ...operations.Option) (*operations.UsersUpdateUserByIDResponse, error) {
+func (s *Users) Update(ctx context.Context, userID string, v3UsersUpdateUserRequest components.V3UsersUpdateUserRequest, opts ...operations.Option) (*operations.UsersUpdateUserByIDResponse, error) {
 	request := operations.UsersUpdateUserByIDRequest{
 		UserID:                   userID,
 		V3UsersUpdateUserRequest: v3UsersUpdateUserRequest,

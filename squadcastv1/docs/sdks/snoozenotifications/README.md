@@ -1,0 +1,75 @@
+# SnoozeNotifications
+(*Incidents.SnoozeNotifications*)
+
+## Overview
+
+### Available Operations
+
+* [Snooze](#snooze) - Snooze Incident Notifications
+
+## Snooze
+
+Snooze Incident Notifications
+
+### Example Usage
+
+<!-- UsageSnippet language="go" operationID="SnoozeNotifications_snoozeIncidentNotifications" method="put" path="/v3/incidents/{incidentID}/snooze" -->
+```go
+package main
+
+import(
+	"context"
+	"os"
+	squadcastsdk "github.com/SquadcastHub/squadcast-sdk-go/squadcastv1"
+	"github.com/SquadcastHub/squadcast-sdk-go/squadcastv1/models/components"
+	"log"
+)
+
+func main() {
+    ctx := context.Background()
+
+    s := squadcastsdk.New(
+        squadcastsdk.WithSecurity(os.Getenv("SQUADCASTSDK_BEARER_AUTH")),
+    )
+
+    res, err := s.Incidents.SnoozeNotifications.Snooze(ctx, "<id>", components.V3IncidentsSnoozeNotificationsSnoozeIncidentRequest{
+        SnoozeDurationInMins: 42279,
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res.Object != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                                                        | Type                                                                                                                                             | Required                                                                                                                                         | Description                                                                                                                                      |
+| ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `ctx`                                                                                                                                            | [context.Context](https://pkg.go.dev/context#Context)                                                                                            | :heavy_check_mark:                                                                                                                               | The context to use for the request.                                                                                                              |
+| `incidentID`                                                                                                                                     | *string*                                                                                                                                         | :heavy_check_mark:                                                                                                                               | N/A                                                                                                                                              |
+| `v3IncidentsSnoozeNotificationsSnoozeIncidentRequest`                                                                                            | [components.V3IncidentsSnoozeNotificationsSnoozeIncidentRequest](../../models/components/v3incidentssnoozenotificationssnoozeincidentrequest.md) | :heavy_check_mark:                                                                                                                               | N/A                                                                                                                                              |
+| `opts`                                                                                                                                           | [][operations.Option](../../models/operations/option.md)                                                                                         | :heavy_minus_sign:                                                                                                                               | The options for this request.                                                                                                                    |
+
+### Response
+
+**[*operations.SnoozeNotificationsSnoozeIncidentNotificationsResponse](../../models/operations/snoozenotificationssnoozeincidentnotificationsresponse.md), error**
+
+### Errors
+
+| Error Type                                                                       | Status Code                                                                      | Content Type                                                                     |
+| -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- |
+| apierrors.SnoozeNotificationsSnoozeIncidentNotificationsBadRequestError          | 400                                                                              | application/json                                                                 |
+| apierrors.SnoozeNotificationsSnoozeIncidentNotificationsUnauthorizedError        | 401                                                                              | application/json                                                                 |
+| apierrors.SnoozeNotificationsSnoozeIncidentNotificationsPaymentRequiredError     | 402                                                                              | application/json                                                                 |
+| apierrors.SnoozeNotificationsSnoozeIncidentNotificationsForbiddenError           | 403                                                                              | application/json                                                                 |
+| apierrors.SnoozeNotificationsSnoozeIncidentNotificationsNotFoundError            | 404                                                                              | application/json                                                                 |
+| apierrors.SnoozeNotificationsSnoozeIncidentNotificationsConflictError            | 409                                                                              | application/json                                                                 |
+| apierrors.SnoozeNotificationsSnoozeIncidentNotificationsUnprocessableEntityError | 422                                                                              | application/json                                                                 |
+| apierrors.SnoozeNotificationsSnoozeIncidentNotificationsInternalServerError      | 500                                                                              | application/json                                                                 |
+| apierrors.SnoozeNotificationsSnoozeIncidentNotificationsBadGatewayError          | 502                                                                              | application/json                                                                 |
+| apierrors.SnoozeNotificationsSnoozeIncidentNotificationsServiceUnavailableError  | 503                                                                              | application/json                                                                 |
+| apierrors.SnoozeNotificationsSnoozeIncidentNotificationsGatewayTimeoutError      | 504                                                                              | application/json                                                                 |
+| apierrors.APIError                                                               | 4XX, 5XX                                                                         | \*/\*                                                                            |

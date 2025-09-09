@@ -1,13 +1,13 @@
 # IncidentsRunbooks
-(*IncidentsRunbooks*)
+(*Incidents.Runbooks*)
 
 ## Overview
 
 ### Available Operations
 
-* [RunbooksAttachRunbooks](#runbooksattachrunbooks) - Attach Runbooks
+* [Attach](#attach) - Attach Runbooks
 
-## RunbooksAttachRunbooks
+## Attach
 
 Attach Runbooks
 
@@ -20,8 +20,8 @@ package main
 import(
 	"context"
 	"os"
-	squadcastsdk "github.com/SquadcastHub/squadcast-sdk-go"
-	"github.com/SquadcastHub/squadcast-sdk-go/models/components"
+	squadcastsdk "github.com/SquadcastHub/squadcast-sdk-go/squadcastv1"
+	"github.com/SquadcastHub/squadcast-sdk-go/squadcastv1/models/components"
 	"log"
 )
 
@@ -32,7 +32,7 @@ func main() {
         squadcastsdk.WithSecurity(os.Getenv("SQUADCASTSDK_BEARER_AUTH")),
     )
 
-    res, err := s.IncidentsRunbooks.RunbooksAttachRunbooks(ctx, "<id>", components.V3IncidentsRunbooksAttachRunbooksRequest{
+    res, err := s.Incidents.Runbooks.Attach(ctx, "<id>", components.V3IncidentsRunbooksAttachRunbooksRequest{
         Runbooks: []string{
             "<value 1>",
             "<value 2>",

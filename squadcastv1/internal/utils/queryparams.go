@@ -14,7 +14,7 @@ import (
 
 	"github.com/ericlagergren/decimal"
 
-	"github.com/SquadcastHub/squadcast-sdk-go/types"
+	"github.com/SquadcastHub/squadcast-sdk-go/squadcastv1/types"
 )
 
 func PopulateQueryParams(_ context.Context, req *http.Request, queryParams interface{}, globals interface{}) error {

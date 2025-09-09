@@ -6,18 +6,20 @@ import (
 	"bytes"
 	"context"
 	"fmt"
-	"github.com/SquadcastHub/squadcast-sdk-go/internal/config"
-	"github.com/SquadcastHub/squadcast-sdk-go/internal/hooks"
-	"github.com/SquadcastHub/squadcast-sdk-go/internal/utils"
-	"github.com/SquadcastHub/squadcast-sdk-go/models/apierrors"
-	"github.com/SquadcastHub/squadcast-sdk-go/models/components"
-	"github.com/SquadcastHub/squadcast-sdk-go/models/operations"
-	"github.com/SquadcastHub/squadcast-sdk-go/retry"
+	"github.com/SquadcastHub/squadcast-sdk-go/squadcastv1/internal/config"
+	"github.com/SquadcastHub/squadcast-sdk-go/squadcastv1/internal/hooks"
+	"github.com/SquadcastHub/squadcast-sdk-go/squadcastv1/internal/utils"
+	"github.com/SquadcastHub/squadcast-sdk-go/squadcastv1/models/apierrors"
+	"github.com/SquadcastHub/squadcast-sdk-go/squadcastv1/models/components"
+	"github.com/SquadcastHub/squadcast-sdk-go/squadcastv1/models/operations"
+	"github.com/SquadcastHub/squadcast-sdk-go/squadcastv1/retry"
 	"net/http"
 	"net/url"
 )
 
 type Workflows struct {
+	Actions *WorkflowsActions
+
 	rootSDK          *SquadcastSDK
 	sdkConfiguration config.SDKConfiguration
 	hooks            *hooks.Hooks
@@ -28,12 +30,13 @@ func newWorkflows(rootSDK *SquadcastSDK, sdkConfig config.SDKConfiguration, hook
 		rootSDK:          rootSDK,
 		sdkConfiguration: sdkConfig,
 		hooks:            hooks,
+		Actions:          newWorkflowsActions(rootSDK, sdkConfig, hooks),
 	}
 }
 
-// WorkflowsListWorkflows - List Workflows
+// List Workflows
 // Get a list of all Workflows
-func (s *Workflows) WorkflowsListWorkflows(ctx context.Context, request operations.WorkflowsListWorkflowsRequest, opts ...operations.Option) (*operations.WorkflowsListWorkflowsResponse, error) {
+func (s *Workflows) List(ctx context.Context, request operations.WorkflowsListWorkflowsRequest, opts ...operations.Option) (*operations.WorkflowsListWorkflowsResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -516,9 +519,9 @@ func (s *Workflows) WorkflowsListWorkflows(ctx context.Context, request operatio
 
 }
 
-// WorkflowsCreateWorkflow - Create Workflow
+// Create Workflow
 // Create a Workflow
-func (s *Workflows) WorkflowsCreateWorkflow(ctx context.Context, request components.V3WorkflowsCreateWorkflowRequest, opts ...operations.Option) (*operations.WorkflowsCreateWorkflowResponse, error) {
+func (s *Workflows) Create(ctx context.Context, request components.V3WorkflowsCreateWorkflowRequest, opts ...operations.Option) (*operations.WorkflowsCreateWorkflowResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -1004,9 +1007,9 @@ func (s *Workflows) WorkflowsCreateWorkflow(ctx context.Context, request compone
 
 }
 
-// WorkflowsBulkEnabledisableWorkflows - Bulk Enable/Disable Workflows
+// BulkEnableDisable - Bulk Enable/Disable Workflows
 // Bulk enable or disable workflows
-func (s *Workflows) WorkflowsBulkEnabledisableWorkflows(ctx context.Context, request components.V3WorkflowsBulkEnableDisableWorkflowsRequest, opts ...operations.Option) (*operations.WorkflowsBulkEnabledisableWorkflowsResponse, error) {
+func (s *Workflows) BulkEnableDisable(ctx context.Context, request components.V3WorkflowsBulkEnableDisableWorkflowsRequest, opts ...operations.Option) (*operations.WorkflowsBulkEnabledisableWorkflowsResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -1487,9 +1490,9 @@ func (s *Workflows) WorkflowsBulkEnabledisableWorkflows(ctx context.Context, req
 
 }
 
-// WorkflowsDeleteWorkflow - Delete Workflow
+// Delete Workflow
 // Delete a workflow by ID
-func (s *Workflows) WorkflowsDeleteWorkflow(ctx context.Context, workflowID string, opts ...operations.Option) (*operations.WorkflowsDeleteWorkflowResponse, error) {
+func (s *Workflows) Delete(ctx context.Context, workflowID string, opts ...operations.Option) (*operations.WorkflowsDeleteWorkflowResponse, error) {
 	request := operations.WorkflowsDeleteWorkflowRequest{
 		WorkflowID: workflowID,
 	}
@@ -1967,9 +1970,9 @@ func (s *Workflows) WorkflowsDeleteWorkflow(ctx context.Context, workflowID stri
 
 }
 
-// WorkflowsGetWorkflowByID - Get Workflow By ID
+// GetByID - Get Workflow By ID
 // Get a workflow by ID
-func (s *Workflows) WorkflowsGetWorkflowByID(ctx context.Context, workflowID string, opts ...operations.Option) (*operations.WorkflowsGetWorkflowByIDResponse, error) {
+func (s *Workflows) GetByID(ctx context.Context, workflowID string, opts ...operations.Option) (*operations.WorkflowsGetWorkflowByIDResponse, error) {
 	request := operations.WorkflowsGetWorkflowByIDRequest{
 		WorkflowID: workflowID,
 	}
@@ -2452,9 +2455,9 @@ func (s *Workflows) WorkflowsGetWorkflowByID(ctx context.Context, workflowID str
 
 }
 
-// WorkflowsUpdateWorkflow - Update Workflow
+// Update Workflow
 // Update a Workflow
-func (s *Workflows) WorkflowsUpdateWorkflow(ctx context.Context, workflowID string, v3WorkflowsCreateWorkflowRequestUpdate components.V3WorkflowsCreateWorkflowRequestUpdate, opts ...operations.Option) (*operations.WorkflowsUpdateWorkflowResponse, error) {
+func (s *Workflows) Update(ctx context.Context, workflowID string, v3WorkflowsCreateWorkflowRequestUpdate components.V3WorkflowsCreateWorkflowRequestUpdate, opts ...operations.Option) (*operations.WorkflowsUpdateWorkflowResponse, error) {
 	request := operations.WorkflowsUpdateWorkflowRequest{
 		WorkflowID:                             workflowID,
 		V3WorkflowsCreateWorkflowRequestUpdate: v3WorkflowsCreateWorkflowRequestUpdate,
@@ -2945,502 +2948,9 @@ func (s *Workflows) WorkflowsUpdateWorkflow(ctx context.Context, workflowID stri
 
 }
 
-// WorkflowsCreateAction - Create Action
-// Create an Action for a workflow
-func (s *Workflows) WorkflowsCreateAction(ctx context.Context, workflowID string, v3WorkflowsActionRequest components.V3WorkflowsActionRequest, opts ...operations.Option) (*operations.WorkflowsCreateActionResponse, error) {
-	request := operations.WorkflowsCreateActionRequest{
-		WorkflowID:               workflowID,
-		V3WorkflowsActionRequest: v3WorkflowsActionRequest,
-	}
-
-	o := operations.Options{}
-	supportedOptions := []string{
-		operations.SupportedOptionRetries,
-		operations.SupportedOptionTimeout,
-	}
-
-	for _, opt := range opts {
-		if err := opt(&o, supportedOptions...); err != nil {
-			return nil, fmt.Errorf("error applying option: %w", err)
-		}
-	}
-
-	var baseURL string
-	if o.ServerURL == nil {
-		baseURL = utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
-	} else {
-		baseURL = *o.ServerURL
-	}
-	opURL, err := utils.GenerateURL(ctx, baseURL, "/v3/workflows/{workflowID}/actions", request, nil)
-	if err != nil {
-		return nil, fmt.Errorf("error generating URL: %w", err)
-	}
-
-	hookCtx := hooks.HookContext{
-		SDK:              s.rootSDK,
-		SDKConfiguration: s.sdkConfiguration,
-		BaseURL:          baseURL,
-		Context:          ctx,
-		OperationID:      "Workflows_createAction",
-		OAuth2Scopes:     []string{},
-		SecuritySource:   s.sdkConfiguration.Security,
-	}
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "V3WorkflowsActionRequest", "json", `request:"mediaType=application/json"`)
-	if err != nil {
-		return nil, err
-	}
-
-	timeout := o.Timeout
-	if timeout == nil {
-		timeout = s.sdkConfiguration.Timeout
-	}
-
-	if timeout != nil {
-		var cancel context.CancelFunc
-		ctx, cancel = context.WithTimeout(ctx, *timeout)
-		defer cancel()
-	}
-
-	req, err := http.NewRequestWithContext(ctx, "POST", opURL, bodyReader)
-	if err != nil {
-		return nil, fmt.Errorf("error creating request: %w", err)
-	}
-	req.Header.Set("Accept", "application/json")
-	req.Header.Set("User-Agent", s.sdkConfiguration.UserAgent)
-	if reqContentType != "" {
-		req.Header.Set("Content-Type", reqContentType)
-	}
-
-	if err := utils.PopulateSecurity(ctx, req, s.sdkConfiguration.Security); err != nil {
-		return nil, err
-	}
-
-	for k, v := range o.SetHeaders {
-		req.Header.Set(k, v)
-	}
-
-	globalRetryConfig := s.sdkConfiguration.RetryConfig
-	retryConfig := o.Retries
-	if retryConfig == nil {
-		if globalRetryConfig != nil {
-			retryConfig = globalRetryConfig
-		}
-	}
-
-	var httpRes *http.Response
-	if retryConfig != nil {
-		httpRes, err = utils.Retry(ctx, utils.Retries{
-			Config: retryConfig,
-			StatusCodes: []string{
-				"429",
-				"500",
-				"502",
-				"503",
-				"504",
-			},
-		}, func() (*http.Response, error) {
-			if req.Body != nil && req.Body != http.NoBody && req.GetBody != nil {
-				copyBody, err := req.GetBody()
-
-				if err != nil {
-					return nil, err
-				}
-
-				req.Body = copyBody
-			}
-
-			req, err = s.hooks.BeforeRequest(hooks.BeforeRequestContext{HookContext: hookCtx}, req)
-			if err != nil {
-				if retry.IsPermanentError(err) || retry.IsTemporaryError(err) {
-					return nil, err
-				}
-
-				return nil, retry.Permanent(err)
-			}
-
-			httpRes, err := s.sdkConfiguration.Client.Do(req)
-			if err != nil || httpRes == nil {
-				if err != nil {
-					err = fmt.Errorf("error sending request: %w", err)
-				} else {
-					err = fmt.Errorf("error sending request: no response")
-				}
-
-				_, err = s.hooks.AfterError(hooks.AfterErrorContext{HookContext: hookCtx}, nil, err)
-			}
-			return httpRes, err
-		})
-
-		if err != nil {
-			return nil, err
-		} else {
-			httpRes, err = s.hooks.AfterSuccess(hooks.AfterSuccessContext{HookContext: hookCtx}, httpRes)
-			if err != nil {
-				return nil, err
-			}
-		}
-	} else {
-		req, err = s.hooks.BeforeRequest(hooks.BeforeRequestContext{HookContext: hookCtx}, req)
-		if err != nil {
-			return nil, err
-		}
-
-		httpRes, err = s.sdkConfiguration.Client.Do(req)
-		if err != nil || httpRes == nil {
-			if err != nil {
-				err = fmt.Errorf("error sending request: %w", err)
-			} else {
-				err = fmt.Errorf("error sending request: no response")
-			}
-
-			_, err = s.hooks.AfterError(hooks.AfterErrorContext{HookContext: hookCtx}, nil, err)
-			return nil, err
-		} else if utils.MatchStatusCodes([]string{"400", "401", "402", "403", "404", "409", "422", "4XX", "500", "502", "503", "504", "5XX"}, httpRes.StatusCode) {
-			_httpRes, err := s.hooks.AfterError(hooks.AfterErrorContext{HookContext: hookCtx}, httpRes, nil)
-			if err != nil {
-				return nil, err
-			} else if _httpRes != nil {
-				httpRes = _httpRes
-			}
-		} else {
-			httpRes, err = s.hooks.AfterSuccess(hooks.AfterSuccessContext{HookContext: hookCtx}, httpRes)
-			if err != nil {
-				return nil, err
-			}
-		}
-	}
-
-	res := &operations.WorkflowsCreateActionResponse{
-		HTTPMeta: components.HTTPMetadata{
-			Request:  req,
-			Response: httpRes,
-		},
-	}
-
-	switch {
-	case httpRes.StatusCode == 201:
-		switch {
-		case utils.MatchContentType(httpRes.Header.Get("Content-Type"), `application/json`):
-			rawBody, err := utils.ConsumeRawBody(httpRes)
-			if err != nil {
-				return nil, err
-			}
-
-			var out operations.WorkflowsCreateActionResponseBody
-			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
-				return nil, err
-			}
-
-			res.Object = &out
-		default:
-			rawBody, err := utils.ConsumeRawBody(httpRes)
-			if err != nil {
-				return nil, err
-			}
-			return nil, apierrors.NewAPIError(fmt.Sprintf("unknown content-type received: %s", httpRes.Header.Get("Content-Type")), httpRes.StatusCode, string(rawBody), httpRes)
-		}
-	case httpRes.StatusCode == 400:
-		switch {
-		case utils.MatchContentType(httpRes.Header.Get("Content-Type"), `application/json`):
-			rawBody, err := utils.ConsumeRawBody(httpRes)
-			if err != nil {
-				return nil, err
-			}
-
-			var out apierrors.WorkflowsCreateActionBadRequestError
-			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
-				return nil, err
-			}
-
-			out.HTTPMeta = components.HTTPMetadata{
-				Request:  req,
-				Response: httpRes,
-			}
-			return nil, &out
-		default:
-			rawBody, err := utils.ConsumeRawBody(httpRes)
-			if err != nil {
-				return nil, err
-			}
-			return nil, apierrors.NewAPIError(fmt.Sprintf("unknown content-type received: %s", httpRes.Header.Get("Content-Type")), httpRes.StatusCode, string(rawBody), httpRes)
-		}
-	case httpRes.StatusCode == 401:
-		switch {
-		case utils.MatchContentType(httpRes.Header.Get("Content-Type"), `application/json`):
-			rawBody, err := utils.ConsumeRawBody(httpRes)
-			if err != nil {
-				return nil, err
-			}
-
-			var out apierrors.WorkflowsCreateActionUnauthorizedError
-			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
-				return nil, err
-			}
-
-			out.HTTPMeta = components.HTTPMetadata{
-				Request:  req,
-				Response: httpRes,
-			}
-			return nil, &out
-		default:
-			rawBody, err := utils.ConsumeRawBody(httpRes)
-			if err != nil {
-				return nil, err
-			}
-			return nil, apierrors.NewAPIError(fmt.Sprintf("unknown content-type received: %s", httpRes.Header.Get("Content-Type")), httpRes.StatusCode, string(rawBody), httpRes)
-		}
-	case httpRes.StatusCode == 402:
-		switch {
-		case utils.MatchContentType(httpRes.Header.Get("Content-Type"), `application/json`):
-			rawBody, err := utils.ConsumeRawBody(httpRes)
-			if err != nil {
-				return nil, err
-			}
-
-			var out apierrors.WorkflowsCreateActionPaymentRequiredError
-			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
-				return nil, err
-			}
-
-			out.HTTPMeta = components.HTTPMetadata{
-				Request:  req,
-				Response: httpRes,
-			}
-			return nil, &out
-		default:
-			rawBody, err := utils.ConsumeRawBody(httpRes)
-			if err != nil {
-				return nil, err
-			}
-			return nil, apierrors.NewAPIError(fmt.Sprintf("unknown content-type received: %s", httpRes.Header.Get("Content-Type")), httpRes.StatusCode, string(rawBody), httpRes)
-		}
-	case httpRes.StatusCode == 403:
-		switch {
-		case utils.MatchContentType(httpRes.Header.Get("Content-Type"), `application/json`):
-			rawBody, err := utils.ConsumeRawBody(httpRes)
-			if err != nil {
-				return nil, err
-			}
-
-			var out apierrors.WorkflowsCreateActionForbiddenError
-			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
-				return nil, err
-			}
-
-			out.HTTPMeta = components.HTTPMetadata{
-				Request:  req,
-				Response: httpRes,
-			}
-			return nil, &out
-		default:
-			rawBody, err := utils.ConsumeRawBody(httpRes)
-			if err != nil {
-				return nil, err
-			}
-			return nil, apierrors.NewAPIError(fmt.Sprintf("unknown content-type received: %s", httpRes.Header.Get("Content-Type")), httpRes.StatusCode, string(rawBody), httpRes)
-		}
-	case httpRes.StatusCode == 404:
-		switch {
-		case utils.MatchContentType(httpRes.Header.Get("Content-Type"), `application/json`):
-			rawBody, err := utils.ConsumeRawBody(httpRes)
-			if err != nil {
-				return nil, err
-			}
-
-			var out apierrors.WorkflowsCreateActionNotFoundError
-			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
-				return nil, err
-			}
-
-			out.HTTPMeta = components.HTTPMetadata{
-				Request:  req,
-				Response: httpRes,
-			}
-			return nil, &out
-		default:
-			rawBody, err := utils.ConsumeRawBody(httpRes)
-			if err != nil {
-				return nil, err
-			}
-			return nil, apierrors.NewAPIError(fmt.Sprintf("unknown content-type received: %s", httpRes.Header.Get("Content-Type")), httpRes.StatusCode, string(rawBody), httpRes)
-		}
-	case httpRes.StatusCode == 409:
-		switch {
-		case utils.MatchContentType(httpRes.Header.Get("Content-Type"), `application/json`):
-			rawBody, err := utils.ConsumeRawBody(httpRes)
-			if err != nil {
-				return nil, err
-			}
-
-			var out apierrors.WorkflowsCreateActionConflictError
-			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
-				return nil, err
-			}
-
-			out.HTTPMeta = components.HTTPMetadata{
-				Request:  req,
-				Response: httpRes,
-			}
-			return nil, &out
-		default:
-			rawBody, err := utils.ConsumeRawBody(httpRes)
-			if err != nil {
-				return nil, err
-			}
-			return nil, apierrors.NewAPIError(fmt.Sprintf("unknown content-type received: %s", httpRes.Header.Get("Content-Type")), httpRes.StatusCode, string(rawBody), httpRes)
-		}
-	case httpRes.StatusCode == 422:
-		switch {
-		case utils.MatchContentType(httpRes.Header.Get("Content-Type"), `application/json`):
-			rawBody, err := utils.ConsumeRawBody(httpRes)
-			if err != nil {
-				return nil, err
-			}
-
-			var out apierrors.WorkflowsCreateActionUnprocessableEntityError
-			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
-				return nil, err
-			}
-
-			out.HTTPMeta = components.HTTPMetadata{
-				Request:  req,
-				Response: httpRes,
-			}
-			return nil, &out
-		default:
-			rawBody, err := utils.ConsumeRawBody(httpRes)
-			if err != nil {
-				return nil, err
-			}
-			return nil, apierrors.NewAPIError(fmt.Sprintf("unknown content-type received: %s", httpRes.Header.Get("Content-Type")), httpRes.StatusCode, string(rawBody), httpRes)
-		}
-	case httpRes.StatusCode == 500:
-		switch {
-		case utils.MatchContentType(httpRes.Header.Get("Content-Type"), `application/json`):
-			rawBody, err := utils.ConsumeRawBody(httpRes)
-			if err != nil {
-				return nil, err
-			}
-
-			var out apierrors.WorkflowsCreateActionInternalServerError
-			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
-				return nil, err
-			}
-
-			out.HTTPMeta = components.HTTPMetadata{
-				Request:  req,
-				Response: httpRes,
-			}
-			return nil, &out
-		default:
-			rawBody, err := utils.ConsumeRawBody(httpRes)
-			if err != nil {
-				return nil, err
-			}
-			return nil, apierrors.NewAPIError(fmt.Sprintf("unknown content-type received: %s", httpRes.Header.Get("Content-Type")), httpRes.StatusCode, string(rawBody), httpRes)
-		}
-	case httpRes.StatusCode == 502:
-		switch {
-		case utils.MatchContentType(httpRes.Header.Get("Content-Type"), `application/json`):
-			rawBody, err := utils.ConsumeRawBody(httpRes)
-			if err != nil {
-				return nil, err
-			}
-
-			var out apierrors.WorkflowsCreateActionBadGatewayError
-			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
-				return nil, err
-			}
-
-			out.HTTPMeta = components.HTTPMetadata{
-				Request:  req,
-				Response: httpRes,
-			}
-			return nil, &out
-		default:
-			rawBody, err := utils.ConsumeRawBody(httpRes)
-			if err != nil {
-				return nil, err
-			}
-			return nil, apierrors.NewAPIError(fmt.Sprintf("unknown content-type received: %s", httpRes.Header.Get("Content-Type")), httpRes.StatusCode, string(rawBody), httpRes)
-		}
-	case httpRes.StatusCode == 503:
-		switch {
-		case utils.MatchContentType(httpRes.Header.Get("Content-Type"), `application/json`):
-			rawBody, err := utils.ConsumeRawBody(httpRes)
-			if err != nil {
-				return nil, err
-			}
-
-			var out apierrors.WorkflowsCreateActionServiceUnavailableError
-			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
-				return nil, err
-			}
-
-			out.HTTPMeta = components.HTTPMetadata{
-				Request:  req,
-				Response: httpRes,
-			}
-			return nil, &out
-		default:
-			rawBody, err := utils.ConsumeRawBody(httpRes)
-			if err != nil {
-				return nil, err
-			}
-			return nil, apierrors.NewAPIError(fmt.Sprintf("unknown content-type received: %s", httpRes.Header.Get("Content-Type")), httpRes.StatusCode, string(rawBody), httpRes)
-		}
-	case httpRes.StatusCode == 504:
-		switch {
-		case utils.MatchContentType(httpRes.Header.Get("Content-Type"), `application/json`):
-			rawBody, err := utils.ConsumeRawBody(httpRes)
-			if err != nil {
-				return nil, err
-			}
-
-			var out apierrors.WorkflowsCreateActionGatewayTimeoutError
-			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
-				return nil, err
-			}
-
-			out.HTTPMeta = components.HTTPMetadata{
-				Request:  req,
-				Response: httpRes,
-			}
-			return nil, &out
-		default:
-			rawBody, err := utils.ConsumeRawBody(httpRes)
-			if err != nil {
-				return nil, err
-			}
-			return nil, apierrors.NewAPIError(fmt.Sprintf("unknown content-type received: %s", httpRes.Header.Get("Content-Type")), httpRes.StatusCode, string(rawBody), httpRes)
-		}
-	case httpRes.StatusCode >= 400 && httpRes.StatusCode < 500:
-		rawBody, err := utils.ConsumeRawBody(httpRes)
-		if err != nil {
-			return nil, err
-		}
-		return nil, apierrors.NewAPIError("API error occurred", httpRes.StatusCode, string(rawBody), httpRes)
-	case httpRes.StatusCode >= 500 && httpRes.StatusCode < 600:
-		rawBody, err := utils.ConsumeRawBody(httpRes)
-		if err != nil {
-			return nil, err
-		}
-		return nil, apierrors.NewAPIError("API error occurred", httpRes.StatusCode, string(rawBody), httpRes)
-	default:
-		rawBody, err := utils.ConsumeRawBody(httpRes)
-		if err != nil {
-			return nil, err
-		}
-		return nil, apierrors.NewAPIError("unknown status code returned", httpRes.StatusCode, string(rawBody), httpRes)
-	}
-
-	return res, nil
-
-}
-
-// WorkflowsUpdateActionsOrder - Update Actions Order
+// UpdateActionsOrder - Update Actions Order
 // Update action order in a workflow
-func (s *Workflows) WorkflowsUpdateActionsOrder(ctx context.Context, workflowID string, v3WorkflowsUpdateActionsOrderRequest components.V3WorkflowsUpdateActionsOrderRequest, opts ...operations.Option) (*operations.WorkflowsUpdateActionsOrderResponse, error) {
+func (s *Workflows) UpdateActionsOrder(ctx context.Context, workflowID string, v3WorkflowsUpdateActionsOrderRequest components.V3WorkflowsUpdateActionsOrderRequest, opts ...operations.Option) (*operations.WorkflowsUpdateActionsOrderResponse, error) {
 	request := operations.WorkflowsUpdateActionsOrderRequest{
 		WorkflowID:                           workflowID,
 		V3WorkflowsUpdateActionsOrderRequest: v3WorkflowsUpdateActionsOrderRequest,
@@ -3931,9 +3441,9 @@ func (s *Workflows) WorkflowsUpdateActionsOrder(ctx context.Context, workflowID 
 
 }
 
-// WorkflowsDeleteWorkflowAction - Delete Workflow Action
+// DeleteAction - Delete Workflow Action
 // Delete an action by action ID
-func (s *Workflows) WorkflowsDeleteWorkflowAction(ctx context.Context, workflowID string, actionID string, opts ...operations.Option) (*operations.WorkflowsDeleteWorkflowActionResponse, error) {
+func (s *Workflows) DeleteAction(ctx context.Context, workflowID string, actionID string, opts ...operations.Option) (*operations.WorkflowsDeleteWorkflowActionResponse, error) {
 	request := operations.WorkflowsDeleteWorkflowActionRequest{
 		WorkflowID: workflowID,
 		ActionID:   actionID,
@@ -4412,9 +3922,9 @@ func (s *Workflows) WorkflowsDeleteWorkflowAction(ctx context.Context, workflowI
 
 }
 
-// WorkflowsGetWorkflowActionByID - Get Workflow Action By ID
+// GetAction - Get Workflow Action By ID
 // Get workflow action by ID
-func (s *Workflows) WorkflowsGetWorkflowActionByID(ctx context.Context, workflowID string, actionID string, opts ...operations.Option) (*operations.WorkflowsGetWorkflowActionByIDResponse, error) {
+func (s *Workflows) GetAction(ctx context.Context, workflowID string, actionID string, opts ...operations.Option) (*operations.WorkflowsGetWorkflowActionByIDResponse, error) {
 	request := operations.WorkflowsGetWorkflowActionByIDRequest{
 		WorkflowID: workflowID,
 		ActionID:   actionID,
@@ -4898,9 +4408,9 @@ func (s *Workflows) WorkflowsGetWorkflowActionByID(ctx context.Context, workflow
 
 }
 
-// WorkflowsUpdateWorkflowAction - Update Workflow Action
+// UpdateAction - Update Workflow Action
 // Update an action by action ID
-func (s *Workflows) WorkflowsUpdateWorkflowAction(ctx context.Context, workflowID string, actionID string, v3WorkflowsActionRequestUpdate components.V3WorkflowsActionRequestUpdate, opts ...operations.Option) (*operations.WorkflowsUpdateWorkflowActionResponse, error) {
+func (s *Workflows) UpdateAction(ctx context.Context, workflowID string, actionID string, v3WorkflowsActionRequestUpdate components.V3WorkflowsActionRequestUpdate, opts ...operations.Option) (*operations.WorkflowsUpdateWorkflowActionResponse, error) {
 	request := operations.WorkflowsUpdateWorkflowActionRequest{
 		WorkflowID:                     workflowID,
 		ActionID:                       actionID,
@@ -5392,9 +4902,9 @@ func (s *Workflows) WorkflowsUpdateWorkflowAction(ctx context.Context, workflowI
 
 }
 
-// WorkflowsEnabledisableWorkflow - Enable/Disable Workflow
+// ToggleEnable - Enable/Disable Workflow
 // Enable or disable workflow by ID
-func (s *Workflows) WorkflowsEnabledisableWorkflow(ctx context.Context, workflowID string, v3WorkflowsEnableDisableWorkflowRequest components.V3WorkflowsEnableDisableWorkflowRequest, opts ...operations.Option) (*operations.WorkflowsEnabledisableWorkflowResponse, error) {
+func (s *Workflows) ToggleEnable(ctx context.Context, workflowID string, v3WorkflowsEnableDisableWorkflowRequest components.V3WorkflowsEnableDisableWorkflowRequest, opts ...operations.Option) (*operations.WorkflowsEnabledisableWorkflowResponse, error) {
 	request := operations.WorkflowsEnabledisableWorkflowRequest{
 		WorkflowID:                              workflowID,
 		V3WorkflowsEnableDisableWorkflowRequest: v3WorkflowsEnableDisableWorkflowRequest,
@@ -5880,9 +5390,9 @@ func (s *Workflows) WorkflowsEnabledisableWorkflow(ctx context.Context, workflow
 
 }
 
-// WorkflowsGetWorkflowLogs - Get Workflow Logs
+// GetLogs - Get Workflow Logs
 // Get workflow logs
-func (s *Workflows) WorkflowsGetWorkflowLogs(ctx context.Context, workflowID string, pageSize *string, pageNumber *string, opts ...operations.Option) (*operations.WorkflowsGetWorkflowLogsResponse, error) {
+func (s *Workflows) GetLogs(ctx context.Context, workflowID string, pageSize *string, pageNumber *string, opts ...operations.Option) (*operations.WorkflowsGetWorkflowLogsResponse, error) {
 	request := operations.WorkflowsGetWorkflowLogsRequest{
 		WorkflowID: workflowID,
 		PageSize:   pageSize,

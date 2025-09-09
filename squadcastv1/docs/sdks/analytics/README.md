@@ -5,10 +5,10 @@
 
 ### Available Operations
 
-* [AnalyticsGetOrgAnalytics](#analyticsgetorganalytics) - Get Org level analytics
-* [AnalyticsGetTeamAnalytics](#analyticsgetteamanalytics) - Get Team level analytics
+* [GetOrganization](#getorganization) - Get Org level analytics
+* [GetTeam](#getteam) - Get Team level analytics
 
-## AnalyticsGetOrgAnalytics
+## GetOrganization
 
 Get Org level analytics
 
@@ -21,7 +21,7 @@ package main
 import(
 	"context"
 	"os"
-	squadcastsdk "github.com/SquadcastHub/squadcast-sdk-go"
+	squadcastsdk "github.com/SquadcastHub/squadcast-sdk-go/squadcastv1"
 	"log"
 )
 
@@ -32,7 +32,7 @@ func main() {
         squadcastsdk.WithSecurity(os.Getenv("SQUADCASTSDK_BEARER_AUTH")),
     )
 
-    res, err := s.Analytics.AnalyticsGetOrgAnalytics(ctx, "<value>", "<value>", nil, nil)
+    res, err := s.Analytics.GetOrganization(ctx, "<value>", "<value>", nil, nil)
     if err != nil {
         log.Fatal(err)
     }
@@ -74,7 +74,7 @@ func main() {
 | apierrors.AnalyticsGetOrgAnalyticsGatewayTimeoutError      | 504                                                        | application/json                                           |
 | apierrors.APIError                                         | 4XX, 5XX                                                   | \*/\*                                                      |
 
-## AnalyticsGetTeamAnalytics
+## GetTeam
 
 Get Team level analytics
 
@@ -87,8 +87,8 @@ package main
 import(
 	"context"
 	"os"
-	squadcastsdk "github.com/SquadcastHub/squadcast-sdk-go"
-	"github.com/SquadcastHub/squadcast-sdk-go/models/operations"
+	squadcastsdk "github.com/SquadcastHub/squadcast-sdk-go/squadcastv1"
+	"github.com/SquadcastHub/squadcast-sdk-go/squadcastv1/models/operations"
 	"log"
 )
 
@@ -99,7 +99,7 @@ func main() {
         squadcastsdk.WithSecurity(os.Getenv("SQUADCASTSDK_BEARER_AUTH")),
     )
 
-    res, err := s.Analytics.AnalyticsGetTeamAnalytics(ctx, operations.AnalyticsGetTeamAnalyticsRequest{
+    res, err := s.Analytics.GetTeam(ctx, operations.AnalyticsGetTeamAnalyticsRequest{
         OwnerID: "<id>",
         From: "<value>",
         To: "<value>",

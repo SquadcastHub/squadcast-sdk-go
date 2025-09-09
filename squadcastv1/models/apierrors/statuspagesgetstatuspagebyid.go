@@ -4,7 +4,7 @@ package apierrors
 
 import (
 	"encoding/json"
-	"github.com/SquadcastHub/squadcast-sdk-go/models/components"
+	"github.com/SquadcastHub/squadcast-sdk-go/squadcastv1/models/components"
 )
 
 // StatusPagesGetStatusPageByIDGatewayTimeoutError - Server error

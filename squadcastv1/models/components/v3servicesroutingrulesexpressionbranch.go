@@ -6,7 +6,7 @@ import (
 	"encoding/json"
 	"errors"
 	"fmt"
-	"github.com/SquadcastHub/squadcast-sdk-go/internal/utils"
+	"github.com/SquadcastHub/squadcast-sdk-go/squadcastv1/internal/utils"
 )
 
 type V3ServicesRoutingRulesExpressionBranchOp string

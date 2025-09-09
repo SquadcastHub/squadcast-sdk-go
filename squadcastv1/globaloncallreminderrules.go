@@ -6,13 +6,13 @@ import (
 	"bytes"
 	"context"
 	"fmt"
-	"github.com/SquadcastHub/squadcast-sdk-go/internal/config"
-	"github.com/SquadcastHub/squadcast-sdk-go/internal/hooks"
-	"github.com/SquadcastHub/squadcast-sdk-go/internal/utils"
-	"github.com/SquadcastHub/squadcast-sdk-go/models/apierrors"
-	"github.com/SquadcastHub/squadcast-sdk-go/models/components"
-	"github.com/SquadcastHub/squadcast-sdk-go/models/operations"
-	"github.com/SquadcastHub/squadcast-sdk-go/retry"
+	"github.com/SquadcastHub/squadcast-sdk-go/squadcastv1/internal/config"
+	"github.com/SquadcastHub/squadcast-sdk-go/squadcastv1/internal/hooks"
+	"github.com/SquadcastHub/squadcast-sdk-go/squadcastv1/internal/utils"
+	"github.com/SquadcastHub/squadcast-sdk-go/squadcastv1/models/apierrors"
+	"github.com/SquadcastHub/squadcast-sdk-go/squadcastv1/models/components"
+	"github.com/SquadcastHub/squadcast-sdk-go/squadcastv1/models/operations"
+	"github.com/SquadcastHub/squadcast-sdk-go/squadcastv1/retry"
 	"net/http"
 	"net/url"
 )
@@ -31,9 +31,9 @@ func newGlobalOncallReminderRules(rootSDK *SquadcastSDK, sdkConfig config.SDKCon
 	}
 }
 
-// GlobalOncallReminderRulesDeleteGlobalOncallReminderRules - Delete Global Oncall Reminder Rules
 // Delete Global Oncall Reminder Rules
-func (s *GlobalOncallReminderRules) GlobalOncallReminderRulesDeleteGlobalOncallReminderRules(ctx context.Context, ownerID string, opts ...operations.Option) (*operations.GlobalOncallReminderRulesDeleteGlobalOncallReminderRulesResponse, error) {
+// Delete Global Oncall Reminder Rules
+func (s *GlobalOncallReminderRules) Delete(ctx context.Context, ownerID string, opts ...operations.Option) (*operations.GlobalOncallReminderRulesDeleteGlobalOncallReminderRulesResponse, error) {
 	request := operations.GlobalOncallReminderRulesDeleteGlobalOncallReminderRulesRequest{
 		OwnerID: ownerID,
 	}
@@ -515,9 +515,9 @@ func (s *GlobalOncallReminderRules) GlobalOncallReminderRulesDeleteGlobalOncallR
 
 }
 
-// GlobalOncallReminderRulesGetGlobalOncallReminderRules - Get Global Oncall Reminder Rules
+// List - Get Global Oncall Reminder Rules
 // Get Global Oncall Reminder Rules
-func (s *GlobalOncallReminderRules) GlobalOncallReminderRulesGetGlobalOncallReminderRules(ctx context.Context, ownerID string, opts ...operations.Option) (*operations.GlobalOncallReminderRulesGetGlobalOncallReminderRulesResponse, error) {
+func (s *GlobalOncallReminderRules) List(ctx context.Context, ownerID string, opts ...operations.Option) (*operations.GlobalOncallReminderRulesGetGlobalOncallReminderRulesResponse, error) {
 	request := operations.GlobalOncallReminderRulesGetGlobalOncallReminderRulesRequest{
 		OwnerID: ownerID,
 	}
@@ -1004,8 +1004,8 @@ func (s *GlobalOncallReminderRules) GlobalOncallReminderRulesGetGlobalOncallRemi
 
 }
 
-// GlobalOncallReminderRulesCreateGlobalOncallReminderRules - Create Global Oncall Reminder Rules
-func (s *GlobalOncallReminderRules) GlobalOncallReminderRulesCreateGlobalOncallReminderRules(ctx context.Context, request components.V3GlobalOncallReminderRulesCreateGlobalOncallReminderRulesRequest, opts ...operations.Option) (*operations.GlobalOncallReminderRulesCreateGlobalOncallReminderRulesResponse, error) {
+// Create Global Oncall Reminder Rules
+func (s *GlobalOncallReminderRules) Create(ctx context.Context, request components.V3GlobalOncallReminderRulesCreateGlobalOncallReminderRulesRequest, opts ...operations.Option) (*operations.GlobalOncallReminderRulesCreateGlobalOncallReminderRulesResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -1491,9 +1491,9 @@ func (s *GlobalOncallReminderRules) GlobalOncallReminderRulesCreateGlobalOncallR
 
 }
 
-// GlobalOncallReminderRulesUpdateGlobalOncallReminderRules - Update Global Oncall Reminder Rules
 // Update Global Oncall Reminder Rules
-func (s *GlobalOncallReminderRules) GlobalOncallReminderRulesUpdateGlobalOncallReminderRules(ctx context.Context, ownerID string, v3GlobalOncallReminderRulesUpdateGlobalOncallReminderRulesRequest components.V3GlobalOncallReminderRulesUpdateGlobalOncallReminderRulesRequest, opts ...operations.Option) (*operations.GlobalOncallReminderRulesUpdateGlobalOncallReminderRulesResponse, error) {
+// Update Global Oncall Reminder Rules
+func (s *GlobalOncallReminderRules) Update(ctx context.Context, ownerID string, v3GlobalOncallReminderRulesUpdateGlobalOncallReminderRulesRequest components.V3GlobalOncallReminderRulesUpdateGlobalOncallReminderRulesRequest, opts ...operations.Option) (*operations.GlobalOncallReminderRulesUpdateGlobalOncallReminderRulesResponse, error) {
 	request := operations.GlobalOncallReminderRulesUpdateGlobalOncallReminderRulesRequest{
 		OwnerID: ownerID,
 		V3GlobalOncallReminderRulesUpdateGlobalOncallReminderRulesRequest: v3GlobalOncallReminderRulesUpdateGlobalOncallReminderRulesRequest,

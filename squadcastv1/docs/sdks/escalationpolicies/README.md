@@ -5,13 +5,13 @@
 
 ### Available Operations
 
-* [EscalationPoliciesGetEscalationPolicyByTeam](#escalationpoliciesgetescalationpolicybyteam) - Get Escalation Policy By team
-* [EscalationPoliciesCreateEscalationPolicies](#escalationpoliciescreateescalationpolicies) - Create Escalation Policies
-* [EscalationPoliciesRemoveEscalationPolicy](#escalationpoliciesremoveescalationpolicy) - Remove Escalation Policy
-* [EscalationPoliciesGetEscalationPolicyByID](#escalationpoliciesgetescalationpolicybyid) - Get Escalation Policy By ID
-* [EscalationPoliciesUpdateEscalationPolicy](#escalationpoliciesupdateescalationpolicy) - Update Escalation Policy
+* [GetByTeam](#getbyteam) - Get Escalation Policy By team
+* [Create](#create) - Create Escalation Policies
+* [Remove](#remove) - Remove Escalation Policy
+* [GetByID](#getbyid) - Get Escalation Policy By ID
+* [Update](#update) - Update Escalation Policy
 
-## EscalationPoliciesGetEscalationPolicyByTeam
+## GetByTeam
 
 Returns all escalation policy details of the given `ownerID` (teamId) in the request param.
 Requires `access_token` as a `Bearer {{token}}` in the `Authorization` header with `read` scope.
@@ -25,7 +25,7 @@ package main
 import(
 	"context"
 	"os"
-	squadcastsdk "github.com/SquadcastHub/squadcast-sdk-go"
+	squadcastsdk "github.com/SquadcastHub/squadcast-sdk-go/squadcastv1"
 	"log"
 )
 
@@ -36,7 +36,7 @@ func main() {
         squadcastsdk.WithSecurity(os.Getenv("SQUADCASTSDK_BEARER_AUTH")),
     )
 
-    res, err := s.EscalationPolicies.EscalationPoliciesGetEscalationPolicyByTeam(ctx, nil, nil, nil)
+    res, err := s.EscalationPolicies.GetByTeam(ctx, nil, nil, nil)
     if err != nil {
         log.Fatal(err)
     }
@@ -77,7 +77,7 @@ func main() {
 | apierrors.EscalationPoliciesGetEscalationPolicyByTeamGatewayTimeoutError      | 504                                                                           | application/json                                                              |
 | apierrors.APIError                                                            | 4XX, 5XX                                                                      | \*/\*                                                                         |
 
-## EscalationPoliciesCreateEscalationPolicies
+## Create
 
 Add escalation policy to the organization. Returns the escalation policy object in response.
 Requires `access_token` as a `Bearer {{token}}` in the `Authorization` header with `user-write` scope.
@@ -91,8 +91,8 @@ package main
 import(
 	"context"
 	"os"
-	squadcastsdk "github.com/SquadcastHub/squadcast-sdk-go"
-	"github.com/SquadcastHub/squadcast-sdk-go/models/components"
+	squadcastsdk "github.com/SquadcastHub/squadcast-sdk-go/squadcastv1"
+	"github.com/SquadcastHub/squadcast-sdk-go/squadcastv1/models/components"
 	"log"
 )
 
@@ -103,7 +103,7 @@ func main() {
         squadcastsdk.WithSecurity(os.Getenv("SQUADCASTSDK_BEARER_AUTH")),
     )
 
-    res, err := s.EscalationPolicies.EscalationPoliciesCreateEscalationPolicies(ctx, components.V3EscalationPoliciesCreateEscalationPolicyRequest{
+    res, err := s.EscalationPolicies.Create(ctx, components.V3EscalationPoliciesCreateEscalationPolicyRequest{
         OwnerID: "<id>",
         Name: "<value>",
         Description: "properly aw gerbil address co-producer guzzle delight difficult",
@@ -167,7 +167,7 @@ func main() {
 | apierrors.EscalationPoliciesCreateEscalationPoliciesGatewayTimeoutError      | 504                                                                          | application/json                                                             |
 | apierrors.APIError                                                           | 4XX, 5XX                                                                     | \*/\*                                                                        |
 
-## EscalationPoliciesRemoveEscalationPolicy
+## Remove
 
 Remove escalation policy from the organization. Upon success, the escalation policy will be removed from the organization.
 Requires `access_token` as a `Bearer {{token}}` in the `Authorization` header with `user-write` scope.
@@ -181,7 +181,7 @@ package main
 import(
 	"context"
 	"os"
-	squadcastsdk "github.com/SquadcastHub/squadcast-sdk-go"
+	squadcastsdk "github.com/SquadcastHub/squadcast-sdk-go/squadcastv1"
 	"log"
 )
 
@@ -192,7 +192,7 @@ func main() {
         squadcastsdk.WithSecurity(os.Getenv("SQUADCASTSDK_BEARER_AUTH")),
     )
 
-    res, err := s.EscalationPolicies.EscalationPoliciesRemoveEscalationPolicy(ctx, "<id>")
+    res, err := s.EscalationPolicies.Remove(ctx, "<id>")
     if err != nil {
         log.Fatal(err)
     }
@@ -231,7 +231,7 @@ func main() {
 | apierrors.EscalationPoliciesRemoveEscalationPolicyGatewayTimeoutError      | 504                                                                        | application/json                                                           |
 | apierrors.APIError                                                         | 4XX, 5XX                                                                   | \*/\*                                                                      |
 
-## EscalationPoliciesGetEscalationPolicyByID
+## GetByID
 
 Returns an escalation policy details of the given `escalationPolicyID` in the request param.
 Requires `access_token` as a `Bearer {{token}}` in the `Authorization` header with `read` scope.
@@ -245,7 +245,7 @@ package main
 import(
 	"context"
 	"os"
-	squadcastsdk "github.com/SquadcastHub/squadcast-sdk-go"
+	squadcastsdk "github.com/SquadcastHub/squadcast-sdk-go/squadcastv1"
 	"log"
 )
 
@@ -256,7 +256,7 @@ func main() {
         squadcastsdk.WithSecurity(os.Getenv("SQUADCASTSDK_BEARER_AUTH")),
     )
 
-    res, err := s.EscalationPolicies.EscalationPoliciesGetEscalationPolicyByID(ctx, "<id>")
+    res, err := s.EscalationPolicies.GetByID(ctx, "<id>")
     if err != nil {
         log.Fatal(err)
     }
@@ -295,7 +295,7 @@ func main() {
 | apierrors.EscalationPoliciesGetEscalationPolicyByIDGatewayTimeoutError      | 504                                                                         | application/json                                                            |
 | apierrors.APIError                                                          | 4XX, 5XX                                                                    | \*/\*                                                                       |
 
-## EscalationPoliciesUpdateEscalationPolicy
+## Update
 
 Update organization escalation policy details.
 Requires `access_token` as a `Bearer {{token}}` in the `Authorization` header with `user-write` scope.
@@ -309,7 +309,7 @@ package main
 import(
 	"context"
 	"os"
-	squadcastsdk "github.com/SquadcastHub/squadcast-sdk-go"
+	squadcastsdk "github.com/SquadcastHub/squadcast-sdk-go/squadcastv1"
 	"log"
 )
 
@@ -325,7 +325,7 @@ func main() {
         panic(fileErr)
     }
 
-    res, err := s.EscalationPolicies.EscalationPoliciesUpdateEscalationPolicy(ctx, "<id>", example)
+    res, err := s.EscalationPolicies.Update(ctx, "<id>", example)
     if err != nil {
         log.Fatal(err)
     }

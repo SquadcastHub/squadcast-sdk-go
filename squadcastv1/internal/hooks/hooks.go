@@ -5,7 +5,7 @@ package hooks
 import (
 	"context"
 	"errors"
-	"github.com/SquadcastHub/squadcast-sdk-go/internal/config"
+	"github.com/SquadcastHub/squadcast-sdk-go/squadcastv1/internal/config"
 	"net/http"
 )
 

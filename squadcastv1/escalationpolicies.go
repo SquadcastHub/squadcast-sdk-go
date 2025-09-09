@@ -6,13 +6,13 @@ import (
 	"bytes"
 	"context"
 	"fmt"
-	"github.com/SquadcastHub/squadcast-sdk-go/internal/config"
-	"github.com/SquadcastHub/squadcast-sdk-go/internal/hooks"
-	"github.com/SquadcastHub/squadcast-sdk-go/internal/utils"
-	"github.com/SquadcastHub/squadcast-sdk-go/models/apierrors"
-	"github.com/SquadcastHub/squadcast-sdk-go/models/components"
-	"github.com/SquadcastHub/squadcast-sdk-go/models/operations"
-	"github.com/SquadcastHub/squadcast-sdk-go/retry"
+	"github.com/SquadcastHub/squadcast-sdk-go/squadcastv1/internal/config"
+	"github.com/SquadcastHub/squadcast-sdk-go/squadcastv1/internal/hooks"
+	"github.com/SquadcastHub/squadcast-sdk-go/squadcastv1/internal/utils"
+	"github.com/SquadcastHub/squadcast-sdk-go/squadcastv1/models/apierrors"
+	"github.com/SquadcastHub/squadcast-sdk-go/squadcastv1/models/components"
+	"github.com/SquadcastHub/squadcast-sdk-go/squadcastv1/models/operations"
+	"github.com/SquadcastHub/squadcast-sdk-go/squadcastv1/retry"
 	"net/http"
 	"net/url"
 )
@@ -31,10 +31,10 @@ func newEscalationPolicies(rootSDK *SquadcastSDK, sdkConfig config.SDKConfigurat
 	}
 }
 
-// EscalationPoliciesGetEscalationPolicyByTeam - Get Escalation Policy By team
+// GetByTeam - Get Escalation Policy By team
 // Returns all escalation policy details of the given `ownerID` (teamId) in the request param.
 // Requires `access_token` as a `Bearer {{token}}` in the `Authorization` header with `read` scope.
-func (s *EscalationPolicies) EscalationPoliciesGetEscalationPolicyByTeam(ctx context.Context, ownerID *string, pageNumber *string, pageSize *string, opts ...operations.Option) (*operations.EscalationPoliciesGetEscalationPolicyByTeamResponse, error) {
+func (s *EscalationPolicies) GetByTeam(ctx context.Context, ownerID *string, pageNumber *string, pageSize *string, opts ...operations.Option) (*operations.EscalationPoliciesGetEscalationPolicyByTeamResponse, error) {
 	request := operations.EscalationPoliciesGetEscalationPolicyByTeamRequest{
 		OwnerID:    ownerID,
 		PageNumber: pageNumber,
@@ -523,10 +523,10 @@ func (s *EscalationPolicies) EscalationPoliciesGetEscalationPolicyByTeam(ctx con
 
 }
 
-// EscalationPoliciesCreateEscalationPolicies - Create Escalation Policies
+// Create Escalation Policies
 // Add escalation policy to the organization. Returns the escalation policy object in response.
 // Requires `access_token` as a `Bearer {{token}}` in the `Authorization` header with `user-write` scope.
-func (s *EscalationPolicies) EscalationPoliciesCreateEscalationPolicies(ctx context.Context, request components.V3EscalationPoliciesCreateEscalationPolicyRequest, opts ...operations.Option) (*operations.EscalationPoliciesCreateEscalationPoliciesResponse, error) {
+func (s *EscalationPolicies) Create(ctx context.Context, request components.V3EscalationPoliciesCreateEscalationPolicyRequest, opts ...operations.Option) (*operations.EscalationPoliciesCreateEscalationPoliciesResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -1012,10 +1012,10 @@ func (s *EscalationPolicies) EscalationPoliciesCreateEscalationPolicies(ctx cont
 
 }
 
-// EscalationPoliciesRemoveEscalationPolicy - Remove Escalation Policy
+// Remove Escalation Policy
 // Remove escalation policy from the organization. Upon success, the escalation policy will be removed from the organization.
 // Requires `access_token` as a `Bearer {{token}}` in the `Authorization` header with `user-write` scope.
-func (s *EscalationPolicies) EscalationPoliciesRemoveEscalationPolicy(ctx context.Context, escalationPolicyID string, opts ...operations.Option) (*operations.EscalationPoliciesRemoveEscalationPolicyResponse, error) {
+func (s *EscalationPolicies) Remove(ctx context.Context, escalationPolicyID string, opts ...operations.Option) (*operations.EscalationPoliciesRemoveEscalationPolicyResponse, error) {
 	request := operations.EscalationPoliciesRemoveEscalationPolicyRequest{
 		EscalationPolicyID: escalationPolicyID,
 	}
@@ -1493,10 +1493,10 @@ func (s *EscalationPolicies) EscalationPoliciesRemoveEscalationPolicy(ctx contex
 
 }
 
-// EscalationPoliciesGetEscalationPolicyByID - Get Escalation Policy By ID
+// GetByID - Get Escalation Policy By ID
 // Returns an escalation policy details of the given `escalationPolicyID` in the request param.
 // Requires `access_token` as a `Bearer {{token}}` in the `Authorization` header with `read` scope.
-func (s *EscalationPolicies) EscalationPoliciesGetEscalationPolicyByID(ctx context.Context, escalationPolicyID string, opts ...operations.Option) (*operations.EscalationPoliciesGetEscalationPolicyByIDResponse, error) {
+func (s *EscalationPolicies) GetByID(ctx context.Context, escalationPolicyID string, opts ...operations.Option) (*operations.EscalationPoliciesGetEscalationPolicyByIDResponse, error) {
 	request := operations.EscalationPoliciesGetEscalationPolicyByIDRequest{
 		EscalationPolicyID: escalationPolicyID,
 	}
@@ -1979,10 +1979,10 @@ func (s *EscalationPolicies) EscalationPoliciesGetEscalationPolicyByID(ctx conte
 
 }
 
-// EscalationPoliciesUpdateEscalationPolicy - Update Escalation Policy
+// Update Escalation Policy
 // Update organization escalation policy details.
 // Requires `access_token` as a `Bearer {{token}}` in the `Authorization` header with `user-write` scope.
-func (s *EscalationPolicies) EscalationPoliciesUpdateEscalationPolicy(ctx context.Context, escalationPolicyID string, v3EscalationPoliciesUpdateEscalationPolicyRequest any, opts ...operations.Option) (*operations.EscalationPoliciesUpdateEscalationPolicyResponse, error) {
+func (s *EscalationPolicies) Update(ctx context.Context, escalationPolicyID string, v3EscalationPoliciesUpdateEscalationPolicyRequest any, opts ...operations.Option) (*operations.EscalationPoliciesUpdateEscalationPolicyResponse, error) {
 	request := operations.EscalationPoliciesUpdateEscalationPolicyRequest{
 		EscalationPolicyID: escalationPolicyID,
 		V3EscalationPoliciesUpdateEscalationPolicyRequest: v3EscalationPoliciesUpdateEscalationPolicyRequest,

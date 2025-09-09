@@ -6,13 +6,13 @@ import (
 	"bytes"
 	"context"
 	"fmt"
-	"github.com/SquadcastHub/squadcast-sdk-go/internal/config"
-	"github.com/SquadcastHub/squadcast-sdk-go/internal/hooks"
-	"github.com/SquadcastHub/squadcast-sdk-go/internal/utils"
-	"github.com/SquadcastHub/squadcast-sdk-go/models/apierrors"
-	"github.com/SquadcastHub/squadcast-sdk-go/models/components"
-	"github.com/SquadcastHub/squadcast-sdk-go/models/operations"
-	"github.com/SquadcastHub/squadcast-sdk-go/retry"
+	"github.com/SquadcastHub/squadcast-sdk-go/squadcastv1/internal/config"
+	"github.com/SquadcastHub/squadcast-sdk-go/squadcastv1/internal/hooks"
+	"github.com/SquadcastHub/squadcast-sdk-go/squadcastv1/internal/utils"
+	"github.com/SquadcastHub/squadcast-sdk-go/squadcastv1/models/apierrors"
+	"github.com/SquadcastHub/squadcast-sdk-go/squadcastv1/models/components"
+	"github.com/SquadcastHub/squadcast-sdk-go/squadcastv1/models/operations"
+	"github.com/SquadcastHub/squadcast-sdk-go/squadcastv1/retry"
 	"net/http"
 	"net/url"
 )
@@ -31,9 +31,9 @@ func newAnalytics(rootSDK *SquadcastSDK, sdkConfig config.SDKConfiguration, hook
 	}
 }
 
-// AnalyticsGetOrgAnalytics - Get Org level analytics
+// GetOrganization - Get Org level analytics
 // Get Org level analytics
-func (s *Analytics) AnalyticsGetOrgAnalytics(ctx context.Context, from string, to string, teamID *string, userID *string, opts ...operations.Option) (*operations.AnalyticsGetOrgAnalyticsResponse, error) {
+func (s *Analytics) GetOrganization(ctx context.Context, from string, to string, teamID *string, userID *string, opts ...operations.Option) (*operations.AnalyticsGetOrgAnalyticsResponse, error) {
 	request := operations.AnalyticsGetOrgAnalyticsRequest{
 		From:   from,
 		To:     to,
@@ -523,9 +523,9 @@ func (s *Analytics) AnalyticsGetOrgAnalytics(ctx context.Context, from string, t
 
 }
 
-// AnalyticsGetTeamAnalytics - Get Team level analytics
+// GetTeam - Get Team level analytics
 // Get Team level analytics
-func (s *Analytics) AnalyticsGetTeamAnalytics(ctx context.Context, request operations.AnalyticsGetTeamAnalyticsRequest, opts ...operations.Option) (*operations.AnalyticsGetTeamAnalyticsResponse, error) {
+func (s *Analytics) GetTeam(ctx context.Context, request operations.AnalyticsGetTeamAnalyticsRequest, opts ...operations.Option) (*operations.AnalyticsGetTeamAnalyticsResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,

@@ -6,18 +6,20 @@ import (
 	"bytes"
 	"context"
 	"fmt"
-	"github.com/SquadcastHub/squadcast-sdk-go/internal/config"
-	"github.com/SquadcastHub/squadcast-sdk-go/internal/hooks"
-	"github.com/SquadcastHub/squadcast-sdk-go/internal/utils"
-	"github.com/SquadcastHub/squadcast-sdk-go/models/apierrors"
-	"github.com/SquadcastHub/squadcast-sdk-go/models/components"
-	"github.com/SquadcastHub/squadcast-sdk-go/models/operations"
-	"github.com/SquadcastHub/squadcast-sdk-go/retry"
+	"github.com/SquadcastHub/squadcast-sdk-go/squadcastv1/internal/config"
+	"github.com/SquadcastHub/squadcast-sdk-go/squadcastv1/internal/hooks"
+	"github.com/SquadcastHub/squadcast-sdk-go/squadcastv1/internal/utils"
+	"github.com/SquadcastHub/squadcast-sdk-go/squadcastv1/models/apierrors"
+	"github.com/SquadcastHub/squadcast-sdk-go/squadcastv1/models/components"
+	"github.com/SquadcastHub/squadcast-sdk-go/squadcastv1/models/operations"
+	"github.com/SquadcastHub/squadcast-sdk-go/squadcastv1/retry"
 	"net/http"
 	"net/url"
 )
 
 type Teams struct {
+	Members *Members
+
 	rootSDK          *SquadcastSDK
 	sdkConfiguration config.SDKConfiguration
 	hooks            *hooks.Hooks
@@ -28,13 +30,14 @@ func newTeams(rootSDK *SquadcastSDK, sdkConfig config.SDKConfiguration, hooks *h
 		rootSDK:          rootSDK,
 		sdkConfiguration: sdkConfig,
 		hooks:            hooks,
+		Members:          newMembers(rootSDK, sdkConfig, hooks),
 	}
 }
 
-// TeamsGetAllTeams - Get All Teams
+// GetAll - Get All Teams
 // Returns all the teams of the organization.
 // Requires `access_token` as a `Bearer {{token}}` in the `Authorization` header with `read` scope.
-func (s *Teams) TeamsGetAllTeams(ctx context.Context, opts ...operations.Option) (*operations.TeamsGetAllTeamsResponse, error) {
+func (s *Teams) GetAll(ctx context.Context, opts ...operations.Option) (*operations.TeamsGetAllTeamsResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -513,10 +516,10 @@ func (s *Teams) TeamsGetAllTeams(ctx context.Context, opts ...operations.Option)
 
 }
 
-// TeamsCreateTeam - Create Team
+// Create Team
 // Add team to the organization. Returns the team object in response.
 // Requires `access_token` as a `Bearer {{token}}` in the `Authorization` header with `user-write` scope.
-func (s *Teams) TeamsCreateTeam(ctx context.Context, request components.V3TeamsCreateTeamRequest, opts ...operations.Option) (*operations.TeamsCreateTeamResponse, error) {
+func (s *Teams) Create(ctx context.Context, request components.V3TeamsCreateTeamRequest, opts ...operations.Option) (*operations.TeamsCreateTeamResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -1002,10 +1005,10 @@ func (s *Teams) TeamsCreateTeam(ctx context.Context, request components.V3TeamsC
 
 }
 
-// TeamsGetTeamByID - Get Team By ID
+// GetByID - Get Team By ID
 // Returns a team details of the given `teamID` in the request param.
 // Requires `access_token` as a `Bearer {{token}}` in the `Authorization` header with `read` scope.
-func (s *Teams) TeamsGetTeamByID(ctx context.Context, teamID string, opts ...operations.Option) (*operations.TeamsGetTeamByIDResponse, error) {
+func (s *Teams) GetByID(ctx context.Context, teamID string, opts ...operations.Option) (*operations.TeamsGetTeamByIDResponse, error) {
 	request := operations.TeamsGetTeamByIDRequest{
 		TeamID: teamID,
 	}
@@ -1488,10 +1491,10 @@ func (s *Teams) TeamsGetTeamByID(ctx context.Context, teamID string, opts ...ope
 
 }
 
-// TeamsUpdateTeam - Update Team
+// Update Team
 // Update organization team details.
 // Requires `access_token` as a `Bearer {{token}}` in the `Authorization` header with `user-write` scope.
-func (s *Teams) TeamsUpdateTeam(ctx context.Context, teamID string, v3TeamsUpdateTeamRequest components.V3TeamsUpdateTeamRequest, opts ...operations.Option) (*operations.TeamsUpdateTeamResponse, error) {
+func (s *Teams) Update(ctx context.Context, teamID string, v3TeamsUpdateTeamRequest components.V3TeamsUpdateTeamRequest, opts ...operations.Option) (*operations.TeamsUpdateTeamResponse, error) {
 	request := operations.TeamsUpdateTeamRequest{
 		TeamID:                   teamID,
 		V3TeamsUpdateTeamRequest: v3TeamsUpdateTeamRequest,
@@ -1982,10 +1985,10 @@ func (s *Teams) TeamsUpdateTeam(ctx context.Context, teamID string, v3TeamsUpdat
 
 }
 
-// TeamsRemoveTeam - Remove Team
+// Delete - Remove Team
 // Remove team from the organization. Upon success, the team will be removed from the organization.
 // Requires `access_token` as a `Bearer {{token}}` in the `Authorization` header with `user-write` scope.
-func (s *Teams) TeamsRemoveTeam(ctx context.Context, teamID string, opts ...operations.Option) (*operations.TeamsRemoveTeamResponse, error) {
+func (s *Teams) Delete(ctx context.Context, teamID string, opts ...operations.Option) (*operations.TeamsRemoveTeamResponse, error) {
 	request := operations.TeamsRemoveTeamRequest{
 		TeamID: teamID,
 	}
@@ -2463,496 +2466,10 @@ func (s *Teams) TeamsRemoveTeam(ctx context.Context, teamID string, opts ...oper
 
 }
 
-// TeamsGetAllTeamMembers - Get All Team Members
-// Returns all the team members of the organization.
-// Requires `access_token` as a `Bearer {{token}}` in the `Authorization` header with `read` scope.
-func (s *Teams) TeamsGetAllTeamMembers(ctx context.Context, teamID string, opts ...operations.Option) (*operations.TeamsGetAllTeamMembersResponse, error) {
-	request := operations.TeamsGetAllTeamMembersRequest{
-		TeamID: teamID,
-	}
-
-	o := operations.Options{}
-	supportedOptions := []string{
-		operations.SupportedOptionRetries,
-		operations.SupportedOptionTimeout,
-	}
-
-	for _, opt := range opts {
-		if err := opt(&o, supportedOptions...); err != nil {
-			return nil, fmt.Errorf("error applying option: %w", err)
-		}
-	}
-
-	var baseURL string
-	if o.ServerURL == nil {
-		baseURL = utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
-	} else {
-		baseURL = *o.ServerURL
-	}
-	opURL, err := utils.GenerateURL(ctx, baseURL, "/v3/teams/{teamId}/members", request, nil)
-	if err != nil {
-		return nil, fmt.Errorf("error generating URL: %w", err)
-	}
-
-	hookCtx := hooks.HookContext{
-		SDK:              s.rootSDK,
-		SDKConfiguration: s.sdkConfiguration,
-		BaseURL:          baseURL,
-		Context:          ctx,
-		OperationID:      "Teams_getAllTeamMembers",
-		OAuth2Scopes:     []string{},
-		SecuritySource:   s.sdkConfiguration.Security,
-	}
-
-	timeout := o.Timeout
-	if timeout == nil {
-		timeout = s.sdkConfiguration.Timeout
-	}
-
-	if timeout != nil {
-		var cancel context.CancelFunc
-		ctx, cancel = context.WithTimeout(ctx, *timeout)
-		defer cancel()
-	}
-
-	req, err := http.NewRequestWithContext(ctx, "GET", opURL, nil)
-	if err != nil {
-		return nil, fmt.Errorf("error creating request: %w", err)
-	}
-	req.Header.Set("Accept", "application/json")
-	req.Header.Set("User-Agent", s.sdkConfiguration.UserAgent)
-
-	if err := utils.PopulateSecurity(ctx, req, s.sdkConfiguration.Security); err != nil {
-		return nil, err
-	}
-
-	for k, v := range o.SetHeaders {
-		req.Header.Set(k, v)
-	}
-
-	globalRetryConfig := s.sdkConfiguration.RetryConfig
-	retryConfig := o.Retries
-	if retryConfig == nil {
-		if globalRetryConfig != nil {
-			retryConfig = globalRetryConfig
-		}
-	}
-
-	var httpRes *http.Response
-	if retryConfig != nil {
-		httpRes, err = utils.Retry(ctx, utils.Retries{
-			Config: retryConfig,
-			StatusCodes: []string{
-				"429",
-				"500",
-				"502",
-				"503",
-				"504",
-			},
-		}, func() (*http.Response, error) {
-			if req.Body != nil && req.Body != http.NoBody && req.GetBody != nil {
-				copyBody, err := req.GetBody()
-
-				if err != nil {
-					return nil, err
-				}
-
-				req.Body = copyBody
-			}
-
-			req, err = s.hooks.BeforeRequest(hooks.BeforeRequestContext{HookContext: hookCtx}, req)
-			if err != nil {
-				if retry.IsPermanentError(err) || retry.IsTemporaryError(err) {
-					return nil, err
-				}
-
-				return nil, retry.Permanent(err)
-			}
-
-			httpRes, err := s.sdkConfiguration.Client.Do(req)
-			if err != nil || httpRes == nil {
-				if err != nil {
-					err = fmt.Errorf("error sending request: %w", err)
-				} else {
-					err = fmt.Errorf("error sending request: no response")
-				}
-
-				_, err = s.hooks.AfterError(hooks.AfterErrorContext{HookContext: hookCtx}, nil, err)
-			}
-			return httpRes, err
-		})
-
-		if err != nil {
-			return nil, err
-		} else {
-			httpRes, err = s.hooks.AfterSuccess(hooks.AfterSuccessContext{HookContext: hookCtx}, httpRes)
-			if err != nil {
-				return nil, err
-			}
-		}
-	} else {
-		req, err = s.hooks.BeforeRequest(hooks.BeforeRequestContext{HookContext: hookCtx}, req)
-		if err != nil {
-			return nil, err
-		}
-
-		httpRes, err = s.sdkConfiguration.Client.Do(req)
-		if err != nil || httpRes == nil {
-			if err != nil {
-				err = fmt.Errorf("error sending request: %w", err)
-			} else {
-				err = fmt.Errorf("error sending request: no response")
-			}
-
-			_, err = s.hooks.AfterError(hooks.AfterErrorContext{HookContext: hookCtx}, nil, err)
-			return nil, err
-		} else if utils.MatchStatusCodes([]string{"400", "401", "402", "403", "404", "409", "422", "4XX", "500", "502", "503", "504", "5XX"}, httpRes.StatusCode) {
-			_httpRes, err := s.hooks.AfterError(hooks.AfterErrorContext{HookContext: hookCtx}, httpRes, nil)
-			if err != nil {
-				return nil, err
-			} else if _httpRes != nil {
-				httpRes = _httpRes
-			}
-		} else {
-			httpRes, err = s.hooks.AfterSuccess(hooks.AfterSuccessContext{HookContext: hookCtx}, httpRes)
-			if err != nil {
-				return nil, err
-			}
-		}
-	}
-
-	res := &operations.TeamsGetAllTeamMembersResponse{
-		HTTPMeta: components.HTTPMetadata{
-			Request:  req,
-			Response: httpRes,
-		},
-	}
-
-	switch {
-	case httpRes.StatusCode == 200:
-		switch {
-		case utils.MatchContentType(httpRes.Header.Get("Content-Type"), `application/json`):
-			rawBody, err := utils.ConsumeRawBody(httpRes)
-			if err != nil {
-				return nil, err
-			}
-
-			var out operations.TeamsGetAllTeamMembersResponseBody
-			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
-				return nil, err
-			}
-
-			res.Object = &out
-		default:
-			rawBody, err := utils.ConsumeRawBody(httpRes)
-			if err != nil {
-				return nil, err
-			}
-			return nil, apierrors.NewAPIError(fmt.Sprintf("unknown content-type received: %s", httpRes.Header.Get("Content-Type")), httpRes.StatusCode, string(rawBody), httpRes)
-		}
-	case httpRes.StatusCode == 400:
-		switch {
-		case utils.MatchContentType(httpRes.Header.Get("Content-Type"), `application/json`):
-			rawBody, err := utils.ConsumeRawBody(httpRes)
-			if err != nil {
-				return nil, err
-			}
-
-			var out apierrors.TeamsGetAllTeamMembersBadRequestError
-			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
-				return nil, err
-			}
-
-			out.HTTPMeta = components.HTTPMetadata{
-				Request:  req,
-				Response: httpRes,
-			}
-			return nil, &out
-		default:
-			rawBody, err := utils.ConsumeRawBody(httpRes)
-			if err != nil {
-				return nil, err
-			}
-			return nil, apierrors.NewAPIError(fmt.Sprintf("unknown content-type received: %s", httpRes.Header.Get("Content-Type")), httpRes.StatusCode, string(rawBody), httpRes)
-		}
-	case httpRes.StatusCode == 401:
-		switch {
-		case utils.MatchContentType(httpRes.Header.Get("Content-Type"), `application/json`):
-			rawBody, err := utils.ConsumeRawBody(httpRes)
-			if err != nil {
-				return nil, err
-			}
-
-			var out apierrors.TeamsGetAllTeamMembersUnauthorizedError
-			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
-				return nil, err
-			}
-
-			out.HTTPMeta = components.HTTPMetadata{
-				Request:  req,
-				Response: httpRes,
-			}
-			return nil, &out
-		default:
-			rawBody, err := utils.ConsumeRawBody(httpRes)
-			if err != nil {
-				return nil, err
-			}
-			return nil, apierrors.NewAPIError(fmt.Sprintf("unknown content-type received: %s", httpRes.Header.Get("Content-Type")), httpRes.StatusCode, string(rawBody), httpRes)
-		}
-	case httpRes.StatusCode == 402:
-		switch {
-		case utils.MatchContentType(httpRes.Header.Get("Content-Type"), `application/json`):
-			rawBody, err := utils.ConsumeRawBody(httpRes)
-			if err != nil {
-				return nil, err
-			}
-
-			var out apierrors.TeamsGetAllTeamMembersPaymentRequiredError
-			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
-				return nil, err
-			}
-
-			out.HTTPMeta = components.HTTPMetadata{
-				Request:  req,
-				Response: httpRes,
-			}
-			return nil, &out
-		default:
-			rawBody, err := utils.ConsumeRawBody(httpRes)
-			if err != nil {
-				return nil, err
-			}
-			return nil, apierrors.NewAPIError(fmt.Sprintf("unknown content-type received: %s", httpRes.Header.Get("Content-Type")), httpRes.StatusCode, string(rawBody), httpRes)
-		}
-	case httpRes.StatusCode == 403:
-		switch {
-		case utils.MatchContentType(httpRes.Header.Get("Content-Type"), `application/json`):
-			rawBody, err := utils.ConsumeRawBody(httpRes)
-			if err != nil {
-				return nil, err
-			}
-
-			var out apierrors.TeamsGetAllTeamMembersForbiddenError
-			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
-				return nil, err
-			}
-
-			out.HTTPMeta = components.HTTPMetadata{
-				Request:  req,
-				Response: httpRes,
-			}
-			return nil, &out
-		default:
-			rawBody, err := utils.ConsumeRawBody(httpRes)
-			if err != nil {
-				return nil, err
-			}
-			return nil, apierrors.NewAPIError(fmt.Sprintf("unknown content-type received: %s", httpRes.Header.Get("Content-Type")), httpRes.StatusCode, string(rawBody), httpRes)
-		}
-	case httpRes.StatusCode == 404:
-		switch {
-		case utils.MatchContentType(httpRes.Header.Get("Content-Type"), `application/json`):
-			rawBody, err := utils.ConsumeRawBody(httpRes)
-			if err != nil {
-				return nil, err
-			}
-
-			var out apierrors.TeamsGetAllTeamMembersNotFoundError
-			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
-				return nil, err
-			}
-
-			out.HTTPMeta = components.HTTPMetadata{
-				Request:  req,
-				Response: httpRes,
-			}
-			return nil, &out
-		default:
-			rawBody, err := utils.ConsumeRawBody(httpRes)
-			if err != nil {
-				return nil, err
-			}
-			return nil, apierrors.NewAPIError(fmt.Sprintf("unknown content-type received: %s", httpRes.Header.Get("Content-Type")), httpRes.StatusCode, string(rawBody), httpRes)
-		}
-	case httpRes.StatusCode == 409:
-		switch {
-		case utils.MatchContentType(httpRes.Header.Get("Content-Type"), `application/json`):
-			rawBody, err := utils.ConsumeRawBody(httpRes)
-			if err != nil {
-				return nil, err
-			}
-
-			var out apierrors.TeamsGetAllTeamMembersConflictError
-			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
-				return nil, err
-			}
-
-			out.HTTPMeta = components.HTTPMetadata{
-				Request:  req,
-				Response: httpRes,
-			}
-			return nil, &out
-		default:
-			rawBody, err := utils.ConsumeRawBody(httpRes)
-			if err != nil {
-				return nil, err
-			}
-			return nil, apierrors.NewAPIError(fmt.Sprintf("unknown content-type received: %s", httpRes.Header.Get("Content-Type")), httpRes.StatusCode, string(rawBody), httpRes)
-		}
-	case httpRes.StatusCode == 422:
-		switch {
-		case utils.MatchContentType(httpRes.Header.Get("Content-Type"), `application/json`):
-			rawBody, err := utils.ConsumeRawBody(httpRes)
-			if err != nil {
-				return nil, err
-			}
-
-			var out apierrors.TeamsGetAllTeamMembersUnprocessableEntityError
-			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
-				return nil, err
-			}
-
-			out.HTTPMeta = components.HTTPMetadata{
-				Request:  req,
-				Response: httpRes,
-			}
-			return nil, &out
-		default:
-			rawBody, err := utils.ConsumeRawBody(httpRes)
-			if err != nil {
-				return nil, err
-			}
-			return nil, apierrors.NewAPIError(fmt.Sprintf("unknown content-type received: %s", httpRes.Header.Get("Content-Type")), httpRes.StatusCode, string(rawBody), httpRes)
-		}
-	case httpRes.StatusCode == 500:
-		switch {
-		case utils.MatchContentType(httpRes.Header.Get("Content-Type"), `application/json`):
-			rawBody, err := utils.ConsumeRawBody(httpRes)
-			if err != nil {
-				return nil, err
-			}
-
-			var out apierrors.TeamsGetAllTeamMembersInternalServerError
-			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
-				return nil, err
-			}
-
-			out.HTTPMeta = components.HTTPMetadata{
-				Request:  req,
-				Response: httpRes,
-			}
-			return nil, &out
-		default:
-			rawBody, err := utils.ConsumeRawBody(httpRes)
-			if err != nil {
-				return nil, err
-			}
-			return nil, apierrors.NewAPIError(fmt.Sprintf("unknown content-type received: %s", httpRes.Header.Get("Content-Type")), httpRes.StatusCode, string(rawBody), httpRes)
-		}
-	case httpRes.StatusCode == 502:
-		switch {
-		case utils.MatchContentType(httpRes.Header.Get("Content-Type"), `application/json`):
-			rawBody, err := utils.ConsumeRawBody(httpRes)
-			if err != nil {
-				return nil, err
-			}
-
-			var out apierrors.TeamsGetAllTeamMembersBadGatewayError
-			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
-				return nil, err
-			}
-
-			out.HTTPMeta = components.HTTPMetadata{
-				Request:  req,
-				Response: httpRes,
-			}
-			return nil, &out
-		default:
-			rawBody, err := utils.ConsumeRawBody(httpRes)
-			if err != nil {
-				return nil, err
-			}
-			return nil, apierrors.NewAPIError(fmt.Sprintf("unknown content-type received: %s", httpRes.Header.Get("Content-Type")), httpRes.StatusCode, string(rawBody), httpRes)
-		}
-	case httpRes.StatusCode == 503:
-		switch {
-		case utils.MatchContentType(httpRes.Header.Get("Content-Type"), `application/json`):
-			rawBody, err := utils.ConsumeRawBody(httpRes)
-			if err != nil {
-				return nil, err
-			}
-
-			var out apierrors.TeamsGetAllTeamMembersServiceUnavailableError
-			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
-				return nil, err
-			}
-
-			out.HTTPMeta = components.HTTPMetadata{
-				Request:  req,
-				Response: httpRes,
-			}
-			return nil, &out
-		default:
-			rawBody, err := utils.ConsumeRawBody(httpRes)
-			if err != nil {
-				return nil, err
-			}
-			return nil, apierrors.NewAPIError(fmt.Sprintf("unknown content-type received: %s", httpRes.Header.Get("Content-Type")), httpRes.StatusCode, string(rawBody), httpRes)
-		}
-	case httpRes.StatusCode == 504:
-		switch {
-		case utils.MatchContentType(httpRes.Header.Get("Content-Type"), `application/json`):
-			rawBody, err := utils.ConsumeRawBody(httpRes)
-			if err != nil {
-				return nil, err
-			}
-
-			var out apierrors.TeamsGetAllTeamMembersGatewayTimeoutError
-			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
-				return nil, err
-			}
-
-			out.HTTPMeta = components.HTTPMetadata{
-				Request:  req,
-				Response: httpRes,
-			}
-			return nil, &out
-		default:
-			rawBody, err := utils.ConsumeRawBody(httpRes)
-			if err != nil {
-				return nil, err
-			}
-			return nil, apierrors.NewAPIError(fmt.Sprintf("unknown content-type received: %s", httpRes.Header.Get("Content-Type")), httpRes.StatusCode, string(rawBody), httpRes)
-		}
-	case httpRes.StatusCode >= 400 && httpRes.StatusCode < 500:
-		rawBody, err := utils.ConsumeRawBody(httpRes)
-		if err != nil {
-			return nil, err
-		}
-		return nil, apierrors.NewAPIError("API error occurred", httpRes.StatusCode, string(rawBody), httpRes)
-	case httpRes.StatusCode >= 500 && httpRes.StatusCode < 600:
-		rawBody, err := utils.ConsumeRawBody(httpRes)
-		if err != nil {
-			return nil, err
-		}
-		return nil, apierrors.NewAPIError("API error occurred", httpRes.StatusCode, string(rawBody), httpRes)
-	default:
-		rawBody, err := utils.ConsumeRawBody(httpRes)
-		if err != nil {
-			return nil, err
-		}
-		return nil, apierrors.NewAPIError("unknown status code returned", httpRes.StatusCode, string(rawBody), httpRes)
-	}
-
-	return res, nil
-
-}
-
-// TeamsAddTeamMember - Add Team Member
+// AddMember - Add Team Member
 // Add team member to the team.
 // Requires `access_token` as a `Bearer {{token}}` in the `Authorization` header with `user-write` scope.
-func (s *Teams) TeamsAddTeamMember(ctx context.Context, teamID string, v3TeamsAddTeamMemberRequest components.V3TeamsAddTeamMemberRequest, opts ...operations.Option) (*operations.TeamsAddTeamMemberResponse, error) {
+func (s *Teams) AddMember(ctx context.Context, teamID string, v3TeamsAddTeamMemberRequest components.V3TeamsAddTeamMemberRequest, opts ...operations.Option) (*operations.TeamsAddTeamMemberResponse, error) {
 	request := operations.TeamsAddTeamMemberRequest{
 		TeamID:                      teamID,
 		V3TeamsAddTeamMemberRequest: v3TeamsAddTeamMemberRequest,
@@ -3443,10 +2960,10 @@ func (s *Teams) TeamsAddTeamMember(ctx context.Context, teamID string, v3TeamsAd
 
 }
 
-// TeamsAddBulkTeamMember - Add Bulk Team Member
+// AddBulkMember - Add Bulk Team Member
 // Add team member to the team.
 // Requires `access_token` as a `Bearer {{token}}` in the `Authorization` header with `user-write` scope.
-func (s *Teams) TeamsAddBulkTeamMember(ctx context.Context, teamID string, v3TeamsAddBulkTeamMemberRequest components.V3TeamsAddBulkTeamMemberRequest, opts ...operations.Option) (*operations.TeamsAddBulkTeamMemberResponse, error) {
+func (s *Teams) AddBulkMember(ctx context.Context, teamID string, v3TeamsAddBulkTeamMemberRequest components.V3TeamsAddBulkTeamMemberRequest, opts ...operations.Option) (*operations.TeamsAddBulkTeamMemberResponse, error) {
 	request := operations.TeamsAddBulkTeamMemberRequest{
 		TeamID:                          teamID,
 		V3TeamsAddBulkTeamMemberRequest: v3TeamsAddBulkTeamMemberRequest,
@@ -3937,10 +3454,10 @@ func (s *Teams) TeamsAddBulkTeamMember(ctx context.Context, teamID string, v3Tea
 
 }
 
-// TeamsRemoveTeamMember - Remove Team Member
+// RemoveMember - Remove Team Member
 // Remove team member from the team. Upon success, the team member will be removed from the team.
 // Requires `access_token` as a `Bearer {{token}}` in the `Authorization` header with `user-write` scope.
-func (s *Teams) TeamsRemoveTeamMember(ctx context.Context, teamID string, memberID string, opts ...operations.Option) (*operations.TeamsRemoveTeamMemberResponse, error) {
+func (s *Teams) RemoveMember(ctx context.Context, teamID string, memberID string, opts ...operations.Option) (*operations.TeamsRemoveTeamMemberResponse, error) {
 	request := operations.TeamsRemoveTeamMemberRequest{
 		TeamID:   teamID,
 		MemberID: memberID,
@@ -4419,10 +3936,10 @@ func (s *Teams) TeamsRemoveTeamMember(ctx context.Context, teamID string, member
 
 }
 
-// TeamsUpdateTeamMember - Update Team Member
+// UpdateMember - Update Team Member
 // Update team member.
 // Requires `access_token` as a `Bearer {{token}}` in the `Authorization` header with `user-write` scope.
-func (s *Teams) TeamsUpdateTeamMember(ctx context.Context, teamID string, memberID string, v3TeamsUpdateTeamMemberRequest components.V3TeamsUpdateTeamMemberRequest, opts ...operations.Option) (*operations.TeamsUpdateTeamMemberResponse, error) {
+func (s *Teams) UpdateMember(ctx context.Context, teamID string, memberID string, v3TeamsUpdateTeamMemberRequest components.V3TeamsUpdateTeamMemberRequest, opts ...operations.Option) (*operations.TeamsUpdateTeamMemberResponse, error) {
 	request := operations.TeamsUpdateTeamMemberRequest{
 		TeamID:                         teamID,
 		MemberID:                       memberID,
@@ -4914,10 +4431,10 @@ func (s *Teams) TeamsUpdateTeamMember(ctx context.Context, teamID string, member
 
 }
 
-// TeamsGetAllTeamRoles - Get All Team Roles
+// GetAllRoles - Get All Team Roles
 // Returns all the roles of the teamId mentioned in params.
 // Requires `access_token` as a `Bearer {{token}}` in the `Authorization` header with `read` scope.
-func (s *Teams) TeamsGetAllTeamRoles(ctx context.Context, teamID string, opts ...operations.Option) (*operations.TeamsGetAllTeamRolesResponse, error) {
+func (s *Teams) GetAllRoles(ctx context.Context, teamID string, opts ...operations.Option) (*operations.TeamsGetAllTeamRolesResponse, error) {
 	request := operations.TeamsGetAllTeamRolesRequest{
 		TeamID: teamID,
 	}
@@ -5400,10 +4917,10 @@ func (s *Teams) TeamsGetAllTeamRoles(ctx context.Context, teamID string, opts ..
 
 }
 
-// TeamsCreateTeamRole - Create Team Role
+// CreateRole - Create Team Role
 // Add team's role to the team with given ability if not exists. Returns the role object in response.
 // Requires `access_token` as a `Bearer {{token}}` in the `Authorization` header with `user-write` scope.
-func (s *Teams) TeamsCreateTeamRole(ctx context.Context, teamID string, v3TeamsCreateTeamRoleRequest components.V3TeamsCreateTeamRoleRequest, opts ...operations.Option) (*operations.TeamsCreateTeamRoleResponse, error) {
+func (s *Teams) CreateRole(ctx context.Context, teamID string, v3TeamsCreateTeamRoleRequest components.V3TeamsCreateTeamRoleRequest, opts ...operations.Option) (*operations.TeamsCreateTeamRoleResponse, error) {
 	request := operations.TeamsCreateTeamRoleRequest{
 		TeamID:                       teamID,
 		V3TeamsCreateTeamRoleRequest: v3TeamsCreateTeamRoleRequest,
@@ -5894,10 +5411,10 @@ func (s *Teams) TeamsCreateTeamRole(ctx context.Context, teamID string, v3TeamsC
 
 }
 
-// TeamsRemoveTeamRole - Remove Team Role
+// RemoveRole - Remove Team Role
 // Remove team's role from the team. Upon success, the team's role will be removed from the team.
 // Requires `access_token` as a `Bearer {{token}}` in the `Authorization` header with `user-write` scope.
-func (s *Teams) TeamsRemoveTeamRole(ctx context.Context, teamID string, roleID string, opts ...operations.Option) (*operations.TeamsRemoveTeamRoleResponse, error) {
+func (s *Teams) RemoveRole(ctx context.Context, teamID string, roleID string, opts ...operations.Option) (*operations.TeamsRemoveTeamRoleResponse, error) {
 	request := operations.TeamsRemoveTeamRoleRequest{
 		TeamID: teamID,
 		RoleID: roleID,
@@ -6376,10 +5893,10 @@ func (s *Teams) TeamsRemoveTeamRole(ctx context.Context, teamID string, roleID s
 
 }
 
-// TeamsUpdateTeamRole - Update Team Role
+// UpdateRole - Update Team Role
 // Update team's role abilities and name.
 // Requires `access_token` as a `Bearer {{token}}` in the `Authorization` header with `user-write` scope.
-func (s *Teams) TeamsUpdateTeamRole(ctx context.Context, teamID string, roleID string, v3TeamsUpdateTeamRoleRequest components.V3TeamsUpdateTeamRoleRequest, opts ...operations.Option) (*operations.TeamsUpdateTeamRoleResponse, error) {
+func (s *Teams) UpdateRole(ctx context.Context, teamID string, roleID string, v3TeamsUpdateTeamRoleRequest components.V3TeamsUpdateTeamRoleRequest, opts ...operations.Option) (*operations.TeamsUpdateTeamRoleResponse, error) {
 	request := operations.TeamsUpdateTeamRoleRequest{
 		TeamID:                       teamID,
 		RoleID:                       roleID,

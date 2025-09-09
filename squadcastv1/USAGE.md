@@ -4,7 +4,7 @@ package main
 
 import (
 	"context"
-	squadcastsdk "github.com/SquadcastHub/squadcast-sdk-go"
+	squadcastsdk "github.com/SquadcastHub/squadcast-sdk-go/squadcastv1"
 	"log"
 	"os"
 )
@@ -16,7 +16,7 @@ func main() {
 		squadcastsdk.WithSecurity(os.Getenv("SQUADCASTSDK_BEARER_AUTH")),
 	)
 
-	res, err := s.Analytics.AnalyticsGetOrgAnalytics(ctx, "<value>", "<value>", nil, nil)
+	res, err := s.Analytics.GetOrganization(ctx, "<value>", "<value>", nil, nil)
 	if err != nil {
 		log.Fatal(err)
 	}

@@ -5,13 +5,13 @@
 
 ### Available Operations
 
-* [WebformsGetAllWebforms](#webformsgetallwebforms) - Get All Webforms
-* [WebformsCreateWebform](#webformscreatewebform) - Create Webform
-* [WebformsUpdateWebform](#webformsupdatewebform) - Update Webform
-* [WebformsRemoveWebform](#webformsremovewebform) - Remove Webform
-* [WebformsGetWebformByID](#webformsgetwebformbyid) - Get Webform By ID
+* [GetAll](#getall) - Get All Webforms
+* [Create](#create) - Create Webform
+* [Update](#update) - Update Webform
+* [Remove](#remove) - Remove Webform
+* [Get](#get) - Get Webform By ID
 
-## WebformsGetAllWebforms
+## GetAll
 
 Returns all webforms of the given `owner_id` (teamId) in the request param.
 Requires `access_token` as a `Bearer {{token}}` in the `Authorization` header with `read` scope.
@@ -25,7 +25,7 @@ package main
 import(
 	"context"
 	"os"
-	squadcastsdk "github.com/SquadcastHub/squadcast-sdk-go"
+	squadcastsdk "github.com/SquadcastHub/squadcast-sdk-go/squadcastv1"
 	"log"
 )
 
@@ -36,7 +36,7 @@ func main() {
         squadcastsdk.WithSecurity(os.Getenv("SQUADCASTSDK_BEARER_AUTH")),
     )
 
-    res, err := s.Webforms.WebformsGetAllWebforms(ctx, "<id>", nil, nil)
+    res, err := s.Webforms.GetAll(ctx, "<id>", nil, nil)
     if err != nil {
         log.Fatal(err)
     }
@@ -77,7 +77,7 @@ func main() {
 | apierrors.WebformsGetAllWebformsGatewayTimeoutError      | 504                                                      | application/json                                         |
 | apierrors.APIError                                       | 4XX, 5XX                                                 | \*/\*                                                    |
 
-## WebformsCreateWebform
+## Create
 
 Add a webform to the organization. Returns the webform object in response.
 Requires `access_token` as a `Bearer {{token}}` in the `Authorization` header with `user-write` scope.
@@ -91,8 +91,8 @@ package main
 import(
 	"context"
 	"os"
-	squadcastsdk "github.com/SquadcastHub/squadcast-sdk-go"
-	"github.com/SquadcastHub/squadcast-sdk-go/models/components"
+	squadcastsdk "github.com/SquadcastHub/squadcast-sdk-go/squadcastv1"
+	"github.com/SquadcastHub/squadcast-sdk-go/squadcastv1/models/components"
 	"log"
 )
 
@@ -103,7 +103,7 @@ func main() {
         squadcastsdk.WithSecurity(os.Getenv("SQUADCASTSDK_BEARER_AUTH")),
     )
 
-    res, err := s.Webforms.WebformsCreateWebform(ctx, components.V3WebformsCreateOrUpdateWebformRequest{
+    res, err := s.Webforms.Create(ctx, components.V3WebformsCreateOrUpdateWebformRequest{
         OwnerID: "<id>",
         Name: "<value>",
         IsCname: false,
@@ -158,7 +158,7 @@ func main() {
 | apierrors.WebformsCreateWebformGatewayTimeoutError      | 504                                                     | application/json                                        |
 | apierrors.APIError                                      | 4XX, 5XX                                                | \*/\*                                                   |
 
-## WebformsUpdateWebform
+## Update
 
 Update a webform to the organization. Returns the webform object in response.
 Requires `access_token` as a `Bearer {{token}}` in the `Authorization` header with `user-write` scope.
@@ -172,8 +172,8 @@ package main
 import(
 	"context"
 	"os"
-	squadcastsdk "github.com/SquadcastHub/squadcast-sdk-go"
-	"github.com/SquadcastHub/squadcast-sdk-go/models/components"
+	squadcastsdk "github.com/SquadcastHub/squadcast-sdk-go/squadcastv1"
+	"github.com/SquadcastHub/squadcast-sdk-go/squadcastv1/models/components"
 	"log"
 )
 
@@ -184,7 +184,7 @@ func main() {
         squadcastsdk.WithSecurity(os.Getenv("SQUADCASTSDK_BEARER_AUTH")),
     )
 
-    res, err := s.Webforms.WebformsUpdateWebform(ctx, 926692, components.V3WebformsCreateOrUpdateWebformRequest{
+    res, err := s.Webforms.Update(ctx, 926692, components.V3WebformsCreateOrUpdateWebformRequest{
         OwnerID: "<id>",
         Name: "<value>",
         IsCname: true,
@@ -246,7 +246,7 @@ func main() {
 | apierrors.WebformsUpdateWebformGatewayTimeoutError      | 504                                                     | application/json                                        |
 | apierrors.APIError                                      | 4XX, 5XX                                                | \*/\*                                                   |
 
-## WebformsRemoveWebform
+## Remove
 
 Remove a webform from the organization.
 Requires `access_token` as a `Bearer {{token}}` in the `Authorization` header with `user-write` scope.
@@ -260,7 +260,7 @@ package main
 import(
 	"context"
 	"os"
-	squadcastsdk "github.com/SquadcastHub/squadcast-sdk-go"
+	squadcastsdk "github.com/SquadcastHub/squadcast-sdk-go/squadcastv1"
 	"log"
 )
 
@@ -271,7 +271,7 @@ func main() {
         squadcastsdk.WithSecurity(os.Getenv("SQUADCASTSDK_BEARER_AUTH")),
     )
 
-    res, err := s.Webforms.WebformsRemoveWebform(ctx, 842504, nil)
+    res, err := s.Webforms.Remove(ctx, 842504, nil)
     if err != nil {
         log.Fatal(err)
     }
@@ -311,7 +311,7 @@ func main() {
 | apierrors.WebformsRemoveWebformGatewayTimeoutError      | 504                                                     | application/json                                        |
 | apierrors.APIError                                      | 4XX, 5XX                                                | \*/\*                                                   |
 
-## WebformsGetWebformByID
+## Get
 
 Returns a webform details of the given `webformId` in the request param.
 Requires `access_token` as a `Bearer {{token}}` in the `Authorization` header with `read` scope.
@@ -325,7 +325,7 @@ package main
 import(
 	"context"
 	"os"
-	squadcastsdk "github.com/SquadcastHub/squadcast-sdk-go"
+	squadcastsdk "github.com/SquadcastHub/squadcast-sdk-go/squadcastv1"
 	"log"
 )
 
@@ -336,7 +336,7 @@ func main() {
         squadcastsdk.WithSecurity(os.Getenv("SQUADCASTSDK_BEARER_AUTH")),
     )
 
-    res, err := s.Webforms.WebformsGetWebformByID(ctx, 831002, nil)
+    res, err := s.Webforms.Get(ctx, 831002, nil)
     if err != nil {
         log.Fatal(err)
     }
