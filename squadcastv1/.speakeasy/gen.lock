@@ -1,15 +1,12 @@
 lockVersion: 2.0.0
-id: e4d6be9e-a6f6-4a27-9d82-9e255dee33c5
+id: 279dacab-faec-448f-bc08-f41bb3b1dd64
 management:
   docChecksum: d01a392a89770fcf91bdc28daf426c87
   docVersion: 1.0.0
-  speakeasyVersion: 1.613.0
-  generationVersion: 2.696.0
-  releaseVersion: 0.1.0
-  configChecksum: a237f8c4841a825bf4ed31bc37841251
-  repoURL: https://github.com/SquadcastHub/squadcast-sdk-go.git
-  repoSubDirectory: squadcastv1
-  installationURL: https://github.com/SquadcastHub/squadcast-sdk-go/squadcastv1
+  speakeasyVersion: 1.615.1
+  generationVersion: 2.698.4
+  releaseVersion: 0.1.1
+  configChecksum: 4b7fd3698b6d9dbfda64e066b18e9616
 features:
   go:
     additionalDependencies: 0.1.0
@@ -19,7 +16,7 @@ features:
     envVarSecurityUsage: 0.3.2
     errorUnions: 0.1.0
     flattening: 2.81.1
-    globalSecurity: 2.82.11
+    globalSecurity: 2.82.12
     globalSecurityCallbacks: 0.1.0
     globalSecurityFlattening: 0.1.0
     globalServerURLs: 2.82.3
@@ -4754,6 +4751,38 @@ examples:
           application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
         "504":
           application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
+  Webhooks_updateWebhook:
+    speakeasy-default-webhooks-update-webhook:
+      parameters:
+        path:
+          eventWebhookID: "<id>"
+      requestBody:
+        application/json: {"name": "<value>", "triggers": [{"event_class": "<value>", "event_type": "<value>"}], "urls": [{}], "trigger_type": "<value>"}
+      responses:
+        "200":
+          application/json: {"data": {"name": "<value>", "triggers": [], "urls": [{}], "trigger_type": "<value>", "id": "<id>", "created_at": "1714715256665", "updated_at": "1735662379054", "author_id": "<id>", "slug": "<value>"}}
+        "400":
+          application/json: {"meta": {"status": 413755, "error_message": "<value>"}}
+        "401":
+          application/json: {"meta": {"status": 413755, "error_message": "<value>"}}
+        "402":
+          application/json: {"meta": {"status": 413755, "error_message": "<value>"}}
+        "403":
+          application/json: {"meta": {"status": 413755, "error_message": "<value>"}}
+        "404":
+          application/json: {"meta": {"status": 413755, "error_message": "<value>"}}
+        "409":
+          application/json: {"meta": {"status": 413755, "error_message": "<value>"}}
+        "422":
+          application/json: {"meta": {"status": 413755, "error_message": "<value>"}}
+        "500":
+          application/json: {"meta": {"status": 413755, "error_message": "<value>"}}
+        "502":
+          application/json: {"meta": {"status": 413755, "error_message": "<value>"}}
+        "503":
+          application/json: {"meta": {"status": 413755, "error_message": "<value>"}}
+        "504":
+          application/json: {"meta": {"status": 413755, "error_message": "<value>"}}
   Webhooks_deleteWebhook:
     speakeasy-default-webhooks-delete-webhook:
       parameters:
@@ -4814,65 +4843,6 @@ examples:
           application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
         "504":
           application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
-  Webhooks_updateWebhook:
-    speakeasy-default-webhooks-update-webhook:
-      parameters:
-        path:
-          eventWebhookID: "<id>"
-      requestBody:
-        application/json: {"name": "<value>", "triggers": [{"event_class": "<value>", "event_type": "<value>"}], "urls": [{}], "trigger_type": "<value>"}
-      responses:
-        "200":
-          application/json: {"data": {"name": "<value>", "triggers": [], "urls": [{}], "trigger_type": "<value>", "id": "<id>", "created_at": "1714715256665", "updated_at": "1735662379054", "author_id": "<id>", "slug": "<value>"}}
-        "400":
-          application/json: {"meta": {"status": 413755, "error_message": "<value>"}}
-        "401":
-          application/json: {"meta": {"status": 413755, "error_message": "<value>"}}
-        "402":
-          application/json: {"meta": {"status": 413755, "error_message": "<value>"}}
-        "403":
-          application/json: {"meta": {"status": 413755, "error_message": "<value>"}}
-        "404":
-          application/json: {"meta": {"status": 413755, "error_message": "<value>"}}
-        "409":
-          application/json: {"meta": {"status": 413755, "error_message": "<value>"}}
-        "422":
-          application/json: {"meta": {"status": 413755, "error_message": "<value>"}}
-        "500":
-          application/json: {"meta": {"status": 413755, "error_message": "<value>"}}
-        "502":
-          application/json: {"meta": {"status": 413755, "error_message": "<value>"}}
-        "503":
-          application/json: {"meta": {"status": 413755, "error_message": "<value>"}}
-        "504":
-          application/json: {"meta": {"status": 413755, "error_message": "<value>"}}
-  MSTeams_getMsteamsConfig:
-    speakeasy-default-MS-teams-get-msteams-config:
-      responses:
-        "200":
-          application/json: {"data": {"default_conversation_name": "<value>", "default_conversation_id": "<id>", "is_active": true, "is_default_active": false, "is_custom_channels_active": true, "triggers": {"all_active": true, "custom": ["<value>"]}, "tenant_id": "<id>", "from_id": "<id>", "connected_teams": [{"team_id": "<id>", "team_name": "<value>", "channel_configurations": []}]}}
-        "400":
-          application/json: {"meta": {"status": 704723, "error_message": "<value>"}}
-        "401":
-          application/json: {"meta": {"status": 704723, "error_message": "<value>"}}
-        "402":
-          application/json: {"meta": {"status": 704723, "error_message": "<value>"}}
-        "403":
-          application/json: {"meta": {"status": 704723, "error_message": "<value>"}}
-        "404":
-          application/json: {"meta": {"status": 704723, "error_message": "<value>"}}
-        "409":
-          application/json: {"meta": {"status": 704723, "error_message": "<value>"}}
-        "422":
-          application/json: {"meta": {"status": 704723, "error_message": "<value>"}}
-        "500":
-          application/json: {"meta": {"status": 704723, "error_message": "<value>"}}
-        "502":
-          application/json: {"meta": {"status": 704723, "error_message": "<value>"}}
-        "503":
-          application/json: {"meta": {"status": 704723, "error_message": "<value>"}}
-        "504":
-          application/json: {"meta": {"status": 704723, "error_message": "<value>"}}
   MSTeams_createOrUpdateMsteamsConfiguration:
     speakeasy-default-MS-teams-create-or-update-msteams-configuration:
       requestBody:
@@ -4902,6 +4872,33 @@ examples:
           application/json: {"meta": {"status": 149788, "error_message": "<value>"}}
         "504":
           application/json: {"meta": {"status": 149788, "error_message": "<value>"}}
+  MSTeams_getMsteamsConfig:
+    speakeasy-default-MS-teams-get-msteams-config:
+      responses:
+        "200":
+          application/json: {"data": {"default_conversation_name": "<value>", "default_conversation_id": "<id>", "is_active": true, "is_default_active": false, "is_custom_channels_active": true, "triggers": {"all_active": true, "custom": ["<value>"]}, "tenant_id": "<id>", "from_id": "<id>", "connected_teams": [{"team_id": "<id>", "team_name": "<value>", "channel_configurations": []}]}}
+        "400":
+          application/json: {"meta": {"status": 704723, "error_message": "<value>"}}
+        "401":
+          application/json: {"meta": {"status": 704723, "error_message": "<value>"}}
+        "402":
+          application/json: {"meta": {"status": 704723, "error_message": "<value>"}}
+        "403":
+          application/json: {"meta": {"status": 704723, "error_message": "<value>"}}
+        "404":
+          application/json: {"meta": {"status": 704723, "error_message": "<value>"}}
+        "409":
+          application/json: {"meta": {"status": 704723, "error_message": "<value>"}}
+        "422":
+          application/json: {"meta": {"status": 704723, "error_message": "<value>"}}
+        "500":
+          application/json: {"meta": {"status": 704723, "error_message": "<value>"}}
+        "502":
+          application/json: {"meta": {"status": 704723, "error_message": "<value>"}}
+        "503":
+          application/json: {"meta": {"status": 704723, "error_message": "<value>"}}
+        "504":
+          application/json: {"meta": {"status": 704723, "error_message": "<value>"}}
   CommunicationCards_createSlackChannelInCommunicationCard:
     speakeasy-default-communication-cards-create-slack-channel-in-communication-card:
       requestBody:
@@ -4938,132 +4935,6 @@ examples:
       responses:
         "200":
           application/json: {"data": {"created_at": "1706488367003", "updated_at": "1735622666543", "deleted_at": "<value>", "id": 329939, "incident_id": "<id>", "url": "https://some-husband.com/", "type": "<value>", "title": "<value>", "channel_id": "<id>", "archived_at": "<value>"}}
-        "400":
-          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
-        "401":
-          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
-        "402":
-          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
-        "403":
-          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
-        "404":
-          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
-        "409":
-          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
-        "422":
-          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
-        "500":
-          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
-        "502":
-          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
-        "503":
-          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
-        "504":
-          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
-  CommunicationCards_getAllCommunicationCard:
-    speakeasy-default-communication-cards-get-all-communication-card:
-      parameters:
-        path:
-          IncidentId: "<id>"
-      responses:
-        "200":
-          application/json: {"data": [{"created_at": "1705860140147", "updated_at": "1735680000578", "deleted_at": "<value>", "id": 11907, "incident_id": "<id>", "url": "https://silky-councilman.net", "type": "<value>", "title": "<value>", "channel_id": "<id>", "archived_at": "<value>"}]}
-        "400":
-          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
-        "401":
-          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
-        "402":
-          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
-        "403":
-          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
-        "404":
-          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
-        "409":
-          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
-        "422":
-          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
-        "500":
-          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
-        "502":
-          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
-        "503":
-          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
-        "504":
-          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
-  CommunicationCards_createCommunicationCard:
-    speakeasy-default-communication-cards-create-communication-card:
-      parameters:
-        path:
-          IncidentId: "<id>"
-      requestBody:
-        application/json: {"type": "<value>", "url": "https://oily-injunction.info", "title": "<value>"}
-      responses:
-        "200":
-          application/json: {"data": {"created_at": "1734514338160", "updated_at": "1735645705803", "deleted_at": "<value>", "id": 600872, "incident_id": "<id>", "url": "https://confused-singing.net", "type": "<value>", "title": "<value>", "channel_id": "<id>", "archived_at": "<value>"}}
-        "400":
-          application/json: {"meta": {"status": 291128, "error_message": "<value>"}}
-        "401":
-          application/json: {"meta": {"status": 291128, "error_message": "<value>"}}
-        "402":
-          application/json: {"meta": {"status": 291128, "error_message": "<value>"}}
-        "403":
-          application/json: {"meta": {"status": 291128, "error_message": "<value>"}}
-        "404":
-          application/json: {"meta": {"status": 291128, "error_message": "<value>"}}
-        "409":
-          application/json: {"meta": {"status": 291128, "error_message": "<value>"}}
-        "422":
-          application/json: {"meta": {"status": 291128, "error_message": "<value>"}}
-        "500":
-          application/json: {"meta": {"status": 291128, "error_message": "<value>"}}
-        "502":
-          application/json: {"meta": {"status": 291128, "error_message": "<value>"}}
-        "503":
-          application/json: {"meta": {"status": 291128, "error_message": "<value>"}}
-        "504":
-          application/json: {"meta": {"status": 291128, "error_message": "<value>"}}
-  CommunicationCards_deleteCommunicationCard:
-    speakeasy-default-communication-cards-delete-communication-card:
-      parameters:
-        path:
-          IncidentId: "<id>"
-          communicationCardId: "<id>"
-      responses:
-        "200":
-          application/json: {"data": "<value>"}
-        "400":
-          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
-        "401":
-          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
-        "402":
-          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
-        "403":
-          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
-        "404":
-          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
-        "409":
-          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
-        "422":
-          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
-        "500":
-          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
-        "502":
-          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
-        "503":
-          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
-        "504":
-          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
-  CommunicationCards_updateCommunicationCard:
-    speakeasy-default-communication-cards-update-communication-card:
-      parameters:
-        path:
-          IncidentId: "<id>"
-          communicationCardId: "<id>"
-      requestBody:
-        application/json: {"title": "<value>", "type": "<value>", "url": "https://major-cantaloupe.com/"}
-      responses:
-        "200":
-          application/json: {"data": {"created_at": "1709577297847", "updated_at": "1735671525970", "deleted_at": "<value>", "id": 483630, "incident_id": "<id>", "url": "https://pleasing-soup.info", "type": "<value>", "title": "<value>", "channel_id": "<id>", "archived_at": "<value>"}}
         "400":
           application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
         "401":
@@ -5237,70 +5108,6 @@ examples:
           application/json: {"meta": {"status": 906595, "error_message": "<value>"}}
         "504":
           application/json: {"meta": {"status": 906595, "error_message": "<value>"}}
-  GlobalEventRules_createRuleset:
-    speakeasy-default-global-event-rules-create-ruleset:
-      parameters:
-        path:
-          ger_id: 216762
-      requestBody:
-        application/json: {"alert_source_shortname": "<value>", "alert_source_version": "<value>"}
-      responses:
-        "201":
-          application/json: {"data": {}}
-        "400":
-          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
-        "401":
-          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
-        "402":
-          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
-        "403":
-          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
-        "404":
-          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
-        "409":
-          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
-        "422":
-          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
-        "500":
-          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
-        "502":
-          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
-        "503":
-          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
-        "504":
-          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
-  GlobalEventRules_deleteGerRuleset:
-    speakeasy-default-global-event-rules-delete-ger-ruleset:
-      parameters:
-        path:
-          ger_id: 198518
-          alert_source_version: "<value>"
-          alert_source_shortname: "<value>"
-      responses:
-        "204":
-          '*/*': "0x208F168E8B"
-        "400":
-          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
-        "401":
-          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
-        "402":
-          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
-        "403":
-          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
-        "404":
-          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
-        "409":
-          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
-        "422":
-          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
-        "500":
-          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
-        "502":
-          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
-        "503":
-          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
-        "504":
-          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
   GlobalEventRules_getRuleset:
     speakeasy-default-global-event-rules-get-ruleset:
       parameters:
@@ -5367,6 +5174,73 @@ examples:
           application/json: {"meta": {"status": 856072, "error_message": "<value>"}}
         "504":
           application/json: {"meta": {"status": 856072, "error_message": "<value>"}}
+  GlobalEventRules_updateRuleById:
+    speakeasy-default-global-event-rules-update-rule-by-id:
+      parameters:
+        path:
+          ger_id: 140241
+          alert_source_version: "<value>"
+          alert_source_shortname: "<value>"
+          rule_id: "<id>"
+      requestBody:
+        application/json: {}
+      responses:
+        "200":
+          application/json: {"data": {}}
+        "400":
+          application/json: {"meta": {"status": 746679, "error_message": "<value>"}}
+        "401":
+          application/json: {"meta": {"status": 746679, "error_message": "<value>"}}
+        "402":
+          application/json: {"meta": {"status": 746679, "error_message": "<value>"}}
+        "403":
+          application/json: {"meta": {"status": 746679, "error_message": "<value>"}}
+        "404":
+          application/json: {"meta": {"status": 746679, "error_message": "<value>"}}
+        "409":
+          application/json: {"meta": {"status": 746679, "error_message": "<value>"}}
+        "422":
+          application/json: {"meta": {"status": 746679, "error_message": "<value>"}}
+        "500":
+          application/json: {"meta": {"status": 746679, "error_message": "<value>"}}
+        "502":
+          application/json: {"meta": {"status": 746679, "error_message": "<value>"}}
+        "503":
+          application/json: {"meta": {"status": 746679, "error_message": "<value>"}}
+        "504":
+          application/json: {"meta": {"status": 746679, "error_message": "<value>"}}
+  GlobalEventRules_createRuleset:
+    speakeasy-default-global-event-rules-create-ruleset:
+      parameters:
+        path:
+          ger_id: 216762
+      requestBody:
+        application/json: {"alert_source_shortname": "<value>", "alert_source_version": "<value>"}
+      responses:
+        "201":
+          application/json: {"data": {}}
+        "400":
+          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
+        "401":
+          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
+        "402":
+          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
+        "403":
+          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
+        "404":
+          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
+        "409":
+          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
+        "422":
+          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
+        "500":
+          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
+        "502":
+          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
+        "503":
+          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
+        "504":
+          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
   GlobalEventRules_reorderRuleset:
     speakeasy-default-global-event-rules-reorder-ruleset:
       parameters:
@@ -5478,74 +5352,6 @@ examples:
           application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
         "504":
           application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
-  GlobalEventRules_deleteRuleById:
-    speakeasy-default-global-event-rules-delete-rule-by-id:
-      parameters:
-        path:
-          ger_id: 921538
-          alert_source_version: "<value>"
-          alert_source_shortname: "<value>"
-          rule_id: "<id>"
-      responses:
-        "204":
-          '*/*': "0xaf6a9E1d0D"
-        "400":
-          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
-        "401":
-          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
-        "402":
-          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
-        "403":
-          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
-        "404":
-          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
-        "409":
-          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
-        "422":
-          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
-        "500":
-          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
-        "502":
-          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
-        "503":
-          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
-        "504":
-          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
-  GlobalEventRules_updateRuleById:
-    speakeasy-default-global-event-rules-update-rule-by-id:
-      parameters:
-        path:
-          ger_id: 140241
-          alert_source_version: "<value>"
-          alert_source_shortname: "<value>"
-          rule_id: "<id>"
-      requestBody:
-        application/json: {}
-      responses:
-        "200":
-          application/json: {"data": {}}
-        "400":
-          application/json: {"meta": {"status": 746679, "error_message": "<value>"}}
-        "401":
-          application/json: {"meta": {"status": 746679, "error_message": "<value>"}}
-        "402":
-          application/json: {"meta": {"status": 746679, "error_message": "<value>"}}
-        "403":
-          application/json: {"meta": {"status": 746679, "error_message": "<value>"}}
-        "404":
-          application/json: {"meta": {"status": 746679, "error_message": "<value>"}}
-        "409":
-          application/json: {"meta": {"status": 746679, "error_message": "<value>"}}
-        "422":
-          application/json: {"meta": {"status": 746679, "error_message": "<value>"}}
-        "500":
-          application/json: {"meta": {"status": 746679, "error_message": "<value>"}}
-        "502":
-          application/json: {"meta": {"status": 746679, "error_message": "<value>"}}
-        "503":
-          application/json: {"meta": {"status": 746679, "error_message": "<value>"}}
-        "504":
-          application/json: {"meta": {"status": 746679, "error_message": "<value>"}}
   GlobalEventRules_reorderRulesetByIndex:
     speakeasy-default-global-event-rules-reorder-ruleset-by-index:
       parameters:
@@ -5581,6 +5387,71 @@ examples:
           application/json: {"meta": {"status": 383291, "error_message": "<value>"}}
         "504":
           application/json: {"meta": {"status": 383291, "error_message": "<value>"}}
+  GlobalEventRules_deleteGerRuleset:
+    speakeasy-default-global-event-rules-delete-ger-ruleset:
+      parameters:
+        path:
+          ger_id: 198518
+          alert_source_version: "<value>"
+          alert_source_shortname: "<value>"
+      responses:
+        "204":
+          '*/*': "0x208F168E8B"
+        "400":
+          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
+        "401":
+          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
+        "402":
+          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
+        "403":
+          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
+        "404":
+          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
+        "409":
+          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
+        "422":
+          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
+        "500":
+          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
+        "502":
+          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
+        "503":
+          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
+        "504":
+          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
+  GlobalEventRules_deleteRuleById:
+    speakeasy-default-global-event-rules-delete-rule-by-id:
+      parameters:
+        path:
+          ger_id: 921538
+          alert_source_version: "<value>"
+          alert_source_shortname: "<value>"
+          rule_id: "<id>"
+      responses:
+        "204":
+          '*/*': "0xaf6a9E1d0D"
+        "400":
+          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
+        "401":
+          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
+        "402":
+          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
+        "403":
+          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
+        "404":
+          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
+        "409":
+          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
+        "422":
+          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
+        "500":
+          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
+        "502":
+          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
+        "503":
+          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
+        "504":
+          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
   GlobalOncallReminderRules_deleteGlobalOncallReminderRules:
     speakeasy-default-global-oncall-reminder-rules-delete-global-oncall-reminder-rules:
       parameters:
@@ -5905,41 +5776,6 @@ examples:
           application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
         "504":
           application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
-  Incidents_getIncidentEvents:
-    speakeasy-default-incidents-get-incident-events:
-      parameters:
-        path:
-          incidentID: "<id>"
-        query:
-          offset: "<value>"
-          limit: "<value>"
-          sort: "<value>"
-          deduped: "<value>"
-      responses:
-        "200":
-          application/json: {"data": {"events": [{"incident_id": "<id>", "alert_source_id": "<id>", "message": "<value>", "description": "lovable hospitalization furiously dirty boo tusk catalog surprise gah", "time_of_creation": "2025-05-11T18:49:14.168Z", "tags": {}, "payload": {}}]}, "meta": {"total": 276760, "count": 473721, "current": "<value>"}}
-        "400":
-          application/json: {"meta": {"status": 25672, "error_message": "<value>"}}
-        "401":
-          application/json: {"meta": {"status": 25672, "error_message": "<value>"}}
-        "402":
-          application/json: {"meta": {"status": 25672, "error_message": "<value>"}}
-        "403":
-          application/json: {"meta": {"status": 25672, "error_message": "<value>"}}
-        "404":
-          application/json: {"meta": {"status": 25672, "error_message": "<value>"}}
-        "409":
-          application/json: {"meta": {"status": 25672, "error_message": "<value>"}}
-        "422":
-          application/json: {"meta": {"status": 25672, "error_message": "<value>"}}
-        "500":
-          application/json: {"meta": {"status": 25672, "error_message": "<value>"}}
-        "502":
-          application/json: {"meta": {"status": 25672, "error_message": "<value>"}}
-        "503":
-          application/json: {"meta": {"status": 25672, "error_message": "<value>"}}
-        "504":
-          application/json: {"meta": {"status": 25672, "error_message": "<value>"}}
   Incidents_markIncidentSloFalsePositive:
     speakeasy-default-incidents-mark-incident-slo-false-positive:
       parameters:
@@ -6129,98 +5965,36 @@ examples:
           application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
         "504":
           application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
-  Postmortems_deletePostmortemByIncident:
-    speakeasy-default-postmortems-delete-postmortem-by-incident:
+  Apta_markAsTransient:
+    speakeasy-default-apta-mark-as-transient:
       parameters:
         path:
           incidentID: "<id>"
       responses:
         "200":
-          application/json: {"data": {"id": "<id>", "organization_id": "<id>", "incident_id": "<id>", "postmortem": "<value>", "follow_ups": [], "created_at": "1707740057057", "title": "<value>", "status": "under_review", "owner": {"id": "<id>", "type": "team"}, "access_control": []}}
+          application/json: {"data": {"message": "<value>"}}
         "400":
-          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
+          application/json: {"meta": {"status": 562319, "error_message": "<value>"}}
         "401":
-          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
+          application/json: {"meta": {"status": 562319, "error_message": "<value>"}}
         "402":
-          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
+          application/json: {"meta": {"status": 562319, "error_message": "<value>"}}
         "403":
-          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
+          application/json: {"meta": {"status": 562319, "error_message": "<value>"}}
         "404":
-          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
+          application/json: {"meta": {"status": 562319, "error_message": "<value>"}}
         "409":
-          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
+          application/json: {"meta": {"status": 562319, "error_message": "<value>"}}
         "422":
-          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
+          application/json: {"meta": {"status": 562319, "error_message": "<value>"}}
         "500":
-          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
+          application/json: {"meta": {"status": 562319, "error_message": "<value>"}}
         "502":
-          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
+          application/json: {"meta": {"status": 562319, "error_message": "<value>"}}
         "503":
-          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
+          application/json: {"meta": {"status": 562319, "error_message": "<value>"}}
         "504":
-          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
-  Postmortems_getPostmortemByIncident:
-    speakeasy-default-postmortems-get-postmortem-by-incident:
-      parameters:
-        path:
-          incidentID: "<id>"
-      responses:
-        "200":
-          application/json: {"data": {"id": "<id>", "organization_id": "<id>", "incident_id": "<id>", "postmortem": "<value>", "follow_ups": [], "created_at": "1711803710367", "title": "<value>", "status": "under_review", "owner": {"id": "<id>", "type": "team"}, "access_control": []}}
-        "400":
-          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
-        "401":
-          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
-        "402":
-          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
-        "403":
-          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
-        "404":
-          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
-        "409":
-          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
-        "422":
-          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
-        "500":
-          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
-        "502":
-          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
-        "503":
-          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
-        "504":
-          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
-  Postmortems_createPostmortem:
-    speakeasy-default-postmortems-create-postmortem:
-      parameters:
-        path:
-          incidentID: "<id>"
-      requestBody:
-        application/json: {"owner_id": "<id>", "title": "<value>", "postmortem": "<value>", "status": "published", "follow_ups": [], "attachments": [{}]}
-      responses:
-        "201":
-          application/json: {"body": {"data": {"id": "<id>", "organization_id": "<id>", "incident_id": "<id>", "postmortem": "<value>", "follow_ups": [{"task": "<value>", "is_done": false}], "created_at": "1719461759633", "title": "<value>", "status": "in_progress", "owner": {"id": "<id>", "type": "team"}, "access_control": [{"user_id": "<id>", "abilities": {}}]}}}
-        "400":
-          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
-        "401":
-          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
-        "402":
-          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
-        "403":
-          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
-        "404":
-          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
-        "409":
-          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
-        "422":
-          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
-        "500":
-          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
-        "502":
-          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
-        "503":
-          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
-        "504":
-          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
+          application/json: {"meta": {"status": 562319, "error_message": "<value>"}}
   Postmortems_updatePostmortemByIncident:
     speakeasy-default-postmortems-update-postmortem-by-incident:
       parameters:
@@ -6231,6 +6005,164 @@ examples:
       responses:
         "200":
           application/json: {"data": {"id": "<id>", "organization_id": "<id>", "incident_id": "<id>", "postmortem": "<value>", "follow_ups": [], "created_at": "1721262237646", "title": "<value>", "status": "published", "owner": {"id": "<id>", "type": "team"}, "access_control": []}}
+        "400":
+          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
+        "401":
+          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
+        "402":
+          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
+        "403":
+          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
+        "404":
+          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
+        "409":
+          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
+        "422":
+          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
+        "500":
+          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
+        "502":
+          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
+        "503":
+          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
+        "504":
+          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
+  SnoozeNotifications_unsnoozeIncidentNotifications:
+    speakeasy-default-snooze-notifications-unsnooze-incident-notifications:
+      parameters:
+        path:
+          incidentID: "<id>"
+      requestBody:
+        application/json: {"reassign_to": {"id": "<id>", "type": "<value>"}}
+      responses:
+        "200":
+          application/json: {"data": {"incident_id": "<id>", "is_snoozed": false, "reassign_to": {"id": "<id>", "type": "<value>"}}}
+        "400":
+          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
+        "401":
+          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
+        "402":
+          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
+        "403":
+          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
+        "404":
+          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
+        "409":
+          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
+        "422":
+          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
+        "500":
+          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
+        "502":
+          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
+        "503":
+          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
+        "504":
+          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
+  CommunicationCards_getAllCommunicationCard:
+    speakeasy-default-communication-cards-get-all-communication-card:
+      parameters:
+        path:
+          IncidentId: "<id>"
+      responses:
+        "200":
+          application/json: {"data": [{"created_at": "1705860140147", "updated_at": "1735680000578", "deleted_at": "<value>", "id": 11907, "incident_id": "<id>", "url": "https://silky-councilman.net", "type": "<value>", "title": "<value>", "channel_id": "<id>", "archived_at": "<value>"}]}
+        "400":
+          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
+        "401":
+          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
+        "402":
+          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
+        "403":
+          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
+        "404":
+          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
+        "409":
+          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
+        "422":
+          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
+        "500":
+          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
+        "502":
+          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
+        "503":
+          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
+        "504":
+          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
+  CommunicationCards_createCommunicationCard:
+    speakeasy-default-communication-cards-create-communication-card:
+      parameters:
+        path:
+          IncidentId: "<id>"
+      requestBody:
+        application/json: {"type": "<value>", "url": "https://oily-injunction.info", "title": "<value>"}
+      responses:
+        "200":
+          application/json: {"data": {"created_at": "1734514338160", "updated_at": "1735645705803", "deleted_at": "<value>", "id": 600872, "incident_id": "<id>", "url": "https://confused-singing.net", "type": "<value>", "title": "<value>", "channel_id": "<id>", "archived_at": "<value>"}}
+        "400":
+          application/json: {"meta": {"status": 291128, "error_message": "<value>"}}
+        "401":
+          application/json: {"meta": {"status": 291128, "error_message": "<value>"}}
+        "402":
+          application/json: {"meta": {"status": 291128, "error_message": "<value>"}}
+        "403":
+          application/json: {"meta": {"status": 291128, "error_message": "<value>"}}
+        "404":
+          application/json: {"meta": {"status": 291128, "error_message": "<value>"}}
+        "409":
+          application/json: {"meta": {"status": 291128, "error_message": "<value>"}}
+        "422":
+          application/json: {"meta": {"status": 291128, "error_message": "<value>"}}
+        "500":
+          application/json: {"meta": {"status": 291128, "error_message": "<value>"}}
+        "502":
+          application/json: {"meta": {"status": 291128, "error_message": "<value>"}}
+        "503":
+          application/json: {"meta": {"status": 291128, "error_message": "<value>"}}
+        "504":
+          application/json: {"meta": {"status": 291128, "error_message": "<value>"}}
+  CommunicationCards_deleteCommunicationCard:
+    speakeasy-default-communication-cards-delete-communication-card:
+      parameters:
+        path:
+          IncidentId: "<id>"
+          communicationCardId: "<id>"
+      responses:
+        "200":
+          application/json: {"data": "<value>"}
+        "400":
+          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
+        "401":
+          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
+        "402":
+          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
+        "403":
+          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
+        "404":
+          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
+        "409":
+          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
+        "422":
+          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
+        "500":
+          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
+        "502":
+          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
+        "503":
+          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
+        "504":
+          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
+  CommunicationCards_updateCommunicationCard:
+    speakeasy-default-communication-cards-update-communication-card:
+      parameters:
+        path:
+          IncidentId: "<id>"
+          communicationCardId: "<id>"
+      requestBody:
+        application/json: {"title": "<value>", "type": "<value>", "url": "https://major-cantaloupe.com/"}
+      responses:
+        "200":
+          application/json: {"data": {"created_at": "1709577297847", "updated_at": "1735671525970", "deleted_at": "<value>", "id": 483630, "incident_id": "<id>", "url": "https://pleasing-soup.info", "type": "<value>", "title": "<value>", "channel_id": "<id>", "archived_at": "<value>"}}
         "400":
           application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
         "401":
@@ -6381,36 +6313,6 @@ examples:
           application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
         "504":
           application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
-  Notes_getAllNotes:
-    speakeasy-default-notes-get-all-notes:
-      parameters:
-        path:
-          IncidentId: "<id>"
-      responses:
-        "200":
-          application/json: {"data": []}
-        "400":
-          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
-        "401":
-          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
-        "402":
-          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
-        "403":
-          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
-        "404":
-          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
-        "409":
-          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
-        "422":
-          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
-        "500":
-          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
-        "502":
-          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
-        "503":
-          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
-        "504":
-          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
   Notes_deleteNote:
     speakeasy-default-notes-delete-note:
       parameters:
@@ -6475,39 +6377,6 @@ examples:
           application/json: {"meta": {"status": 521320, "error_message": "<value>"}}
         "504":
           application/json: {"meta": {"status": 521320, "error_message": "<value>"}}
-  IncidentActions_rebuildAProjectInCircleci:
-    speakeasy-default-incident-actions-rebuild-A-project-in-circleci:
-      parameters:
-        path:
-          incidentID: "<id>"
-          buildNumber: "<value>"
-      requestBody:
-        application/json: {"vcs_type": "<value>", "username": "Dora.Waelchi", "reponame": "<value>"}
-      responses:
-        "200":
-          application/json: {"data": {"action_id": "<id>", "circleci_response": {"username": "Briana.Collier", "reponame": "<value>", "build_num": 672390, "build_url": "https://unwilling-majority.name/", "build_parameters": {"CIRCLE_JOB": "<value>"}, "previous": {"build_num": 744348, "build_time_millis": 545103, "status": "<value>"}, "previous_successful_build": {"build_num": 581422, "build_time_millis": 376240, "status": "<value>"}, "retry_of": 521738, "body": "<value>", "subject": "<value>", "status": "<value>", "lifecycle": "<value>", "outcome": "<value>", "committer_date": "<value>", "committer_email": "<value>", "committer_name": "<value>", "author_date": "<value>", "author_email": "<value>", "author_name": "<value>", "branch": "<value>", "vcs_type": "<value>", "vcs_url": "https://inexperienced-pigsty.com", "start_time": "<value>", "stop_time": "<value>"}}}
-        "400":
-          application/json: {"meta": {"status_code": 840983, "error_message": "<value>"}}
-        "401":
-          application/json: {"meta": {"status": 17385, "error_message": "<value>"}}
-        "402":
-          application/json: {"meta": {"status": 17385, "error_message": "<value>"}}
-        "403":
-          application/json: {"meta": {"status": 17385, "error_message": "<value>"}}
-        "404":
-          application/json: {"meta": {"status": 17385, "error_message": "<value>"}}
-        "409":
-          application/json: {"meta": {"status": 17385, "error_message": "<value>"}}
-        "422":
-          application/json: {"meta": {"status": 17385, "error_message": "<value>"}}
-        "500":
-          application/json: {"meta": {"status": 17385, "error_message": "<value>"}}
-        "502":
-          application/json: {"meta": {"status": 17385, "error_message": "<value>"}}
-        "503":
-          application/json: {"meta": {"status": 17385, "error_message": "<value>"}}
-        "504":
-          application/json: {"meta": {"status": 17385, "error_message": "<value>"}}
   IncidentActions_createATicketOnJiraCloud:
     speakeasy-default-incident-actions-create-A-ticket-on-jira-cloud:
       parameters:
@@ -6722,6 +6591,41 @@ examples:
           application/json: {"meta": {"status": 961748, "error_message": "<value>"}}
         "504":
           application/json: {"meta": {"status": 961748, "error_message": "<value>"}}
+  Incidents_getIncidentEvents:
+    speakeasy-default-incidents-get-incident-events:
+      parameters:
+        path:
+          incidentID: "<id>"
+        query:
+          offset: "<value>"
+          limit: "<value>"
+          sort: "<value>"
+          deduped: "<value>"
+      responses:
+        "200":
+          application/json: {"data": {"events": [{"incident_id": "<id>", "alert_source_id": "<id>", "message": "<value>", "description": "lovable hospitalization furiously dirty boo tusk catalog surprise gah", "time_of_creation": "2025-05-11T18:49:14.168Z", "tags": {}, "payload": {}}]}, "meta": {"total": 276760, "count": 473721, "current": "<value>"}}
+        "400":
+          application/json: {"meta": {"status": 25672, "error_message": "<value>"}}
+        "401":
+          application/json: {"meta": {"status": 25672, "error_message": "<value>"}}
+        "402":
+          application/json: {"meta": {"status": 25672, "error_message": "<value>"}}
+        "403":
+          application/json: {"meta": {"status": 25672, "error_message": "<value>"}}
+        "404":
+          application/json: {"meta": {"status": 25672, "error_message": "<value>"}}
+        "409":
+          application/json: {"meta": {"status": 25672, "error_message": "<value>"}}
+        "422":
+          application/json: {"meta": {"status": 25672, "error_message": "<value>"}}
+        "500":
+          application/json: {"meta": {"status": 25672, "error_message": "<value>"}}
+        "502":
+          application/json: {"meta": {"status": 25672, "error_message": "<value>"}}
+        "503":
+          application/json: {"meta": {"status": 25672, "error_message": "<value>"}}
+        "504":
+          application/json: {"meta": {"status": 25672, "error_message": "<value>"}}
   Apta_markAsNotTransient:
     speakeasy-default-apta-mark-as-not-transient:
       parameters:
@@ -6752,36 +6656,98 @@ examples:
           application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
         "504":
           application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
-  Apta_markAsTransient:
-    speakeasy-default-apta-mark-as-transient:
+  Postmortems_deletePostmortemByIncident:
+    speakeasy-default-postmortems-delete-postmortem-by-incident:
       parameters:
         path:
           incidentID: "<id>"
       responses:
         "200":
-          application/json: {"data": {"message": "<value>"}}
+          application/json: {"data": {"id": "<id>", "organization_id": "<id>", "incident_id": "<id>", "postmortem": "<value>", "follow_ups": [], "created_at": "1707740057057", "title": "<value>", "status": "under_review", "owner": {"id": "<id>", "type": "team"}, "access_control": []}}
         "400":
-          application/json: {"meta": {"status": 562319, "error_message": "<value>"}}
+          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
         "401":
-          application/json: {"meta": {"status": 562319, "error_message": "<value>"}}
+          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
         "402":
-          application/json: {"meta": {"status": 562319, "error_message": "<value>"}}
+          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
         "403":
-          application/json: {"meta": {"status": 562319, "error_message": "<value>"}}
+          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
         "404":
-          application/json: {"meta": {"status": 562319, "error_message": "<value>"}}
+          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
         "409":
-          application/json: {"meta": {"status": 562319, "error_message": "<value>"}}
+          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
         "422":
-          application/json: {"meta": {"status": 562319, "error_message": "<value>"}}
+          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
         "500":
-          application/json: {"meta": {"status": 562319, "error_message": "<value>"}}
+          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
         "502":
-          application/json: {"meta": {"status": 562319, "error_message": "<value>"}}
+          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
         "503":
-          application/json: {"meta": {"status": 562319, "error_message": "<value>"}}
+          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
         "504":
-          application/json: {"meta": {"status": 562319, "error_message": "<value>"}}
+          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
+  Postmortems_getPostmortemByIncident:
+    speakeasy-default-postmortems-get-postmortem-by-incident:
+      parameters:
+        path:
+          incidentID: "<id>"
+      responses:
+        "200":
+          application/json: {"data": {"id": "<id>", "organization_id": "<id>", "incident_id": "<id>", "postmortem": "<value>", "follow_ups": [], "created_at": "1711803710367", "title": "<value>", "status": "under_review", "owner": {"id": "<id>", "type": "team"}, "access_control": []}}
+        "400":
+          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
+        "401":
+          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
+        "402":
+          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
+        "403":
+          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
+        "404":
+          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
+        "409":
+          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
+        "422":
+          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
+        "500":
+          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
+        "502":
+          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
+        "503":
+          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
+        "504":
+          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
+  Postmortems_createPostmortem:
+    speakeasy-default-postmortems-create-postmortem:
+      parameters:
+        path:
+          incidentID: "<id>"
+      requestBody:
+        application/json: {"owner_id": "<id>", "title": "<value>", "postmortem": "<value>", "status": "published", "follow_ups": [], "attachments": [{}]}
+      responses:
+        "201":
+          application/json: {"body": {"data": {"id": "<id>", "organization_id": "<id>", "incident_id": "<id>", "postmortem": "<value>", "follow_ups": [{"task": "<value>", "is_done": false}], "created_at": "1719461759633", "title": "<value>", "status": "in_progress", "owner": {"id": "<id>", "type": "team"}, "access_control": [{"user_id": "<id>", "abilities": {}}]}}}
+        "400":
+          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
+        "401":
+          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
+        "402":
+          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
+        "403":
+          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
+        "404":
+          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
+        "409":
+          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
+        "422":
+          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
+        "500":
+          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
+        "502":
+          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
+        "503":
+          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
+        "504":
+          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
   SnoozeNotifications_snoozeIncidentNotifications:
     speakeasy-default-snooze-notifications-snooze-incident-notifications:
       parameters:
@@ -6814,16 +6780,14 @@ examples:
           application/json: {"meta": {"status": 663967, "error_message": "<value>"}}
         "504":
           application/json: {"meta": {"status": 663967, "error_message": "<value>"}}
-  SnoozeNotifications_unsnoozeIncidentNotifications:
-    speakeasy-default-snooze-notifications-unsnooze-incident-notifications:
+  Notes_getAllNotes:
+    speakeasy-default-notes-get-all-notes:
       parameters:
         path:
-          incidentID: "<id>"
-      requestBody:
-        application/json: {"reassign_to": {"id": "<id>", "type": "<value>"}}
+          IncidentId: "<id>"
       responses:
         "200":
-          application/json: {"data": {"incident_id": "<id>", "is_snoozed": false, "reassign_to": {"id": "<id>", "type": "<value>"}}}
+          application/json: {"data": []}
         "400":
           application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
         "401":
@@ -6846,6 +6810,39 @@ examples:
           application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
         "504":
           application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
+  IncidentActions_rebuildAProjectInCircleci:
+    speakeasy-default-incident-actions-rebuild-A-project-in-circleci:
+      parameters:
+        path:
+          incidentID: "<id>"
+          buildNumber: "<value>"
+      requestBody:
+        application/json: {"vcs_type": "<value>", "username": "Dora.Waelchi", "reponame": "<value>"}
+      responses:
+        "200":
+          application/json: {"data": {"action_id": "<id>", "circleci_response": {"username": "Briana.Collier", "reponame": "<value>", "build_num": 672390, "build_url": "https://unwilling-majority.name/", "build_parameters": {"CIRCLE_JOB": "<value>"}, "previous": {"build_num": 744348, "build_time_millis": 545103, "status": "<value>"}, "previous_successful_build": {"build_num": 581422, "build_time_millis": 376240, "status": "<value>"}, "retry_of": 521738, "body": "<value>", "subject": "<value>", "status": "<value>", "lifecycle": "<value>", "outcome": "<value>", "committer_date": "<value>", "committer_email": "<value>", "committer_name": "<value>", "author_date": "<value>", "author_email": "<value>", "author_name": "<value>", "branch": "<value>", "vcs_type": "<value>", "vcs_url": "https://inexperienced-pigsty.com", "start_time": "<value>", "stop_time": "<value>"}}}
+        "400":
+          application/json: {"meta": {"status_code": 840983, "error_message": "<value>"}}
+        "401":
+          application/json: {"meta": {"status": 17385, "error_message": "<value>"}}
+        "402":
+          application/json: {"meta": {"status": 17385, "error_message": "<value>"}}
+        "403":
+          application/json: {"meta": {"status": 17385, "error_message": "<value>"}}
+        "404":
+          application/json: {"meta": {"status": 17385, "error_message": "<value>"}}
+        "409":
+          application/json: {"meta": {"status": 17385, "error_message": "<value>"}}
+        "422":
+          application/json: {"meta": {"status": 17385, "error_message": "<value>"}}
+        "500":
+          application/json: {"meta": {"status": 17385, "error_message": "<value>"}}
+        "502":
+          application/json: {"meta": {"status": 17385, "error_message": "<value>"}}
+        "503":
+          application/json: {"meta": {"status": 17385, "error_message": "<value>"}}
+        "504":
+          application/json: {"meta": {"status": 17385, "error_message": "<value>"}}
   Users_getAllTokens:
     speakeasy-default-users-get-all-tokens:
       responses:
@@ -6902,6 +6899,239 @@ examples:
           application/json: {"meta": {"status": 340905, "error_message": "<value>"}}
         "504":
           application/json: {"meta": {"status": 340905, "error_message": "<value>"}}
+  Users_getAllUsers:
+    speakeasy-default-users-get-all-users:
+      responses:
+        "200":
+          application/json: {"data": [{"id": "<id>", "first_name": "Oral", "last_name": "Kerluke", "username_for_display": "<value>", "email": "Earnestine80@yahoo.com", "contact": {"dial_code": "<value>", "phone_number": "496.212.0634 x40718"}, "secondary_emails": ["<value 1>", "<value 2>"], "email_verified": false, "time_zone": "Africa/Sao_Tome", "title": "<value>", "bio": "<value>", "notification_rules": [], "user_image": false}]}
+        "400":
+          application/json: {"meta": {"status": 877777, "error_message": "<value>"}}
+        "401":
+          application/json: {"meta": {"status": 877777, "error_message": "<value>"}}
+        "402":
+          application/json: {"meta": {"status": 877777, "error_message": "<value>"}}
+        "403":
+          application/json: {"meta": {"status": 877777, "error_message": "<value>"}}
+        "404":
+          application/json: {"meta": {"status": 877777, "error_message": "<value>"}}
+        "409":
+          application/json: {"meta": {"status": 877777, "error_message": "<value>"}}
+        "422":
+          application/json: {"meta": {"status": 877777, "error_message": "<value>"}}
+        "500":
+          application/json: {"meta": {"status": 877777, "error_message": "<value>"}}
+        "502":
+          application/json: {"meta": {"status": 877777, "error_message": "<value>"}}
+        "503":
+          application/json: {"meta": {"status": 877777, "error_message": "<value>"}}
+        "504":
+          application/json: {"meta": {"status": 877777, "error_message": "<value>"}}
+  Users_addUser:
+    speakeasy-default-users-add-user:
+      requestBody:
+        application/json: {"email": "Clovis_Reynolds@hotmail.com", "role": "account_owner", "first_name": "Yvonne", "last_name": "Kozey"}
+      responses:
+        "201":
+          application/json: {"data": {"id": "<id>", "first_name": "Terrell", "last_name": "Durgan", "username_for_display": "<value>", "email": "Foster61@yahoo.com", "contact": {"dial_code": "<value>", "phone_number": "363-989-6098 x0455"}, "secondary_emails": ["<value 1>", "<value 2>", "<value 3>"], "email_verified": false, "time_zone": "America/Hermosillo", "title": "<value>", "bio": "<value>", "notification_rules": [], "user_image": true}}
+        "400":
+          application/json: {"meta": {"status": 280172, "error_message": "<value>"}}
+        "401":
+          application/json: {"meta": {"status": 280172, "error_message": "<value>"}}
+        "402":
+          application/json: {"meta": {"status": 280172, "error_message": "<value>"}}
+        "403":
+          application/json: {"meta": {"status": 280172, "error_message": "<value>"}}
+        "404":
+          application/json: {"meta": {"status": 280172, "error_message": "<value>"}}
+        "409":
+          application/json: {"meta": {"status": 280172, "error_message": "<value>"}}
+        "422":
+          application/json: {"meta": {"status": 280172, "error_message": "<value>"}}
+        "500":
+          application/json: {"meta": {"status": 280172, "error_message": "<value>"}}
+        "502":
+          application/json: {"meta": {"status": 280172, "error_message": "<value>"}}
+        "503":
+          application/json: {"meta": {"status": 280172, "error_message": "<value>"}}
+        "504":
+          application/json: {"meta": {"status": 280172, "error_message": "<value>"}}
+  Users_updateOrgLevelPermissions:
+    speakeasy-default-users-update-org-level-permissions:
+      requestBody:
+        application/json: {"data": []}
+      responses:
+        "200":
+          application/json: {"data": "<value>"}
+        "400":
+          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
+        "401":
+          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
+        "402":
+          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
+        "403":
+          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
+        "404":
+          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
+        "409":
+          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
+        "422":
+          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
+        "500":
+          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
+        "502":
+          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
+        "503":
+          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
+        "504":
+          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
+  Users_deleteUser:
+    speakeasy-default-users-delete-user:
+      requestBody:
+        application/json: {"user_id": "<id>", "swap_user_id": "<id>", "suppress_incidents": true, "reassign_incidents": true}
+      responses:
+        "200":
+          application/json: {"data": {}}
+        "400":
+          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
+        "401":
+          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
+        "402":
+          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
+        "403":
+          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
+        "404":
+          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
+        "409":
+          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
+        "422":
+          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
+        "500":
+          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
+        "502":
+          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
+        "503":
+          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
+        "504":
+          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
+  Users_getUserRoles:
+    speakeasy-default-users-get-user-roles:
+      responses:
+        "200":
+          application/json: {"data": [{"id": "<id>", "name": "<value>", "limit": 292133, "order": 668791}]}
+        "400":
+          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
+        "401":
+          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
+        "402":
+          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
+        "403":
+          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
+        "404":
+          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
+        "409":
+          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
+        "422":
+          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
+        "500":
+          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
+        "502":
+          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
+        "503":
+          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
+        "504":
+          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
+  Users_removeUserFromOrg:
+    speakeasy-default-users-remove-user-from-org:
+      parameters:
+        path:
+          userID: "<id>"
+      responses:
+        "204":
+          '*/*': "0xc3d4E33AC5"
+        "400":
+          application/json: {"meta": {"status": 133495, "error_message": "<value>"}}
+        "401":
+          application/json: {"meta": {"status": 133495, "error_message": "<value>"}}
+        "402":
+          application/json: {"meta": {"status": 133495, "error_message": "<value>"}}
+        "403":
+          application/json: {"meta": {"status": 133495, "error_message": "<value>"}}
+        "404":
+          application/json: {"meta": {"status": 133495, "error_message": "<value>"}}
+        "409":
+          application/json: {"meta": {"status": 133495, "error_message": "<value>"}}
+        "422":
+          application/json: {"meta": {"status": 133495, "error_message": "<value>"}}
+        "500":
+          application/json: {"meta": {"status": 133495, "error_message": "<value>"}}
+        "502":
+          application/json: {"meta": {"status": 133495, "error_message": "<value>"}}
+        "503":
+          application/json: {"meta": {"status": 133495, "error_message": "<value>"}}
+        "504":
+          application/json: {"meta": {"status": 133495, "error_message": "<value>"}}
+  Users_getUserById:
+    speakeasy-default-users-get-user-by-id:
+      parameters:
+        path:
+          userID: "<id>"
+      responses:
+        "200":
+          application/json: {"data": {"id": "<id>", "first_name": "Augustine", "last_name": "Dare", "username_for_display": "<value>", "email": "Elnora.Hyatt@gmail.com", "contact": {"dial_code": "<value>", "phone_number": "(368) 689-2448 x918"}, "secondary_emails": ["<value 1>", "<value 2>", "<value 3>"], "email_verified": true, "time_zone": "America/Tijuana", "title": "<value>", "bio": "<value>", "notification_rules": [{"type": "<value>", "time": 96868}], "user_image": false}}
+        "400":
+          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
+        "401":
+          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
+        "402":
+          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
+        "403":
+          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
+        "404":
+          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
+        "409":
+          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
+        "422":
+          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
+        "500":
+          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
+        "502":
+          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
+        "503":
+          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
+        "504":
+          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
+  Users_updateUserByID:
+    speakeasy-default-users-update-user-by-ID:
+      parameters:
+        path:
+          userID: "<id>"
+      requestBody:
+        application/json: {"role": "user"}
+      responses:
+        "200":
+          application/json: {"data": {"id": "<id>", "first_name": "Juvenal", "last_name": "Luettgen", "username_for_display": "<value>", "email": "Kristopher.DuBuque@hotmail.com", "contact": {"dial_code": "<value>", "phone_number": "1-557-505-3601 x9925"}, "secondary_emails": ["<value 1>", "<value 2>", "<value 3>"], "email_verified": true, "time_zone": "Europe/Kirov", "title": "<value>", "bio": "<value>", "notification_rules": [{"type": "<value>", "time": 440435}], "user_image": false}}
+        "400":
+          application/json: {"meta": {"status": 920631, "error_message": "<value>"}}
+        "401":
+          application/json: {"meta": {"status": 920631, "error_message": "<value>"}}
+        "402":
+          application/json: {"meta": {"status": 920631, "error_message": "<value>"}}
+        "403":
+          application/json: {"meta": {"status": 920631, "error_message": "<value>"}}
+        "404":
+          application/json: {"meta": {"status": 920631, "error_message": "<value>"}}
+        "409":
+          application/json: {"meta": {"status": 920631, "error_message": "<value>"}}
+        "422":
+          application/json: {"meta": {"status": 920631, "error_message": "<value>"}}
+        "500":
+          application/json: {"meta": {"status": 920631, "error_message": "<value>"}}
+        "502":
+          application/json: {"meta": {"status": 920631, "error_message": "<value>"}}
+        "503":
+          application/json: {"meta": {"status": 920631, "error_message": "<value>"}}
+        "504":
+          application/json: {"meta": {"status": 920631, "error_message": "<value>"}}
   Users_removeToken:
     speakeasy-default-users-remove-token:
       parameters:
@@ -7358,6 +7588,228 @@ examples:
           application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
         "504":
           application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
+  Dependencies_createOrUpdateDependencies:
+    speakeasy-default-dependencies-create-or-update-dependencies:
+      parameters:
+        path:
+          serviceID: "<id>"
+      requestBody:
+        application/json: {"dependencies": ["<value 1>", "<value 2>", "<value 3>"]}
+      responses:
+        "201":
+          application/json: {"data": {"ok": true}}
+        "400":
+          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
+        "401":
+          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
+        "402":
+          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
+        "403":
+          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
+        "404":
+          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
+        "409":
+          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
+        "422":
+          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
+        "500":
+          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
+        "502":
+          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
+        "503":
+          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
+        "504":
+          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
+  Overlay_createOrUpdateNotificationTemplateOverlay:
+    speakeasy-default-overlay-create-or-update-notification-template-overlay:
+      parameters:
+        path:
+          serviceID: "<id>"
+          alertSource: "<value>"
+      requestBody:
+        application/json: {"overlay_template_type": "<value>", "message_overlay": {"template": "<value>"}, "description_overlay": {"template": "<value>"}}
+      responses:
+        "200":
+          application/json: {"data": {"created_at": "2024-05-03T17:44:28.824Z", "updated_at": "2023-08-30T15:57:52.720Z", "deleted_at": "2024-03-29T21:36:56.017Z", "org_id": "<id>", "service_id": "<id>", "alert_source_version": "<value>", "alert_source_shortname": "<value>", "overlay_template_type": "message", "overlay": {"message": "<value>", "description": "bonfire winged meh"}, "created_by": "<value>", "updated_by": "<value>", "alert_source_type": "<value>"}}
+        "400":
+          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
+        "401":
+          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
+        "402":
+          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
+        "403":
+          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
+        "404":
+          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
+        "409":
+          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
+        "422":
+          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
+        "500":
+          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
+        "502":
+          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
+        "503":
+          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
+        "504":
+          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
+  Overlay_getAllDedupKeyOverlayByService:
+    speakeasy-default-overlay-get-all-dedup-key-overlay-by-service:
+      parameters:
+        path:
+          serviceID: "<id>"
+      responses:
+        "200":
+          application/json: {"data": []}
+        "400":
+          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
+        "401":
+          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
+        "402":
+          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
+        "403":
+          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
+        "404":
+          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
+        "409":
+          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
+        "422":
+          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
+        "500":
+          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
+        "502":
+          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
+        "503":
+          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
+        "504":
+          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
+  Overlay_updateDedupKeyOverlay:
+    speakeasy-default-overlay-update-dedup-key-overlay:
+      parameters:
+        path:
+          serviceID: "<id>"
+          alertSource: "<value>"
+      requestBody:
+        application/json: {"overlay_template_type": "<value>", "dedup_key_overlay": {"template": "<value>", "duration": 360400}}
+      responses:
+        "200":
+          application/json: {"data": {"created_at": "2024-09-26T11:24:31.743Z", "updated_at": "2025-10-25T03:47:23.650Z", "deleted_at": "2025-07-10T09:39:28.405Z", "org_id": "<id>", "service_id": "<id>", "alert_source_version": "<value>", "alert_source_shortname": "<value>", "overlay_template_type": "dedup_key", "overlay": {"template": "<value>", "duration": 810009}, "created_by": "<value>", "updated_by": "<value>", "alert_source_type": "<value>"}}
+        "400":
+          application/json: {"meta": {"status": 907879, "error_message": "<value>"}}
+        "401":
+          application/json: {"meta": {"status": 907879, "error_message": "<value>"}}
+        "402":
+          application/json: {"meta": {"status": 907879, "error_message": "<value>"}}
+        "403":
+          application/json: {"meta": {"status": 907879, "error_message": "<value>"}}
+        "404":
+          application/json: {"meta": {"status": 907879, "error_message": "<value>"}}
+        "409":
+          application/json: {"meta": {"status": 907879, "error_message": "<value>"}}
+        "422":
+          application/json: {"meta": {"status": 907879, "error_message": "<value>"}}
+        "500":
+          application/json: {"meta": {"status": 907879, "error_message": "<value>"}}
+        "502":
+          application/json: {"meta": {"status": 907879, "error_message": "<value>"}}
+        "503":
+          application/json: {"meta": {"status": 907879, "error_message": "<value>"}}
+        "504":
+          application/json: {"meta": {"status": 907879, "error_message": "<value>"}}
+  RoutingRules_getRoutingRules:
+    speakeasy-default-routing-rules-get-routing-rules:
+      parameters:
+        path:
+          serviceID: "<id>"
+      responses:
+        "200":
+          application/json: {"data": {"rules": [{"expression": "<value>", "route_to": {"entity_type": "user", "entity_id": "<id>"}, "is_basic": true}]}}
+        "400":
+          application/json: {"meta": {"status": 264549, "error_message": "<value>"}}
+        "401":
+          application/json: {"meta": {"status": 264549, "error_message": "<value>"}}
+        "402":
+          application/json: {"meta": {"status": 264549, "error_message": "<value>"}}
+        "403":
+          application/json: {"meta": {"status": 264549, "error_message": "<value>"}}
+        "404":
+          application/json: {"meta": {"status": 264549, "error_message": "<value>"}}
+        "409":
+          application/json: {"meta": {"status": 264549, "error_message": "<value>"}}
+        "422":
+          application/json: {"meta": {"status": 264549, "error_message": "<value>"}}
+        "500":
+          application/json: {"meta": {"status": 264549, "error_message": "<value>"}}
+        "502":
+          application/json: {"meta": {"status": 264549, "error_message": "<value>"}}
+        "503":
+          application/json: {"meta": {"status": 264549, "error_message": "<value>"}}
+        "504":
+          application/json: {"meta": {"status": 264549, "error_message": "<value>"}}
+  SuppressionRules_createOrUpdateSuppressionRules:
+    speakeasy-default-suppression-rules-create-or-update-suppression-rules:
+      parameters:
+        path:
+          serviceID: "<id>"
+      requestBody:
+        application/json: {"rules": []}
+      responses:
+        "200":
+          application/json: {"data": {"id": "<id>", "created_at": "2025-09-19T23:39:34.997Z", "updated_at": "2024-02-19T02:40:45.687Z", "service_id": "<id>", "organization_id": "<id>", "rules": [{"rule_id": "<id>", "created_at": "2024-01-22T19:36:58.061Z", "updated_at": "2023-04-16T19:42:00.401Z", "created_by": "<value>", "updated_by": "<value>", "description": "courageously over wobbly hence than", "expression": "<value>", "is_basic": true, "is_timebased": false, "timeslots": [], "basic_expression": [{"lhs": "<value>", "op": "<value>", "rhs": "<value>"}]}]}}
+        "400":
+          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
+        "401":
+          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
+        "402":
+          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
+        "403":
+          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
+        "404":
+          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
+        "409":
+          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
+        "422":
+          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
+        "500":
+          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
+        "502":
+          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
+        "503":
+          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
+        "504":
+          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
+  TaggingRules_createOrUpdateTaggingRules:
+    speakeasy-default-tagging-rules-create-or-update-tagging-rules:
+      parameters:
+        path:
+          serviceID: "<id>"
+      requestBody:
+        application/json: {"rules": [{}]}
+      responses:
+        "201":
+          application/json: {"data": {"rules": []}}
+        "400":
+          application/json: {"meta": {"status": 387046, "error_message": "<value>"}}
+        "401":
+          application/json: {"meta": {"status": 387046, "error_message": "<value>"}}
+        "402":
+          application/json: {"meta": {"status": 387046, "error_message": "<value>"}}
+        "403":
+          application/json: {"meta": {"status": 387046, "error_message": "<value>"}}
+        "404":
+          application/json: {"meta": {"status": 387046, "error_message": "<value>"}}
+        "409":
+          application/json: {"meta": {"status": 387046, "error_message": "<value>"}}
+        "422":
+          application/json: {"meta": {"status": 387046, "error_message": "<value>"}}
+        "500":
+          application/json: {"meta": {"status": 387046, "error_message": "<value>"}}
+        "502":
+          application/json: {"meta": {"status": 387046, "error_message": "<value>"}}
+        "503":
+          application/json: {"meta": {"status": 387046, "error_message": "<value>"}}
+        "504":
+          application/json: {"meta": {"status": 387046, "error_message": "<value>"}}
   Overlay_getOptinForKeyBasedDeduplicationForAService:
     speakeasy-default-overlay-get-optin-for-key-based-deduplication-for-A-service:
       parameters:
@@ -7482,38 +7934,6 @@ examples:
           application/json: {"meta": {"status": 997385, "error_message": "<value>"}}
         "504":
           application/json: {"meta": {"status": 997385, "error_message": "<value>"}}
-  Dependencies_createOrUpdateDependencies:
-    speakeasy-default-dependencies-create-or-update-dependencies:
-      parameters:
-        path:
-          serviceID: "<id>"
-      requestBody:
-        application/json: {"dependencies": ["<value 1>", "<value 2>", "<value 3>"]}
-      responses:
-        "201":
-          application/json: {"data": {"ok": true}}
-        "400":
-          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
-        "401":
-          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
-        "402":
-          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
-        "403":
-          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
-        "404":
-          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
-        "409":
-          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
-        "422":
-          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
-        "500":
-          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
-        "502":
-          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
-        "503":
-          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
-        "504":
-          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
   Extensions_updateSlackExtension:
     speakeasy-default-extensions-update-slack-extension:
       parameters:
@@ -7638,6 +8058,68 @@ examples:
           application/json: {"meta": {"status": 486106, "error_message": "<value>"}}
         "504":
           application/json: {"meta": {"status": 486106, "error_message": "<value>"}}
+  Overlay_getCustomContentTemplateOverlay:
+    speakeasy-default-overlay-get-custom-content-template-overlay:
+      parameters:
+        path:
+          serviceID: "<id>"
+          alertSource: "<value>"
+      responses:
+        "200":
+          application/json: {"data": {"created_at": "2025-07-07T09:14:16.256Z", "updated_at": "2025-04-29T01:34:08.611Z", "deleted_at": "2025-03-01T23:14:34.777Z", "org_id": "<id>", "service_id": "<id>", "alert_source_version": "<value>", "alert_source_shortname": "<value>", "overlay_template_type": "description", "overlay": {"message": "<value>", "description": "pink wherever er however showy"}, "created_by": "<value>", "updated_by": "<value>", "alert_source_type": "<value>"}}
+        "400":
+          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
+        "401":
+          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
+        "402":
+          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
+        "403":
+          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
+        "404":
+          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
+        "409":
+          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
+        "422":
+          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
+        "500":
+          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
+        "502":
+          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
+        "503":
+          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
+        "504":
+          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
+  Overlay_getDedupKeyOverlayForAlertSource:
+    speakeasy-default-overlay-get-dedup-key-overlay-for-alert-source:
+      parameters:
+        path:
+          serviceID: "<id>"
+          alertSource: "<value>"
+      responses:
+        "200":
+          application/json: {"data": {"created_at": "2023-03-17T15:14:15.950Z", "updated_at": "2025-09-05T08:31:33.198Z", "deleted_at": null, "org_id": "<id>", "service_id": "<id>", "alert_source_version": "<value>", "alert_source_shortname": "<value>", "overlay_template_type": "dedup_key", "overlay": {"template": "<value>", "duration": 169520}, "created_by": "<value>", "updated_by": "<value>", "alert_source_type": "<value>"}}
+        "400":
+          application/json: {"meta": {"status": 83544, "error_message": "<value>"}}
+        "401":
+          application/json: {"meta": {"status": 83544, "error_message": "<value>"}}
+        "402":
+          application/json: {"meta": {"status": 83544, "error_message": "<value>"}}
+        "403":
+          application/json: {"meta": {"status": 83544, "error_message": "<value>"}}
+        "404":
+          application/json: {"meta": {"status": 83544, "error_message": "<value>"}}
+        "409":
+          application/json: {"meta": {"status": 83544, "error_message": "<value>"}}
+        "422":
+          application/json: {"meta": {"status": 83544, "error_message": "<value>"}}
+        "500":
+          application/json: {"meta": {"status": 83544, "error_message": "<value>"}}
+        "502":
+          application/json: {"meta": {"status": 83544, "error_message": "<value>"}}
+        "503":
+          application/json: {"meta": {"status": 83544, "error_message": "<value>"}}
+        "504":
+          application/json: {"meta": {"status": 83544, "error_message": "<value>"}}
   Overlay_renderCustomContentOverlay:
     speakeasy-default-overlay-render-custom-content-overlay:
       parameters:
@@ -7670,131 +8152,6 @@ examples:
           application/json: {"meta": {"status": 195434, "error_message": "<value>"}}
         "504":
           application/json: {"meta": {"status": 195434, "error_message": "<value>"}}
-  Overlay_deleteNotificationTemplateOverlay:
-    speakeasy-default-overlay-delete-notification-template-overlay:
-      parameters:
-        path:
-          serviceID: "<id>"
-          alertSource: "<value>"
-      responses:
-        "204":
-          '*/*': "0x4bf0BcEdB3"
-        "400":
-          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
-        "401":
-          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
-        "402":
-          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
-        "403":
-          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
-        "404":
-          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
-        "409":
-          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
-        "422":
-          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
-        "500":
-          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
-        "502":
-          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
-        "503":
-          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
-        "504":
-          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
-  Overlay_getCustomContentTemplateOverlay:
-    speakeasy-default-overlay-get-custom-content-template-overlay:
-      parameters:
-        path:
-          serviceID: "<id>"
-          alertSource: "<value>"
-      responses:
-        "200":
-          application/json: {"data": {"created_at": "2025-07-07T09:14:16.256Z", "updated_at": "2025-04-29T01:34:08.611Z", "deleted_at": "2025-03-01T23:14:34.777Z", "org_id": "<id>", "service_id": "<id>", "alert_source_version": "<value>", "alert_source_shortname": "<value>", "overlay_template_type": "description", "overlay": {"message": "<value>", "description": "pink wherever er however showy"}, "created_by": "<value>", "updated_by": "<value>", "alert_source_type": "<value>"}}
-        "400":
-          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
-        "401":
-          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
-        "402":
-          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
-        "403":
-          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
-        "404":
-          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
-        "409":
-          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
-        "422":
-          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
-        "500":
-          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
-        "502":
-          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
-        "503":
-          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
-        "504":
-          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
-  Overlay_createOrUpdateNotificationTemplateOverlay:
-    speakeasy-default-overlay-create-or-update-notification-template-overlay:
-      parameters:
-        path:
-          serviceID: "<id>"
-          alertSource: "<value>"
-      requestBody:
-        application/json: {"overlay_template_type": "<value>", "message_overlay": {"template": "<value>"}, "description_overlay": {"template": "<value>"}}
-      responses:
-        "200":
-          application/json: {"data": {"created_at": "2024-05-03T17:44:28.824Z", "updated_at": "2023-08-30T15:57:52.720Z", "deleted_at": "2024-03-29T21:36:56.017Z", "org_id": "<id>", "service_id": "<id>", "alert_source_version": "<value>", "alert_source_shortname": "<value>", "overlay_template_type": "message", "overlay": {"message": "<value>", "description": "bonfire winged meh"}, "created_by": "<value>", "updated_by": "<value>", "alert_source_type": "<value>"}}
-        "400":
-          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
-        "401":
-          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
-        "402":
-          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
-        "403":
-          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
-        "404":
-          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
-        "409":
-          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
-        "422":
-          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
-        "500":
-          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
-        "502":
-          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
-        "503":
-          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
-        "504":
-          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
-  Overlay_getAllDedupKeyOverlayByService:
-    speakeasy-default-overlay-get-all-dedup-key-overlay-by-service:
-      parameters:
-        path:
-          serviceID: "<id>"
-      responses:
-        "200":
-          application/json: {"data": []}
-        "400":
-          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
-        "401":
-          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
-        "402":
-          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
-        "403":
-          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
-        "404":
-          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
-        "409":
-          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
-        "422":
-          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
-        "500":
-          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
-        "502":
-          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
-        "503":
-          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
-        "504":
-          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
   Overlay_renderDedupKeyTemplate:
     speakeasy-default-overlay-render-dedup-key-template:
       parameters:
@@ -7858,100 +8215,6 @@ examples:
           application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
         "504":
           application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
-  Overlay_getDedupKeyOverlayForAlertSource:
-    speakeasy-default-overlay-get-dedup-key-overlay-for-alert-source:
-      parameters:
-        path:
-          serviceID: "<id>"
-          alertSource: "<value>"
-      responses:
-        "200":
-          application/json: {"data": {"created_at": "2023-03-17T15:14:15.950Z", "updated_at": "2025-09-05T08:31:33.198Z", "deleted_at": null, "org_id": "<id>", "service_id": "<id>", "alert_source_version": "<value>", "alert_source_shortname": "<value>", "overlay_template_type": "dedup_key", "overlay": {"template": "<value>", "duration": 169520}, "created_by": "<value>", "updated_by": "<value>", "alert_source_type": "<value>"}}
-        "400":
-          application/json: {"meta": {"status": 83544, "error_message": "<value>"}}
-        "401":
-          application/json: {"meta": {"status": 83544, "error_message": "<value>"}}
-        "402":
-          application/json: {"meta": {"status": 83544, "error_message": "<value>"}}
-        "403":
-          application/json: {"meta": {"status": 83544, "error_message": "<value>"}}
-        "404":
-          application/json: {"meta": {"status": 83544, "error_message": "<value>"}}
-        "409":
-          application/json: {"meta": {"status": 83544, "error_message": "<value>"}}
-        "422":
-          application/json: {"meta": {"status": 83544, "error_message": "<value>"}}
-        "500":
-          application/json: {"meta": {"status": 83544, "error_message": "<value>"}}
-        "502":
-          application/json: {"meta": {"status": 83544, "error_message": "<value>"}}
-        "503":
-          application/json: {"meta": {"status": 83544, "error_message": "<value>"}}
-        "504":
-          application/json: {"meta": {"status": 83544, "error_message": "<value>"}}
-  Overlay_updateDedupKeyOverlay:
-    speakeasy-default-overlay-update-dedup-key-overlay:
-      parameters:
-        path:
-          serviceID: "<id>"
-          alertSource: "<value>"
-      requestBody:
-        application/json: {"overlay_template_type": "<value>", "dedup_key_overlay": {"template": "<value>", "duration": 360400}}
-      responses:
-        "200":
-          application/json: {"data": {"created_at": "2024-09-26T11:24:31.743Z", "updated_at": "2025-10-25T03:47:23.650Z", "deleted_at": "2025-07-10T09:39:28.405Z", "org_id": "<id>", "service_id": "<id>", "alert_source_version": "<value>", "alert_source_shortname": "<value>", "overlay_template_type": "dedup_key", "overlay": {"template": "<value>", "duration": 810009}, "created_by": "<value>", "updated_by": "<value>", "alert_source_type": "<value>"}}
-        "400":
-          application/json: {"meta": {"status": 907879, "error_message": "<value>"}}
-        "401":
-          application/json: {"meta": {"status": 907879, "error_message": "<value>"}}
-        "402":
-          application/json: {"meta": {"status": 907879, "error_message": "<value>"}}
-        "403":
-          application/json: {"meta": {"status": 907879, "error_message": "<value>"}}
-        "404":
-          application/json: {"meta": {"status": 907879, "error_message": "<value>"}}
-        "409":
-          application/json: {"meta": {"status": 907879, "error_message": "<value>"}}
-        "422":
-          application/json: {"meta": {"status": 907879, "error_message": "<value>"}}
-        "500":
-          application/json: {"meta": {"status": 907879, "error_message": "<value>"}}
-        "502":
-          application/json: {"meta": {"status": 907879, "error_message": "<value>"}}
-        "503":
-          application/json: {"meta": {"status": 907879, "error_message": "<value>"}}
-        "504":
-          application/json: {"meta": {"status": 907879, "error_message": "<value>"}}
-  RoutingRules_getRoutingRules:
-    speakeasy-default-routing-rules-get-routing-rules:
-      parameters:
-        path:
-          serviceID: "<id>"
-      responses:
-        "200":
-          application/json: {"data": {"rules": [{"expression": "<value>", "route_to": {"entity_type": "user", "entity_id": "<id>"}, "is_basic": true}]}}
-        "400":
-          application/json: {"meta": {"status": 264549, "error_message": "<value>"}}
-        "401":
-          application/json: {"meta": {"status": 264549, "error_message": "<value>"}}
-        "402":
-          application/json: {"meta": {"status": 264549, "error_message": "<value>"}}
-        "403":
-          application/json: {"meta": {"status": 264549, "error_message": "<value>"}}
-        "404":
-          application/json: {"meta": {"status": 264549, "error_message": "<value>"}}
-        "409":
-          application/json: {"meta": {"status": 264549, "error_message": "<value>"}}
-        "422":
-          application/json: {"meta": {"status": 264549, "error_message": "<value>"}}
-        "500":
-          application/json: {"meta": {"status": 264549, "error_message": "<value>"}}
-        "502":
-          application/json: {"meta": {"status": 264549, "error_message": "<value>"}}
-        "503":
-          application/json: {"meta": {"status": 264549, "error_message": "<value>"}}
-        "504":
-          application/json: {"meta": {"status": 264549, "error_message": "<value>"}}
   RoutingRules_createOrUpdateRoutingRules:
     speakeasy-default-routing-rules-create-or-update-routing-rules:
       parameters:
@@ -8014,38 +8277,6 @@ examples:
           application/json: {"meta": {"status": 700759, "error_message": "<value>"}}
         "504":
           application/json: {"meta": {"status": 700759, "error_message": "<value>"}}
-  SuppressionRules_createOrUpdateSuppressionRules:
-    speakeasy-default-suppression-rules-create-or-update-suppression-rules:
-      parameters:
-        path:
-          serviceID: "<id>"
-      requestBody:
-        application/json: {"rules": []}
-      responses:
-        "200":
-          application/json: {"data": {"id": "<id>", "created_at": "2025-09-19T23:39:34.997Z", "updated_at": "2024-02-19T02:40:45.687Z", "service_id": "<id>", "organization_id": "<id>", "rules": [{"rule_id": "<id>", "created_at": "2024-01-22T19:36:58.061Z", "updated_at": "2023-04-16T19:42:00.401Z", "created_by": "<value>", "updated_by": "<value>", "description": "courageously over wobbly hence than", "expression": "<value>", "is_basic": true, "is_timebased": false, "timeslots": [], "basic_expression": [{"lhs": "<value>", "op": "<value>", "rhs": "<value>"}]}]}}
-        "400":
-          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
-        "401":
-          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
-        "402":
-          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
-        "403":
-          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
-        "404":
-          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
-        "409":
-          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
-        "422":
-          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
-        "500":
-          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
-        "502":
-          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
-        "503":
-          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
-        "504":
-          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
   TaggingRules_getTaggingRules:
     speakeasy-default-tagging-rules-get-tagging-rules:
       parameters:
@@ -8076,38 +8307,37 @@ examples:
           application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
         "504":
           application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
-  TaggingRules_createOrUpdateTaggingRules:
-    speakeasy-default-tagging-rules-create-or-update-tagging-rules:
+  Overlay_deleteNotificationTemplateOverlay:
+    speakeasy-default-overlay-delete-notification-template-overlay:
       parameters:
         path:
           serviceID: "<id>"
-      requestBody:
-        application/json: {"rules": [{}]}
+          alertSource: "<value>"
       responses:
-        "201":
-          application/json: {"data": {"rules": []}}
+        "204":
+          '*/*': "0x4bf0BcEdB3"
         "400":
-          application/json: {"meta": {"status": 387046, "error_message": "<value>"}}
+          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
         "401":
-          application/json: {"meta": {"status": 387046, "error_message": "<value>"}}
+          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
         "402":
-          application/json: {"meta": {"status": 387046, "error_message": "<value>"}}
+          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
         "403":
-          application/json: {"meta": {"status": 387046, "error_message": "<value>"}}
+          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
         "404":
-          application/json: {"meta": {"status": 387046, "error_message": "<value>"}}
+          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
         "409":
-          application/json: {"meta": {"status": 387046, "error_message": "<value>"}}
+          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
         "422":
-          application/json: {"meta": {"status": 387046, "error_message": "<value>"}}
+          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
         "500":
-          application/json: {"meta": {"status": 387046, "error_message": "<value>"}}
+          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
         "502":
-          application/json: {"meta": {"status": 387046, "error_message": "<value>"}}
+          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
         "503":
-          application/json: {"meta": {"status": 387046, "error_message": "<value>"}}
+          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
         "504":
-          application/json: {"meta": {"status": 387046, "error_message": "<value>"}}
+          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
   SLO_getAllSLOs:
     speakeasy-default-SLO-get-all-SL-os:
       parameters:
@@ -8488,6 +8718,84 @@ examples:
           application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
         "504":
           application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
+  Squads_getAllSquads:
+    speakeasy-default-squads-get-all-squads:
+      responses:
+        "200":
+          application/json: {"data": [], "pageInfo": {"pageSize": 264870, "hasNext": true, "hasPrevious": true}}
+        "400":
+          application/json: {"error": {"code": "<value>", "message": "<value>"}}
+        "500":
+          application/json: {"error": {"code": "<value>", "message": "<value>"}}
+  Squads_removeSquadMember:
+    speakeasy-default-squads-remove-squad-member:
+      parameters:
+        path:
+          squadID: "<id>"
+          memberID: "<id>"
+        query:
+          replaceWith: "<value>"
+      responses:
+        "200":
+          application/json: {"id": "<id>", "members": []}
+        "400":
+          application/json: {"error": {"code": "<value>", "message": "<value>"}}
+        "500":
+          application/json: {"error": {"code": "<value>", "message": "<value>"}}
+  Squads_updateSquadMember:
+    speakeasy-default-squads-update-squad-member:
+      parameters:
+        path:
+          squadID: "<id>"
+          memberID: "<id>"
+        query:
+          replaceWith: "<value>"
+      requestBody:
+        application/json: {"role": "<value>"}
+      responses:
+        "201":
+          application/json: {"id": "<id>", "members": []}
+        "400":
+          application/json: {"error": {"code": "<value>", "message": "<value>"}}
+        "500":
+          application/json: {"error": {"code": "<value>", "message": "<value>"}}
+  Squads_updateSquadName:
+    speakeasy-default-squads-update-squad-name:
+      parameters:
+        path:
+          squadID: "<id>"
+      requestBody:
+        application/json: {"name": "<value>"}
+      responses:
+        "200":
+          application/json: {"data": {"id": "<id>", "name": "<value>"}}
+        "400":
+          application/json: {"error": {"code": "<value>", "message": "<value>"}}
+        "500":
+          application/json: {"error": {"code": "<value>", "message": "<value>"}}
+  Squads_createSquadV4:
+    speakeasy-default-squads-create-squad-v4:
+      requestBody:
+        application/json: {"owner_id": "<id>", "name": "<value>", "members": [{"user_id": "<id>"}]}
+      responses:
+        "201":
+          application/json: {"data": {"organization_id": "<id>", "owner_id": "<id>", "id": "<id>", "name": "<value>", "slug": "<value>", "members": [{"user_id": "<id>"}], "created_at": "1735262885045", "created_by": "<value>"}}
+        "400":
+          application/json: {"error": {"code": "<value>", "message": "<value>"}}
+        "500":
+          application/json: {"error": {"code": "<value>", "message": "<value>"}}
+  Squads_getSquadByIdV4:
+    speakeasy-default-squads-get-squad-by-id-v4:
+      parameters:
+        path:
+          squadID: "<id>"
+      responses:
+        "200":
+          application/json: {"data": {"id": "<id>", "org_id": "<id>", "team_id": "<id>", "name": "<value>", "members": [{"user_id": "<id>"}], "createdAt": "1718858748761", "updatedAt": "1735679037391"}}
+        "400":
+          application/json: {"error": {"code": "<value>", "message": "<value>"}}
+        "500":
+          application/json: {"error": {"code": "<value>", "message": "<value>"}}
   Teams_getAllTeams:
     speakeasy-default-teams-get-all-teams:
       responses:
@@ -8636,36 +8944,6 @@ examples:
           application/json: {"meta": {"status": 152850, "error_message": "<value>"}}
         "504":
           application/json: {"meta": {"status": 152850, "error_message": "<value>"}}
-  Teams_getAllTeamMembers:
-    speakeasy-default-teams-get-all-team-members:
-      parameters:
-        path:
-          teamId: "<id>"
-      responses:
-        "200":
-          application/json: {"data": []}
-        "400":
-          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
-        "401":
-          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
-        "402":
-          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
-        "403":
-          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
-        "404":
-          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
-        "409":
-          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
-        "422":
-          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
-        "500":
-          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
-        "502":
-          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
-        "503":
-          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
-        "504":
-          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
   Teams_addTeamMember:
     speakeasy-default-teams-add-team-member:
       parameters:
@@ -8920,185 +9198,14 @@ examples:
           application/json: {"meta": {"status": 936728, "error_message": "<value>"}}
         "504":
           application/json: {"meta": {"status": 936728, "error_message": "<value>"}}
-  Users_getAllUsers:
-    speakeasy-default-users-get-all-users:
-      responses:
-        "200":
-          application/json: {"data": [{"id": "<id>", "first_name": "Oral", "last_name": "Kerluke", "username_for_display": "<value>", "email": "Earnestine80@yahoo.com", "contact": {"dial_code": "<value>", "phone_number": "496.212.0634 x40718"}, "secondary_emails": ["<value 1>", "<value 2>"], "email_verified": false, "time_zone": "Africa/Sao_Tome", "title": "<value>", "bio": "<value>", "notification_rules": [], "user_image": false}]}
-        "400":
-          application/json: {"meta": {"status": 877777, "error_message": "<value>"}}
-        "401":
-          application/json: {"meta": {"status": 877777, "error_message": "<value>"}}
-        "402":
-          application/json: {"meta": {"status": 877777, "error_message": "<value>"}}
-        "403":
-          application/json: {"meta": {"status": 877777, "error_message": "<value>"}}
-        "404":
-          application/json: {"meta": {"status": 877777, "error_message": "<value>"}}
-        "409":
-          application/json: {"meta": {"status": 877777, "error_message": "<value>"}}
-        "422":
-          application/json: {"meta": {"status": 877777, "error_message": "<value>"}}
-        "500":
-          application/json: {"meta": {"status": 877777, "error_message": "<value>"}}
-        "502":
-          application/json: {"meta": {"status": 877777, "error_message": "<value>"}}
-        "503":
-          application/json: {"meta": {"status": 877777, "error_message": "<value>"}}
-        "504":
-          application/json: {"meta": {"status": 877777, "error_message": "<value>"}}
-  Users_addUser:
-    speakeasy-default-users-add-user:
-      requestBody:
-        application/json: {"email": "Clovis_Reynolds@hotmail.com", "role": "account_owner", "first_name": "Yvonne", "last_name": "Kozey"}
-      responses:
-        "201":
-          application/json: {"data": {"id": "<id>", "first_name": "Terrell", "last_name": "Durgan", "username_for_display": "<value>", "email": "Foster61@yahoo.com", "contact": {"dial_code": "<value>", "phone_number": "363-989-6098 x0455"}, "secondary_emails": ["<value 1>", "<value 2>", "<value 3>"], "email_verified": false, "time_zone": "America/Hermosillo", "title": "<value>", "bio": "<value>", "notification_rules": [], "user_image": true}}
-        "400":
-          application/json: {"meta": {"status": 280172, "error_message": "<value>"}}
-        "401":
-          application/json: {"meta": {"status": 280172, "error_message": "<value>"}}
-        "402":
-          application/json: {"meta": {"status": 280172, "error_message": "<value>"}}
-        "403":
-          application/json: {"meta": {"status": 280172, "error_message": "<value>"}}
-        "404":
-          application/json: {"meta": {"status": 280172, "error_message": "<value>"}}
-        "409":
-          application/json: {"meta": {"status": 280172, "error_message": "<value>"}}
-        "422":
-          application/json: {"meta": {"status": 280172, "error_message": "<value>"}}
-        "500":
-          application/json: {"meta": {"status": 280172, "error_message": "<value>"}}
-        "502":
-          application/json: {"meta": {"status": 280172, "error_message": "<value>"}}
-        "503":
-          application/json: {"meta": {"status": 280172, "error_message": "<value>"}}
-        "504":
-          application/json: {"meta": {"status": 280172, "error_message": "<value>"}}
-  Users_updateOrgLevelPermissions:
-    speakeasy-default-users-update-org-level-permissions:
-      requestBody:
-        application/json: {"data": []}
-      responses:
-        "200":
-          application/json: {"data": "<value>"}
-        "400":
-          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
-        "401":
-          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
-        "402":
-          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
-        "403":
-          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
-        "404":
-          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
-        "409":
-          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
-        "422":
-          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
-        "500":
-          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
-        "502":
-          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
-        "503":
-          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
-        "504":
-          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
-  Users_deleteUser:
-    speakeasy-default-users-delete-user:
-      requestBody:
-        application/json: {"user_id": "<id>", "swap_user_id": "<id>", "suppress_incidents": true, "reassign_incidents": true}
-      responses:
-        "200":
-          application/json: {"data": {}}
-        "400":
-          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
-        "401":
-          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
-        "402":
-          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
-        "403":
-          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
-        "404":
-          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
-        "409":
-          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
-        "422":
-          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
-        "500":
-          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
-        "502":
-          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
-        "503":
-          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
-        "504":
-          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
-  Users_getUserRoles:
-    speakeasy-default-users-get-user-roles:
-      responses:
-        "200":
-          application/json: {"data": [{"id": "<id>", "name": "<value>", "limit": 292133, "order": 668791}]}
-        "400":
-          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
-        "401":
-          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
-        "402":
-          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
-        "403":
-          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
-        "404":
-          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
-        "409":
-          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
-        "422":
-          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
-        "500":
-          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
-        "502":
-          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
-        "503":
-          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
-        "504":
-          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
-  Users_removeUserFromOrg:
-    speakeasy-default-users-remove-user-from-org:
+  Teams_getAllTeamMembers:
+    speakeasy-default-teams-get-all-team-members:
       parameters:
         path:
-          userID: "<id>"
-      responses:
-        "204":
-          '*/*': "0xc3d4E33AC5"
-        "400":
-          application/json: {"meta": {"status": 133495, "error_message": "<value>"}}
-        "401":
-          application/json: {"meta": {"status": 133495, "error_message": "<value>"}}
-        "402":
-          application/json: {"meta": {"status": 133495, "error_message": "<value>"}}
-        "403":
-          application/json: {"meta": {"status": 133495, "error_message": "<value>"}}
-        "404":
-          application/json: {"meta": {"status": 133495, "error_message": "<value>"}}
-        "409":
-          application/json: {"meta": {"status": 133495, "error_message": "<value>"}}
-        "422":
-          application/json: {"meta": {"status": 133495, "error_message": "<value>"}}
-        "500":
-          application/json: {"meta": {"status": 133495, "error_message": "<value>"}}
-        "502":
-          application/json: {"meta": {"status": 133495, "error_message": "<value>"}}
-        "503":
-          application/json: {"meta": {"status": 133495, "error_message": "<value>"}}
-        "504":
-          application/json: {"meta": {"status": 133495, "error_message": "<value>"}}
-  Users_getUserById:
-    speakeasy-default-users-get-user-by-id:
-      parameters:
-        path:
-          userID: "<id>"
+          teamId: "<id>"
       responses:
         "200":
-          application/json: {"data": {"id": "<id>", "first_name": "Augustine", "last_name": "Dare", "username_for_display": "<value>", "email": "Elnora.Hyatt@gmail.com", "contact": {"dial_code": "<value>", "phone_number": "(368) 689-2448 x918"}, "secondary_emails": ["<value 1>", "<value 2>", "<value 3>"], "email_verified": true, "time_zone": "America/Tijuana", "title": "<value>", "bio": "<value>", "notification_rules": [{"type": "<value>", "time": 96868}], "user_image": false}}
+          application/json: {"data": []}
         "400":
           application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
         "401":
@@ -9121,38 +9228,6 @@ examples:
           application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
         "504":
           application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
-  Users_updateUserByID:
-    speakeasy-default-users-update-user-by-ID:
-      parameters:
-        path:
-          userID: "<id>"
-      requestBody:
-        application/json: {"role": "user"}
-      responses:
-        "200":
-          application/json: {"data": {"id": "<id>", "first_name": "Juvenal", "last_name": "Luettgen", "username_for_display": "<value>", "email": "Kristopher.DuBuque@hotmail.com", "contact": {"dial_code": "<value>", "phone_number": "1-557-505-3601 x9925"}, "secondary_emails": ["<value 1>", "<value 2>", "<value 3>"], "email_verified": true, "time_zone": "Europe/Kirov", "title": "<value>", "bio": "<value>", "notification_rules": [{"type": "<value>", "time": 440435}], "user_image": false}}
-        "400":
-          application/json: {"meta": {"status": 920631, "error_message": "<value>"}}
-        "401":
-          application/json: {"meta": {"status": 920631, "error_message": "<value>"}}
-        "402":
-          application/json: {"meta": {"status": 920631, "error_message": "<value>"}}
-        "403":
-          application/json: {"meta": {"status": 920631, "error_message": "<value>"}}
-        "404":
-          application/json: {"meta": {"status": 920631, "error_message": "<value>"}}
-        "409":
-          application/json: {"meta": {"status": 920631, "error_message": "<value>"}}
-        "422":
-          application/json: {"meta": {"status": 920631, "error_message": "<value>"}}
-        "500":
-          application/json: {"meta": {"status": 920631, "error_message": "<value>"}}
-        "502":
-          application/json: {"meta": {"status": 920631, "error_message": "<value>"}}
-        "503":
-          application/json: {"meta": {"status": 920631, "error_message": "<value>"}}
-        "504":
-          application/json: {"meta": {"status": 920631, "error_message": "<value>"}}
   Webforms_getAllWebforms:
     speakeasy-default-webforms-get-all-webforms:
       parameters:
@@ -9484,38 +9559,6 @@ examples:
           application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
         "504":
           application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
-  Workflows_createAction:
-    speakeasy-default-workflows-create-action:
-      parameters:
-        path:
-          workflowID: "<id>"
-      requestBody:
-        application/json: {"name": "sq_add_status_page_issue", "data": {"component_and_impact": [], "issue_title": "<value>", "page_status_id": 179034, "status_and_message": [{"messages": ["<value 1>", "<value 2>", "<value 3>"], "status_id": 692068}], "status_page_id": 368871}}
-      responses:
-        "201":
-          application/json: {"data": {"name": "slack_archive_channel"}}
-        "400":
-          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
-        "401":
-          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
-        "402":
-          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
-        "403":
-          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
-        "404":
-          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
-        "409":
-          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
-        "422":
-          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
-        "500":
-          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
-        "502":
-          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
-        "503":
-          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
-        "504":
-          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
   Workflows_updateActionsOrder:
     speakeasy-default-workflows-update-actions-order:
       parameters:
@@ -9705,6 +9748,38 @@ examples:
           application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
         "504":
           application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
+  Workflows_createAction:
+    speakeasy-default-workflows-create-action:
+      parameters:
+        path:
+          workflowID: "<id>"
+      requestBody:
+        application/json: {"name": "sq_add_status_page_issue", "data": {"component_and_impact": [], "issue_title": "<value>", "page_status_id": 179034, "status_and_message": [{"messages": ["<value 1>", "<value 2>", "<value 3>"], "status_id": 692068}], "status_page_id": 368871}}
+      responses:
+        "201":
+          application/json: {"data": {"name": "slack_archive_channel"}}
+        "400":
+          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
+        "401":
+          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
+        "402":
+          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
+        "403":
+          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
+        "404":
+          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
+        "409":
+          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
+        "422":
+          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
+        "500":
+          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
+        "502":
+          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
+        "503":
+          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
+        "504":
+          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
   Schedules_listSchedules:
     speakeasy-default-schedules-list-schedules:
       parameters:
@@ -9808,20 +9883,6 @@ examples:
           application/json: {"error": {"code": "<value>", "message": "<value>"}}
         "500":
           application/json: {"error": {"code": "<value>", "message": "<value>"}}
-  Export_deleteIcalLink:
-    speakeasy-default-export-delete-ical-link:
-      parameters:
-        path:
-          scheduleID: "<id>"
-        query:
-          myOnCall: true
-      responses:
-        "204":
-          '*/*': "0x57681CCc0F"
-        "400":
-          application/json: {"error": {"code": "<value>", "message": "<value>"}}
-        "500":
-          application/json: {"error": {"code": "<value>", "message": "<value>"}}
   Export_getScheduleIcalLink:
     speakeasy-default-export-get-schedule-ical-link:
       parameters:
@@ -9868,6 +9929,47 @@ examples:
           application/json: {"error": {"code": "<value>", "message": "<value>"}}
         "500":
           application/json: {"error": {"code": "<value>", "message": "<value>"}}
+  Overrides_createScheduleOverride:
+    speakeasy-default-overrides-create-schedule-override:
+      parameters:
+        path:
+          scheduleID: "<id>"
+      requestBody:
+        application/json: {"startTime": "<value>", "endTime": "<value>", "reason": "<value>", "overriddenParticipant": {"group": [{"id": "<id>", "type": "<value>"}]}, "overrideWith": {"group": [{"id": "<id>", "type": "<value>"}]}}
+      responses:
+        "201":
+          application/json: {"data": {"id": 768738, "orgID": "<id>", "teamID": "<id>", "scheduleID": 725358, "startTime": "<value>", "endTime": "<value>", "reason": "<value>", "overriddenParticipant": {"group": [{"id": "<id>", "type": "<value>"}]}, "overrideWith": {"group": [{"id": "<id>", "type": "<value>"}]}, "createdAt": "1726770914541", "updatedAt": "1735655590405"}}
+        "400":
+          application/json: {"error": {"code": "<value>", "message": "<value>"}}
+        "500":
+          application/json: {"error": {"code": "<value>", "message": "<value>"}}
+  Rotations_deleteRotation:
+    speakeasy-default-rotations-delete-rotation:
+      parameters:
+        path:
+          scheduleID: "<id>"
+          rotationID: "<id>"
+      responses:
+        "204":
+          '*/*': "0xcea9dF5FC1"
+        "400":
+          application/json: {"error": {"code": "<value>", "message": "<value>"}}
+        "500":
+          application/json: {"error": {"code": "<value>", "message": "<value>"}}
+  Export_deleteIcalLink:
+    speakeasy-default-export-delete-ical-link:
+      parameters:
+        path:
+          scheduleID: "<id>"
+        query:
+          myOnCall: true
+      responses:
+        "204":
+          '*/*': "0x57681CCc0F"
+        "400":
+          application/json: {"error": {"code": "<value>", "message": "<value>"}}
+        "500":
+          application/json: {"error": {"code": "<value>", "message": "<value>"}}
   Overrides_listOverrides:
     speakeasy-default-overrides-list-overrides:
       parameters:
@@ -9883,20 +9985,6 @@ examples:
           application/json: {"error": {"code": "<value>", "message": "<value>"}}
         "500":
           application/json: {"error": {"code": "<value>", "message": "<value>"}}
-  Overrides_createScheduleOverride:
-    speakeasy-default-overrides-create-schedule-override:
-      parameters:
-        path:
-          scheduleID: "<id>"
-      requestBody:
-        application/json: {"startTime": "<value>", "endTime": "<value>", "reason": "<value>", "overriddenParticipant": {"group": [{"id": "<id>", "type": "<value>"}]}, "overrideWith": {"group": [{"id": "<id>", "type": "<value>"}]}}
-      responses:
-        "201":
-          application/json: {"data": {"id": 768738, "orgID": "<id>", "teamID": "<id>", "scheduleID": 725358, "startTime": "<value>", "endTime": "<value>", "reason": "<value>", "overriddenParticipant": {"group": [{"id": "<id>", "type": "<value>"}]}, "overrideWith": {"group": [{"id": "<id>", "type": "<value>"}]}, "createdAt": "1726770914541", "updatedAt": "1735655590405"}}
-        "400":
-          application/json: {"error": {"code": "<value>", "message": "<value>"}}
-        "500":
-          application/json: {"error": {"code": "<value>", "message": "<value>"}}
   Overrides_deleteScheduleOverride:
     speakeasy-default-overrides-delete-schedule-override:
       parameters:
@@ -9906,6 +9994,18 @@ examples:
       responses:
         "204":
           '*/*': "0xC3BA5Db5Bf"
+        "400":
+          application/json: {"error": {"code": "<value>", "message": "<value>"}}
+        "500":
+          application/json: {"error": {"code": "<value>", "message": "<value>"}}
+  Rotations_getScheduleRotations:
+    speakeasy-default-rotations-get-schedule-rotations:
+      parameters:
+        path:
+          scheduleID: "<id>"
+      responses:
+        "200":
+          application/json: {"data": [{"id": 359729, "name": "<value>", "scheduleID": 521344, "color": "olive", "startDate": "<value>", "period": "<value>", "changeParticipantsFrequency": 748500, "changeParticipantsUnit": "<value>", "createdAt": "1718170524109", "updatedAt": "1735680605621"}], "pageInfo": {"pageSize": 729163, "hasNext": false, "hasPrevious": true}}
         "400":
           application/json: {"error": {"code": "<value>", "message": "<value>"}}
         "500":
@@ -9938,18 +10038,6 @@ examples:
           application/json: {"error": {"code": "<value>", "message": "<value>"}}
         "500":
           application/json: {"error": {"code": "<value>", "message": "<value>"}}
-  Rotations_getScheduleRotations:
-    speakeasy-default-rotations-get-schedule-rotations:
-      parameters:
-        path:
-          scheduleID: "<id>"
-      responses:
-        "200":
-          application/json: {"data": [{"id": 359729, "name": "<value>", "scheduleID": 521344, "color": "olive", "startDate": "<value>", "period": "<value>", "changeParticipantsFrequency": 748500, "changeParticipantsUnit": "<value>", "createdAt": "1718170524109", "updatedAt": "1735680605621"}], "pageInfo": {"pageSize": 729163, "hasNext": false, "hasPrevious": true}}
-        "400":
-          application/json: {"error": {"code": "<value>", "message": "<value>"}}
-        "500":
-          application/json: {"error": {"code": "<value>", "message": "<value>"}}
   Rotations_createRotation:
     speakeasy-default-rotations-create-rotation:
       parameters:
@@ -9960,19 +10048,6 @@ examples:
       responses:
         "201":
           application/json: {"data": {"id": 85661, "name": "<value>", "scheduleID": 917284, "color": "yellow", "startDate": "<value>", "period": "<value>", "changeParticipantsFrequency": 960146, "changeParticipantsUnit": "<value>", "createdAt": "1720596346318", "updatedAt": "1735659020517"}}
-        "400":
-          application/json: {"error": {"code": "<value>", "message": "<value>"}}
-        "500":
-          application/json: {"error": {"code": "<value>", "message": "<value>"}}
-  Rotations_deleteRotation:
-    speakeasy-default-rotations-delete-rotation:
-      parameters:
-        path:
-          scheduleID: "<id>"
-          rotationID: "<id>"
-      responses:
-        "204":
-          '*/*': "0xcea9dF5FC1"
         "400":
           application/json: {"error": {"code": "<value>", "message": "<value>"}}
         "500":
@@ -10033,38 +10108,6 @@ examples:
           application/json: {"error": {"code": "<value>", "message": "<value>"}}
         "500":
           application/json: {"error": {"code": "<value>", "message": "<value>"}}
-  Squads_getAllSquads:
-    speakeasy-default-squads-get-all-squads:
-      responses:
-        "200":
-          application/json: {"data": [], "pageInfo": {"pageSize": 264870, "hasNext": true, "hasPrevious": true}}
-        "400":
-          application/json: {"error": {"code": "<value>", "message": "<value>"}}
-        "500":
-          application/json: {"error": {"code": "<value>", "message": "<value>"}}
-  Squads_createSquadV4:
-    speakeasy-default-squads-create-squad-v4:
-      requestBody:
-        application/json: {"owner_id": "<id>", "name": "<value>", "members": [{"user_id": "<id>"}]}
-      responses:
-        "201":
-          application/json: {"data": {"organization_id": "<id>", "owner_id": "<id>", "id": "<id>", "name": "<value>", "slug": "<value>", "members": [{"user_id": "<id>"}], "created_at": "1735262885045", "created_by": "<value>"}}
-        "400":
-          application/json: {"error": {"code": "<value>", "message": "<value>"}}
-        "500":
-          application/json: {"error": {"code": "<value>", "message": "<value>"}}
-  Squads_getSquadByIdV4:
-    speakeasy-default-squads-get-squad-by-id-v4:
-      parameters:
-        path:
-          squadID: "<id>"
-      responses:
-        "200":
-          application/json: {"data": {"id": "<id>", "org_id": "<id>", "team_id": "<id>", "name": "<value>", "members": [{"user_id": "<id>"}], "createdAt": "1718858748761", "updatedAt": "1735679037391"}}
-        "400":
-          application/json: {"error": {"code": "<value>", "message": "<value>"}}
-        "500":
-          application/json: {"error": {"code": "<value>", "message": "<value>"}}
   Squads_updateSquadV4:
     speakeasy-default-squads-update-squad-v4:
       parameters:
@@ -10075,52 +10118,6 @@ examples:
       responses:
         "200":
           application/json: {"data": {"id": "<id>", "org_id": "<id>", "team_id": "<id>", "name": "<value>", "members": [], "createdAt": "1711199001358", "updatedAt": "1735675307689"}}
-        "400":
-          application/json: {"error": {"code": "<value>", "message": "<value>"}}
-        "500":
-          application/json: {"error": {"code": "<value>", "message": "<value>"}}
-  Squads_removeSquadMember:
-    speakeasy-default-squads-remove-squad-member:
-      parameters:
-        path:
-          squadID: "<id>"
-          memberID: "<id>"
-        query:
-          replaceWith: "<value>"
-      responses:
-        "200":
-          application/json: {"id": "<id>", "members": []}
-        "400":
-          application/json: {"error": {"code": "<value>", "message": "<value>"}}
-        "500":
-          application/json: {"error": {"code": "<value>", "message": "<value>"}}
-  Squads_updateSquadMember:
-    speakeasy-default-squads-update-squad-member:
-      parameters:
-        path:
-          squadID: "<id>"
-          memberID: "<id>"
-        query:
-          replaceWith: "<value>"
-      requestBody:
-        application/json: {"role": "<value>"}
-      responses:
-        "201":
-          application/json: {"id": "<id>", "members": []}
-        "400":
-          application/json: {"error": {"code": "<value>", "message": "<value>"}}
-        "500":
-          application/json: {"error": {"code": "<value>", "message": "<value>"}}
-  Squads_updateSquadName:
-    speakeasy-default-squads-update-squad-name:
-      parameters:
-        path:
-          squadID: "<id>"
-      requestBody:
-        application/json: {"name": "<value>"}
-      responses:
-        "200":
-          application/json: {"data": {"id": "<id>", "name": "<value>"}}
         "400":
           application/json: {"error": {"code": "<value>", "message": "<value>"}}
         "500":
@@ -10279,6 +10276,135 @@ examples:
           application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
         "504":
           application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
+  Issues_createIssue:
+    speakeasy-default-issues-create-issue:
+      parameters:
+        path:
+          statuspageID: "<id>"
+      requestBody:
+        application/json: {"title": "<value>", "components": [{}], "issues": [{}]}
+      responses:
+        "200":
+          application/json: {"data": {"id": 597241, "componentIDs": [837433, 493725], "title": "<value>"}}
+        "400":
+          application/json: {"meta": {"status": 277600, "error_message": "<value>"}}
+        "401":
+          application/json: {"meta": {"status": 277600, "error_message": "<value>"}}
+        "402":
+          application/json: {"meta": {"status": 277600, "error_message": "<value>"}}
+        "403":
+          application/json: {"meta": {"status": 277600, "error_message": "<value>"}}
+        "404":
+          application/json: {"meta": {"status": 277600, "error_message": "<value>"}}
+        "409":
+          application/json: {"meta": {"status": 277600, "error_message": "<value>"}}
+        "422":
+          application/json: {"meta": {"status": 277600, "error_message": "<value>"}}
+        "500":
+          application/json: {"meta": {"status": 277600, "error_message": "<value>"}}
+        "502":
+          application/json: {"meta": {"status": 277600, "error_message": "<value>"}}
+        "503":
+          application/json: {"meta": {"status": 277600, "error_message": "<value>"}}
+        "504":
+          application/json: {"meta": {"status": 277600, "error_message": "<value>"}}
+  Issues_updateIssue:
+    speakeasy-default-issues-update-issue:
+      parameters:
+        path:
+          statuspageID: "<id>"
+          issue_id: "<id>"
+      requestBody:
+        application/json: {"title": "<value>", "components": [{}], "issues": [{}]}
+      responses:
+        "200":
+          application/json: {"data": {"id": 147570, "componentIDs": [741253], "title": "<value>"}}
+        "400":
+          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
+        "401":
+          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
+        "402":
+          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
+        "403":
+          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
+        "404":
+          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
+        "409":
+          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
+        "422":
+          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
+        "500":
+          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
+        "502":
+          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
+        "503":
+          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
+        "504":
+          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
+  Maintenances_listMaintenances:
+    speakeasy-default-maintenances-list-maintenances:
+      parameters:
+        path:
+          statuspageID: "<id>"
+        query:
+          startTime: "<value>"
+          endTime: "<value>"
+      responses:
+        "200":
+          application/json: {"data": [], "meta": {"totalCount": 68505}}
+        "400":
+          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
+        "401":
+          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
+        "402":
+          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
+        "403":
+          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
+        "404":
+          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
+        "409":
+          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
+        "422":
+          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
+        "500":
+          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
+        "502":
+          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
+        "503":
+          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
+        "504":
+          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
+  Maintenances_getMaintenanceById:
+    speakeasy-default-maintenances-get-maintenance-by-id:
+      parameters:
+        path:
+          statuspageID: "<id>"
+          maintenance_id: "<id>"
+      responses:
+        "200":
+          application/json: {"data": {"ID": 516619, "PageID": 912418, "Title": "<value>", "Note": "<value>", "StartTime": "2025-06-23T19:52:18.131Z", "EndTime": "2024-04-22T00:13:33.758Z", "createdAt": "2025-07-09T04:52:59.241Z", "updatedAt": "2025-01-29T07:30:36.436Z", "deletedAt": "2025-10-17T20:40:04.291Z"}}
+        "400":
+          application/json: {"meta": {"status": 580095, "error_message": "<value>"}}
+        "401":
+          application/json: {"meta": {"status": 580095, "error_message": "<value>"}}
+        "402":
+          application/json: {"meta": {"status": 580095, "error_message": "<value>"}}
+        "403":
+          application/json: {"meta": {"status": 580095, "error_message": "<value>"}}
+        "404":
+          application/json: {"meta": {"status": 580095, "error_message": "<value>"}}
+        "409":
+          application/json: {"meta": {"status": 580095, "error_message": "<value>"}}
+        "422":
+          application/json: {"meta": {"status": 580095, "error_message": "<value>"}}
+        "500":
+          application/json: {"meta": {"status": 580095, "error_message": "<value>"}}
+        "502":
+          application/json: {"meta": {"status": 580095, "error_message": "<value>"}}
+        "503":
+          application/json: {"meta": {"status": 580095, "error_message": "<value>"}}
+        "504":
+          application/json: {"meta": {"status": 580095, "error_message": "<value>"}}
   StatusPages_listStatusPageStatuses:
     speakeasy-default-status-pages-list-status-page-statuses:
       parameters:
@@ -10620,38 +10746,6 @@ examples:
           application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
         "504":
           application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
-  Issues_createIssue:
-    speakeasy-default-issues-create-issue:
-      parameters:
-        path:
-          statuspageID: "<id>"
-      requestBody:
-        application/json: {"title": "<value>", "components": [{}], "issues": [{}]}
-      responses:
-        "200":
-          application/json: {"data": {"id": 597241, "componentIDs": [837433, 493725], "title": "<value>"}}
-        "400":
-          application/json: {"meta": {"status": 277600, "error_message": "<value>"}}
-        "401":
-          application/json: {"meta": {"status": 277600, "error_message": "<value>"}}
-        "402":
-          application/json: {"meta": {"status": 277600, "error_message": "<value>"}}
-        "403":
-          application/json: {"meta": {"status": 277600, "error_message": "<value>"}}
-        "404":
-          application/json: {"meta": {"status": 277600, "error_message": "<value>"}}
-        "409":
-          application/json: {"meta": {"status": 277600, "error_message": "<value>"}}
-        "422":
-          application/json: {"meta": {"status": 277600, "error_message": "<value>"}}
-        "500":
-          application/json: {"meta": {"status": 277600, "error_message": "<value>"}}
-        "502":
-          application/json: {"meta": {"status": 277600, "error_message": "<value>"}}
-        "503":
-          application/json: {"meta": {"status": 277600, "error_message": "<value>"}}
-        "504":
-          application/json: {"meta": {"status": 277600, "error_message": "<value>"}}
   Issues_deleteIssueById:
     speakeasy-default-issues-delete-issue-by-id:
       parameters:
@@ -10714,39 +10808,6 @@ examples:
           application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
         "504":
           application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
-  Issues_updateIssue:
-    speakeasy-default-issues-update-issue:
-      parameters:
-        path:
-          statuspageID: "<id>"
-          issue_id: "<id>"
-      requestBody:
-        application/json: {"title": "<value>", "components": [{}], "issues": [{}]}
-      responses:
-        "200":
-          application/json: {"data": {"id": 147570, "componentIDs": [741253], "title": "<value>"}}
-        "400":
-          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
-        "401":
-          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
-        "402":
-          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
-        "403":
-          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
-        "404":
-          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
-        "409":
-          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
-        "422":
-          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
-        "500":
-          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
-        "502":
-          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
-        "503":
-          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
-        "504":
-          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
   Issues_listStatusPageIssueStates:
     speakeasy-default-issues-list-status-page-issue-states:
       parameters:
@@ -10777,39 +10838,6 @@ examples:
           application/json: {"meta": {"status": 97372, "error_message": "<value>"}}
         "504":
           application/json: {"meta": {"status": 97372, "error_message": "<value>"}}
-  Maintenances_listMaintenances:
-    speakeasy-default-maintenances-list-maintenances:
-      parameters:
-        path:
-          statuspageID: "<id>"
-        query:
-          startTime: "<value>"
-          endTime: "<value>"
-      responses:
-        "200":
-          application/json: {"data": [], "meta": {"totalCount": 68505}}
-        "400":
-          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
-        "401":
-          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
-        "402":
-          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
-        "403":
-          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
-        "404":
-          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
-        "409":
-          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
-        "422":
-          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
-        "500":
-          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
-        "502":
-          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
-        "503":
-          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
-        "504":
-          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
   Maintenances_createMaintenance:
     speakeasy-default-maintenances-create-maintenance:
       parameters:
@@ -10873,37 +10901,6 @@ examples:
           application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
         "504":
           application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
-  Maintenances_getMaintenanceById:
-    speakeasy-default-maintenances-get-maintenance-by-id:
-      parameters:
-        path:
-          statuspageID: "<id>"
-          maintenance_id: "<id>"
-      responses:
-        "200":
-          application/json: {"data": {"ID": 516619, "PageID": 912418, "Title": "<value>", "Note": "<value>", "StartTime": "2025-06-23T19:52:18.131Z", "EndTime": "2024-04-22T00:13:33.758Z", "createdAt": "2025-07-09T04:52:59.241Z", "updatedAt": "2025-01-29T07:30:36.436Z", "deletedAt": "2025-10-17T20:40:04.291Z"}}
-        "400":
-          application/json: {"meta": {"status": 580095, "error_message": "<value>"}}
-        "401":
-          application/json: {"meta": {"status": 580095, "error_message": "<value>"}}
-        "402":
-          application/json: {"meta": {"status": 580095, "error_message": "<value>"}}
-        "403":
-          application/json: {"meta": {"status": 580095, "error_message": "<value>"}}
-        "404":
-          application/json: {"meta": {"status": 580095, "error_message": "<value>"}}
-        "409":
-          application/json: {"meta": {"status": 580095, "error_message": "<value>"}}
-        "422":
-          application/json: {"meta": {"status": 580095, "error_message": "<value>"}}
-        "500":
-          application/json: {"meta": {"status": 580095, "error_message": "<value>"}}
-        "502":
-          application/json: {"meta": {"status": 580095, "error_message": "<value>"}}
-        "503":
-          application/json: {"meta": {"status": 580095, "error_message": "<value>"}}
-        "504":
-          application/json: {"meta": {"status": 580095, "error_message": "<value>"}}
   Maintenances_updateMaintenanceById:
     speakeasy-default-maintenances-update-maintenance-by-id:
       parameters:
@@ -10968,463 +10965,3 @@ examples:
         "504":
           application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
 examplesVersion: 1.0.2
-releaseNotes: |
-  ## Go SDK Changes Detected:
-  * `SquadcastSdk.Analytics.GetOrganization()`: **Added**
-  * `SquadcastSdk.Analytics.GetTeam()`: **Added**
-  * `SquadcastSdk.EscalationPolicies.GetByTeam()`: **Added**
-  * `SquadcastSdk.EscalationPolicies.Create()`: **Added**
-  * `SquadcastSdk.EscalationPolicies.Remove()`: **Added**
-  * `SquadcastSdk.EscalationPolicies.GetById()`: **Added**
-  * `SquadcastSdk.EscalationPolicies.Update()`: **Added**
-  * `SquadcastSdk.Exports.GetDetails()`: **Added**
-  * `SquadcastSdk.Webhooks.GetAll()`: **Added**
-  * `SquadcastSdk.Webhooks.Create()`: **Added**
-  * `SquadcastSdk.Webhooks.Update()`: **Added**
-  * `SquadcastSdk.Extensions.Webhooks.Delete()`: **Added**
-  * `SquadcastSdk.Extensions.Webhooks.GetById()`: **Added**
-  * `SquadcastSdk.Extensions.Msteams.UpsertConfig()`: **Added**
-  * `SquadcastSdk.Msteams.GetConfig()`: **Added**
-  * `SquadcastSdk.CommunicationCards.CreateSlackChannel()`: **Added**
-  * `SquadcastSdk.CommunicationCards.ArchiveSlackChannel()`: **Added**
-  * `SquadcastSdk.GlobalEventRules.List()`: **Added**
-  * `SquadcastSdk.GlobalEventRules.Create()`: **Added**
-  * `SquadcastSdk.GlobalEventRules.DeleteRule()`: **Added**
-  * `SquadcastSdk.GlobalEventRules.GetById()`: **Added**
-  * `SquadcastSdk.GlobalEventRules.UpdateById()`: **Added**
-  * `SquadcastSdk.GlobalEventRules.GetRuleset()`: **Added**
-  * `SquadcastSdk.GlobalEventRules.UpdateRuleset()`: **Added**
-  * `SquadcastSdk.GlobalEventRules.UpdateRule()`: **Added**
-  * `SquadcastSdk.GlobalEventRules.Rulesets.Create()`: **Added**
-  * `SquadcastSdk.GlobalEventRules.Rulesets.Reorder()`: **Added**
-  * `SquadcastSdk.GlobalEventRules.Rulesets.ListRulesetRules()`: **Added**
-  * `SquadcastSdk.GlobalEventRules.Rulesets.Rules.Create()`: **Added**
-  * `SquadcastSdk.GlobalEventRules.Rulesets.Rules.GetById()`: **Added**
-  * `SquadcastSdk.GlobalEventRules.Rules.ReorderByIndex()`: **Added**
-  * `SquadcastSdk.GlobalEventRulesRulesets.Delete()`: **Added**
-  * `SquadcastSdk.GlobalEventRulesRulesetsRules.DeleteById()`: **Added**
-  * `SquadcastSdk.GlobalOncallReminderRules.Delete()`: **Added**
-  * `SquadcastSdk.GlobalOncallReminderRules.List()`: **Added**
-  * `SquadcastSdk.GlobalOncallReminderRules.Create()`: **Added**
-  * `SquadcastSdk.GlobalOncallReminderRules.Update()`: **Added**
-  * `SquadcastSdk.Incidents.BulkAcknowledge()`: **Added**
-  * `SquadcastSdk.Incidents.Export()`: **Added**
-  * `SquadcastSdk.Incidents.ExportAsync()`: **Added**
-  * `SquadcastSdk.Incidents.BulkUpdatePriority()`: **Added**
-  * `SquadcastSdk.Incidents.BulkResolve()`: **Added**
-  * `SquadcastSdk.Incidents.GetById()`: **Added**
-  * `SquadcastSdk.Incidents.Acknowledge()`: **Added**
-  * `SquadcastSdk.Incidents.MarkSloFalsePositive()`: **Added**
-  * `SquadcastSdk.Incidents.UpdatePriority()`: **Added**
-  * `SquadcastSdk.Incidents.Reassign()`: **Added**
-  * `SquadcastSdk.Incidents.Resolve()`: **Added**
-  * `SquadcastSdk.Incidents.GetStatusByRequestIds()`: **Added**
-  * `SquadcastSdk.Incidents.GetAllPostmortems()`: **Added**
-  * `SquadcastSdk.Incidents.MarkAsTransient()`: **Added**
-  * `SquadcastSdk.Incidents.UpdatePostmortem()`: **Added**
-  * `SquadcastSdk.Incidents.UnsnoozeNotifications()`: **Added**
-  * `SquadcastSdk.Incidents.CommunicationCards.GetAll()`: **Added**
-  * `SquadcastSdk.Incidents.CommunicationCards.Create()`: **Added**
-  * `SquadcastSdk.Incidents.CommunicationCards.Delete()`: **Added**
-  * `SquadcastSdk.Incidents.CommunicationCard.Update()`: **Added**
-  * `SquadcastSdk.Incidents.Runbooks.Attach()`: **Added**
-  * `SquadcastSdk.Incidents.Tags.Update()`: **Added**
-  * `SquadcastSdk.Incidents.Tags.Append()`: **Added**
-  * `SquadcastSdk.Incidents.Notes.Create()`: **Added**
-  * `SquadcastSdk.Incidents.Notes.Delete()`: **Added**
-  * `SquadcastSdk.Incidents.Notes.Update()`: **Added**
-  * `SquadcastSdk.Incidents.Actions.CreateJiraCloudTicket()`: **Added**
-  * `SquadcastSdk.Incidents.Actions.CreateJiraServerTicket()`: **Added**
-  * `SquadcastSdk.Incidents.Actions.CreateInServicenow()`: **Added**
-  * `SquadcastSdk.Incidents.Actions.Webhook.TriggerManually()`: **Added**
-  * `SquadcastSdk.Incidents.AdditionalResponders.Get()`: **Added**
-  * `SquadcastSdk.Incidents.AdditionalResponders.Add()`: **Added**
-  * `SquadcastSdk.Incidents.AdditionalResponders.Delete()`: **Added**
-  * `SquadcastSdk.Incidents.Events.List()`: **Added**
-  * `SquadcastSdk.Incidents.AutoPauseTransientAlerts.MarkAsNotTransient()`: **Added**
-  * `SquadcastSdk.Incidents.Postmortems.DeleteByIncident()`: **Added**
-  * `SquadcastSdk.Incidents.Postmortems.GetByIncident()`: **Added**
-  * `SquadcastSdk.Incidents.Postmortems.Create()`: **Added**
-  * `SquadcastSdk.Incidents.SnoozeNotifications.Snooze()`: **Added**
-  * `SquadcastSdk.Notes.List()`: **Added**
-  * `SquadcastSdk.IncidentActions.Circleci.Rebuild()`: **Added**
-  * `SquadcastSdk.ApiTokens.List()`: **Added**
-  * `SquadcastSdk.Tokens.CreateUserToken()`: **Added**
-  * `SquadcastSdk.Users.GetAll()`: **Added**
-  * `SquadcastSdk.Users.Add()`: **Added**
-  * `SquadcastSdk.Users.UpdateOrgLevelPermissions()`: **Added**
-  * `SquadcastSdk.Users.Delete()`: **Added**
-  * `SquadcastSdk.Users.GetRoles()`: **Added**
-  * `SquadcastSdk.Users.RemoveFromOrg()`: **Added**
-  * `SquadcastSdk.Users.GetById()`: **Added**
-  * `SquadcastSdk.Users.Update()`: **Added**
-  * `SquadcastSdk.Users.ApiToken.Remove()`: **Added**
-  * `SquadcastSdk.Runbooks.ListByTeam()`: **Added**
-  * `SquadcastSdk.Runbooks.Create()`: **Added**
-  * `SquadcastSdk.Runbooks.Remove()`: **Added**
-  * `SquadcastSdk.Runbooks.GetById()`: **Added**
-  * `SquadcastSdk.Runbooks.Update()`: **Added**
-  * `SquadcastSdk.Services.List()`: **Added**
-  * `SquadcastSdk.Services.Create()`: **Added**
-  * `SquadcastSdk.Services.GetByName()`: **Added**
-  * `SquadcastSdk.Services.GetById()`: **Added**
-  * `SquadcastSdk.Services.Update()`: **Added**
-  * `SquadcastSdk.Services.Delete()`: **Added**
-  * `SquadcastSdk.Services.CreateOrUpdateAptaConfig()`: **Added**
-  * `SquadcastSdk.Services.UpsertIagConfig()`: **Added**
-  * `SquadcastSdk.Services.UpdateNotificationDelayConfig()`: **Added**
-  * `SquadcastSdk.Services.CreateOrUpdateDependencies()`: **Added**
-  * `SquadcastSdk.Services.CreateOrUpdateNotificationTemplateOverlay()`: **Added**
-  * `SquadcastSdk.Services.GetAllDedupKeyOverlays()`: **Added**
-  * `SquadcastSdk.Services.UpdateDedupKeyOverlay()`: **Added**
-  * `SquadcastSdk.Services.GetRoutingRules()`: **Added**
-  * `SquadcastSdk.Services.CreateOrUpdateSuppressionRules()`: **Added**
-  * `SquadcastSdk.Services.CreateOrUpdateTaggingRules()`: **Added**
-  * `SquadcastSdk.Services.Overlay.GetKeyBasedDeduplicationOptin()`: **Added**
-  * `SquadcastSdk.Services.Overlay.OptInForKeyBasedDeduplication()`: **Added**
-  * `SquadcastSdk.Services.DeduplicationRules.Get()`: **Added**
-  * `SquadcastSdk.Services.DeduplicationRules.CreateOrUpdate()`: **Added**
-  * `SquadcastSdk.Services.Extensions.UpdateSlack()`: **Added**
-  * `SquadcastSdk.Services.MaintenanceMode.Get()`: **Added**
-  * `SquadcastSdk.Services.MaintenanceMode.CreateOrUpdate()`: **Added**
-  * `SquadcastSdk.Services.Overlays.GetCustomContentTemplates()`: **Added**
-  * `SquadcastSdk.Services.Overlays.GetCustomContent()`: **Added**
-  * `SquadcastSdk.Services.Overlays.GetDedupKey()`: **Added**
-  * `SquadcastSdk.Services.Overlays.CustomContent.Render()`: **Added**
-  * `SquadcastSdk.Services.Overlays.DedupKey.Render()`: **Added**
-  * `SquadcastSdk.Services.Overlays.DedupKey.Delete()`: **Added**
-  * `SquadcastSdk.Services.RoutingRules.CreateOrUpdate()`: **Added**
-  * `SquadcastSdk.Services.SuppressionRules.Get()`: **Added**
-  * `SquadcastSdk.Services.TaggingRules.Get()`: **Added**
-  * `SquadcastSdk.Overlays.DeleteNotificationTemplate()`: **Added**
-  * `SquadcastSdk.Slos.ListAll()`: **Added**
-  * `SquadcastSdk.Slos.Create()`: **Added**
-  * `SquadcastSdk.Slos.Update()`: **Added**
-  * `SquadcastSdk.Slos.Remove()`: **Added**
-  * `SquadcastSdk.Slos.GetById()`: **Added**
-  * `SquadcastSdk.Slos.MarkAffected()`: **Added**
-  * `SquadcastSdk.Slos.MarkFalsePositive()`: **Added**
-  * `SquadcastSdk.V3.Squads.ListByTeam()`: **Added**
-  * `SquadcastSdk.Squads.Create()`: **Added**
-  * `SquadcastSdk.Squads.Delete()`: **Added**
-  * `SquadcastSdk.Squads.GetById()`: **Added**
-  * `SquadcastSdk.Squads.Update()`: **Added**
-  * `SquadcastSdk.Squads.List()`: **Added**
-  * `SquadcastSdk.Squads.RemoveMember()`: **Added**
-  * `SquadcastSdk.Squads.UpdateMemberRole()`: **Added**
-  * `SquadcastSdk.Squads.UpdateName()`: **Added**
-  * `SquadcastSdk.Squads.V4.Create()`: **Added**
-  * `SquadcastSdk.Squads.V4.GetById()`: **Added**
-  * `SquadcastSdk.Teams.GetAll()`: **Added**
-  * `SquadcastSdk.Teams.Create()`: **Added**
-  * `SquadcastSdk.Teams.GetById()`: **Added**
-  * `SquadcastSdk.Teams.Update()`: **Added**
-  * `SquadcastSdk.Teams.Delete()`: **Added**
-  * `SquadcastSdk.Teams.AddMember()`: **Added**
-  * `SquadcastSdk.Teams.AddBulkMember()`: **Added**
-  * `SquadcastSdk.Teams.RemoveMember()`: **Added**
-  * `SquadcastSdk.Teams.UpdateMember()`: **Added**
-  * `SquadcastSdk.Teams.GetAllRoles()`: **Added**
-  * `SquadcastSdk.Teams.CreateRole()`: **Added**
-  * `SquadcastSdk.Teams.RemoveRole()`: **Added**
-  * `SquadcastSdk.Teams.UpdateRole()`: **Added**
-  * `SquadcastSdk.Teams.Members.GetAll()`: **Added**
-  * `SquadcastSdk.Webforms.GetAll()`: **Added**
-  * `SquadcastSdk.Webforms.Create()`: **Added**
-  * `SquadcastSdk.Webforms.Update()`: **Added**
-  * `SquadcastSdk.Webforms.Remove()`: **Added**
-  * `SquadcastSdk.Webforms.Get()`: **Added**
-  * `SquadcastSdk.Workflows.List()`: **Added**
-  * `SquadcastSdk.Workflows.Create()`: **Added**
-  * `SquadcastSdk.Workflows.BulkEnableDisable()`: **Added**
-  * `SquadcastSdk.Workflows.Delete()`: **Added**
-  * `SquadcastSdk.Workflows.GetById()`: **Added**
-  * `SquadcastSdk.Workflows.Update()`: **Added**
-  * `SquadcastSdk.Workflows.UpdateActionsOrder()`: **Added**
-  * `SquadcastSdk.Workflows.DeleteAction()`: **Added**
-  * `SquadcastSdk.Workflows.GetAction()`: **Added**
-  * `SquadcastSdk.Workflows.UpdateAction()`: **Added**
-  * `SquadcastSdk.Workflows.ToggleEnable()`: **Added**
-  * `SquadcastSdk.Workflows.GetLogs()`: **Added**
-  * `SquadcastSdk.Workflows.Actions.Create()`: **Added**
-  * `SquadcastSdk.Schedules.List()`: **Added**
-  * `SquadcastSdk.Schedules.Create()`: **Added**
-  * `SquadcastSdk.Schedules.Delete()`: **Added**
-  * `SquadcastSdk.Schedules.GetById()`: **Added**
-  * `SquadcastSdk.Schedules.Update()`: **Added**
-  * `SquadcastSdk.Schedules.PauseResume()`: **Added**
-  * `SquadcastSdk.Schedules.ChangeTimezone()`: **Added**
-  * `SquadcastSdk.Schedules.Clone()`: **Added**
-  * `SquadcastSdk.Schedules.GetIcalLink()`: **Added**
-  * `SquadcastSdk.Schedules.RefreshIcalLink()`: **Added**
-  * `SquadcastSdk.Schedules.CreateIcalLink()`: **Added**
-  * `SquadcastSdk.Schedules.CreateScheduleOverride()`: **Added**
-  * `SquadcastSdk.Schedules.DeleteRotation()`: **Added**
-  * `SquadcastSdk.Schedules.Export.DeleteIcalLink()`: **Added**
-  * `SquadcastSdk.Schedules.Overrides.List()`: **Added**
-  * `SquadcastSdk.Schedules.Overrides.Delete()`: **Added**
-  * `SquadcastSdk.Schedules.Rotations.List()`: **Added**
-  * `SquadcastSdk.Overrides.GetById()`: **Added**
-  * `SquadcastSdk.Overrides.Update()`: **Added**
-  * `SquadcastSdk.Rotations.Create()`: **Added**
-  * `SquadcastSdk.Rotations.GetById()`: **Added**
-  * `SquadcastSdk.Rotations.Update()`: **Added**
-  * `SquadcastSdk.Rotations.GetParticipants()`: **Added**
-  * `SquadcastSdk.Rotations.UpdateParticipants()`: **Added**
-  * `SquadcastSdk.V4.Squads.Update()`: **Added**
-  * `SquadcastSdk.StatusPages.List()`: **Added**
-  * `SquadcastSdk.StatusPages.Create()`: **Added**
-  * `SquadcastSdk.StatusPages.DeleteById()`: **Added**
-  * `SquadcastSdk.StatusPages.GetById()`: **Added**
-  * `SquadcastSdk.StatusPages.UpdateById()`: **Added**
-  * `SquadcastSdk.StatusPages.CreateIssue()`: **Added**
-  * `SquadcastSdk.StatusPages.UpdateIssue()`: **Added**
-  * `SquadcastSdk.StatusPages.ListMaintenances()`: **Added**
-  * `SquadcastSdk.StatusPages.GetMaintenanceById()`: **Added**
-  * `SquadcastSdk.StatusPages.GetStatuses()`: **Added**
-  * `SquadcastSdk.StatusPages.Components.List()`: **Added**
-  * `SquadcastSdk.StatusPages.Components.Create()`: **Added**
-  * `SquadcastSdk.StatusPages.Components.DeleteById()`: **Added**
-  * `SquadcastSdk.StatusPages.Components.GetById()`: **Added**
-  * `SquadcastSdk.StatusPages.Components.UpdateById()`: **Added**
-  * `SquadcastSdk.StatusPages.ComponentGroups.List()`: **Added**
-  * `SquadcastSdk.StatusPages.ComponentGroups.Create()`: **Added**
-  * `SquadcastSdk.StatusPages.ComponentGroups.DeleteById()`: **Added**
-  * `SquadcastSdk.StatusPages.ComponentGroups.GetById()`: **Added**
-  * `SquadcastSdk.StatusPages.Issues.List()`: **Added**
-  * `SquadcastSdk.StatusPages.Issues.Delete()`: **Added**
-  * `SquadcastSdk.StatusPages.Issues.GetById()`: **Added**
-  * `SquadcastSdk.StatusPages.Issues.ListStates()`: **Added**
-  * `SquadcastSdk.StatusPages.Maintenances.Create()`: **Added**
-  * `SquadcastSdk.StatusPages.Maintenances.DeleteById()`: **Added**
-  * `SquadcastSdk.StatusPages.Maintenances.UpdateById()`: **Added**
-  * `SquadcastSdk.StatusPages.Subscribers.List()`: **Added**
-  * `SquadcastSdk.Analytics.AnalyticsGetOrgAnalytics()`: **Deleted** **Breaking** :warning:
-  * `SquadcastSdk.Analytics.AnalyticsGetTeamAnalytics()`: **Deleted** **Breaking** :warning:
-  * `SquadcastSdk.EscalationPolicies.EscalationPoliciesGetEscalationPolicyByTeam()`: **Deleted** **Breaking** :warning:
-  * `SquadcastSdk.EscalationPolicies.EscalationPoliciesCreateEscalationPolicies()`: **Deleted** **Breaking** :warning:
-  * `SquadcastSdk.EscalationPolicies.EscalationPoliciesGetEscalationPolicyById()`: **Deleted** **Breaking** :warning:
-  * `SquadcastSdk.EscalationPolicies.EscalationPoliciesUpdateEscalationPolicy()`: **Deleted** **Breaking** :warning:
-  * `SquadcastSdk.EscalationPolicies.EscalationPoliciesRemoveEscalationPolicy()`: **Deleted** **Breaking** :warning:
-  * `SquadcastSdk.Export.ExportGetExportDetails()`: **Deleted** **Breaking** :warning:
-  * `SquadcastSdk.Extensions/webhooks.WebhooksGetAllWebhooks()`: **Deleted** **Breaking** :warning:
-  * `SquadcastSdk.Extensions/webhooks.WebhooksCreateWebhook()`: **Deleted** **Breaking** :warning:
-  * `SquadcastSdk.Extensions/webhooks.WebhooksGetWebhookById()`: **Deleted** **Breaking** :warning:
-  * `SquadcastSdk.Extensions/webhooks.WebhooksUpdateWebhook()`: **Deleted** **Breaking** :warning:
-  * `SquadcastSdk.Extensions/webhooks.WebhooksDeleteWebhook()`: **Deleted** **Breaking** :warning:
-  * `SquadcastSdk.Extensions/msTeams.MsTeamsGetMsteamsConfig()`: **Deleted** **Breaking** :warning:
-  * `SquadcastSdk.Extensions/msTeams.MsTeamsCreateOrUpdateMsteamsConfiguration()`: **Deleted** **Breaking** :warning:
-  * `SquadcastSdk.Incidents/communicationCard.CommunicationCardsCreateSlackChannelInCommunicationCard()`: **Deleted** **Breaking** :warning:
-  * `SquadcastSdk.Incidents/communicationCard.CommunicationCardsArchiveSlackChannel()`: **Deleted** **Breaking** :warning:
-  * `SquadcastSdk.Incidents/communicationCard.CommunicationCardsGetAllCommunicationCard()`: **Deleted** **Breaking** :warning:
-  * `SquadcastSdk.Incidents/communicationCard.CommunicationCardsCreateCommunicationCard()`: **Deleted** **Breaking** :warning:
-  * `SquadcastSdk.Incidents/communicationCard.CommunicationCardsUpdateCommunicationCard()`: **Deleted** **Breaking** :warning:
-  * `SquadcastSdk.Incidents/communicationCard.CommunicationCardsDeleteCommunicationCard()`: **Deleted** **Breaking** :warning:
-  * `SquadcastSdk.GlobalEventRules.GlobalEventRulesListGlobalEventRules()`: **Deleted** **Breaking** :warning:
-  * `SquadcastSdk.GlobalEventRules.GlobalEventRulesCreateGlobalEventRule()`: **Deleted** **Breaking** :warning:
-  * `SquadcastSdk.GlobalEventRules.GlobalEventRulesGetGlobalEventRuleById()`: **Deleted** **Breaking** :warning:
-  * `SquadcastSdk.GlobalEventRules.GlobalEventRulesDeleteGlobalEventRuleById()`: **Deleted** **Breaking** :warning:
-  * `SquadcastSdk.GlobalEventRules.GlobalEventRulesUpdateGlobalEventRuleById()`: **Deleted** **Breaking** :warning:
-  * `SquadcastSdk.GlobalEventRules/rulesets.GlobalEventRulesCreateRuleset()`: **Deleted** **Breaking** :warning:
-  * `SquadcastSdk.GlobalEventRules/rulesets.GlobalEventRulesGetRuleset()`: **Deleted** **Breaking** :warning:
-  * `SquadcastSdk.GlobalEventRules/rulesets.GlobalEventRulesDeleteGerRuleset()`: **Deleted** **Breaking** :warning:
-  * `SquadcastSdk.GlobalEventRules/rulesets.GlobalEventRulesUpdateRuleset()`: **Deleted** **Breaking** :warning:
-  * `SquadcastSdk.GlobalEventRules/rulesets.GlobalEventRulesReorderRuleset()`: **Deleted** **Breaking** :warning:
-  * `SquadcastSdk.GlobalEventRules/rulesets/rules.GlobalEventRulesListRulesetRules()`: **Deleted** **Breaking** :warning:
-  * `SquadcastSdk.GlobalEventRules/rulesets/rules.GlobalEventRulesCreateRule()`: **Deleted** **Breaking** :warning:
-  * `SquadcastSdk.GlobalEventRules/rulesets/rules.GlobalEventRulesGetRuleById()`: **Deleted** **Breaking** :warning:
-  * `SquadcastSdk.GlobalEventRules/rulesets/rules.GlobalEventRulesDeleteRuleById()`: **Deleted** **Breaking** :warning:
-  * `SquadcastSdk.GlobalEventRules/rulesets/rules.GlobalEventRulesUpdateRuleById()`: **Deleted** **Breaking** :warning:
-  * `SquadcastSdk.GlobalEventRules/rulesets/rules.GlobalEventRulesReorderRulesetByIndex()`: **Deleted** **Breaking** :warning:
-  * `SquadcastSdk.GlobalOncallReminderRules.GlobalOncallReminderRulesGetGlobalOncallReminderRules()`: **Deleted** **Breaking** :warning:
-  * `SquadcastSdk.GlobalOncallReminderRules.GlobalOncallReminderRulesUpdateGlobalOncallReminderRules()`: **Deleted** **Breaking** :warning:
-  * `SquadcastSdk.GlobalOncallReminderRules.GlobalOncallReminderRulesCreateGlobalOncallReminderRules()`: **Deleted** **Breaking** :warning:
-  * `SquadcastSdk.GlobalOncallReminderRules.GlobalOncallReminderRulesDeleteGlobalOncallReminderRules()`: **Deleted** **Breaking** :warning:
-  * `SquadcastSdk.Incidents.IncidentsBulkAcknowledgeIncidents()`: **Deleted** **Breaking** :warning:
-  * `SquadcastSdk.Incidents.IncidentsIncidentExport()`: **Deleted** **Breaking** :warning:
-  * `SquadcastSdk.Incidents.IncidentsIncidentExportAsync()`: **Deleted** **Breaking** :warning:
-  * `SquadcastSdk.Incidents.IncidentsBulkIncidentsPriorityUpdate()`: **Deleted** **Breaking** :warning:
-  * `SquadcastSdk.Incidents.IncidentsBulkResolveIncidents()`: **Deleted** **Breaking** :warning:
-  * `SquadcastSdk.Incidents.IncidentsGetIncidentById()`: **Deleted** **Breaking** :warning:
-  * `SquadcastSdk.Incidents.IncidentsAcknowledgeIncident()`: **Deleted** **Breaking** :warning:
-  * `SquadcastSdk.Incidents.IncidentsGetIncidentEvents()`: **Deleted** **Breaking** :warning:
-  * `SquadcastSdk.Incidents.IncidentsMarkIncidentSloFalsePositive()`: **Deleted** **Breaking** :warning:
-  * `SquadcastSdk.Incidents.IncidentsIncidentPriorityUpdate()`: **Deleted** **Breaking** :warning:
-  * `SquadcastSdk.Incidents.IncidentsReassignIncident()`: **Deleted** **Breaking** :warning:
-  * `SquadcastSdk.Incidents.IncidentsResolveIncident()`: **Deleted** **Breaking** :warning:
-  * `SquadcastSdk.Incidents.IncidentsGetIncidentsStatusByRequestids()`: **Deleted** **Breaking** :warning:
-  * `SquadcastSdk.Incidents/postmortems.PostmortemsGetAllPostmortems()`: **Deleted** **Breaking** :warning:
-  * `SquadcastSdk.Incidents/postmortems.PostmortemsGetPostmortemByIncident()`: **Deleted** **Breaking** :warning:
-  * `SquadcastSdk.Incidents/postmortems.PostmortemsUpdatePostmortemByIncident()`: **Deleted** **Breaking** :warning:
-  * `SquadcastSdk.Incidents/postmortems.PostmortemsCreatePostmortem()`: **Deleted** **Breaking** :warning:
-  * `SquadcastSdk.Incidents/postmortems.PostmortemsDeletePostmortemByIncident()`: **Deleted** **Breaking** :warning:
-  * `SquadcastSdk.Incidents/runbooks.RunbooksAttachRunbooks()`: **Deleted** **Breaking** :warning:
-  * `SquadcastSdk.Incidents/tags.TagsUpdateTag()`: **Deleted** **Breaking** :warning:
-  * `SquadcastSdk.Incidents/tags.TagsAppendTag()`: **Deleted** **Breaking** :warning:
-  * `SquadcastSdk.Incidents/notes.NotesGetAllNotes()`: **Deleted** **Breaking** :warning:
-  * `SquadcastSdk.Incidents/notes.NotesCreateNotes()`: **Deleted** **Breaking** :warning:
-  * `SquadcastSdk.Incidents/notes.NotesUpdateNote()`: **Deleted** **Breaking** :warning:
-  * `SquadcastSdk.Incidents/notes.NotesDeleteNote()`: **Deleted** **Breaking** :warning:
-  * `SquadcastSdk.Incidents/incidentActions.IncidentActionsRebuildAProjectInCircleci()`: **Deleted** **Breaking** :warning:
-  * `SquadcastSdk.Incidents/incidentActions.IncidentActionsCreateATicketOnJiraCloud()`: **Deleted** **Breaking** :warning:
-  * `SquadcastSdk.Incidents/incidentActions.IncidentActionsCreateATicketOnJiraServer()`: **Deleted** **Breaking** :warning:
-  * `SquadcastSdk.Incidents/incidentActions.IncidentActionsCreateAnIncidentInServicenow()`: **Deleted** **Breaking** :warning:
-  * `SquadcastSdk.Incidents/incidentActions.IncidentActionsTriggerAWebhookManually()`: **Deleted** **Breaking** :warning:
-  * `SquadcastSdk.Incidents/additionalResponders.AdditionalRespondersGetAdditionalResponders()`: **Deleted** **Breaking** :warning:
-  * `SquadcastSdk.Incidents/additionalResponders.AdditionalRespondersAddAdditionalResponders()`: **Deleted** **Breaking** :warning:
-  * `SquadcastSdk.Incidents/additionalResponders.AdditionalRespondersRemoveAdditionalResponders()`: **Deleted** **Breaking** :warning:
-  * `SquadcastSdk.Incidents/autoPauseTransientAlerts(apta).AptaMarkAsNotTransient()`: **Deleted** **Breaking** :warning:
-  * `SquadcastSdk.Incidents/autoPauseTransientAlerts(apta).AptaMarkAsTransient()`: **Deleted** **Breaking** :warning:
-  * `SquadcastSdk.Incidents/snoozeNotifications.SnoozeNotificationsSnoozeIncidentNotifications()`: **Deleted** **Breaking** :warning:
-  * `SquadcastSdk.Incidents/snoozeNotifications.SnoozeNotificationsUnsnoozeIncidentNotifications()`: **Deleted** **Breaking** :warning:
-  * `SquadcastSdk.Users/apiToken.UsersGetAllTokens()`: **Deleted** **Breaking** :warning:
-  * `SquadcastSdk.Users/apiToken.UsersCreateToken()`: **Deleted** **Breaking** :warning:
-  * `SquadcastSdk.Users/apiToken.UsersRemoveToken()`: **Deleted** **Breaking** :warning:
-  * `SquadcastSdk.Runbooks.RunbooksGetAllRunbooksByTeam()`: **Deleted** **Breaking** :warning:
-  * `SquadcastSdk.Runbooks.RunbooksCreateRunbook()`: **Deleted** **Breaking** :warning:
-  * `SquadcastSdk.Runbooks.RunbooksGetRunbookById()`: **Deleted** **Breaking** :warning:
-  * `SquadcastSdk.Runbooks.RunbooksUpdateRunbook()`: **Deleted** **Breaking** :warning:
-  * `SquadcastSdk.Runbooks.RunbooksRemoveRunbook()`: **Deleted** **Breaking** :warning:
-  * `SquadcastSdk.Services.ServicesGetServices()`: **Deleted** **Breaking** :warning:
-  * `SquadcastSdk.Services.ServicesCreateService()`: **Deleted** **Breaking** :warning:
-  * `SquadcastSdk.Services.ServicesGetServicesByName()`: **Deleted** **Breaking** :warning:
-  * `SquadcastSdk.Services.ServicesGetServiceById()`: **Deleted** **Breaking** :warning:
-  * `SquadcastSdk.Services.ServicesUpdateService()`: **Deleted** **Breaking** :warning:
-  * `SquadcastSdk.Services.ServicesDeleteService()`: **Deleted** **Breaking** :warning:
-  * `SquadcastSdk.Services.ServicesCreateOrUpdateAptaConfig()`: **Deleted** **Breaking** :warning:
-  * `SquadcastSdk.Services.ServicesCreateOrUpdateIagConfig()`: **Deleted** **Breaking** :warning:
-  * `SquadcastSdk.Services.ServicesDelayedNotificationConfig()`: **Deleted** **Breaking** :warning:
-  * `SquadcastSdk.Services/overlay.OverlayGetOptinForKeyBasedDeduplicationForAService()`: **Deleted** **Breaking** :warning:
-  * `SquadcastSdk.Services/overlay.OverlayOptinForKeyBasedDeduplicationForAService()`: **Deleted** **Breaking** :warning:
-  * `SquadcastSdk.Services/deduplicationRules.DeduplicationRulesGetDeduplicationRules()`: **Deleted** **Breaking** :warning:
-  * `SquadcastSdk.Services/deduplicationRules.DeduplicationRulesCreateOrUpdateDeduplicationRules()`: **Deleted** **Breaking** :warning:
-  * `SquadcastSdk.Services/dependencies.DependenciesCreateOrUpdateDependencies()`: **Deleted** **Breaking** :warning:
-  * `SquadcastSdk.Services/extensions.ExtensionsUpdateSlackExtension()`: **Deleted** **Breaking** :warning:
-  * `SquadcastSdk.Services/maintenanceMode.MaintenanceModeGetMaintenanceMode()`: **Deleted** **Breaking** :warning:
-  * `SquadcastSdk.Services/maintenanceMode.MaintenanceModeCreateOrUpdateMaintenanceMode()`: **Deleted** **Breaking** :warning:
-  * `SquadcastSdk.Services/overlay/customContentTemplates.OverlayGetAllCustomContentTemplateOverlayByService()`: **Deleted** **Breaking** :warning:
-  * `SquadcastSdk.Services/overlay/customContentTemplates.OverlayRenderCustomContentOverlay()`: **Deleted** **Breaking** :warning:
-  * `SquadcastSdk.Services/overlay/customContentTemplates.OverlayGetCustomContentTemplateOverlay()`: **Deleted** **Breaking** :warning:
-  * `SquadcastSdk.Services/overlay/customContentTemplates.OverlayCreateOrUpdateNotificationTemplateOverlay()`: **Deleted** **Breaking** :warning:
-  * `SquadcastSdk.Services/overlay/customContentTemplates.OverlayDeleteNotificationTemplateOverlay()`: **Deleted** **Breaking** :warning:
-  * `SquadcastSdk.Services/overlay/dedupKeyOverlay.OverlayGetAllDedupKeyOverlayByService()`: **Deleted** **Breaking** :warning:
-  * `SquadcastSdk.Services/overlay/dedupKeyOverlay.OverlayRenderDedupKeyTemplate()`: **Deleted** **Breaking** :warning:
-  * `SquadcastSdk.Services/overlay/dedupKeyOverlay.OverlayGetDedupKeyOverlayForAlertSource()`: **Deleted** **Breaking** :warning:
-  * `SquadcastSdk.Services/overlay/dedupKeyOverlay.OverlayUpdateDedupKeyOverlay()`: **Deleted** **Breaking** :warning:
-  * `SquadcastSdk.Services/overlay/dedupKeyOverlay.OverlayDeleteDedupKeyOverlay()`: **Deleted** **Breaking** :warning:
-  * `SquadcastSdk.Services/routingRules.RoutingRulesGetRoutingRules()`: **Deleted** **Breaking** :warning:
-  * `SquadcastSdk.Services/routingRules.RoutingRulesCreateOrUpdateRoutingRules()`: **Deleted** **Breaking** :warning:
-  * `SquadcastSdk.Services/suppressionRules.SuppressionRulesGetSuppressionRules()`: **Deleted** **Breaking** :warning:
-  * `SquadcastSdk.Services/suppressionRules.SuppressionRulesCreateOrUpdateSuppressionRules()`: **Deleted** **Breaking** :warning:
-  * `SquadcastSdk.Services/taggingRules.TaggingRulesGetTaggingRules()`: **Deleted** **Breaking** :warning:
-  * `SquadcastSdk.Services/taggingRules.TaggingRulesCreateOrUpdateTaggingRules()`: **Deleted** **Breaking** :warning:
-  * `SquadcastSdk.SlOs.SloGetAllSlOs()`: **Deleted** **Breaking** :warning:
-  * `SquadcastSdk.SlOs.SloCreateSlo()`: **Deleted** **Breaking** :warning:
-  * `SquadcastSdk.SlOs.SloGetSloById()`: **Deleted** **Breaking** :warning:
-  * `SquadcastSdk.SlOs.SloUpdateSlo()`: **Deleted** **Breaking** :warning:
-  * `SquadcastSdk.SlOs.SloRemoveSlo()`: **Deleted** **Breaking** :warning:
-  * `SquadcastSdk.SlOs.SloMarkSloAffected()`: **Deleted** **Breaking** :warning:
-  * `SquadcastSdk.SlOs.SloMarkSloFalsePositive()`: **Deleted** **Breaking** :warning:
-  * `SquadcastSdk.Squads/v3.SquadsGetSquadByTeam()`: **Deleted** **Breaking** :warning:
-  * `SquadcastSdk.Squads/v3.SquadsCreateSquad()`: **Deleted** **Breaking** :warning:
-  * `SquadcastSdk.Squads/v3.SquadsGetSquadById()`: **Deleted** **Breaking** :warning:
-  * `SquadcastSdk.Squads/v3.SquadsUpdateSquad()`: **Deleted** **Breaking** :warning:
-  * `SquadcastSdk.Squads/v3.SquadsDeleteSquad()`: **Deleted** **Breaking** :warning:
-  * `SquadcastSdk.Teams.TeamsGetAllTeams()`: **Deleted** **Breaking** :warning:
-  * `SquadcastSdk.Teams.TeamsCreateTeam()`: **Deleted** **Breaking** :warning:
-  * `SquadcastSdk.Teams.TeamsGetTeamById()`: **Deleted** **Breaking** :warning:
-  * `SquadcastSdk.Teams.TeamsUpdateTeam()`: **Deleted** **Breaking** :warning:
-  * `SquadcastSdk.Teams.TeamsRemoveTeam()`: **Deleted** **Breaking** :warning:
-  * `SquadcastSdk.Teams.TeamsGetAllTeamMembers()`: **Deleted** **Breaking** :warning:
-  * `SquadcastSdk.Teams.TeamsAddTeamMember()`: **Deleted** **Breaking** :warning:
-  * `SquadcastSdk.Teams.TeamsAddBulkTeamMember()`: **Deleted** **Breaking** :warning:
-  * `SquadcastSdk.Teams.TeamsRemoveTeamMember()`: **Deleted** **Breaking** :warning:
-  * `SquadcastSdk.Teams.TeamsUpdateTeamMember()`: **Deleted** **Breaking** :warning:
-  * `SquadcastSdk.Teams.TeamsGetAllTeamRoles()`: **Deleted** **Breaking** :warning:
-  * `SquadcastSdk.Teams.TeamsCreateTeamRole()`: **Deleted** **Breaking** :warning:
-  * `SquadcastSdk.Teams.TeamsUpdateTeamRole()`: **Deleted** **Breaking** :warning:
-  * `SquadcastSdk.Teams.TeamsRemoveTeamRole()`: **Deleted** **Breaking** :warning:
-  * `SquadcastSdk.Users.UsersGetAllUsers()`: **Deleted** **Breaking** :warning:
-  * `SquadcastSdk.Users.UsersAddUser()`: **Deleted** **Breaking** :warning:
-  * `SquadcastSdk.Users.UsersUpdateOrgLevelPermissions()`: **Deleted** **Breaking** :warning:
-  * `SquadcastSdk.Users.UsersDeleteUser()`: **Deleted** **Breaking** :warning:
-  * `SquadcastSdk.Users.UsersGetUserRoles()`: **Deleted** **Breaking** :warning:
-  * `SquadcastSdk.Users.UsersGetUserById()`: **Deleted** **Breaking** :warning:
-  * `SquadcastSdk.Users.UsersUpdateUserById()`: **Deleted** **Breaking** :warning:
-  * `SquadcastSdk.Users.UsersRemoveUserFromOrg()`: **Deleted** **Breaking** :warning:
-  * `SquadcastSdk.Webforms.WebformsGetAllWebforms()`: **Deleted** **Breaking** :warning:
-  * `SquadcastSdk.Webforms.WebformsCreateWebform()`: **Deleted** **Breaking** :warning:
-  * `SquadcastSdk.Webforms.WebformsGetWebformById()`: **Deleted** **Breaking** :warning:
-  * `SquadcastSdk.Webforms.WebformsUpdateWebform()`: **Deleted** **Breaking** :warning:
-  * `SquadcastSdk.Webforms.WebformsRemoveWebform()`: **Deleted** **Breaking** :warning:
-  * `SquadcastSdk.Workflows.WorkflowsListWorkflows()`: **Deleted** **Breaking** :warning:
-  * `SquadcastSdk.Workflows.WorkflowsCreateWorkflow()`: **Deleted** **Breaking** :warning:
-  * `SquadcastSdk.Workflows.WorkflowsBulkEnabledisableWorkflows()`: **Deleted** **Breaking** :warning:
-  * `SquadcastSdk.Workflows.WorkflowsGetWorkflowById()`: **Deleted** **Breaking** :warning:
-  * `SquadcastSdk.Workflows.WorkflowsDeleteWorkflow()`: **Deleted** **Breaking** :warning:
-  * `SquadcastSdk.Workflows.WorkflowsUpdateWorkflow()`: **Deleted** **Breaking** :warning:
-  * `SquadcastSdk.Workflows.WorkflowsCreateAction()`: **Deleted** **Breaking** :warning:
-  * `SquadcastSdk.Workflows.WorkflowsUpdateActionsOrder()`: **Deleted** **Breaking** :warning:
-  * `SquadcastSdk.Workflows.WorkflowsGetWorkflowActionById()`: **Deleted** **Breaking** :warning:
-  * `SquadcastSdk.Workflows.WorkflowsDeleteWorkflowAction()`: **Deleted** **Breaking** :warning:
-  * `SquadcastSdk.Workflows.WorkflowsUpdateWorkflowAction()`: **Deleted** **Breaking** :warning:
-  * `SquadcastSdk.Workflows.WorkflowsEnabledisableWorkflow()`: **Deleted** **Breaking** :warning:
-  * `SquadcastSdk.Workflows.WorkflowsGetWorkflowLogs()`: **Deleted** **Breaking** :warning:
-  * `SquadcastSdk.Schedule.SchedulesListSchedules()`: **Deleted** **Breaking** :warning:
-  * `SquadcastSdk.Schedule.SchedulesCreateSchedule()`: **Deleted** **Breaking** :warning:
-  * `SquadcastSdk.Schedule.SchedulesGetScheduleById()`: **Deleted** **Breaking** :warning:
-  * `SquadcastSdk.Schedule.SchedulesUpdateSchedule()`: **Deleted** **Breaking** :warning:
-  * `SquadcastSdk.Schedule.SchedulesDeleteSchedule()`: **Deleted** **Breaking** :warning:
-  * `SquadcastSdk.Schedule.SchedulesPauseresumeSchedule()`: **Deleted** **Breaking** :warning:
-  * `SquadcastSdk.Schedule.SchedulesChangeTimezone()`: **Deleted** **Breaking** :warning:
-  * `SquadcastSdk.Schedule.SchedulesCloneSchedule()`: **Deleted** **Breaking** :warning:
-  * `SquadcastSdk.Schedule/exportSchedule.ExportGetScheduleIcalLink()`: **Deleted** **Breaking** :warning:
-  * `SquadcastSdk.Schedule/exportSchedule.ExportCreateScheduleIcalLink()`: **Deleted** **Breaking** :warning:
-  * `SquadcastSdk.Schedule/exportSchedule.ExportDeleteIcalLink()`: **Deleted** **Breaking** :warning:
-  * `SquadcastSdk.Schedule/exportSchedule.ExportRefreshScheduleIcalLink()`: **Deleted** **Breaking** :warning:
-  * `SquadcastSdk.Overrides.OverridesListOverrides()`: **Deleted** **Breaking** :warning:
-  * `SquadcastSdk.Overrides.OverridesCreateScheduleOverride()`: **Deleted** **Breaking** :warning:
-  * `SquadcastSdk.Overrides.OverridesGetOverrideById()`: **Deleted** **Breaking** :warning:
-  * `SquadcastSdk.Overrides.OverridesUpdateScheduleOverride()`: **Deleted** **Breaking** :warning:
-  * `SquadcastSdk.Overrides.OverridesDeleteScheduleOverride()`: **Deleted** **Breaking** :warning:
-  * `SquadcastSdk.Rotation.RotationsGetScheduleRotations()`: **Deleted** **Breaking** :warning:
-  * `SquadcastSdk.Rotation.RotationsCreateRotation()`: **Deleted** **Breaking** :warning:
-  * `SquadcastSdk.Rotation.RotationsGetScheduleRotationById()`: **Deleted** **Breaking** :warning:
-  * `SquadcastSdk.Rotation.RotationsUpdateRotation()`: **Deleted** **Breaking** :warning:
-  * `SquadcastSdk.Rotation.RotationsDeleteRotation()`: **Deleted** **Breaking** :warning:
-  * `SquadcastSdk.Rotation.RotationsGetRotationParticipants()`: **Deleted** **Breaking** :warning:
-  * `SquadcastSdk.Rotation.RotationsUpdateRotationParticipants()`: **Deleted** **Breaking** :warning:
-  * `SquadcastSdk.Squads/v4.SquadsGetAllSquads()`: **Deleted** **Breaking** :warning:
-  * `SquadcastSdk.Squads/v4.SquadsCreateSquadV4()`: **Deleted** **Breaking** :warning:
-  * `SquadcastSdk.Squads/v4.SquadsGetSquadByIdV4()`: **Deleted** **Breaking** :warning:
-  * `SquadcastSdk.Squads/v4.SquadsUpdateSquadV4()`: **Deleted** **Breaking** :warning:
-  * `SquadcastSdk.Squads/v4.SquadsUpdateSquadMember()`: **Deleted** **Breaking** :warning:
-  * `SquadcastSdk.Squads/v4.SquadsRemoveSquadMember()`: **Deleted** **Breaking** :warning:
-  * `SquadcastSdk.Squads/v4.SquadsUpdateSquadName()`: **Deleted** **Breaking** :warning:
-  * `SquadcastSdk.StatusPages.StatusPagesListStatusPages()`: **Deleted** **Breaking** :warning:
-  * `SquadcastSdk.StatusPages.StatusPagesCreateStatusPage()`: **Deleted** **Breaking** :warning:
-  * `SquadcastSdk.StatusPages.StatusPagesGetStatusPageById()`: **Deleted** **Breaking** :warning:
-  * `SquadcastSdk.StatusPages.StatusPagesUpdateStatusPageById()`: **Deleted** **Breaking** :warning:
-  * `SquadcastSdk.StatusPages.StatusPagesDeleteStatusPageById()`: **Deleted** **Breaking** :warning:
-  * `SquadcastSdk.StatusPages.StatusPagesListStatusPageStatuses()`: **Deleted** **Breaking** :warning:
-  * `SquadcastSdk.StatusPages/components.ComponentsListComponents()`: **Deleted** **Breaking** :warning:
-  * `SquadcastSdk.StatusPages/components.ComponentsCreateComponent()`: **Deleted** **Breaking** :warning:
-  * `SquadcastSdk.StatusPages/components.ComponentsGetComponentById()`: **Deleted** **Breaking** :warning:
-  * `SquadcastSdk.StatusPages/components.ComponentsUpdateComponentById()`: **Deleted** **Breaking** :warning:
-  * `SquadcastSdk.StatusPages/components.ComponentsDeleteComponentById()`: **Deleted** **Breaking** :warning:
-  * `SquadcastSdk.StatusPages/componentGroups.ComponentGroupsListComponentGroups()`: **Deleted** **Breaking** :warning:
-  * `SquadcastSdk.StatusPages/componentGroups.ComponentGroupsCreateComponentGroup()`: **Deleted** **Breaking** :warning:
-  * `SquadcastSdk.StatusPages/componentGroups.ComponentGroupsGetComponentGroupById()`: **Deleted** **Breaking** :warning:
-  * `SquadcastSdk.StatusPages/componentGroups.ComponentGroupsDeleteComponentGroupById()`: **Deleted** **Breaking** :warning:
-  * `SquadcastSdk.StatusPages/issues.IssuesListIssues()`: **Deleted** **Breaking** :warning:
-  * `SquadcastSdk.StatusPages/issues.IssuesCreateIssue()`: **Deleted** **Breaking** :warning:
-  * `SquadcastSdk.StatusPages/issues.IssuesGetIssueById()`: **Deleted** **Breaking** :warning:
-  * `SquadcastSdk.StatusPages/issues.IssuesUpdateIssue()`: **Deleted** **Breaking** :warning:
-  * `SquadcastSdk.StatusPages/issues.IssuesDeleteIssueById()`: **Deleted** **Breaking** :warning:
-  * `SquadcastSdk.StatusPages/issues.IssuesListStatusPageIssueStates()`: **Deleted** **Breaking** :warning:
-  * `SquadcastSdk.StatusPages/maintenances.MaintenancesListMaintenances()`: **Deleted** **Breaking** :warning:
-  * `SquadcastSdk.StatusPages/maintenances.MaintenancesCreateMaintenance()`: **Deleted** **Breaking** :warning:
-  * `SquadcastSdk.StatusPages/maintenances.MaintenancesGetMaintenanceById()`: **Deleted** **Breaking** :warning:
-  * `SquadcastSdk.StatusPages/maintenances.MaintenancesUpdateMaintenanceById()`: **Deleted** **Breaking** :warning:
-  * `SquadcastSdk.StatusPages/maintenances.MaintenancesDeleteMaintenanceById()`: **Deleted** **Breaking** :warning:
-  * `SquadcastSdk.StatusPages/subscribers.StatusPagesListSubscribers()`: **Deleted** **Breaking** :warning:

@@ -19,6 +19,7 @@ generation:
   auth:
     oAuth2ClientCredentialsEnabled: true
     oAuth2PasswordEnabled: true
+    hoistGlobalSecurity: true
   inferSSEOverload: true
   sdkHooksConfigAccess: true
   tests:
@@ -26,7 +27,7 @@ generation:
     generateNewTests: true
     skipResponseBodyAssertions: false
 go:
-  version: 0.1.0
+  version: 0.1.1
   additionalDependencies: {}
   allowUnknownFieldsInWeakUnions: false
   baseErrorName: SquadcastSDKError
