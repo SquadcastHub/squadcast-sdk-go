@@ -21,6 +21,9 @@ permissions:
     types:
       - labeled
       - unlabeled
+  push:
+    branches:
+      - staging
 jobs:
   generate:
     uses: speakeasy-api/sdk-generation-action/.github/workflows/workflow-executor.yaml@v15
