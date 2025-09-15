@@ -3,10 +3,10 @@ id: 279dacab-faec-448f-bc08-f41bb3b1dd64
 management:
   docChecksum: d01a392a89770fcf91bdc28daf426c87
   docVersion: 1.0.0
-  speakeasyVersion: 1.615.1
+  speakeasyVersion: 1.615.2
   generationVersion: 2.698.4
-  releaseVersion: 0.1.1
-  configChecksum: 4b7fd3698b6d9dbfda64e066b18e9616
+  releaseVersion: 1.0.0
+  configChecksum: 3f5bc09c24249eac53095e8aa323ee6f
 features:
   go:
     additionalDependencies: 0.1.0
