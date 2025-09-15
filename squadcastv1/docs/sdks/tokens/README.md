@@ -59,17 +59,17 @@ func main() {
 
 ### Errors
 
-| Error Type                                         | Status Code                                        | Content Type                                       |
-| -------------------------------------------------- | -------------------------------------------------- | -------------------------------------------------- |
-| apierrors.UsersCreateTokenBadRequestError          | 400                                                | application/json                                   |
-| apierrors.UsersCreateTokenUnauthorizedError        | 401                                                | application/json                                   |
-| apierrors.UsersCreateTokenPaymentRequiredError     | 402                                                | application/json                                   |
-| apierrors.UsersCreateTokenForbiddenError           | 403                                                | application/json                                   |
-| apierrors.UsersCreateTokenNotFoundError            | 404                                                | application/json                                   |
-| apierrors.UsersCreateTokenConflictError            | 409                                                | application/json                                   |
-| apierrors.UsersCreateTokenUnprocessableEntityError | 422                                                | application/json                                   |
-| apierrors.UsersCreateTokenInternalServerError      | 500                                                | application/json                                   |
-| apierrors.UsersCreateTokenBadGatewayError          | 502                                                | application/json                                   |
-| apierrors.UsersCreateTokenServiceUnavailableError  | 503                                                | application/json                                   |
-| apierrors.UsersCreateTokenGatewayTimeoutError      | 504                                                | application/json                                   |
-| apierrors.APIError                                 | 4XX, 5XX                                           | \*/\*                                              |
+| Error Type                         | Status Code                        | Content Type                       |
+| ---------------------------------- | ---------------------------------- | ---------------------------------- |
+| apierrors.BadRequestError          | 400                                | application/json                   |
+| apierrors.UnauthorizedError        | 401                                | application/json                   |
+| apierrors.PaymentRequiredError     | 402                                | application/json                   |
+| apierrors.ForbiddenError           | 403                                | application/json                   |
+| apierrors.NotFoundError            | 404                                | application/json                   |
+| apierrors.ConflictError            | 409                                | application/json                   |
+| apierrors.UnprocessableEntityError | 422                                | application/json                   |
+| apierrors.InternalServerError      | 500                                | application/json                   |
+| apierrors.BadGatewayError          | 502                                | application/json                   |
+| apierrors.ServiceUnavailableError  | 503                                | application/json                   |
+| apierrors.GatewayTimeoutError      | 504                                | application/json                   |
+| apierrors.APIError                 | 4XX, 5XX                           | \*/\*                              |

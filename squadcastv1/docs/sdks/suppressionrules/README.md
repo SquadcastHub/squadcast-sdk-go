@@ -55,17 +55,17 @@ func main() {
 
 ### Errors
 
-| Error Type                                                            | Status Code                                                           | Content Type                                                          |
-| --------------------------------------------------------------------- | --------------------------------------------------------------------- | --------------------------------------------------------------------- |
-| apierrors.SuppressionRulesGetSuppressionRulesBadRequestError          | 400                                                                   | application/json                                                      |
-| apierrors.SuppressionRulesGetSuppressionRulesUnauthorizedError        | 401                                                                   | application/json                                                      |
-| apierrors.SuppressionRulesGetSuppressionRulesPaymentRequiredError     | 402                                                                   | application/json                                                      |
-| apierrors.SuppressionRulesGetSuppressionRulesForbiddenError           | 403                                                                   | application/json                                                      |
-| apierrors.SuppressionRulesGetSuppressionRulesNotFoundError            | 404                                                                   | application/json                                                      |
-| apierrors.SuppressionRulesGetSuppressionRulesConflictError            | 409                                                                   | application/json                                                      |
-| apierrors.SuppressionRulesGetSuppressionRulesUnprocessableEntityError | 422                                                                   | application/json                                                      |
-| apierrors.SuppressionRulesGetSuppressionRulesInternalServerError      | 500                                                                   | application/json                                                      |
-| apierrors.SuppressionRulesGetSuppressionRulesBadGatewayError          | 502                                                                   | application/json                                                      |
-| apierrors.SuppressionRulesGetSuppressionRulesServiceUnavailableError  | 503                                                                   | application/json                                                      |
-| apierrors.SuppressionRulesGetSuppressionRulesGatewayTimeoutError      | 504                                                                   | application/json                                                      |
-| apierrors.APIError                                                    | 4XX, 5XX                                                              | \*/\*                                                                 |
+| Error Type                         | Status Code                        | Content Type                       |
+| ---------------------------------- | ---------------------------------- | ---------------------------------- |
+| apierrors.BadRequestError          | 400                                | application/json                   |
+| apierrors.UnauthorizedError        | 401                                | application/json                   |
+| apierrors.PaymentRequiredError     | 402                                | application/json                   |
+| apierrors.ForbiddenError           | 403                                | application/json                   |
+| apierrors.NotFoundError            | 404                                | application/json                   |
+| apierrors.ConflictError            | 409                                | application/json                   |
+| apierrors.UnprocessableEntityError | 422                                | application/json                   |
+| apierrors.InternalServerError      | 500                                | application/json                   |
+| apierrors.BadGatewayError          | 502                                | application/json                   |
+| apierrors.ServiceUnavailableError  | 503                                | application/json                   |
+| apierrors.GatewayTimeoutError      | 504                                | application/json                   |
+| apierrors.APIError                 | 4XX, 5XX                           | \*/\*                              |

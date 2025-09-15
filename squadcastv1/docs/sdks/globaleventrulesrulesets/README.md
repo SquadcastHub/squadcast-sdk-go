@@ -57,17 +57,17 @@ func main() {
 
 ### Errors
 
-| Error Type                                                         | Status Code                                                        | Content Type                                                       |
-| ------------------------------------------------------------------ | ------------------------------------------------------------------ | ------------------------------------------------------------------ |
-| apierrors.GlobalEventRulesDeleteGerRulesetBadRequestError          | 400                                                                | application/json                                                   |
-| apierrors.GlobalEventRulesDeleteGerRulesetUnauthorizedError        | 401                                                                | application/json                                                   |
-| apierrors.GlobalEventRulesDeleteGerRulesetPaymentRequiredError     | 402                                                                | application/json                                                   |
-| apierrors.GlobalEventRulesDeleteGerRulesetForbiddenError           | 403                                                                | application/json                                                   |
-| apierrors.GlobalEventRulesDeleteGerRulesetNotFoundError            | 404                                                                | application/json                                                   |
-| apierrors.GlobalEventRulesDeleteGerRulesetConflictError            | 409                                                                | application/json                                                   |
-| apierrors.GlobalEventRulesDeleteGerRulesetUnprocessableEntityError | 422                                                                | application/json                                                   |
-| apierrors.GlobalEventRulesDeleteGerRulesetInternalServerError      | 500                                                                | application/json                                                   |
-| apierrors.GlobalEventRulesDeleteGerRulesetBadGatewayError          | 502                                                                | application/json                                                   |
-| apierrors.GlobalEventRulesDeleteGerRulesetServiceUnavailableError  | 503                                                                | application/json                                                   |
-| apierrors.GlobalEventRulesDeleteGerRulesetGatewayTimeoutError      | 504                                                                | application/json                                                   |
-| apierrors.APIError                                                 | 4XX, 5XX                                                           | \*/\*                                                              |
+| Error Type                         | Status Code                        | Content Type                       |
+| ---------------------------------- | ---------------------------------- | ---------------------------------- |
+| apierrors.BadRequestError          | 400                                | application/json                   |
+| apierrors.UnauthorizedError        | 401                                | application/json                   |
+| apierrors.PaymentRequiredError     | 402                                | application/json                   |
+| apierrors.ForbiddenError           | 403                                | application/json                   |
+| apierrors.NotFoundError            | 404                                | application/json                   |
+| apierrors.ConflictError            | 409                                | application/json                   |
+| apierrors.UnprocessableEntityError | 422                                | application/json                   |
+| apierrors.InternalServerError      | 500                                | application/json                   |
+| apierrors.BadGatewayError          | 502                                | application/json                   |
+| apierrors.ServiceUnavailableError  | 503                                | application/json                   |
+| apierrors.GatewayTimeoutError      | 504                                | application/json                   |
+| apierrors.APIError                 | 4XX, 5XX                           | \*/\*                              |

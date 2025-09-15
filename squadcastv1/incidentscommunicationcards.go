@@ -225,7 +225,7 @@ func (s *IncidentsCommunicationCards) GetAll(ctx context.Context, incidentID str
 				return nil, err
 			}
 
-			var out apierrors.CommunicationCardsGetAllCommunicationCardBadRequestError
+			var out apierrors.BadRequestError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -250,7 +250,7 @@ func (s *IncidentsCommunicationCards) GetAll(ctx context.Context, incidentID str
 				return nil, err
 			}
 
-			var out apierrors.CommunicationCardsGetAllCommunicationCardUnauthorizedError
+			var out apierrors.UnauthorizedError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -275,7 +275,7 @@ func (s *IncidentsCommunicationCards) GetAll(ctx context.Context, incidentID str
 				return nil, err
 			}
 
-			var out apierrors.CommunicationCardsGetAllCommunicationCardPaymentRequiredError
+			var out apierrors.PaymentRequiredError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -300,7 +300,7 @@ func (s *IncidentsCommunicationCards) GetAll(ctx context.Context, incidentID str
 				return nil, err
 			}
 
-			var out apierrors.CommunicationCardsGetAllCommunicationCardForbiddenError
+			var out apierrors.ForbiddenError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -325,7 +325,7 @@ func (s *IncidentsCommunicationCards) GetAll(ctx context.Context, incidentID str
 				return nil, err
 			}
 
-			var out apierrors.CommunicationCardsGetAllCommunicationCardNotFoundError
+			var out apierrors.NotFoundError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -350,7 +350,7 @@ func (s *IncidentsCommunicationCards) GetAll(ctx context.Context, incidentID str
 				return nil, err
 			}
 
-			var out apierrors.CommunicationCardsGetAllCommunicationCardConflictError
+			var out apierrors.ConflictError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -375,7 +375,7 @@ func (s *IncidentsCommunicationCards) GetAll(ctx context.Context, incidentID str
 				return nil, err
 			}
 
-			var out apierrors.CommunicationCardsGetAllCommunicationCardUnprocessableEntityError
+			var out apierrors.UnprocessableEntityError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -400,7 +400,7 @@ func (s *IncidentsCommunicationCards) GetAll(ctx context.Context, incidentID str
 				return nil, err
 			}
 
-			var out apierrors.CommunicationCardsGetAllCommunicationCardInternalServerError
+			var out apierrors.InternalServerError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -425,7 +425,7 @@ func (s *IncidentsCommunicationCards) GetAll(ctx context.Context, incidentID str
 				return nil, err
 			}
 
-			var out apierrors.CommunicationCardsGetAllCommunicationCardBadGatewayError
+			var out apierrors.BadGatewayError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -450,7 +450,7 @@ func (s *IncidentsCommunicationCards) GetAll(ctx context.Context, incidentID str
 				return nil, err
 			}
 
-			var out apierrors.CommunicationCardsGetAllCommunicationCardServiceUnavailableError
+			var out apierrors.ServiceUnavailableError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -475,7 +475,7 @@ func (s *IncidentsCommunicationCards) GetAll(ctx context.Context, incidentID str
 				return nil, err
 			}
 
-			var out apierrors.CommunicationCardsGetAllCommunicationCardGatewayTimeoutError
+			var out apierrors.GatewayTimeoutError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -717,7 +717,7 @@ func (s *IncidentsCommunicationCards) Create(ctx context.Context, incidentID str
 				return nil, err
 			}
 
-			var out apierrors.CommunicationCardsCreateCommunicationCardBadRequestError
+			var out apierrors.BadRequestError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -742,7 +742,7 @@ func (s *IncidentsCommunicationCards) Create(ctx context.Context, incidentID str
 				return nil, err
 			}
 
-			var out apierrors.CommunicationCardsCreateCommunicationCardUnauthorizedError
+			var out apierrors.UnauthorizedError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -767,7 +767,7 @@ func (s *IncidentsCommunicationCards) Create(ctx context.Context, incidentID str
 				return nil, err
 			}
 
-			var out apierrors.CommunicationCardsCreateCommunicationCardPaymentRequiredError
+			var out apierrors.PaymentRequiredError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -792,7 +792,7 @@ func (s *IncidentsCommunicationCards) Create(ctx context.Context, incidentID str
 				return nil, err
 			}
 
-			var out apierrors.CommunicationCardsCreateCommunicationCardForbiddenError
+			var out apierrors.ForbiddenError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -817,7 +817,7 @@ func (s *IncidentsCommunicationCards) Create(ctx context.Context, incidentID str
 				return nil, err
 			}
 
-			var out apierrors.CommunicationCardsCreateCommunicationCardNotFoundError
+			var out apierrors.NotFoundError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -842,7 +842,7 @@ func (s *IncidentsCommunicationCards) Create(ctx context.Context, incidentID str
 				return nil, err
 			}
 
-			var out apierrors.CommunicationCardsCreateCommunicationCardConflictError
+			var out apierrors.ConflictError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -867,7 +867,7 @@ func (s *IncidentsCommunicationCards) Create(ctx context.Context, incidentID str
 				return nil, err
 			}
 
-			var out apierrors.CommunicationCardsCreateCommunicationCardUnprocessableEntityError
+			var out apierrors.UnprocessableEntityError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -892,7 +892,7 @@ func (s *IncidentsCommunicationCards) Create(ctx context.Context, incidentID str
 				return nil, err
 			}
 
-			var out apierrors.CommunicationCardsCreateCommunicationCardInternalServerError
+			var out apierrors.InternalServerError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -917,7 +917,7 @@ func (s *IncidentsCommunicationCards) Create(ctx context.Context, incidentID str
 				return nil, err
 			}
 
-			var out apierrors.CommunicationCardsCreateCommunicationCardBadGatewayError
+			var out apierrors.BadGatewayError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -942,7 +942,7 @@ func (s *IncidentsCommunicationCards) Create(ctx context.Context, incidentID str
 				return nil, err
 			}
 
-			var out apierrors.CommunicationCardsCreateCommunicationCardServiceUnavailableError
+			var out apierrors.ServiceUnavailableError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -967,7 +967,7 @@ func (s *IncidentsCommunicationCards) Create(ctx context.Context, incidentID str
 				return nil, err
 			}
 
-			var out apierrors.CommunicationCardsCreateCommunicationCardGatewayTimeoutError
+			var out apierrors.GatewayTimeoutError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -1205,7 +1205,7 @@ func (s *IncidentsCommunicationCards) Delete(ctx context.Context, incidentID str
 				return nil, err
 			}
 
-			var out apierrors.CommunicationCardsDeleteCommunicationCardBadRequestError
+			var out apierrors.BadRequestError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -1230,7 +1230,7 @@ func (s *IncidentsCommunicationCards) Delete(ctx context.Context, incidentID str
 				return nil, err
 			}
 
-			var out apierrors.CommunicationCardsDeleteCommunicationCardUnauthorizedError
+			var out apierrors.UnauthorizedError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -1255,7 +1255,7 @@ func (s *IncidentsCommunicationCards) Delete(ctx context.Context, incidentID str
 				return nil, err
 			}
 
-			var out apierrors.CommunicationCardsDeleteCommunicationCardPaymentRequiredError
+			var out apierrors.PaymentRequiredError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -1280,7 +1280,7 @@ func (s *IncidentsCommunicationCards) Delete(ctx context.Context, incidentID str
 				return nil, err
 			}
 
-			var out apierrors.CommunicationCardsDeleteCommunicationCardForbiddenError
+			var out apierrors.ForbiddenError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -1305,7 +1305,7 @@ func (s *IncidentsCommunicationCards) Delete(ctx context.Context, incidentID str
 				return nil, err
 			}
 
-			var out apierrors.CommunicationCardsDeleteCommunicationCardNotFoundError
+			var out apierrors.NotFoundError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -1330,7 +1330,7 @@ func (s *IncidentsCommunicationCards) Delete(ctx context.Context, incidentID str
 				return nil, err
 			}
 
-			var out apierrors.CommunicationCardsDeleteCommunicationCardConflictError
+			var out apierrors.ConflictError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -1355,7 +1355,7 @@ func (s *IncidentsCommunicationCards) Delete(ctx context.Context, incidentID str
 				return nil, err
 			}
 
-			var out apierrors.CommunicationCardsDeleteCommunicationCardUnprocessableEntityError
+			var out apierrors.UnprocessableEntityError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -1380,7 +1380,7 @@ func (s *IncidentsCommunicationCards) Delete(ctx context.Context, incidentID str
 				return nil, err
 			}
 
-			var out apierrors.CommunicationCardsDeleteCommunicationCardInternalServerError
+			var out apierrors.InternalServerError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -1405,7 +1405,7 @@ func (s *IncidentsCommunicationCards) Delete(ctx context.Context, incidentID str
 				return nil, err
 			}
 
-			var out apierrors.CommunicationCardsDeleteCommunicationCardBadGatewayError
+			var out apierrors.BadGatewayError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -1430,7 +1430,7 @@ func (s *IncidentsCommunicationCards) Delete(ctx context.Context, incidentID str
 				return nil, err
 			}
 
-			var out apierrors.CommunicationCardsDeleteCommunicationCardServiceUnavailableError
+			var out apierrors.ServiceUnavailableError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -1455,7 +1455,7 @@ func (s *IncidentsCommunicationCards) Delete(ctx context.Context, incidentID str
 				return nil, err
 			}
 
-			var out apierrors.CommunicationCardsDeleteCommunicationCardGatewayTimeoutError
+			var out apierrors.GatewayTimeoutError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}

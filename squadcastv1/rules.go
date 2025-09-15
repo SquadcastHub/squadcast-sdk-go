@@ -227,7 +227,7 @@ func (s *Rules) ReorderByIndex(ctx context.Context, request operations.GlobalEve
 				return nil, err
 			}
 
-			var out apierrors.GlobalEventRulesReorderRulesetByIndexBadRequestError
+			var out apierrors.BadRequestError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -252,7 +252,7 @@ func (s *Rules) ReorderByIndex(ctx context.Context, request operations.GlobalEve
 				return nil, err
 			}
 
-			var out apierrors.GlobalEventRulesReorderRulesetByIndexUnauthorizedError
+			var out apierrors.UnauthorizedError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -277,7 +277,7 @@ func (s *Rules) ReorderByIndex(ctx context.Context, request operations.GlobalEve
 				return nil, err
 			}
 
-			var out apierrors.GlobalEventRulesReorderRulesetByIndexPaymentRequiredError
+			var out apierrors.PaymentRequiredError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -302,7 +302,7 @@ func (s *Rules) ReorderByIndex(ctx context.Context, request operations.GlobalEve
 				return nil, err
 			}
 
-			var out apierrors.GlobalEventRulesReorderRulesetByIndexForbiddenError
+			var out apierrors.ForbiddenError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -327,7 +327,7 @@ func (s *Rules) ReorderByIndex(ctx context.Context, request operations.GlobalEve
 				return nil, err
 			}
 
-			var out apierrors.GlobalEventRulesReorderRulesetByIndexNotFoundError
+			var out apierrors.NotFoundError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -352,7 +352,7 @@ func (s *Rules) ReorderByIndex(ctx context.Context, request operations.GlobalEve
 				return nil, err
 			}
 
-			var out apierrors.GlobalEventRulesReorderRulesetByIndexConflictError
+			var out apierrors.ConflictError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -377,7 +377,7 @@ func (s *Rules) ReorderByIndex(ctx context.Context, request operations.GlobalEve
 				return nil, err
 			}
 
-			var out apierrors.GlobalEventRulesReorderRulesetByIndexUnprocessableEntityError
+			var out apierrors.UnprocessableEntityError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -402,7 +402,7 @@ func (s *Rules) ReorderByIndex(ctx context.Context, request operations.GlobalEve
 				return nil, err
 			}
 
-			var out apierrors.GlobalEventRulesReorderRulesetByIndexInternalServerError
+			var out apierrors.InternalServerError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -427,7 +427,7 @@ func (s *Rules) ReorderByIndex(ctx context.Context, request operations.GlobalEve
 				return nil, err
 			}
 
-			var out apierrors.GlobalEventRulesReorderRulesetByIndexBadGatewayError
+			var out apierrors.BadGatewayError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -452,7 +452,7 @@ func (s *Rules) ReorderByIndex(ctx context.Context, request operations.GlobalEve
 				return nil, err
 			}
 
-			var out apierrors.GlobalEventRulesReorderRulesetByIndexServiceUnavailableError
+			var out apierrors.ServiceUnavailableError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -477,7 +477,7 @@ func (s *Rules) ReorderByIndex(ctx context.Context, request operations.GlobalEve
 				return nil, err
 			}
 
-			var out apierrors.GlobalEventRulesReorderRulesetByIndexGatewayTimeoutError
+			var out apierrors.GatewayTimeoutError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}

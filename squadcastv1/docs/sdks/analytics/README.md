@@ -59,20 +59,20 @@ func main() {
 
 ### Errors
 
-| Error Type                                                 | Status Code                                                | Content Type                                               |
-| ---------------------------------------------------------- | ---------------------------------------------------------- | ---------------------------------------------------------- |
-| apierrors.AnalyticsGetOrgAnalyticsBadRequestError          | 400                                                        | application/json                                           |
-| apierrors.AnalyticsGetOrgAnalyticsUnauthorizedError        | 401                                                        | application/json                                           |
-| apierrors.AnalyticsGetOrgAnalyticsPaymentRequiredError     | 402                                                        | application/json                                           |
-| apierrors.AnalyticsGetOrgAnalyticsForbiddenError           | 403                                                        | application/json                                           |
-| apierrors.AnalyticsGetOrgAnalyticsNotFoundError            | 404                                                        | application/json                                           |
-| apierrors.AnalyticsGetOrgAnalyticsConflictError            | 409                                                        | application/json                                           |
-| apierrors.AnalyticsGetOrgAnalyticsUnprocessableEntityError | 422                                                        | application/json                                           |
-| apierrors.AnalyticsGetOrgAnalyticsInternalServerError      | 500                                                        | application/json                                           |
-| apierrors.AnalyticsGetOrgAnalyticsBadGatewayError          | 502                                                        | application/json                                           |
-| apierrors.AnalyticsGetOrgAnalyticsServiceUnavailableError  | 503                                                        | application/json                                           |
-| apierrors.AnalyticsGetOrgAnalyticsGatewayTimeoutError      | 504                                                        | application/json                                           |
-| apierrors.APIError                                         | 4XX, 5XX                                                   | \*/\*                                                      |
+| Error Type                         | Status Code                        | Content Type                       |
+| ---------------------------------- | ---------------------------------- | ---------------------------------- |
+| apierrors.BadRequestError          | 400                                | application/json                   |
+| apierrors.UnauthorizedError        | 401                                | application/json                   |
+| apierrors.PaymentRequiredError     | 402                                | application/json                   |
+| apierrors.ForbiddenError           | 403                                | application/json                   |
+| apierrors.NotFoundError            | 404                                | application/json                   |
+| apierrors.ConflictError            | 409                                | application/json                   |
+| apierrors.UnprocessableEntityError | 422                                | application/json                   |
+| apierrors.InternalServerError      | 500                                | application/json                   |
+| apierrors.BadGatewayError          | 502                                | application/json                   |
+| apierrors.ServiceUnavailableError  | 503                                | application/json                   |
+| apierrors.GatewayTimeoutError      | 504                                | application/json                   |
+| apierrors.APIError                 | 4XX, 5XX                           | \*/\*                              |
 
 ## GetTeam
 
@@ -127,17 +127,17 @@ func main() {
 
 ### Errors
 
-| Error Type                                                  | Status Code                                                 | Content Type                                                |
-| ----------------------------------------------------------- | ----------------------------------------------------------- | ----------------------------------------------------------- |
-| apierrors.AnalyticsGetTeamAnalyticsBadRequestError          | 400                                                         | application/json                                            |
-| apierrors.AnalyticsGetTeamAnalyticsUnauthorizedError        | 401                                                         | application/json                                            |
-| apierrors.AnalyticsGetTeamAnalyticsPaymentRequiredError     | 402                                                         | application/json                                            |
-| apierrors.AnalyticsGetTeamAnalyticsForbiddenError           | 403                                                         | application/json                                            |
-| apierrors.AnalyticsGetTeamAnalyticsNotFoundError            | 404                                                         | application/json                                            |
-| apierrors.AnalyticsGetTeamAnalyticsConflictError            | 409                                                         | application/json                                            |
-| apierrors.AnalyticsGetTeamAnalyticsUnprocessableEntityError | 422                                                         | application/json                                            |
-| apierrors.AnalyticsGetTeamAnalyticsInternalServerError      | 500                                                         | application/json                                            |
-| apierrors.AnalyticsGetTeamAnalyticsBadGatewayError          | 502                                                         | application/json                                            |
-| apierrors.AnalyticsGetTeamAnalyticsServiceUnavailableError  | 503                                                         | application/json                                            |
-| apierrors.AnalyticsGetTeamAnalyticsGatewayTimeoutError      | 504                                                         | application/json                                            |
-| apierrors.APIError                                          | 4XX, 5XX                                                    | \*/\*                                                       |
+| Error Type                         | Status Code                        | Content Type                       |
+| ---------------------------------- | ---------------------------------- | ---------------------------------- |
+| apierrors.BadRequestError          | 400                                | application/json                   |
+| apierrors.UnauthorizedError        | 401                                | application/json                   |
+| apierrors.PaymentRequiredError     | 402                                | application/json                   |
+| apierrors.ForbiddenError           | 403                                | application/json                   |
+| apierrors.NotFoundError            | 404                                | application/json                   |
+| apierrors.ConflictError            | 409                                | application/json                   |
+| apierrors.UnprocessableEntityError | 422                                | application/json                   |
+| apierrors.InternalServerError      | 500                                | application/json                   |
+| apierrors.BadGatewayError          | 502                                | application/json                   |
+| apierrors.ServiceUnavailableError  | 503                                | application/json                   |
+| apierrors.GatewayTimeoutError      | 504                                | application/json                   |
+| apierrors.APIError                 | 4XX, 5XX                           | \*/\*                              |

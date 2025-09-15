@@ -62,20 +62,20 @@ func main() {
 
 ### Errors
 
-| Error Type                                               | Status Code                                              | Content Type                                             |
-| -------------------------------------------------------- | -------------------------------------------------------- | -------------------------------------------------------- |
-| apierrors.WebformsGetAllWebformsBadRequestError          | 400                                                      | application/json                                         |
-| apierrors.WebformsGetAllWebformsUnauthorizedError        | 401                                                      | application/json                                         |
-| apierrors.WebformsGetAllWebformsPaymentRequiredError     | 402                                                      | application/json                                         |
-| apierrors.WebformsGetAllWebformsForbiddenError           | 403                                                      | application/json                                         |
-| apierrors.WebformsGetAllWebformsNotFoundError            | 404                                                      | application/json                                         |
-| apierrors.WebformsGetAllWebformsConflictError            | 409                                                      | application/json                                         |
-| apierrors.WebformsGetAllWebformsUnprocessableEntityError | 422                                                      | application/json                                         |
-| apierrors.WebformsGetAllWebformsInternalServerError      | 500                                                      | application/json                                         |
-| apierrors.WebformsGetAllWebformsBadGatewayError          | 502                                                      | application/json                                         |
-| apierrors.WebformsGetAllWebformsServiceUnavailableError  | 503                                                      | application/json                                         |
-| apierrors.WebformsGetAllWebformsGatewayTimeoutError      | 504                                                      | application/json                                         |
-| apierrors.APIError                                       | 4XX, 5XX                                                 | \*/\*                                                    |
+| Error Type                         | Status Code                        | Content Type                       |
+| ---------------------------------- | ---------------------------------- | ---------------------------------- |
+| apierrors.BadRequestError          | 400                                | application/json                   |
+| apierrors.UnauthorizedError        | 401                                | application/json                   |
+| apierrors.PaymentRequiredError     | 402                                | application/json                   |
+| apierrors.ForbiddenError           | 403                                | application/json                   |
+| apierrors.NotFoundError            | 404                                | application/json                   |
+| apierrors.ConflictError            | 409                                | application/json                   |
+| apierrors.UnprocessableEntityError | 422                                | application/json                   |
+| apierrors.InternalServerError      | 500                                | application/json                   |
+| apierrors.BadGatewayError          | 502                                | application/json                   |
+| apierrors.ServiceUnavailableError  | 503                                | application/json                   |
+| apierrors.GatewayTimeoutError      | 504                                | application/json                   |
+| apierrors.APIError                 | 4XX, 5XX                           | \*/\*                              |
 
 ## Create
 
@@ -143,20 +143,20 @@ func main() {
 
 ### Errors
 
-| Error Type                                              | Status Code                                             | Content Type                                            |
-| ------------------------------------------------------- | ------------------------------------------------------- | ------------------------------------------------------- |
-| apierrors.WebformsCreateWebformBadRequestError          | 400                                                     | application/json                                        |
-| apierrors.WebformsCreateWebformUnauthorizedError        | 401                                                     | application/json                                        |
-| apierrors.WebformsCreateWebformPaymentRequiredError     | 402                                                     | application/json                                        |
-| apierrors.WebformsCreateWebformForbiddenError           | 403                                                     | application/json                                        |
-| apierrors.WebformsCreateWebformNotFoundError            | 404                                                     | application/json                                        |
-| apierrors.WebformsCreateWebformConflictError            | 409                                                     | application/json                                        |
-| apierrors.WebformsCreateWebformUnprocessableEntityError | 422                                                     | application/json                                        |
-| apierrors.WebformsCreateWebformInternalServerError      | 500                                                     | application/json                                        |
-| apierrors.WebformsCreateWebformBadGatewayError          | 502                                                     | application/json                                        |
-| apierrors.WebformsCreateWebformServiceUnavailableError  | 503                                                     | application/json                                        |
-| apierrors.WebformsCreateWebformGatewayTimeoutError      | 504                                                     | application/json                                        |
-| apierrors.APIError                                      | 4XX, 5XX                                                | \*/\*                                                   |
+| Error Type                         | Status Code                        | Content Type                       |
+| ---------------------------------- | ---------------------------------- | ---------------------------------- |
+| apierrors.BadRequestError          | 400                                | application/json                   |
+| apierrors.UnauthorizedError        | 401                                | application/json                   |
+| apierrors.PaymentRequiredError     | 402                                | application/json                   |
+| apierrors.ForbiddenError           | 403                                | application/json                   |
+| apierrors.NotFoundError            | 404                                | application/json                   |
+| apierrors.ConflictError            | 409                                | application/json                   |
+| apierrors.UnprocessableEntityError | 422                                | application/json                   |
+| apierrors.InternalServerError      | 500                                | application/json                   |
+| apierrors.BadGatewayError          | 502                                | application/json                   |
+| apierrors.ServiceUnavailableError  | 503                                | application/json                   |
+| apierrors.GatewayTimeoutError      | 504                                | application/json                   |
+| apierrors.APIError                 | 4XX, 5XX                           | \*/\*                              |
 
 ## Update
 
@@ -231,20 +231,20 @@ func main() {
 
 ### Errors
 
-| Error Type                                              | Status Code                                             | Content Type                                            |
-| ------------------------------------------------------- | ------------------------------------------------------- | ------------------------------------------------------- |
-| apierrors.WebformsUpdateWebformBadRequestError          | 400                                                     | application/json                                        |
-| apierrors.WebformsUpdateWebformUnauthorizedError        | 401                                                     | application/json                                        |
-| apierrors.WebformsUpdateWebformPaymentRequiredError     | 402                                                     | application/json                                        |
-| apierrors.WebformsUpdateWebformForbiddenError           | 403                                                     | application/json                                        |
-| apierrors.WebformsUpdateWebformNotFoundError            | 404                                                     | application/json                                        |
-| apierrors.WebformsUpdateWebformConflictError            | 409                                                     | application/json                                        |
-| apierrors.WebformsUpdateWebformUnprocessableEntityError | 422                                                     | application/json                                        |
-| apierrors.WebformsUpdateWebformInternalServerError      | 500                                                     | application/json                                        |
-| apierrors.WebformsUpdateWebformBadGatewayError          | 502                                                     | application/json                                        |
-| apierrors.WebformsUpdateWebformServiceUnavailableError  | 503                                                     | application/json                                        |
-| apierrors.WebformsUpdateWebformGatewayTimeoutError      | 504                                                     | application/json                                        |
-| apierrors.APIError                                      | 4XX, 5XX                                                | \*/\*                                                   |
+| Error Type                         | Status Code                        | Content Type                       |
+| ---------------------------------- | ---------------------------------- | ---------------------------------- |
+| apierrors.BadRequestError          | 400                                | application/json                   |
+| apierrors.UnauthorizedError        | 401                                | application/json                   |
+| apierrors.PaymentRequiredError     | 402                                | application/json                   |
+| apierrors.ForbiddenError           | 403                                | application/json                   |
+| apierrors.NotFoundError            | 404                                | application/json                   |
+| apierrors.ConflictError            | 409                                | application/json                   |
+| apierrors.UnprocessableEntityError | 422                                | application/json                   |
+| apierrors.InternalServerError      | 500                                | application/json                   |
+| apierrors.BadGatewayError          | 502                                | application/json                   |
+| apierrors.ServiceUnavailableError  | 503                                | application/json                   |
+| apierrors.GatewayTimeoutError      | 504                                | application/json                   |
+| apierrors.APIError                 | 4XX, 5XX                           | \*/\*                              |
 
 ## Remove
 
@@ -296,20 +296,20 @@ func main() {
 
 ### Errors
 
-| Error Type                                              | Status Code                                             | Content Type                                            |
-| ------------------------------------------------------- | ------------------------------------------------------- | ------------------------------------------------------- |
-| apierrors.WebformsRemoveWebformBadRequestError          | 400                                                     | application/json                                        |
-| apierrors.WebformsRemoveWebformUnauthorizedError        | 401                                                     | application/json                                        |
-| apierrors.WebformsRemoveWebformPaymentRequiredError     | 402                                                     | application/json                                        |
-| apierrors.WebformsRemoveWebformForbiddenError           | 403                                                     | application/json                                        |
-| apierrors.WebformsRemoveWebformNotFoundError            | 404                                                     | application/json                                        |
-| apierrors.WebformsRemoveWebformConflictError            | 409                                                     | application/json                                        |
-| apierrors.WebformsRemoveWebformUnprocessableEntityError | 422                                                     | application/json                                        |
-| apierrors.WebformsRemoveWebformInternalServerError      | 500                                                     | application/json                                        |
-| apierrors.WebformsRemoveWebformBadGatewayError          | 502                                                     | application/json                                        |
-| apierrors.WebformsRemoveWebformServiceUnavailableError  | 503                                                     | application/json                                        |
-| apierrors.WebformsRemoveWebformGatewayTimeoutError      | 504                                                     | application/json                                        |
-| apierrors.APIError                                      | 4XX, 5XX                                                | \*/\*                                                   |
+| Error Type                         | Status Code                        | Content Type                       |
+| ---------------------------------- | ---------------------------------- | ---------------------------------- |
+| apierrors.BadRequestError          | 400                                | application/json                   |
+| apierrors.UnauthorizedError        | 401                                | application/json                   |
+| apierrors.PaymentRequiredError     | 402                                | application/json                   |
+| apierrors.ForbiddenError           | 403                                | application/json                   |
+| apierrors.NotFoundError            | 404                                | application/json                   |
+| apierrors.ConflictError            | 409                                | application/json                   |
+| apierrors.UnprocessableEntityError | 422                                | application/json                   |
+| apierrors.InternalServerError      | 500                                | application/json                   |
+| apierrors.BadGatewayError          | 502                                | application/json                   |
+| apierrors.ServiceUnavailableError  | 503                                | application/json                   |
+| apierrors.GatewayTimeoutError      | 504                                | application/json                   |
+| apierrors.APIError                 | 4XX, 5XX                           | \*/\*                              |
 
 ## Get
 
@@ -361,17 +361,17 @@ func main() {
 
 ### Errors
 
-| Error Type                                               | Status Code                                              | Content Type                                             |
-| -------------------------------------------------------- | -------------------------------------------------------- | -------------------------------------------------------- |
-| apierrors.WebformsGetWebformByIDBadRequestError          | 400                                                      | application/json                                         |
-| apierrors.WebformsGetWebformByIDUnauthorizedError        | 401                                                      | application/json                                         |
-| apierrors.WebformsGetWebformByIDPaymentRequiredError     | 402                                                      | application/json                                         |
-| apierrors.WebformsGetWebformByIDForbiddenError           | 403                                                      | application/json                                         |
-| apierrors.WebformsGetWebformByIDNotFoundError            | 404                                                      | application/json                                         |
-| apierrors.WebformsGetWebformByIDConflictError            | 409                                                      | application/json                                         |
-| apierrors.WebformsGetWebformByIDUnprocessableEntityError | 422                                                      | application/json                                         |
-| apierrors.WebformsGetWebformByIDInternalServerError      | 500                                                      | application/json                                         |
-| apierrors.WebformsGetWebformByIDBadGatewayError          | 502                                                      | application/json                                         |
-| apierrors.WebformsGetWebformByIDServiceUnavailableError  | 503                                                      | application/json                                         |
-| apierrors.WebformsGetWebformByIDGatewayTimeoutError      | 504                                                      | application/json                                         |
-| apierrors.APIError                                       | 4XX, 5XX                                                 | \*/\*                                                    |
+| Error Type                         | Status Code                        | Content Type                       |
+| ---------------------------------- | ---------------------------------- | ---------------------------------- |
+| apierrors.BadRequestError          | 400                                | application/json                   |
+| apierrors.UnauthorizedError        | 401                                | application/json                   |
+| apierrors.PaymentRequiredError     | 402                                | application/json                   |
+| apierrors.ForbiddenError           | 403                                | application/json                   |
+| apierrors.NotFoundError            | 404                                | application/json                   |
+| apierrors.ConflictError            | 409                                | application/json                   |
+| apierrors.UnprocessableEntityError | 422                                | application/json                   |
+| apierrors.InternalServerError      | 500                                | application/json                   |
+| apierrors.BadGatewayError          | 502                                | application/json                   |
+| apierrors.ServiceUnavailableError  | 503                                | application/json                   |
+| apierrors.GatewayTimeoutError      | 504                                | application/json                   |
+| apierrors.APIError                 | 4XX, 5XX                           | \*/\*                              |

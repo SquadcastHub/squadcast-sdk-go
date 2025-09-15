@@ -231,7 +231,7 @@ func (s *ServicesExtensions) UpdateSlack(ctx context.Context, serviceID string, 
 				return nil, err
 			}
 
-			var out apierrors.ExtensionsUpdateSlackExtensionBadRequestError
+			var out apierrors.BadRequestError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -256,7 +256,7 @@ func (s *ServicesExtensions) UpdateSlack(ctx context.Context, serviceID string, 
 				return nil, err
 			}
 
-			var out apierrors.ExtensionsUpdateSlackExtensionUnauthorizedError
+			var out apierrors.UnauthorizedError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -281,7 +281,7 @@ func (s *ServicesExtensions) UpdateSlack(ctx context.Context, serviceID string, 
 				return nil, err
 			}
 
-			var out apierrors.ExtensionsUpdateSlackExtensionPaymentRequiredError
+			var out apierrors.PaymentRequiredError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -306,7 +306,7 @@ func (s *ServicesExtensions) UpdateSlack(ctx context.Context, serviceID string, 
 				return nil, err
 			}
 
-			var out apierrors.ExtensionsUpdateSlackExtensionForbiddenError
+			var out apierrors.ForbiddenError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -331,7 +331,7 @@ func (s *ServicesExtensions) UpdateSlack(ctx context.Context, serviceID string, 
 				return nil, err
 			}
 
-			var out apierrors.ExtensionsUpdateSlackExtensionNotFoundError
+			var out apierrors.NotFoundError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -356,7 +356,7 @@ func (s *ServicesExtensions) UpdateSlack(ctx context.Context, serviceID string, 
 				return nil, err
 			}
 
-			var out apierrors.ExtensionsUpdateSlackExtensionConflictError
+			var out apierrors.ConflictError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -381,7 +381,7 @@ func (s *ServicesExtensions) UpdateSlack(ctx context.Context, serviceID string, 
 				return nil, err
 			}
 
-			var out apierrors.ExtensionsUpdateSlackExtensionUnprocessableEntityError
+			var out apierrors.UnprocessableEntityError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -406,7 +406,7 @@ func (s *ServicesExtensions) UpdateSlack(ctx context.Context, serviceID string, 
 				return nil, err
 			}
 
-			var out apierrors.ExtensionsUpdateSlackExtensionInternalServerError
+			var out apierrors.InternalServerError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -431,7 +431,7 @@ func (s *ServicesExtensions) UpdateSlack(ctx context.Context, serviceID string, 
 				return nil, err
 			}
 
-			var out apierrors.ExtensionsUpdateSlackExtensionBadGatewayError
+			var out apierrors.BadGatewayError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -456,7 +456,7 @@ func (s *ServicesExtensions) UpdateSlack(ctx context.Context, serviceID string, 
 				return nil, err
 			}
 
-			var out apierrors.ExtensionsUpdateSlackExtensionServiceUnavailableError
+			var out apierrors.ServiceUnavailableError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -481,7 +481,7 @@ func (s *ServicesExtensions) UpdateSlack(ctx context.Context, serviceID string, 
 				return nil, err
 			}
 
-			var out apierrors.ExtensionsUpdateSlackExtensionGatewayTimeoutError
+			var out apierrors.GatewayTimeoutError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}

@@ -231,7 +231,7 @@ func (s *Webhooks) GetAll(ctx context.Context, pageLimit *string, offset *string
 				return nil, err
 			}
 
-			var out apierrors.WebhooksGetAllWebhooksBadRequestError
+			var out apierrors.BadRequestError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -256,7 +256,7 @@ func (s *Webhooks) GetAll(ctx context.Context, pageLimit *string, offset *string
 				return nil, err
 			}
 
-			var out apierrors.WebhooksGetAllWebhooksUnauthorizedError
+			var out apierrors.UnauthorizedError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -281,7 +281,7 @@ func (s *Webhooks) GetAll(ctx context.Context, pageLimit *string, offset *string
 				return nil, err
 			}
 
-			var out apierrors.WebhooksGetAllWebhooksPaymentRequiredError
+			var out apierrors.PaymentRequiredError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -306,7 +306,7 @@ func (s *Webhooks) GetAll(ctx context.Context, pageLimit *string, offset *string
 				return nil, err
 			}
 
-			var out apierrors.WebhooksGetAllWebhooksForbiddenError
+			var out apierrors.ForbiddenError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -331,7 +331,7 @@ func (s *Webhooks) GetAll(ctx context.Context, pageLimit *string, offset *string
 				return nil, err
 			}
 
-			var out apierrors.WebhooksGetAllWebhooksNotFoundError
+			var out apierrors.NotFoundError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -356,7 +356,7 @@ func (s *Webhooks) GetAll(ctx context.Context, pageLimit *string, offset *string
 				return nil, err
 			}
 
-			var out apierrors.WebhooksGetAllWebhooksConflictError
+			var out apierrors.ConflictError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -381,7 +381,7 @@ func (s *Webhooks) GetAll(ctx context.Context, pageLimit *string, offset *string
 				return nil, err
 			}
 
-			var out apierrors.WebhooksGetAllWebhooksUnprocessableEntityError
+			var out apierrors.UnprocessableEntityError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -406,7 +406,7 @@ func (s *Webhooks) GetAll(ctx context.Context, pageLimit *string, offset *string
 				return nil, err
 			}
 
-			var out apierrors.WebhooksGetAllWebhooksInternalServerError
+			var out apierrors.InternalServerError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -431,7 +431,7 @@ func (s *Webhooks) GetAll(ctx context.Context, pageLimit *string, offset *string
 				return nil, err
 			}
 
-			var out apierrors.WebhooksGetAllWebhooksBadGatewayError
+			var out apierrors.BadGatewayError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -456,7 +456,7 @@ func (s *Webhooks) GetAll(ctx context.Context, pageLimit *string, offset *string
 				return nil, err
 			}
 
-			var out apierrors.WebhooksGetAllWebhooksServiceUnavailableError
+			var out apierrors.ServiceUnavailableError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -481,7 +481,7 @@ func (s *Webhooks) GetAll(ctx context.Context, pageLimit *string, offset *string
 				return nil, err
 			}
 
-			var out apierrors.WebhooksGetAllWebhooksGatewayTimeoutError
+			var out apierrors.GatewayTimeoutError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -720,7 +720,7 @@ func (s *Webhooks) Create(ctx context.Context, request components.V3ExtensionsWe
 				return nil, err
 			}
 
-			var out apierrors.WebhooksCreateWebhookBadRequestError
+			var out apierrors.BadRequestError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -745,7 +745,7 @@ func (s *Webhooks) Create(ctx context.Context, request components.V3ExtensionsWe
 				return nil, err
 			}
 
-			var out apierrors.WebhooksCreateWebhookUnauthorizedError
+			var out apierrors.UnauthorizedError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -770,7 +770,7 @@ func (s *Webhooks) Create(ctx context.Context, request components.V3ExtensionsWe
 				return nil, err
 			}
 
-			var out apierrors.WebhooksCreateWebhookPaymentRequiredError
+			var out apierrors.PaymentRequiredError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -795,7 +795,7 @@ func (s *Webhooks) Create(ctx context.Context, request components.V3ExtensionsWe
 				return nil, err
 			}
 
-			var out apierrors.WebhooksCreateWebhookForbiddenError
+			var out apierrors.ForbiddenError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -820,7 +820,7 @@ func (s *Webhooks) Create(ctx context.Context, request components.V3ExtensionsWe
 				return nil, err
 			}
 
-			var out apierrors.WebhooksCreateWebhookNotFoundError
+			var out apierrors.NotFoundError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -845,7 +845,7 @@ func (s *Webhooks) Create(ctx context.Context, request components.V3ExtensionsWe
 				return nil, err
 			}
 
-			var out apierrors.WebhooksCreateWebhookConflictError
+			var out apierrors.ConflictError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -870,7 +870,7 @@ func (s *Webhooks) Create(ctx context.Context, request components.V3ExtensionsWe
 				return nil, err
 			}
 
-			var out apierrors.WebhooksCreateWebhookUnprocessableEntityError
+			var out apierrors.UnprocessableEntityError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -895,7 +895,7 @@ func (s *Webhooks) Create(ctx context.Context, request components.V3ExtensionsWe
 				return nil, err
 			}
 
-			var out apierrors.WebhooksCreateWebhookInternalServerError
+			var out apierrors.InternalServerError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -920,7 +920,7 @@ func (s *Webhooks) Create(ctx context.Context, request components.V3ExtensionsWe
 				return nil, err
 			}
 
-			var out apierrors.WebhooksCreateWebhookBadGatewayError
+			var out apierrors.BadGatewayError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -945,7 +945,7 @@ func (s *Webhooks) Create(ctx context.Context, request components.V3ExtensionsWe
 				return nil, err
 			}
 
-			var out apierrors.WebhooksCreateWebhookServiceUnavailableError
+			var out apierrors.ServiceUnavailableError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -970,7 +970,7 @@ func (s *Webhooks) Create(ctx context.Context, request components.V3ExtensionsWe
 				return nil, err
 			}
 
-			var out apierrors.WebhooksCreateWebhookGatewayTimeoutError
+			var out apierrors.GatewayTimeoutError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -1214,7 +1214,7 @@ func (s *Webhooks) Update(ctx context.Context, eventWebhookID string, v3Extensio
 				return nil, err
 			}
 
-			var out apierrors.WebhooksUpdateWebhookBadRequestError
+			var out apierrors.BadRequestError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -1239,7 +1239,7 @@ func (s *Webhooks) Update(ctx context.Context, eventWebhookID string, v3Extensio
 				return nil, err
 			}
 
-			var out apierrors.WebhooksUpdateWebhookUnauthorizedError
+			var out apierrors.UnauthorizedError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -1264,7 +1264,7 @@ func (s *Webhooks) Update(ctx context.Context, eventWebhookID string, v3Extensio
 				return nil, err
 			}
 
-			var out apierrors.WebhooksUpdateWebhookPaymentRequiredError
+			var out apierrors.PaymentRequiredError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -1289,7 +1289,7 @@ func (s *Webhooks) Update(ctx context.Context, eventWebhookID string, v3Extensio
 				return nil, err
 			}
 
-			var out apierrors.WebhooksUpdateWebhookForbiddenError
+			var out apierrors.ForbiddenError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -1314,7 +1314,7 @@ func (s *Webhooks) Update(ctx context.Context, eventWebhookID string, v3Extensio
 				return nil, err
 			}
 
-			var out apierrors.WebhooksUpdateWebhookNotFoundError
+			var out apierrors.NotFoundError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -1339,7 +1339,7 @@ func (s *Webhooks) Update(ctx context.Context, eventWebhookID string, v3Extensio
 				return nil, err
 			}
 
-			var out apierrors.WebhooksUpdateWebhookConflictError
+			var out apierrors.ConflictError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -1364,7 +1364,7 @@ func (s *Webhooks) Update(ctx context.Context, eventWebhookID string, v3Extensio
 				return nil, err
 			}
 
-			var out apierrors.WebhooksUpdateWebhookUnprocessableEntityError
+			var out apierrors.UnprocessableEntityError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -1389,7 +1389,7 @@ func (s *Webhooks) Update(ctx context.Context, eventWebhookID string, v3Extensio
 				return nil, err
 			}
 
-			var out apierrors.WebhooksUpdateWebhookInternalServerError
+			var out apierrors.InternalServerError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -1414,7 +1414,7 @@ func (s *Webhooks) Update(ctx context.Context, eventWebhookID string, v3Extensio
 				return nil, err
 			}
 
-			var out apierrors.WebhooksUpdateWebhookBadGatewayError
+			var out apierrors.BadGatewayError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -1439,7 +1439,7 @@ func (s *Webhooks) Update(ctx context.Context, eventWebhookID string, v3Extensio
 				return nil, err
 			}
 
-			var out apierrors.WebhooksUpdateWebhookServiceUnavailableError
+			var out apierrors.ServiceUnavailableError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -1464,7 +1464,7 @@ func (s *Webhooks) Update(ctx context.Context, eventWebhookID string, v3Extensio
 				return nil, err
 			}
 
-			var out apierrors.WebhooksUpdateWebhookGatewayTimeoutError
+			var out apierrors.GatewayTimeoutError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}

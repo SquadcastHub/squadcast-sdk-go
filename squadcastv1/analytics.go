@@ -232,7 +232,7 @@ func (s *Analytics) GetOrganization(ctx context.Context, from string, to string,
 				return nil, err
 			}
 
-			var out apierrors.AnalyticsGetOrgAnalyticsBadRequestError
+			var out apierrors.BadRequestError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -257,7 +257,7 @@ func (s *Analytics) GetOrganization(ctx context.Context, from string, to string,
 				return nil, err
 			}
 
-			var out apierrors.AnalyticsGetOrgAnalyticsUnauthorizedError
+			var out apierrors.UnauthorizedError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -282,7 +282,7 @@ func (s *Analytics) GetOrganization(ctx context.Context, from string, to string,
 				return nil, err
 			}
 
-			var out apierrors.AnalyticsGetOrgAnalyticsPaymentRequiredError
+			var out apierrors.PaymentRequiredError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -307,7 +307,7 @@ func (s *Analytics) GetOrganization(ctx context.Context, from string, to string,
 				return nil, err
 			}
 
-			var out apierrors.AnalyticsGetOrgAnalyticsForbiddenError
+			var out apierrors.ForbiddenError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -332,7 +332,7 @@ func (s *Analytics) GetOrganization(ctx context.Context, from string, to string,
 				return nil, err
 			}
 
-			var out apierrors.AnalyticsGetOrgAnalyticsNotFoundError
+			var out apierrors.NotFoundError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -357,7 +357,7 @@ func (s *Analytics) GetOrganization(ctx context.Context, from string, to string,
 				return nil, err
 			}
 
-			var out apierrors.AnalyticsGetOrgAnalyticsConflictError
+			var out apierrors.ConflictError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -382,7 +382,7 @@ func (s *Analytics) GetOrganization(ctx context.Context, from string, to string,
 				return nil, err
 			}
 
-			var out apierrors.AnalyticsGetOrgAnalyticsUnprocessableEntityError
+			var out apierrors.UnprocessableEntityError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -407,7 +407,7 @@ func (s *Analytics) GetOrganization(ctx context.Context, from string, to string,
 				return nil, err
 			}
 
-			var out apierrors.AnalyticsGetOrgAnalyticsInternalServerError
+			var out apierrors.InternalServerError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -432,7 +432,7 @@ func (s *Analytics) GetOrganization(ctx context.Context, from string, to string,
 				return nil, err
 			}
 
-			var out apierrors.AnalyticsGetOrgAnalyticsBadGatewayError
+			var out apierrors.BadGatewayError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -457,7 +457,7 @@ func (s *Analytics) GetOrganization(ctx context.Context, from string, to string,
 				return nil, err
 			}
 
-			var out apierrors.AnalyticsGetOrgAnalyticsServiceUnavailableError
+			var out apierrors.ServiceUnavailableError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -482,7 +482,7 @@ func (s *Analytics) GetOrganization(ctx context.Context, from string, to string,
 				return nil, err
 			}
 
-			var out apierrors.AnalyticsGetOrgAnalyticsGatewayTimeoutError
+			var out apierrors.GatewayTimeoutError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -717,7 +717,7 @@ func (s *Analytics) GetTeam(ctx context.Context, request operations.AnalyticsGet
 				return nil, err
 			}
 
-			var out apierrors.AnalyticsGetTeamAnalyticsBadRequestError
+			var out apierrors.BadRequestError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -742,7 +742,7 @@ func (s *Analytics) GetTeam(ctx context.Context, request operations.AnalyticsGet
 				return nil, err
 			}
 
-			var out apierrors.AnalyticsGetTeamAnalyticsUnauthorizedError
+			var out apierrors.UnauthorizedError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -767,7 +767,7 @@ func (s *Analytics) GetTeam(ctx context.Context, request operations.AnalyticsGet
 				return nil, err
 			}
 
-			var out apierrors.AnalyticsGetTeamAnalyticsPaymentRequiredError
+			var out apierrors.PaymentRequiredError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -792,7 +792,7 @@ func (s *Analytics) GetTeam(ctx context.Context, request operations.AnalyticsGet
 				return nil, err
 			}
 
-			var out apierrors.AnalyticsGetTeamAnalyticsForbiddenError
+			var out apierrors.ForbiddenError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -817,7 +817,7 @@ func (s *Analytics) GetTeam(ctx context.Context, request operations.AnalyticsGet
 				return nil, err
 			}
 
-			var out apierrors.AnalyticsGetTeamAnalyticsNotFoundError
+			var out apierrors.NotFoundError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -842,7 +842,7 @@ func (s *Analytics) GetTeam(ctx context.Context, request operations.AnalyticsGet
 				return nil, err
 			}
 
-			var out apierrors.AnalyticsGetTeamAnalyticsConflictError
+			var out apierrors.ConflictError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -867,7 +867,7 @@ func (s *Analytics) GetTeam(ctx context.Context, request operations.AnalyticsGet
 				return nil, err
 			}
 
-			var out apierrors.AnalyticsGetTeamAnalyticsUnprocessableEntityError
+			var out apierrors.UnprocessableEntityError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -892,7 +892,7 @@ func (s *Analytics) GetTeam(ctx context.Context, request operations.AnalyticsGet
 				return nil, err
 			}
 
-			var out apierrors.AnalyticsGetTeamAnalyticsInternalServerError
+			var out apierrors.InternalServerError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -917,7 +917,7 @@ func (s *Analytics) GetTeam(ctx context.Context, request operations.AnalyticsGet
 				return nil, err
 			}
 
-			var out apierrors.AnalyticsGetTeamAnalyticsBadGatewayError
+			var out apierrors.BadGatewayError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -942,7 +942,7 @@ func (s *Analytics) GetTeam(ctx context.Context, request operations.AnalyticsGet
 				return nil, err
 			}
 
-			var out apierrors.AnalyticsGetTeamAnalyticsServiceUnavailableError
+			var out apierrors.ServiceUnavailableError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -967,7 +967,7 @@ func (s *Analytics) GetTeam(ctx context.Context, request operations.AnalyticsGet
 				return nil, err
 			}
 
-			var out apierrors.AnalyticsGetTeamAnalyticsGatewayTimeoutError
+			var out apierrors.GatewayTimeoutError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}

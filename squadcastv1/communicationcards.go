@@ -227,7 +227,7 @@ func (s *CommunicationCards) CreateSlackChannel(ctx context.Context, request com
 				return nil, err
 			}
 
-			var out apierrors.CommunicationCardsCreateSlackChannelInCommunicationCardBadRequestError
+			var out apierrors.BadRequestError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -252,7 +252,7 @@ func (s *CommunicationCards) CreateSlackChannel(ctx context.Context, request com
 				return nil, err
 			}
 
-			var out apierrors.CommunicationCardsCreateSlackChannelInCommunicationCardUnauthorizedError
+			var out apierrors.UnauthorizedError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -277,7 +277,7 @@ func (s *CommunicationCards) CreateSlackChannel(ctx context.Context, request com
 				return nil, err
 			}
 
-			var out apierrors.CommunicationCardsCreateSlackChannelInCommunicationCardPaymentRequiredError
+			var out apierrors.PaymentRequiredError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -302,7 +302,7 @@ func (s *CommunicationCards) CreateSlackChannel(ctx context.Context, request com
 				return nil, err
 			}
 
-			var out apierrors.CommunicationCardsCreateSlackChannelInCommunicationCardForbiddenError
+			var out apierrors.ForbiddenError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -327,7 +327,7 @@ func (s *CommunicationCards) CreateSlackChannel(ctx context.Context, request com
 				return nil, err
 			}
 
-			var out apierrors.CommunicationCardsCreateSlackChannelInCommunicationCardNotFoundError
+			var out apierrors.NotFoundError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -352,7 +352,7 @@ func (s *CommunicationCards) CreateSlackChannel(ctx context.Context, request com
 				return nil, err
 			}
 
-			var out apierrors.CommunicationCardsCreateSlackChannelInCommunicationCardConflictError
+			var out apierrors.ConflictError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -377,7 +377,7 @@ func (s *CommunicationCards) CreateSlackChannel(ctx context.Context, request com
 				return nil, err
 			}
 
-			var out apierrors.CommunicationCardsCreateSlackChannelInCommunicationCardUnprocessableEntityError
+			var out apierrors.UnprocessableEntityError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -402,7 +402,7 @@ func (s *CommunicationCards) CreateSlackChannel(ctx context.Context, request com
 				return nil, err
 			}
 
-			var out apierrors.CommunicationCardsCreateSlackChannelInCommunicationCardInternalServerError
+			var out apierrors.InternalServerError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -427,7 +427,7 @@ func (s *CommunicationCards) CreateSlackChannel(ctx context.Context, request com
 				return nil, err
 			}
 
-			var out apierrors.CommunicationCardsCreateSlackChannelInCommunicationCardBadGatewayError
+			var out apierrors.BadGatewayError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -452,7 +452,7 @@ func (s *CommunicationCards) CreateSlackChannel(ctx context.Context, request com
 				return nil, err
 			}
 
-			var out apierrors.CommunicationCardsCreateSlackChannelInCommunicationCardServiceUnavailableError
+			var out apierrors.ServiceUnavailableError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -477,7 +477,7 @@ func (s *CommunicationCards) CreateSlackChannel(ctx context.Context, request com
 				return nil, err
 			}
 
-			var out apierrors.CommunicationCardsCreateSlackChannelInCommunicationCardGatewayTimeoutError
+			var out apierrors.GatewayTimeoutError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -714,7 +714,7 @@ func (s *CommunicationCards) ArchiveSlackChannel(ctx context.Context, request co
 				return nil, err
 			}
 
-			var out apierrors.CommunicationCardsArchiveSlackChannelBadRequestError
+			var out apierrors.BadRequestError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -739,7 +739,7 @@ func (s *CommunicationCards) ArchiveSlackChannel(ctx context.Context, request co
 				return nil, err
 			}
 
-			var out apierrors.CommunicationCardsArchiveSlackChannelUnauthorizedError
+			var out apierrors.UnauthorizedError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -764,7 +764,7 @@ func (s *CommunicationCards) ArchiveSlackChannel(ctx context.Context, request co
 				return nil, err
 			}
 
-			var out apierrors.CommunicationCardsArchiveSlackChannelPaymentRequiredError
+			var out apierrors.PaymentRequiredError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -789,7 +789,7 @@ func (s *CommunicationCards) ArchiveSlackChannel(ctx context.Context, request co
 				return nil, err
 			}
 
-			var out apierrors.CommunicationCardsArchiveSlackChannelForbiddenError
+			var out apierrors.ForbiddenError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -814,7 +814,7 @@ func (s *CommunicationCards) ArchiveSlackChannel(ctx context.Context, request co
 				return nil, err
 			}
 
-			var out apierrors.CommunicationCardsArchiveSlackChannelNotFoundError
+			var out apierrors.NotFoundError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -839,7 +839,7 @@ func (s *CommunicationCards) ArchiveSlackChannel(ctx context.Context, request co
 				return nil, err
 			}
 
-			var out apierrors.CommunicationCardsArchiveSlackChannelConflictError
+			var out apierrors.ConflictError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -864,7 +864,7 @@ func (s *CommunicationCards) ArchiveSlackChannel(ctx context.Context, request co
 				return nil, err
 			}
 
-			var out apierrors.CommunicationCardsArchiveSlackChannelUnprocessableEntityError
+			var out apierrors.UnprocessableEntityError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -889,7 +889,7 @@ func (s *CommunicationCards) ArchiveSlackChannel(ctx context.Context, request co
 				return nil, err
 			}
 
-			var out apierrors.CommunicationCardsArchiveSlackChannelInternalServerError
+			var out apierrors.InternalServerError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -914,7 +914,7 @@ func (s *CommunicationCards) ArchiveSlackChannel(ctx context.Context, request co
 				return nil, err
 			}
 
-			var out apierrors.CommunicationCardsArchiveSlackChannelBadGatewayError
+			var out apierrors.BadGatewayError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -939,7 +939,7 @@ func (s *CommunicationCards) ArchiveSlackChannel(ctx context.Context, request co
 				return nil, err
 			}
 
-			var out apierrors.CommunicationCardsArchiveSlackChannelServiceUnavailableError
+			var out apierrors.ServiceUnavailableError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -964,7 +964,7 @@ func (s *CommunicationCards) ArchiveSlackChannel(ctx context.Context, request co
 				return nil, err
 			}
 
-			var out apierrors.CommunicationCardsArchiveSlackChannelGatewayTimeoutError
+			var out apierrors.GatewayTimeoutError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}

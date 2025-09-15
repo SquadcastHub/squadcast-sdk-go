@@ -67,20 +67,20 @@ func main() {
 
 ### Errors
 
-| Error Type                                         | Status Code                                        | Content Type                                       |
-| -------------------------------------------------- | -------------------------------------------------- | -------------------------------------------------- |
-| apierrors.TeamsGetAllTeamsBadRequestError          | 400                                                | application/json                                   |
-| apierrors.TeamsGetAllTeamsUnauthorizedError        | 401                                                | application/json                                   |
-| apierrors.TeamsGetAllTeamsPaymentRequiredError     | 402                                                | application/json                                   |
-| apierrors.TeamsGetAllTeamsForbiddenError           | 403                                                | application/json                                   |
-| apierrors.TeamsGetAllTeamsNotFoundError            | 404                                                | application/json                                   |
-| apierrors.TeamsGetAllTeamsConflictError            | 409                                                | application/json                                   |
-| apierrors.TeamsGetAllTeamsUnprocessableEntityError | 422                                                | application/json                                   |
-| apierrors.TeamsGetAllTeamsInternalServerError      | 500                                                | application/json                                   |
-| apierrors.TeamsGetAllTeamsBadGatewayError          | 502                                                | application/json                                   |
-| apierrors.TeamsGetAllTeamsServiceUnavailableError  | 503                                                | application/json                                   |
-| apierrors.TeamsGetAllTeamsGatewayTimeoutError      | 504                                                | application/json                                   |
-| apierrors.APIError                                 | 4XX, 5XX                                           | \*/\*                                              |
+| Error Type                         | Status Code                        | Content Type                       |
+| ---------------------------------- | ---------------------------------- | ---------------------------------- |
+| apierrors.BadRequestError          | 400                                | application/json                   |
+| apierrors.UnauthorizedError        | 401                                | application/json                   |
+| apierrors.PaymentRequiredError     | 402                                | application/json                   |
+| apierrors.ForbiddenError           | 403                                | application/json                   |
+| apierrors.NotFoundError            | 404                                | application/json                   |
+| apierrors.ConflictError            | 409                                | application/json                   |
+| apierrors.UnprocessableEntityError | 422                                | application/json                   |
+| apierrors.InternalServerError      | 500                                | application/json                   |
+| apierrors.BadGatewayError          | 502                                | application/json                   |
+| apierrors.ServiceUnavailableError  | 503                                | application/json                   |
+| apierrors.GatewayTimeoutError      | 504                                | application/json                   |
+| apierrors.APIError                 | 4XX, 5XX                           | \*/\*                              |
 
 ## Create
 
@@ -138,20 +138,20 @@ func main() {
 
 ### Errors
 
-| Error Type                                        | Status Code                                       | Content Type                                      |
-| ------------------------------------------------- | ------------------------------------------------- | ------------------------------------------------- |
-| apierrors.TeamsCreateTeamBadRequestError          | 400                                               | application/json                                  |
-| apierrors.TeamsCreateTeamUnauthorizedError        | 401                                               | application/json                                  |
-| apierrors.TeamsCreateTeamPaymentRequiredError     | 402                                               | application/json                                  |
-| apierrors.TeamsCreateTeamForbiddenError           | 403                                               | application/json                                  |
-| apierrors.TeamsCreateTeamNotFoundError            | 404                                               | application/json                                  |
-| apierrors.TeamsCreateTeamConflictError            | 409                                               | application/json                                  |
-| apierrors.TeamsCreateTeamUnprocessableEntityError | 422                                               | application/json                                  |
-| apierrors.TeamsCreateTeamInternalServerError      | 500                                               | application/json                                  |
-| apierrors.TeamsCreateTeamBadGatewayError          | 502                                               | application/json                                  |
-| apierrors.TeamsCreateTeamServiceUnavailableError  | 503                                               | application/json                                  |
-| apierrors.TeamsCreateTeamGatewayTimeoutError      | 504                                               | application/json                                  |
-| apierrors.APIError                                | 4XX, 5XX                                          | \*/\*                                             |
+| Error Type                         | Status Code                        | Content Type                       |
+| ---------------------------------- | ---------------------------------- | ---------------------------------- |
+| apierrors.BadRequestError          | 400                                | application/json                   |
+| apierrors.UnauthorizedError        | 401                                | application/json                   |
+| apierrors.PaymentRequiredError     | 402                                | application/json                   |
+| apierrors.ForbiddenError           | 403                                | application/json                   |
+| apierrors.NotFoundError            | 404                                | application/json                   |
+| apierrors.ConflictError            | 409                                | application/json                   |
+| apierrors.UnprocessableEntityError | 422                                | application/json                   |
+| apierrors.InternalServerError      | 500                                | application/json                   |
+| apierrors.BadGatewayError          | 502                                | application/json                   |
+| apierrors.ServiceUnavailableError  | 503                                | application/json                   |
+| apierrors.GatewayTimeoutError      | 504                                | application/json                   |
+| apierrors.APIError                 | 4XX, 5XX                           | \*/\*                              |
 
 ## GetByID
 
@@ -202,20 +202,20 @@ func main() {
 
 ### Errors
 
-| Error Type                                         | Status Code                                        | Content Type                                       |
-| -------------------------------------------------- | -------------------------------------------------- | -------------------------------------------------- |
-| apierrors.TeamsGetTeamByIDBadRequestError          | 400                                                | application/json                                   |
-| apierrors.TeamsGetTeamByIDUnauthorizedError        | 401                                                | application/json                                   |
-| apierrors.TeamsGetTeamByIDPaymentRequiredError     | 402                                                | application/json                                   |
-| apierrors.TeamsGetTeamByIDForbiddenError           | 403                                                | application/json                                   |
-| apierrors.TeamsGetTeamByIDNotFoundError            | 404                                                | application/json                                   |
-| apierrors.TeamsGetTeamByIDConflictError            | 409                                                | application/json                                   |
-| apierrors.TeamsGetTeamByIDUnprocessableEntityError | 422                                                | application/json                                   |
-| apierrors.TeamsGetTeamByIDInternalServerError      | 500                                                | application/json                                   |
-| apierrors.TeamsGetTeamByIDBadGatewayError          | 502                                                | application/json                                   |
-| apierrors.TeamsGetTeamByIDServiceUnavailableError  | 503                                                | application/json                                   |
-| apierrors.TeamsGetTeamByIDGatewayTimeoutError      | 504                                                | application/json                                   |
-| apierrors.APIError                                 | 4XX, 5XX                                           | \*/\*                                              |
+| Error Type                         | Status Code                        | Content Type                       |
+| ---------------------------------- | ---------------------------------- | ---------------------------------- |
+| apierrors.BadRequestError          | 400                                | application/json                   |
+| apierrors.UnauthorizedError        | 401                                | application/json                   |
+| apierrors.PaymentRequiredError     | 402                                | application/json                   |
+| apierrors.ForbiddenError           | 403                                | application/json                   |
+| apierrors.NotFoundError            | 404                                | application/json                   |
+| apierrors.ConflictError            | 409                                | application/json                   |
+| apierrors.UnprocessableEntityError | 422                                | application/json                   |
+| apierrors.InternalServerError      | 500                                | application/json                   |
+| apierrors.BadGatewayError          | 502                                | application/json                   |
+| apierrors.ServiceUnavailableError  | 503                                | application/json                   |
+| apierrors.GatewayTimeoutError      | 504                                | application/json                   |
+| apierrors.APIError                 | 4XX, 5XX                           | \*/\*                              |
 
 ## Update
 
@@ -270,20 +270,20 @@ func main() {
 
 ### Errors
 
-| Error Type                                        | Status Code                                       | Content Type                                      |
-| ------------------------------------------------- | ------------------------------------------------- | ------------------------------------------------- |
-| apierrors.TeamsUpdateTeamBadRequestError          | 400                                               | application/json                                  |
-| apierrors.TeamsUpdateTeamUnauthorizedError        | 401                                               | application/json                                  |
-| apierrors.TeamsUpdateTeamPaymentRequiredError     | 402                                               | application/json                                  |
-| apierrors.TeamsUpdateTeamForbiddenError           | 403                                               | application/json                                  |
-| apierrors.TeamsUpdateTeamNotFoundError            | 404                                               | application/json                                  |
-| apierrors.TeamsUpdateTeamConflictError            | 409                                               | application/json                                  |
-| apierrors.TeamsUpdateTeamUnprocessableEntityError | 422                                               | application/json                                  |
-| apierrors.TeamsUpdateTeamInternalServerError      | 500                                               | application/json                                  |
-| apierrors.TeamsUpdateTeamBadGatewayError          | 502                                               | application/json                                  |
-| apierrors.TeamsUpdateTeamServiceUnavailableError  | 503                                               | application/json                                  |
-| apierrors.TeamsUpdateTeamGatewayTimeoutError      | 504                                               | application/json                                  |
-| apierrors.APIError                                | 4XX, 5XX                                          | \*/\*                                             |
+| Error Type                         | Status Code                        | Content Type                       |
+| ---------------------------------- | ---------------------------------- | ---------------------------------- |
+| apierrors.BadRequestError          | 400                                | application/json                   |
+| apierrors.UnauthorizedError        | 401                                | application/json                   |
+| apierrors.PaymentRequiredError     | 402                                | application/json                   |
+| apierrors.ForbiddenError           | 403                                | application/json                   |
+| apierrors.NotFoundError            | 404                                | application/json                   |
+| apierrors.ConflictError            | 409                                | application/json                   |
+| apierrors.UnprocessableEntityError | 422                                | application/json                   |
+| apierrors.InternalServerError      | 500                                | application/json                   |
+| apierrors.BadGatewayError          | 502                                | application/json                   |
+| apierrors.ServiceUnavailableError  | 503                                | application/json                   |
+| apierrors.GatewayTimeoutError      | 504                                | application/json                   |
+| apierrors.APIError                 | 4XX, 5XX                           | \*/\*                              |
 
 ## Delete
 
@@ -334,20 +334,20 @@ func main() {
 
 ### Errors
 
-| Error Type                                        | Status Code                                       | Content Type                                      |
-| ------------------------------------------------- | ------------------------------------------------- | ------------------------------------------------- |
-| apierrors.TeamsRemoveTeamBadRequestError          | 400                                               | application/json                                  |
-| apierrors.TeamsRemoveTeamUnauthorizedError        | 401                                               | application/json                                  |
-| apierrors.TeamsRemoveTeamPaymentRequiredError     | 402                                               | application/json                                  |
-| apierrors.TeamsRemoveTeamForbiddenError           | 403                                               | application/json                                  |
-| apierrors.TeamsRemoveTeamNotFoundError            | 404                                               | application/json                                  |
-| apierrors.TeamsRemoveTeamConflictError            | 409                                               | application/json                                  |
-| apierrors.TeamsRemoveTeamUnprocessableEntityError | 422                                               | application/json                                  |
-| apierrors.TeamsRemoveTeamInternalServerError      | 500                                               | application/json                                  |
-| apierrors.TeamsRemoveTeamBadGatewayError          | 502                                               | application/json                                  |
-| apierrors.TeamsRemoveTeamServiceUnavailableError  | 503                                               | application/json                                  |
-| apierrors.TeamsRemoveTeamGatewayTimeoutError      | 504                                               | application/json                                  |
-| apierrors.APIError                                | 4XX, 5XX                                          | \*/\*                                             |
+| Error Type                         | Status Code                        | Content Type                       |
+| ---------------------------------- | ---------------------------------- | ---------------------------------- |
+| apierrors.BadRequestError          | 400                                | application/json                   |
+| apierrors.UnauthorizedError        | 401                                | application/json                   |
+| apierrors.PaymentRequiredError     | 402                                | application/json                   |
+| apierrors.ForbiddenError           | 403                                | application/json                   |
+| apierrors.NotFoundError            | 404                                | application/json                   |
+| apierrors.ConflictError            | 409                                | application/json                   |
+| apierrors.UnprocessableEntityError | 422                                | application/json                   |
+| apierrors.InternalServerError      | 500                                | application/json                   |
+| apierrors.BadGatewayError          | 502                                | application/json                   |
+| apierrors.ServiceUnavailableError  | 503                                | application/json                   |
+| apierrors.GatewayTimeoutError      | 504                                | application/json                   |
+| apierrors.APIError                 | 4XX, 5XX                           | \*/\*                              |
 
 ## AddMember
 
@@ -403,20 +403,20 @@ func main() {
 
 ### Errors
 
-| Error Type                                           | Status Code                                          | Content Type                                         |
-| ---------------------------------------------------- | ---------------------------------------------------- | ---------------------------------------------------- |
-| apierrors.TeamsAddTeamMemberBadRequestError          | 400                                                  | application/json                                     |
-| apierrors.TeamsAddTeamMemberUnauthorizedError        | 401                                                  | application/json                                     |
-| apierrors.TeamsAddTeamMemberPaymentRequiredError     | 402                                                  | application/json                                     |
-| apierrors.TeamsAddTeamMemberForbiddenError           | 403                                                  | application/json                                     |
-| apierrors.TeamsAddTeamMemberNotFoundError            | 404                                                  | application/json                                     |
-| apierrors.TeamsAddTeamMemberConflictError            | 409                                                  | application/json                                     |
-| apierrors.TeamsAddTeamMemberUnprocessableEntityError | 422                                                  | application/json                                     |
-| apierrors.TeamsAddTeamMemberInternalServerError      | 500                                                  | application/json                                     |
-| apierrors.TeamsAddTeamMemberBadGatewayError          | 502                                                  | application/json                                     |
-| apierrors.TeamsAddTeamMemberServiceUnavailableError  | 503                                                  | application/json                                     |
-| apierrors.TeamsAddTeamMemberGatewayTimeoutError      | 504                                                  | application/json                                     |
-| apierrors.APIError                                   | 4XX, 5XX                                             | \*/\*                                                |
+| Error Type                         | Status Code                        | Content Type                       |
+| ---------------------------------- | ---------------------------------- | ---------------------------------- |
+| apierrors.BadRequestError          | 400                                | application/json                   |
+| apierrors.UnauthorizedError        | 401                                | application/json                   |
+| apierrors.PaymentRequiredError     | 402                                | application/json                   |
+| apierrors.ForbiddenError           | 403                                | application/json                   |
+| apierrors.NotFoundError            | 404                                | application/json                   |
+| apierrors.ConflictError            | 409                                | application/json                   |
+| apierrors.UnprocessableEntityError | 422                                | application/json                   |
+| apierrors.InternalServerError      | 500                                | application/json                   |
+| apierrors.BadGatewayError          | 502                                | application/json                   |
+| apierrors.ServiceUnavailableError  | 503                                | application/json                   |
+| apierrors.GatewayTimeoutError      | 504                                | application/json                   |
+| apierrors.APIError                 | 4XX, 5XX                           | \*/\*                              |
 
 ## AddBulkMember
 
@@ -479,20 +479,20 @@ func main() {
 
 ### Errors
 
-| Error Type                                               | Status Code                                              | Content Type                                             |
-| -------------------------------------------------------- | -------------------------------------------------------- | -------------------------------------------------------- |
-| apierrors.TeamsAddBulkTeamMemberBadRequestError          | 400                                                      | application/json                                         |
-| apierrors.TeamsAddBulkTeamMemberUnauthorizedError        | 401                                                      | application/json                                         |
-| apierrors.TeamsAddBulkTeamMemberPaymentRequiredError     | 402                                                      | application/json                                         |
-| apierrors.TeamsAddBulkTeamMemberForbiddenError           | 403                                                      | application/json                                         |
-| apierrors.TeamsAddBulkTeamMemberNotFoundError            | 404                                                      | application/json                                         |
-| apierrors.TeamsAddBulkTeamMemberConflictError            | 409                                                      | application/json                                         |
-| apierrors.TeamsAddBulkTeamMemberUnprocessableEntityError | 422                                                      | application/json                                         |
-| apierrors.TeamsAddBulkTeamMemberInternalServerError      | 500                                                      | application/json                                         |
-| apierrors.TeamsAddBulkTeamMemberBadGatewayError          | 502                                                      | application/json                                         |
-| apierrors.TeamsAddBulkTeamMemberServiceUnavailableError  | 503                                                      | application/json                                         |
-| apierrors.TeamsAddBulkTeamMemberGatewayTimeoutError      | 504                                                      | application/json                                         |
-| apierrors.APIError                                       | 4XX, 5XX                                                 | \*/\*                                                    |
+| Error Type                         | Status Code                        | Content Type                       |
+| ---------------------------------- | ---------------------------------- | ---------------------------------- |
+| apierrors.BadRequestError          | 400                                | application/json                   |
+| apierrors.UnauthorizedError        | 401                                | application/json                   |
+| apierrors.PaymentRequiredError     | 402                                | application/json                   |
+| apierrors.ForbiddenError           | 403                                | application/json                   |
+| apierrors.NotFoundError            | 404                                | application/json                   |
+| apierrors.ConflictError            | 409                                | application/json                   |
+| apierrors.UnprocessableEntityError | 422                                | application/json                   |
+| apierrors.InternalServerError      | 500                                | application/json                   |
+| apierrors.BadGatewayError          | 502                                | application/json                   |
+| apierrors.ServiceUnavailableError  | 503                                | application/json                   |
+| apierrors.GatewayTimeoutError      | 504                                | application/json                   |
+| apierrors.APIError                 | 4XX, 5XX                           | \*/\*                              |
 
 ## RemoveMember
 
@@ -544,20 +544,20 @@ func main() {
 
 ### Errors
 
-| Error Type                                              | Status Code                                             | Content Type                                            |
-| ------------------------------------------------------- | ------------------------------------------------------- | ------------------------------------------------------- |
-| apierrors.TeamsRemoveTeamMemberBadRequestError          | 400                                                     | application/json                                        |
-| apierrors.TeamsRemoveTeamMemberUnauthorizedError        | 401                                                     | application/json                                        |
-| apierrors.TeamsRemoveTeamMemberPaymentRequiredError     | 402                                                     | application/json                                        |
-| apierrors.TeamsRemoveTeamMemberForbiddenError           | 403                                                     | application/json                                        |
-| apierrors.TeamsRemoveTeamMemberNotFoundError            | 404                                                     | application/json                                        |
-| apierrors.TeamsRemoveTeamMemberConflictError            | 409                                                     | application/json                                        |
-| apierrors.TeamsRemoveTeamMemberUnprocessableEntityError | 422                                                     | application/json                                        |
-| apierrors.TeamsRemoveTeamMemberInternalServerError      | 500                                                     | application/json                                        |
-| apierrors.TeamsRemoveTeamMemberBadGatewayError          | 502                                                     | application/json                                        |
-| apierrors.TeamsRemoveTeamMemberServiceUnavailableError  | 503                                                     | application/json                                        |
-| apierrors.TeamsRemoveTeamMemberGatewayTimeoutError      | 504                                                     | application/json                                        |
-| apierrors.APIError                                      | 4XX, 5XX                                                | \*/\*                                                   |
+| Error Type                         | Status Code                        | Content Type                       |
+| ---------------------------------- | ---------------------------------- | ---------------------------------- |
+| apierrors.BadRequestError          | 400                                | application/json                   |
+| apierrors.UnauthorizedError        | 401                                | application/json                   |
+| apierrors.PaymentRequiredError     | 402                                | application/json                   |
+| apierrors.ForbiddenError           | 403                                | application/json                   |
+| apierrors.NotFoundError            | 404                                | application/json                   |
+| apierrors.ConflictError            | 409                                | application/json                   |
+| apierrors.UnprocessableEntityError | 422                                | application/json                   |
+| apierrors.InternalServerError      | 500                                | application/json                   |
+| apierrors.BadGatewayError          | 502                                | application/json                   |
+| apierrors.ServiceUnavailableError  | 503                                | application/json                   |
+| apierrors.GatewayTimeoutError      | 504                                | application/json                   |
+| apierrors.APIError                 | 4XX, 5XX                           | \*/\*                              |
 
 ## UpdateMember
 
@@ -611,20 +611,20 @@ func main() {
 
 ### Errors
 
-| Error Type                                              | Status Code                                             | Content Type                                            |
-| ------------------------------------------------------- | ------------------------------------------------------- | ------------------------------------------------------- |
-| apierrors.TeamsUpdateTeamMemberBadRequestError          | 400                                                     | application/json                                        |
-| apierrors.TeamsUpdateTeamMemberUnauthorizedError        | 401                                                     | application/json                                        |
-| apierrors.TeamsUpdateTeamMemberPaymentRequiredError     | 402                                                     | application/json                                        |
-| apierrors.TeamsUpdateTeamMemberForbiddenError           | 403                                                     | application/json                                        |
-| apierrors.TeamsUpdateTeamMemberNotFoundError            | 404                                                     | application/json                                        |
-| apierrors.TeamsUpdateTeamMemberConflictError            | 409                                                     | application/json                                        |
-| apierrors.TeamsUpdateTeamMemberUnprocessableEntityError | 422                                                     | application/json                                        |
-| apierrors.TeamsUpdateTeamMemberInternalServerError      | 500                                                     | application/json                                        |
-| apierrors.TeamsUpdateTeamMemberBadGatewayError          | 502                                                     | application/json                                        |
-| apierrors.TeamsUpdateTeamMemberServiceUnavailableError  | 503                                                     | application/json                                        |
-| apierrors.TeamsUpdateTeamMemberGatewayTimeoutError      | 504                                                     | application/json                                        |
-| apierrors.APIError                                      | 4XX, 5XX                                                | \*/\*                                                   |
+| Error Type                         | Status Code                        | Content Type                       |
+| ---------------------------------- | ---------------------------------- | ---------------------------------- |
+| apierrors.BadRequestError          | 400                                | application/json                   |
+| apierrors.UnauthorizedError        | 401                                | application/json                   |
+| apierrors.PaymentRequiredError     | 402                                | application/json                   |
+| apierrors.ForbiddenError           | 403                                | application/json                   |
+| apierrors.NotFoundError            | 404                                | application/json                   |
+| apierrors.ConflictError            | 409                                | application/json                   |
+| apierrors.UnprocessableEntityError | 422                                | application/json                   |
+| apierrors.InternalServerError      | 500                                | application/json                   |
+| apierrors.BadGatewayError          | 502                                | application/json                   |
+| apierrors.ServiceUnavailableError  | 503                                | application/json                   |
+| apierrors.GatewayTimeoutError      | 504                                | application/json                   |
+| apierrors.APIError                 | 4XX, 5XX                           | \*/\*                              |
 
 ## GetAllRoles
 
@@ -675,20 +675,20 @@ func main() {
 
 ### Errors
 
-| Error Type                                             | Status Code                                            | Content Type                                           |
-| ------------------------------------------------------ | ------------------------------------------------------ | ------------------------------------------------------ |
-| apierrors.TeamsGetAllTeamRolesBadRequestError          | 400                                                    | application/json                                       |
-| apierrors.TeamsGetAllTeamRolesUnauthorizedError        | 401                                                    | application/json                                       |
-| apierrors.TeamsGetAllTeamRolesPaymentRequiredError     | 402                                                    | application/json                                       |
-| apierrors.TeamsGetAllTeamRolesForbiddenError           | 403                                                    | application/json                                       |
-| apierrors.TeamsGetAllTeamRolesNotFoundError            | 404                                                    | application/json                                       |
-| apierrors.TeamsGetAllTeamRolesConflictError            | 409                                                    | application/json                                       |
-| apierrors.TeamsGetAllTeamRolesUnprocessableEntityError | 422                                                    | application/json                                       |
-| apierrors.TeamsGetAllTeamRolesInternalServerError      | 500                                                    | application/json                                       |
-| apierrors.TeamsGetAllTeamRolesBadGatewayError          | 502                                                    | application/json                                       |
-| apierrors.TeamsGetAllTeamRolesServiceUnavailableError  | 503                                                    | application/json                                       |
-| apierrors.TeamsGetAllTeamRolesGatewayTimeoutError      | 504                                                    | application/json                                       |
-| apierrors.APIError                                     | 4XX, 5XX                                               | \*/\*                                                  |
+| Error Type                         | Status Code                        | Content Type                       |
+| ---------------------------------- | ---------------------------------- | ---------------------------------- |
+| apierrors.BadRequestError          | 400                                | application/json                   |
+| apierrors.UnauthorizedError        | 401                                | application/json                   |
+| apierrors.PaymentRequiredError     | 402                                | application/json                   |
+| apierrors.ForbiddenError           | 403                                | application/json                   |
+| apierrors.NotFoundError            | 404                                | application/json                   |
+| apierrors.ConflictError            | 409                                | application/json                   |
+| apierrors.UnprocessableEntityError | 422                                | application/json                   |
+| apierrors.InternalServerError      | 500                                | application/json                   |
+| apierrors.BadGatewayError          | 502                                | application/json                   |
+| apierrors.ServiceUnavailableError  | 503                                | application/json                   |
+| apierrors.GatewayTimeoutError      | 504                                | application/json                   |
+| apierrors.APIError                 | 4XX, 5XX                           | \*/\*                              |
 
 ## CreateRole
 
@@ -744,20 +744,20 @@ func main() {
 
 ### Errors
 
-| Error Type                                            | Status Code                                           | Content Type                                          |
-| ----------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- |
-| apierrors.TeamsCreateTeamRoleBadRequestError          | 400                                                   | application/json                                      |
-| apierrors.TeamsCreateTeamRoleUnauthorizedError        | 401                                                   | application/json                                      |
-| apierrors.TeamsCreateTeamRolePaymentRequiredError     | 402                                                   | application/json                                      |
-| apierrors.TeamsCreateTeamRoleForbiddenError           | 403                                                   | application/json                                      |
-| apierrors.TeamsCreateTeamRoleNotFoundError            | 404                                                   | application/json                                      |
-| apierrors.TeamsCreateTeamRoleConflictError            | 409                                                   | application/json                                      |
-| apierrors.TeamsCreateTeamRoleUnprocessableEntityError | 422                                                   | application/json                                      |
-| apierrors.TeamsCreateTeamRoleInternalServerError      | 500                                                   | application/json                                      |
-| apierrors.TeamsCreateTeamRoleBadGatewayError          | 502                                                   | application/json                                      |
-| apierrors.TeamsCreateTeamRoleServiceUnavailableError  | 503                                                   | application/json                                      |
-| apierrors.TeamsCreateTeamRoleGatewayTimeoutError      | 504                                                   | application/json                                      |
-| apierrors.APIError                                    | 4XX, 5XX                                              | \*/\*                                                 |
+| Error Type                         | Status Code                        | Content Type                       |
+| ---------------------------------- | ---------------------------------- | ---------------------------------- |
+| apierrors.BadRequestError          | 400                                | application/json                   |
+| apierrors.UnauthorizedError        | 401                                | application/json                   |
+| apierrors.PaymentRequiredError     | 402                                | application/json                   |
+| apierrors.ForbiddenError           | 403                                | application/json                   |
+| apierrors.NotFoundError            | 404                                | application/json                   |
+| apierrors.ConflictError            | 409                                | application/json                   |
+| apierrors.UnprocessableEntityError | 422                                | application/json                   |
+| apierrors.InternalServerError      | 500                                | application/json                   |
+| apierrors.BadGatewayError          | 502                                | application/json                   |
+| apierrors.ServiceUnavailableError  | 503                                | application/json                   |
+| apierrors.GatewayTimeoutError      | 504                                | application/json                   |
+| apierrors.APIError                 | 4XX, 5XX                           | \*/\*                              |
 
 ## RemoveRole
 
@@ -809,20 +809,20 @@ func main() {
 
 ### Errors
 
-| Error Type                                            | Status Code                                           | Content Type                                          |
-| ----------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- |
-| apierrors.TeamsRemoveTeamRoleBadRequestError          | 400                                                   | application/json                                      |
-| apierrors.TeamsRemoveTeamRoleUnauthorizedError        | 401                                                   | application/json                                      |
-| apierrors.TeamsRemoveTeamRolePaymentRequiredError     | 402                                                   | application/json                                      |
-| apierrors.TeamsRemoveTeamRoleForbiddenError           | 403                                                   | application/json                                      |
-| apierrors.TeamsRemoveTeamRoleNotFoundError            | 404                                                   | application/json                                      |
-| apierrors.TeamsRemoveTeamRoleConflictError            | 409                                                   | application/json                                      |
-| apierrors.TeamsRemoveTeamRoleUnprocessableEntityError | 422                                                   | application/json                                      |
-| apierrors.TeamsRemoveTeamRoleInternalServerError      | 500                                                   | application/json                                      |
-| apierrors.TeamsRemoveTeamRoleBadGatewayError          | 502                                                   | application/json                                      |
-| apierrors.TeamsRemoveTeamRoleServiceUnavailableError  | 503                                                   | application/json                                      |
-| apierrors.TeamsRemoveTeamRoleGatewayTimeoutError      | 504                                                   | application/json                                      |
-| apierrors.APIError                                    | 4XX, 5XX                                              | \*/\*                                                 |
+| Error Type                         | Status Code                        | Content Type                       |
+| ---------------------------------- | ---------------------------------- | ---------------------------------- |
+| apierrors.BadRequestError          | 400                                | application/json                   |
+| apierrors.UnauthorizedError        | 401                                | application/json                   |
+| apierrors.PaymentRequiredError     | 402                                | application/json                   |
+| apierrors.ForbiddenError           | 403                                | application/json                   |
+| apierrors.NotFoundError            | 404                                | application/json                   |
+| apierrors.ConflictError            | 409                                | application/json                   |
+| apierrors.UnprocessableEntityError | 422                                | application/json                   |
+| apierrors.InternalServerError      | 500                                | application/json                   |
+| apierrors.BadGatewayError          | 502                                | application/json                   |
+| apierrors.ServiceUnavailableError  | 503                                | application/json                   |
+| apierrors.GatewayTimeoutError      | 504                                | application/json                   |
+| apierrors.APIError                 | 4XX, 5XX                           | \*/\*                              |
 
 ## UpdateRole
 
@@ -876,17 +876,17 @@ func main() {
 
 ### Errors
 
-| Error Type                                            | Status Code                                           | Content Type                                          |
-| ----------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- |
-| apierrors.TeamsUpdateTeamRoleBadRequestError          | 400                                                   | application/json                                      |
-| apierrors.TeamsUpdateTeamRoleUnauthorizedError        | 401                                                   | application/json                                      |
-| apierrors.TeamsUpdateTeamRolePaymentRequiredError     | 402                                                   | application/json                                      |
-| apierrors.TeamsUpdateTeamRoleForbiddenError           | 403                                                   | application/json                                      |
-| apierrors.TeamsUpdateTeamRoleNotFoundError            | 404                                                   | application/json                                      |
-| apierrors.TeamsUpdateTeamRoleConflictError            | 409                                                   | application/json                                      |
-| apierrors.TeamsUpdateTeamRoleUnprocessableEntityError | 422                                                   | application/json                                      |
-| apierrors.TeamsUpdateTeamRoleInternalServerError      | 500                                                   | application/json                                      |
-| apierrors.TeamsUpdateTeamRoleBadGatewayError          | 502                                                   | application/json                                      |
-| apierrors.TeamsUpdateTeamRoleServiceUnavailableError  | 503                                                   | application/json                                      |
-| apierrors.TeamsUpdateTeamRoleGatewayTimeoutError      | 504                                                   | application/json                                      |
-| apierrors.APIError                                    | 4XX, 5XX                                              | \*/\*                                                 |
+| Error Type                         | Status Code                        | Content Type                       |
+| ---------------------------------- | ---------------------------------- | ---------------------------------- |
+| apierrors.BadRequestError          | 400                                | application/json                   |
+| apierrors.UnauthorizedError        | 401                                | application/json                   |
+| apierrors.PaymentRequiredError     | 402                                | application/json                   |
+| apierrors.ForbiddenError           | 403                                | application/json                   |
+| apierrors.NotFoundError            | 404                                | application/json                   |
+| apierrors.ConflictError            | 409                                | application/json                   |
+| apierrors.UnprocessableEntityError | 422                                | application/json                   |
+| apierrors.InternalServerError      | 500                                | application/json                   |
+| apierrors.BadGatewayError          | 502                                | application/json                   |
+| apierrors.ServiceUnavailableError  | 503                                | application/json                   |
+| apierrors.GatewayTimeoutError      | 504                                | application/json                   |
+| apierrors.APIError                 | 4XX, 5XX                           | \*/\*                              |

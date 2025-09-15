@@ -222,7 +222,7 @@ func (s *Msteams) GetConfig(ctx context.Context, opts ...operations.Option) (*op
 				return nil, err
 			}
 
-			var out apierrors.MSTeamsGetMsteamsConfigBadRequestError
+			var out apierrors.BadRequestError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -247,7 +247,7 @@ func (s *Msteams) GetConfig(ctx context.Context, opts ...operations.Option) (*op
 				return nil, err
 			}
 
-			var out apierrors.MSTeamsGetMsteamsConfigUnauthorizedError
+			var out apierrors.UnauthorizedError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -272,7 +272,7 @@ func (s *Msteams) GetConfig(ctx context.Context, opts ...operations.Option) (*op
 				return nil, err
 			}
 
-			var out apierrors.MSTeamsGetMsteamsConfigPaymentRequiredError
+			var out apierrors.PaymentRequiredError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -297,7 +297,7 @@ func (s *Msteams) GetConfig(ctx context.Context, opts ...operations.Option) (*op
 				return nil, err
 			}
 
-			var out apierrors.MSTeamsGetMsteamsConfigForbiddenError
+			var out apierrors.ForbiddenError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -322,7 +322,7 @@ func (s *Msteams) GetConfig(ctx context.Context, opts ...operations.Option) (*op
 				return nil, err
 			}
 
-			var out apierrors.MSTeamsGetMsteamsConfigNotFoundError
+			var out apierrors.NotFoundError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -347,7 +347,7 @@ func (s *Msteams) GetConfig(ctx context.Context, opts ...operations.Option) (*op
 				return nil, err
 			}
 
-			var out apierrors.MSTeamsGetMsteamsConfigConflictError
+			var out apierrors.ConflictError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -372,7 +372,7 @@ func (s *Msteams) GetConfig(ctx context.Context, opts ...operations.Option) (*op
 				return nil, err
 			}
 
-			var out apierrors.MSTeamsGetMsteamsConfigUnprocessableEntityError
+			var out apierrors.UnprocessableEntityError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -397,7 +397,7 @@ func (s *Msteams) GetConfig(ctx context.Context, opts ...operations.Option) (*op
 				return nil, err
 			}
 
-			var out apierrors.MSTeamsGetMsteamsConfigInternalServerError
+			var out apierrors.InternalServerError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -422,7 +422,7 @@ func (s *Msteams) GetConfig(ctx context.Context, opts ...operations.Option) (*op
 				return nil, err
 			}
 
-			var out apierrors.MSTeamsGetMsteamsConfigBadGatewayError
+			var out apierrors.BadGatewayError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -447,7 +447,7 @@ func (s *Msteams) GetConfig(ctx context.Context, opts ...operations.Option) (*op
 				return nil, err
 			}
 
-			var out apierrors.MSTeamsGetMsteamsConfigServiceUnavailableError
+			var out apierrors.ServiceUnavailableError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -472,7 +472,7 @@ func (s *Msteams) GetConfig(ctx context.Context, opts ...operations.Option) (*op
 				return nil, err
 			}
 
-			var out apierrors.MSTeamsGetMsteamsConfigGatewayTimeoutError
+			var out apierrors.GatewayTimeoutError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}

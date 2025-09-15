@@ -56,17 +56,17 @@ func main() {
 
 ### Errors
 
-| Error Type                                             | Status Code                                            | Content Type                                           |
-| ------------------------------------------------------ | ------------------------------------------------------ | ------------------------------------------------------ |
-| apierrors.SquadsGetSquadByTeamBadRequestError          | 400                                                    | application/json                                       |
-| apierrors.SquadsGetSquadByTeamUnauthorizedError        | 401                                                    | application/json                                       |
-| apierrors.SquadsGetSquadByTeamPaymentRequiredError     | 402                                                    | application/json                                       |
-| apierrors.SquadsGetSquadByTeamForbiddenError           | 403                                                    | application/json                                       |
-| apierrors.SquadsGetSquadByTeamNotFoundError            | 404                                                    | application/json                                       |
-| apierrors.SquadsGetSquadByTeamConflictError            | 409                                                    | application/json                                       |
-| apierrors.SquadsGetSquadByTeamUnprocessableEntityError | 422                                                    | application/json                                       |
-| apierrors.SquadsGetSquadByTeamInternalServerError      | 500                                                    | application/json                                       |
-| apierrors.SquadsGetSquadByTeamBadGatewayError          | 502                                                    | application/json                                       |
-| apierrors.SquadsGetSquadByTeamServiceUnavailableError  | 503                                                    | application/json                                       |
-| apierrors.SquadsGetSquadByTeamGatewayTimeoutError      | 504                                                    | application/json                                       |
-| apierrors.APIError                                     | 4XX, 5XX                                               | \*/\*                                                  |
+| Error Type                         | Status Code                        | Content Type                       |
+| ---------------------------------- | ---------------------------------- | ---------------------------------- |
+| apierrors.BadRequestError          | 400                                | application/json                   |
+| apierrors.UnauthorizedError        | 401                                | application/json                   |
+| apierrors.PaymentRequiredError     | 402                                | application/json                   |
+| apierrors.ForbiddenError           | 403                                | application/json                   |
+| apierrors.NotFoundError            | 404                                | application/json                   |
+| apierrors.ConflictError            | 409                                | application/json                   |
+| apierrors.UnprocessableEntityError | 422                                | application/json                   |
+| apierrors.InternalServerError      | 500                                | application/json                   |
+| apierrors.BadGatewayError          | 502                                | application/json                   |
+| apierrors.ServiceUnavailableError  | 503                                | application/json                   |
+| apierrors.GatewayTimeoutError      | 504                                | application/json                   |
+| apierrors.APIError                 | 4XX, 5XX                           | \*/\*                              |

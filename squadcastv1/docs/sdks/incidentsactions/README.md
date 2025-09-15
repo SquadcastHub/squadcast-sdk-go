@@ -57,20 +57,20 @@ func main() {
 
 ### Errors
 
-| Error Type                                                                | Status Code                                                               | Content Type                                                              |
-| ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- |
-| apierrors.IncidentActionsCreateATicketOnJiraCloudBadRequestError          | 400                                                                       | application/json                                                          |
-| apierrors.IncidentActionsCreateATicketOnJiraCloudUnauthorizedError        | 401                                                                       | application/json                                                          |
-| apierrors.IncidentActionsCreateATicketOnJiraCloudPaymentRequiredError     | 402                                                                       | application/json                                                          |
-| apierrors.IncidentActionsCreateATicketOnJiraCloudForbiddenError           | 403                                                                       | application/json                                                          |
-| apierrors.IncidentActionsCreateATicketOnJiraCloudNotFoundError            | 404                                                                       | application/json                                                          |
-| apierrors.IncidentActionsCreateATicketOnJiraCloudConflictError            | 409                                                                       | application/json                                                          |
-| apierrors.IncidentActionsCreateATicketOnJiraCloudUnprocessableEntityError | 422                                                                       | application/json                                                          |
-| apierrors.IncidentActionsCreateATicketOnJiraCloudInternalServerError      | 500                                                                       | application/json                                                          |
-| apierrors.IncidentActionsCreateATicketOnJiraCloudBadGatewayError          | 502                                                                       | application/json                                                          |
-| apierrors.IncidentActionsCreateATicketOnJiraCloudServiceUnavailableError  | 503                                                                       | application/json                                                          |
-| apierrors.IncidentActionsCreateATicketOnJiraCloudGatewayTimeoutError      | 504                                                                       | application/json                                                          |
-| apierrors.APIError                                                        | 4XX, 5XX                                                                  | \*/\*                                                                     |
+| Error Type                         | Status Code                        | Content Type                       |
+| ---------------------------------- | ---------------------------------- | ---------------------------------- |
+| apierrors.BadRequestError          | 400                                | application/json                   |
+| apierrors.UnauthorizedError        | 401                                | application/json                   |
+| apierrors.PaymentRequiredError     | 402                                | application/json                   |
+| apierrors.ForbiddenError           | 403                                | application/json                   |
+| apierrors.NotFoundError            | 404                                | application/json                   |
+| apierrors.ConflictError            | 409                                | application/json                   |
+| apierrors.UnprocessableEntityError | 422                                | application/json                   |
+| apierrors.InternalServerError      | 500                                | application/json                   |
+| apierrors.BadGatewayError          | 502                                | application/json                   |
+| apierrors.ServiceUnavailableError  | 503                                | application/json                   |
+| apierrors.GatewayTimeoutError      | 504                                | application/json                   |
+| apierrors.APIError                 | 4XX, 5XX                           | \*/\*                              |
 
 ## CreateJiraServerTicket
 
@@ -120,20 +120,20 @@ func main() {
 
 ### Errors
 
-| Error Type                                                                 | Status Code                                                                | Content Type                                                               |
-| -------------------------------------------------------------------------- | -------------------------------------------------------------------------- | -------------------------------------------------------------------------- |
-| apierrors.IncidentActionsCreateATicketOnJiraServerBadRequestError          | 400                                                                        | application/json                                                           |
-| apierrors.IncidentActionsCreateATicketOnJiraServerUnauthorizedError        | 401                                                                        | application/json                                                           |
-| apierrors.IncidentActionsCreateATicketOnJiraServerPaymentRequiredError     | 402                                                                        | application/json                                                           |
-| apierrors.IncidentActionsCreateATicketOnJiraServerForbiddenError           | 403                                                                        | application/json                                                           |
-| apierrors.IncidentActionsCreateATicketOnJiraServerNotFoundError            | 404                                                                        | application/json                                                           |
-| apierrors.IncidentActionsCreateATicketOnJiraServerConflictError            | 409                                                                        | application/json                                                           |
-| apierrors.IncidentActionsCreateATicketOnJiraServerUnprocessableEntityError | 422                                                                        | application/json                                                           |
-| apierrors.IncidentActionsCreateATicketOnJiraServerInternalServerError      | 500                                                                        | application/json                                                           |
-| apierrors.IncidentActionsCreateATicketOnJiraServerBadGatewayError          | 502                                                                        | application/json                                                           |
-| apierrors.IncidentActionsCreateATicketOnJiraServerServiceUnavailableError  | 503                                                                        | application/json                                                           |
-| apierrors.IncidentActionsCreateATicketOnJiraServerGatewayTimeoutError      | 504                                                                        | application/json                                                           |
-| apierrors.APIError                                                         | 4XX, 5XX                                                                   | \*/\*                                                                      |
+| Error Type                         | Status Code                        | Content Type                       |
+| ---------------------------------- | ---------------------------------- | ---------------------------------- |
+| apierrors.BadRequestError          | 400                                | application/json                   |
+| apierrors.UnauthorizedError        | 401                                | application/json                   |
+| apierrors.PaymentRequiredError     | 402                                | application/json                   |
+| apierrors.ForbiddenError           | 403                                | application/json                   |
+| apierrors.NotFoundError            | 404                                | application/json                   |
+| apierrors.ConflictError            | 409                                | application/json                   |
+| apierrors.UnprocessableEntityError | 422                                | application/json                   |
+| apierrors.InternalServerError      | 500                                | application/json                   |
+| apierrors.BadGatewayError          | 502                                | application/json                   |
+| apierrors.ServiceUnavailableError  | 503                                | application/json                   |
+| apierrors.GatewayTimeoutError      | 504                                | application/json                   |
+| apierrors.APIError                 | 4XX, 5XX                           | \*/\*                              |
 
 ## CreateInServicenow
 
@@ -183,17 +183,17 @@ func main() {
 
 ### Errors
 
-| Error Type                                                                    | Status Code                                                                   | Content Type                                                                  |
-| ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
-| apierrors.IncidentActionsCreateAnIncidentInServicenowBadRequestError          | 400                                                                           | application/json                                                              |
-| apierrors.IncidentActionsCreateAnIncidentInServicenowUnauthorizedError        | 401                                                                           | application/json                                                              |
-| apierrors.IncidentActionsCreateAnIncidentInServicenowPaymentRequiredError     | 402                                                                           | application/json                                                              |
-| apierrors.IncidentActionsCreateAnIncidentInServicenowForbiddenError           | 403                                                                           | application/json                                                              |
-| apierrors.IncidentActionsCreateAnIncidentInServicenowNotFoundError            | 404                                                                           | application/json                                                              |
-| apierrors.IncidentActionsCreateAnIncidentInServicenowConflictError            | 409                                                                           | application/json                                                              |
-| apierrors.IncidentActionsCreateAnIncidentInServicenowUnprocessableEntityError | 422                                                                           | application/json                                                              |
-| apierrors.IncidentActionsCreateAnIncidentInServicenowInternalServerError      | 500                                                                           | application/json                                                              |
-| apierrors.IncidentActionsCreateAnIncidentInServicenowBadGatewayError          | 502                                                                           | application/json                                                              |
-| apierrors.IncidentActionsCreateAnIncidentInServicenowServiceUnavailableError  | 503                                                                           | application/json                                                              |
-| apierrors.IncidentActionsCreateAnIncidentInServicenowGatewayTimeoutError      | 504                                                                           | application/json                                                              |
-| apierrors.APIError                                                            | 4XX, 5XX                                                                      | \*/\*                                                                         |
+| Error Type                         | Status Code                        | Content Type                       |
+| ---------------------------------- | ---------------------------------- | ---------------------------------- |
+| apierrors.BadRequestError          | 400                                | application/json                   |
+| apierrors.UnauthorizedError        | 401                                | application/json                   |
+| apierrors.PaymentRequiredError     | 402                                | application/json                   |
+| apierrors.ForbiddenError           | 403                                | application/json                   |
+| apierrors.NotFoundError            | 404                                | application/json                   |
+| apierrors.ConflictError            | 409                                | application/json                   |
+| apierrors.UnprocessableEntityError | 422                                | application/json                   |
+| apierrors.InternalServerError      | 500                                | application/json                   |
+| apierrors.BadGatewayError          | 502                                | application/json                   |
+| apierrors.ServiceUnavailableError  | 503                                | application/json                   |
+| apierrors.GatewayTimeoutError      | 504                                | application/json                   |
+| apierrors.APIError                 | 4XX, 5XX                           | \*/\*                              |

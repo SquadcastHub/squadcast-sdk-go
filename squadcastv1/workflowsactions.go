@@ -232,7 +232,7 @@ func (s *WorkflowsActions) Create(ctx context.Context, workflowID string, v3Work
 				return nil, err
 			}
 
-			var out apierrors.WorkflowsCreateActionBadRequestError
+			var out apierrors.BadRequestError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -257,7 +257,7 @@ func (s *WorkflowsActions) Create(ctx context.Context, workflowID string, v3Work
 				return nil, err
 			}
 
-			var out apierrors.WorkflowsCreateActionUnauthorizedError
+			var out apierrors.UnauthorizedError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -282,7 +282,7 @@ func (s *WorkflowsActions) Create(ctx context.Context, workflowID string, v3Work
 				return nil, err
 			}
 
-			var out apierrors.WorkflowsCreateActionPaymentRequiredError
+			var out apierrors.PaymentRequiredError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -307,7 +307,7 @@ func (s *WorkflowsActions) Create(ctx context.Context, workflowID string, v3Work
 				return nil, err
 			}
 
-			var out apierrors.WorkflowsCreateActionForbiddenError
+			var out apierrors.ForbiddenError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -332,7 +332,7 @@ func (s *WorkflowsActions) Create(ctx context.Context, workflowID string, v3Work
 				return nil, err
 			}
 
-			var out apierrors.WorkflowsCreateActionNotFoundError
+			var out apierrors.NotFoundError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -357,7 +357,7 @@ func (s *WorkflowsActions) Create(ctx context.Context, workflowID string, v3Work
 				return nil, err
 			}
 
-			var out apierrors.WorkflowsCreateActionConflictError
+			var out apierrors.ConflictError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -382,7 +382,7 @@ func (s *WorkflowsActions) Create(ctx context.Context, workflowID string, v3Work
 				return nil, err
 			}
 
-			var out apierrors.WorkflowsCreateActionUnprocessableEntityError
+			var out apierrors.UnprocessableEntityError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -407,7 +407,7 @@ func (s *WorkflowsActions) Create(ctx context.Context, workflowID string, v3Work
 				return nil, err
 			}
 
-			var out apierrors.WorkflowsCreateActionInternalServerError
+			var out apierrors.InternalServerError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -432,7 +432,7 @@ func (s *WorkflowsActions) Create(ctx context.Context, workflowID string, v3Work
 				return nil, err
 			}
 
-			var out apierrors.WorkflowsCreateActionBadGatewayError
+			var out apierrors.BadGatewayError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -457,7 +457,7 @@ func (s *WorkflowsActions) Create(ctx context.Context, workflowID string, v3Work
 				return nil, err
 			}
 
-			var out apierrors.WorkflowsCreateActionServiceUnavailableError
+			var out apierrors.ServiceUnavailableError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -482,7 +482,7 @@ func (s *WorkflowsActions) Create(ctx context.Context, workflowID string, v3Work
 				return nil, err
 			}
 
-			var out apierrors.WorkflowsCreateActionGatewayTimeoutError
+			var out apierrors.GatewayTimeoutError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}

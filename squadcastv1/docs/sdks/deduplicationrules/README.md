@@ -56,20 +56,20 @@ func main() {
 
 ### Errors
 
-| Error Type                                                                | Status Code                                                               | Content Type                                                              |
-| ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- |
-| apierrors.DeduplicationRulesGetDeduplicationRulesBadRequestError          | 400                                                                       | application/json                                                          |
-| apierrors.DeduplicationRulesGetDeduplicationRulesUnauthorizedError        | 401                                                                       | application/json                                                          |
-| apierrors.DeduplicationRulesGetDeduplicationRulesPaymentRequiredError     | 402                                                                       | application/json                                                          |
-| apierrors.DeduplicationRulesGetDeduplicationRulesForbiddenError           | 403                                                                       | application/json                                                          |
-| apierrors.DeduplicationRulesGetDeduplicationRulesNotFoundError            | 404                                                                       | application/json                                                          |
-| apierrors.DeduplicationRulesGetDeduplicationRulesConflictError            | 409                                                                       | application/json                                                          |
-| apierrors.DeduplicationRulesGetDeduplicationRulesUnprocessableEntityError | 422                                                                       | application/json                                                          |
-| apierrors.DeduplicationRulesGetDeduplicationRulesInternalServerError      | 500                                                                       | application/json                                                          |
-| apierrors.DeduplicationRulesGetDeduplicationRulesBadGatewayError          | 502                                                                       | application/json                                                          |
-| apierrors.DeduplicationRulesGetDeduplicationRulesServiceUnavailableError  | 503                                                                       | application/json                                                          |
-| apierrors.DeduplicationRulesGetDeduplicationRulesGatewayTimeoutError      | 504                                                                       | application/json                                                          |
-| apierrors.APIError                                                        | 4XX, 5XX                                                                  | \*/\*                                                                     |
+| Error Type                         | Status Code                        | Content Type                       |
+| ---------------------------------- | ---------------------------------- | ---------------------------------- |
+| apierrors.BadRequestError          | 400                                | application/json                   |
+| apierrors.UnauthorizedError        | 401                                | application/json                   |
+| apierrors.PaymentRequiredError     | 402                                | application/json                   |
+| apierrors.ForbiddenError           | 403                                | application/json                   |
+| apierrors.NotFoundError            | 404                                | application/json                   |
+| apierrors.ConflictError            | 409                                | application/json                   |
+| apierrors.UnprocessableEntityError | 422                                | application/json                   |
+| apierrors.InternalServerError      | 500                                | application/json                   |
+| apierrors.BadGatewayError          | 502                                | application/json                   |
+| apierrors.ServiceUnavailableError  | 503                                | application/json                   |
+| apierrors.GatewayTimeoutError      | 504                                | application/json                   |
+| apierrors.APIError                 | 4XX, 5XX                           | \*/\*                              |
 
 ## CreateOrUpdate
 
@@ -123,17 +123,17 @@ func main() {
 
 ### Errors
 
-| Error Type                                                                           | Status Code                                                                          | Content Type                                                                         |
-| ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
-| apierrors.DeduplicationRulesCreateOrUpdateDeduplicationRulesBadRequestError          | 400                                                                                  | application/json                                                                     |
-| apierrors.DeduplicationRulesCreateOrUpdateDeduplicationRulesUnauthorizedError        | 401                                                                                  | application/json                                                                     |
-| apierrors.DeduplicationRulesCreateOrUpdateDeduplicationRulesPaymentRequiredError     | 402                                                                                  | application/json                                                                     |
-| apierrors.DeduplicationRulesCreateOrUpdateDeduplicationRulesForbiddenError           | 403                                                                                  | application/json                                                                     |
-| apierrors.DeduplicationRulesCreateOrUpdateDeduplicationRulesNotFoundError            | 404                                                                                  | application/json                                                                     |
-| apierrors.DeduplicationRulesCreateOrUpdateDeduplicationRulesConflictError            | 409                                                                                  | application/json                                                                     |
-| apierrors.DeduplicationRulesCreateOrUpdateDeduplicationRulesUnprocessableEntityError | 422                                                                                  | application/json                                                                     |
-| apierrors.DeduplicationRulesCreateOrUpdateDeduplicationRulesInternalServerError      | 500                                                                                  | application/json                                                                     |
-| apierrors.DeduplicationRulesCreateOrUpdateDeduplicationRulesBadGatewayError          | 502                                                                                  | application/json                                                                     |
-| apierrors.DeduplicationRulesCreateOrUpdateDeduplicationRulesServiceUnavailableError  | 503                                                                                  | application/json                                                                     |
-| apierrors.DeduplicationRulesCreateOrUpdateDeduplicationRulesGatewayTimeoutError      | 504                                                                                  | application/json                                                                     |
-| apierrors.APIError                                                                   | 4XX, 5XX                                                                             | \*/\*                                                                                |
+| Error Type                         | Status Code                        | Content Type                       |
+| ---------------------------------- | ---------------------------------- | ---------------------------------- |
+| apierrors.BadRequestError          | 400                                | application/json                   |
+| apierrors.UnauthorizedError        | 401                                | application/json                   |
+| apierrors.PaymentRequiredError     | 402                                | application/json                   |
+| apierrors.ForbiddenError           | 403                                | application/json                   |
+| apierrors.NotFoundError            | 404                                | application/json                   |
+| apierrors.ConflictError            | 409                                | application/json                   |
+| apierrors.UnprocessableEntityError | 422                                | application/json                   |
+| apierrors.InternalServerError      | 500                                | application/json                   |
+| apierrors.BadGatewayError          | 502                                | application/json                   |
+| apierrors.ServiceUnavailableError  | 503                                | application/json                   |
+| apierrors.GatewayTimeoutError      | 504                                | application/json                   |
+| apierrors.APIError                 | 4XX, 5XX                           | \*/\*                              |

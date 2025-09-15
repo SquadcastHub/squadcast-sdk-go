@@ -57,20 +57,20 @@ func main() {
 
 ### Errors
 
-| Error Type                                                                           | Status Code                                                                          | Content Type                                                                         |
-| ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
-| apierrors.OverlayGetAllCustomContentTemplateOverlayByServiceBadRequestError          | 400                                                                                  | application/json                                                                     |
-| apierrors.OverlayGetAllCustomContentTemplateOverlayByServiceUnauthorizedError        | 401                                                                                  | application/json                                                                     |
-| apierrors.OverlayGetAllCustomContentTemplateOverlayByServicePaymentRequiredError     | 402                                                                                  | application/json                                                                     |
-| apierrors.OverlayGetAllCustomContentTemplateOverlayByServiceForbiddenError           | 403                                                                                  | application/json                                                                     |
-| apierrors.OverlayGetAllCustomContentTemplateOverlayByServiceNotFoundError            | 404                                                                                  | application/json                                                                     |
-| apierrors.OverlayGetAllCustomContentTemplateOverlayByServiceConflictError            | 409                                                                                  | application/json                                                                     |
-| apierrors.OverlayGetAllCustomContentTemplateOverlayByServiceUnprocessableEntityError | 422                                                                                  | application/json                                                                     |
-| apierrors.OverlayGetAllCustomContentTemplateOverlayByServiceInternalServerError      | 500                                                                                  | application/json                                                                     |
-| apierrors.OverlayGetAllCustomContentTemplateOverlayByServiceBadGatewayError          | 502                                                                                  | application/json                                                                     |
-| apierrors.OverlayGetAllCustomContentTemplateOverlayByServiceServiceUnavailableError  | 503                                                                                  | application/json                                                                     |
-| apierrors.OverlayGetAllCustomContentTemplateOverlayByServiceGatewayTimeoutError      | 504                                                                                  | application/json                                                                     |
-| apierrors.APIError                                                                   | 4XX, 5XX                                                                             | \*/\*                                                                                |
+| Error Type                         | Status Code                        | Content Type                       |
+| ---------------------------------- | ---------------------------------- | ---------------------------------- |
+| apierrors.BadRequestError          | 400                                | application/json                   |
+| apierrors.UnauthorizedError        | 401                                | application/json                   |
+| apierrors.PaymentRequiredError     | 402                                | application/json                   |
+| apierrors.ForbiddenError           | 403                                | application/json                   |
+| apierrors.NotFoundError            | 404                                | application/json                   |
+| apierrors.ConflictError            | 409                                | application/json                   |
+| apierrors.UnprocessableEntityError | 422                                | application/json                   |
+| apierrors.InternalServerError      | 500                                | application/json                   |
+| apierrors.BadGatewayError          | 502                                | application/json                   |
+| apierrors.ServiceUnavailableError  | 503                                | application/json                   |
+| apierrors.GatewayTimeoutError      | 504                                | application/json                   |
+| apierrors.APIError                 | 4XX, 5XX                           | \*/\*                              |
 
 ## GetCustomContent
 
@@ -121,20 +121,20 @@ func main() {
 
 ### Errors
 
-| Error Type                                                               | Status Code                                                              | Content Type                                                             |
-| ------------------------------------------------------------------------ | ------------------------------------------------------------------------ | ------------------------------------------------------------------------ |
-| apierrors.OverlayGetCustomContentTemplateOverlayBadRequestError          | 400                                                                      | application/json                                                         |
-| apierrors.OverlayGetCustomContentTemplateOverlayUnauthorizedError        | 401                                                                      | application/json                                                         |
-| apierrors.OverlayGetCustomContentTemplateOverlayPaymentRequiredError     | 402                                                                      | application/json                                                         |
-| apierrors.OverlayGetCustomContentTemplateOverlayForbiddenError           | 403                                                                      | application/json                                                         |
-| apierrors.OverlayGetCustomContentTemplateOverlayNotFoundError            | 404                                                                      | application/json                                                         |
-| apierrors.OverlayGetCustomContentTemplateOverlayConflictError            | 409                                                                      | application/json                                                         |
-| apierrors.OverlayGetCustomContentTemplateOverlayUnprocessableEntityError | 422                                                                      | application/json                                                         |
-| apierrors.OverlayGetCustomContentTemplateOverlayInternalServerError      | 500                                                                      | application/json                                                         |
-| apierrors.OverlayGetCustomContentTemplateOverlayBadGatewayError          | 502                                                                      | application/json                                                         |
-| apierrors.OverlayGetCustomContentTemplateOverlayServiceUnavailableError  | 503                                                                      | application/json                                                         |
-| apierrors.OverlayGetCustomContentTemplateOverlayGatewayTimeoutError      | 504                                                                      | application/json                                                         |
-| apierrors.APIError                                                       | 4XX, 5XX                                                                 | \*/\*                                                                    |
+| Error Type                         | Status Code                        | Content Type                       |
+| ---------------------------------- | ---------------------------------- | ---------------------------------- |
+| apierrors.BadRequestError          | 400                                | application/json                   |
+| apierrors.UnauthorizedError        | 401                                | application/json                   |
+| apierrors.PaymentRequiredError     | 402                                | application/json                   |
+| apierrors.ForbiddenError           | 403                                | application/json                   |
+| apierrors.NotFoundError            | 404                                | application/json                   |
+| apierrors.ConflictError            | 409                                | application/json                   |
+| apierrors.UnprocessableEntityError | 422                                | application/json                   |
+| apierrors.InternalServerError      | 500                                | application/json                   |
+| apierrors.BadGatewayError          | 502                                | application/json                   |
+| apierrors.ServiceUnavailableError  | 503                                | application/json                   |
+| apierrors.GatewayTimeoutError      | 504                                | application/json                   |
+| apierrors.APIError                 | 4XX, 5XX                           | \*/\*                              |
 
 ## GetDedupKey
 
@@ -185,17 +185,17 @@ func main() {
 
 ### Errors
 
-| Error Type                                                                | Status Code                                                               | Content Type                                                              |
-| ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- |
-| apierrors.OverlayGetDedupKeyOverlayForAlertSourceBadRequestError          | 400                                                                       | application/json                                                          |
-| apierrors.OverlayGetDedupKeyOverlayForAlertSourceUnauthorizedError        | 401                                                                       | application/json                                                          |
-| apierrors.OverlayGetDedupKeyOverlayForAlertSourcePaymentRequiredError     | 402                                                                       | application/json                                                          |
-| apierrors.OverlayGetDedupKeyOverlayForAlertSourceForbiddenError           | 403                                                                       | application/json                                                          |
-| apierrors.OverlayGetDedupKeyOverlayForAlertSourceNotFoundError            | 404                                                                       | application/json                                                          |
-| apierrors.OverlayGetDedupKeyOverlayForAlertSourceConflictError            | 409                                                                       | application/json                                                          |
-| apierrors.OverlayGetDedupKeyOverlayForAlertSourceUnprocessableEntityError | 422                                                                       | application/json                                                          |
-| apierrors.OverlayGetDedupKeyOverlayForAlertSourceInternalServerError      | 500                                                                       | application/json                                                          |
-| apierrors.OverlayGetDedupKeyOverlayForAlertSourceBadGatewayError          | 502                                                                       | application/json                                                          |
-| apierrors.OverlayGetDedupKeyOverlayForAlertSourceServiceUnavailableError  | 503                                                                       | application/json                                                          |
-| apierrors.OverlayGetDedupKeyOverlayForAlertSourceGatewayTimeoutError      | 504                                                                       | application/json                                                          |
-| apierrors.APIError                                                        | 4XX, 5XX                                                                  | \*/\*                                                                     |
+| Error Type                         | Status Code                        | Content Type                       |
+| ---------------------------------- | ---------------------------------- | ---------------------------------- |
+| apierrors.BadRequestError          | 400                                | application/json                   |
+| apierrors.UnauthorizedError        | 401                                | application/json                   |
+| apierrors.PaymentRequiredError     | 402                                | application/json                   |
+| apierrors.ForbiddenError           | 403                                | application/json                   |
+| apierrors.NotFoundError            | 404                                | application/json                   |
+| apierrors.ConflictError            | 409                                | application/json                   |
+| apierrors.UnprocessableEntityError | 422                                | application/json                   |
+| apierrors.InternalServerError      | 500                                | application/json                   |
+| apierrors.BadGatewayError          | 502                                | application/json                   |
+| apierrors.ServiceUnavailableError  | 503                                | application/json                   |
+| apierrors.GatewayTimeoutError      | 504                                | application/json                   |
+| apierrors.APIError                 | 4XX, 5XX                           | \*/\*                              |

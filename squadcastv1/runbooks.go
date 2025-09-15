@@ -222,7 +222,7 @@ func (s *Runbooks) ListByTeam(ctx context.Context, opts ...operations.Option) (*
 				return nil, err
 			}
 
-			var out apierrors.RunbooksGetAllRunbooksByTeamBadRequestError
+			var out apierrors.BadRequestError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -247,7 +247,7 @@ func (s *Runbooks) ListByTeam(ctx context.Context, opts ...operations.Option) (*
 				return nil, err
 			}
 
-			var out apierrors.RunbooksGetAllRunbooksByTeamUnauthorizedError
+			var out apierrors.UnauthorizedError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -272,7 +272,7 @@ func (s *Runbooks) ListByTeam(ctx context.Context, opts ...operations.Option) (*
 				return nil, err
 			}
 
-			var out apierrors.RunbooksGetAllRunbooksByTeamPaymentRequiredError
+			var out apierrors.PaymentRequiredError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -297,7 +297,7 @@ func (s *Runbooks) ListByTeam(ctx context.Context, opts ...operations.Option) (*
 				return nil, err
 			}
 
-			var out apierrors.RunbooksGetAllRunbooksByTeamForbiddenError
+			var out apierrors.ForbiddenError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -322,7 +322,7 @@ func (s *Runbooks) ListByTeam(ctx context.Context, opts ...operations.Option) (*
 				return nil, err
 			}
 
-			var out apierrors.RunbooksGetAllRunbooksByTeamNotFoundError
+			var out apierrors.NotFoundError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -347,7 +347,7 @@ func (s *Runbooks) ListByTeam(ctx context.Context, opts ...operations.Option) (*
 				return nil, err
 			}
 
-			var out apierrors.RunbooksGetAllRunbooksByTeamConflictError
+			var out apierrors.ConflictError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -372,7 +372,7 @@ func (s *Runbooks) ListByTeam(ctx context.Context, opts ...operations.Option) (*
 				return nil, err
 			}
 
-			var out apierrors.RunbooksGetAllRunbooksByTeamUnprocessableEntityError
+			var out apierrors.UnprocessableEntityError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -397,7 +397,7 @@ func (s *Runbooks) ListByTeam(ctx context.Context, opts ...operations.Option) (*
 				return nil, err
 			}
 
-			var out apierrors.RunbooksGetAllRunbooksByTeamInternalServerError
+			var out apierrors.InternalServerError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -422,7 +422,7 @@ func (s *Runbooks) ListByTeam(ctx context.Context, opts ...operations.Option) (*
 				return nil, err
 			}
 
-			var out apierrors.RunbooksGetAllRunbooksByTeamBadGatewayError
+			var out apierrors.BadGatewayError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -447,7 +447,7 @@ func (s *Runbooks) ListByTeam(ctx context.Context, opts ...operations.Option) (*
 				return nil, err
 			}
 
-			var out apierrors.RunbooksGetAllRunbooksByTeamServiceUnavailableError
+			var out apierrors.ServiceUnavailableError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -472,7 +472,7 @@ func (s *Runbooks) ListByTeam(ctx context.Context, opts ...operations.Option) (*
 				return nil, err
 			}
 
-			var out apierrors.RunbooksGetAllRunbooksByTeamGatewayTimeoutError
+			var out apierrors.GatewayTimeoutError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -711,7 +711,7 @@ func (s *Runbooks) Create(ctx context.Context, request components.V3RunbooksCrea
 				return nil, err
 			}
 
-			var out apierrors.RunbooksCreateRunbookBadRequestError
+			var out apierrors.BadRequestError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -736,7 +736,7 @@ func (s *Runbooks) Create(ctx context.Context, request components.V3RunbooksCrea
 				return nil, err
 			}
 
-			var out apierrors.RunbooksCreateRunbookUnauthorizedError
+			var out apierrors.UnauthorizedError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -761,7 +761,7 @@ func (s *Runbooks) Create(ctx context.Context, request components.V3RunbooksCrea
 				return nil, err
 			}
 
-			var out apierrors.RunbooksCreateRunbookPaymentRequiredError
+			var out apierrors.PaymentRequiredError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -786,7 +786,7 @@ func (s *Runbooks) Create(ctx context.Context, request components.V3RunbooksCrea
 				return nil, err
 			}
 
-			var out apierrors.RunbooksCreateRunbookForbiddenError
+			var out apierrors.ForbiddenError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -811,7 +811,7 @@ func (s *Runbooks) Create(ctx context.Context, request components.V3RunbooksCrea
 				return nil, err
 			}
 
-			var out apierrors.RunbooksCreateRunbookNotFoundError
+			var out apierrors.NotFoundError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -836,7 +836,7 @@ func (s *Runbooks) Create(ctx context.Context, request components.V3RunbooksCrea
 				return nil, err
 			}
 
-			var out apierrors.RunbooksCreateRunbookConflictError
+			var out apierrors.ConflictError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -861,7 +861,7 @@ func (s *Runbooks) Create(ctx context.Context, request components.V3RunbooksCrea
 				return nil, err
 			}
 
-			var out apierrors.RunbooksCreateRunbookUnprocessableEntityError
+			var out apierrors.UnprocessableEntityError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -886,7 +886,7 @@ func (s *Runbooks) Create(ctx context.Context, request components.V3RunbooksCrea
 				return nil, err
 			}
 
-			var out apierrors.RunbooksCreateRunbookInternalServerError
+			var out apierrors.InternalServerError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -911,7 +911,7 @@ func (s *Runbooks) Create(ctx context.Context, request components.V3RunbooksCrea
 				return nil, err
 			}
 
-			var out apierrors.RunbooksCreateRunbookBadGatewayError
+			var out apierrors.BadGatewayError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -936,7 +936,7 @@ func (s *Runbooks) Create(ctx context.Context, request components.V3RunbooksCrea
 				return nil, err
 			}
 
-			var out apierrors.RunbooksCreateRunbookServiceUnavailableError
+			var out apierrors.ServiceUnavailableError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -961,7 +961,7 @@ func (s *Runbooks) Create(ctx context.Context, request components.V3RunbooksCrea
 				return nil, err
 			}
 
-			var out apierrors.RunbooksCreateRunbookGatewayTimeoutError
+			var out apierrors.GatewayTimeoutError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -1192,7 +1192,7 @@ func (s *Runbooks) Remove(ctx context.Context, runbookID string, opts ...operati
 				return nil, err
 			}
 
-			var out apierrors.RunbooksRemoveRunbookBadRequestError
+			var out apierrors.BadRequestError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -1217,7 +1217,7 @@ func (s *Runbooks) Remove(ctx context.Context, runbookID string, opts ...operati
 				return nil, err
 			}
 
-			var out apierrors.RunbooksRemoveRunbookUnauthorizedError
+			var out apierrors.UnauthorizedError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -1242,7 +1242,7 @@ func (s *Runbooks) Remove(ctx context.Context, runbookID string, opts ...operati
 				return nil, err
 			}
 
-			var out apierrors.RunbooksRemoveRunbookPaymentRequiredError
+			var out apierrors.PaymentRequiredError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -1267,7 +1267,7 @@ func (s *Runbooks) Remove(ctx context.Context, runbookID string, opts ...operati
 				return nil, err
 			}
 
-			var out apierrors.RunbooksRemoveRunbookForbiddenError
+			var out apierrors.ForbiddenError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -1292,7 +1292,7 @@ func (s *Runbooks) Remove(ctx context.Context, runbookID string, opts ...operati
 				return nil, err
 			}
 
-			var out apierrors.RunbooksRemoveRunbookNotFoundError
+			var out apierrors.NotFoundError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -1317,7 +1317,7 @@ func (s *Runbooks) Remove(ctx context.Context, runbookID string, opts ...operati
 				return nil, err
 			}
 
-			var out apierrors.RunbooksRemoveRunbookConflictError
+			var out apierrors.ConflictError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -1342,7 +1342,7 @@ func (s *Runbooks) Remove(ctx context.Context, runbookID string, opts ...operati
 				return nil, err
 			}
 
-			var out apierrors.RunbooksRemoveRunbookUnprocessableEntityError
+			var out apierrors.UnprocessableEntityError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -1367,7 +1367,7 @@ func (s *Runbooks) Remove(ctx context.Context, runbookID string, opts ...operati
 				return nil, err
 			}
 
-			var out apierrors.RunbooksRemoveRunbookInternalServerError
+			var out apierrors.InternalServerError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -1392,7 +1392,7 @@ func (s *Runbooks) Remove(ctx context.Context, runbookID string, opts ...operati
 				return nil, err
 			}
 
-			var out apierrors.RunbooksRemoveRunbookBadGatewayError
+			var out apierrors.BadGatewayError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -1417,7 +1417,7 @@ func (s *Runbooks) Remove(ctx context.Context, runbookID string, opts ...operati
 				return nil, err
 			}
 
-			var out apierrors.RunbooksRemoveRunbookServiceUnavailableError
+			var out apierrors.ServiceUnavailableError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -1442,7 +1442,7 @@ func (s *Runbooks) Remove(ctx context.Context, runbookID string, opts ...operati
 				return nil, err
 			}
 
-			var out apierrors.RunbooksRemoveRunbookGatewayTimeoutError
+			var out apierrors.GatewayTimeoutError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -1678,7 +1678,7 @@ func (s *Runbooks) GetByID(ctx context.Context, runbookID string, opts ...operat
 				return nil, err
 			}
 
-			var out apierrors.RunbooksGetRunbookByIDBadRequestError
+			var out apierrors.BadRequestError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -1703,7 +1703,7 @@ func (s *Runbooks) GetByID(ctx context.Context, runbookID string, opts ...operat
 				return nil, err
 			}
 
-			var out apierrors.RunbooksGetRunbookByIDUnauthorizedError
+			var out apierrors.UnauthorizedError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -1728,7 +1728,7 @@ func (s *Runbooks) GetByID(ctx context.Context, runbookID string, opts ...operat
 				return nil, err
 			}
 
-			var out apierrors.RunbooksGetRunbookByIDPaymentRequiredError
+			var out apierrors.PaymentRequiredError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -1753,7 +1753,7 @@ func (s *Runbooks) GetByID(ctx context.Context, runbookID string, opts ...operat
 				return nil, err
 			}
 
-			var out apierrors.RunbooksGetRunbookByIDForbiddenError
+			var out apierrors.ForbiddenError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -1778,7 +1778,7 @@ func (s *Runbooks) GetByID(ctx context.Context, runbookID string, opts ...operat
 				return nil, err
 			}
 
-			var out apierrors.RunbooksGetRunbookByIDNotFoundError
+			var out apierrors.NotFoundError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -1803,7 +1803,7 @@ func (s *Runbooks) GetByID(ctx context.Context, runbookID string, opts ...operat
 				return nil, err
 			}
 
-			var out apierrors.RunbooksGetRunbookByIDConflictError
+			var out apierrors.ConflictError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -1828,7 +1828,7 @@ func (s *Runbooks) GetByID(ctx context.Context, runbookID string, opts ...operat
 				return nil, err
 			}
 
-			var out apierrors.RunbooksGetRunbookByIDUnprocessableEntityError
+			var out apierrors.UnprocessableEntityError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -1853,7 +1853,7 @@ func (s *Runbooks) GetByID(ctx context.Context, runbookID string, opts ...operat
 				return nil, err
 			}
 
-			var out apierrors.RunbooksGetRunbookByIDInternalServerError
+			var out apierrors.InternalServerError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -1878,7 +1878,7 @@ func (s *Runbooks) GetByID(ctx context.Context, runbookID string, opts ...operat
 				return nil, err
 			}
 
-			var out apierrors.RunbooksGetRunbookByIDBadGatewayError
+			var out apierrors.BadGatewayError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -1903,7 +1903,7 @@ func (s *Runbooks) GetByID(ctx context.Context, runbookID string, opts ...operat
 				return nil, err
 			}
 
-			var out apierrors.RunbooksGetRunbookByIDServiceUnavailableError
+			var out apierrors.ServiceUnavailableError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -1928,7 +1928,7 @@ func (s *Runbooks) GetByID(ctx context.Context, runbookID string, opts ...operat
 				return nil, err
 			}
 
-			var out apierrors.RunbooksGetRunbookByIDGatewayTimeoutError
+			var out apierrors.GatewayTimeoutError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -2172,7 +2172,7 @@ func (s *Runbooks) Update(ctx context.Context, runbookID string, v3RunbooksUpdat
 				return nil, err
 			}
 
-			var out apierrors.RunbooksUpdateRunbookBadRequestError
+			var out apierrors.BadRequestError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -2197,7 +2197,7 @@ func (s *Runbooks) Update(ctx context.Context, runbookID string, v3RunbooksUpdat
 				return nil, err
 			}
 
-			var out apierrors.RunbooksUpdateRunbookUnauthorizedError
+			var out apierrors.UnauthorizedError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -2222,7 +2222,7 @@ func (s *Runbooks) Update(ctx context.Context, runbookID string, v3RunbooksUpdat
 				return nil, err
 			}
 
-			var out apierrors.RunbooksUpdateRunbookPaymentRequiredError
+			var out apierrors.PaymentRequiredError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -2247,7 +2247,7 @@ func (s *Runbooks) Update(ctx context.Context, runbookID string, v3RunbooksUpdat
 				return nil, err
 			}
 
-			var out apierrors.RunbooksUpdateRunbookForbiddenError
+			var out apierrors.ForbiddenError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -2272,7 +2272,7 @@ func (s *Runbooks) Update(ctx context.Context, runbookID string, v3RunbooksUpdat
 				return nil, err
 			}
 
-			var out apierrors.RunbooksUpdateRunbookNotFoundError
+			var out apierrors.NotFoundError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -2297,7 +2297,7 @@ func (s *Runbooks) Update(ctx context.Context, runbookID string, v3RunbooksUpdat
 				return nil, err
 			}
 
-			var out apierrors.RunbooksUpdateRunbookConflictError
+			var out apierrors.ConflictError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -2322,7 +2322,7 @@ func (s *Runbooks) Update(ctx context.Context, runbookID string, v3RunbooksUpdat
 				return nil, err
 			}
 
-			var out apierrors.RunbooksUpdateRunbookUnprocessableEntityError
+			var out apierrors.UnprocessableEntityError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -2347,7 +2347,7 @@ func (s *Runbooks) Update(ctx context.Context, runbookID string, v3RunbooksUpdat
 				return nil, err
 			}
 
-			var out apierrors.RunbooksUpdateRunbookInternalServerError
+			var out apierrors.InternalServerError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -2372,7 +2372,7 @@ func (s *Runbooks) Update(ctx context.Context, runbookID string, v3RunbooksUpdat
 				return nil, err
 			}
 
-			var out apierrors.RunbooksUpdateRunbookBadGatewayError
+			var out apierrors.BadGatewayError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -2397,7 +2397,7 @@ func (s *Runbooks) Update(ctx context.Context, runbookID string, v3RunbooksUpdat
 				return nil, err
 			}
 
-			var out apierrors.RunbooksUpdateRunbookServiceUnavailableError
+			var out apierrors.ServiceUnavailableError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -2422,7 +2422,7 @@ func (s *Runbooks) Update(ctx context.Context, runbookID string, v3RunbooksUpdat
 				return nil, err
 			}
 
-			var out apierrors.RunbooksUpdateRunbookGatewayTimeoutError
+			var out apierrors.GatewayTimeoutError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}

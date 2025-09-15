@@ -71,17 +71,17 @@ func main() {
 
 ### Errors
 
-| Error Type                                                   | Status Code                                                  | Content Type                                                 |
-| ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| apierrors.IncidentsGetIncidentEventsBadRequestError          | 400                                                          | application/json                                             |
-| apierrors.IncidentsGetIncidentEventsUnauthorizedError        | 401                                                          | application/json                                             |
-| apierrors.IncidentsGetIncidentEventsPaymentRequiredError     | 402                                                          | application/json                                             |
-| apierrors.IncidentsGetIncidentEventsForbiddenError           | 403                                                          | application/json                                             |
-| apierrors.IncidentsGetIncidentEventsNotFoundError            | 404                                                          | application/json                                             |
-| apierrors.IncidentsGetIncidentEventsConflictError            | 409                                                          | application/json                                             |
-| apierrors.IncidentsGetIncidentEventsUnprocessableEntityError | 422                                                          | application/json                                             |
-| apierrors.IncidentsGetIncidentEventsInternalServerError      | 500                                                          | application/json                                             |
-| apierrors.IncidentsGetIncidentEventsBadGatewayError          | 502                                                          | application/json                                             |
-| apierrors.IncidentsGetIncidentEventsServiceUnavailableError  | 503                                                          | application/json                                             |
-| apierrors.IncidentsGetIncidentEventsGatewayTimeoutError      | 504                                                          | application/json                                             |
-| apierrors.APIError                                           | 4XX, 5XX                                                     | \*/\*                                                        |
+| Error Type                         | Status Code                        | Content Type                       |
+| ---------------------------------- | ---------------------------------- | ---------------------------------- |
+| apierrors.BadRequestError          | 400                                | application/json                   |
+| apierrors.UnauthorizedError        | 401                                | application/json                   |
+| apierrors.PaymentRequiredError     | 402                                | application/json                   |
+| apierrors.ForbiddenError           | 403                                | application/json                   |
+| apierrors.NotFoundError            | 404                                | application/json                   |
+| apierrors.ConflictError            | 409                                | application/json                   |
+| apierrors.UnprocessableEntityError | 422                                | application/json                   |
+| apierrors.InternalServerError      | 500                                | application/json                   |
+| apierrors.BadGatewayError          | 502                                | application/json                   |
+| apierrors.ServiceUnavailableError  | 503                                | application/json                   |
+| apierrors.GatewayTimeoutError      | 504                                | application/json                   |
+| apierrors.APIError                 | 4XX, 5XX                           | \*/\*                              |
