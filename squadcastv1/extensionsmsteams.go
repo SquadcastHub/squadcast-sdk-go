@@ -228,7 +228,7 @@ func (s *ExtensionsMsteams) UpsertConfig(ctx context.Context, request components
 				return nil, err
 			}
 
-			var out apierrors.MSTeamsCreateOrUpdateMsteamsConfigurationBadRequestError
+			var out apierrors.BadRequestError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -253,7 +253,7 @@ func (s *ExtensionsMsteams) UpsertConfig(ctx context.Context, request components
 				return nil, err
 			}
 
-			var out apierrors.MSTeamsCreateOrUpdateMsteamsConfigurationUnauthorizedError
+			var out apierrors.UnauthorizedError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -278,7 +278,7 @@ func (s *ExtensionsMsteams) UpsertConfig(ctx context.Context, request components
 				return nil, err
 			}
 
-			var out apierrors.MSTeamsCreateOrUpdateMsteamsConfigurationPaymentRequiredError
+			var out apierrors.PaymentRequiredError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -303,7 +303,7 @@ func (s *ExtensionsMsteams) UpsertConfig(ctx context.Context, request components
 				return nil, err
 			}
 
-			var out apierrors.MSTeamsCreateOrUpdateMsteamsConfigurationForbiddenError
+			var out apierrors.ForbiddenError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -328,7 +328,7 @@ func (s *ExtensionsMsteams) UpsertConfig(ctx context.Context, request components
 				return nil, err
 			}
 
-			var out apierrors.MSTeamsCreateOrUpdateMsteamsConfigurationNotFoundError
+			var out apierrors.NotFoundError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -353,7 +353,7 @@ func (s *ExtensionsMsteams) UpsertConfig(ctx context.Context, request components
 				return nil, err
 			}
 
-			var out apierrors.MSTeamsCreateOrUpdateMsteamsConfigurationConflictError
+			var out apierrors.ConflictError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -378,7 +378,7 @@ func (s *ExtensionsMsteams) UpsertConfig(ctx context.Context, request components
 				return nil, err
 			}
 
-			var out apierrors.MSTeamsCreateOrUpdateMsteamsConfigurationUnprocessableEntityError
+			var out apierrors.UnprocessableEntityError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -403,7 +403,7 @@ func (s *ExtensionsMsteams) UpsertConfig(ctx context.Context, request components
 				return nil, err
 			}
 
-			var out apierrors.MSTeamsCreateOrUpdateMsteamsConfigurationInternalServerError
+			var out apierrors.InternalServerError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -428,7 +428,7 @@ func (s *ExtensionsMsteams) UpsertConfig(ctx context.Context, request components
 				return nil, err
 			}
 
-			var out apierrors.MSTeamsCreateOrUpdateMsteamsConfigurationBadGatewayError
+			var out apierrors.BadGatewayError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -453,7 +453,7 @@ func (s *ExtensionsMsteams) UpsertConfig(ctx context.Context, request components
 				return nil, err
 			}
 
-			var out apierrors.MSTeamsCreateOrUpdateMsteamsConfigurationServiceUnavailableError
+			var out apierrors.ServiceUnavailableError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -478,7 +478,7 @@ func (s *ExtensionsMsteams) UpsertConfig(ctx context.Context, request components
 				return nil, err
 			}
 
-			var out apierrors.MSTeamsCreateOrUpdateMsteamsConfigurationGatewayTimeoutError
+			var out apierrors.GatewayTimeoutError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}

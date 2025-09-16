@@ -257,7 +257,7 @@ func (s *Circleci) Rebuild(ctx context.Context, incidentID string, buildNumber s
 				return nil, err
 			}
 
-			var out apierrors.IncidentActionsRebuildAProjectInCircleciUnauthorizedError
+			var out apierrors.UnauthorizedError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -282,7 +282,7 @@ func (s *Circleci) Rebuild(ctx context.Context, incidentID string, buildNumber s
 				return nil, err
 			}
 
-			var out apierrors.IncidentActionsRebuildAProjectInCircleciPaymentRequiredError
+			var out apierrors.PaymentRequiredError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -307,7 +307,7 @@ func (s *Circleci) Rebuild(ctx context.Context, incidentID string, buildNumber s
 				return nil, err
 			}
 
-			var out apierrors.IncidentActionsRebuildAProjectInCircleciForbiddenError
+			var out apierrors.ForbiddenError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -332,7 +332,7 @@ func (s *Circleci) Rebuild(ctx context.Context, incidentID string, buildNumber s
 				return nil, err
 			}
 
-			var out apierrors.IncidentActionsRebuildAProjectInCircleciNotFoundError
+			var out apierrors.NotFoundError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -357,7 +357,7 @@ func (s *Circleci) Rebuild(ctx context.Context, incidentID string, buildNumber s
 				return nil, err
 			}
 
-			var out apierrors.IncidentActionsRebuildAProjectInCircleciConflictError
+			var out apierrors.ConflictError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -382,7 +382,7 @@ func (s *Circleci) Rebuild(ctx context.Context, incidentID string, buildNumber s
 				return nil, err
 			}
 
-			var out apierrors.IncidentActionsRebuildAProjectInCircleciUnprocessableEntityError
+			var out apierrors.UnprocessableEntityError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -407,7 +407,7 @@ func (s *Circleci) Rebuild(ctx context.Context, incidentID string, buildNumber s
 				return nil, err
 			}
 
-			var out apierrors.IncidentActionsRebuildAProjectInCircleciInternalServerError
+			var out apierrors.InternalServerError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -432,7 +432,7 @@ func (s *Circleci) Rebuild(ctx context.Context, incidentID string, buildNumber s
 				return nil, err
 			}
 
-			var out apierrors.IncidentActionsRebuildAProjectInCircleciBadGatewayError
+			var out apierrors.BadGatewayError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -457,7 +457,7 @@ func (s *Circleci) Rebuild(ctx context.Context, incidentID string, buildNumber s
 				return nil, err
 			}
 
-			var out apierrors.IncidentActionsRebuildAProjectInCircleciServiceUnavailableError
+			var out apierrors.ServiceUnavailableError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -482,7 +482,7 @@ func (s *Circleci) Rebuild(ctx context.Context, incidentID string, buildNumber s
 				return nil, err
 			}
 
-			var out apierrors.IncidentActionsRebuildAProjectInCircleciGatewayTimeoutError
+			var out apierrors.GatewayTimeoutError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}

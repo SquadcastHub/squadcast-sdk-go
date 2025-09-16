@@ -58,20 +58,20 @@ func main() {
 
 ### Errors
 
-| Error Type                                                                                 | Status Code                                                                                | Content Type                                                                               |
-| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
-| apierrors.GlobalOncallReminderRulesDeleteGlobalOncallReminderRulesBadRequestError          | 400                                                                                        | application/json                                                                           |
-| apierrors.GlobalOncallReminderRulesDeleteGlobalOncallReminderRulesUnauthorizedError        | 401                                                                                        | application/json                                                                           |
-| apierrors.GlobalOncallReminderRulesDeleteGlobalOncallReminderRulesPaymentRequiredError     | 402                                                                                        | application/json                                                                           |
-| apierrors.GlobalOncallReminderRulesDeleteGlobalOncallReminderRulesForbiddenError           | 403                                                                                        | application/json                                                                           |
-| apierrors.GlobalOncallReminderRulesDeleteGlobalOncallReminderRulesNotFoundError            | 404                                                                                        | application/json                                                                           |
-| apierrors.GlobalOncallReminderRulesDeleteGlobalOncallReminderRulesConflictError            | 409                                                                                        | application/json                                                                           |
-| apierrors.GlobalOncallReminderRulesDeleteGlobalOncallReminderRulesUnprocessableEntityError | 422                                                                                        | application/json                                                                           |
-| apierrors.GlobalOncallReminderRulesDeleteGlobalOncallReminderRulesInternalServerError      | 500                                                                                        | application/json                                                                           |
-| apierrors.GlobalOncallReminderRulesDeleteGlobalOncallReminderRulesBadGatewayError          | 502                                                                                        | application/json                                                                           |
-| apierrors.GlobalOncallReminderRulesDeleteGlobalOncallReminderRulesServiceUnavailableError  | 503                                                                                        | application/json                                                                           |
-| apierrors.GlobalOncallReminderRulesDeleteGlobalOncallReminderRulesGatewayTimeoutError      | 504                                                                                        | application/json                                                                           |
-| apierrors.APIError                                                                         | 4XX, 5XX                                                                                   | \*/\*                                                                                      |
+| Error Type                         | Status Code                        | Content Type                       |
+| ---------------------------------- | ---------------------------------- | ---------------------------------- |
+| apierrors.BadRequestError          | 400                                | application/json                   |
+| apierrors.UnauthorizedError        | 401                                | application/json                   |
+| apierrors.PaymentRequiredError     | 402                                | application/json                   |
+| apierrors.ForbiddenError           | 403                                | application/json                   |
+| apierrors.NotFoundError            | 404                                | application/json                   |
+| apierrors.ConflictError            | 409                                | application/json                   |
+| apierrors.UnprocessableEntityError | 422                                | application/json                   |
+| apierrors.InternalServerError      | 500                                | application/json                   |
+| apierrors.BadGatewayError          | 502                                | application/json                   |
+| apierrors.ServiceUnavailableError  | 503                                | application/json                   |
+| apierrors.GatewayTimeoutError      | 504                                | application/json                   |
+| apierrors.APIError                 | 4XX, 5XX                           | \*/\*                              |
 
 ## List
 
@@ -121,20 +121,20 @@ func main() {
 
 ### Errors
 
-| Error Type                                                                              | Status Code                                                                             | Content Type                                                                            |
-| --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
-| apierrors.GlobalOncallReminderRulesGetGlobalOncallReminderRulesBadRequestError          | 400                                                                                     | application/json                                                                        |
-| apierrors.GlobalOncallReminderRulesGetGlobalOncallReminderRulesUnauthorizedError        | 401                                                                                     | application/json                                                                        |
-| apierrors.GlobalOncallReminderRulesGetGlobalOncallReminderRulesPaymentRequiredError     | 402                                                                                     | application/json                                                                        |
-| apierrors.GlobalOncallReminderRulesGetGlobalOncallReminderRulesForbiddenError           | 403                                                                                     | application/json                                                                        |
-| apierrors.GlobalOncallReminderRulesGetGlobalOncallReminderRulesNotFoundError            | 404                                                                                     | application/json                                                                        |
-| apierrors.GlobalOncallReminderRulesGetGlobalOncallReminderRulesConflictError            | 409                                                                                     | application/json                                                                        |
-| apierrors.GlobalOncallReminderRulesGetGlobalOncallReminderRulesUnprocessableEntityError | 422                                                                                     | application/json                                                                        |
-| apierrors.GlobalOncallReminderRulesGetGlobalOncallReminderRulesInternalServerError      | 500                                                                                     | application/json                                                                        |
-| apierrors.GlobalOncallReminderRulesGetGlobalOncallReminderRulesBadGatewayError          | 502                                                                                     | application/json                                                                        |
-| apierrors.GlobalOncallReminderRulesGetGlobalOncallReminderRulesServiceUnavailableError  | 503                                                                                     | application/json                                                                        |
-| apierrors.GlobalOncallReminderRulesGetGlobalOncallReminderRulesGatewayTimeoutError      | 504                                                                                     | application/json                                                                        |
-| apierrors.APIError                                                                      | 4XX, 5XX                                                                                | \*/\*                                                                                   |
+| Error Type                         | Status Code                        | Content Type                       |
+| ---------------------------------- | ---------------------------------- | ---------------------------------- |
+| apierrors.BadRequestError          | 400                                | application/json                   |
+| apierrors.UnauthorizedError        | 401                                | application/json                   |
+| apierrors.PaymentRequiredError     | 402                                | application/json                   |
+| apierrors.ForbiddenError           | 403                                | application/json                   |
+| apierrors.NotFoundError            | 404                                | application/json                   |
+| apierrors.ConflictError            | 409                                | application/json                   |
+| apierrors.UnprocessableEntityError | 422                                | application/json                   |
+| apierrors.InternalServerError      | 500                                | application/json                   |
+| apierrors.BadGatewayError          | 502                                | application/json                   |
+| apierrors.ServiceUnavailableError  | 503                                | application/json                   |
+| apierrors.GatewayTimeoutError      | 504                                | application/json                   |
+| apierrors.APIError                 | 4XX, 5XX                           | \*/\*                              |
 
 ## Create
 
@@ -189,20 +189,20 @@ func main() {
 
 ### Errors
 
-| Error Type                                                                                 | Status Code                                                                                | Content Type                                                                               |
-| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
-| apierrors.GlobalOncallReminderRulesCreateGlobalOncallReminderRulesBadRequestError          | 400                                                                                        | application/json                                                                           |
-| apierrors.GlobalOncallReminderRulesCreateGlobalOncallReminderRulesUnauthorizedError        | 401                                                                                        | application/json                                                                           |
-| apierrors.GlobalOncallReminderRulesCreateGlobalOncallReminderRulesPaymentRequiredError     | 402                                                                                        | application/json                                                                           |
-| apierrors.GlobalOncallReminderRulesCreateGlobalOncallReminderRulesForbiddenError           | 403                                                                                        | application/json                                                                           |
-| apierrors.GlobalOncallReminderRulesCreateGlobalOncallReminderRulesNotFoundError            | 404                                                                                        | application/json                                                                           |
-| apierrors.GlobalOncallReminderRulesCreateGlobalOncallReminderRulesConflictError            | 409                                                                                        | application/json                                                                           |
-| apierrors.GlobalOncallReminderRulesCreateGlobalOncallReminderRulesUnprocessableEntityError | 422                                                                                        | application/json                                                                           |
-| apierrors.GlobalOncallReminderRulesCreateGlobalOncallReminderRulesInternalServerError      | 500                                                                                        | application/json                                                                           |
-| apierrors.GlobalOncallReminderRulesCreateGlobalOncallReminderRulesBadGatewayError          | 502                                                                                        | application/json                                                                           |
-| apierrors.GlobalOncallReminderRulesCreateGlobalOncallReminderRulesServiceUnavailableError  | 503                                                                                        | application/json                                                                           |
-| apierrors.GlobalOncallReminderRulesCreateGlobalOncallReminderRulesGatewayTimeoutError      | 504                                                                                        | application/json                                                                           |
-| apierrors.APIError                                                                         | 4XX, 5XX                                                                                   | \*/\*                                                                                      |
+| Error Type                         | Status Code                        | Content Type                       |
+| ---------------------------------- | ---------------------------------- | ---------------------------------- |
+| apierrors.BadRequestError          | 400                                | application/json                   |
+| apierrors.UnauthorizedError        | 401                                | application/json                   |
+| apierrors.PaymentRequiredError     | 402                                | application/json                   |
+| apierrors.ForbiddenError           | 403                                | application/json                   |
+| apierrors.NotFoundError            | 404                                | application/json                   |
+| apierrors.ConflictError            | 409                                | application/json                   |
+| apierrors.UnprocessableEntityError | 422                                | application/json                   |
+| apierrors.InternalServerError      | 500                                | application/json                   |
+| apierrors.BadGatewayError          | 502                                | application/json                   |
+| apierrors.ServiceUnavailableError  | 503                                | application/json                   |
+| apierrors.GatewayTimeoutError      | 504                                | application/json                   |
+| apierrors.APIError                 | 4XX, 5XX                           | \*/\*                              |
 
 ## Update
 
@@ -257,17 +257,17 @@ func main() {
 
 ### Errors
 
-| Error Type                                                                                 | Status Code                                                                                | Content Type                                                                               |
-| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
-| apierrors.GlobalOncallReminderRulesUpdateGlobalOncallReminderRulesBadRequestError          | 400                                                                                        | application/json                                                                           |
-| apierrors.GlobalOncallReminderRulesUpdateGlobalOncallReminderRulesUnauthorizedError        | 401                                                                                        | application/json                                                                           |
-| apierrors.GlobalOncallReminderRulesUpdateGlobalOncallReminderRulesPaymentRequiredError     | 402                                                                                        | application/json                                                                           |
-| apierrors.GlobalOncallReminderRulesUpdateGlobalOncallReminderRulesForbiddenError           | 403                                                                                        | application/json                                                                           |
-| apierrors.GlobalOncallReminderRulesUpdateGlobalOncallReminderRulesNotFoundError            | 404                                                                                        | application/json                                                                           |
-| apierrors.GlobalOncallReminderRulesUpdateGlobalOncallReminderRulesConflictError            | 409                                                                                        | application/json                                                                           |
-| apierrors.GlobalOncallReminderRulesUpdateGlobalOncallReminderRulesUnprocessableEntityError | 422                                                                                        | application/json                                                                           |
-| apierrors.GlobalOncallReminderRulesUpdateGlobalOncallReminderRulesInternalServerError      | 500                                                                                        | application/json                                                                           |
-| apierrors.GlobalOncallReminderRulesUpdateGlobalOncallReminderRulesBadGatewayError          | 502                                                                                        | application/json                                                                           |
-| apierrors.GlobalOncallReminderRulesUpdateGlobalOncallReminderRulesServiceUnavailableError  | 503                                                                                        | application/json                                                                           |
-| apierrors.GlobalOncallReminderRulesUpdateGlobalOncallReminderRulesGatewayTimeoutError      | 504                                                                                        | application/json                                                                           |
-| apierrors.APIError                                                                         | 4XX, 5XX                                                                                   | \*/\*                                                                                      |
+| Error Type                         | Status Code                        | Content Type                       |
+| ---------------------------------- | ---------------------------------- | ---------------------------------- |
+| apierrors.BadRequestError          | 400                                | application/json                   |
+| apierrors.UnauthorizedError        | 401                                | application/json                   |
+| apierrors.PaymentRequiredError     | 402                                | application/json                   |
+| apierrors.ForbiddenError           | 403                                | application/json                   |
+| apierrors.NotFoundError            | 404                                | application/json                   |
+| apierrors.ConflictError            | 409                                | application/json                   |
+| apierrors.UnprocessableEntityError | 422                                | application/json                   |
+| apierrors.InternalServerError      | 500                                | application/json                   |
+| apierrors.BadGatewayError          | 502                                | application/json                   |
+| apierrors.ServiceUnavailableError  | 503                                | application/json                   |
+| apierrors.GatewayTimeoutError      | 504                                | application/json                   |
+| apierrors.APIError                 | 4XX, 5XX                           | \*/\*                              |

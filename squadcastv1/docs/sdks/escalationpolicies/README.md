@@ -62,20 +62,20 @@ func main() {
 
 ### Errors
 
-| Error Type                                                                    | Status Code                                                                   | Content Type                                                                  |
-| ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
-| apierrors.EscalationPoliciesGetEscalationPolicyByTeamBadRequestError          | 400                                                                           | application/json                                                              |
-| apierrors.EscalationPoliciesGetEscalationPolicyByTeamUnauthorizedError        | 401                                                                           | application/json                                                              |
-| apierrors.EscalationPoliciesGetEscalationPolicyByTeamPaymentRequiredError     | 402                                                                           | application/json                                                              |
-| apierrors.EscalationPoliciesGetEscalationPolicyByTeamForbiddenError           | 403                                                                           | application/json                                                              |
-| apierrors.EscalationPoliciesGetEscalationPolicyByTeamNotFoundError            | 404                                                                           | application/json                                                              |
-| apierrors.EscalationPoliciesGetEscalationPolicyByTeamConflictError            | 409                                                                           | application/json                                                              |
-| apierrors.EscalationPoliciesGetEscalationPolicyByTeamUnprocessableEntityError | 422                                                                           | application/json                                                              |
-| apierrors.EscalationPoliciesGetEscalationPolicyByTeamInternalServerError      | 500                                                                           | application/json                                                              |
-| apierrors.EscalationPoliciesGetEscalationPolicyByTeamBadGatewayError          | 502                                                                           | application/json                                                              |
-| apierrors.EscalationPoliciesGetEscalationPolicyByTeamServiceUnavailableError  | 503                                                                           | application/json                                                              |
-| apierrors.EscalationPoliciesGetEscalationPolicyByTeamGatewayTimeoutError      | 504                                                                           | application/json                                                              |
-| apierrors.APIError                                                            | 4XX, 5XX                                                                      | \*/\*                                                                         |
+| Error Type                         | Status Code                        | Content Type                       |
+| ---------------------------------- | ---------------------------------- | ---------------------------------- |
+| apierrors.BadRequestError          | 400                                | application/json                   |
+| apierrors.UnauthorizedError        | 401                                | application/json                   |
+| apierrors.PaymentRequiredError     | 402                                | application/json                   |
+| apierrors.ForbiddenError           | 403                                | application/json                   |
+| apierrors.NotFoundError            | 404                                | application/json                   |
+| apierrors.ConflictError            | 409                                | application/json                   |
+| apierrors.UnprocessableEntityError | 422                                | application/json                   |
+| apierrors.InternalServerError      | 500                                | application/json                   |
+| apierrors.BadGatewayError          | 502                                | application/json                   |
+| apierrors.ServiceUnavailableError  | 503                                | application/json                   |
+| apierrors.GatewayTimeoutError      | 504                                | application/json                   |
+| apierrors.APIError                 | 4XX, 5XX                           | \*/\*                              |
 
 ## Create
 
@@ -152,20 +152,20 @@ func main() {
 
 ### Errors
 
-| Error Type                                                                   | Status Code                                                                  | Content Type                                                                 |
-| ---------------------------------------------------------------------------- | ---------------------------------------------------------------------------- | ---------------------------------------------------------------------------- |
-| apierrors.EscalationPoliciesCreateEscalationPoliciesBadRequestError          | 400                                                                          | application/json                                                             |
-| apierrors.EscalationPoliciesCreateEscalationPoliciesUnauthorizedError        | 401                                                                          | application/json                                                             |
-| apierrors.EscalationPoliciesCreateEscalationPoliciesPaymentRequiredError     | 402                                                                          | application/json                                                             |
-| apierrors.EscalationPoliciesCreateEscalationPoliciesForbiddenError           | 403                                                                          | application/json                                                             |
-| apierrors.EscalationPoliciesCreateEscalationPoliciesNotFoundError            | 404                                                                          | application/json                                                             |
-| apierrors.EscalationPoliciesCreateEscalationPoliciesConflictError            | 409                                                                          | application/json                                                             |
-| apierrors.EscalationPoliciesCreateEscalationPoliciesUnprocessableEntityError | 422                                                                          | application/json                                                             |
-| apierrors.EscalationPoliciesCreateEscalationPoliciesInternalServerError      | 500                                                                          | application/json                                                             |
-| apierrors.EscalationPoliciesCreateEscalationPoliciesBadGatewayError          | 502                                                                          | application/json                                                             |
-| apierrors.EscalationPoliciesCreateEscalationPoliciesServiceUnavailableError  | 503                                                                          | application/json                                                             |
-| apierrors.EscalationPoliciesCreateEscalationPoliciesGatewayTimeoutError      | 504                                                                          | application/json                                                             |
-| apierrors.APIError                                                           | 4XX, 5XX                                                                     | \*/\*                                                                        |
+| Error Type                         | Status Code                        | Content Type                       |
+| ---------------------------------- | ---------------------------------- | ---------------------------------- |
+| apierrors.BadRequestError          | 400                                | application/json                   |
+| apierrors.UnauthorizedError        | 401                                | application/json                   |
+| apierrors.PaymentRequiredError     | 402                                | application/json                   |
+| apierrors.ForbiddenError           | 403                                | application/json                   |
+| apierrors.NotFoundError            | 404                                | application/json                   |
+| apierrors.ConflictError            | 409                                | application/json                   |
+| apierrors.UnprocessableEntityError | 422                                | application/json                   |
+| apierrors.InternalServerError      | 500                                | application/json                   |
+| apierrors.BadGatewayError          | 502                                | application/json                   |
+| apierrors.ServiceUnavailableError  | 503                                | application/json                   |
+| apierrors.GatewayTimeoutError      | 504                                | application/json                   |
+| apierrors.APIError                 | 4XX, 5XX                           | \*/\*                              |
 
 ## Remove
 
@@ -216,20 +216,20 @@ func main() {
 
 ### Errors
 
-| Error Type                                                                 | Status Code                                                                | Content Type                                                               |
-| -------------------------------------------------------------------------- | -------------------------------------------------------------------------- | -------------------------------------------------------------------------- |
-| apierrors.EscalationPoliciesRemoveEscalationPolicyBadRequestError          | 400                                                                        | application/json                                                           |
-| apierrors.EscalationPoliciesRemoveEscalationPolicyUnauthorizedError        | 401                                                                        | application/json                                                           |
-| apierrors.EscalationPoliciesRemoveEscalationPolicyPaymentRequiredError     | 402                                                                        | application/json                                                           |
-| apierrors.EscalationPoliciesRemoveEscalationPolicyForbiddenError           | 403                                                                        | application/json                                                           |
-| apierrors.EscalationPoliciesRemoveEscalationPolicyNotFoundError            | 404                                                                        | application/json                                                           |
-| apierrors.EscalationPoliciesRemoveEscalationPolicyConflictError            | 409                                                                        | application/json                                                           |
-| apierrors.EscalationPoliciesRemoveEscalationPolicyUnprocessableEntityError | 422                                                                        | application/json                                                           |
-| apierrors.EscalationPoliciesRemoveEscalationPolicyInternalServerError      | 500                                                                        | application/json                                                           |
-| apierrors.EscalationPoliciesRemoveEscalationPolicyBadGatewayError          | 502                                                                        | application/json                                                           |
-| apierrors.EscalationPoliciesRemoveEscalationPolicyServiceUnavailableError  | 503                                                                        | application/json                                                           |
-| apierrors.EscalationPoliciesRemoveEscalationPolicyGatewayTimeoutError      | 504                                                                        | application/json                                                           |
-| apierrors.APIError                                                         | 4XX, 5XX                                                                   | \*/\*                                                                      |
+| Error Type                         | Status Code                        | Content Type                       |
+| ---------------------------------- | ---------------------------------- | ---------------------------------- |
+| apierrors.BadRequestError          | 400                                | application/json                   |
+| apierrors.UnauthorizedError        | 401                                | application/json                   |
+| apierrors.PaymentRequiredError     | 402                                | application/json                   |
+| apierrors.ForbiddenError           | 403                                | application/json                   |
+| apierrors.NotFoundError            | 404                                | application/json                   |
+| apierrors.ConflictError            | 409                                | application/json                   |
+| apierrors.UnprocessableEntityError | 422                                | application/json                   |
+| apierrors.InternalServerError      | 500                                | application/json                   |
+| apierrors.BadGatewayError          | 502                                | application/json                   |
+| apierrors.ServiceUnavailableError  | 503                                | application/json                   |
+| apierrors.GatewayTimeoutError      | 504                                | application/json                   |
+| apierrors.APIError                 | 4XX, 5XX                           | \*/\*                              |
 
 ## GetByID
 
@@ -280,20 +280,20 @@ func main() {
 
 ### Errors
 
-| Error Type                                                                  | Status Code                                                                 | Content Type                                                                |
-| --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
-| apierrors.EscalationPoliciesGetEscalationPolicyByIDBadRequestError          | 400                                                                         | application/json                                                            |
-| apierrors.EscalationPoliciesGetEscalationPolicyByIDUnauthorizedError        | 401                                                                         | application/json                                                            |
-| apierrors.EscalationPoliciesGetEscalationPolicyByIDPaymentRequiredError     | 402                                                                         | application/json                                                            |
-| apierrors.EscalationPoliciesGetEscalationPolicyByIDForbiddenError           | 403                                                                         | application/json                                                            |
-| apierrors.EscalationPoliciesGetEscalationPolicyByIDNotFoundError            | 404                                                                         | application/json                                                            |
-| apierrors.EscalationPoliciesGetEscalationPolicyByIDConflictError            | 409                                                                         | application/json                                                            |
-| apierrors.EscalationPoliciesGetEscalationPolicyByIDUnprocessableEntityError | 422                                                                         | application/json                                                            |
-| apierrors.EscalationPoliciesGetEscalationPolicyByIDInternalServerError      | 500                                                                         | application/json                                                            |
-| apierrors.EscalationPoliciesGetEscalationPolicyByIDBadGatewayError          | 502                                                                         | application/json                                                            |
-| apierrors.EscalationPoliciesGetEscalationPolicyByIDServiceUnavailableError  | 503                                                                         | application/json                                                            |
-| apierrors.EscalationPoliciesGetEscalationPolicyByIDGatewayTimeoutError      | 504                                                                         | application/json                                                            |
-| apierrors.APIError                                                          | 4XX, 5XX                                                                    | \*/\*                                                                       |
+| Error Type                         | Status Code                        | Content Type                       |
+| ---------------------------------- | ---------------------------------- | ---------------------------------- |
+| apierrors.BadRequestError          | 400                                | application/json                   |
+| apierrors.UnauthorizedError        | 401                                | application/json                   |
+| apierrors.PaymentRequiredError     | 402                                | application/json                   |
+| apierrors.ForbiddenError           | 403                                | application/json                   |
+| apierrors.NotFoundError            | 404                                | application/json                   |
+| apierrors.ConflictError            | 409                                | application/json                   |
+| apierrors.UnprocessableEntityError | 422                                | application/json                   |
+| apierrors.InternalServerError      | 500                                | application/json                   |
+| apierrors.BadGatewayError          | 502                                | application/json                   |
+| apierrors.ServiceUnavailableError  | 503                                | application/json                   |
+| apierrors.GatewayTimeoutError      | 504                                | application/json                   |
+| apierrors.APIError                 | 4XX, 5XX                           | \*/\*                              |
 
 ## Update
 
@@ -350,17 +350,17 @@ func main() {
 
 ### Errors
 
-| Error Type                                                                 | Status Code                                                                | Content Type                                                               |
-| -------------------------------------------------------------------------- | -------------------------------------------------------------------------- | -------------------------------------------------------------------------- |
-| apierrors.EscalationPoliciesUpdateEscalationPolicyBadRequestError          | 400                                                                        | application/json                                                           |
-| apierrors.EscalationPoliciesUpdateEscalationPolicyUnauthorizedError        | 401                                                                        | application/json                                                           |
-| apierrors.EscalationPoliciesUpdateEscalationPolicyPaymentRequiredError     | 402                                                                        | application/json                                                           |
-| apierrors.EscalationPoliciesUpdateEscalationPolicyForbiddenError           | 403                                                                        | application/json                                                           |
-| apierrors.EscalationPoliciesUpdateEscalationPolicyNotFoundError            | 404                                                                        | application/json                                                           |
-| apierrors.EscalationPoliciesUpdateEscalationPolicyConflictError            | 409                                                                        | application/json                                                           |
-| apierrors.EscalationPoliciesUpdateEscalationPolicyUnprocessableEntityError | 422                                                                        | application/json                                                           |
-| apierrors.EscalationPoliciesUpdateEscalationPolicyInternalServerError      | 500                                                                        | application/json                                                           |
-| apierrors.EscalationPoliciesUpdateEscalationPolicyBadGatewayError          | 502                                                                        | application/json                                                           |
-| apierrors.EscalationPoliciesUpdateEscalationPolicyServiceUnavailableError  | 503                                                                        | application/json                                                           |
-| apierrors.EscalationPoliciesUpdateEscalationPolicyGatewayTimeoutError      | 504                                                                        | application/json                                                           |
-| apierrors.APIError                                                         | 4XX, 5XX                                                                   | \*/\*                                                                      |
+| Error Type                         | Status Code                        | Content Type                       |
+| ---------------------------------- | ---------------------------------- | ---------------------------------- |
+| apierrors.BadRequestError          | 400                                | application/json                   |
+| apierrors.UnauthorizedError        | 401                                | application/json                   |
+| apierrors.PaymentRequiredError     | 402                                | application/json                   |
+| apierrors.ForbiddenError           | 403                                | application/json                   |
+| apierrors.NotFoundError            | 404                                | application/json                   |
+| apierrors.ConflictError            | 409                                | application/json                   |
+| apierrors.UnprocessableEntityError | 422                                | application/json                   |
+| apierrors.InternalServerError      | 500                                | application/json                   |
+| apierrors.BadGatewayError          | 502                                | application/json                   |
+| apierrors.ServiceUnavailableError  | 503                                | application/json                   |
+| apierrors.GatewayTimeoutError      | 504                                | application/json                   |
+| apierrors.APIError                 | 4XX, 5XX                           | \*/\*                              |

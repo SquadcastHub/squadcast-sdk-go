@@ -223,7 +223,7 @@ func (s *Subscribers) List(ctx context.Context, statuspageID string, opts ...ope
 				return nil, err
 			}
 
-			var out apierrors.StatusPagesListSubscribersBadRequestError
+			var out apierrors.BadRequestError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -248,7 +248,7 @@ func (s *Subscribers) List(ctx context.Context, statuspageID string, opts ...ope
 				return nil, err
 			}
 
-			var out apierrors.StatusPagesListSubscribersUnauthorizedError
+			var out apierrors.UnauthorizedError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -273,7 +273,7 @@ func (s *Subscribers) List(ctx context.Context, statuspageID string, opts ...ope
 				return nil, err
 			}
 
-			var out apierrors.StatusPagesListSubscribersPaymentRequiredError
+			var out apierrors.PaymentRequiredError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -298,7 +298,7 @@ func (s *Subscribers) List(ctx context.Context, statuspageID string, opts ...ope
 				return nil, err
 			}
 
-			var out apierrors.StatusPagesListSubscribersForbiddenError
+			var out apierrors.ForbiddenError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -323,7 +323,7 @@ func (s *Subscribers) List(ctx context.Context, statuspageID string, opts ...ope
 				return nil, err
 			}
 
-			var out apierrors.StatusPagesListSubscribersNotFoundError
+			var out apierrors.NotFoundError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -348,7 +348,7 @@ func (s *Subscribers) List(ctx context.Context, statuspageID string, opts ...ope
 				return nil, err
 			}
 
-			var out apierrors.StatusPagesListSubscribersConflictError
+			var out apierrors.ConflictError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -373,7 +373,7 @@ func (s *Subscribers) List(ctx context.Context, statuspageID string, opts ...ope
 				return nil, err
 			}
 
-			var out apierrors.StatusPagesListSubscribersUnprocessableEntityError
+			var out apierrors.UnprocessableEntityError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -398,7 +398,7 @@ func (s *Subscribers) List(ctx context.Context, statuspageID string, opts ...ope
 				return nil, err
 			}
 
-			var out apierrors.StatusPagesListSubscribersInternalServerError
+			var out apierrors.InternalServerError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -423,7 +423,7 @@ func (s *Subscribers) List(ctx context.Context, statuspageID string, opts ...ope
 				return nil, err
 			}
 
-			var out apierrors.StatusPagesListSubscribersBadGatewayError
+			var out apierrors.BadGatewayError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -448,7 +448,7 @@ func (s *Subscribers) List(ctx context.Context, statuspageID string, opts ...ope
 				return nil, err
 			}
 
-			var out apierrors.StatusPagesListSubscribersServiceUnavailableError
+			var out apierrors.ServiceUnavailableError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -473,7 +473,7 @@ func (s *Subscribers) List(ctx context.Context, statuspageID string, opts ...ope
 				return nil, err
 			}
 
-			var out apierrors.StatusPagesListSubscribersGatewayTimeoutError
+			var out apierrors.GatewayTimeoutError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}

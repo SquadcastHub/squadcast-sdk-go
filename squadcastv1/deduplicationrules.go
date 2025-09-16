@@ -223,7 +223,7 @@ func (s *DeduplicationRules) Get(ctx context.Context, serviceID string, opts ...
 				return nil, err
 			}
 
-			var out apierrors.DeduplicationRulesGetDeduplicationRulesBadRequestError
+			var out apierrors.BadRequestError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -248,7 +248,7 @@ func (s *DeduplicationRules) Get(ctx context.Context, serviceID string, opts ...
 				return nil, err
 			}
 
-			var out apierrors.DeduplicationRulesGetDeduplicationRulesUnauthorizedError
+			var out apierrors.UnauthorizedError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -273,7 +273,7 @@ func (s *DeduplicationRules) Get(ctx context.Context, serviceID string, opts ...
 				return nil, err
 			}
 
-			var out apierrors.DeduplicationRulesGetDeduplicationRulesPaymentRequiredError
+			var out apierrors.PaymentRequiredError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -298,7 +298,7 @@ func (s *DeduplicationRules) Get(ctx context.Context, serviceID string, opts ...
 				return nil, err
 			}
 
-			var out apierrors.DeduplicationRulesGetDeduplicationRulesForbiddenError
+			var out apierrors.ForbiddenError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -323,7 +323,7 @@ func (s *DeduplicationRules) Get(ctx context.Context, serviceID string, opts ...
 				return nil, err
 			}
 
-			var out apierrors.DeduplicationRulesGetDeduplicationRulesNotFoundError
+			var out apierrors.NotFoundError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -348,7 +348,7 @@ func (s *DeduplicationRules) Get(ctx context.Context, serviceID string, opts ...
 				return nil, err
 			}
 
-			var out apierrors.DeduplicationRulesGetDeduplicationRulesConflictError
+			var out apierrors.ConflictError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -373,7 +373,7 @@ func (s *DeduplicationRules) Get(ctx context.Context, serviceID string, opts ...
 				return nil, err
 			}
 
-			var out apierrors.DeduplicationRulesGetDeduplicationRulesUnprocessableEntityError
+			var out apierrors.UnprocessableEntityError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -398,7 +398,7 @@ func (s *DeduplicationRules) Get(ctx context.Context, serviceID string, opts ...
 				return nil, err
 			}
 
-			var out apierrors.DeduplicationRulesGetDeduplicationRulesInternalServerError
+			var out apierrors.InternalServerError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -423,7 +423,7 @@ func (s *DeduplicationRules) Get(ctx context.Context, serviceID string, opts ...
 				return nil, err
 			}
 
-			var out apierrors.DeduplicationRulesGetDeduplicationRulesBadGatewayError
+			var out apierrors.BadGatewayError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -448,7 +448,7 @@ func (s *DeduplicationRules) Get(ctx context.Context, serviceID string, opts ...
 				return nil, err
 			}
 
-			var out apierrors.DeduplicationRulesGetDeduplicationRulesServiceUnavailableError
+			var out apierrors.ServiceUnavailableError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -473,7 +473,7 @@ func (s *DeduplicationRules) Get(ctx context.Context, serviceID string, opts ...
 				return nil, err
 			}
 
-			var out apierrors.DeduplicationRulesGetDeduplicationRulesGatewayTimeoutError
+			var out apierrors.GatewayTimeoutError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -715,7 +715,7 @@ func (s *DeduplicationRules) CreateOrUpdate(ctx context.Context, serviceID strin
 				return nil, err
 			}
 
-			var out apierrors.DeduplicationRulesCreateOrUpdateDeduplicationRulesBadRequestError
+			var out apierrors.BadRequestError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -740,7 +740,7 @@ func (s *DeduplicationRules) CreateOrUpdate(ctx context.Context, serviceID strin
 				return nil, err
 			}
 
-			var out apierrors.DeduplicationRulesCreateOrUpdateDeduplicationRulesUnauthorizedError
+			var out apierrors.UnauthorizedError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -765,7 +765,7 @@ func (s *DeduplicationRules) CreateOrUpdate(ctx context.Context, serviceID strin
 				return nil, err
 			}
 
-			var out apierrors.DeduplicationRulesCreateOrUpdateDeduplicationRulesPaymentRequiredError
+			var out apierrors.PaymentRequiredError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -790,7 +790,7 @@ func (s *DeduplicationRules) CreateOrUpdate(ctx context.Context, serviceID strin
 				return nil, err
 			}
 
-			var out apierrors.DeduplicationRulesCreateOrUpdateDeduplicationRulesForbiddenError
+			var out apierrors.ForbiddenError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -815,7 +815,7 @@ func (s *DeduplicationRules) CreateOrUpdate(ctx context.Context, serviceID strin
 				return nil, err
 			}
 
-			var out apierrors.DeduplicationRulesCreateOrUpdateDeduplicationRulesNotFoundError
+			var out apierrors.NotFoundError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -840,7 +840,7 @@ func (s *DeduplicationRules) CreateOrUpdate(ctx context.Context, serviceID strin
 				return nil, err
 			}
 
-			var out apierrors.DeduplicationRulesCreateOrUpdateDeduplicationRulesConflictError
+			var out apierrors.ConflictError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -865,7 +865,7 @@ func (s *DeduplicationRules) CreateOrUpdate(ctx context.Context, serviceID strin
 				return nil, err
 			}
 
-			var out apierrors.DeduplicationRulesCreateOrUpdateDeduplicationRulesUnprocessableEntityError
+			var out apierrors.UnprocessableEntityError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -890,7 +890,7 @@ func (s *DeduplicationRules) CreateOrUpdate(ctx context.Context, serviceID strin
 				return nil, err
 			}
 
-			var out apierrors.DeduplicationRulesCreateOrUpdateDeduplicationRulesInternalServerError
+			var out apierrors.InternalServerError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -915,7 +915,7 @@ func (s *DeduplicationRules) CreateOrUpdate(ctx context.Context, serviceID strin
 				return nil, err
 			}
 
-			var out apierrors.DeduplicationRulesCreateOrUpdateDeduplicationRulesBadGatewayError
+			var out apierrors.BadGatewayError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -940,7 +940,7 @@ func (s *DeduplicationRules) CreateOrUpdate(ctx context.Context, serviceID strin
 				return nil, err
 			}
 
-			var out apierrors.DeduplicationRulesCreateOrUpdateDeduplicationRulesServiceUnavailableError
+			var out apierrors.ServiceUnavailableError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -965,7 +965,7 @@ func (s *DeduplicationRules) CreateOrUpdate(ctx context.Context, serviceID strin
 				return nil, err
 			}
 
-			var out apierrors.DeduplicationRulesCreateOrUpdateDeduplicationRulesGatewayTimeoutError
+			var out apierrors.GatewayTimeoutError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}

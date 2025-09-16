@@ -61,17 +61,17 @@ func main() {
 
 ### Errors
 
-| Error Type                                                          | Status Code                                                         | Content Type                                                        |
-| ------------------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------- |
-| apierrors.OverlayRenderCustomContentOverlayBadRequestError          | 400                                                                 | application/json                                                    |
-| apierrors.OverlayRenderCustomContentOverlayUnauthorizedError        | 401                                                                 | application/json                                                    |
-| apierrors.OverlayRenderCustomContentOverlayPaymentRequiredError     | 402                                                                 | application/json                                                    |
-| apierrors.OverlayRenderCustomContentOverlayForbiddenError           | 403                                                                 | application/json                                                    |
-| apierrors.OverlayRenderCustomContentOverlayNotFoundError            | 404                                                                 | application/json                                                    |
-| apierrors.OverlayRenderCustomContentOverlayConflictError            | 409                                                                 | application/json                                                    |
-| apierrors.OverlayRenderCustomContentOverlayUnprocessableEntityError | 422                                                                 | application/json                                                    |
-| apierrors.OverlayRenderCustomContentOverlayInternalServerError      | 500                                                                 | application/json                                                    |
-| apierrors.OverlayRenderCustomContentOverlayBadGatewayError          | 502                                                                 | application/json                                                    |
-| apierrors.OverlayRenderCustomContentOverlayServiceUnavailableError  | 503                                                                 | application/json                                                    |
-| apierrors.OverlayRenderCustomContentOverlayGatewayTimeoutError      | 504                                                                 | application/json                                                    |
-| apierrors.APIError                                                  | 4XX, 5XX                                                            | \*/\*                                                               |
+| Error Type                         | Status Code                        | Content Type                       |
+| ---------------------------------- | ---------------------------------- | ---------------------------------- |
+| apierrors.BadRequestError          | 400                                | application/json                   |
+| apierrors.UnauthorizedError        | 401                                | application/json                   |
+| apierrors.PaymentRequiredError     | 402                                | application/json                   |
+| apierrors.ForbiddenError           | 403                                | application/json                   |
+| apierrors.NotFoundError            | 404                                | application/json                   |
+| apierrors.ConflictError            | 409                                | application/json                   |
+| apierrors.UnprocessableEntityError | 422                                | application/json                   |
+| apierrors.InternalServerError      | 500                                | application/json                   |
+| apierrors.BadGatewayError          | 502                                | application/json                   |
+| apierrors.ServiceUnavailableError  | 503                                | application/json                   |
+| apierrors.GatewayTimeoutError      | 504                                | application/json                   |
+| apierrors.APIError                 | 4XX, 5XX                           | \*/\*                              |

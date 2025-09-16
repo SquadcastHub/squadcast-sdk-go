@@ -225,7 +225,7 @@ func (s *Teams) GetAll(ctx context.Context, opts ...operations.Option) (*operati
 				return nil, err
 			}
 
-			var out apierrors.TeamsGetAllTeamsBadRequestError
+			var out apierrors.BadRequestError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -250,7 +250,7 @@ func (s *Teams) GetAll(ctx context.Context, opts ...operations.Option) (*operati
 				return nil, err
 			}
 
-			var out apierrors.TeamsGetAllTeamsUnauthorizedError
+			var out apierrors.UnauthorizedError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -275,7 +275,7 @@ func (s *Teams) GetAll(ctx context.Context, opts ...operations.Option) (*operati
 				return nil, err
 			}
 
-			var out apierrors.TeamsGetAllTeamsPaymentRequiredError
+			var out apierrors.PaymentRequiredError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -300,7 +300,7 @@ func (s *Teams) GetAll(ctx context.Context, opts ...operations.Option) (*operati
 				return nil, err
 			}
 
-			var out apierrors.TeamsGetAllTeamsForbiddenError
+			var out apierrors.ForbiddenError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -325,7 +325,7 @@ func (s *Teams) GetAll(ctx context.Context, opts ...operations.Option) (*operati
 				return nil, err
 			}
 
-			var out apierrors.TeamsGetAllTeamsNotFoundError
+			var out apierrors.NotFoundError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -350,7 +350,7 @@ func (s *Teams) GetAll(ctx context.Context, opts ...operations.Option) (*operati
 				return nil, err
 			}
 
-			var out apierrors.TeamsGetAllTeamsConflictError
+			var out apierrors.ConflictError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -375,7 +375,7 @@ func (s *Teams) GetAll(ctx context.Context, opts ...operations.Option) (*operati
 				return nil, err
 			}
 
-			var out apierrors.TeamsGetAllTeamsUnprocessableEntityError
+			var out apierrors.UnprocessableEntityError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -400,7 +400,7 @@ func (s *Teams) GetAll(ctx context.Context, opts ...operations.Option) (*operati
 				return nil, err
 			}
 
-			var out apierrors.TeamsGetAllTeamsInternalServerError
+			var out apierrors.InternalServerError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -425,7 +425,7 @@ func (s *Teams) GetAll(ctx context.Context, opts ...operations.Option) (*operati
 				return nil, err
 			}
 
-			var out apierrors.TeamsGetAllTeamsBadGatewayError
+			var out apierrors.BadGatewayError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -450,7 +450,7 @@ func (s *Teams) GetAll(ctx context.Context, opts ...operations.Option) (*operati
 				return nil, err
 			}
 
-			var out apierrors.TeamsGetAllTeamsServiceUnavailableError
+			var out apierrors.ServiceUnavailableError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -475,7 +475,7 @@ func (s *Teams) GetAll(ctx context.Context, opts ...operations.Option) (*operati
 				return nil, err
 			}
 
-			var out apierrors.TeamsGetAllTeamsGatewayTimeoutError
+			var out apierrors.GatewayTimeoutError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -714,7 +714,7 @@ func (s *Teams) Create(ctx context.Context, request components.V3TeamsCreateTeam
 				return nil, err
 			}
 
-			var out apierrors.TeamsCreateTeamBadRequestError
+			var out apierrors.BadRequestError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -739,7 +739,7 @@ func (s *Teams) Create(ctx context.Context, request components.V3TeamsCreateTeam
 				return nil, err
 			}
 
-			var out apierrors.TeamsCreateTeamUnauthorizedError
+			var out apierrors.UnauthorizedError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -764,7 +764,7 @@ func (s *Teams) Create(ctx context.Context, request components.V3TeamsCreateTeam
 				return nil, err
 			}
 
-			var out apierrors.TeamsCreateTeamPaymentRequiredError
+			var out apierrors.PaymentRequiredError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -789,7 +789,7 @@ func (s *Teams) Create(ctx context.Context, request components.V3TeamsCreateTeam
 				return nil, err
 			}
 
-			var out apierrors.TeamsCreateTeamForbiddenError
+			var out apierrors.ForbiddenError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -814,7 +814,7 @@ func (s *Teams) Create(ctx context.Context, request components.V3TeamsCreateTeam
 				return nil, err
 			}
 
-			var out apierrors.TeamsCreateTeamNotFoundError
+			var out apierrors.NotFoundError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -839,7 +839,7 @@ func (s *Teams) Create(ctx context.Context, request components.V3TeamsCreateTeam
 				return nil, err
 			}
 
-			var out apierrors.TeamsCreateTeamConflictError
+			var out apierrors.ConflictError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -864,7 +864,7 @@ func (s *Teams) Create(ctx context.Context, request components.V3TeamsCreateTeam
 				return nil, err
 			}
 
-			var out apierrors.TeamsCreateTeamUnprocessableEntityError
+			var out apierrors.UnprocessableEntityError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -889,7 +889,7 @@ func (s *Teams) Create(ctx context.Context, request components.V3TeamsCreateTeam
 				return nil, err
 			}
 
-			var out apierrors.TeamsCreateTeamInternalServerError
+			var out apierrors.InternalServerError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -914,7 +914,7 @@ func (s *Teams) Create(ctx context.Context, request components.V3TeamsCreateTeam
 				return nil, err
 			}
 
-			var out apierrors.TeamsCreateTeamBadGatewayError
+			var out apierrors.BadGatewayError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -939,7 +939,7 @@ func (s *Teams) Create(ctx context.Context, request components.V3TeamsCreateTeam
 				return nil, err
 			}
 
-			var out apierrors.TeamsCreateTeamServiceUnavailableError
+			var out apierrors.ServiceUnavailableError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -964,7 +964,7 @@ func (s *Teams) Create(ctx context.Context, request components.V3TeamsCreateTeam
 				return nil, err
 			}
 
-			var out apierrors.TeamsCreateTeamGatewayTimeoutError
+			var out apierrors.GatewayTimeoutError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -1200,7 +1200,7 @@ func (s *Teams) GetByID(ctx context.Context, teamID string, opts ...operations.O
 				return nil, err
 			}
 
-			var out apierrors.TeamsGetTeamByIDBadRequestError
+			var out apierrors.BadRequestError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -1225,7 +1225,7 @@ func (s *Teams) GetByID(ctx context.Context, teamID string, opts ...operations.O
 				return nil, err
 			}
 
-			var out apierrors.TeamsGetTeamByIDUnauthorizedError
+			var out apierrors.UnauthorizedError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -1250,7 +1250,7 @@ func (s *Teams) GetByID(ctx context.Context, teamID string, opts ...operations.O
 				return nil, err
 			}
 
-			var out apierrors.TeamsGetTeamByIDPaymentRequiredError
+			var out apierrors.PaymentRequiredError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -1275,7 +1275,7 @@ func (s *Teams) GetByID(ctx context.Context, teamID string, opts ...operations.O
 				return nil, err
 			}
 
-			var out apierrors.TeamsGetTeamByIDForbiddenError
+			var out apierrors.ForbiddenError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -1300,7 +1300,7 @@ func (s *Teams) GetByID(ctx context.Context, teamID string, opts ...operations.O
 				return nil, err
 			}
 
-			var out apierrors.TeamsGetTeamByIDNotFoundError
+			var out apierrors.NotFoundError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -1325,7 +1325,7 @@ func (s *Teams) GetByID(ctx context.Context, teamID string, opts ...operations.O
 				return nil, err
 			}
 
-			var out apierrors.TeamsGetTeamByIDConflictError
+			var out apierrors.ConflictError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -1350,7 +1350,7 @@ func (s *Teams) GetByID(ctx context.Context, teamID string, opts ...operations.O
 				return nil, err
 			}
 
-			var out apierrors.TeamsGetTeamByIDUnprocessableEntityError
+			var out apierrors.UnprocessableEntityError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -1375,7 +1375,7 @@ func (s *Teams) GetByID(ctx context.Context, teamID string, opts ...operations.O
 				return nil, err
 			}
 
-			var out apierrors.TeamsGetTeamByIDInternalServerError
+			var out apierrors.InternalServerError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -1400,7 +1400,7 @@ func (s *Teams) GetByID(ctx context.Context, teamID string, opts ...operations.O
 				return nil, err
 			}
 
-			var out apierrors.TeamsGetTeamByIDBadGatewayError
+			var out apierrors.BadGatewayError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -1425,7 +1425,7 @@ func (s *Teams) GetByID(ctx context.Context, teamID string, opts ...operations.O
 				return nil, err
 			}
 
-			var out apierrors.TeamsGetTeamByIDServiceUnavailableError
+			var out apierrors.ServiceUnavailableError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -1450,7 +1450,7 @@ func (s *Teams) GetByID(ctx context.Context, teamID string, opts ...operations.O
 				return nil, err
 			}
 
-			var out apierrors.TeamsGetTeamByIDGatewayTimeoutError
+			var out apierrors.GatewayTimeoutError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -1694,7 +1694,7 @@ func (s *Teams) Update(ctx context.Context, teamID string, v3TeamsUpdateTeamRequ
 				return nil, err
 			}
 
-			var out apierrors.TeamsUpdateTeamBadRequestError
+			var out apierrors.BadRequestError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -1719,7 +1719,7 @@ func (s *Teams) Update(ctx context.Context, teamID string, v3TeamsUpdateTeamRequ
 				return nil, err
 			}
 
-			var out apierrors.TeamsUpdateTeamUnauthorizedError
+			var out apierrors.UnauthorizedError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -1744,7 +1744,7 @@ func (s *Teams) Update(ctx context.Context, teamID string, v3TeamsUpdateTeamRequ
 				return nil, err
 			}
 
-			var out apierrors.TeamsUpdateTeamPaymentRequiredError
+			var out apierrors.PaymentRequiredError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -1769,7 +1769,7 @@ func (s *Teams) Update(ctx context.Context, teamID string, v3TeamsUpdateTeamRequ
 				return nil, err
 			}
 
-			var out apierrors.TeamsUpdateTeamForbiddenError
+			var out apierrors.ForbiddenError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -1794,7 +1794,7 @@ func (s *Teams) Update(ctx context.Context, teamID string, v3TeamsUpdateTeamRequ
 				return nil, err
 			}
 
-			var out apierrors.TeamsUpdateTeamNotFoundError
+			var out apierrors.NotFoundError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -1819,7 +1819,7 @@ func (s *Teams) Update(ctx context.Context, teamID string, v3TeamsUpdateTeamRequ
 				return nil, err
 			}
 
-			var out apierrors.TeamsUpdateTeamConflictError
+			var out apierrors.ConflictError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -1844,7 +1844,7 @@ func (s *Teams) Update(ctx context.Context, teamID string, v3TeamsUpdateTeamRequ
 				return nil, err
 			}
 
-			var out apierrors.TeamsUpdateTeamUnprocessableEntityError
+			var out apierrors.UnprocessableEntityError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -1869,7 +1869,7 @@ func (s *Teams) Update(ctx context.Context, teamID string, v3TeamsUpdateTeamRequ
 				return nil, err
 			}
 
-			var out apierrors.TeamsUpdateTeamInternalServerError
+			var out apierrors.InternalServerError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -1894,7 +1894,7 @@ func (s *Teams) Update(ctx context.Context, teamID string, v3TeamsUpdateTeamRequ
 				return nil, err
 			}
 
-			var out apierrors.TeamsUpdateTeamBadGatewayError
+			var out apierrors.BadGatewayError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -1919,7 +1919,7 @@ func (s *Teams) Update(ctx context.Context, teamID string, v3TeamsUpdateTeamRequ
 				return nil, err
 			}
 
-			var out apierrors.TeamsUpdateTeamServiceUnavailableError
+			var out apierrors.ServiceUnavailableError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -1944,7 +1944,7 @@ func (s *Teams) Update(ctx context.Context, teamID string, v3TeamsUpdateTeamRequ
 				return nil, err
 			}
 
-			var out apierrors.TeamsUpdateTeamGatewayTimeoutError
+			var out apierrors.GatewayTimeoutError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -2175,7 +2175,7 @@ func (s *Teams) Delete(ctx context.Context, teamID string, opts ...operations.Op
 				return nil, err
 			}
 
-			var out apierrors.TeamsRemoveTeamBadRequestError
+			var out apierrors.BadRequestError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -2200,7 +2200,7 @@ func (s *Teams) Delete(ctx context.Context, teamID string, opts ...operations.Op
 				return nil, err
 			}
 
-			var out apierrors.TeamsRemoveTeamUnauthorizedError
+			var out apierrors.UnauthorizedError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -2225,7 +2225,7 @@ func (s *Teams) Delete(ctx context.Context, teamID string, opts ...operations.Op
 				return nil, err
 			}
 
-			var out apierrors.TeamsRemoveTeamPaymentRequiredError
+			var out apierrors.PaymentRequiredError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -2250,7 +2250,7 @@ func (s *Teams) Delete(ctx context.Context, teamID string, opts ...operations.Op
 				return nil, err
 			}
 
-			var out apierrors.TeamsRemoveTeamForbiddenError
+			var out apierrors.ForbiddenError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -2275,7 +2275,7 @@ func (s *Teams) Delete(ctx context.Context, teamID string, opts ...operations.Op
 				return nil, err
 			}
 
-			var out apierrors.TeamsRemoveTeamNotFoundError
+			var out apierrors.NotFoundError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -2300,7 +2300,7 @@ func (s *Teams) Delete(ctx context.Context, teamID string, opts ...operations.Op
 				return nil, err
 			}
 
-			var out apierrors.TeamsRemoveTeamConflictError
+			var out apierrors.ConflictError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -2325,7 +2325,7 @@ func (s *Teams) Delete(ctx context.Context, teamID string, opts ...operations.Op
 				return nil, err
 			}
 
-			var out apierrors.TeamsRemoveTeamUnprocessableEntityError
+			var out apierrors.UnprocessableEntityError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -2350,7 +2350,7 @@ func (s *Teams) Delete(ctx context.Context, teamID string, opts ...operations.Op
 				return nil, err
 			}
 
-			var out apierrors.TeamsRemoveTeamInternalServerError
+			var out apierrors.InternalServerError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -2375,7 +2375,7 @@ func (s *Teams) Delete(ctx context.Context, teamID string, opts ...operations.Op
 				return nil, err
 			}
 
-			var out apierrors.TeamsRemoveTeamBadGatewayError
+			var out apierrors.BadGatewayError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -2400,7 +2400,7 @@ func (s *Teams) Delete(ctx context.Context, teamID string, opts ...operations.Op
 				return nil, err
 			}
 
-			var out apierrors.TeamsRemoveTeamServiceUnavailableError
+			var out apierrors.ServiceUnavailableError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -2425,7 +2425,7 @@ func (s *Teams) Delete(ctx context.Context, teamID string, opts ...operations.Op
 				return nil, err
 			}
 
-			var out apierrors.TeamsRemoveTeamGatewayTimeoutError
+			var out apierrors.GatewayTimeoutError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -2669,7 +2669,7 @@ func (s *Teams) AddMember(ctx context.Context, teamID string, v3TeamsAddTeamMemb
 				return nil, err
 			}
 
-			var out apierrors.TeamsAddTeamMemberBadRequestError
+			var out apierrors.BadRequestError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -2694,7 +2694,7 @@ func (s *Teams) AddMember(ctx context.Context, teamID string, v3TeamsAddTeamMemb
 				return nil, err
 			}
 
-			var out apierrors.TeamsAddTeamMemberUnauthorizedError
+			var out apierrors.UnauthorizedError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -2719,7 +2719,7 @@ func (s *Teams) AddMember(ctx context.Context, teamID string, v3TeamsAddTeamMemb
 				return nil, err
 			}
 
-			var out apierrors.TeamsAddTeamMemberPaymentRequiredError
+			var out apierrors.PaymentRequiredError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -2744,7 +2744,7 @@ func (s *Teams) AddMember(ctx context.Context, teamID string, v3TeamsAddTeamMemb
 				return nil, err
 			}
 
-			var out apierrors.TeamsAddTeamMemberForbiddenError
+			var out apierrors.ForbiddenError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -2769,7 +2769,7 @@ func (s *Teams) AddMember(ctx context.Context, teamID string, v3TeamsAddTeamMemb
 				return nil, err
 			}
 
-			var out apierrors.TeamsAddTeamMemberNotFoundError
+			var out apierrors.NotFoundError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -2794,7 +2794,7 @@ func (s *Teams) AddMember(ctx context.Context, teamID string, v3TeamsAddTeamMemb
 				return nil, err
 			}
 
-			var out apierrors.TeamsAddTeamMemberConflictError
+			var out apierrors.ConflictError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -2819,7 +2819,7 @@ func (s *Teams) AddMember(ctx context.Context, teamID string, v3TeamsAddTeamMemb
 				return nil, err
 			}
 
-			var out apierrors.TeamsAddTeamMemberUnprocessableEntityError
+			var out apierrors.UnprocessableEntityError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -2844,7 +2844,7 @@ func (s *Teams) AddMember(ctx context.Context, teamID string, v3TeamsAddTeamMemb
 				return nil, err
 			}
 
-			var out apierrors.TeamsAddTeamMemberInternalServerError
+			var out apierrors.InternalServerError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -2869,7 +2869,7 @@ func (s *Teams) AddMember(ctx context.Context, teamID string, v3TeamsAddTeamMemb
 				return nil, err
 			}
 
-			var out apierrors.TeamsAddTeamMemberBadGatewayError
+			var out apierrors.BadGatewayError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -2894,7 +2894,7 @@ func (s *Teams) AddMember(ctx context.Context, teamID string, v3TeamsAddTeamMemb
 				return nil, err
 			}
 
-			var out apierrors.TeamsAddTeamMemberServiceUnavailableError
+			var out apierrors.ServiceUnavailableError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -2919,7 +2919,7 @@ func (s *Teams) AddMember(ctx context.Context, teamID string, v3TeamsAddTeamMemb
 				return nil, err
 			}
 
-			var out apierrors.TeamsAddTeamMemberGatewayTimeoutError
+			var out apierrors.GatewayTimeoutError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -3163,7 +3163,7 @@ func (s *Teams) AddBulkMember(ctx context.Context, teamID string, v3TeamsAddBulk
 				return nil, err
 			}
 
-			var out apierrors.TeamsAddBulkTeamMemberBadRequestError
+			var out apierrors.BadRequestError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -3188,7 +3188,7 @@ func (s *Teams) AddBulkMember(ctx context.Context, teamID string, v3TeamsAddBulk
 				return nil, err
 			}
 
-			var out apierrors.TeamsAddBulkTeamMemberUnauthorizedError
+			var out apierrors.UnauthorizedError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -3213,7 +3213,7 @@ func (s *Teams) AddBulkMember(ctx context.Context, teamID string, v3TeamsAddBulk
 				return nil, err
 			}
 
-			var out apierrors.TeamsAddBulkTeamMemberPaymentRequiredError
+			var out apierrors.PaymentRequiredError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -3238,7 +3238,7 @@ func (s *Teams) AddBulkMember(ctx context.Context, teamID string, v3TeamsAddBulk
 				return nil, err
 			}
 
-			var out apierrors.TeamsAddBulkTeamMemberForbiddenError
+			var out apierrors.ForbiddenError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -3263,7 +3263,7 @@ func (s *Teams) AddBulkMember(ctx context.Context, teamID string, v3TeamsAddBulk
 				return nil, err
 			}
 
-			var out apierrors.TeamsAddBulkTeamMemberNotFoundError
+			var out apierrors.NotFoundError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -3288,7 +3288,7 @@ func (s *Teams) AddBulkMember(ctx context.Context, teamID string, v3TeamsAddBulk
 				return nil, err
 			}
 
-			var out apierrors.TeamsAddBulkTeamMemberConflictError
+			var out apierrors.ConflictError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -3313,7 +3313,7 @@ func (s *Teams) AddBulkMember(ctx context.Context, teamID string, v3TeamsAddBulk
 				return nil, err
 			}
 
-			var out apierrors.TeamsAddBulkTeamMemberUnprocessableEntityError
+			var out apierrors.UnprocessableEntityError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -3338,7 +3338,7 @@ func (s *Teams) AddBulkMember(ctx context.Context, teamID string, v3TeamsAddBulk
 				return nil, err
 			}
 
-			var out apierrors.TeamsAddBulkTeamMemberInternalServerError
+			var out apierrors.InternalServerError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -3363,7 +3363,7 @@ func (s *Teams) AddBulkMember(ctx context.Context, teamID string, v3TeamsAddBulk
 				return nil, err
 			}
 
-			var out apierrors.TeamsAddBulkTeamMemberBadGatewayError
+			var out apierrors.BadGatewayError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -3388,7 +3388,7 @@ func (s *Teams) AddBulkMember(ctx context.Context, teamID string, v3TeamsAddBulk
 				return nil, err
 			}
 
-			var out apierrors.TeamsAddBulkTeamMemberServiceUnavailableError
+			var out apierrors.ServiceUnavailableError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -3413,7 +3413,7 @@ func (s *Teams) AddBulkMember(ctx context.Context, teamID string, v3TeamsAddBulk
 				return nil, err
 			}
 
-			var out apierrors.TeamsAddBulkTeamMemberGatewayTimeoutError
+			var out apierrors.GatewayTimeoutError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -3645,7 +3645,7 @@ func (s *Teams) RemoveMember(ctx context.Context, teamID string, memberID string
 				return nil, err
 			}
 
-			var out apierrors.TeamsRemoveTeamMemberBadRequestError
+			var out apierrors.BadRequestError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -3670,7 +3670,7 @@ func (s *Teams) RemoveMember(ctx context.Context, teamID string, memberID string
 				return nil, err
 			}
 
-			var out apierrors.TeamsRemoveTeamMemberUnauthorizedError
+			var out apierrors.UnauthorizedError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -3695,7 +3695,7 @@ func (s *Teams) RemoveMember(ctx context.Context, teamID string, memberID string
 				return nil, err
 			}
 
-			var out apierrors.TeamsRemoveTeamMemberPaymentRequiredError
+			var out apierrors.PaymentRequiredError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -3720,7 +3720,7 @@ func (s *Teams) RemoveMember(ctx context.Context, teamID string, memberID string
 				return nil, err
 			}
 
-			var out apierrors.TeamsRemoveTeamMemberForbiddenError
+			var out apierrors.ForbiddenError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -3745,7 +3745,7 @@ func (s *Teams) RemoveMember(ctx context.Context, teamID string, memberID string
 				return nil, err
 			}
 
-			var out apierrors.TeamsRemoveTeamMemberNotFoundError
+			var out apierrors.NotFoundError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -3770,7 +3770,7 @@ func (s *Teams) RemoveMember(ctx context.Context, teamID string, memberID string
 				return nil, err
 			}
 
-			var out apierrors.TeamsRemoveTeamMemberConflictError
+			var out apierrors.ConflictError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -3795,7 +3795,7 @@ func (s *Teams) RemoveMember(ctx context.Context, teamID string, memberID string
 				return nil, err
 			}
 
-			var out apierrors.TeamsRemoveTeamMemberUnprocessableEntityError
+			var out apierrors.UnprocessableEntityError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -3820,7 +3820,7 @@ func (s *Teams) RemoveMember(ctx context.Context, teamID string, memberID string
 				return nil, err
 			}
 
-			var out apierrors.TeamsRemoveTeamMemberInternalServerError
+			var out apierrors.InternalServerError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -3845,7 +3845,7 @@ func (s *Teams) RemoveMember(ctx context.Context, teamID string, memberID string
 				return nil, err
 			}
 
-			var out apierrors.TeamsRemoveTeamMemberBadGatewayError
+			var out apierrors.BadGatewayError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -3870,7 +3870,7 @@ func (s *Teams) RemoveMember(ctx context.Context, teamID string, memberID string
 				return nil, err
 			}
 
-			var out apierrors.TeamsRemoveTeamMemberServiceUnavailableError
+			var out apierrors.ServiceUnavailableError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -3895,7 +3895,7 @@ func (s *Teams) RemoveMember(ctx context.Context, teamID string, memberID string
 				return nil, err
 			}
 
-			var out apierrors.TeamsRemoveTeamMemberGatewayTimeoutError
+			var out apierrors.GatewayTimeoutError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -4140,7 +4140,7 @@ func (s *Teams) UpdateMember(ctx context.Context, teamID string, memberID string
 				return nil, err
 			}
 
-			var out apierrors.TeamsUpdateTeamMemberBadRequestError
+			var out apierrors.BadRequestError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -4165,7 +4165,7 @@ func (s *Teams) UpdateMember(ctx context.Context, teamID string, memberID string
 				return nil, err
 			}
 
-			var out apierrors.TeamsUpdateTeamMemberUnauthorizedError
+			var out apierrors.UnauthorizedError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -4190,7 +4190,7 @@ func (s *Teams) UpdateMember(ctx context.Context, teamID string, memberID string
 				return nil, err
 			}
 
-			var out apierrors.TeamsUpdateTeamMemberPaymentRequiredError
+			var out apierrors.PaymentRequiredError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -4215,7 +4215,7 @@ func (s *Teams) UpdateMember(ctx context.Context, teamID string, memberID string
 				return nil, err
 			}
 
-			var out apierrors.TeamsUpdateTeamMemberForbiddenError
+			var out apierrors.ForbiddenError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -4240,7 +4240,7 @@ func (s *Teams) UpdateMember(ctx context.Context, teamID string, memberID string
 				return nil, err
 			}
 
-			var out apierrors.TeamsUpdateTeamMemberNotFoundError
+			var out apierrors.NotFoundError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -4265,7 +4265,7 @@ func (s *Teams) UpdateMember(ctx context.Context, teamID string, memberID string
 				return nil, err
 			}
 
-			var out apierrors.TeamsUpdateTeamMemberConflictError
+			var out apierrors.ConflictError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -4290,7 +4290,7 @@ func (s *Teams) UpdateMember(ctx context.Context, teamID string, memberID string
 				return nil, err
 			}
 
-			var out apierrors.TeamsUpdateTeamMemberUnprocessableEntityError
+			var out apierrors.UnprocessableEntityError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -4315,7 +4315,7 @@ func (s *Teams) UpdateMember(ctx context.Context, teamID string, memberID string
 				return nil, err
 			}
 
-			var out apierrors.TeamsUpdateTeamMemberInternalServerError
+			var out apierrors.InternalServerError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -4340,7 +4340,7 @@ func (s *Teams) UpdateMember(ctx context.Context, teamID string, memberID string
 				return nil, err
 			}
 
-			var out apierrors.TeamsUpdateTeamMemberBadGatewayError
+			var out apierrors.BadGatewayError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -4365,7 +4365,7 @@ func (s *Teams) UpdateMember(ctx context.Context, teamID string, memberID string
 				return nil, err
 			}
 
-			var out apierrors.TeamsUpdateTeamMemberServiceUnavailableError
+			var out apierrors.ServiceUnavailableError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -4390,7 +4390,7 @@ func (s *Teams) UpdateMember(ctx context.Context, teamID string, memberID string
 				return nil, err
 			}
 
-			var out apierrors.TeamsUpdateTeamMemberGatewayTimeoutError
+			var out apierrors.GatewayTimeoutError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -4626,7 +4626,7 @@ func (s *Teams) GetAllRoles(ctx context.Context, teamID string, opts ...operatio
 				return nil, err
 			}
 
-			var out apierrors.TeamsGetAllTeamRolesBadRequestError
+			var out apierrors.BadRequestError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -4651,7 +4651,7 @@ func (s *Teams) GetAllRoles(ctx context.Context, teamID string, opts ...operatio
 				return nil, err
 			}
 
-			var out apierrors.TeamsGetAllTeamRolesUnauthorizedError
+			var out apierrors.UnauthorizedError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -4676,7 +4676,7 @@ func (s *Teams) GetAllRoles(ctx context.Context, teamID string, opts ...operatio
 				return nil, err
 			}
 
-			var out apierrors.TeamsGetAllTeamRolesPaymentRequiredError
+			var out apierrors.PaymentRequiredError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -4701,7 +4701,7 @@ func (s *Teams) GetAllRoles(ctx context.Context, teamID string, opts ...operatio
 				return nil, err
 			}
 
-			var out apierrors.TeamsGetAllTeamRolesForbiddenError
+			var out apierrors.ForbiddenError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -4726,7 +4726,7 @@ func (s *Teams) GetAllRoles(ctx context.Context, teamID string, opts ...operatio
 				return nil, err
 			}
 
-			var out apierrors.TeamsGetAllTeamRolesNotFoundError
+			var out apierrors.NotFoundError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -4751,7 +4751,7 @@ func (s *Teams) GetAllRoles(ctx context.Context, teamID string, opts ...operatio
 				return nil, err
 			}
 
-			var out apierrors.TeamsGetAllTeamRolesConflictError
+			var out apierrors.ConflictError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -4776,7 +4776,7 @@ func (s *Teams) GetAllRoles(ctx context.Context, teamID string, opts ...operatio
 				return nil, err
 			}
 
-			var out apierrors.TeamsGetAllTeamRolesUnprocessableEntityError
+			var out apierrors.UnprocessableEntityError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -4801,7 +4801,7 @@ func (s *Teams) GetAllRoles(ctx context.Context, teamID string, opts ...operatio
 				return nil, err
 			}
 
-			var out apierrors.TeamsGetAllTeamRolesInternalServerError
+			var out apierrors.InternalServerError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -4826,7 +4826,7 @@ func (s *Teams) GetAllRoles(ctx context.Context, teamID string, opts ...operatio
 				return nil, err
 			}
 
-			var out apierrors.TeamsGetAllTeamRolesBadGatewayError
+			var out apierrors.BadGatewayError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -4851,7 +4851,7 @@ func (s *Teams) GetAllRoles(ctx context.Context, teamID string, opts ...operatio
 				return nil, err
 			}
 
-			var out apierrors.TeamsGetAllTeamRolesServiceUnavailableError
+			var out apierrors.ServiceUnavailableError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -4876,7 +4876,7 @@ func (s *Teams) GetAllRoles(ctx context.Context, teamID string, opts ...operatio
 				return nil, err
 			}
 
-			var out apierrors.TeamsGetAllTeamRolesGatewayTimeoutError
+			var out apierrors.GatewayTimeoutError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -5120,7 +5120,7 @@ func (s *Teams) CreateRole(ctx context.Context, teamID string, v3TeamsCreateTeam
 				return nil, err
 			}
 
-			var out apierrors.TeamsCreateTeamRoleBadRequestError
+			var out apierrors.BadRequestError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -5145,7 +5145,7 @@ func (s *Teams) CreateRole(ctx context.Context, teamID string, v3TeamsCreateTeam
 				return nil, err
 			}
 
-			var out apierrors.TeamsCreateTeamRoleUnauthorizedError
+			var out apierrors.UnauthorizedError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -5170,7 +5170,7 @@ func (s *Teams) CreateRole(ctx context.Context, teamID string, v3TeamsCreateTeam
 				return nil, err
 			}
 
-			var out apierrors.TeamsCreateTeamRolePaymentRequiredError
+			var out apierrors.PaymentRequiredError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -5195,7 +5195,7 @@ func (s *Teams) CreateRole(ctx context.Context, teamID string, v3TeamsCreateTeam
 				return nil, err
 			}
 
-			var out apierrors.TeamsCreateTeamRoleForbiddenError
+			var out apierrors.ForbiddenError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -5220,7 +5220,7 @@ func (s *Teams) CreateRole(ctx context.Context, teamID string, v3TeamsCreateTeam
 				return nil, err
 			}
 
-			var out apierrors.TeamsCreateTeamRoleNotFoundError
+			var out apierrors.NotFoundError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -5245,7 +5245,7 @@ func (s *Teams) CreateRole(ctx context.Context, teamID string, v3TeamsCreateTeam
 				return nil, err
 			}
 
-			var out apierrors.TeamsCreateTeamRoleConflictError
+			var out apierrors.ConflictError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -5270,7 +5270,7 @@ func (s *Teams) CreateRole(ctx context.Context, teamID string, v3TeamsCreateTeam
 				return nil, err
 			}
 
-			var out apierrors.TeamsCreateTeamRoleUnprocessableEntityError
+			var out apierrors.UnprocessableEntityError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -5295,7 +5295,7 @@ func (s *Teams) CreateRole(ctx context.Context, teamID string, v3TeamsCreateTeam
 				return nil, err
 			}
 
-			var out apierrors.TeamsCreateTeamRoleInternalServerError
+			var out apierrors.InternalServerError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -5320,7 +5320,7 @@ func (s *Teams) CreateRole(ctx context.Context, teamID string, v3TeamsCreateTeam
 				return nil, err
 			}
 
-			var out apierrors.TeamsCreateTeamRoleBadGatewayError
+			var out apierrors.BadGatewayError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -5345,7 +5345,7 @@ func (s *Teams) CreateRole(ctx context.Context, teamID string, v3TeamsCreateTeam
 				return nil, err
 			}
 
-			var out apierrors.TeamsCreateTeamRoleServiceUnavailableError
+			var out apierrors.ServiceUnavailableError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -5370,7 +5370,7 @@ func (s *Teams) CreateRole(ctx context.Context, teamID string, v3TeamsCreateTeam
 				return nil, err
 			}
 
-			var out apierrors.TeamsCreateTeamRoleGatewayTimeoutError
+			var out apierrors.GatewayTimeoutError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -5602,7 +5602,7 @@ func (s *Teams) RemoveRole(ctx context.Context, teamID string, roleID string, op
 				return nil, err
 			}
 
-			var out apierrors.TeamsRemoveTeamRoleBadRequestError
+			var out apierrors.BadRequestError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -5627,7 +5627,7 @@ func (s *Teams) RemoveRole(ctx context.Context, teamID string, roleID string, op
 				return nil, err
 			}
 
-			var out apierrors.TeamsRemoveTeamRoleUnauthorizedError
+			var out apierrors.UnauthorizedError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -5652,7 +5652,7 @@ func (s *Teams) RemoveRole(ctx context.Context, teamID string, roleID string, op
 				return nil, err
 			}
 
-			var out apierrors.TeamsRemoveTeamRolePaymentRequiredError
+			var out apierrors.PaymentRequiredError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -5677,7 +5677,7 @@ func (s *Teams) RemoveRole(ctx context.Context, teamID string, roleID string, op
 				return nil, err
 			}
 
-			var out apierrors.TeamsRemoveTeamRoleForbiddenError
+			var out apierrors.ForbiddenError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -5702,7 +5702,7 @@ func (s *Teams) RemoveRole(ctx context.Context, teamID string, roleID string, op
 				return nil, err
 			}
 
-			var out apierrors.TeamsRemoveTeamRoleNotFoundError
+			var out apierrors.NotFoundError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -5727,7 +5727,7 @@ func (s *Teams) RemoveRole(ctx context.Context, teamID string, roleID string, op
 				return nil, err
 			}
 
-			var out apierrors.TeamsRemoveTeamRoleConflictError
+			var out apierrors.ConflictError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -5752,7 +5752,7 @@ func (s *Teams) RemoveRole(ctx context.Context, teamID string, roleID string, op
 				return nil, err
 			}
 
-			var out apierrors.TeamsRemoveTeamRoleUnprocessableEntityError
+			var out apierrors.UnprocessableEntityError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -5777,7 +5777,7 @@ func (s *Teams) RemoveRole(ctx context.Context, teamID string, roleID string, op
 				return nil, err
 			}
 
-			var out apierrors.TeamsRemoveTeamRoleInternalServerError
+			var out apierrors.InternalServerError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -5802,7 +5802,7 @@ func (s *Teams) RemoveRole(ctx context.Context, teamID string, roleID string, op
 				return nil, err
 			}
 
-			var out apierrors.TeamsRemoveTeamRoleBadGatewayError
+			var out apierrors.BadGatewayError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -5827,7 +5827,7 @@ func (s *Teams) RemoveRole(ctx context.Context, teamID string, roleID string, op
 				return nil, err
 			}
 
-			var out apierrors.TeamsRemoveTeamRoleServiceUnavailableError
+			var out apierrors.ServiceUnavailableError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -5852,7 +5852,7 @@ func (s *Teams) RemoveRole(ctx context.Context, teamID string, roleID string, op
 				return nil, err
 			}
 
-			var out apierrors.TeamsRemoveTeamRoleGatewayTimeoutError
+			var out apierrors.GatewayTimeoutError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -6097,7 +6097,7 @@ func (s *Teams) UpdateRole(ctx context.Context, teamID string, roleID string, v3
 				return nil, err
 			}
 
-			var out apierrors.TeamsUpdateTeamRoleBadRequestError
+			var out apierrors.BadRequestError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -6122,7 +6122,7 @@ func (s *Teams) UpdateRole(ctx context.Context, teamID string, roleID string, v3
 				return nil, err
 			}
 
-			var out apierrors.TeamsUpdateTeamRoleUnauthorizedError
+			var out apierrors.UnauthorizedError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -6147,7 +6147,7 @@ func (s *Teams) UpdateRole(ctx context.Context, teamID string, roleID string, v3
 				return nil, err
 			}
 
-			var out apierrors.TeamsUpdateTeamRolePaymentRequiredError
+			var out apierrors.PaymentRequiredError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -6172,7 +6172,7 @@ func (s *Teams) UpdateRole(ctx context.Context, teamID string, roleID string, v3
 				return nil, err
 			}
 
-			var out apierrors.TeamsUpdateTeamRoleForbiddenError
+			var out apierrors.ForbiddenError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -6197,7 +6197,7 @@ func (s *Teams) UpdateRole(ctx context.Context, teamID string, roleID string, v3
 				return nil, err
 			}
 
-			var out apierrors.TeamsUpdateTeamRoleNotFoundError
+			var out apierrors.NotFoundError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -6222,7 +6222,7 @@ func (s *Teams) UpdateRole(ctx context.Context, teamID string, roleID string, v3
 				return nil, err
 			}
 
-			var out apierrors.TeamsUpdateTeamRoleConflictError
+			var out apierrors.ConflictError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -6247,7 +6247,7 @@ func (s *Teams) UpdateRole(ctx context.Context, teamID string, roleID string, v3
 				return nil, err
 			}
 
-			var out apierrors.TeamsUpdateTeamRoleUnprocessableEntityError
+			var out apierrors.UnprocessableEntityError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -6272,7 +6272,7 @@ func (s *Teams) UpdateRole(ctx context.Context, teamID string, roleID string, v3
 				return nil, err
 			}
 
-			var out apierrors.TeamsUpdateTeamRoleInternalServerError
+			var out apierrors.InternalServerError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -6297,7 +6297,7 @@ func (s *Teams) UpdateRole(ctx context.Context, teamID string, roleID string, v3
 				return nil, err
 			}
 
-			var out apierrors.TeamsUpdateTeamRoleBadGatewayError
+			var out apierrors.BadGatewayError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -6322,7 +6322,7 @@ func (s *Teams) UpdateRole(ctx context.Context, teamID string, roleID string, v3
 				return nil, err
 			}
 
-			var out apierrors.TeamsUpdateTeamRoleServiceUnavailableError
+			var out apierrors.ServiceUnavailableError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -6347,7 +6347,7 @@ func (s *Teams) UpdateRole(ctx context.Context, teamID string, roleID string, v3
 				return nil, err
 			}
 
-			var out apierrors.TeamsUpdateTeamRoleGatewayTimeoutError
+			var out apierrors.GatewayTimeoutError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}

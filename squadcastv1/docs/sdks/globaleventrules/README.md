@@ -65,20 +65,20 @@ func main() {
 
 ### Errors
 
-| Error Type                                                             | Status Code                                                            | Content Type                                                           |
-| ---------------------------------------------------------------------- | ---------------------------------------------------------------------- | ---------------------------------------------------------------------- |
-| apierrors.GlobalEventRulesListGlobalEventRulesBadRequestError          | 400                                                                    | application/json                                                       |
-| apierrors.GlobalEventRulesListGlobalEventRulesUnauthorizedError        | 401                                                                    | application/json                                                       |
-| apierrors.GlobalEventRulesListGlobalEventRulesPaymentRequiredError     | 402                                                                    | application/json                                                       |
-| apierrors.GlobalEventRulesListGlobalEventRulesForbiddenError           | 403                                                                    | application/json                                                       |
-| apierrors.GlobalEventRulesListGlobalEventRulesNotFoundError            | 404                                                                    | application/json                                                       |
-| apierrors.GlobalEventRulesListGlobalEventRulesConflictError            | 409                                                                    | application/json                                                       |
-| apierrors.GlobalEventRulesListGlobalEventRulesUnprocessableEntityError | 422                                                                    | application/json                                                       |
-| apierrors.GlobalEventRulesListGlobalEventRulesInternalServerError      | 500                                                                    | application/json                                                       |
-| apierrors.GlobalEventRulesListGlobalEventRulesBadGatewayError          | 502                                                                    | application/json                                                       |
-| apierrors.GlobalEventRulesListGlobalEventRulesServiceUnavailableError  | 503                                                                    | application/json                                                       |
-| apierrors.GlobalEventRulesListGlobalEventRulesGatewayTimeoutError      | 504                                                                    | application/json                                                       |
-| apierrors.APIError                                                     | 4XX, 5XX                                                               | \*/\*                                                                  |
+| Error Type                         | Status Code                        | Content Type                       |
+| ---------------------------------- | ---------------------------------- | ---------------------------------- |
+| apierrors.BadRequestError          | 400                                | application/json                   |
+| apierrors.UnauthorizedError        | 401                                | application/json                   |
+| apierrors.PaymentRequiredError     | 402                                | application/json                   |
+| apierrors.ForbiddenError           | 403                                | application/json                   |
+| apierrors.NotFoundError            | 404                                | application/json                   |
+| apierrors.ConflictError            | 409                                | application/json                   |
+| apierrors.UnprocessableEntityError | 422                                | application/json                   |
+| apierrors.InternalServerError      | 500                                | application/json                   |
+| apierrors.BadGatewayError          | 502                                | application/json                   |
+| apierrors.ServiceUnavailableError  | 503                                | application/json                   |
+| apierrors.GatewayTimeoutError      | 504                                | application/json                   |
+| apierrors.APIError                 | 4XX, 5XX                           | \*/\*                              |
 
 ## Create
 
@@ -137,20 +137,20 @@ func main() {
 
 ### Errors
 
-| Error Type                                                              | Status Code                                                             | Content Type                                                            |
-| ----------------------------------------------------------------------- | ----------------------------------------------------------------------- | ----------------------------------------------------------------------- |
-| apierrors.GlobalEventRulesCreateGlobalEventRuleBadRequestError          | 400                                                                     | application/json                                                        |
-| apierrors.GlobalEventRulesCreateGlobalEventRuleUnauthorizedError        | 401                                                                     | application/json                                                        |
-| apierrors.GlobalEventRulesCreateGlobalEventRulePaymentRequiredError     | 402                                                                     | application/json                                                        |
-| apierrors.GlobalEventRulesCreateGlobalEventRuleForbiddenError           | 403                                                                     | application/json                                                        |
-| apierrors.GlobalEventRulesCreateGlobalEventRuleNotFoundError            | 404                                                                     | application/json                                                        |
-| apierrors.GlobalEventRulesCreateGlobalEventRuleConflictError            | 409                                                                     | application/json                                                        |
-| apierrors.GlobalEventRulesCreateGlobalEventRuleUnprocessableEntityError | 422                                                                     | application/json                                                        |
-| apierrors.GlobalEventRulesCreateGlobalEventRuleInternalServerError      | 500                                                                     | application/json                                                        |
-| apierrors.GlobalEventRulesCreateGlobalEventRuleBadGatewayError          | 502                                                                     | application/json                                                        |
-| apierrors.GlobalEventRulesCreateGlobalEventRuleServiceUnavailableError  | 503                                                                     | application/json                                                        |
-| apierrors.GlobalEventRulesCreateGlobalEventRuleGatewayTimeoutError      | 504                                                                     | application/json                                                        |
-| apierrors.APIError                                                      | 4XX, 5XX                                                                | \*/\*                                                                   |
+| Error Type                         | Status Code                        | Content Type                       |
+| ---------------------------------- | ---------------------------------- | ---------------------------------- |
+| apierrors.BadRequestError          | 400                                | application/json                   |
+| apierrors.UnauthorizedError        | 401                                | application/json                   |
+| apierrors.PaymentRequiredError     | 402                                | application/json                   |
+| apierrors.ForbiddenError           | 403                                | application/json                   |
+| apierrors.NotFoundError            | 404                                | application/json                   |
+| apierrors.ConflictError            | 409                                | application/json                   |
+| apierrors.UnprocessableEntityError | 422                                | application/json                   |
+| apierrors.InternalServerError      | 500                                | application/json                   |
+| apierrors.BadGatewayError          | 502                                | application/json                   |
+| apierrors.ServiceUnavailableError  | 503                                | application/json                   |
+| apierrors.GatewayTimeoutError      | 504                                | application/json                   |
+| apierrors.APIError                 | 4XX, 5XX                           | \*/\*                              |
 
 ## DeleteRule
 
@@ -200,20 +200,20 @@ func main() {
 
 ### Errors
 
-| Error Type                                                                  | Status Code                                                                 | Content Type                                                                |
-| --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
-| apierrors.GlobalEventRulesDeleteGlobalEventRuleByIDBadRequestError          | 400                                                                         | application/json                                                            |
-| apierrors.GlobalEventRulesDeleteGlobalEventRuleByIDUnauthorizedError        | 401                                                                         | application/json                                                            |
-| apierrors.GlobalEventRulesDeleteGlobalEventRuleByIDPaymentRequiredError     | 402                                                                         | application/json                                                            |
-| apierrors.GlobalEventRulesDeleteGlobalEventRuleByIDForbiddenError           | 403                                                                         | application/json                                                            |
-| apierrors.GlobalEventRulesDeleteGlobalEventRuleByIDNotFoundError            | 404                                                                         | application/json                                                            |
-| apierrors.GlobalEventRulesDeleteGlobalEventRuleByIDConflictError            | 409                                                                         | application/json                                                            |
-| apierrors.GlobalEventRulesDeleteGlobalEventRuleByIDUnprocessableEntityError | 422                                                                         | application/json                                                            |
-| apierrors.GlobalEventRulesDeleteGlobalEventRuleByIDInternalServerError      | 500                                                                         | application/json                                                            |
-| apierrors.GlobalEventRulesDeleteGlobalEventRuleByIDBadGatewayError          | 502                                                                         | application/json                                                            |
-| apierrors.GlobalEventRulesDeleteGlobalEventRuleByIDServiceUnavailableError  | 503                                                                         | application/json                                                            |
-| apierrors.GlobalEventRulesDeleteGlobalEventRuleByIDGatewayTimeoutError      | 504                                                                         | application/json                                                            |
-| apierrors.APIError                                                          | 4XX, 5XX                                                                    | \*/\*                                                                       |
+| Error Type                         | Status Code                        | Content Type                       |
+| ---------------------------------- | ---------------------------------- | ---------------------------------- |
+| apierrors.BadRequestError          | 400                                | application/json                   |
+| apierrors.UnauthorizedError        | 401                                | application/json                   |
+| apierrors.PaymentRequiredError     | 402                                | application/json                   |
+| apierrors.ForbiddenError           | 403                                | application/json                   |
+| apierrors.NotFoundError            | 404                                | application/json                   |
+| apierrors.ConflictError            | 409                                | application/json                   |
+| apierrors.UnprocessableEntityError | 422                                | application/json                   |
+| apierrors.InternalServerError      | 500                                | application/json                   |
+| apierrors.BadGatewayError          | 502                                | application/json                   |
+| apierrors.ServiceUnavailableError  | 503                                | application/json                   |
+| apierrors.GatewayTimeoutError      | 504                                | application/json                   |
+| apierrors.APIError                 | 4XX, 5XX                           | \*/\*                              |
 
 ## GetByID
 
@@ -263,20 +263,20 @@ func main() {
 
 ### Errors
 
-| Error Type                                                               | Status Code                                                              | Content Type                                                             |
-| ------------------------------------------------------------------------ | ------------------------------------------------------------------------ | ------------------------------------------------------------------------ |
-| apierrors.GlobalEventRulesGetGlobalEventRuleByIDBadRequestError          | 400                                                                      | application/json                                                         |
-| apierrors.GlobalEventRulesGetGlobalEventRuleByIDUnauthorizedError        | 401                                                                      | application/json                                                         |
-| apierrors.GlobalEventRulesGetGlobalEventRuleByIDPaymentRequiredError     | 402                                                                      | application/json                                                         |
-| apierrors.GlobalEventRulesGetGlobalEventRuleByIDForbiddenError           | 403                                                                      | application/json                                                         |
-| apierrors.GlobalEventRulesGetGlobalEventRuleByIDNotFoundError            | 404                                                                      | application/json                                                         |
-| apierrors.GlobalEventRulesGetGlobalEventRuleByIDConflictError            | 409                                                                      | application/json                                                         |
-| apierrors.GlobalEventRulesGetGlobalEventRuleByIDUnprocessableEntityError | 422                                                                      | application/json                                                         |
-| apierrors.GlobalEventRulesGetGlobalEventRuleByIDInternalServerError      | 500                                                                      | application/json                                                         |
-| apierrors.GlobalEventRulesGetGlobalEventRuleByIDBadGatewayError          | 502                                                                      | application/json                                                         |
-| apierrors.GlobalEventRulesGetGlobalEventRuleByIDServiceUnavailableError  | 503                                                                      | application/json                                                         |
-| apierrors.GlobalEventRulesGetGlobalEventRuleByIDGatewayTimeoutError      | 504                                                                      | application/json                                                         |
-| apierrors.APIError                                                       | 4XX, 5XX                                                                 | \*/\*                                                                    |
+| Error Type                         | Status Code                        | Content Type                       |
+| ---------------------------------- | ---------------------------------- | ---------------------------------- |
+| apierrors.BadRequestError          | 400                                | application/json                   |
+| apierrors.UnauthorizedError        | 401                                | application/json                   |
+| apierrors.PaymentRequiredError     | 402                                | application/json                   |
+| apierrors.ForbiddenError           | 403                                | application/json                   |
+| apierrors.NotFoundError            | 404                                | application/json                   |
+| apierrors.ConflictError            | 409                                | application/json                   |
+| apierrors.UnprocessableEntityError | 422                                | application/json                   |
+| apierrors.InternalServerError      | 500                                | application/json                   |
+| apierrors.BadGatewayError          | 502                                | application/json                   |
+| apierrors.ServiceUnavailableError  | 503                                | application/json                   |
+| apierrors.GatewayTimeoutError      | 504                                | application/json                   |
+| apierrors.APIError                 | 4XX, 5XX                           | \*/\*                              |
 
 ## UpdateByID
 
@@ -328,20 +328,20 @@ func main() {
 
 ### Errors
 
-| Error Type                                                                  | Status Code                                                                 | Content Type                                                                |
-| --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
-| apierrors.GlobalEventRulesUpdateGlobalEventRuleByIDBadRequestError          | 400                                                                         | application/json                                                            |
-| apierrors.GlobalEventRulesUpdateGlobalEventRuleByIDUnauthorizedError        | 401                                                                         | application/json                                                            |
-| apierrors.GlobalEventRulesUpdateGlobalEventRuleByIDPaymentRequiredError     | 402                                                                         | application/json                                                            |
-| apierrors.GlobalEventRulesUpdateGlobalEventRuleByIDForbiddenError           | 403                                                                         | application/json                                                            |
-| apierrors.GlobalEventRulesUpdateGlobalEventRuleByIDNotFoundError            | 404                                                                         | application/json                                                            |
-| apierrors.GlobalEventRulesUpdateGlobalEventRuleByIDConflictError            | 409                                                                         | application/json                                                            |
-| apierrors.GlobalEventRulesUpdateGlobalEventRuleByIDUnprocessableEntityError | 422                                                                         | application/json                                                            |
-| apierrors.GlobalEventRulesUpdateGlobalEventRuleByIDInternalServerError      | 500                                                                         | application/json                                                            |
-| apierrors.GlobalEventRulesUpdateGlobalEventRuleByIDBadGatewayError          | 502                                                                         | application/json                                                            |
-| apierrors.GlobalEventRulesUpdateGlobalEventRuleByIDServiceUnavailableError  | 503                                                                         | application/json                                                            |
-| apierrors.GlobalEventRulesUpdateGlobalEventRuleByIDGatewayTimeoutError      | 504                                                                         | application/json                                                            |
-| apierrors.APIError                                                          | 4XX, 5XX                                                                    | \*/\*                                                                       |
+| Error Type                         | Status Code                        | Content Type                       |
+| ---------------------------------- | ---------------------------------- | ---------------------------------- |
+| apierrors.BadRequestError          | 400                                | application/json                   |
+| apierrors.UnauthorizedError        | 401                                | application/json                   |
+| apierrors.PaymentRequiredError     | 402                                | application/json                   |
+| apierrors.ForbiddenError           | 403                                | application/json                   |
+| apierrors.NotFoundError            | 404                                | application/json                   |
+| apierrors.ConflictError            | 409                                | application/json                   |
+| apierrors.UnprocessableEntityError | 422                                | application/json                   |
+| apierrors.InternalServerError      | 500                                | application/json                   |
+| apierrors.BadGatewayError          | 502                                | application/json                   |
+| apierrors.ServiceUnavailableError  | 503                                | application/json                   |
+| apierrors.GatewayTimeoutError      | 504                                | application/json                   |
+| apierrors.APIError                 | 4XX, 5XX                           | \*/\*                              |
 
 ## GetRuleset
 
@@ -393,20 +393,20 @@ func main() {
 
 ### Errors
 
-| Error Type                                                   | Status Code                                                  | Content Type                                                 |
-| ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| apierrors.GlobalEventRulesGetRulesetBadRequestError          | 400                                                          | application/json                                             |
-| apierrors.GlobalEventRulesGetRulesetUnauthorizedError        | 401                                                          | application/json                                             |
-| apierrors.GlobalEventRulesGetRulesetPaymentRequiredError     | 402                                                          | application/json                                             |
-| apierrors.GlobalEventRulesGetRulesetForbiddenError           | 403                                                          | application/json                                             |
-| apierrors.GlobalEventRulesGetRulesetNotFoundError            | 404                                                          | application/json                                             |
-| apierrors.GlobalEventRulesGetRulesetConflictError            | 409                                                          | application/json                                             |
-| apierrors.GlobalEventRulesGetRulesetUnprocessableEntityError | 422                                                          | application/json                                             |
-| apierrors.GlobalEventRulesGetRulesetInternalServerError      | 500                                                          | application/json                                             |
-| apierrors.GlobalEventRulesGetRulesetBadGatewayError          | 502                                                          | application/json                                             |
-| apierrors.GlobalEventRulesGetRulesetServiceUnavailableError  | 503                                                          | application/json                                             |
-| apierrors.GlobalEventRulesGetRulesetGatewayTimeoutError      | 504                                                          | application/json                                             |
-| apierrors.APIError                                           | 4XX, 5XX                                                     | \*/\*                                                        |
+| Error Type                         | Status Code                        | Content Type                       |
+| ---------------------------------- | ---------------------------------- | ---------------------------------- |
+| apierrors.BadRequestError          | 400                                | application/json                   |
+| apierrors.UnauthorizedError        | 401                                | application/json                   |
+| apierrors.PaymentRequiredError     | 402                                | application/json                   |
+| apierrors.ForbiddenError           | 403                                | application/json                   |
+| apierrors.NotFoundError            | 404                                | application/json                   |
+| apierrors.ConflictError            | 409                                | application/json                   |
+| apierrors.UnprocessableEntityError | 422                                | application/json                   |
+| apierrors.InternalServerError      | 500                                | application/json                   |
+| apierrors.BadGatewayError          | 502                                | application/json                   |
+| apierrors.ServiceUnavailableError  | 503                                | application/json                   |
+| apierrors.GatewayTimeoutError      | 504                                | application/json                   |
+| apierrors.APIError                 | 4XX, 5XX                           | \*/\*                              |
 
 ## UpdateRuleset
 
@@ -460,20 +460,20 @@ func main() {
 
 ### Errors
 
-| Error Type                                                      | Status Code                                                     | Content Type                                                    |
-| --------------------------------------------------------------- | --------------------------------------------------------------- | --------------------------------------------------------------- |
-| apierrors.GlobalEventRulesUpdateRulesetBadRequestError          | 400                                                             | application/json                                                |
-| apierrors.GlobalEventRulesUpdateRulesetUnauthorizedError        | 401                                                             | application/json                                                |
-| apierrors.GlobalEventRulesUpdateRulesetPaymentRequiredError     | 402                                                             | application/json                                                |
-| apierrors.GlobalEventRulesUpdateRulesetForbiddenError           | 403                                                             | application/json                                                |
-| apierrors.GlobalEventRulesUpdateRulesetNotFoundError            | 404                                                             | application/json                                                |
-| apierrors.GlobalEventRulesUpdateRulesetConflictError            | 409                                                             | application/json                                                |
-| apierrors.GlobalEventRulesUpdateRulesetUnprocessableEntityError | 422                                                             | application/json                                                |
-| apierrors.GlobalEventRulesUpdateRulesetInternalServerError      | 500                                                             | application/json                                                |
-| apierrors.GlobalEventRulesUpdateRulesetBadGatewayError          | 502                                                             | application/json                                                |
-| apierrors.GlobalEventRulesUpdateRulesetServiceUnavailableError  | 503                                                             | application/json                                                |
-| apierrors.GlobalEventRulesUpdateRulesetGatewayTimeoutError      | 504                                                             | application/json                                                |
-| apierrors.APIError                                              | 4XX, 5XX                                                        | \*/\*                                                           |
+| Error Type                         | Status Code                        | Content Type                       |
+| ---------------------------------- | ---------------------------------- | ---------------------------------- |
+| apierrors.BadRequestError          | 400                                | application/json                   |
+| apierrors.UnauthorizedError        | 401                                | application/json                   |
+| apierrors.PaymentRequiredError     | 402                                | application/json                   |
+| apierrors.ForbiddenError           | 403                                | application/json                   |
+| apierrors.NotFoundError            | 404                                | application/json                   |
+| apierrors.ConflictError            | 409                                | application/json                   |
+| apierrors.UnprocessableEntityError | 422                                | application/json                   |
+| apierrors.InternalServerError      | 500                                | application/json                   |
+| apierrors.BadGatewayError          | 502                                | application/json                   |
+| apierrors.ServiceUnavailableError  | 503                                | application/json                   |
+| apierrors.GatewayTimeoutError      | 504                                | application/json                   |
+| apierrors.APIError                 | 4XX, 5XX                           | \*/\*                              |
 
 ## UpdateRule
 
@@ -531,17 +531,17 @@ func main() {
 
 ### Errors
 
-| Error Type                                                       | Status Code                                                      | Content Type                                                     |
-| ---------------------------------------------------------------- | ---------------------------------------------------------------- | ---------------------------------------------------------------- |
-| apierrors.GlobalEventRulesUpdateRuleByIDBadRequestError          | 400                                                              | application/json                                                 |
-| apierrors.GlobalEventRulesUpdateRuleByIDUnauthorizedError        | 401                                                              | application/json                                                 |
-| apierrors.GlobalEventRulesUpdateRuleByIDPaymentRequiredError     | 402                                                              | application/json                                                 |
-| apierrors.GlobalEventRulesUpdateRuleByIDForbiddenError           | 403                                                              | application/json                                                 |
-| apierrors.GlobalEventRulesUpdateRuleByIDNotFoundError            | 404                                                              | application/json                                                 |
-| apierrors.GlobalEventRulesUpdateRuleByIDConflictError            | 409                                                              | application/json                                                 |
-| apierrors.GlobalEventRulesUpdateRuleByIDUnprocessableEntityError | 422                                                              | application/json                                                 |
-| apierrors.GlobalEventRulesUpdateRuleByIDInternalServerError      | 500                                                              | application/json                                                 |
-| apierrors.GlobalEventRulesUpdateRuleByIDBadGatewayError          | 502                                                              | application/json                                                 |
-| apierrors.GlobalEventRulesUpdateRuleByIDServiceUnavailableError  | 503                                                              | application/json                                                 |
-| apierrors.GlobalEventRulesUpdateRuleByIDGatewayTimeoutError      | 504                                                              | application/json                                                 |
-| apierrors.APIError                                               | 4XX, 5XX                                                         | \*/\*                                                            |
+| Error Type                         | Status Code                        | Content Type                       |
+| ---------------------------------- | ---------------------------------- | ---------------------------------- |
+| apierrors.BadRequestError          | 400                                | application/json                   |
+| apierrors.UnauthorizedError        | 401                                | application/json                   |
+| apierrors.PaymentRequiredError     | 402                                | application/json                   |
+| apierrors.ForbiddenError           | 403                                | application/json                   |
+| apierrors.NotFoundError            | 404                                | application/json                   |
+| apierrors.ConflictError            | 409                                | application/json                   |
+| apierrors.UnprocessableEntityError | 422                                | application/json                   |
+| apierrors.InternalServerError      | 500                                | application/json                   |
+| apierrors.BadGatewayError          | 502                                | application/json                   |
+| apierrors.ServiceUnavailableError  | 503                                | application/json                   |
+| apierrors.GatewayTimeoutError      | 504                                | application/json                   |
+| apierrors.APIError                 | 4XX, 5XX                           | \*/\*                              |

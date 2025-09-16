@@ -89,17 +89,17 @@ func main() {
 
 ### Errors
 
-| Error Type                                                                  | Status Code                                                                 | Content Type                                                                |
-| --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
-| apierrors.MSTeamsCreateOrUpdateMsteamsConfigurationBadRequestError          | 400                                                                         | application/json                                                            |
-| apierrors.MSTeamsCreateOrUpdateMsteamsConfigurationUnauthorizedError        | 401                                                                         | application/json                                                            |
-| apierrors.MSTeamsCreateOrUpdateMsteamsConfigurationPaymentRequiredError     | 402                                                                         | application/json                                                            |
-| apierrors.MSTeamsCreateOrUpdateMsteamsConfigurationForbiddenError           | 403                                                                         | application/json                                                            |
-| apierrors.MSTeamsCreateOrUpdateMsteamsConfigurationNotFoundError            | 404                                                                         | application/json                                                            |
-| apierrors.MSTeamsCreateOrUpdateMsteamsConfigurationConflictError            | 409                                                                         | application/json                                                            |
-| apierrors.MSTeamsCreateOrUpdateMsteamsConfigurationUnprocessableEntityError | 422                                                                         | application/json                                                            |
-| apierrors.MSTeamsCreateOrUpdateMsteamsConfigurationInternalServerError      | 500                                                                         | application/json                                                            |
-| apierrors.MSTeamsCreateOrUpdateMsteamsConfigurationBadGatewayError          | 502                                                                         | application/json                                                            |
-| apierrors.MSTeamsCreateOrUpdateMsteamsConfigurationServiceUnavailableError  | 503                                                                         | application/json                                                            |
-| apierrors.MSTeamsCreateOrUpdateMsteamsConfigurationGatewayTimeoutError      | 504                                                                         | application/json                                                            |
-| apierrors.APIError                                                          | 4XX, 5XX                                                                    | \*/\*                                                                       |
+| Error Type                         | Status Code                        | Content Type                       |
+| ---------------------------------- | ---------------------------------- | ---------------------------------- |
+| apierrors.BadRequestError          | 400                                | application/json                   |
+| apierrors.UnauthorizedError        | 401                                | application/json                   |
+| apierrors.PaymentRequiredError     | 402                                | application/json                   |
+| apierrors.ForbiddenError           | 403                                | application/json                   |
+| apierrors.NotFoundError            | 404                                | application/json                   |
+| apierrors.ConflictError            | 409                                | application/json                   |
+| apierrors.UnprocessableEntityError | 422                                | application/json                   |
+| apierrors.InternalServerError      | 500                                | application/json                   |
+| apierrors.BadGatewayError          | 502                                | application/json                   |
+| apierrors.ServiceUnavailableError  | 503                                | application/json                   |
+| apierrors.GatewayTimeoutError      | 504                                | application/json                   |
+| apierrors.APIError                 | 4XX, 5XX                           | \*/\*                              |

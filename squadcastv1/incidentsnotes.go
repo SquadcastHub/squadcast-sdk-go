@@ -231,7 +231,7 @@ func (s *IncidentsNotes) Create(ctx context.Context, incidentID string, v3Incide
 				return nil, err
 			}
 
-			var out apierrors.NotesCreateNotesBadRequestError
+			var out apierrors.BadRequestError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -256,7 +256,7 @@ func (s *IncidentsNotes) Create(ctx context.Context, incidentID string, v3Incide
 				return nil, err
 			}
 
-			var out apierrors.NotesCreateNotesUnauthorizedError
+			var out apierrors.UnauthorizedError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -281,7 +281,7 @@ func (s *IncidentsNotes) Create(ctx context.Context, incidentID string, v3Incide
 				return nil, err
 			}
 
-			var out apierrors.NotesCreateNotesPaymentRequiredError
+			var out apierrors.PaymentRequiredError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -306,7 +306,7 @@ func (s *IncidentsNotes) Create(ctx context.Context, incidentID string, v3Incide
 				return nil, err
 			}
 
-			var out apierrors.NotesCreateNotesForbiddenError
+			var out apierrors.ForbiddenError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -331,7 +331,7 @@ func (s *IncidentsNotes) Create(ctx context.Context, incidentID string, v3Incide
 				return nil, err
 			}
 
-			var out apierrors.NotesCreateNotesNotFoundError
+			var out apierrors.NotFoundError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -356,7 +356,7 @@ func (s *IncidentsNotes) Create(ctx context.Context, incidentID string, v3Incide
 				return nil, err
 			}
 
-			var out apierrors.NotesCreateNotesConflictError
+			var out apierrors.ConflictError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -381,7 +381,7 @@ func (s *IncidentsNotes) Create(ctx context.Context, incidentID string, v3Incide
 				return nil, err
 			}
 
-			var out apierrors.NotesCreateNotesUnprocessableEntityError
+			var out apierrors.UnprocessableEntityError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -406,7 +406,7 @@ func (s *IncidentsNotes) Create(ctx context.Context, incidentID string, v3Incide
 				return nil, err
 			}
 
-			var out apierrors.NotesCreateNotesInternalServerError
+			var out apierrors.InternalServerError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -431,7 +431,7 @@ func (s *IncidentsNotes) Create(ctx context.Context, incidentID string, v3Incide
 				return nil, err
 			}
 
-			var out apierrors.NotesCreateNotesBadGatewayError
+			var out apierrors.BadGatewayError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -456,7 +456,7 @@ func (s *IncidentsNotes) Create(ctx context.Context, incidentID string, v3Incide
 				return nil, err
 			}
 
-			var out apierrors.NotesCreateNotesServiceUnavailableError
+			var out apierrors.ServiceUnavailableError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -481,7 +481,7 @@ func (s *IncidentsNotes) Create(ctx context.Context, incidentID string, v3Incide
 				return nil, err
 			}
 
-			var out apierrors.NotesCreateNotesGatewayTimeoutError
+			var out apierrors.GatewayTimeoutError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -714,7 +714,7 @@ func (s *IncidentsNotes) Delete(ctx context.Context, incidentID string, noteID s
 				return nil, err
 			}
 
-			var out apierrors.NotesDeleteNoteBadRequestError
+			var out apierrors.BadRequestError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -739,7 +739,7 @@ func (s *IncidentsNotes) Delete(ctx context.Context, incidentID string, noteID s
 				return nil, err
 			}
 
-			var out apierrors.NotesDeleteNoteUnauthorizedError
+			var out apierrors.UnauthorizedError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -764,7 +764,7 @@ func (s *IncidentsNotes) Delete(ctx context.Context, incidentID string, noteID s
 				return nil, err
 			}
 
-			var out apierrors.NotesDeleteNotePaymentRequiredError
+			var out apierrors.PaymentRequiredError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -789,7 +789,7 @@ func (s *IncidentsNotes) Delete(ctx context.Context, incidentID string, noteID s
 				return nil, err
 			}
 
-			var out apierrors.NotesDeleteNoteForbiddenError
+			var out apierrors.ForbiddenError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -814,7 +814,7 @@ func (s *IncidentsNotes) Delete(ctx context.Context, incidentID string, noteID s
 				return nil, err
 			}
 
-			var out apierrors.NotesDeleteNoteNotFoundError
+			var out apierrors.NotFoundError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -839,7 +839,7 @@ func (s *IncidentsNotes) Delete(ctx context.Context, incidentID string, noteID s
 				return nil, err
 			}
 
-			var out apierrors.NotesDeleteNoteConflictError
+			var out apierrors.ConflictError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -864,7 +864,7 @@ func (s *IncidentsNotes) Delete(ctx context.Context, incidentID string, noteID s
 				return nil, err
 			}
 
-			var out apierrors.NotesDeleteNoteUnprocessableEntityError
+			var out apierrors.UnprocessableEntityError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -889,7 +889,7 @@ func (s *IncidentsNotes) Delete(ctx context.Context, incidentID string, noteID s
 				return nil, err
 			}
 
-			var out apierrors.NotesDeleteNoteInternalServerError
+			var out apierrors.InternalServerError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -914,7 +914,7 @@ func (s *IncidentsNotes) Delete(ctx context.Context, incidentID string, noteID s
 				return nil, err
 			}
 
-			var out apierrors.NotesDeleteNoteBadGatewayError
+			var out apierrors.BadGatewayError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -939,7 +939,7 @@ func (s *IncidentsNotes) Delete(ctx context.Context, incidentID string, noteID s
 				return nil, err
 			}
 
-			var out apierrors.NotesDeleteNoteServiceUnavailableError
+			var out apierrors.ServiceUnavailableError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -964,7 +964,7 @@ func (s *IncidentsNotes) Delete(ctx context.Context, incidentID string, noteID s
 				return nil, err
 			}
 
-			var out apierrors.NotesDeleteNoteGatewayTimeoutError
+			var out apierrors.GatewayTimeoutError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -1208,7 +1208,7 @@ func (s *IncidentsNotes) Update(ctx context.Context, incidentID string, noteID s
 				return nil, err
 			}
 
-			var out apierrors.NotesUpdateNoteBadRequestError
+			var out apierrors.BadRequestError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -1233,7 +1233,7 @@ func (s *IncidentsNotes) Update(ctx context.Context, incidentID string, noteID s
 				return nil, err
 			}
 
-			var out apierrors.NotesUpdateNoteUnauthorizedError
+			var out apierrors.UnauthorizedError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -1258,7 +1258,7 @@ func (s *IncidentsNotes) Update(ctx context.Context, incidentID string, noteID s
 				return nil, err
 			}
 
-			var out apierrors.NotesUpdateNotePaymentRequiredError
+			var out apierrors.PaymentRequiredError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -1283,7 +1283,7 @@ func (s *IncidentsNotes) Update(ctx context.Context, incidentID string, noteID s
 				return nil, err
 			}
 
-			var out apierrors.NotesUpdateNoteForbiddenError
+			var out apierrors.ForbiddenError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -1308,7 +1308,7 @@ func (s *IncidentsNotes) Update(ctx context.Context, incidentID string, noteID s
 				return nil, err
 			}
 
-			var out apierrors.NotesUpdateNoteNotFoundError
+			var out apierrors.NotFoundError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -1333,7 +1333,7 @@ func (s *IncidentsNotes) Update(ctx context.Context, incidentID string, noteID s
 				return nil, err
 			}
 
-			var out apierrors.NotesUpdateNoteConflictError
+			var out apierrors.ConflictError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -1358,7 +1358,7 @@ func (s *IncidentsNotes) Update(ctx context.Context, incidentID string, noteID s
 				return nil, err
 			}
 
-			var out apierrors.NotesUpdateNoteUnprocessableEntityError
+			var out apierrors.UnprocessableEntityError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -1383,7 +1383,7 @@ func (s *IncidentsNotes) Update(ctx context.Context, incidentID string, noteID s
 				return nil, err
 			}
 
-			var out apierrors.NotesUpdateNoteInternalServerError
+			var out apierrors.InternalServerError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -1408,7 +1408,7 @@ func (s *IncidentsNotes) Update(ctx context.Context, incidentID string, noteID s
 				return nil, err
 			}
 
-			var out apierrors.NotesUpdateNoteBadGatewayError
+			var out apierrors.BadGatewayError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -1433,7 +1433,7 @@ func (s *IncidentsNotes) Update(ctx context.Context, incidentID string, noteID s
 				return nil, err
 			}
 
-			var out apierrors.NotesUpdateNoteServiceUnavailableError
+			var out apierrors.ServiceUnavailableError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -1458,7 +1458,7 @@ func (s *IncidentsNotes) Update(ctx context.Context, incidentID string, noteID s
 				return nil, err
 			}
 
-			var out apierrors.NotesUpdateNoteGatewayTimeoutError
+			var out apierrors.GatewayTimeoutError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}

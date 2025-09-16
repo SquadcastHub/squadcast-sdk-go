@@ -231,7 +231,7 @@ func (s *IncidentsRunbooks) Attach(ctx context.Context, incidentID string, v3Inc
 				return nil, err
 			}
 
-			var out apierrors.RunbooksAttachRunbooksBadRequestError
+			var out apierrors.BadRequestError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -256,7 +256,7 @@ func (s *IncidentsRunbooks) Attach(ctx context.Context, incidentID string, v3Inc
 				return nil, err
 			}
 
-			var out apierrors.RunbooksAttachRunbooksUnauthorizedError
+			var out apierrors.UnauthorizedError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -281,7 +281,7 @@ func (s *IncidentsRunbooks) Attach(ctx context.Context, incidentID string, v3Inc
 				return nil, err
 			}
 
-			var out apierrors.RunbooksAttachRunbooksPaymentRequiredError
+			var out apierrors.PaymentRequiredError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -306,7 +306,7 @@ func (s *IncidentsRunbooks) Attach(ctx context.Context, incidentID string, v3Inc
 				return nil, err
 			}
 
-			var out apierrors.RunbooksAttachRunbooksForbiddenError
+			var out apierrors.ForbiddenError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -331,7 +331,7 @@ func (s *IncidentsRunbooks) Attach(ctx context.Context, incidentID string, v3Inc
 				return nil, err
 			}
 
-			var out apierrors.RunbooksAttachRunbooksNotFoundError
+			var out apierrors.NotFoundError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -356,7 +356,7 @@ func (s *IncidentsRunbooks) Attach(ctx context.Context, incidentID string, v3Inc
 				return nil, err
 			}
 
-			var out apierrors.RunbooksAttachRunbooksConflictError
+			var out apierrors.ConflictError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -381,7 +381,7 @@ func (s *IncidentsRunbooks) Attach(ctx context.Context, incidentID string, v3Inc
 				return nil, err
 			}
 
-			var out apierrors.RunbooksAttachRunbooksUnprocessableEntityError
+			var out apierrors.UnprocessableEntityError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -406,7 +406,7 @@ func (s *IncidentsRunbooks) Attach(ctx context.Context, incidentID string, v3Inc
 				return nil, err
 			}
 
-			var out apierrors.RunbooksAttachRunbooksInternalServerError
+			var out apierrors.InternalServerError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -431,7 +431,7 @@ func (s *IncidentsRunbooks) Attach(ctx context.Context, incidentID string, v3Inc
 				return nil, err
 			}
 
-			var out apierrors.RunbooksAttachRunbooksBadGatewayError
+			var out apierrors.BadGatewayError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -456,7 +456,7 @@ func (s *IncidentsRunbooks) Attach(ctx context.Context, incidentID string, v3Inc
 				return nil, err
 			}
 
-			var out apierrors.RunbooksAttachRunbooksServiceUnavailableError
+			var out apierrors.ServiceUnavailableError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -481,7 +481,7 @@ func (s *IncidentsRunbooks) Attach(ctx context.Context, incidentID string, v3Inc
 				return nil, err
 			}
 
-			var out apierrors.RunbooksAttachRunbooksGatewayTimeoutError
+			var out apierrors.GatewayTimeoutError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}

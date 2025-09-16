@@ -226,7 +226,7 @@ func (s *IncidentsActions) CreateJiraCloudTicket(ctx context.Context, incidentID
 				return nil, err
 			}
 
-			var out apierrors.IncidentActionsCreateATicketOnJiraCloudBadRequestError
+			var out apierrors.BadRequestError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -251,7 +251,7 @@ func (s *IncidentsActions) CreateJiraCloudTicket(ctx context.Context, incidentID
 				return nil, err
 			}
 
-			var out apierrors.IncidentActionsCreateATicketOnJiraCloudUnauthorizedError
+			var out apierrors.UnauthorizedError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -276,7 +276,7 @@ func (s *IncidentsActions) CreateJiraCloudTicket(ctx context.Context, incidentID
 				return nil, err
 			}
 
-			var out apierrors.IncidentActionsCreateATicketOnJiraCloudPaymentRequiredError
+			var out apierrors.PaymentRequiredError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -301,7 +301,7 @@ func (s *IncidentsActions) CreateJiraCloudTicket(ctx context.Context, incidentID
 				return nil, err
 			}
 
-			var out apierrors.IncidentActionsCreateATicketOnJiraCloudForbiddenError
+			var out apierrors.ForbiddenError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -326,7 +326,7 @@ func (s *IncidentsActions) CreateJiraCloudTicket(ctx context.Context, incidentID
 				return nil, err
 			}
 
-			var out apierrors.IncidentActionsCreateATicketOnJiraCloudNotFoundError
+			var out apierrors.NotFoundError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -351,7 +351,7 @@ func (s *IncidentsActions) CreateJiraCloudTicket(ctx context.Context, incidentID
 				return nil, err
 			}
 
-			var out apierrors.IncidentActionsCreateATicketOnJiraCloudConflictError
+			var out apierrors.ConflictError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -376,7 +376,7 @@ func (s *IncidentsActions) CreateJiraCloudTicket(ctx context.Context, incidentID
 				return nil, err
 			}
 
-			var out apierrors.IncidentActionsCreateATicketOnJiraCloudUnprocessableEntityError
+			var out apierrors.UnprocessableEntityError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -401,7 +401,7 @@ func (s *IncidentsActions) CreateJiraCloudTicket(ctx context.Context, incidentID
 				return nil, err
 			}
 
-			var out apierrors.IncidentActionsCreateATicketOnJiraCloudInternalServerError
+			var out apierrors.InternalServerError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -426,7 +426,7 @@ func (s *IncidentsActions) CreateJiraCloudTicket(ctx context.Context, incidentID
 				return nil, err
 			}
 
-			var out apierrors.IncidentActionsCreateATicketOnJiraCloudBadGatewayError
+			var out apierrors.BadGatewayError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -451,7 +451,7 @@ func (s *IncidentsActions) CreateJiraCloudTicket(ctx context.Context, incidentID
 				return nil, err
 			}
 
-			var out apierrors.IncidentActionsCreateATicketOnJiraCloudServiceUnavailableError
+			var out apierrors.ServiceUnavailableError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -476,7 +476,7 @@ func (s *IncidentsActions) CreateJiraCloudTicket(ctx context.Context, incidentID
 				return nil, err
 			}
 
-			var out apierrors.IncidentActionsCreateATicketOnJiraCloudGatewayTimeoutError
+			var out apierrors.GatewayTimeoutError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -710,7 +710,7 @@ func (s *IncidentsActions) CreateJiraServerTicket(ctx context.Context, incidentI
 				return nil, err
 			}
 
-			var out apierrors.IncidentActionsCreateATicketOnJiraServerBadRequestError
+			var out apierrors.BadRequestError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -735,7 +735,7 @@ func (s *IncidentsActions) CreateJiraServerTicket(ctx context.Context, incidentI
 				return nil, err
 			}
 
-			var out apierrors.IncidentActionsCreateATicketOnJiraServerUnauthorizedError
+			var out apierrors.UnauthorizedError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -760,7 +760,7 @@ func (s *IncidentsActions) CreateJiraServerTicket(ctx context.Context, incidentI
 				return nil, err
 			}
 
-			var out apierrors.IncidentActionsCreateATicketOnJiraServerPaymentRequiredError
+			var out apierrors.PaymentRequiredError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -785,7 +785,7 @@ func (s *IncidentsActions) CreateJiraServerTicket(ctx context.Context, incidentI
 				return nil, err
 			}
 
-			var out apierrors.IncidentActionsCreateATicketOnJiraServerForbiddenError
+			var out apierrors.ForbiddenError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -810,7 +810,7 @@ func (s *IncidentsActions) CreateJiraServerTicket(ctx context.Context, incidentI
 				return nil, err
 			}
 
-			var out apierrors.IncidentActionsCreateATicketOnJiraServerNotFoundError
+			var out apierrors.NotFoundError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -835,7 +835,7 @@ func (s *IncidentsActions) CreateJiraServerTicket(ctx context.Context, incidentI
 				return nil, err
 			}
 
-			var out apierrors.IncidentActionsCreateATicketOnJiraServerConflictError
+			var out apierrors.ConflictError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -860,7 +860,7 @@ func (s *IncidentsActions) CreateJiraServerTicket(ctx context.Context, incidentI
 				return nil, err
 			}
 
-			var out apierrors.IncidentActionsCreateATicketOnJiraServerUnprocessableEntityError
+			var out apierrors.UnprocessableEntityError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -885,7 +885,7 @@ func (s *IncidentsActions) CreateJiraServerTicket(ctx context.Context, incidentI
 				return nil, err
 			}
 
-			var out apierrors.IncidentActionsCreateATicketOnJiraServerInternalServerError
+			var out apierrors.InternalServerError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -910,7 +910,7 @@ func (s *IncidentsActions) CreateJiraServerTicket(ctx context.Context, incidentI
 				return nil, err
 			}
 
-			var out apierrors.IncidentActionsCreateATicketOnJiraServerBadGatewayError
+			var out apierrors.BadGatewayError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -935,7 +935,7 @@ func (s *IncidentsActions) CreateJiraServerTicket(ctx context.Context, incidentI
 				return nil, err
 			}
 
-			var out apierrors.IncidentActionsCreateATicketOnJiraServerServiceUnavailableError
+			var out apierrors.ServiceUnavailableError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -960,7 +960,7 @@ func (s *IncidentsActions) CreateJiraServerTicket(ctx context.Context, incidentI
 				return nil, err
 			}
 
-			var out apierrors.IncidentActionsCreateATicketOnJiraServerGatewayTimeoutError
+			var out apierrors.GatewayTimeoutError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -1194,7 +1194,7 @@ func (s *IncidentsActions) CreateInServicenow(ctx context.Context, incidentID st
 				return nil, err
 			}
 
-			var out apierrors.IncidentActionsCreateAnIncidentInServicenowBadRequestError
+			var out apierrors.BadRequestError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -1219,7 +1219,7 @@ func (s *IncidentsActions) CreateInServicenow(ctx context.Context, incidentID st
 				return nil, err
 			}
 
-			var out apierrors.IncidentActionsCreateAnIncidentInServicenowUnauthorizedError
+			var out apierrors.UnauthorizedError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -1244,7 +1244,7 @@ func (s *IncidentsActions) CreateInServicenow(ctx context.Context, incidentID st
 				return nil, err
 			}
 
-			var out apierrors.IncidentActionsCreateAnIncidentInServicenowPaymentRequiredError
+			var out apierrors.PaymentRequiredError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -1269,7 +1269,7 @@ func (s *IncidentsActions) CreateInServicenow(ctx context.Context, incidentID st
 				return nil, err
 			}
 
-			var out apierrors.IncidentActionsCreateAnIncidentInServicenowForbiddenError
+			var out apierrors.ForbiddenError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -1294,7 +1294,7 @@ func (s *IncidentsActions) CreateInServicenow(ctx context.Context, incidentID st
 				return nil, err
 			}
 
-			var out apierrors.IncidentActionsCreateAnIncidentInServicenowNotFoundError
+			var out apierrors.NotFoundError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -1319,7 +1319,7 @@ func (s *IncidentsActions) CreateInServicenow(ctx context.Context, incidentID st
 				return nil, err
 			}
 
-			var out apierrors.IncidentActionsCreateAnIncidentInServicenowConflictError
+			var out apierrors.ConflictError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -1344,7 +1344,7 @@ func (s *IncidentsActions) CreateInServicenow(ctx context.Context, incidentID st
 				return nil, err
 			}
 
-			var out apierrors.IncidentActionsCreateAnIncidentInServicenowUnprocessableEntityError
+			var out apierrors.UnprocessableEntityError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -1369,7 +1369,7 @@ func (s *IncidentsActions) CreateInServicenow(ctx context.Context, incidentID st
 				return nil, err
 			}
 
-			var out apierrors.IncidentActionsCreateAnIncidentInServicenowInternalServerError
+			var out apierrors.InternalServerError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -1394,7 +1394,7 @@ func (s *IncidentsActions) CreateInServicenow(ctx context.Context, incidentID st
 				return nil, err
 			}
 
-			var out apierrors.IncidentActionsCreateAnIncidentInServicenowBadGatewayError
+			var out apierrors.BadGatewayError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -1419,7 +1419,7 @@ func (s *IncidentsActions) CreateInServicenow(ctx context.Context, incidentID st
 				return nil, err
 			}
 
-			var out apierrors.IncidentActionsCreateAnIncidentInServicenowServiceUnavailableError
+			var out apierrors.ServiceUnavailableError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -1444,7 +1444,7 @@ func (s *IncidentsActions) CreateInServicenow(ctx context.Context, incidentID st
 				return nil, err
 			}
 
-			var out apierrors.IncidentActionsCreateAnIncidentInServicenowGatewayTimeoutError
+			var out apierrors.GatewayTimeoutError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}

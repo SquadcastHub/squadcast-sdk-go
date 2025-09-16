@@ -232,7 +232,7 @@ func (s *Squads) Create(ctx context.Context, request components.V3SquadsCreateSq
 				return nil, err
 			}
 
-			var out apierrors.SquadsCreateSquadBadRequestError
+			var out apierrors.BadRequestError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -257,7 +257,7 @@ func (s *Squads) Create(ctx context.Context, request components.V3SquadsCreateSq
 				return nil, err
 			}
 
-			var out apierrors.SquadsCreateSquadUnauthorizedError
+			var out apierrors.UnauthorizedError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -282,7 +282,7 @@ func (s *Squads) Create(ctx context.Context, request components.V3SquadsCreateSq
 				return nil, err
 			}
 
-			var out apierrors.SquadsCreateSquadPaymentRequiredError
+			var out apierrors.PaymentRequiredError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -307,7 +307,7 @@ func (s *Squads) Create(ctx context.Context, request components.V3SquadsCreateSq
 				return nil, err
 			}
 
-			var out apierrors.SquadsCreateSquadForbiddenError
+			var out apierrors.ForbiddenError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -332,7 +332,7 @@ func (s *Squads) Create(ctx context.Context, request components.V3SquadsCreateSq
 				return nil, err
 			}
 
-			var out apierrors.SquadsCreateSquadNotFoundError
+			var out apierrors.NotFoundError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -357,7 +357,7 @@ func (s *Squads) Create(ctx context.Context, request components.V3SquadsCreateSq
 				return nil, err
 			}
 
-			var out apierrors.SquadsCreateSquadConflictError
+			var out apierrors.ConflictError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -382,7 +382,7 @@ func (s *Squads) Create(ctx context.Context, request components.V3SquadsCreateSq
 				return nil, err
 			}
 
-			var out apierrors.SquadsCreateSquadUnprocessableEntityError
+			var out apierrors.UnprocessableEntityError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -407,7 +407,7 @@ func (s *Squads) Create(ctx context.Context, request components.V3SquadsCreateSq
 				return nil, err
 			}
 
-			var out apierrors.SquadsCreateSquadInternalServerError
+			var out apierrors.InternalServerError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -432,7 +432,7 @@ func (s *Squads) Create(ctx context.Context, request components.V3SquadsCreateSq
 				return nil, err
 			}
 
-			var out apierrors.SquadsCreateSquadBadGatewayError
+			var out apierrors.BadGatewayError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -457,7 +457,7 @@ func (s *Squads) Create(ctx context.Context, request components.V3SquadsCreateSq
 				return nil, err
 			}
 
-			var out apierrors.SquadsCreateSquadServiceUnavailableError
+			var out apierrors.ServiceUnavailableError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -482,7 +482,7 @@ func (s *Squads) Create(ctx context.Context, request components.V3SquadsCreateSq
 				return nil, err
 			}
 
-			var out apierrors.SquadsCreateSquadGatewayTimeoutError
+			var out apierrors.GatewayTimeoutError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -713,7 +713,7 @@ func (s *Squads) Delete(ctx context.Context, squadID string, opts ...operations.
 				return nil, err
 			}
 
-			var out apierrors.SquadsDeleteSquadBadRequestError
+			var out apierrors.BadRequestError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -738,7 +738,7 @@ func (s *Squads) Delete(ctx context.Context, squadID string, opts ...operations.
 				return nil, err
 			}
 
-			var out apierrors.SquadsDeleteSquadUnauthorizedError
+			var out apierrors.UnauthorizedError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -763,7 +763,7 @@ func (s *Squads) Delete(ctx context.Context, squadID string, opts ...operations.
 				return nil, err
 			}
 
-			var out apierrors.SquadsDeleteSquadPaymentRequiredError
+			var out apierrors.PaymentRequiredError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -788,7 +788,7 @@ func (s *Squads) Delete(ctx context.Context, squadID string, opts ...operations.
 				return nil, err
 			}
 
-			var out apierrors.SquadsDeleteSquadForbiddenError
+			var out apierrors.ForbiddenError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -813,7 +813,7 @@ func (s *Squads) Delete(ctx context.Context, squadID string, opts ...operations.
 				return nil, err
 			}
 
-			var out apierrors.SquadsDeleteSquadNotFoundError
+			var out apierrors.NotFoundError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -838,7 +838,7 @@ func (s *Squads) Delete(ctx context.Context, squadID string, opts ...operations.
 				return nil, err
 			}
 
-			var out apierrors.SquadsDeleteSquadConflictError
+			var out apierrors.ConflictError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -863,7 +863,7 @@ func (s *Squads) Delete(ctx context.Context, squadID string, opts ...operations.
 				return nil, err
 			}
 
-			var out apierrors.SquadsDeleteSquadUnprocessableEntityError
+			var out apierrors.UnprocessableEntityError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -888,7 +888,7 @@ func (s *Squads) Delete(ctx context.Context, squadID string, opts ...operations.
 				return nil, err
 			}
 
-			var out apierrors.SquadsDeleteSquadInternalServerError
+			var out apierrors.InternalServerError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -913,7 +913,7 @@ func (s *Squads) Delete(ctx context.Context, squadID string, opts ...operations.
 				return nil, err
 			}
 
-			var out apierrors.SquadsDeleteSquadBadGatewayError
+			var out apierrors.BadGatewayError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -938,7 +938,7 @@ func (s *Squads) Delete(ctx context.Context, squadID string, opts ...operations.
 				return nil, err
 			}
 
-			var out apierrors.SquadsDeleteSquadServiceUnavailableError
+			var out apierrors.ServiceUnavailableError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -963,7 +963,7 @@ func (s *Squads) Delete(ctx context.Context, squadID string, opts ...operations.
 				return nil, err
 			}
 
-			var out apierrors.SquadsDeleteSquadGatewayTimeoutError
+			var out apierrors.GatewayTimeoutError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -1199,7 +1199,7 @@ func (s *Squads) GetByID(ctx context.Context, squadID string, opts ...operations
 				return nil, err
 			}
 
-			var out apierrors.SquadsGetSquadByIDBadRequestError
+			var out apierrors.BadRequestError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -1224,7 +1224,7 @@ func (s *Squads) GetByID(ctx context.Context, squadID string, opts ...operations
 				return nil, err
 			}
 
-			var out apierrors.SquadsGetSquadByIDUnauthorizedError
+			var out apierrors.UnauthorizedError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -1249,7 +1249,7 @@ func (s *Squads) GetByID(ctx context.Context, squadID string, opts ...operations
 				return nil, err
 			}
 
-			var out apierrors.SquadsGetSquadByIDPaymentRequiredError
+			var out apierrors.PaymentRequiredError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -1274,7 +1274,7 @@ func (s *Squads) GetByID(ctx context.Context, squadID string, opts ...operations
 				return nil, err
 			}
 
-			var out apierrors.SquadsGetSquadByIDForbiddenError
+			var out apierrors.ForbiddenError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -1299,7 +1299,7 @@ func (s *Squads) GetByID(ctx context.Context, squadID string, opts ...operations
 				return nil, err
 			}
 
-			var out apierrors.SquadsGetSquadByIDNotFoundError
+			var out apierrors.NotFoundError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -1324,7 +1324,7 @@ func (s *Squads) GetByID(ctx context.Context, squadID string, opts ...operations
 				return nil, err
 			}
 
-			var out apierrors.SquadsGetSquadByIDConflictError
+			var out apierrors.ConflictError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -1349,7 +1349,7 @@ func (s *Squads) GetByID(ctx context.Context, squadID string, opts ...operations
 				return nil, err
 			}
 
-			var out apierrors.SquadsGetSquadByIDUnprocessableEntityError
+			var out apierrors.UnprocessableEntityError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -1374,7 +1374,7 @@ func (s *Squads) GetByID(ctx context.Context, squadID string, opts ...operations
 				return nil, err
 			}
 
-			var out apierrors.SquadsGetSquadByIDInternalServerError
+			var out apierrors.InternalServerError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -1399,7 +1399,7 @@ func (s *Squads) GetByID(ctx context.Context, squadID string, opts ...operations
 				return nil, err
 			}
 
-			var out apierrors.SquadsGetSquadByIDBadGatewayError
+			var out apierrors.BadGatewayError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -1424,7 +1424,7 @@ func (s *Squads) GetByID(ctx context.Context, squadID string, opts ...operations
 				return nil, err
 			}
 
-			var out apierrors.SquadsGetSquadByIDServiceUnavailableError
+			var out apierrors.ServiceUnavailableError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -1449,7 +1449,7 @@ func (s *Squads) GetByID(ctx context.Context, squadID string, opts ...operations
 				return nil, err
 			}
 
-			var out apierrors.SquadsGetSquadByIDGatewayTimeoutError
+			var out apierrors.GatewayTimeoutError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -1693,7 +1693,7 @@ func (s *Squads) Update(ctx context.Context, squadID string, v3SquadsUpdateSquad
 				return nil, err
 			}
 
-			var out apierrors.SquadsUpdateSquadBadRequestError
+			var out apierrors.BadRequestError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -1718,7 +1718,7 @@ func (s *Squads) Update(ctx context.Context, squadID string, v3SquadsUpdateSquad
 				return nil, err
 			}
 
-			var out apierrors.SquadsUpdateSquadUnauthorizedError
+			var out apierrors.UnauthorizedError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -1743,7 +1743,7 @@ func (s *Squads) Update(ctx context.Context, squadID string, v3SquadsUpdateSquad
 				return nil, err
 			}
 
-			var out apierrors.SquadsUpdateSquadPaymentRequiredError
+			var out apierrors.PaymentRequiredError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -1768,7 +1768,7 @@ func (s *Squads) Update(ctx context.Context, squadID string, v3SquadsUpdateSquad
 				return nil, err
 			}
 
-			var out apierrors.SquadsUpdateSquadForbiddenError
+			var out apierrors.ForbiddenError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -1793,7 +1793,7 @@ func (s *Squads) Update(ctx context.Context, squadID string, v3SquadsUpdateSquad
 				return nil, err
 			}
 
-			var out apierrors.SquadsUpdateSquadNotFoundError
+			var out apierrors.NotFoundError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -1818,7 +1818,7 @@ func (s *Squads) Update(ctx context.Context, squadID string, v3SquadsUpdateSquad
 				return nil, err
 			}
 
-			var out apierrors.SquadsUpdateSquadConflictError
+			var out apierrors.ConflictError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -1843,7 +1843,7 @@ func (s *Squads) Update(ctx context.Context, squadID string, v3SquadsUpdateSquad
 				return nil, err
 			}
 
-			var out apierrors.SquadsUpdateSquadUnprocessableEntityError
+			var out apierrors.UnprocessableEntityError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -1868,7 +1868,7 @@ func (s *Squads) Update(ctx context.Context, squadID string, v3SquadsUpdateSquad
 				return nil, err
 			}
 
-			var out apierrors.SquadsUpdateSquadInternalServerError
+			var out apierrors.InternalServerError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -1893,7 +1893,7 @@ func (s *Squads) Update(ctx context.Context, squadID string, v3SquadsUpdateSquad
 				return nil, err
 			}
 
-			var out apierrors.SquadsUpdateSquadBadGatewayError
+			var out apierrors.BadGatewayError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -1918,7 +1918,7 @@ func (s *Squads) Update(ctx context.Context, squadID string, v3SquadsUpdateSquad
 				return nil, err
 			}
 
-			var out apierrors.SquadsUpdateSquadServiceUnavailableError
+			var out apierrors.ServiceUnavailableError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -1943,7 +1943,7 @@ func (s *Squads) Update(ctx context.Context, squadID string, v3SquadsUpdateSquad
 				return nil, err
 			}
 
-			var out apierrors.SquadsUpdateSquadGatewayTimeoutError
+			var out apierrors.GatewayTimeoutError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}

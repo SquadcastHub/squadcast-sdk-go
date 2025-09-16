@@ -56,20 +56,20 @@ func main() {
 
 ### Errors
 
-| Error Type                                                                           | Status Code                                                                          | Content Type                                                                         |
-| ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
-| apierrors.OverlayGetOptinForKeyBasedDeduplicationForAServiceBadRequestError          | 400                                                                                  | application/json                                                                     |
-| apierrors.OverlayGetOptinForKeyBasedDeduplicationForAServiceUnauthorizedError        | 401                                                                                  | application/json                                                                     |
-| apierrors.OverlayGetOptinForKeyBasedDeduplicationForAServicePaymentRequiredError     | 402                                                                                  | application/json                                                                     |
-| apierrors.OverlayGetOptinForKeyBasedDeduplicationForAServiceForbiddenError           | 403                                                                                  | application/json                                                                     |
-| apierrors.OverlayGetOptinForKeyBasedDeduplicationForAServiceNotFoundError            | 404                                                                                  | application/json                                                                     |
-| apierrors.OverlayGetOptinForKeyBasedDeduplicationForAServiceConflictError            | 409                                                                                  | application/json                                                                     |
-| apierrors.OverlayGetOptinForKeyBasedDeduplicationForAServiceUnprocessableEntityError | 422                                                                                  | application/json                                                                     |
-| apierrors.OverlayGetOptinForKeyBasedDeduplicationForAServiceInternalServerError      | 500                                                                                  | application/json                                                                     |
-| apierrors.OverlayGetOptinForKeyBasedDeduplicationForAServiceBadGatewayError          | 502                                                                                  | application/json                                                                     |
-| apierrors.OverlayGetOptinForKeyBasedDeduplicationForAServiceServiceUnavailableError  | 503                                                                                  | application/json                                                                     |
-| apierrors.OverlayGetOptinForKeyBasedDeduplicationForAServiceGatewayTimeoutError      | 504                                                                                  | application/json                                                                     |
-| apierrors.APIError                                                                   | 4XX, 5XX                                                                             | \*/\*                                                                                |
+| Error Type                         | Status Code                        | Content Type                       |
+| ---------------------------------- | ---------------------------------- | ---------------------------------- |
+| apierrors.BadRequestError          | 400                                | application/json                   |
+| apierrors.UnauthorizedError        | 401                                | application/json                   |
+| apierrors.PaymentRequiredError     | 402                                | application/json                   |
+| apierrors.ForbiddenError           | 403                                | application/json                   |
+| apierrors.NotFoundError            | 404                                | application/json                   |
+| apierrors.ConflictError            | 409                                | application/json                   |
+| apierrors.UnprocessableEntityError | 422                                | application/json                   |
+| apierrors.InternalServerError      | 500                                | application/json                   |
+| apierrors.BadGatewayError          | 502                                | application/json                   |
+| apierrors.ServiceUnavailableError  | 503                                | application/json                   |
+| apierrors.GatewayTimeoutError      | 504                                | application/json                   |
+| apierrors.APIError                 | 4XX, 5XX                           | \*/\*                              |
 
 ## OptInForKeyBasedDeduplication
 
@@ -121,17 +121,17 @@ func main() {
 
 ### Errors
 
-| Error Type                                                                        | Status Code                                                                       | Content Type                                                                      |
-| --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
-| apierrors.OverlayOptinForKeyBasedDeduplicationForAServiceBadRequestError          | 400                                                                               | application/json                                                                  |
-| apierrors.OverlayOptinForKeyBasedDeduplicationForAServiceUnauthorizedError        | 401                                                                               | application/json                                                                  |
-| apierrors.OverlayOptinForKeyBasedDeduplicationForAServicePaymentRequiredError     | 402                                                                               | application/json                                                                  |
-| apierrors.OverlayOptinForKeyBasedDeduplicationForAServiceForbiddenError           | 403                                                                               | application/json                                                                  |
-| apierrors.OverlayOptinForKeyBasedDeduplicationForAServiceNotFoundError            | 404                                                                               | application/json                                                                  |
-| apierrors.OverlayOptinForKeyBasedDeduplicationForAServiceConflictError            | 409                                                                               | application/json                                                                  |
-| apierrors.OverlayOptinForKeyBasedDeduplicationForAServiceUnprocessableEntityError | 422                                                                               | application/json                                                                  |
-| apierrors.OverlayOptinForKeyBasedDeduplicationForAServiceInternalServerError      | 500                                                                               | application/json                                                                  |
-| apierrors.OverlayOptinForKeyBasedDeduplicationForAServiceBadGatewayError          | 502                                                                               | application/json                                                                  |
-| apierrors.OverlayOptinForKeyBasedDeduplicationForAServiceServiceUnavailableError  | 503                                                                               | application/json                                                                  |
-| apierrors.OverlayOptinForKeyBasedDeduplicationForAServiceGatewayTimeoutError      | 504                                                                               | application/json                                                                  |
-| apierrors.APIError                                                                | 4XX, 5XX                                                                          | \*/\*                                                                             |
+| Error Type                         | Status Code                        | Content Type                       |
+| ---------------------------------- | ---------------------------------- | ---------------------------------- |
+| apierrors.BadRequestError          | 400                                | application/json                   |
+| apierrors.UnauthorizedError        | 401                                | application/json                   |
+| apierrors.PaymentRequiredError     | 402                                | application/json                   |
+| apierrors.ForbiddenError           | 403                                | application/json                   |
+| apierrors.NotFoundError            | 404                                | application/json                   |
+| apierrors.ConflictError            | 409                                | application/json                   |
+| apierrors.UnprocessableEntityError | 422                                | application/json                   |
+| apierrors.InternalServerError      | 500                                | application/json                   |
+| apierrors.BadGatewayError          | 502                                | application/json                   |
+| apierrors.ServiceUnavailableError  | 503                                | application/json                   |
+| apierrors.GatewayTimeoutError      | 504                                | application/json                   |
+| apierrors.APIError                 | 4XX, 5XX                           | \*/\*                              |

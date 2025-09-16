@@ -226,7 +226,7 @@ func (s *AdditionalResponders) Get(ctx context.Context, incidentID string, opts 
 				return nil, err
 			}
 
-			var out apierrors.AdditionalRespondersGetAdditionalRespondersBadRequestError
+			var out apierrors.BadRequestError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -251,7 +251,7 @@ func (s *AdditionalResponders) Get(ctx context.Context, incidentID string, opts 
 				return nil, err
 			}
 
-			var out apierrors.AdditionalRespondersGetAdditionalRespondersUnauthorizedError
+			var out apierrors.UnauthorizedError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -276,7 +276,7 @@ func (s *AdditionalResponders) Get(ctx context.Context, incidentID string, opts 
 				return nil, err
 			}
 
-			var out apierrors.AdditionalRespondersGetAdditionalRespondersPaymentRequiredError
+			var out apierrors.PaymentRequiredError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -301,7 +301,7 @@ func (s *AdditionalResponders) Get(ctx context.Context, incidentID string, opts 
 				return nil, err
 			}
 
-			var out apierrors.AdditionalRespondersGetAdditionalRespondersForbiddenError
+			var out apierrors.ForbiddenError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -326,7 +326,7 @@ func (s *AdditionalResponders) Get(ctx context.Context, incidentID string, opts 
 				return nil, err
 			}
 
-			var out apierrors.AdditionalRespondersGetAdditionalRespondersNotFoundError
+			var out apierrors.NotFoundError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -351,7 +351,7 @@ func (s *AdditionalResponders) Get(ctx context.Context, incidentID string, opts 
 				return nil, err
 			}
 
-			var out apierrors.AdditionalRespondersGetAdditionalRespondersConflictError
+			var out apierrors.ConflictError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -376,7 +376,7 @@ func (s *AdditionalResponders) Get(ctx context.Context, incidentID string, opts 
 				return nil, err
 			}
 
-			var out apierrors.AdditionalRespondersGetAdditionalRespondersUnprocessableEntityError
+			var out apierrors.UnprocessableEntityError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -401,7 +401,7 @@ func (s *AdditionalResponders) Get(ctx context.Context, incidentID string, opts 
 				return nil, err
 			}
 
-			var out apierrors.AdditionalRespondersGetAdditionalRespondersInternalServerError
+			var out apierrors.InternalServerError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -426,7 +426,7 @@ func (s *AdditionalResponders) Get(ctx context.Context, incidentID string, opts 
 				return nil, err
 			}
 
-			var out apierrors.AdditionalRespondersGetAdditionalRespondersBadGatewayError
+			var out apierrors.BadGatewayError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -451,7 +451,7 @@ func (s *AdditionalResponders) Get(ctx context.Context, incidentID string, opts 
 				return nil, err
 			}
 
-			var out apierrors.AdditionalRespondersGetAdditionalRespondersServiceUnavailableError
+			var out apierrors.ServiceUnavailableError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -476,7 +476,7 @@ func (s *AdditionalResponders) Get(ctx context.Context, incidentID string, opts 
 				return nil, err
 			}
 
-			var out apierrors.AdditionalRespondersGetAdditionalRespondersGatewayTimeoutError
+			var out apierrors.GatewayTimeoutError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -721,7 +721,7 @@ func (s *AdditionalResponders) Add(ctx context.Context, incidentID string, v3Inc
 				return nil, err
 			}
 
-			var out apierrors.AdditionalRespondersAddAdditionalRespondersBadRequestError
+			var out apierrors.BadRequestError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -746,7 +746,7 @@ func (s *AdditionalResponders) Add(ctx context.Context, incidentID string, v3Inc
 				return nil, err
 			}
 
-			var out apierrors.AdditionalRespondersAddAdditionalRespondersUnauthorizedError
+			var out apierrors.UnauthorizedError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -771,7 +771,7 @@ func (s *AdditionalResponders) Add(ctx context.Context, incidentID string, v3Inc
 				return nil, err
 			}
 
-			var out apierrors.AdditionalRespondersAddAdditionalRespondersPaymentRequiredError
+			var out apierrors.PaymentRequiredError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -796,7 +796,7 @@ func (s *AdditionalResponders) Add(ctx context.Context, incidentID string, v3Inc
 				return nil, err
 			}
 
-			var out apierrors.AdditionalRespondersAddAdditionalRespondersForbiddenError
+			var out apierrors.ForbiddenError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -821,7 +821,7 @@ func (s *AdditionalResponders) Add(ctx context.Context, incidentID string, v3Inc
 				return nil, err
 			}
 
-			var out apierrors.AdditionalRespondersAddAdditionalRespondersNotFoundError
+			var out apierrors.NotFoundError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -846,7 +846,7 @@ func (s *AdditionalResponders) Add(ctx context.Context, incidentID string, v3Inc
 				return nil, err
 			}
 
-			var out apierrors.AdditionalRespondersAddAdditionalRespondersConflictError
+			var out apierrors.ConflictError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -871,7 +871,7 @@ func (s *AdditionalResponders) Add(ctx context.Context, incidentID string, v3Inc
 				return nil, err
 			}
 
-			var out apierrors.AdditionalRespondersAddAdditionalRespondersUnprocessableEntityError
+			var out apierrors.UnprocessableEntityError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -896,7 +896,7 @@ func (s *AdditionalResponders) Add(ctx context.Context, incidentID string, v3Inc
 				return nil, err
 			}
 
-			var out apierrors.AdditionalRespondersAddAdditionalRespondersInternalServerError
+			var out apierrors.InternalServerError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -921,7 +921,7 @@ func (s *AdditionalResponders) Add(ctx context.Context, incidentID string, v3Inc
 				return nil, err
 			}
 
-			var out apierrors.AdditionalRespondersAddAdditionalRespondersBadGatewayError
+			var out apierrors.BadGatewayError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -946,7 +946,7 @@ func (s *AdditionalResponders) Add(ctx context.Context, incidentID string, v3Inc
 				return nil, err
 			}
 
-			var out apierrors.AdditionalRespondersAddAdditionalRespondersServiceUnavailableError
+			var out apierrors.ServiceUnavailableError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -971,7 +971,7 @@ func (s *AdditionalResponders) Add(ctx context.Context, incidentID string, v3Inc
 				return nil, err
 			}
 
-			var out apierrors.AdditionalRespondersAddAdditionalRespondersGatewayTimeoutError
+			var out apierrors.GatewayTimeoutError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -1204,7 +1204,7 @@ func (s *AdditionalResponders) Delete(ctx context.Context, incidentID string, re
 				return nil, err
 			}
 
-			var out apierrors.AdditionalRespondersRemoveAdditionalRespondersBadRequestError
+			var out apierrors.BadRequestError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -1229,7 +1229,7 @@ func (s *AdditionalResponders) Delete(ctx context.Context, incidentID string, re
 				return nil, err
 			}
 
-			var out apierrors.AdditionalRespondersRemoveAdditionalRespondersUnauthorizedError
+			var out apierrors.UnauthorizedError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -1254,7 +1254,7 @@ func (s *AdditionalResponders) Delete(ctx context.Context, incidentID string, re
 				return nil, err
 			}
 
-			var out apierrors.AdditionalRespondersRemoveAdditionalRespondersPaymentRequiredError
+			var out apierrors.PaymentRequiredError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -1279,7 +1279,7 @@ func (s *AdditionalResponders) Delete(ctx context.Context, incidentID string, re
 				return nil, err
 			}
 
-			var out apierrors.AdditionalRespondersRemoveAdditionalRespondersForbiddenError
+			var out apierrors.ForbiddenError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -1304,7 +1304,7 @@ func (s *AdditionalResponders) Delete(ctx context.Context, incidentID string, re
 				return nil, err
 			}
 
-			var out apierrors.AdditionalRespondersRemoveAdditionalRespondersNotFoundError
+			var out apierrors.NotFoundError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -1329,7 +1329,7 @@ func (s *AdditionalResponders) Delete(ctx context.Context, incidentID string, re
 				return nil, err
 			}
 
-			var out apierrors.AdditionalRespondersRemoveAdditionalRespondersConflictError
+			var out apierrors.ConflictError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -1354,7 +1354,7 @@ func (s *AdditionalResponders) Delete(ctx context.Context, incidentID string, re
 				return nil, err
 			}
 
-			var out apierrors.AdditionalRespondersRemoveAdditionalRespondersUnprocessableEntityError
+			var out apierrors.UnprocessableEntityError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -1379,7 +1379,7 @@ func (s *AdditionalResponders) Delete(ctx context.Context, incidentID string, re
 				return nil, err
 			}
 
-			var out apierrors.AdditionalRespondersRemoveAdditionalRespondersInternalServerError
+			var out apierrors.InternalServerError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -1404,7 +1404,7 @@ func (s *AdditionalResponders) Delete(ctx context.Context, incidentID string, re
 				return nil, err
 			}
 
-			var out apierrors.AdditionalRespondersRemoveAdditionalRespondersBadGatewayError
+			var out apierrors.BadGatewayError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -1429,7 +1429,7 @@ func (s *AdditionalResponders) Delete(ctx context.Context, incidentID string, re
 				return nil, err
 			}
 
-			var out apierrors.AdditionalRespondersRemoveAdditionalRespondersServiceUnavailableError
+			var out apierrors.ServiceUnavailableError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -1454,7 +1454,7 @@ func (s *AdditionalResponders) Delete(ctx context.Context, incidentID string, re
 				return nil, err
 			}
 
-			var out apierrors.AdditionalRespondersRemoveAdditionalRespondersGatewayTimeoutError
+			var out apierrors.GatewayTimeoutError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}

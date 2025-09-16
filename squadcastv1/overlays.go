@@ -219,7 +219,7 @@ func (s *Overlays) DeleteNotificationTemplate(ctx context.Context, serviceID str
 				return nil, err
 			}
 
-			var out apierrors.OverlayDeleteNotificationTemplateOverlayBadRequestError
+			var out apierrors.BadRequestError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -244,7 +244,7 @@ func (s *Overlays) DeleteNotificationTemplate(ctx context.Context, serviceID str
 				return nil, err
 			}
 
-			var out apierrors.OverlayDeleteNotificationTemplateOverlayUnauthorizedError
+			var out apierrors.UnauthorizedError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -269,7 +269,7 @@ func (s *Overlays) DeleteNotificationTemplate(ctx context.Context, serviceID str
 				return nil, err
 			}
 
-			var out apierrors.OverlayDeleteNotificationTemplateOverlayPaymentRequiredError
+			var out apierrors.PaymentRequiredError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -294,7 +294,7 @@ func (s *Overlays) DeleteNotificationTemplate(ctx context.Context, serviceID str
 				return nil, err
 			}
 
-			var out apierrors.OverlayDeleteNotificationTemplateOverlayForbiddenError
+			var out apierrors.ForbiddenError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -319,7 +319,7 @@ func (s *Overlays) DeleteNotificationTemplate(ctx context.Context, serviceID str
 				return nil, err
 			}
 
-			var out apierrors.OverlayDeleteNotificationTemplateOverlayNotFoundError
+			var out apierrors.NotFoundError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -344,7 +344,7 @@ func (s *Overlays) DeleteNotificationTemplate(ctx context.Context, serviceID str
 				return nil, err
 			}
 
-			var out apierrors.OverlayDeleteNotificationTemplateOverlayConflictError
+			var out apierrors.ConflictError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -369,7 +369,7 @@ func (s *Overlays) DeleteNotificationTemplate(ctx context.Context, serviceID str
 				return nil, err
 			}
 
-			var out apierrors.OverlayDeleteNotificationTemplateOverlayUnprocessableEntityError
+			var out apierrors.UnprocessableEntityError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -394,7 +394,7 @@ func (s *Overlays) DeleteNotificationTemplate(ctx context.Context, serviceID str
 				return nil, err
 			}
 
-			var out apierrors.OverlayDeleteNotificationTemplateOverlayInternalServerError
+			var out apierrors.InternalServerError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -419,7 +419,7 @@ func (s *Overlays) DeleteNotificationTemplate(ctx context.Context, serviceID str
 				return nil, err
 			}
 
-			var out apierrors.OverlayDeleteNotificationTemplateOverlayBadGatewayError
+			var out apierrors.BadGatewayError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -444,7 +444,7 @@ func (s *Overlays) DeleteNotificationTemplate(ctx context.Context, serviceID str
 				return nil, err
 			}
 
-			var out apierrors.OverlayDeleteNotificationTemplateOverlayServiceUnavailableError
+			var out apierrors.ServiceUnavailableError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -469,7 +469,7 @@ func (s *Overlays) DeleteNotificationTemplate(ctx context.Context, serviceID str
 				return nil, err
 			}
 
-			var out apierrors.OverlayDeleteNotificationTemplateOverlayGatewayTimeoutError
+			var out apierrors.GatewayTimeoutError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}

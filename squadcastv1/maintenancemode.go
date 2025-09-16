@@ -223,7 +223,7 @@ func (s *MaintenanceMode) Get(ctx context.Context, serviceID string, opts ...ope
 				return nil, err
 			}
 
-			var out apierrors.MaintenanceModeGetMaintenanceModeBadRequestError
+			var out apierrors.BadRequestError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -248,7 +248,7 @@ func (s *MaintenanceMode) Get(ctx context.Context, serviceID string, opts ...ope
 				return nil, err
 			}
 
-			var out apierrors.MaintenanceModeGetMaintenanceModeUnauthorizedError
+			var out apierrors.UnauthorizedError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -273,7 +273,7 @@ func (s *MaintenanceMode) Get(ctx context.Context, serviceID string, opts ...ope
 				return nil, err
 			}
 
-			var out apierrors.MaintenanceModeGetMaintenanceModePaymentRequiredError
+			var out apierrors.PaymentRequiredError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -298,7 +298,7 @@ func (s *MaintenanceMode) Get(ctx context.Context, serviceID string, opts ...ope
 				return nil, err
 			}
 
-			var out apierrors.MaintenanceModeGetMaintenanceModeForbiddenError
+			var out apierrors.ForbiddenError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -323,7 +323,7 @@ func (s *MaintenanceMode) Get(ctx context.Context, serviceID string, opts ...ope
 				return nil, err
 			}
 
-			var out apierrors.MaintenanceModeGetMaintenanceModeNotFoundError
+			var out apierrors.NotFoundError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -348,7 +348,7 @@ func (s *MaintenanceMode) Get(ctx context.Context, serviceID string, opts ...ope
 				return nil, err
 			}
 
-			var out apierrors.MaintenanceModeGetMaintenanceModeConflictError
+			var out apierrors.ConflictError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -373,7 +373,7 @@ func (s *MaintenanceMode) Get(ctx context.Context, serviceID string, opts ...ope
 				return nil, err
 			}
 
-			var out apierrors.MaintenanceModeGetMaintenanceModeUnprocessableEntityError
+			var out apierrors.UnprocessableEntityError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -398,7 +398,7 @@ func (s *MaintenanceMode) Get(ctx context.Context, serviceID string, opts ...ope
 				return nil, err
 			}
 
-			var out apierrors.MaintenanceModeGetMaintenanceModeInternalServerError
+			var out apierrors.InternalServerError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -423,7 +423,7 @@ func (s *MaintenanceMode) Get(ctx context.Context, serviceID string, opts ...ope
 				return nil, err
 			}
 
-			var out apierrors.MaintenanceModeGetMaintenanceModeBadGatewayError
+			var out apierrors.BadGatewayError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -448,7 +448,7 @@ func (s *MaintenanceMode) Get(ctx context.Context, serviceID string, opts ...ope
 				return nil, err
 			}
 
-			var out apierrors.MaintenanceModeGetMaintenanceModeServiceUnavailableError
+			var out apierrors.ServiceUnavailableError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -473,7 +473,7 @@ func (s *MaintenanceMode) Get(ctx context.Context, serviceID string, opts ...ope
 				return nil, err
 			}
 
-			var out apierrors.MaintenanceModeGetMaintenanceModeGatewayTimeoutError
+			var out apierrors.GatewayTimeoutError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -715,7 +715,7 @@ func (s *MaintenanceMode) CreateOrUpdate(ctx context.Context, serviceID string, 
 				return nil, err
 			}
 
-			var out apierrors.MaintenanceModeCreateOrUpdateMaintenanceModeBadRequestError
+			var out apierrors.BadRequestError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -740,7 +740,7 @@ func (s *MaintenanceMode) CreateOrUpdate(ctx context.Context, serviceID string, 
 				return nil, err
 			}
 
-			var out apierrors.MaintenanceModeCreateOrUpdateMaintenanceModeUnauthorizedError
+			var out apierrors.UnauthorizedError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -765,7 +765,7 @@ func (s *MaintenanceMode) CreateOrUpdate(ctx context.Context, serviceID string, 
 				return nil, err
 			}
 
-			var out apierrors.MaintenanceModeCreateOrUpdateMaintenanceModePaymentRequiredError
+			var out apierrors.PaymentRequiredError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -790,7 +790,7 @@ func (s *MaintenanceMode) CreateOrUpdate(ctx context.Context, serviceID string, 
 				return nil, err
 			}
 
-			var out apierrors.MaintenanceModeCreateOrUpdateMaintenanceModeForbiddenError
+			var out apierrors.ForbiddenError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -815,7 +815,7 @@ func (s *MaintenanceMode) CreateOrUpdate(ctx context.Context, serviceID string, 
 				return nil, err
 			}
 
-			var out apierrors.MaintenanceModeCreateOrUpdateMaintenanceModeNotFoundError
+			var out apierrors.NotFoundError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -840,7 +840,7 @@ func (s *MaintenanceMode) CreateOrUpdate(ctx context.Context, serviceID string, 
 				return nil, err
 			}
 
-			var out apierrors.MaintenanceModeCreateOrUpdateMaintenanceModeConflictError
+			var out apierrors.ConflictError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -865,7 +865,7 @@ func (s *MaintenanceMode) CreateOrUpdate(ctx context.Context, serviceID string, 
 				return nil, err
 			}
 
-			var out apierrors.MaintenanceModeCreateOrUpdateMaintenanceModeUnprocessableEntityError
+			var out apierrors.UnprocessableEntityError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -890,7 +890,7 @@ func (s *MaintenanceMode) CreateOrUpdate(ctx context.Context, serviceID string, 
 				return nil, err
 			}
 
-			var out apierrors.MaintenanceModeCreateOrUpdateMaintenanceModeInternalServerError
+			var out apierrors.InternalServerError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -915,7 +915,7 @@ func (s *MaintenanceMode) CreateOrUpdate(ctx context.Context, serviceID string, 
 				return nil, err
 			}
 
-			var out apierrors.MaintenanceModeCreateOrUpdateMaintenanceModeBadGatewayError
+			var out apierrors.BadGatewayError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -940,7 +940,7 @@ func (s *MaintenanceMode) CreateOrUpdate(ctx context.Context, serviceID string, 
 				return nil, err
 			}
 
-			var out apierrors.MaintenanceModeCreateOrUpdateMaintenanceModeServiceUnavailableError
+			var out apierrors.ServiceUnavailableError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -965,7 +965,7 @@ func (s *MaintenanceMode) CreateOrUpdate(ctx context.Context, serviceID string, 
 				return nil, err
 			}
 
-			var out apierrors.MaintenanceModeCreateOrUpdateMaintenanceModeGatewayTimeoutError
+			var out apierrors.GatewayTimeoutError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}

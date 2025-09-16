@@ -69,20 +69,20 @@ func main() {
 
 ### Errors
 
-| Error Type                                               | Status Code                                              | Content Type                                             |
-| -------------------------------------------------------- | -------------------------------------------------------- | -------------------------------------------------------- |
-| apierrors.WorkflowsListWorkflowsBadRequestError          | 400                                                      | application/json                                         |
-| apierrors.WorkflowsListWorkflowsUnauthorizedError        | 401                                                      | application/json                                         |
-| apierrors.WorkflowsListWorkflowsPaymentRequiredError     | 402                                                      | application/json                                         |
-| apierrors.WorkflowsListWorkflowsForbiddenError           | 403                                                      | application/json                                         |
-| apierrors.WorkflowsListWorkflowsNotFoundError            | 404                                                      | application/json                                         |
-| apierrors.WorkflowsListWorkflowsConflictError            | 409                                                      | application/json                                         |
-| apierrors.WorkflowsListWorkflowsUnprocessableEntityError | 422                                                      | application/json                                         |
-| apierrors.WorkflowsListWorkflowsInternalServerError      | 500                                                      | application/json                                         |
-| apierrors.WorkflowsListWorkflowsBadGatewayError          | 502                                                      | application/json                                         |
-| apierrors.WorkflowsListWorkflowsServiceUnavailableError  | 503                                                      | application/json                                         |
-| apierrors.WorkflowsListWorkflowsGatewayTimeoutError      | 504                                                      | application/json                                         |
-| apierrors.APIError                                       | 4XX, 5XX                                                 | \*/\*                                                    |
+| Error Type                         | Status Code                        | Content Type                       |
+| ---------------------------------- | ---------------------------------- | ---------------------------------- |
+| apierrors.BadRequestError          | 400                                | application/json                   |
+| apierrors.UnauthorizedError        | 401                                | application/json                   |
+| apierrors.PaymentRequiredError     | 402                                | application/json                   |
+| apierrors.ForbiddenError           | 403                                | application/json                   |
+| apierrors.NotFoundError            | 404                                | application/json                   |
+| apierrors.ConflictError            | 409                                | application/json                   |
+| apierrors.UnprocessableEntityError | 422                                | application/json                   |
+| apierrors.InternalServerError      | 500                                | application/json                   |
+| apierrors.BadGatewayError          | 502                                | application/json                   |
+| apierrors.ServiceUnavailableError  | 503                                | application/json                   |
+| apierrors.GatewayTimeoutError      | 504                                | application/json                   |
+| apierrors.APIError                 | 4XX, 5XX                           | \*/\*                              |
 
 ## Create
 
@@ -148,20 +148,20 @@ func main() {
 
 ### Errors
 
-| Error Type                                                | Status Code                                               | Content Type                                              |
-| --------------------------------------------------------- | --------------------------------------------------------- | --------------------------------------------------------- |
-| apierrors.WorkflowsCreateWorkflowBadRequestError          | 400                                                       | application/json                                          |
-| apierrors.WorkflowsCreateWorkflowUnauthorizedError        | 401                                                       | application/json                                          |
-| apierrors.WorkflowsCreateWorkflowPaymentRequiredError     | 402                                                       | application/json                                          |
-| apierrors.WorkflowsCreateWorkflowForbiddenError           | 403                                                       | application/json                                          |
-| apierrors.WorkflowsCreateWorkflowNotFoundError            | 404                                                       | application/json                                          |
-| apierrors.WorkflowsCreateWorkflowConflictError            | 409                                                       | application/json                                          |
-| apierrors.WorkflowsCreateWorkflowUnprocessableEntityError | 422                                                       | application/json                                          |
-| apierrors.WorkflowsCreateWorkflowInternalServerError      | 500                                                       | application/json                                          |
-| apierrors.WorkflowsCreateWorkflowBadGatewayError          | 502                                                       | application/json                                          |
-| apierrors.WorkflowsCreateWorkflowServiceUnavailableError  | 503                                                       | application/json                                          |
-| apierrors.WorkflowsCreateWorkflowGatewayTimeoutError      | 504                                                       | application/json                                          |
-| apierrors.APIError                                        | 4XX, 5XX                                                  | \*/\*                                                     |
+| Error Type                         | Status Code                        | Content Type                       |
+| ---------------------------------- | ---------------------------------- | ---------------------------------- |
+| apierrors.BadRequestError          | 400                                | application/json                   |
+| apierrors.UnauthorizedError        | 401                                | application/json                   |
+| apierrors.PaymentRequiredError     | 402                                | application/json                   |
+| apierrors.ForbiddenError           | 403                                | application/json                   |
+| apierrors.NotFoundError            | 404                                | application/json                   |
+| apierrors.ConflictError            | 409                                | application/json                   |
+| apierrors.UnprocessableEntityError | 422                                | application/json                   |
+| apierrors.InternalServerError      | 500                                | application/json                   |
+| apierrors.BadGatewayError          | 502                                | application/json                   |
+| apierrors.ServiceUnavailableError  | 503                                | application/json                   |
+| apierrors.GatewayTimeoutError      | 504                                | application/json                   |
+| apierrors.APIError                 | 4XX, 5XX                           | \*/\*                              |
 
 ## BulkEnableDisable
 
@@ -218,20 +218,20 @@ func main() {
 
 ### Errors
 
-| Error Type                                                            | Status Code                                                           | Content Type                                                          |
-| --------------------------------------------------------------------- | --------------------------------------------------------------------- | --------------------------------------------------------------------- |
-| apierrors.WorkflowsBulkEnabledisableWorkflowsBadRequestError          | 400                                                                   | application/json                                                      |
-| apierrors.WorkflowsBulkEnabledisableWorkflowsUnauthorizedError        | 401                                                                   | application/json                                                      |
-| apierrors.WorkflowsBulkEnabledisableWorkflowsPaymentRequiredError     | 402                                                                   | application/json                                                      |
-| apierrors.WorkflowsBulkEnabledisableWorkflowsForbiddenError           | 403                                                                   | application/json                                                      |
-| apierrors.WorkflowsBulkEnabledisableWorkflowsNotFoundError            | 404                                                                   | application/json                                                      |
-| apierrors.WorkflowsBulkEnabledisableWorkflowsConflictError            | 409                                                                   | application/json                                                      |
-| apierrors.WorkflowsBulkEnabledisableWorkflowsUnprocessableEntityError | 422                                                                   | application/json                                                      |
-| apierrors.WorkflowsBulkEnabledisableWorkflowsInternalServerError      | 500                                                                   | application/json                                                      |
-| apierrors.WorkflowsBulkEnabledisableWorkflowsBadGatewayError          | 502                                                                   | application/json                                                      |
-| apierrors.WorkflowsBulkEnabledisableWorkflowsServiceUnavailableError  | 503                                                                   | application/json                                                      |
-| apierrors.WorkflowsBulkEnabledisableWorkflowsGatewayTimeoutError      | 504                                                                   | application/json                                                      |
-| apierrors.APIError                                                    | 4XX, 5XX                                                              | \*/\*                                                                 |
+| Error Type                         | Status Code                        | Content Type                       |
+| ---------------------------------- | ---------------------------------- | ---------------------------------- |
+| apierrors.BadRequestError          | 400                                | application/json                   |
+| apierrors.UnauthorizedError        | 401                                | application/json                   |
+| apierrors.PaymentRequiredError     | 402                                | application/json                   |
+| apierrors.ForbiddenError           | 403                                | application/json                   |
+| apierrors.NotFoundError            | 404                                | application/json                   |
+| apierrors.ConflictError            | 409                                | application/json                   |
+| apierrors.UnprocessableEntityError | 422                                | application/json                   |
+| apierrors.InternalServerError      | 500                                | application/json                   |
+| apierrors.BadGatewayError          | 502                                | application/json                   |
+| apierrors.ServiceUnavailableError  | 503                                | application/json                   |
+| apierrors.GatewayTimeoutError      | 504                                | application/json                   |
+| apierrors.APIError                 | 4XX, 5XX                           | \*/\*                              |
 
 ## Delete
 
@@ -281,20 +281,20 @@ func main() {
 
 ### Errors
 
-| Error Type                                                | Status Code                                               | Content Type                                              |
-| --------------------------------------------------------- | --------------------------------------------------------- | --------------------------------------------------------- |
-| apierrors.WorkflowsDeleteWorkflowBadRequestError          | 400                                                       | application/json                                          |
-| apierrors.WorkflowsDeleteWorkflowUnauthorizedError        | 401                                                       | application/json                                          |
-| apierrors.WorkflowsDeleteWorkflowPaymentRequiredError     | 402                                                       | application/json                                          |
-| apierrors.WorkflowsDeleteWorkflowForbiddenError           | 403                                                       | application/json                                          |
-| apierrors.WorkflowsDeleteWorkflowNotFoundError            | 404                                                       | application/json                                          |
-| apierrors.WorkflowsDeleteWorkflowConflictError            | 409                                                       | application/json                                          |
-| apierrors.WorkflowsDeleteWorkflowUnprocessableEntityError | 422                                                       | application/json                                          |
-| apierrors.WorkflowsDeleteWorkflowInternalServerError      | 500                                                       | application/json                                          |
-| apierrors.WorkflowsDeleteWorkflowBadGatewayError          | 502                                                       | application/json                                          |
-| apierrors.WorkflowsDeleteWorkflowServiceUnavailableError  | 503                                                       | application/json                                          |
-| apierrors.WorkflowsDeleteWorkflowGatewayTimeoutError      | 504                                                       | application/json                                          |
-| apierrors.APIError                                        | 4XX, 5XX                                                  | \*/\*                                                     |
+| Error Type                         | Status Code                        | Content Type                       |
+| ---------------------------------- | ---------------------------------- | ---------------------------------- |
+| apierrors.BadRequestError          | 400                                | application/json                   |
+| apierrors.UnauthorizedError        | 401                                | application/json                   |
+| apierrors.PaymentRequiredError     | 402                                | application/json                   |
+| apierrors.ForbiddenError           | 403                                | application/json                   |
+| apierrors.NotFoundError            | 404                                | application/json                   |
+| apierrors.ConflictError            | 409                                | application/json                   |
+| apierrors.UnprocessableEntityError | 422                                | application/json                   |
+| apierrors.InternalServerError      | 500                                | application/json                   |
+| apierrors.BadGatewayError          | 502                                | application/json                   |
+| apierrors.ServiceUnavailableError  | 503                                | application/json                   |
+| apierrors.GatewayTimeoutError      | 504                                | application/json                   |
+| apierrors.APIError                 | 4XX, 5XX                           | \*/\*                              |
 
 ## GetByID
 
@@ -344,20 +344,20 @@ func main() {
 
 ### Errors
 
-| Error Type                                                 | Status Code                                                | Content Type                                               |
-| ---------------------------------------------------------- | ---------------------------------------------------------- | ---------------------------------------------------------- |
-| apierrors.WorkflowsGetWorkflowByIDBadRequestError          | 400                                                        | application/json                                           |
-| apierrors.WorkflowsGetWorkflowByIDUnauthorizedError        | 401                                                        | application/json                                           |
-| apierrors.WorkflowsGetWorkflowByIDPaymentRequiredError     | 402                                                        | application/json                                           |
-| apierrors.WorkflowsGetWorkflowByIDForbiddenError           | 403                                                        | application/json                                           |
-| apierrors.WorkflowsGetWorkflowByIDNotFoundError            | 404                                                        | application/json                                           |
-| apierrors.WorkflowsGetWorkflowByIDConflictError            | 409                                                        | application/json                                           |
-| apierrors.WorkflowsGetWorkflowByIDUnprocessableEntityError | 422                                                        | application/json                                           |
-| apierrors.WorkflowsGetWorkflowByIDInternalServerError      | 500                                                        | application/json                                           |
-| apierrors.WorkflowsGetWorkflowByIDBadGatewayError          | 502                                                        | application/json                                           |
-| apierrors.WorkflowsGetWorkflowByIDServiceUnavailableError  | 503                                                        | application/json                                           |
-| apierrors.WorkflowsGetWorkflowByIDGatewayTimeoutError      | 504                                                        | application/json                                           |
-| apierrors.APIError                                         | 4XX, 5XX                                                   | \*/\*                                                      |
+| Error Type                         | Status Code                        | Content Type                       |
+| ---------------------------------- | ---------------------------------- | ---------------------------------- |
+| apierrors.BadRequestError          | 400                                | application/json                   |
+| apierrors.UnauthorizedError        | 401                                | application/json                   |
+| apierrors.PaymentRequiredError     | 402                                | application/json                   |
+| apierrors.ForbiddenError           | 403                                | application/json                   |
+| apierrors.NotFoundError            | 404                                | application/json                   |
+| apierrors.ConflictError            | 409                                | application/json                   |
+| apierrors.UnprocessableEntityError | 422                                | application/json                   |
+| apierrors.InternalServerError      | 500                                | application/json                   |
+| apierrors.BadGatewayError          | 502                                | application/json                   |
+| apierrors.ServiceUnavailableError  | 503                                | application/json                   |
+| apierrors.GatewayTimeoutError      | 504                                | application/json                   |
+| apierrors.APIError                 | 4XX, 5XX                           | \*/\*                              |
 
 ## Update
 
@@ -409,20 +409,20 @@ func main() {
 
 ### Errors
 
-| Error Type                                                | Status Code                                               | Content Type                                              |
-| --------------------------------------------------------- | --------------------------------------------------------- | --------------------------------------------------------- |
-| apierrors.WorkflowsUpdateWorkflowBadRequestError          | 400                                                       | application/json                                          |
-| apierrors.WorkflowsUpdateWorkflowUnauthorizedError        | 401                                                       | application/json                                          |
-| apierrors.WorkflowsUpdateWorkflowPaymentRequiredError     | 402                                                       | application/json                                          |
-| apierrors.WorkflowsUpdateWorkflowForbiddenError           | 403                                                       | application/json                                          |
-| apierrors.WorkflowsUpdateWorkflowNotFoundError            | 404                                                       | application/json                                          |
-| apierrors.WorkflowsUpdateWorkflowConflictError            | 409                                                       | application/json                                          |
-| apierrors.WorkflowsUpdateWorkflowUnprocessableEntityError | 422                                                       | application/json                                          |
-| apierrors.WorkflowsUpdateWorkflowInternalServerError      | 500                                                       | application/json                                          |
-| apierrors.WorkflowsUpdateWorkflowBadGatewayError          | 502                                                       | application/json                                          |
-| apierrors.WorkflowsUpdateWorkflowServiceUnavailableError  | 503                                                       | application/json                                          |
-| apierrors.WorkflowsUpdateWorkflowGatewayTimeoutError      | 504                                                       | application/json                                          |
-| apierrors.APIError                                        | 4XX, 5XX                                                  | \*/\*                                                     |
+| Error Type                         | Status Code                        | Content Type                       |
+| ---------------------------------- | ---------------------------------- | ---------------------------------- |
+| apierrors.BadRequestError          | 400                                | application/json                   |
+| apierrors.UnauthorizedError        | 401                                | application/json                   |
+| apierrors.PaymentRequiredError     | 402                                | application/json                   |
+| apierrors.ForbiddenError           | 403                                | application/json                   |
+| apierrors.NotFoundError            | 404                                | application/json                   |
+| apierrors.ConflictError            | 409                                | application/json                   |
+| apierrors.UnprocessableEntityError | 422                                | application/json                   |
+| apierrors.InternalServerError      | 500                                | application/json                   |
+| apierrors.BadGatewayError          | 502                                | application/json                   |
+| apierrors.ServiceUnavailableError  | 503                                | application/json                   |
+| apierrors.GatewayTimeoutError      | 504                                | application/json                   |
+| apierrors.APIError                 | 4XX, 5XX                           | \*/\*                              |
 
 ## UpdateActionsOrder
 
@@ -474,20 +474,20 @@ func main() {
 
 ### Errors
 
-| Error Type                                                    | Status Code                                                   | Content Type                                                  |
-| ------------------------------------------------------------- | ------------------------------------------------------------- | ------------------------------------------------------------- |
-| apierrors.WorkflowsUpdateActionsOrderBadRequestError          | 400                                                           | application/json                                              |
-| apierrors.WorkflowsUpdateActionsOrderUnauthorizedError        | 401                                                           | application/json                                              |
-| apierrors.WorkflowsUpdateActionsOrderPaymentRequiredError     | 402                                                           | application/json                                              |
-| apierrors.WorkflowsUpdateActionsOrderForbiddenError           | 403                                                           | application/json                                              |
-| apierrors.WorkflowsUpdateActionsOrderNotFoundError            | 404                                                           | application/json                                              |
-| apierrors.WorkflowsUpdateActionsOrderConflictError            | 409                                                           | application/json                                              |
-| apierrors.WorkflowsUpdateActionsOrderUnprocessableEntityError | 422                                                           | application/json                                              |
-| apierrors.WorkflowsUpdateActionsOrderInternalServerError      | 500                                                           | application/json                                              |
-| apierrors.WorkflowsUpdateActionsOrderBadGatewayError          | 502                                                           | application/json                                              |
-| apierrors.WorkflowsUpdateActionsOrderServiceUnavailableError  | 503                                                           | application/json                                              |
-| apierrors.WorkflowsUpdateActionsOrderGatewayTimeoutError      | 504                                                           | application/json                                              |
-| apierrors.APIError                                            | 4XX, 5XX                                                      | \*/\*                                                         |
+| Error Type                         | Status Code                        | Content Type                       |
+| ---------------------------------- | ---------------------------------- | ---------------------------------- |
+| apierrors.BadRequestError          | 400                                | application/json                   |
+| apierrors.UnauthorizedError        | 401                                | application/json                   |
+| apierrors.PaymentRequiredError     | 402                                | application/json                   |
+| apierrors.ForbiddenError           | 403                                | application/json                   |
+| apierrors.NotFoundError            | 404                                | application/json                   |
+| apierrors.ConflictError            | 409                                | application/json                   |
+| apierrors.UnprocessableEntityError | 422                                | application/json                   |
+| apierrors.InternalServerError      | 500                                | application/json                   |
+| apierrors.BadGatewayError          | 502                                | application/json                   |
+| apierrors.ServiceUnavailableError  | 503                                | application/json                   |
+| apierrors.GatewayTimeoutError      | 504                                | application/json                   |
+| apierrors.APIError                 | 4XX, 5XX                           | \*/\*                              |
 
 ## DeleteAction
 
@@ -538,20 +538,20 @@ func main() {
 
 ### Errors
 
-| Error Type                                                      | Status Code                                                     | Content Type                                                    |
-| --------------------------------------------------------------- | --------------------------------------------------------------- | --------------------------------------------------------------- |
-| apierrors.WorkflowsDeleteWorkflowActionBadRequestError          | 400                                                             | application/json                                                |
-| apierrors.WorkflowsDeleteWorkflowActionUnauthorizedError        | 401                                                             | application/json                                                |
-| apierrors.WorkflowsDeleteWorkflowActionPaymentRequiredError     | 402                                                             | application/json                                                |
-| apierrors.WorkflowsDeleteWorkflowActionForbiddenError           | 403                                                             | application/json                                                |
-| apierrors.WorkflowsDeleteWorkflowActionNotFoundError            | 404                                                             | application/json                                                |
-| apierrors.WorkflowsDeleteWorkflowActionConflictError            | 409                                                             | application/json                                                |
-| apierrors.WorkflowsDeleteWorkflowActionUnprocessableEntityError | 422                                                             | application/json                                                |
-| apierrors.WorkflowsDeleteWorkflowActionInternalServerError      | 500                                                             | application/json                                                |
-| apierrors.WorkflowsDeleteWorkflowActionBadGatewayError          | 502                                                             | application/json                                                |
-| apierrors.WorkflowsDeleteWorkflowActionServiceUnavailableError  | 503                                                             | application/json                                                |
-| apierrors.WorkflowsDeleteWorkflowActionGatewayTimeoutError      | 504                                                             | application/json                                                |
-| apierrors.APIError                                              | 4XX, 5XX                                                        | \*/\*                                                           |
+| Error Type                         | Status Code                        | Content Type                       |
+| ---------------------------------- | ---------------------------------- | ---------------------------------- |
+| apierrors.BadRequestError          | 400                                | application/json                   |
+| apierrors.UnauthorizedError        | 401                                | application/json                   |
+| apierrors.PaymentRequiredError     | 402                                | application/json                   |
+| apierrors.ForbiddenError           | 403                                | application/json                   |
+| apierrors.NotFoundError            | 404                                | application/json                   |
+| apierrors.ConflictError            | 409                                | application/json                   |
+| apierrors.UnprocessableEntityError | 422                                | application/json                   |
+| apierrors.InternalServerError      | 500                                | application/json                   |
+| apierrors.BadGatewayError          | 502                                | application/json                   |
+| apierrors.ServiceUnavailableError  | 503                                | application/json                   |
+| apierrors.GatewayTimeoutError      | 504                                | application/json                   |
+| apierrors.APIError                 | 4XX, 5XX                           | \*/\*                              |
 
 ## GetAction
 
@@ -602,20 +602,20 @@ func main() {
 
 ### Errors
 
-| Error Type                                                       | Status Code                                                      | Content Type                                                     |
-| ---------------------------------------------------------------- | ---------------------------------------------------------------- | ---------------------------------------------------------------- |
-| apierrors.WorkflowsGetWorkflowActionByIDBadRequestError          | 400                                                              | application/json                                                 |
-| apierrors.WorkflowsGetWorkflowActionByIDUnauthorizedError        | 401                                                              | application/json                                                 |
-| apierrors.WorkflowsGetWorkflowActionByIDPaymentRequiredError     | 402                                                              | application/json                                                 |
-| apierrors.WorkflowsGetWorkflowActionByIDForbiddenError           | 403                                                              | application/json                                                 |
-| apierrors.WorkflowsGetWorkflowActionByIDNotFoundError            | 404                                                              | application/json                                                 |
-| apierrors.WorkflowsGetWorkflowActionByIDConflictError            | 409                                                              | application/json                                                 |
-| apierrors.WorkflowsGetWorkflowActionByIDUnprocessableEntityError | 422                                                              | application/json                                                 |
-| apierrors.WorkflowsGetWorkflowActionByIDInternalServerError      | 500                                                              | application/json                                                 |
-| apierrors.WorkflowsGetWorkflowActionByIDBadGatewayError          | 502                                                              | application/json                                                 |
-| apierrors.WorkflowsGetWorkflowActionByIDServiceUnavailableError  | 503                                                              | application/json                                                 |
-| apierrors.WorkflowsGetWorkflowActionByIDGatewayTimeoutError      | 504                                                              | application/json                                                 |
-| apierrors.APIError                                               | 4XX, 5XX                                                         | \*/\*                                                            |
+| Error Type                         | Status Code                        | Content Type                       |
+| ---------------------------------- | ---------------------------------- | ---------------------------------- |
+| apierrors.BadRequestError          | 400                                | application/json                   |
+| apierrors.UnauthorizedError        | 401                                | application/json                   |
+| apierrors.PaymentRequiredError     | 402                                | application/json                   |
+| apierrors.ForbiddenError           | 403                                | application/json                   |
+| apierrors.NotFoundError            | 404                                | application/json                   |
+| apierrors.ConflictError            | 409                                | application/json                   |
+| apierrors.UnprocessableEntityError | 422                                | application/json                   |
+| apierrors.InternalServerError      | 500                                | application/json                   |
+| apierrors.BadGatewayError          | 502                                | application/json                   |
+| apierrors.ServiceUnavailableError  | 503                                | application/json                   |
+| apierrors.GatewayTimeoutError      | 504                                | application/json                   |
+| apierrors.APIError                 | 4XX, 5XX                           | \*/\*                              |
 
 ## UpdateAction
 
@@ -672,20 +672,20 @@ func main() {
 
 ### Errors
 
-| Error Type                                                      | Status Code                                                     | Content Type                                                    |
-| --------------------------------------------------------------- | --------------------------------------------------------------- | --------------------------------------------------------------- |
-| apierrors.WorkflowsUpdateWorkflowActionBadRequestError          | 400                                                             | application/json                                                |
-| apierrors.WorkflowsUpdateWorkflowActionUnauthorizedError        | 401                                                             | application/json                                                |
-| apierrors.WorkflowsUpdateWorkflowActionPaymentRequiredError     | 402                                                             | application/json                                                |
-| apierrors.WorkflowsUpdateWorkflowActionForbiddenError           | 403                                                             | application/json                                                |
-| apierrors.WorkflowsUpdateWorkflowActionNotFoundError            | 404                                                             | application/json                                                |
-| apierrors.WorkflowsUpdateWorkflowActionConflictError            | 409                                                             | application/json                                                |
-| apierrors.WorkflowsUpdateWorkflowActionUnprocessableEntityError | 422                                                             | application/json                                                |
-| apierrors.WorkflowsUpdateWorkflowActionInternalServerError      | 500                                                             | application/json                                                |
-| apierrors.WorkflowsUpdateWorkflowActionBadGatewayError          | 502                                                             | application/json                                                |
-| apierrors.WorkflowsUpdateWorkflowActionServiceUnavailableError  | 503                                                             | application/json                                                |
-| apierrors.WorkflowsUpdateWorkflowActionGatewayTimeoutError      | 504                                                             | application/json                                                |
-| apierrors.APIError                                              | 4XX, 5XX                                                        | \*/\*                                                           |
+| Error Type                         | Status Code                        | Content Type                       |
+| ---------------------------------- | ---------------------------------- | ---------------------------------- |
+| apierrors.BadRequestError          | 400                                | application/json                   |
+| apierrors.UnauthorizedError        | 401                                | application/json                   |
+| apierrors.PaymentRequiredError     | 402                                | application/json                   |
+| apierrors.ForbiddenError           | 403                                | application/json                   |
+| apierrors.NotFoundError            | 404                                | application/json                   |
+| apierrors.ConflictError            | 409                                | application/json                   |
+| apierrors.UnprocessableEntityError | 422                                | application/json                   |
+| apierrors.InternalServerError      | 500                                | application/json                   |
+| apierrors.BadGatewayError          | 502                                | application/json                   |
+| apierrors.ServiceUnavailableError  | 503                                | application/json                   |
+| apierrors.GatewayTimeoutError      | 504                                | application/json                   |
+| apierrors.APIError                 | 4XX, 5XX                           | \*/\*                              |
 
 ## ToggleEnable
 
@@ -737,20 +737,20 @@ func main() {
 
 ### Errors
 
-| Error Type                                                       | Status Code                                                      | Content Type                                                     |
-| ---------------------------------------------------------------- | ---------------------------------------------------------------- | ---------------------------------------------------------------- |
-| apierrors.WorkflowsEnabledisableWorkflowBadRequestError          | 400                                                              | application/json                                                 |
-| apierrors.WorkflowsEnabledisableWorkflowUnauthorizedError        | 401                                                              | application/json                                                 |
-| apierrors.WorkflowsEnabledisableWorkflowPaymentRequiredError     | 402                                                              | application/json                                                 |
-| apierrors.WorkflowsEnabledisableWorkflowForbiddenError           | 403                                                              | application/json                                                 |
-| apierrors.WorkflowsEnabledisableWorkflowNotFoundError            | 404                                                              | application/json                                                 |
-| apierrors.WorkflowsEnabledisableWorkflowConflictError            | 409                                                              | application/json                                                 |
-| apierrors.WorkflowsEnabledisableWorkflowUnprocessableEntityError | 422                                                              | application/json                                                 |
-| apierrors.WorkflowsEnabledisableWorkflowInternalServerError      | 500                                                              | application/json                                                 |
-| apierrors.WorkflowsEnabledisableWorkflowBadGatewayError          | 502                                                              | application/json                                                 |
-| apierrors.WorkflowsEnabledisableWorkflowServiceUnavailableError  | 503                                                              | application/json                                                 |
-| apierrors.WorkflowsEnabledisableWorkflowGatewayTimeoutError      | 504                                                              | application/json                                                 |
-| apierrors.APIError                                               | 4XX, 5XX                                                         | \*/\*                                                            |
+| Error Type                         | Status Code                        | Content Type                       |
+| ---------------------------------- | ---------------------------------- | ---------------------------------- |
+| apierrors.BadRequestError          | 400                                | application/json                   |
+| apierrors.UnauthorizedError        | 401                                | application/json                   |
+| apierrors.PaymentRequiredError     | 402                                | application/json                   |
+| apierrors.ForbiddenError           | 403                                | application/json                   |
+| apierrors.NotFoundError            | 404                                | application/json                   |
+| apierrors.ConflictError            | 409                                | application/json                   |
+| apierrors.UnprocessableEntityError | 422                                | application/json                   |
+| apierrors.InternalServerError      | 500                                | application/json                   |
+| apierrors.BadGatewayError          | 502                                | application/json                   |
+| apierrors.ServiceUnavailableError  | 503                                | application/json                   |
+| apierrors.GatewayTimeoutError      | 504                                | application/json                   |
+| apierrors.APIError                 | 4XX, 5XX                           | \*/\*                              |
 
 ## GetLogs
 
@@ -802,17 +802,17 @@ func main() {
 
 ### Errors
 
-| Error Type                                                 | Status Code                                                | Content Type                                               |
-| ---------------------------------------------------------- | ---------------------------------------------------------- | ---------------------------------------------------------- |
-| apierrors.WorkflowsGetWorkflowLogsBadRequestError          | 400                                                        | application/json                                           |
-| apierrors.WorkflowsGetWorkflowLogsUnauthorizedError        | 401                                                        | application/json                                           |
-| apierrors.WorkflowsGetWorkflowLogsPaymentRequiredError     | 402                                                        | application/json                                           |
-| apierrors.WorkflowsGetWorkflowLogsForbiddenError           | 403                                                        | application/json                                           |
-| apierrors.WorkflowsGetWorkflowLogsNotFoundError            | 404                                                        | application/json                                           |
-| apierrors.WorkflowsGetWorkflowLogsConflictError            | 409                                                        | application/json                                           |
-| apierrors.WorkflowsGetWorkflowLogsUnprocessableEntityError | 422                                                        | application/json                                           |
-| apierrors.WorkflowsGetWorkflowLogsInternalServerError      | 500                                                        | application/json                                           |
-| apierrors.WorkflowsGetWorkflowLogsBadGatewayError          | 502                                                        | application/json                                           |
-| apierrors.WorkflowsGetWorkflowLogsServiceUnavailableError  | 503                                                        | application/json                                           |
-| apierrors.WorkflowsGetWorkflowLogsGatewayTimeoutError      | 504                                                        | application/json                                           |
-| apierrors.APIError                                         | 4XX, 5XX                                                   | \*/\*                                                      |
+| Error Type                         | Status Code                        | Content Type                       |
+| ---------------------------------- | ---------------------------------- | ---------------------------------- |
+| apierrors.BadRequestError          | 400                                | application/json                   |
+| apierrors.UnauthorizedError        | 401                                | application/json                   |
+| apierrors.PaymentRequiredError     | 402                                | application/json                   |
+| apierrors.ForbiddenError           | 403                                | application/json                   |
+| apierrors.NotFoundError            | 404                                | application/json                   |
+| apierrors.ConflictError            | 409                                | application/json                   |
+| apierrors.UnprocessableEntityError | 422                                | application/json                   |
+| apierrors.InternalServerError      | 500                                | application/json                   |
+| apierrors.BadGatewayError          | 502                                | application/json                   |
+| apierrors.ServiceUnavailableError  | 503                                | application/json                   |
+| apierrors.GatewayTimeoutError      | 504                                | application/json                   |
+| apierrors.APIError                 | 4XX, 5XX                           | \*/\*                              |
