@@ -45,7 +45,7 @@ go:
       shared: models/components
       webhooks: models/webhooks
   inputModelSuffix: input
-  maxMethodParams: 4
+  maxMethodParams: 2
   methodArguments: require-security-and-request
   modulePath: github.com/SquadcastHub/squadcast-sdk-go/squadcastv1
   outputModelSuffix: output
