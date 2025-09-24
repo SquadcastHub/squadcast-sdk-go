@@ -40,114 +40,114 @@ func (v *V3SLOCreateSLORequest) UnmarshalJSON(data []byte) error {
 	return nil
 }
 
-func (o *V3SLOCreateSLORequest) GetName() string {
-	if o == nil {
+func (v *V3SLOCreateSLORequest) GetName() string {
+	if v == nil {
 		return ""
 	}
-	return o.Name
+	return v.Name
 }
 
-func (o *V3SLOCreateSLORequest) GetDescription() *string {
-	if o == nil {
+func (v *V3SLOCreateSLORequest) GetDescription() *string {
+	if v == nil {
 		return nil
 	}
-	return o.Description
+	return v.Description
 }
 
-func (o *V3SLOCreateSLORequest) GetTimeIntervalType() V3SLOTimeIntervalType {
-	if o == nil {
+func (v *V3SLOCreateSLORequest) GetTimeIntervalType() V3SLOTimeIntervalType {
+	if v == nil {
 		return V3SLOTimeIntervalType("")
 	}
-	return o.TimeIntervalType
+	return v.TimeIntervalType
 }
 
-func (o *V3SLOCreateSLORequest) GetServiceIds() []string {
-	if o == nil {
+func (v *V3SLOCreateSLORequest) GetServiceIds() []string {
+	if v == nil {
 		return []string{}
 	}
-	return o.ServiceIds
+	return v.ServiceIds
 }
 
-func (o *V3SLOCreateSLORequest) GetSlis() []string {
-	if o == nil {
+func (v *V3SLOCreateSLORequest) GetSlis() []string {
+	if v == nil {
 		return []string{}
 	}
-	return o.Slis
+	return v.Slis
 }
 
-func (o *V3SLOCreateSLORequest) GetTargetSlo() float32 {
-	if o == nil {
+func (v *V3SLOCreateSLORequest) GetTargetSlo() float32 {
+	if v == nil {
 		return 0.0
 	}
-	return o.TargetSlo
+	return v.TargetSlo
 }
 
-func (o *V3SLOCreateSLORequest) GetStartTime() time.Time {
-	if o == nil {
+func (v *V3SLOCreateSLORequest) GetStartTime() time.Time {
+	if v == nil {
 		return time.Time{}
 	}
-	return o.StartTime
+	return v.StartTime
 }
 
-func (o *V3SLOCreateSLORequest) GetEndTime() time.Time {
-	if o == nil {
+func (v *V3SLOCreateSLORequest) GetEndTime() time.Time {
+	if v == nil {
 		return time.Time{}
 	}
-	return o.EndTime
+	return v.EndTime
 }
 
-func (o *V3SLOCreateSLORequest) GetDurationInDays() int64 {
-	if o == nil {
+func (v *V3SLOCreateSLORequest) GetDurationInDays() int64 {
+	if v == nil {
 		return 0
 	}
-	return o.DurationInDays
+	return v.DurationInDays
 }
 
-func (o *V3SLOCreateSLORequest) GetTags() *V3SLOCreateSLORequestTags {
-	if o == nil {
+func (v *V3SLOCreateSLORequest) GetTags() *V3SLOCreateSLORequestTags {
+	if v == nil {
 		return nil
 	}
-	return o.Tags
+	return v.Tags
 }
 
-func (o *V3SLOCreateSLORequest) GetSloMonitoringChecks() []V3SLOSLOMonitoringCheck {
-	if o == nil {
+func (v *V3SLOCreateSLORequest) GetSloMonitoringChecks() []V3SLOSLOMonitoringCheck {
+	if v == nil {
 		return nil
 	}
-	return o.SloMonitoringChecks
+	return v.SloMonitoringChecks
 }
 
-func (o *V3SLOCreateSLORequest) GetSloActions() []V3SLOSLOAction {
-	if o == nil {
+func (v *V3SLOCreateSLORequest) GetSloActions() []V3SLOSLOAction {
+	if v == nil {
 		return nil
 	}
-	return o.SloActions
+	return v.SloActions
 }
 
-func (o *V3SLOCreateSLORequest) GetOwnerType() string {
-	if o == nil {
+func (v *V3SLOCreateSLORequest) GetOwnerType() string {
+	if v == nil {
 		return ""
 	}
-	return o.OwnerType
+	return v.OwnerType
 }
 
-func (o *V3SLOCreateSLORequest) GetOwnerID() string {
-	if o == nil {
+func (v *V3SLOCreateSLORequest) GetOwnerID() string {
+	if v == nil {
 		return ""
 	}
-	return o.OwnerID
+	return v.OwnerID
 }
 
-func (o *V3SLOCreateSLORequest) GetSloOwnerID() string {
-	if o == nil {
+func (v *V3SLOCreateSLORequest) GetSloOwnerID() string {
+	if v == nil {
 		return ""
 	}
-	return o.SloOwnerID
+	return v.SloOwnerID
 }
 
-func (o *V3SLOCreateSLORequest) GetSloOwnerType() V3SLOSLOOwnerType {
-	if o == nil {
+func (v *V3SLOCreateSLORequest) GetSloOwnerType() V3SLOSLOOwnerType {
+	if v == nil {
 		return V3SLOSLOOwnerType("")
 	}
-	return o.SloOwnerType
+	return v.SloOwnerType
 }

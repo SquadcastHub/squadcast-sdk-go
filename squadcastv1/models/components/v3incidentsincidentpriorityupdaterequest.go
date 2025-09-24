@@ -7,9 +7,9 @@ type V3IncidentsIncidentPriorityUpdateRequest struct {
 	Priority *string `json:"priority,omitempty"`
 }
 
-func (o *V3IncidentsIncidentPriorityUpdateRequest) GetPriority() *string {
-	if o == nil {
+func (v *V3IncidentsIncidentPriorityUpdateRequest) GetPriority() *string {
+	if v == nil {
 		return nil
 	}
-	return o.Priority
+	return v.Priority
 }

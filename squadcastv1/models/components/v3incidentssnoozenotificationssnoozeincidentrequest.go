@@ -6,9 +6,9 @@ type V3IncidentsSnoozeNotificationsSnoozeIncidentRequest struct {
 	SnoozeDurationInMins int `json:"snooze_duration_in_mins"`
 }
 
-func (o *V3IncidentsSnoozeNotificationsSnoozeIncidentRequest) GetSnoozeDurationInMins() int {
-	if o == nil {
+func (v *V3IncidentsSnoozeNotificationsSnoozeIncidentRequest) GetSnoozeDurationInMins() int {
+	if v == nil {
 		return 0
 	}
-	return o.SnoozeDurationInMins
+	return v.SnoozeDurationInMins
 }

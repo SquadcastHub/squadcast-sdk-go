@@ -14,58 +14,58 @@ type V3ExtensionsMSTeamsIncidentActionAlertState struct {
 	IsPriorityUpdatedActive bool `json:"is_priority_updated_active"`
 }
 
-func (o *V3ExtensionsMSTeamsIncidentActionAlertState) GetIsTriggerActive() bool {
-	if o == nil {
+func (v *V3ExtensionsMSTeamsIncidentActionAlertState) GetIsTriggerActive() bool {
+	if v == nil {
 		return false
 	}
-	return o.IsTriggerActive
+	return v.IsTriggerActive
 }
 
-func (o *V3ExtensionsMSTeamsIncidentActionAlertState) GetIsRetriggerActive() bool {
-	if o == nil {
+func (v *V3ExtensionsMSTeamsIncidentActionAlertState) GetIsRetriggerActive() bool {
+	if v == nil {
 		return false
 	}
-	return o.IsRetriggerActive
+	return v.IsRetriggerActive
 }
 
-func (o *V3ExtensionsMSTeamsIncidentActionAlertState) GetIsAcknowledgeActive() bool {
-	if o == nil {
+func (v *V3ExtensionsMSTeamsIncidentActionAlertState) GetIsAcknowledgeActive() bool {
+	if v == nil {
 		return false
 	}
-	return o.IsAcknowledgeActive
+	return v.IsAcknowledgeActive
 }
 
-func (o *V3ExtensionsMSTeamsIncidentActionAlertState) GetIsResolveActive() bool {
-	if o == nil {
+func (v *V3ExtensionsMSTeamsIncidentActionAlertState) GetIsResolveActive() bool {
+	if v == nil {
 		return false
 	}
-	return o.IsResolveActive
+	return v.IsResolveActive
 }
 
-func (o *V3ExtensionsMSTeamsIncidentActionAlertState) GetIsReassignActive() bool {
-	if o == nil {
+func (v *V3ExtensionsMSTeamsIncidentActionAlertState) GetIsReassignActive() bool {
+	if v == nil {
 		return false
 	}
-	return o.IsReassignActive
+	return v.IsReassignActive
 }
 
-func (o *V3ExtensionsMSTeamsIncidentActionAlertState) GetIsNotesAddedActive() bool {
-	if o == nil {
+func (v *V3ExtensionsMSTeamsIncidentActionAlertState) GetIsNotesAddedActive() bool {
+	if v == nil {
 		return false
 	}
-	return o.IsNotesAddedActive
+	return v.IsNotesAddedActive
 }
 
-func (o *V3ExtensionsMSTeamsIncidentActionAlertState) GetIsPostmortemActive() bool {
-	if o == nil {
+func (v *V3ExtensionsMSTeamsIncidentActionAlertState) GetIsPostmortemActive() bool {
+	if v == nil {
 		return false
 	}
-	return o.IsPostmortemActive
+	return v.IsPostmortemActive
 }
 
-func (o *V3ExtensionsMSTeamsIncidentActionAlertState) GetIsPriorityUpdatedActive() bool {
-	if o == nil {
+func (v *V3ExtensionsMSTeamsIncidentActionAlertState) GetIsPriorityUpdatedActive() bool {
+	if v == nil {
 		return false
 	}
-	return o.IsPriorityUpdatedActive
+	return v.IsPriorityUpdatedActive
 }

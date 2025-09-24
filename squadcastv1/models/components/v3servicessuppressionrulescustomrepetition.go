@@ -9,30 +9,30 @@ type V3ServicesSuppressionRulesCustomRepetition struct {
 	RepeatsOnMonth    string  `json:"repeats_on_month"`
 }
 
-func (o *V3ServicesSuppressionRulesCustomRepetition) GetRepeatsCount() int64 {
-	if o == nil {
+func (v *V3ServicesSuppressionRulesCustomRepetition) GetRepeatsCount() int64 {
+	if v == nil {
 		return 0
 	}
-	return o.RepeatsCount
+	return v.RepeatsCount
 }
 
-func (o *V3ServicesSuppressionRulesCustomRepetition) GetRepeats() string {
-	if o == nil {
+func (v *V3ServicesSuppressionRulesCustomRepetition) GetRepeats() string {
+	if v == nil {
 		return ""
 	}
-	return o.Repeats
+	return v.Repeats
 }
 
-func (o *V3ServicesSuppressionRulesCustomRepetition) GetRepeatsOnWeekdays() []int64 {
-	if o == nil {
+func (v *V3ServicesSuppressionRulesCustomRepetition) GetRepeatsOnWeekdays() []int64 {
+	if v == nil {
 		return []int64{}
 	}
-	return o.RepeatsOnWeekdays
+	return v.RepeatsOnWeekdays
 }
 
-func (o *V3ServicesSuppressionRulesCustomRepetition) GetRepeatsOnMonth() string {
-	if o == nil {
+func (v *V3ServicesSuppressionRulesCustomRepetition) GetRepeatsOnMonth() string {
+	if v == nil {
 		return ""
 	}
-	return o.RepeatsOnMonth
+	return v.RepeatsOnMonth
 }

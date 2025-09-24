@@ -6,9 +6,9 @@ type V4ChangeTimezoneResponse struct {
 	TimeZone string `json:"timeZone"`
 }
 
-func (o *V4ChangeTimezoneResponse) GetTimeZone() string {
-	if o == nil {
+func (v *V4ChangeTimezoneResponse) GetTimeZone() string {
+	if v == nil {
 		return ""
 	}
-	return o.TimeZone
+	return v.TimeZone
 }

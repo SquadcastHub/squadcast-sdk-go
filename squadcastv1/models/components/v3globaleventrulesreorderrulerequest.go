@@ -7,16 +7,16 @@ type V3GlobalEventRulesReorderRuleRequest struct {
 	ShiftIndexBy *int64  `json:"shift_index_by,omitempty"`
 }
 
-func (o *V3GlobalEventRulesReorderRuleRequest) GetShiftTo() *string {
-	if o == nil {
+func (v *V3GlobalEventRulesReorderRuleRequest) GetShiftTo() *string {
+	if v == nil {
 		return nil
 	}
-	return o.ShiftTo
+	return v.ShiftTo
 }
 
-func (o *V3GlobalEventRulesReorderRuleRequest) GetShiftIndexBy() *int64 {
-	if o == nil {
+func (v *V3GlobalEventRulesReorderRuleRequest) GetShiftIndexBy() *int64 {
+	if v == nil {
 		return nil
 	}
-	return o.ShiftIndexBy
+	return v.ShiftIndexBy
 }

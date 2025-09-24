@@ -11,11 +11,11 @@ type GlobalOncallReminderRulesCreateGlobalOncallReminderRulesResponseBody struct
 	Data components.V3GlobalOncallReminderRulesGlobalOncallReminderRuleResponse `json:"data"`
 }
 
-func (o *GlobalOncallReminderRulesCreateGlobalOncallReminderRulesResponseBody) GetData() components.V3GlobalOncallReminderRulesGlobalOncallReminderRuleResponse {
-	if o == nil {
+func (g *GlobalOncallReminderRulesCreateGlobalOncallReminderRulesResponseBody) GetData() components.V3GlobalOncallReminderRulesGlobalOncallReminderRuleResponse {
+	if g == nil {
 		return components.V3GlobalOncallReminderRulesGlobalOncallReminderRuleResponse{}
 	}
-	return o.Data
+	return g.Data
 }
 
 type GlobalOncallReminderRulesCreateGlobalOncallReminderRulesResponse struct {
@@ -24,16 +24,16 @@ type GlobalOncallReminderRulesCreateGlobalOncallReminderRulesResponse struct {
 	Object *GlobalOncallReminderRulesCreateGlobalOncallReminderRulesResponseBody
 }
 
-func (o *GlobalOncallReminderRulesCreateGlobalOncallReminderRulesResponse) GetHTTPMeta() components.HTTPMetadata {
-	if o == nil {
+func (g *GlobalOncallReminderRulesCreateGlobalOncallReminderRulesResponse) GetHTTPMeta() components.HTTPMetadata {
+	if g == nil {
 		return components.HTTPMetadata{}
 	}
-	return o.HTTPMeta
+	return g.HTTPMeta
 }
 
-func (o *GlobalOncallReminderRulesCreateGlobalOncallReminderRulesResponse) GetObject() *GlobalOncallReminderRulesCreateGlobalOncallReminderRulesResponseBody {
-	if o == nil {
+func (g *GlobalOncallReminderRulesCreateGlobalOncallReminderRulesResponse) GetObject() *GlobalOncallReminderRulesCreateGlobalOncallReminderRulesResponseBody {
+	if g == nil {
 		return nil
 	}
-	return o.Object
+	return g.Object
 }

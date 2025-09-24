@@ -82,18 +82,18 @@ func (v *V3WorkflowsSqMakeHTTPCallHeader) UnmarshalJSON(data []byte) error {
 	return nil
 }
 
-func (o *V3WorkflowsSqMakeHTTPCallHeader) GetKey() string {
-	if o == nil {
+func (v *V3WorkflowsSqMakeHTTPCallHeader) GetKey() string {
+	if v == nil {
 		return ""
 	}
-	return o.Key
+	return v.Key
 }
 
-func (o *V3WorkflowsSqMakeHTTPCallHeader) GetValue() string {
-	if o == nil {
+func (v *V3WorkflowsSqMakeHTTPCallHeader) GetValue() string {
+	if v == nil {
 		return ""
 	}
-	return o.Value
+	return v.Value
 }
 
 type V3WorkflowsSqMakeHTTPCallData struct {
@@ -114,32 +114,32 @@ func (v *V3WorkflowsSqMakeHTTPCallData) UnmarshalJSON(data []byte) error {
 	return nil
 }
 
-func (o *V3WorkflowsSqMakeHTTPCallData) GetMethod() V3WorkflowsSqMakeHTTPCallMethod {
-	if o == nil {
+func (v *V3WorkflowsSqMakeHTTPCallData) GetMethod() V3WorkflowsSqMakeHTTPCallMethod {
+	if v == nil {
 		return V3WorkflowsSqMakeHTTPCallMethod("")
 	}
-	return o.Method
+	return v.Method
 }
 
-func (o *V3WorkflowsSqMakeHTTPCallData) GetURL() string {
-	if o == nil {
+func (v *V3WorkflowsSqMakeHTTPCallData) GetURL() string {
+	if v == nil {
 		return ""
 	}
-	return o.URL
+	return v.URL
 }
 
-func (o *V3WorkflowsSqMakeHTTPCallData) GetHeaders() []V3WorkflowsSqMakeHTTPCallHeader {
-	if o == nil {
+func (v *V3WorkflowsSqMakeHTTPCallData) GetHeaders() []V3WorkflowsSqMakeHTTPCallHeader {
+	if v == nil {
 		return nil
 	}
-	return o.Headers
+	return v.Headers
 }
 
-func (o *V3WorkflowsSqMakeHTTPCallData) GetBody() *string {
-	if o == nil {
+func (v *V3WorkflowsSqMakeHTTPCallData) GetBody() *string {
+	if v == nil {
 		return nil
 	}
-	return o.Body
+	return v.Body
 }
 
 type V3WorkflowsSqMakeHTTPCall struct {
@@ -158,16 +158,16 @@ func (v *V3WorkflowsSqMakeHTTPCall) UnmarshalJSON(data []byte) error {
 	return nil
 }
 
-func (o *V3WorkflowsSqMakeHTTPCall) GetName() V3WorkflowsSqMakeHTTPCallName {
-	if o == nil {
+func (v *V3WorkflowsSqMakeHTTPCall) GetName() V3WorkflowsSqMakeHTTPCallName {
+	if v == nil {
 		return V3WorkflowsSqMakeHTTPCallName("")
 	}
-	return o.Name
+	return v.Name
 }
 
-func (o *V3WorkflowsSqMakeHTTPCall) GetData() V3WorkflowsSqMakeHTTPCallData {
-	if o == nil {
+func (v *V3WorkflowsSqMakeHTTPCall) GetData() V3WorkflowsSqMakeHTTPCallData {
+	if v == nil {
 		return V3WorkflowsSqMakeHTTPCallData{}
 	}
-	return o.Data
+	return v.Data
 }

@@ -36,191 +36,191 @@ type V3WebformsWebformResponse struct {
 	DeletedAt     string                     `json:"deleted_at"`
 }
 
-func (o *V3WebformsWebformResponse) GetID() int {
-	if o == nil {
+func (v *V3WebformsWebformResponse) GetID() int {
+	if v == nil {
 		return 0
 	}
-	return o.ID
+	return v.ID
 }
 
-func (o *V3WebformsWebformResponse) GetOrgID() string {
-	if o == nil {
+func (v *V3WebformsWebformResponse) GetOrgID() string {
+	if v == nil {
 		return ""
 	}
-	return o.OrgID
+	return v.OrgID
 }
 
-func (o *V3WebformsWebformResponse) GetOwnerID() string {
-	if o == nil {
+func (v *V3WebformsWebformResponse) GetOwnerID() string {
+	if v == nil {
 		return ""
 	}
-	return o.OwnerID
+	return v.OwnerID
 }
 
-func (o *V3WebformsWebformResponse) GetName() string {
-	if o == nil {
+func (v *V3WebformsWebformResponse) GetName() string {
+	if v == nil {
 		return ""
 	}
-	return o.Name
+	return v.Name
 }
 
-func (o *V3WebformsWebformResponse) GetIsCname() bool {
-	if o == nil {
+func (v *V3WebformsWebformResponse) GetIsCname() bool {
+	if v == nil {
 		return false
 	}
-	return o.IsCname
+	return v.IsCname
 }
 
-func (o *V3WebformsWebformResponse) GetPublicURL() string {
-	if o == nil {
+func (v *V3WebformsWebformResponse) GetPublicURL() string {
+	if v == nil {
 		return ""
 	}
-	return o.PublicURL
+	return v.PublicURL
 }
 
-func (o *V3WebformsWebformResponse) GetHostName() *string {
-	if o == nil {
+func (v *V3WebformsWebformResponse) GetHostName() *string {
+	if v == nil {
 		return nil
 	}
-	return o.HostName
+	return v.HostName
 }
 
-func (o *V3WebformsWebformResponse) GetTags() V3WebformsWebformResponseTags {
-	if o == nil {
+func (v *V3WebformsWebformResponse) GetTags() V3WebformsWebformResponseTags {
+	if v == nil {
 		return V3WebformsWebformResponseTags{}
 	}
-	return o.Tags
+	return v.Tags
 }
 
-func (o *V3WebformsWebformResponse) GetIsCaptchaEnabled() bool {
-	if o == nil {
+func (v *V3WebformsWebformResponse) GetIsCaptchaEnabled() bool {
+	if v == nil {
 		return false
 	}
-	return o.IsCaptchaEnabled
+	return v.IsCaptchaEnabled
 }
 
-func (o *V3WebformsWebformResponse) GetCaptchaProvider() string {
-	if o == nil {
+func (v *V3WebformsWebformResponse) GetCaptchaProvider() string {
+	if v == nil {
 		return ""
 	}
-	return o.CaptchaProvider
+	return v.CaptchaProvider
 }
 
-func (o *V3WebformsWebformResponse) GetCaptchaSecret() V3WebformsRecaptchaSecrets {
-	if o == nil {
+func (v *V3WebformsWebformResponse) GetCaptchaSecret() V3WebformsRecaptchaSecrets {
+	if v == nil {
 		return V3WebformsRecaptchaSecrets{}
 	}
-	return o.CaptchaSecret
+	return v.CaptchaSecret
 }
 
-func (o *V3WebformsWebformResponse) GetFormOwnerType() string {
-	if o == nil {
+func (v *V3WebformsWebformResponse) GetFormOwnerType() string {
+	if v == nil {
 		return ""
 	}
-	return o.FormOwnerType
+	return v.FormOwnerType
 }
 
-func (o *V3WebformsWebformResponse) GetFormOwnerID() string {
-	if o == nil {
+func (v *V3WebformsWebformResponse) GetFormOwnerID() string {
+	if v == nil {
 		return ""
 	}
-	return o.FormOwnerID
+	return v.FormOwnerID
 }
 
-func (o *V3WebformsWebformResponse) GetFormOwnerName() string {
-	if o == nil {
+func (v *V3WebformsWebformResponse) GetFormOwnerName() string {
+	if v == nil {
 		return ""
 	}
-	return o.FormOwnerName
+	return v.FormOwnerName
 }
 
-func (o *V3WebformsWebformResponse) GetServices() []V3WebformsWFService {
-	if o == nil {
+func (v *V3WebformsWebformResponse) GetServices() []V3WebformsWFService {
+	if v == nil {
 		return []V3WebformsWFService{}
 	}
-	return o.Services
+	return v.Services
 }
 
-func (o *V3WebformsWebformResponse) GetInputField() []V3WebformsWFInputField {
-	if o == nil {
+func (v *V3WebformsWebformResponse) GetInputField() []V3WebformsWFInputField {
+	if v == nil {
 		return []V3WebformsWFInputField{}
 	}
-	return o.InputField
+	return v.InputField
 }
 
-func (o *V3WebformsWebformResponse) GetHeader() string {
-	if o == nil {
+func (v *V3WebformsWebformResponse) GetHeader() string {
+	if v == nil {
 		return ""
 	}
-	return o.Header
+	return v.Header
 }
 
-func (o *V3WebformsWebformResponse) GetTitle() string {
-	if o == nil {
+func (v *V3WebformsWebformResponse) GetTitle() string {
+	if v == nil {
 		return ""
 	}
-	return o.Title
+	return v.Title
 }
 
-func (o *V3WebformsWebformResponse) GetLogoURL() *string {
-	if o == nil {
+func (v *V3WebformsWebformResponse) GetLogoURL() *string {
+	if v == nil {
 		return nil
 	}
-	return o.LogoURL
+	return v.LogoURL
 }
 
-func (o *V3WebformsWebformResponse) GetFooterText() string {
-	if o == nil {
+func (v *V3WebformsWebformResponse) GetFooterText() string {
+	if v == nil {
 		return ""
 	}
-	return o.FooterText
+	return v.FooterText
 }
 
-func (o *V3WebformsWebformResponse) GetFooterLink() string {
-	if o == nil {
+func (v *V3WebformsWebformResponse) GetFooterLink() string {
+	if v == nil {
 		return ""
 	}
-	return o.FooterLink
+	return v.FooterLink
 }
 
-func (o *V3WebformsWebformResponse) GetEmailOn() []string {
-	if o == nil {
+func (v *V3WebformsWebformResponse) GetEmailOn() []string {
+	if v == nil {
 		return []string{}
 	}
-	return o.EmailOn
+	return v.EmailOn
 }
 
-func (o *V3WebformsWebformResponse) GetDescription() *string {
-	if o == nil {
+func (v *V3WebformsWebformResponse) GetDescription() *string {
+	if v == nil {
 		return nil
 	}
-	return o.Description
+	return v.Description
 }
 
-func (o *V3WebformsWebformResponse) GetIncidentCount() int64 {
-	if o == nil {
+func (v *V3WebformsWebformResponse) GetIncidentCount() int64 {
+	if v == nil {
 		return 0
 	}
-	return o.IncidentCount
+	return v.IncidentCount
 }
 
-func (o *V3WebformsWebformResponse) GetMttr() float64 {
-	if o == nil {
+func (v *V3WebformsWebformResponse) GetMttr() float64 {
+	if v == nil {
 		return 0.0
 	}
-	return o.Mttr
+	return v.Mttr
 }
 
-func (o *V3WebformsWebformResponse) GetIsDeleted() bool {
-	if o == nil {
+func (v *V3WebformsWebformResponse) GetIsDeleted() bool {
+	if v == nil {
 		return false
 	}
-	return o.IsDeleted
+	return v.IsDeleted
 }
 
-func (o *V3WebformsWebformResponse) GetDeletedAt() string {
-	if o == nil {
+func (v *V3WebformsWebformResponse) GetDeletedAt() string {
+	if v == nil {
 		return ""
 	}
-	return o.DeletedAt
+	return v.DeletedAt
 }

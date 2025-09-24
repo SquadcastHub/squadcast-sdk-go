@@ -11,11 +11,11 @@ type TeamsGetAllTeamsResponseBody struct {
 	Data []components.V3TeamsTeamResponse `json:"data"`
 }
 
-func (o *TeamsGetAllTeamsResponseBody) GetData() []components.V3TeamsTeamResponse {
-	if o == nil {
+func (t *TeamsGetAllTeamsResponseBody) GetData() []components.V3TeamsTeamResponse {
+	if t == nil {
 		return []components.V3TeamsTeamResponse{}
 	}
-	return o.Data
+	return t.Data
 }
 
 type TeamsGetAllTeamsResponse struct {
@@ -24,16 +24,16 @@ type TeamsGetAllTeamsResponse struct {
 	Object *TeamsGetAllTeamsResponseBody
 }
 
-func (o *TeamsGetAllTeamsResponse) GetHTTPMeta() components.HTTPMetadata {
-	if o == nil {
+func (t *TeamsGetAllTeamsResponse) GetHTTPMeta() components.HTTPMetadata {
+	if t == nil {
 		return components.HTTPMetadata{}
 	}
-	return o.HTTPMeta
+	return t.HTTPMeta
 }
 
-func (o *TeamsGetAllTeamsResponse) GetObject() *TeamsGetAllTeamsResponseBody {
-	if o == nil {
+func (t *TeamsGetAllTeamsResponse) GetObject() *TeamsGetAllTeamsResponseBody {
+	if t == nil {
 		return nil
 	}
-	return o.Object
+	return t.Object
 }

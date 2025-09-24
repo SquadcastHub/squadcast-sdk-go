@@ -9,30 +9,30 @@ type V3WorkflowsGetWorkflowActionByIDResponse struct {
 	Data       any    `json:"data"`
 }
 
-func (o *V3WorkflowsGetWorkflowActionByIDResponse) GetID() int {
-	if o == nil {
+func (v *V3WorkflowsGetWorkflowActionByIDResponse) GetID() int {
+	if v == nil {
 		return 0
 	}
-	return o.ID
+	return v.ID
 }
 
-func (o *V3WorkflowsGetWorkflowActionByIDResponse) GetWorkflowID() int {
-	if o == nil {
+func (v *V3WorkflowsGetWorkflowActionByIDResponse) GetWorkflowID() int {
+	if v == nil {
 		return 0
 	}
-	return o.WorkflowID
+	return v.WorkflowID
 }
 
-func (o *V3WorkflowsGetWorkflowActionByIDResponse) GetName() string {
-	if o == nil {
+func (v *V3WorkflowsGetWorkflowActionByIDResponse) GetName() string {
+	if v == nil {
 		return ""
 	}
-	return o.Name
+	return v.Name
 }
 
-func (o *V3WorkflowsGetWorkflowActionByIDResponse) GetData() any {
-	if o == nil {
+func (v *V3WorkflowsGetWorkflowActionByIDResponse) GetData() any {
+	if v == nil {
 		return nil
 	}
-	return o.Data
+	return v.Data
 }

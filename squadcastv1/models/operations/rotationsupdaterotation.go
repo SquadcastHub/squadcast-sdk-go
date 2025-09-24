@@ -12,25 +12,25 @@ type RotationsUpdateRotationRequest struct {
 	V4UpdateRotationRequest components.V4UpdateRotationRequest `request:"mediaType=application/json"`
 }
 
-func (o *RotationsUpdateRotationRequest) GetScheduleID() string {
-	if o == nil {
+func (r *RotationsUpdateRotationRequest) GetScheduleID() string {
+	if r == nil {
 		return ""
 	}
-	return o.ScheduleID
+	return r.ScheduleID
 }
 
-func (o *RotationsUpdateRotationRequest) GetRotationID() string {
-	if o == nil {
+func (r *RotationsUpdateRotationRequest) GetRotationID() string {
+	if r == nil {
 		return ""
 	}
-	return o.RotationID
+	return r.RotationID
 }
 
-func (o *RotationsUpdateRotationRequest) GetV4UpdateRotationRequest() components.V4UpdateRotationRequest {
-	if o == nil {
+func (r *RotationsUpdateRotationRequest) GetV4UpdateRotationRequest() components.V4UpdateRotationRequest {
+	if r == nil {
 		return components.V4UpdateRotationRequest{}
 	}
-	return o.V4UpdateRotationRequest
+	return r.V4UpdateRotationRequest
 }
 
 // RotationsUpdateRotationResponseBody - The request has succeeded.
@@ -38,11 +38,11 @@ type RotationsUpdateRotationResponseBody struct {
 	Data components.V4RotationResponse `json:"data"`
 }
 
-func (o *RotationsUpdateRotationResponseBody) GetData() components.V4RotationResponse {
-	if o == nil {
+func (r *RotationsUpdateRotationResponseBody) GetData() components.V4RotationResponse {
+	if r == nil {
 		return components.V4RotationResponse{}
 	}
-	return o.Data
+	return r.Data
 }
 
 type RotationsUpdateRotationResponse struct {
@@ -51,16 +51,16 @@ type RotationsUpdateRotationResponse struct {
 	Object *RotationsUpdateRotationResponseBody
 }
 
-func (o *RotationsUpdateRotationResponse) GetHTTPMeta() components.HTTPMetadata {
-	if o == nil {
+func (r *RotationsUpdateRotationResponse) GetHTTPMeta() components.HTTPMetadata {
+	if r == nil {
 		return components.HTTPMetadata{}
 	}
-	return o.HTTPMeta
+	return r.HTTPMeta
 }
 
-func (o *RotationsUpdateRotationResponse) GetObject() *RotationsUpdateRotationResponseBody {
-	if o == nil {
+func (r *RotationsUpdateRotationResponse) GetObject() *RotationsUpdateRotationResponseBody {
+	if r == nil {
 		return nil
 	}
-	return o.Object
+	return r.Object
 }

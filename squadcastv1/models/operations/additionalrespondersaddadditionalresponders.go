@@ -11,18 +11,18 @@ type AdditionalRespondersAddAdditionalRespondersRequest struct {
 	V3IncidentsAdditionalRespondersAddAdditionalRespondersRequest components.V3IncidentsAdditionalRespondersAddAdditionalRespondersRequest `request:"mediaType=application/json"`
 }
 
-func (o *AdditionalRespondersAddAdditionalRespondersRequest) GetIncidentID() string {
-	if o == nil {
+func (a *AdditionalRespondersAddAdditionalRespondersRequest) GetIncidentID() string {
+	if a == nil {
 		return ""
 	}
-	return o.IncidentID
+	return a.IncidentID
 }
 
-func (o *AdditionalRespondersAddAdditionalRespondersRequest) GetV3IncidentsAdditionalRespondersAddAdditionalRespondersRequest() components.V3IncidentsAdditionalRespondersAddAdditionalRespondersRequest {
-	if o == nil {
+func (a *AdditionalRespondersAddAdditionalRespondersRequest) GetV3IncidentsAdditionalRespondersAddAdditionalRespondersRequest() components.V3IncidentsAdditionalRespondersAddAdditionalRespondersRequest {
+	if a == nil {
 		return components.V3IncidentsAdditionalRespondersAddAdditionalRespondersRequest{}
 	}
-	return o.V3IncidentsAdditionalRespondersAddAdditionalRespondersRequest
+	return a.V3IncidentsAdditionalRespondersAddAdditionalRespondersRequest
 }
 
 // AdditionalRespondersAddAdditionalRespondersResponseBody - The request has succeeded.
@@ -30,11 +30,11 @@ type AdditionalRespondersAddAdditionalRespondersResponseBody struct {
 	Data components.V3IncidentsAdditionalRespondersAdditionalResponderResponse `json:"data"`
 }
 
-func (o *AdditionalRespondersAddAdditionalRespondersResponseBody) GetData() components.V3IncidentsAdditionalRespondersAdditionalResponderResponse {
-	if o == nil {
+func (a *AdditionalRespondersAddAdditionalRespondersResponseBody) GetData() components.V3IncidentsAdditionalRespondersAdditionalResponderResponse {
+	if a == nil {
 		return components.V3IncidentsAdditionalRespondersAdditionalResponderResponse{}
 	}
-	return o.Data
+	return a.Data
 }
 
 type AdditionalRespondersAddAdditionalRespondersResponse struct {
@@ -43,16 +43,16 @@ type AdditionalRespondersAddAdditionalRespondersResponse struct {
 	Object *AdditionalRespondersAddAdditionalRespondersResponseBody
 }
 
-func (o *AdditionalRespondersAddAdditionalRespondersResponse) GetHTTPMeta() components.HTTPMetadata {
-	if o == nil {
+func (a *AdditionalRespondersAddAdditionalRespondersResponse) GetHTTPMeta() components.HTTPMetadata {
+	if a == nil {
 		return components.HTTPMetadata{}
 	}
-	return o.HTTPMeta
+	return a.HTTPMeta
 }
 
-func (o *AdditionalRespondersAddAdditionalRespondersResponse) GetObject() *AdditionalRespondersAddAdditionalRespondersResponseBody {
-	if o == nil {
+func (a *AdditionalRespondersAddAdditionalRespondersResponse) GetObject() *AdditionalRespondersAddAdditionalRespondersResponseBody {
+	if a == nil {
 		return nil
 	}
-	return o.Object
+	return a.Object
 }

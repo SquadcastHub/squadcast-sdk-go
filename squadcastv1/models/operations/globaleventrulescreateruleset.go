@@ -11,18 +11,18 @@ type GlobalEventRulesCreateRulesetRequest struct {
 	V3GlobalEventRulesCreateRulesetRequest components.V3GlobalEventRulesCreateRulesetRequest `request:"mediaType=application/json"`
 }
 
-func (o *GlobalEventRulesCreateRulesetRequest) GetGerID() int64 {
-	if o == nil {
+func (g *GlobalEventRulesCreateRulesetRequest) GetGerID() int64 {
+	if g == nil {
 		return 0
 	}
-	return o.GerID
+	return g.GerID
 }
 
-func (o *GlobalEventRulesCreateRulesetRequest) GetV3GlobalEventRulesCreateRulesetRequest() components.V3GlobalEventRulesCreateRulesetRequest {
-	if o == nil {
+func (g *GlobalEventRulesCreateRulesetRequest) GetV3GlobalEventRulesCreateRulesetRequest() components.V3GlobalEventRulesCreateRulesetRequest {
+	if g == nil {
 		return components.V3GlobalEventRulesCreateRulesetRequest{}
 	}
-	return o.V3GlobalEventRulesCreateRulesetRequest
+	return g.V3GlobalEventRulesCreateRulesetRequest
 }
 
 // GlobalEventRulesCreateRulesetResponseBody - The request has succeeded and a new resource has been created as a result.
@@ -30,11 +30,11 @@ type GlobalEventRulesCreateRulesetResponseBody struct {
 	Data components.V3GlobalEventRulesRulesetResponse `json:"data"`
 }
 
-func (o *GlobalEventRulesCreateRulesetResponseBody) GetData() components.V3GlobalEventRulesRulesetResponse {
-	if o == nil {
+func (g *GlobalEventRulesCreateRulesetResponseBody) GetData() components.V3GlobalEventRulesRulesetResponse {
+	if g == nil {
 		return components.V3GlobalEventRulesRulesetResponse{}
 	}
-	return o.Data
+	return g.Data
 }
 
 type GlobalEventRulesCreateRulesetResponse struct {
@@ -43,16 +43,16 @@ type GlobalEventRulesCreateRulesetResponse struct {
 	Object *GlobalEventRulesCreateRulesetResponseBody
 }
 
-func (o *GlobalEventRulesCreateRulesetResponse) GetHTTPMeta() components.HTTPMetadata {
-	if o == nil {
+func (g *GlobalEventRulesCreateRulesetResponse) GetHTTPMeta() components.HTTPMetadata {
+	if g == nil {
 		return components.HTTPMetadata{}
 	}
-	return o.HTTPMeta
+	return g.HTTPMeta
 }
 
-func (o *GlobalEventRulesCreateRulesetResponse) GetObject() *GlobalEventRulesCreateRulesetResponseBody {
-	if o == nil {
+func (g *GlobalEventRulesCreateRulesetResponse) GetObject() *GlobalEventRulesCreateRulesetResponseBody {
+	if g == nil {
 		return nil
 	}
-	return o.Object
+	return g.Object
 }

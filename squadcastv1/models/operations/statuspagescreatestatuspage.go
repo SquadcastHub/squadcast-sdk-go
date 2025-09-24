@@ -11,11 +11,11 @@ type StatusPagesCreateStatusPageResponseBody struct {
 	Data components.V4StatusPagesCreateStatusPageResponse `json:"data"`
 }
 
-func (o *StatusPagesCreateStatusPageResponseBody) GetData() components.V4StatusPagesCreateStatusPageResponse {
-	if o == nil {
+func (s *StatusPagesCreateStatusPageResponseBody) GetData() components.V4StatusPagesCreateStatusPageResponse {
+	if s == nil {
 		return components.V4StatusPagesCreateStatusPageResponse{}
 	}
-	return o.Data
+	return s.Data
 }
 
 type StatusPagesCreateStatusPageResponse struct {
@@ -24,16 +24,16 @@ type StatusPagesCreateStatusPageResponse struct {
 	Object *StatusPagesCreateStatusPageResponseBody
 }
 
-func (o *StatusPagesCreateStatusPageResponse) GetHTTPMeta() components.HTTPMetadata {
-	if o == nil {
+func (s *StatusPagesCreateStatusPageResponse) GetHTTPMeta() components.HTTPMetadata {
+	if s == nil {
 		return components.HTTPMetadata{}
 	}
-	return o.HTTPMeta
+	return s.HTTPMeta
 }
 
-func (o *StatusPagesCreateStatusPageResponse) GetObject() *StatusPagesCreateStatusPageResponseBody {
-	if o == nil {
+func (s *StatusPagesCreateStatusPageResponse) GetObject() *StatusPagesCreateStatusPageResponseBody {
+	if s == nil {
 		return nil
 	}
-	return o.Object
+	return s.Object
 }

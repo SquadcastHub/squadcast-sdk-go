@@ -22,16 +22,16 @@ func (v *V3WorkflowsIssueStatusAndMessage) UnmarshalJSON(data []byte) error {
 	return nil
 }
 
-func (o *V3WorkflowsIssueStatusAndMessage) GetMessages() []string {
-	if o == nil {
+func (v *V3WorkflowsIssueStatusAndMessage) GetMessages() []string {
+	if v == nil {
 		return []string{}
 	}
-	return o.Messages
+	return v.Messages
 }
 
-func (o *V3WorkflowsIssueStatusAndMessage) GetStatusID() int {
-	if o == nil {
+func (v *V3WorkflowsIssueStatusAndMessage) GetStatusID() int {
+	if v == nil {
 		return 0
 	}
-	return o.StatusID
+	return v.StatusID
 }

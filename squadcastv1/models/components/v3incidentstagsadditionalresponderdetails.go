@@ -28,44 +28,44 @@ func (v *V3IncidentsTagsAdditionalResponderDetails) UnmarshalJSON(data []byte) e
 	return nil
 }
 
-func (o *V3IncidentsTagsAdditionalResponderDetails) GetID() string {
-	if o == nil {
+func (v *V3IncidentsTagsAdditionalResponderDetails) GetID() string {
+	if v == nil {
 		return ""
 	}
-	return o.ID
+	return v.ID
 }
 
-func (o *V3IncidentsTagsAdditionalResponderDetails) GetType() string {
-	if o == nil {
+func (v *V3IncidentsTagsAdditionalResponderDetails) GetType() string {
+	if v == nil {
 		return ""
 	}
-	return o.Type
+	return v.Type
 }
 
-func (o *V3IncidentsTagsAdditionalResponderDetails) GetTimeOfAssignment() time.Time {
-	if o == nil {
+func (v *V3IncidentsTagsAdditionalResponderDetails) GetTimeOfAssignment() time.Time {
+	if v == nil {
 		return time.Time{}
 	}
-	return o.TimeOfAssignment
+	return v.TimeOfAssignment
 }
 
-func (o *V3IncidentsTagsAdditionalResponderDetails) GetReason() string {
-	if o == nil {
+func (v *V3IncidentsTagsAdditionalResponderDetails) GetReason() string {
+	if v == nil {
 		return ""
 	}
-	return o.Reason
+	return v.Reason
 }
 
-func (o *V3IncidentsTagsAdditionalResponderDetails) GetName() string {
-	if o == nil {
+func (v *V3IncidentsTagsAdditionalResponderDetails) GetName() string {
+	if v == nil {
 		return ""
 	}
-	return o.Name
+	return v.Name
 }
 
-func (o *V3IncidentsTagsAdditionalResponderDetails) GetLastNotifiedAt() time.Time {
-	if o == nil {
+func (v *V3IncidentsTagsAdditionalResponderDetails) GetLastNotifiedAt() time.Time {
+	if v == nil {
 		return time.Time{}
 	}
-	return o.LastNotifiedAt
+	return v.LastNotifiedAt
 }

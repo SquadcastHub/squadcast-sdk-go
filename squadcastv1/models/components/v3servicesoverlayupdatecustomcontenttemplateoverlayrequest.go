@@ -6,22 +6,22 @@ type MessageOverlay struct {
 	Template string `json:"template"`
 }
 
-func (o *MessageOverlay) GetTemplate() string {
-	if o == nil {
+func (m *MessageOverlay) GetTemplate() string {
+	if m == nil {
 		return ""
 	}
-	return o.Template
+	return m.Template
 }
 
 type DescriptionOverlay struct {
 	Template string `json:"template"`
 }
 
-func (o *DescriptionOverlay) GetTemplate() string {
-	if o == nil {
+func (d *DescriptionOverlay) GetTemplate() string {
+	if d == nil {
 		return ""
 	}
-	return o.Template
+	return d.Template
 }
 
 type V3ServicesOverlayUpdateCustomContentTemplateOverlayRequest struct {
@@ -30,23 +30,23 @@ type V3ServicesOverlayUpdateCustomContentTemplateOverlayRequest struct {
 	DescriptionOverlay  DescriptionOverlay `json:"description_overlay"`
 }
 
-func (o *V3ServicesOverlayUpdateCustomContentTemplateOverlayRequest) GetOverlayTemplateType() string {
-	if o == nil {
+func (v *V3ServicesOverlayUpdateCustomContentTemplateOverlayRequest) GetOverlayTemplateType() string {
+	if v == nil {
 		return ""
 	}
-	return o.OverlayTemplateType
+	return v.OverlayTemplateType
 }
 
-func (o *V3ServicesOverlayUpdateCustomContentTemplateOverlayRequest) GetMessageOverlay() MessageOverlay {
-	if o == nil {
+func (v *V3ServicesOverlayUpdateCustomContentTemplateOverlayRequest) GetMessageOverlay() MessageOverlay {
+	if v == nil {
 		return MessageOverlay{}
 	}
-	return o.MessageOverlay
+	return v.MessageOverlay
 }
 
-func (o *V3ServicesOverlayUpdateCustomContentTemplateOverlayRequest) GetDescriptionOverlay() DescriptionOverlay {
-	if o == nil {
+func (v *V3ServicesOverlayUpdateCustomContentTemplateOverlayRequest) GetDescriptionOverlay() DescriptionOverlay {
+	if v == nil {
 		return DescriptionOverlay{}
 	}
-	return o.DescriptionOverlay
+	return v.DescriptionOverlay
 }

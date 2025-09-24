@@ -32,79 +32,79 @@ func (v *V4StatusPagesIssuesGetIssueByIDResponse) UnmarshalJSON(data []byte) err
 	return nil
 }
 
-func (o *V4StatusPagesIssuesGetIssueByIDResponse) GetID() int64 {
-	if o == nil {
+func (v *V4StatusPagesIssuesGetIssueByIDResponse) GetID() int64 {
+	if v == nil {
 		return 0
 	}
-	return o.ID
+	return v.ID
 }
 
-func (o *V4StatusPagesIssuesGetIssueByIDResponse) GetTitle() string {
-	if o == nil {
+func (v *V4StatusPagesIssuesGetIssueByIDResponse) GetTitle() string {
+	if v == nil {
 		return ""
 	}
-	return o.Title
+	return v.Title
 }
 
-func (o *V4StatusPagesIssuesGetIssueByIDResponse) GetLastUpdatedAt() time.Time {
-	if o == nil {
+func (v *V4StatusPagesIssuesGetIssueByIDResponse) GetLastUpdatedAt() time.Time {
+	if v == nil {
 		return time.Time{}
 	}
-	return o.LastUpdatedAt
+	return v.LastUpdatedAt
 }
 
-func (o *V4StatusPagesIssuesGetIssueByIDResponse) GetComponents() []V4StatusPagesIssuesIssueComponentDetail {
-	if o == nil {
+func (v *V4StatusPagesIssuesGetIssueByIDResponse) GetComponents() []V4StatusPagesIssuesIssueComponentDetail {
+	if v == nil {
 		return []V4StatusPagesIssuesIssueComponentDetail{}
 	}
-	return o.Components
+	return v.Components
 }
 
-func (o *V4StatusPagesIssuesGetIssueByIDResponse) GetIssues() []V4StatusPagesIssuesIssueDetail {
-	if o == nil {
+func (v *V4StatusPagesIssuesGetIssueByIDResponse) GetIssues() []V4StatusPagesIssuesIssueDetail {
+	if v == nil {
 		return []V4StatusPagesIssuesIssueDetail{}
 	}
-	return o.Issues
+	return v.Issues
 }
 
-func (o *V4StatusPagesIssuesGetIssueByIDResponse) GetCurrentIssueState() V4StatusPagesIssuesComponentStatus {
-	if o == nil {
+func (v *V4StatusPagesIssuesGetIssueByIDResponse) GetCurrentIssueState() V4StatusPagesIssuesComponentStatus {
+	if v == nil {
 		return V4StatusPagesIssuesComponentStatus{}
 	}
-	return o.CurrentIssueState
+	return v.CurrentIssueState
 }
 
-func (o *V4StatusPagesIssuesGetIssueByIDResponse) GetPageStatus() V4StatusPagesIssuesComponentStatus {
-	if o == nil {
+func (v *V4StatusPagesIssuesGetIssueByIDResponse) GetPageStatus() V4StatusPagesIssuesComponentStatus {
+	if v == nil {
 		return V4StatusPagesIssuesComponentStatus{}
 	}
-	return o.PageStatus
+	return v.PageStatus
 }
 
-func (o *V4StatusPagesIssuesGetIssueByIDResponse) GetUnderMaintenance() bool {
-	if o == nil {
+func (v *V4StatusPagesIssuesGetIssueByIDResponse) GetUnderMaintenance() bool {
+	if v == nil {
 		return false
 	}
-	return o.UnderMaintenance
+	return v.UnderMaintenance
 }
 
-func (o *V4StatusPagesIssuesGetIssueByIDResponse) GetStatusMaintenance() V4StatusPagesIssuesComponentStatus {
-	if o == nil {
+func (v *V4StatusPagesIssuesGetIssueByIDResponse) GetStatusMaintenance() V4StatusPagesIssuesComponentStatus {
+	if v == nil {
 		return V4StatusPagesIssuesComponentStatus{}
 	}
-	return o.StatusMaintenance
+	return v.StatusMaintenance
 }
 
-func (o *V4StatusPagesIssuesGetIssueByIDResponse) GetPageID() int64 {
-	if o == nil {
+func (v *V4StatusPagesIssuesGetIssueByIDResponse) GetPageID() int64 {
+	if v == nil {
 		return 0
 	}
-	return o.PageID
+	return v.PageID
 }
 
-func (o *V4StatusPagesIssuesGetIssueByIDResponse) GetIsMigrated() bool {
-	if o == nil {
+func (v *V4StatusPagesIssuesGetIssueByIDResponse) GetIsMigrated() bool {
+	if v == nil {
 		return false
 	}
-	return o.IsMigrated
+	return v.IsMigrated
 }

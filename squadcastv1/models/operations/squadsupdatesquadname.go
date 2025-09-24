@@ -11,18 +11,18 @@ type SquadsUpdateSquadNameRequest struct {
 	V4SquadsUpdateSquadNameRequest components.V4SquadsUpdateSquadNameRequest `request:"mediaType=application/json"`
 }
 
-func (o *SquadsUpdateSquadNameRequest) GetSquadID() string {
-	if o == nil {
+func (s *SquadsUpdateSquadNameRequest) GetSquadID() string {
+	if s == nil {
 		return ""
 	}
-	return o.SquadID
+	return s.SquadID
 }
 
-func (o *SquadsUpdateSquadNameRequest) GetV4SquadsUpdateSquadNameRequest() components.V4SquadsUpdateSquadNameRequest {
-	if o == nil {
+func (s *SquadsUpdateSquadNameRequest) GetV4SquadsUpdateSquadNameRequest() components.V4SquadsUpdateSquadNameRequest {
+	if s == nil {
 		return components.V4SquadsUpdateSquadNameRequest{}
 	}
-	return o.V4SquadsUpdateSquadNameRequest
+	return s.V4SquadsUpdateSquadNameRequest
 }
 
 // SquadsUpdateSquadNameResponseBody - The request has succeeded.
@@ -30,11 +30,11 @@ type SquadsUpdateSquadNameResponseBody struct {
 	Data components.V4SquadsUpdateSquadNameResponse `json:"data"`
 }
 
-func (o *SquadsUpdateSquadNameResponseBody) GetData() components.V4SquadsUpdateSquadNameResponse {
-	if o == nil {
+func (s *SquadsUpdateSquadNameResponseBody) GetData() components.V4SquadsUpdateSquadNameResponse {
+	if s == nil {
 		return components.V4SquadsUpdateSquadNameResponse{}
 	}
-	return o.Data
+	return s.Data
 }
 
 type SquadsUpdateSquadNameResponse struct {
@@ -43,16 +43,16 @@ type SquadsUpdateSquadNameResponse struct {
 	Object *SquadsUpdateSquadNameResponseBody
 }
 
-func (o *SquadsUpdateSquadNameResponse) GetHTTPMeta() components.HTTPMetadata {
-	if o == nil {
+func (s *SquadsUpdateSquadNameResponse) GetHTTPMeta() components.HTTPMetadata {
+	if s == nil {
 		return components.HTTPMetadata{}
 	}
-	return o.HTTPMeta
+	return s.HTTPMeta
 }
 
-func (o *SquadsUpdateSquadNameResponse) GetObject() *SquadsUpdateSquadNameResponseBody {
-	if o == nil {
+func (s *SquadsUpdateSquadNameResponse) GetObject() *SquadsUpdateSquadNameResponseBody {
+	if s == nil {
 		return nil
 	}
-	return o.Object
+	return s.Object
 }

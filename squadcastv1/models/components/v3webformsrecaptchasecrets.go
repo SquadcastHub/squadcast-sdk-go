@@ -10,16 +10,16 @@ type V3WebformsRecaptchaSecrets struct {
 	Secret string `json:"secret"`
 }
 
-func (o *V3WebformsRecaptchaSecrets) GetSiteKey() string {
-	if o == nil {
+func (v *V3WebformsRecaptchaSecrets) GetSiteKey() string {
+	if v == nil {
 		return ""
 	}
-	return o.SiteKey
+	return v.SiteKey
 }
 
-func (o *V3WebformsRecaptchaSecrets) GetSecret() string {
-	if o == nil {
+func (v *V3WebformsRecaptchaSecrets) GetSecret() string {
+	if v == nil {
 		return ""
 	}
-	return o.Secret
+	return v.Secret
 }

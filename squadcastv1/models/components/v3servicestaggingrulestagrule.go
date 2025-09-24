@@ -10,30 +10,30 @@ type V3ServicesTaggingRulesTagRule struct {
 	BasicExpression []V3ServicesTaggingRulesExpressionBranch `json:"basic_expression,omitempty"`
 }
 
-func (o *V3ServicesTaggingRulesTagRule) GetExpression() *string {
-	if o == nil {
+func (v *V3ServicesTaggingRulesTagRule) GetExpression() *string {
+	if v == nil {
 		return nil
 	}
-	return o.Expression
+	return v.Expression
 }
 
-func (o *V3ServicesTaggingRulesTagRule) GetTags() *V3ServicesTaggingRulesTagsObject {
-	if o == nil {
+func (v *V3ServicesTaggingRulesTagRule) GetTags() *V3ServicesTaggingRulesTagsObject {
+	if v == nil {
 		return nil
 	}
-	return o.Tags
+	return v.Tags
 }
 
-func (o *V3ServicesTaggingRulesTagRule) GetIsBasic() *bool {
-	if o == nil {
+func (v *V3ServicesTaggingRulesTagRule) GetIsBasic() *bool {
+	if v == nil {
 		return nil
 	}
-	return o.IsBasic
+	return v.IsBasic
 }
 
-func (o *V3ServicesTaggingRulesTagRule) GetBasicExpression() []V3ServicesTaggingRulesExpressionBranch {
-	if o == nil {
+func (v *V3ServicesTaggingRulesTagRule) GetBasicExpression() []V3ServicesTaggingRulesExpressionBranch {
+	if v == nil {
 		return nil
 	}
-	return o.BasicExpression
+	return v.BasicExpression
 }

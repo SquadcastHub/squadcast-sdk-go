@@ -11,18 +11,18 @@ type RotationsGetScheduleRotationByIDRequest struct {
 	RotationID string `pathParam:"style=simple,explode=false,name=rotationID"`
 }
 
-func (o *RotationsGetScheduleRotationByIDRequest) GetScheduleID() string {
-	if o == nil {
+func (r *RotationsGetScheduleRotationByIDRequest) GetScheduleID() string {
+	if r == nil {
 		return ""
 	}
-	return o.ScheduleID
+	return r.ScheduleID
 }
 
-func (o *RotationsGetScheduleRotationByIDRequest) GetRotationID() string {
-	if o == nil {
+func (r *RotationsGetScheduleRotationByIDRequest) GetRotationID() string {
+	if r == nil {
 		return ""
 	}
-	return o.RotationID
+	return r.RotationID
 }
 
 // RotationsGetScheduleRotationByIDResponseBody - The request has succeeded.
@@ -30,11 +30,11 @@ type RotationsGetScheduleRotationByIDResponseBody struct {
 	Data components.V4RotationResponse `json:"data"`
 }
 
-func (o *RotationsGetScheduleRotationByIDResponseBody) GetData() components.V4RotationResponse {
-	if o == nil {
+func (r *RotationsGetScheduleRotationByIDResponseBody) GetData() components.V4RotationResponse {
+	if r == nil {
 		return components.V4RotationResponse{}
 	}
-	return o.Data
+	return r.Data
 }
 
 type RotationsGetScheduleRotationByIDResponse struct {
@@ -43,16 +43,16 @@ type RotationsGetScheduleRotationByIDResponse struct {
 	Object *RotationsGetScheduleRotationByIDResponseBody
 }
 
-func (o *RotationsGetScheduleRotationByIDResponse) GetHTTPMeta() components.HTTPMetadata {
-	if o == nil {
+func (r *RotationsGetScheduleRotationByIDResponse) GetHTTPMeta() components.HTTPMetadata {
+	if r == nil {
 		return components.HTTPMetadata{}
 	}
-	return o.HTTPMeta
+	return r.HTTPMeta
 }
 
-func (o *RotationsGetScheduleRotationByIDResponse) GetObject() *RotationsGetScheduleRotationByIDResponseBody {
-	if o == nil {
+func (r *RotationsGetScheduleRotationByIDResponse) GetObject() *RotationsGetScheduleRotationByIDResponseBody {
+	if r == nil {
 		return nil
 	}
-	return o.Object
+	return r.Object
 }

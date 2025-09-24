@@ -47,11 +47,11 @@ func (v *V3WorkflowsActionRequestData) UnmarshalJSON(data []byte) error {
 	return nil
 }
 
-func (o *V3WorkflowsActionRequestData) GetRunbooks() []string {
-	if o == nil {
+func (v *V3WorkflowsActionRequestData) GetRunbooks() []string {
+	if v == nil {
 		return []string{}
 	}
-	return o.Runbooks
+	return v.Runbooks
 }
 
 type V3WorkflowsActionRequestSqAttachRunbooks struct {
@@ -70,18 +70,18 @@ func (v *V3WorkflowsActionRequestSqAttachRunbooks) UnmarshalJSON(data []byte) er
 	return nil
 }
 
-func (o *V3WorkflowsActionRequestSqAttachRunbooks) GetName() V3WorkflowsActionRequestName {
-	if o == nil {
+func (v *V3WorkflowsActionRequestSqAttachRunbooks) GetName() V3WorkflowsActionRequestName {
+	if v == nil {
 		return V3WorkflowsActionRequestName("")
 	}
-	return o.Name
+	return v.Name
 }
 
-func (o *V3WorkflowsActionRequestSqAttachRunbooks) GetData() V3WorkflowsActionRequestData {
-	if o == nil {
+func (v *V3WorkflowsActionRequestSqAttachRunbooks) GetData() V3WorkflowsActionRequestData {
+	if v == nil {
 		return V3WorkflowsActionRequestData{}
 	}
-	return o.Data
+	return v.Data
 }
 
 type V3WorkflowsActionRequestType string
@@ -108,24 +108,24 @@ const (
 )
 
 type V3WorkflowsActionRequest struct {
-	V3WorkflowsActionRequestSqAttachRunbooks *V3WorkflowsActionRequestSqAttachRunbooks `queryParam:"inline" name:"V3_Workflows_ActionRequest"`
-	V3WorkflowsSqMarkIncidentSLOAffecting    *V3WorkflowsSqMarkIncidentSLOAffecting    `queryParam:"inline" name:"V3_Workflows_ActionRequest"`
-	V3WorkflowsSqTriggerManualWebhook        *V3WorkflowsSqTriggerManualWebhook        `queryParam:"inline" name:"V3_Workflows_ActionRequest"`
-	V3WorkflowsUpdateIncidentPriority        *V3WorkflowsUpdateIncidentPriority        `queryParam:"inline" name:"V3_Workflows_ActionRequest"`
-	V3WorkflowsSqCreateStatusPageIssue       *V3WorkflowsSqCreateStatusPageIssue       `queryParam:"inline" name:"V3_Workflows_ActionRequest"`
-	V3WorkflowsSqAddIncidentNote             *V3WorkflowsSqAddIncidentNote             `queryParam:"inline" name:"V3_Workflows_ActionRequest"`
-	V3WorkflowsSlackArchiveChannel           *V3WorkflowsSlackArchiveChannel           `queryParam:"inline" name:"V3_Workflows_ActionRequest"`
-	V3WorkflowsSqAddCommunicationChannel     *V3WorkflowsSqAddCommunicationChannel     `queryParam:"inline" name:"V3_Workflows_ActionRequest"`
-	V3WorkflowsSlackMessageChannel           *V3WorkflowsSlackMessageChannel           `queryParam:"inline" name:"V3_Workflows_ActionRequest"`
-	V3WorkflowsSlackMessageUser              *V3WorkflowsSlackMessageUser              `queryParam:"inline" name:"V3_Workflows_ActionRequest"`
-	V3WorkflowsSqMakeHTTPCall                *V3WorkflowsSqMakeHTTPCall                `queryParam:"inline" name:"V3_Workflows_ActionRequest"`
-	V3WorkflowsSlackCreateIncidentChannel    *V3WorkflowsSlackCreateIncidentChannel    `queryParam:"inline" name:"V3_Workflows_ActionRequest"`
-	V3WorkflowsJiraCreateTicket              *V3WorkflowsJiraCreateTicket              `queryParam:"inline" name:"V3_Workflows_ActionRequest"`
-	V3WorkflowsMsTeamsMessageChannel         *V3WorkflowsMsTeamsMessageChannel         `queryParam:"inline" name:"V3_Workflows_ActionRequest"`
-	V3WorkflowsMsTeamsMessageUser            *V3WorkflowsMsTeamsMessageUser            `queryParam:"inline" name:"V3_Workflows_ActionRequest"`
-	V3WorkflowsSqSendEmail                   *V3WorkflowsSqSendEmail                   `queryParam:"inline" name:"V3_Workflows_ActionRequest"`
-	V3WorkflowsMsTeamsCreateMeetingLink      *V3WorkflowsMsTeamsCreateMeetingLink      `queryParam:"inline" name:"V3_Workflows_ActionRequest"`
-	Any                                      any                                       `queryParam:"inline" name:"V3_Workflows_ActionRequest"`
+	V3WorkflowsActionRequestSqAttachRunbooks *V3WorkflowsActionRequestSqAttachRunbooks `queryParam:"inline,name=V3_Workflows_ActionRequest"`
+	V3WorkflowsSqMarkIncidentSLOAffecting    *V3WorkflowsSqMarkIncidentSLOAffecting    `queryParam:"inline,name=V3_Workflows_ActionRequest"`
+	V3WorkflowsSqTriggerManualWebhook        *V3WorkflowsSqTriggerManualWebhook        `queryParam:"inline,name=V3_Workflows_ActionRequest"`
+	V3WorkflowsUpdateIncidentPriority        *V3WorkflowsUpdateIncidentPriority        `queryParam:"inline,name=V3_Workflows_ActionRequest"`
+	V3WorkflowsSqCreateStatusPageIssue       *V3WorkflowsSqCreateStatusPageIssue       `queryParam:"inline,name=V3_Workflows_ActionRequest"`
+	V3WorkflowsSqAddIncidentNote             *V3WorkflowsSqAddIncidentNote             `queryParam:"inline,name=V3_Workflows_ActionRequest"`
+	V3WorkflowsSlackArchiveChannel           *V3WorkflowsSlackArchiveChannel           `queryParam:"inline,name=V3_Workflows_ActionRequest"`
+	V3WorkflowsSqAddCommunicationChannel     *V3WorkflowsSqAddCommunicationChannel     `queryParam:"inline,name=V3_Workflows_ActionRequest"`
+	V3WorkflowsSlackMessageChannel           *V3WorkflowsSlackMessageChannel           `queryParam:"inline,name=V3_Workflows_ActionRequest"`
+	V3WorkflowsSlackMessageUser              *V3WorkflowsSlackMessageUser              `queryParam:"inline,name=V3_Workflows_ActionRequest"`
+	V3WorkflowsSqMakeHTTPCall                *V3WorkflowsSqMakeHTTPCall                `queryParam:"inline,name=V3_Workflows_ActionRequest"`
+	V3WorkflowsSlackCreateIncidentChannel    *V3WorkflowsSlackCreateIncidentChannel    `queryParam:"inline,name=V3_Workflows_ActionRequest"`
+	V3WorkflowsJiraCreateTicket              *V3WorkflowsJiraCreateTicket              `queryParam:"inline,name=V3_Workflows_ActionRequest"`
+	V3WorkflowsMsTeamsMessageChannel         *V3WorkflowsMsTeamsMessageChannel         `queryParam:"inline,name=V3_Workflows_ActionRequest"`
+	V3WorkflowsMsTeamsMessageUser            *V3WorkflowsMsTeamsMessageUser            `queryParam:"inline,name=V3_Workflows_ActionRequest"`
+	V3WorkflowsSqSendEmail                   *V3WorkflowsSqSendEmail                   `queryParam:"inline,name=V3_Workflows_ActionRequest"`
+	V3WorkflowsMsTeamsCreateMeetingLink      *V3WorkflowsMsTeamsCreateMeetingLink      `queryParam:"inline,name=V3_Workflows_ActionRequest"`
+	Any                                      any                                       `queryParam:"inline,name=V3_Workflows_ActionRequest"`
 
 	Type V3WorkflowsActionRequestType
 }

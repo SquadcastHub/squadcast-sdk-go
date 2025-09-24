@@ -26,30 +26,30 @@ func (v *V3IncidentsSnoozeDetails) UnmarshalJSON(data []byte) error {
 	return nil
 }
 
-func (o *V3IncidentsSnoozeDetails) GetIsSnoozed() bool {
-	if o == nil {
+func (v *V3IncidentsSnoozeDetails) GetIsSnoozed() bool {
+	if v == nil {
 		return false
 	}
-	return o.IsSnoozed
+	return v.IsSnoozed
 }
 
-func (o *V3IncidentsSnoozeDetails) GetStartTime() *time.Time {
-	if o == nil {
+func (v *V3IncidentsSnoozeDetails) GetStartTime() *time.Time {
+	if v == nil {
 		return nil
 	}
-	return o.StartTime
+	return v.StartTime
 }
 
-func (o *V3IncidentsSnoozeDetails) GetEndTime() *time.Time {
-	if o == nil {
+func (v *V3IncidentsSnoozeDetails) GetEndTime() *time.Time {
+	if v == nil {
 		return nil
 	}
-	return o.EndTime
+	return v.EndTime
 }
 
-func (o *V3IncidentsSnoozeDetails) GetTotalTimeInMins() int64 {
-	if o == nil {
+func (v *V3IncidentsSnoozeDetails) GetTotalTimeInMins() int64 {
+	if v == nil {
 		return 0
 	}
-	return o.TotalTimeInMins
+	return v.TotalTimeInMins
 }

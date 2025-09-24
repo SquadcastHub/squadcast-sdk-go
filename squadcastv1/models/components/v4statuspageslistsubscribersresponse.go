@@ -7,16 +7,16 @@ type V4StatusPagesListSubscribersResponse struct {
 	Meta *V4StatusPagesListSubscribersResponseMeta `json:"meta,omitempty"`
 }
 
-func (o *V4StatusPagesListSubscribersResponse) GetData() []V4StatusPagesStatusPageSubscriber {
-	if o == nil {
+func (v *V4StatusPagesListSubscribersResponse) GetData() []V4StatusPagesStatusPageSubscriber {
+	if v == nil {
 		return nil
 	}
-	return o.Data
+	return v.Data
 }
 
-func (o *V4StatusPagesListSubscribersResponse) GetMeta() *V4StatusPagesListSubscribersResponseMeta {
-	if o == nil {
+func (v *V4StatusPagesListSubscribersResponse) GetMeta() *V4StatusPagesListSubscribersResponseMeta {
+	if v == nil {
 		return nil
 	}
-	return o.Meta
+	return v.Meta
 }

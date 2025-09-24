@@ -10,11 +10,11 @@ type MaintenanceModeGetMaintenanceModeRequest struct {
 	ServiceID string `pathParam:"style=simple,explode=false,name=serviceID"`
 }
 
-func (o *MaintenanceModeGetMaintenanceModeRequest) GetServiceID() string {
-	if o == nil {
+func (m *MaintenanceModeGetMaintenanceModeRequest) GetServiceID() string {
+	if m == nil {
 		return ""
 	}
-	return o.ServiceID
+	return m.ServiceID
 }
 
 // MaintenanceModeGetMaintenanceModeResponseBody - The request has succeeded.
@@ -22,11 +22,11 @@ type MaintenanceModeGetMaintenanceModeResponseBody struct {
 	Data []components.V3ServicesMaintenanceModeMaintenanceModeResponse `json:"data"`
 }
 
-func (o *MaintenanceModeGetMaintenanceModeResponseBody) GetData() []components.V3ServicesMaintenanceModeMaintenanceModeResponse {
-	if o == nil {
+func (m *MaintenanceModeGetMaintenanceModeResponseBody) GetData() []components.V3ServicesMaintenanceModeMaintenanceModeResponse {
+	if m == nil {
 		return []components.V3ServicesMaintenanceModeMaintenanceModeResponse{}
 	}
-	return o.Data
+	return m.Data
 }
 
 type MaintenanceModeGetMaintenanceModeResponse struct {
@@ -35,16 +35,16 @@ type MaintenanceModeGetMaintenanceModeResponse struct {
 	Object *MaintenanceModeGetMaintenanceModeResponseBody
 }
 
-func (o *MaintenanceModeGetMaintenanceModeResponse) GetHTTPMeta() components.HTTPMetadata {
-	if o == nil {
+func (m *MaintenanceModeGetMaintenanceModeResponse) GetHTTPMeta() components.HTTPMetadata {
+	if m == nil {
 		return components.HTTPMetadata{}
 	}
-	return o.HTTPMeta
+	return m.HTTPMeta
 }
 
-func (o *MaintenanceModeGetMaintenanceModeResponse) GetObject() *MaintenanceModeGetMaintenanceModeResponseBody {
-	if o == nil {
+func (m *MaintenanceModeGetMaintenanceModeResponse) GetObject() *MaintenanceModeGetMaintenanceModeResponseBody {
+	if m == nil {
 		return nil
 	}
-	return o.Object
+	return m.Object
 }

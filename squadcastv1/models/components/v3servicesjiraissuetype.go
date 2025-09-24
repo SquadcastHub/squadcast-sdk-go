@@ -8,23 +8,23 @@ type V3ServicesJiraIssueType struct {
 	Statuses []V3ServicesJiraStatus `json:"statuses,omitempty"`
 }
 
-func (o *V3ServicesJiraIssueType) GetID() string {
-	if o == nil {
+func (v *V3ServicesJiraIssueType) GetID() string {
+	if v == nil {
 		return ""
 	}
-	return o.ID
+	return v.ID
 }
 
-func (o *V3ServicesJiraIssueType) GetName() string {
-	if o == nil {
+func (v *V3ServicesJiraIssueType) GetName() string {
+	if v == nil {
 		return ""
 	}
-	return o.Name
+	return v.Name
 }
 
-func (o *V3ServicesJiraIssueType) GetStatuses() []V3ServicesJiraStatus {
-	if o == nil {
+func (v *V3ServicesJiraIssueType) GetStatuses() []V3ServicesJiraStatus {
+	if v == nil {
 		return nil
 	}
-	return o.Statuses
+	return v.Statuses
 }

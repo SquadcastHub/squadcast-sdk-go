@@ -7,16 +7,16 @@ type V3ServicesAPTAConfigRequest struct {
 	TimeoutInMins int64 `json:"timeout_in_mins"`
 }
 
-func (o *V3ServicesAPTAConfigRequest) GetIsEnabled() bool {
-	if o == nil {
+func (v *V3ServicesAPTAConfigRequest) GetIsEnabled() bool {
+	if v == nil {
 		return false
 	}
-	return o.IsEnabled
+	return v.IsEnabled
 }
 
-func (o *V3ServicesAPTAConfigRequest) GetTimeoutInMins() int64 {
-	if o == nil {
+func (v *V3ServicesAPTAConfigRequest) GetTimeoutInMins() int64 {
+	if v == nil {
 		return 0
 	}
-	return o.TimeoutInMins
+	return v.TimeoutInMins
 }

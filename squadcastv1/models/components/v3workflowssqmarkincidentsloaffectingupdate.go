@@ -47,18 +47,18 @@ func (v *V3WorkflowsSqMarkIncidentSLOAffectingUpdateData) UnmarshalJSON(data []b
 	return nil
 }
 
-func (o *V3WorkflowsSqMarkIncidentSLOAffectingUpdateData) GetSlis() []string {
-	if o == nil {
+func (v *V3WorkflowsSqMarkIncidentSLOAffectingUpdateData) GetSlis() []string {
+	if v == nil {
 		return nil
 	}
-	return o.Slis
+	return v.Slis
 }
 
-func (o *V3WorkflowsSqMarkIncidentSLOAffectingUpdateData) GetSlo() *int {
-	if o == nil {
+func (v *V3WorkflowsSqMarkIncidentSLOAffectingUpdateData) GetSlo() *int {
+	if v == nil {
 		return nil
 	}
-	return o.Slo
+	return v.Slo
 }
 
 type V3WorkflowsSqMarkIncidentSLOAffectingUpdate struct {
@@ -77,16 +77,16 @@ func (v *V3WorkflowsSqMarkIncidentSLOAffectingUpdate) UnmarshalJSON(data []byte)
 	return nil
 }
 
-func (o *V3WorkflowsSqMarkIncidentSLOAffectingUpdate) GetName() V3WorkflowsSqMarkIncidentSLOAffectingUpdateName {
-	if o == nil {
+func (v *V3WorkflowsSqMarkIncidentSLOAffectingUpdate) GetName() V3WorkflowsSqMarkIncidentSLOAffectingUpdateName {
+	if v == nil {
 		return V3WorkflowsSqMarkIncidentSLOAffectingUpdateName("")
 	}
-	return o.Name
+	return v.Name
 }
 
-func (o *V3WorkflowsSqMarkIncidentSLOAffectingUpdate) GetData() *V3WorkflowsSqMarkIncidentSLOAffectingUpdateData {
-	if o == nil {
+func (v *V3WorkflowsSqMarkIncidentSLOAffectingUpdate) GetData() *V3WorkflowsSqMarkIncidentSLOAffectingUpdateData {
+	if v == nil {
 		return nil
 	}
-	return o.Data
+	return v.Data
 }

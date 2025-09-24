@@ -39,16 +39,16 @@ type CommonV3RBACOwner struct {
 	Type CommonV3RBACOwnerType `json:"type"`
 }
 
-func (o *CommonV3RBACOwner) GetID() string {
-	if o == nil {
+func (c *CommonV3RBACOwner) GetID() string {
+	if c == nil {
 		return ""
 	}
-	return o.ID
+	return c.ID
 }
 
-func (o *CommonV3RBACOwner) GetType() CommonV3RBACOwnerType {
-	if o == nil {
+func (c *CommonV3RBACOwner) GetType() CommonV3RBACOwnerType {
+	if c == nil {
 		return CommonV3RBACOwnerType("")
 	}
-	return o.Type
+	return c.Type
 }

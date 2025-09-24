@@ -22,58 +22,58 @@ type V3EscalationPoliciesEscalationPolicyRule struct {
 	RepeatAfter int `json:"repeat_after"`
 }
 
-func (o *V3EscalationPoliciesEscalationPolicyRule) GetEscalationTime() int {
-	if o == nil {
+func (v *V3EscalationPoliciesEscalationPolicyRule) GetEscalationTime() int {
+	if v == nil {
 		return 0
 	}
-	return o.EscalationTime
+	return v.EscalationTime
 }
 
-func (o *V3EscalationPoliciesEscalationPolicyRule) GetVia() []string {
-	if o == nil {
+func (v *V3EscalationPoliciesEscalationPolicyRule) GetVia() []string {
+	if v == nil {
 		return []string{}
 	}
-	return o.Via
+	return v.Via
 }
 
-func (o *V3EscalationPoliciesEscalationPolicyRule) GetRoundrobinEnabled() bool {
-	if o == nil {
+func (v *V3EscalationPoliciesEscalationPolicyRule) GetRoundrobinEnabled() bool {
+	if v == nil {
 		return false
 	}
-	return o.RoundrobinEnabled
+	return v.RoundrobinEnabled
 }
 
-func (o *V3EscalationPoliciesEscalationPolicyRule) GetRoundrobinNextIndex() int {
-	if o == nil {
+func (v *V3EscalationPoliciesEscalationPolicyRule) GetRoundrobinNextIndex() int {
+	if v == nil {
 		return 0
 	}
-	return o.RoundrobinNextIndex
+	return v.RoundrobinNextIndex
 }
 
-func (o *V3EscalationPoliciesEscalationPolicyRule) GetEntities() []V3EscalationPoliciesEscalationEntity {
-	if o == nil {
+func (v *V3EscalationPoliciesEscalationPolicyRule) GetEntities() []V3EscalationPoliciesEscalationEntity {
+	if v == nil {
 		return []V3EscalationPoliciesEscalationEntity{}
 	}
-	return o.Entities
+	return v.Entities
 }
 
-func (o *V3EscalationPoliciesEscalationPolicyRule) GetEscalateWithinRoundrobin() bool {
-	if o == nil {
+func (v *V3EscalationPoliciesEscalationPolicyRule) GetEscalateWithinRoundrobin() bool {
+	if v == nil {
 		return false
 	}
-	return o.EscalateWithinRoundrobin
+	return v.EscalateWithinRoundrobin
 }
 
-func (o *V3EscalationPoliciesEscalationPolicyRule) GetRepetition() int {
-	if o == nil {
+func (v *V3EscalationPoliciesEscalationPolicyRule) GetRepetition() int {
+	if v == nil {
 		return 0
 	}
-	return o.Repetition
+	return v.Repetition
 }
 
-func (o *V3EscalationPoliciesEscalationPolicyRule) GetRepeatAfter() int {
-	if o == nil {
+func (v *V3EscalationPoliciesEscalationPolicyRule) GetRepeatAfter() int {
+	if v == nil {
 		return 0
 	}
-	return o.RepeatAfter
+	return v.RepeatAfter
 }

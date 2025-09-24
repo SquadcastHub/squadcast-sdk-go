@@ -10,18 +10,18 @@ type V3WorkflowsListWorkflowAPIResponseMeta struct {
 	ACL        *ACL `json:"acl,omitempty"`
 }
 
-func (o *V3WorkflowsListWorkflowAPIResponseMeta) GetTotalCount() int {
-	if o == nil {
+func (v *V3WorkflowsListWorkflowAPIResponseMeta) GetTotalCount() int {
+	if v == nil {
 		return 0
 	}
-	return o.TotalCount
+	return v.TotalCount
 }
 
-func (o *V3WorkflowsListWorkflowAPIResponseMeta) GetACL() *ACL {
-	if o == nil {
+func (v *V3WorkflowsListWorkflowAPIResponseMeta) GetACL() *ACL {
+	if v == nil {
 		return nil
 	}
-	return o.ACL
+	return v.ACL
 }
 
 type V3WorkflowsListWorkflowAPIResponse struct {
@@ -29,16 +29,16 @@ type V3WorkflowsListWorkflowAPIResponse struct {
 	Meta V3WorkflowsListWorkflowAPIResponseMeta `json:"meta"`
 }
 
-func (o *V3WorkflowsListWorkflowAPIResponse) GetData() []V3WorkflowsWorkflowAPIResponse {
-	if o == nil {
+func (v *V3WorkflowsListWorkflowAPIResponse) GetData() []V3WorkflowsWorkflowAPIResponse {
+	if v == nil {
 		return []V3WorkflowsWorkflowAPIResponse{}
 	}
-	return o.Data
+	return v.Data
 }
 
-func (o *V3WorkflowsListWorkflowAPIResponse) GetMeta() V3WorkflowsListWorkflowAPIResponseMeta {
-	if o == nil {
+func (v *V3WorkflowsListWorkflowAPIResponse) GetMeta() V3WorkflowsListWorkflowAPIResponseMeta {
+	if v == nil {
 		return V3WorkflowsListWorkflowAPIResponseMeta{}
 	}
-	return o.Meta
+	return v.Meta
 }

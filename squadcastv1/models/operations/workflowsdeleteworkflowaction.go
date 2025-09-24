@@ -11,18 +11,18 @@ type WorkflowsDeleteWorkflowActionRequest struct {
 	ActionID   string `pathParam:"style=simple,explode=false,name=actionID"`
 }
 
-func (o *WorkflowsDeleteWorkflowActionRequest) GetWorkflowID() string {
-	if o == nil {
+func (w *WorkflowsDeleteWorkflowActionRequest) GetWorkflowID() string {
+	if w == nil {
 		return ""
 	}
-	return o.WorkflowID
+	return w.WorkflowID
 }
 
-func (o *WorkflowsDeleteWorkflowActionRequest) GetActionID() string {
-	if o == nil {
+func (w *WorkflowsDeleteWorkflowActionRequest) GetActionID() string {
+	if w == nil {
 		return ""
 	}
-	return o.ActionID
+	return w.ActionID
 }
 
 // WorkflowsDeleteWorkflowActionResponseBody - There is no content to send for this request, but the headers may be useful.
@@ -34,16 +34,16 @@ type WorkflowsDeleteWorkflowActionResponse struct {
 	Body     []byte
 }
 
-func (o *WorkflowsDeleteWorkflowActionResponse) GetHTTPMeta() components.HTTPMetadata {
-	if o == nil {
+func (w *WorkflowsDeleteWorkflowActionResponse) GetHTTPMeta() components.HTTPMetadata {
+	if w == nil {
 		return components.HTTPMetadata{}
 	}
-	return o.HTTPMeta
+	return w.HTTPMeta
 }
 
-func (o *WorkflowsDeleteWorkflowActionResponse) GetBody() []byte {
-	if o == nil {
+func (w *WorkflowsDeleteWorkflowActionResponse) GetBody() []byte {
+	if w == nil {
 		return nil
 	}
-	return o.Body
+	return w.Body
 }

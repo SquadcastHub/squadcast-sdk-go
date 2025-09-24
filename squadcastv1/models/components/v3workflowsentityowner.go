@@ -7,16 +7,16 @@ type V3WorkflowsEntityOwner struct {
 	Type string `json:"type"`
 }
 
-func (o *V3WorkflowsEntityOwner) GetID() string {
-	if o == nil {
+func (v *V3WorkflowsEntityOwner) GetID() string {
+	if v == nil {
 		return ""
 	}
-	return o.ID
+	return v.ID
 }
 
-func (o *V3WorkflowsEntityOwner) GetType() string {
-	if o == nil {
+func (v *V3WorkflowsEntityOwner) GetType() string {
+	if v == nil {
 		return ""
 	}
-	return o.Type
+	return v.Type
 }

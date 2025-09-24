@@ -10,11 +10,11 @@ type RunbooksGetRunbookByIDRequest struct {
 	RunbookID string `pathParam:"style=simple,explode=false,name=runbookID"`
 }
 
-func (o *RunbooksGetRunbookByIDRequest) GetRunbookID() string {
-	if o == nil {
+func (r *RunbooksGetRunbookByIDRequest) GetRunbookID() string {
+	if r == nil {
 		return ""
 	}
-	return o.RunbookID
+	return r.RunbookID
 }
 
 // RunbooksGetRunbookByIDResponseBody - The request has succeeded.
@@ -22,11 +22,11 @@ type RunbooksGetRunbookByIDResponseBody struct {
 	Data components.V3RunbooksRunbookResponse `json:"data"`
 }
 
-func (o *RunbooksGetRunbookByIDResponseBody) GetData() components.V3RunbooksRunbookResponse {
-	if o == nil {
+func (r *RunbooksGetRunbookByIDResponseBody) GetData() components.V3RunbooksRunbookResponse {
+	if r == nil {
 		return components.V3RunbooksRunbookResponse{}
 	}
-	return o.Data
+	return r.Data
 }
 
 type RunbooksGetRunbookByIDResponse struct {
@@ -35,16 +35,16 @@ type RunbooksGetRunbookByIDResponse struct {
 	Object *RunbooksGetRunbookByIDResponseBody
 }
 
-func (o *RunbooksGetRunbookByIDResponse) GetHTTPMeta() components.HTTPMetadata {
-	if o == nil {
+func (r *RunbooksGetRunbookByIDResponse) GetHTTPMeta() components.HTTPMetadata {
+	if r == nil {
 		return components.HTTPMetadata{}
 	}
-	return o.HTTPMeta
+	return r.HTTPMeta
 }
 
-func (o *RunbooksGetRunbookByIDResponse) GetObject() *RunbooksGetRunbookByIDResponseBody {
-	if o == nil {
+func (r *RunbooksGetRunbookByIDResponse) GetObject() *RunbooksGetRunbookByIDResponseBody {
+	if r == nil {
 		return nil
 	}
-	return o.Object
+	return r.Object
 }

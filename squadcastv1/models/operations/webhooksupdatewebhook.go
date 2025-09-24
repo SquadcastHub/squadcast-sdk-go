@@ -11,18 +11,18 @@ type WebhooksUpdateWebhookRequest struct {
 	V3ExtensionsWebhooksWebhook components.V3ExtensionsWebhooksWebhook `request:"mediaType=application/json"`
 }
 
-func (o *WebhooksUpdateWebhookRequest) GetEventWebhookID() string {
-	if o == nil {
+func (w *WebhooksUpdateWebhookRequest) GetEventWebhookID() string {
+	if w == nil {
 		return ""
 	}
-	return o.EventWebhookID
+	return w.EventWebhookID
 }
 
-func (o *WebhooksUpdateWebhookRequest) GetV3ExtensionsWebhooksWebhook() components.V3ExtensionsWebhooksWebhook {
-	if o == nil {
+func (w *WebhooksUpdateWebhookRequest) GetV3ExtensionsWebhooksWebhook() components.V3ExtensionsWebhooksWebhook {
+	if w == nil {
 		return components.V3ExtensionsWebhooksWebhook{}
 	}
-	return o.V3ExtensionsWebhooksWebhook
+	return w.V3ExtensionsWebhooksWebhook
 }
 
 // WebhooksUpdateWebhookResponseBody - The request has succeeded.
@@ -30,11 +30,11 @@ type WebhooksUpdateWebhookResponseBody struct {
 	Data components.V3ExtensionsWebhooksWebhookResponse `json:"data"`
 }
 
-func (o *WebhooksUpdateWebhookResponseBody) GetData() components.V3ExtensionsWebhooksWebhookResponse {
-	if o == nil {
+func (w *WebhooksUpdateWebhookResponseBody) GetData() components.V3ExtensionsWebhooksWebhookResponse {
+	if w == nil {
 		return components.V3ExtensionsWebhooksWebhookResponse{}
 	}
-	return o.Data
+	return w.Data
 }
 
 type WebhooksUpdateWebhookResponse struct {
@@ -43,16 +43,16 @@ type WebhooksUpdateWebhookResponse struct {
 	Object *WebhooksUpdateWebhookResponseBody
 }
 
-func (o *WebhooksUpdateWebhookResponse) GetHTTPMeta() components.HTTPMetadata {
-	if o == nil {
+func (w *WebhooksUpdateWebhookResponse) GetHTTPMeta() components.HTTPMetadata {
+	if w == nil {
 		return components.HTTPMetadata{}
 	}
-	return o.HTTPMeta
+	return w.HTTPMeta
 }
 
-func (o *WebhooksUpdateWebhookResponse) GetObject() *WebhooksUpdateWebhookResponseBody {
-	if o == nil {
+func (w *WebhooksUpdateWebhookResponse) GetObject() *WebhooksUpdateWebhookResponseBody {
+	if w == nil {
 		return nil
 	}
-	return o.Object
+	return w.Object
 }

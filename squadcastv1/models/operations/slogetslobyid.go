@@ -11,18 +11,18 @@ type SLOGetSLOByIDRequest struct {
 	OwnerID string `queryParam:"style=form,explode=true,name=owner_id"`
 }
 
-func (o *SLOGetSLOByIDRequest) GetSloID() int64 {
-	if o == nil {
+func (s *SLOGetSLOByIDRequest) GetSloID() int64 {
+	if s == nil {
 		return 0
 	}
-	return o.SloID
+	return s.SloID
 }
 
-func (o *SLOGetSLOByIDRequest) GetOwnerID() string {
-	if o == nil {
+func (s *SLOGetSLOByIDRequest) GetOwnerID() string {
+	if s == nil {
 		return ""
 	}
-	return o.OwnerID
+	return s.OwnerID
 }
 
 // SLOGetSLOByIDResponseBody - The request has succeeded.
@@ -30,11 +30,11 @@ type SLOGetSLOByIDResponseBody struct {
 	Data components.V3SLOSLOWithInsightsResponse `json:"data"`
 }
 
-func (o *SLOGetSLOByIDResponseBody) GetData() components.V3SLOSLOWithInsightsResponse {
-	if o == nil {
+func (s *SLOGetSLOByIDResponseBody) GetData() components.V3SLOSLOWithInsightsResponse {
+	if s == nil {
 		return components.V3SLOSLOWithInsightsResponse{}
 	}
-	return o.Data
+	return s.Data
 }
 
 type SLOGetSLOByIDResponse struct {
@@ -43,16 +43,16 @@ type SLOGetSLOByIDResponse struct {
 	Object *SLOGetSLOByIDResponseBody
 }
 
-func (o *SLOGetSLOByIDResponse) GetHTTPMeta() components.HTTPMetadata {
-	if o == nil {
+func (s *SLOGetSLOByIDResponse) GetHTTPMeta() components.HTTPMetadata {
+	if s == nil {
 		return components.HTTPMetadata{}
 	}
-	return o.HTTPMeta
+	return s.HTTPMeta
 }
 
-func (o *SLOGetSLOByIDResponse) GetObject() *SLOGetSLOByIDResponseBody {
-	if o == nil {
+func (s *SLOGetSLOByIDResponse) GetObject() *SLOGetSLOByIDResponseBody {
+	if s == nil {
 		return nil
 	}
-	return o.Object
+	return s.Object
 }

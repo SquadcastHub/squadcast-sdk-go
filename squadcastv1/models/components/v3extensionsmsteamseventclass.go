@@ -71,8 +71,8 @@ const (
 
 // V3ExtensionsMSTeamsEventClass - Represents the specific type of an incident-related event.
 type V3ExtensionsMSTeamsEventClass struct {
-	Str                               *string                            `queryParam:"inline" name:"V3_Extensions_MSTeams_EventClass"`
-	V3ExtensionsMSTeamsEventClassEnum *V3ExtensionsMSTeamsEventClassEnum `queryParam:"inline" name:"V3_Extensions_MSTeams_EventClass"`
+	Str                               *string                            `queryParam:"inline,name=V3_Extensions_MSTeams_EventClass"`
+	V3ExtensionsMSTeamsEventClassEnum *V3ExtensionsMSTeamsEventClassEnum `queryParam:"inline,name=V3_Extensions_MSTeams_EventClass"`
 
 	Type V3ExtensionsMSTeamsEventClassType
 }

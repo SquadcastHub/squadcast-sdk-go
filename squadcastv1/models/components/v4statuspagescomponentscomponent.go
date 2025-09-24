@@ -15,72 +15,72 @@ type V4StatusPagesComponentsComponent struct {
 	IsHidden          *bool                                   `json:"isHidden,omitempty"`
 }
 
-func (o *V4StatusPagesComponentsComponent) GetID() *int64 {
-	if o == nil {
+func (v *V4StatusPagesComponentsComponent) GetID() *int64 {
+	if v == nil {
 		return nil
 	}
-	return o.ID
+	return v.ID
 }
 
-func (o *V4StatusPagesComponentsComponent) GetType() *string {
-	if o == nil {
+func (v *V4StatusPagesComponentsComponent) GetType() *string {
+	if v == nil {
 		return nil
 	}
-	return o.Type
+	return v.Type
 }
 
-func (o *V4StatusPagesComponentsComponent) GetName() *string {
-	if o == nil {
+func (v *V4StatusPagesComponentsComponent) GetName() *string {
+	if v == nil {
 		return nil
 	}
-	return o.Name
+	return v.Name
 }
 
-func (o *V4StatusPagesComponentsComponent) GetAllowSubscription() *bool {
-	if o == nil {
+func (v *V4StatusPagesComponentsComponent) GetAllowSubscription() *bool {
+	if v == nil {
 		return nil
 	}
-	return o.AllowSubscription
+	return v.AllowSubscription
 }
 
-func (o *V4StatusPagesComponentsComponent) GetDescription() *string {
-	if o == nil {
+func (v *V4StatusPagesComponentsComponent) GetDescription() *string {
+	if v == nil {
 		return nil
 	}
-	return o.Description
+	return v.Description
 }
 
-func (o *V4StatusPagesComponentsComponent) GetStatus() *V4StatusPagesComponentsComponentStatus {
-	if o == nil {
+func (v *V4StatusPagesComponentsComponent) GetStatus() *V4StatusPagesComponentsComponentStatus {
+	if v == nil {
 		return nil
 	}
-	return o.Status
+	return v.Status
 }
 
-func (o *V4StatusPagesComponentsComponent) GetUnderMaintenance() *bool {
-	if o == nil {
+func (v *V4StatusPagesComponentsComponent) GetUnderMaintenance() *bool {
+	if v == nil {
 		return nil
 	}
-	return o.UnderMaintenance
+	return v.UnderMaintenance
 }
 
-func (o *V4StatusPagesComponentsComponent) GetStatusMaintenance() *V4StatusPagesComponentsComponentStatus {
-	if o == nil {
+func (v *V4StatusPagesComponentsComponent) GetStatusMaintenance() *V4StatusPagesComponentsComponentStatus {
+	if v == nil {
 		return nil
 	}
-	return o.StatusMaintenance
+	return v.StatusMaintenance
 }
 
-func (o *V4StatusPagesComponentsComponent) GetComponents() []V4StatusPagesComponentsComponent {
-	if o == nil {
+func (v *V4StatusPagesComponentsComponent) GetComponents() []V4StatusPagesComponentsComponent {
+	if v == nil {
 		return nil
 	}
-	return o.Components
+	return v.Components
 }
 
-func (o *V4StatusPagesComponentsComponent) GetIsHidden() *bool {
-	if o == nil {
+func (v *V4StatusPagesComponentsComponent) GetIsHidden() *bool {
+	if v == nil {
 		return nil
 	}
-	return o.IsHidden
+	return v.IsHidden
 }

@@ -58,86 +58,86 @@ func (v *V3ServicesOverlayOverlayResponse) UnmarshalJSON(data []byte) error {
 	return nil
 }
 
-func (o *V3ServicesOverlayOverlayResponse) GetCreatedAt() time.Time {
-	if o == nil {
+func (v *V3ServicesOverlayOverlayResponse) GetCreatedAt() time.Time {
+	if v == nil {
 		return time.Time{}
 	}
-	return o.CreatedAt
+	return v.CreatedAt
 }
 
-func (o *V3ServicesOverlayOverlayResponse) GetUpdatedAt() time.Time {
-	if o == nil {
+func (v *V3ServicesOverlayOverlayResponse) GetUpdatedAt() time.Time {
+	if v == nil {
 		return time.Time{}
 	}
-	return o.UpdatedAt
+	return v.UpdatedAt
 }
 
-func (o *V3ServicesOverlayOverlayResponse) GetDeletedAt() *time.Time {
-	if o == nil {
+func (v *V3ServicesOverlayOverlayResponse) GetDeletedAt() *time.Time {
+	if v == nil {
 		return nil
 	}
-	return o.DeletedAt
+	return v.DeletedAt
 }
 
-func (o *V3ServicesOverlayOverlayResponse) GetOrgID() string {
-	if o == nil {
+func (v *V3ServicesOverlayOverlayResponse) GetOrgID() string {
+	if v == nil {
 		return ""
 	}
-	return o.OrgID
+	return v.OrgID
 }
 
-func (o *V3ServicesOverlayOverlayResponse) GetServiceID() string {
-	if o == nil {
+func (v *V3ServicesOverlayOverlayResponse) GetServiceID() string {
+	if v == nil {
 		return ""
 	}
-	return o.ServiceID
+	return v.ServiceID
 }
 
-func (o *V3ServicesOverlayOverlayResponse) GetAlertSourceVersion() string {
-	if o == nil {
+func (v *V3ServicesOverlayOverlayResponse) GetAlertSourceVersion() string {
+	if v == nil {
 		return ""
 	}
-	return o.AlertSourceVersion
+	return v.AlertSourceVersion
 }
 
-func (o *V3ServicesOverlayOverlayResponse) GetAlertSourceShortname() string {
-	if o == nil {
+func (v *V3ServicesOverlayOverlayResponse) GetAlertSourceShortname() string {
+	if v == nil {
 		return ""
 	}
-	return o.AlertSourceShortname
+	return v.AlertSourceShortname
 }
 
-func (o *V3ServicesOverlayOverlayResponse) GetOverlayTemplateType() V3ServicesOverlayOverlayResponseOverlayTemplateType {
-	if o == nil {
+func (v *V3ServicesOverlayOverlayResponse) GetOverlayTemplateType() V3ServicesOverlayOverlayResponseOverlayTemplateType {
+	if v == nil {
 		return V3ServicesOverlayOverlayResponseOverlayTemplateType("")
 	}
-	return o.OverlayTemplateType
+	return v.OverlayTemplateType
 }
 
-func (o *V3ServicesOverlayOverlayResponse) GetOverlay() V3ServicesOverlayDedupKeyOverlay {
-	if o == nil {
+func (v *V3ServicesOverlayOverlayResponse) GetOverlay() V3ServicesOverlayDedupKeyOverlay {
+	if v == nil {
 		return V3ServicesOverlayDedupKeyOverlay{}
 	}
-	return o.Overlay
+	return v.Overlay
 }
 
-func (o *V3ServicesOverlayOverlayResponse) GetCreatedBy() string {
-	if o == nil {
+func (v *V3ServicesOverlayOverlayResponse) GetCreatedBy() string {
+	if v == nil {
 		return ""
 	}
-	return o.CreatedBy
+	return v.CreatedBy
 }
 
-func (o *V3ServicesOverlayOverlayResponse) GetUpdatedBy() string {
-	if o == nil {
+func (v *V3ServicesOverlayOverlayResponse) GetUpdatedBy() string {
+	if v == nil {
 		return ""
 	}
-	return o.UpdatedBy
+	return v.UpdatedBy
 }
 
-func (o *V3ServicesOverlayOverlayResponse) GetAlertSourceType() string {
-	if o == nil {
+func (v *V3ServicesOverlayOverlayResponse) GetAlertSourceType() string {
+	if v == nil {
 		return ""
 	}
-	return o.AlertSourceType
+	return v.AlertSourceType
 }

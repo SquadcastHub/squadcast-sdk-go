@@ -24126,6 +24126,12 @@ paths:
       operationId: "Schedules_listSchedules"
       summary: "List Schedules"
       parameters:
+        - name: "teamID"
+          in: "query"
+          required: true
+          schema:
+            type: "string"
+          explode: false
         - name: "scheduleIDs"
           in: "query"
           required: false
@@ -24198,15 +24204,9 @@ paths:
           schema:
             type: "integer"
           explode: false
-        - name: "pageNumber"
+        - name: "cursor"
           in: "query"
           required: false
-          schema:
-            type: "integer"
-          explode: false
-        - name: "teamID"
-          in: "query"
-          required: true
           schema:
             type: "string"
           explode: false
@@ -25245,19 +25245,18 @@ paths:
           schema:
             type: "string"
           explode: false
-        - name: "pageNumber"
-          in: "query"
-          required: false
-          schema:
-            type: "integer"
-            format: "int32"
-          explode: false
         - name: "pageSize"
           in: "query"
           required: false
           schema:
             type: "integer"
             format: "int32"
+          explode: false
+        - name: "cursor"
+          in: "query"
+          required: false
+          schema:
+            type: "string"
           explode: false
       responses:
         "200":
@@ -25686,14 +25685,12 @@ paths:
             "application/json":
               schema:
                 type: "object"
-                required:
-                  - "data"
-                  - "pageInfo"
                 properties:
                   "data":
                     type: "array"
                     items: {"$ref": "#/components/schemas/V4.RotationResponse"}
-                  "pageInfo": {"$ref": "#/components/schemas/Common.V4.PageInfo"}
+                required:
+                  - "data"
         "400":
           description: "The server could not understand the request due to invalid syntax."
           content:
@@ -40134,5 +40131,5 @@ components:
       type: "http"
       scheme: "bearer"
 servers:
-  - url: "https://api.squadcast.tech"
-    description: "staging env"
+  - url: "https://api.squadcast.com"
+    description: "production env"

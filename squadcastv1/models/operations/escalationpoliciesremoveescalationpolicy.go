@@ -11,11 +11,11 @@ type EscalationPoliciesRemoveEscalationPolicyRequest struct {
 	EscalationPolicyID string `pathParam:"style=simple,explode=false,name=escalationPolicyID"`
 }
 
-func (o *EscalationPoliciesRemoveEscalationPolicyRequest) GetEscalationPolicyID() string {
-	if o == nil {
+func (e *EscalationPoliciesRemoveEscalationPolicyRequest) GetEscalationPolicyID() string {
+	if e == nil {
 		return ""
 	}
-	return o.EscalationPolicyID
+	return e.EscalationPolicyID
 }
 
 // EscalationPoliciesRemoveEscalationPolicyResponseBody - There is no content to send for this request, but the headers may be useful.
@@ -27,16 +27,16 @@ type EscalationPoliciesRemoveEscalationPolicyResponse struct {
 	Body     []byte
 }
 
-func (o *EscalationPoliciesRemoveEscalationPolicyResponse) GetHTTPMeta() components.HTTPMetadata {
-	if o == nil {
+func (e *EscalationPoliciesRemoveEscalationPolicyResponse) GetHTTPMeta() components.HTTPMetadata {
+	if e == nil {
 		return components.HTTPMetadata{}
 	}
-	return o.HTTPMeta
+	return e.HTTPMeta
 }
 
-func (o *EscalationPoliciesRemoveEscalationPolicyResponse) GetBody() []byte {
-	if o == nil {
+func (e *EscalationPoliciesRemoveEscalationPolicyResponse) GetBody() []byte {
+	if e == nil {
 		return nil
 	}
-	return o.Body
+	return e.Body
 }

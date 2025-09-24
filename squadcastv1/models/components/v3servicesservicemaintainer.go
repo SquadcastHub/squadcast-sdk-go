@@ -38,16 +38,16 @@ type V3ServicesServiceMaintainer struct {
 	Type V3ServicesServiceMaintainerType `json:"type"`
 }
 
-func (o *V3ServicesServiceMaintainer) GetID() string {
-	if o == nil {
+func (v *V3ServicesServiceMaintainer) GetID() string {
+	if v == nil {
 		return ""
 	}
-	return o.ID
+	return v.ID
 }
 
-func (o *V3ServicesServiceMaintainer) GetType() V3ServicesServiceMaintainerType {
-	if o == nil {
+func (v *V3ServicesServiceMaintainer) GetType() V3ServicesServiceMaintainerType {
+	if v == nil {
 		return V3ServicesServiceMaintainerType("")
 	}
-	return o.Type
+	return v.Type
 }

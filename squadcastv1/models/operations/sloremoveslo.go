@@ -11,18 +11,18 @@ type SLORemoveSLORequest struct {
 	OwnerID string `queryParam:"style=form,explode=true,name=owner_id"`
 }
 
-func (o *SLORemoveSLORequest) GetSloID() int64 {
-	if o == nil {
+func (s *SLORemoveSLORequest) GetSloID() int64 {
+	if s == nil {
 		return 0
 	}
-	return o.SloID
+	return s.SloID
 }
 
-func (o *SLORemoveSLORequest) GetOwnerID() string {
-	if o == nil {
+func (s *SLORemoveSLORequest) GetOwnerID() string {
+	if s == nil {
 		return ""
 	}
-	return o.OwnerID
+	return s.OwnerID
 }
 
 // SLORemoveSLOResponseBody - The request has succeeded.
@@ -30,11 +30,11 @@ type SLORemoveSLOResponseBody struct {
 	Data components.V3SLOSLOResponse `json:"data"`
 }
 
-func (o *SLORemoveSLOResponseBody) GetData() components.V3SLOSLOResponse {
-	if o == nil {
+func (s *SLORemoveSLOResponseBody) GetData() components.V3SLOSLOResponse {
+	if s == nil {
 		return components.V3SLOSLOResponse{}
 	}
-	return o.Data
+	return s.Data
 }
 
 type SLORemoveSLOResponse struct {
@@ -43,16 +43,16 @@ type SLORemoveSLOResponse struct {
 	Object *SLORemoveSLOResponseBody
 }
 
-func (o *SLORemoveSLOResponse) GetHTTPMeta() components.HTTPMetadata {
-	if o == nil {
+func (s *SLORemoveSLOResponse) GetHTTPMeta() components.HTTPMetadata {
+	if s == nil {
 		return components.HTTPMetadata{}
 	}
-	return o.HTTPMeta
+	return s.HTTPMeta
 }
 
-func (o *SLORemoveSLOResponse) GetObject() *SLORemoveSLOResponseBody {
-	if o == nil {
+func (s *SLORemoveSLOResponse) GetObject() *SLORemoveSLOResponseBody {
+	if s == nil {
 		return nil
 	}
-	return o.Object
+	return s.Object
 }

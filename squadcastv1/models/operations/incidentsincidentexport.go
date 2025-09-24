@@ -42,146 +42,146 @@ func (i *IncidentsIncidentExportRequest) UnmarshalJSON(data []byte) error {
 	return nil
 }
 
-func (o *IncidentsIncidentExportRequest) GetStartTime() time.Time {
-	if o == nil {
+func (i *IncidentsIncidentExportRequest) GetStartTime() time.Time {
+	if i == nil {
 		return time.Time{}
 	}
-	return o.StartTime
+	return i.StartTime
 }
 
-func (o *IncidentsIncidentExportRequest) GetEndTime() time.Time {
-	if o == nil {
+func (i *IncidentsIncidentExportRequest) GetEndTime() time.Time {
+	if i == nil {
 		return time.Time{}
 	}
-	return o.EndTime
+	return i.EndTime
 }
 
-func (o *IncidentsIncidentExportRequest) GetType() components.V3IncidentsExportFormat {
-	if o == nil {
+func (i *IncidentsIncidentExportRequest) GetType() components.V3IncidentsExportFormat {
+	if i == nil {
 		return components.V3IncidentsExportFormat("")
 	}
-	return o.Type
+	return i.Type
 }
 
-func (o *IncidentsIncidentExportRequest) GetOwnerID() string {
-	if o == nil {
+func (i *IncidentsIncidentExportRequest) GetOwnerID() string {
+	if i == nil {
 		return ""
 	}
-	return o.OwnerID
+	return i.OwnerID
 }
 
-func (o *IncidentsIncidentExportRequest) GetStatus() []string {
-	if o == nil {
+func (i *IncidentsIncidentExportRequest) GetStatus() []string {
+	if i == nil {
 		return nil
 	}
-	return o.Status
+	return i.Status
 }
 
-func (o *IncidentsIncidentExportRequest) GetServices() []string {
-	if o == nil {
+func (i *IncidentsIncidentExportRequest) GetServices() []string {
+	if i == nil {
 		return nil
 	}
-	return o.Services
+	return i.Services
 }
 
-func (o *IncidentsIncidentExportRequest) GetSources() []string {
-	if o == nil {
+func (i *IncidentsIncidentExportRequest) GetSources() []string {
+	if i == nil {
 		return nil
 	}
-	return o.Sources
+	return i.Sources
 }
 
-func (o *IncidentsIncidentExportRequest) GetAssignedTo() []string {
-	if o == nil {
+func (i *IncidentsIncidentExportRequest) GetAssignedTo() []string {
+	if i == nil {
 		return nil
 	}
-	return o.AssignedTo
+	return i.AssignedTo
 }
 
-func (o *IncidentsIncidentExportRequest) GetAssignedToUserIDsAndTheirSquads() []string {
-	if o == nil {
+func (i *IncidentsIncidentExportRequest) GetAssignedToUserIDsAndTheirSquads() []string {
+	if i == nil {
 		return nil
 	}
-	return o.AssignedToUserIDsAndTheirSquads
+	return i.AssignedToUserIDsAndTheirSquads
 }
 
-func (o *IncidentsIncidentExportRequest) GetServiceOwner() *string {
-	if o == nil {
+func (i *IncidentsIncidentExportRequest) GetServiceOwner() *string {
+	if i == nil {
 		return nil
 	}
-	return o.ServiceOwner
+	return i.ServiceOwner
 }
 
-func (o *IncidentsIncidentExportRequest) GetPriority() []components.V3IncidentsIncidentPriority {
-	if o == nil {
+func (i *IncidentsIncidentExportRequest) GetPriority() []components.V3IncidentsIncidentPriority {
+	if i == nil {
 		return nil
 	}
-	return o.Priority
+	return i.Priority
 }
 
-func (o *IncidentsIncidentExportRequest) GetTags() []string {
-	if o == nil {
+func (i *IncidentsIncidentExportRequest) GetTags() []string {
+	if i == nil {
 		return nil
 	}
-	return o.Tags
+	return i.Tags
 }
 
-func (o *IncidentsIncidentExportRequest) GetSloAffecting() *components.V3IncidentsIncidentExportRequestSloAffecting {
-	if o == nil {
+func (i *IncidentsIncidentExportRequest) GetSloAffecting() *components.V3IncidentsIncidentExportRequestSloAffecting {
+	if i == nil {
 		return nil
 	}
-	return o.SloAffecting
+	return i.SloAffecting
 }
 
-func (o *IncidentsIncidentExportRequest) GetSlos() []int {
-	if o == nil {
+func (i *IncidentsIncidentExportRequest) GetSlos() []int {
+	if i == nil {
 		return nil
 	}
-	return o.Slos
+	return i.Slos
 }
 
-func (o *IncidentsIncidentExportRequest) GetIsStarred() *components.V3IncidentsIncidentExportRequestIsStarred {
-	if o == nil {
+func (i *IncidentsIncidentExportRequest) GetIsStarred() *components.V3IncidentsIncidentExportRequestIsStarred {
+	if i == nil {
 		return nil
 	}
-	return o.IsStarred
+	return i.IsStarred
 }
 
-func (o *IncidentsIncidentExportRequest) GetTextFilter() *string {
-	if o == nil {
+func (i *IncidentsIncidentExportRequest) GetTextFilter() *string {
+	if i == nil {
 		return nil
 	}
-	return o.TextFilter
+	return i.TextFilter
 }
 
-func (o *IncidentsIncidentExportRequest) GetNotes() *components.V3IncidentsIncidentExportRequestNotes {
-	if o == nil {
+func (i *IncidentsIncidentExportRequest) GetNotes() *components.V3IncidentsIncidentExportRequestNotes {
+	if i == nil {
 		return nil
 	}
-	return o.Notes
+	return i.Notes
 }
 
-func (o *IncidentsIncidentExportRequest) GetRetrospectives() *components.V3IncidentsIncidentExportRequestRetrospectives {
-	if o == nil {
+func (i *IncidentsIncidentExportRequest) GetRetrospectives() *components.V3IncidentsIncidentExportRequestRetrospectives {
+	if i == nil {
 		return nil
 	}
-	return o.Retrospectives
+	return i.Retrospectives
 }
 
-func (o *IncidentsIncidentExportRequest) GetSortBy() *components.V3IncidentsIncidentExportRequestSortBy {
-	if o == nil {
+func (i *IncidentsIncidentExportRequest) GetSortBy() *components.V3IncidentsIncidentExportRequestSortBy {
+	if i == nil {
 		return nil
 	}
-	return o.SortBy
+	return i.SortBy
 }
 
 type IncidentsIncidentExportResponse struct {
 	HTTPMeta components.HTTPMetadata `json:"-"`
 }
 
-func (o *IncidentsIncidentExportResponse) GetHTTPMeta() components.HTTPMetadata {
-	if o == nil {
+func (i *IncidentsIncidentExportResponse) GetHTTPMeta() components.HTTPMetadata {
+	if i == nil {
 		return components.HTTPMetadata{}
 	}
-	return o.HTTPMeta
+	return i.HTTPMeta
 }

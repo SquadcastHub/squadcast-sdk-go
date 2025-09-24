@@ -10,11 +10,11 @@ type SquadsDeleteSquadRequest struct {
 	SquadID string `pathParam:"style=simple,explode=false,name=squadID"`
 }
 
-func (o *SquadsDeleteSquadRequest) GetSquadID() string {
-	if o == nil {
+func (s *SquadsDeleteSquadRequest) GetSquadID() string {
+	if s == nil {
 		return ""
 	}
-	return o.SquadID
+	return s.SquadID
 }
 
 // SquadsDeleteSquadResponseBody - There is no content to send for this request, but the headers may be useful.
@@ -26,16 +26,16 @@ type SquadsDeleteSquadResponse struct {
 	Body     []byte
 }
 
-func (o *SquadsDeleteSquadResponse) GetHTTPMeta() components.HTTPMetadata {
-	if o == nil {
+func (s *SquadsDeleteSquadResponse) GetHTTPMeta() components.HTTPMetadata {
+	if s == nil {
 		return components.HTTPMetadata{}
 	}
-	return o.HTTPMeta
+	return s.HTTPMeta
 }
 
-func (o *SquadsDeleteSquadResponse) GetBody() []byte {
-	if o == nil {
+func (s *SquadsDeleteSquadResponse) GetBody() []byte {
+	if s == nil {
 		return nil
 	}
-	return o.Body
+	return s.Body
 }

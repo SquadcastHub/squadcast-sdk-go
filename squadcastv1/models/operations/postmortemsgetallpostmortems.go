@@ -16,32 +16,32 @@ type PostmortemsGetAllPostmortemsRequest struct {
 	Limit   int64  `queryParam:"style=form,explode=true,name=limit"`
 }
 
-func (o *PostmortemsGetAllPostmortemsRequest) GetFromDate() string {
-	if o == nil {
+func (p *PostmortemsGetAllPostmortemsRequest) GetFromDate() string {
+	if p == nil {
 		return ""
 	}
-	return o.FromDate
+	return p.FromDate
 }
 
-func (o *PostmortemsGetAllPostmortemsRequest) GetToDate() string {
-	if o == nil {
+func (p *PostmortemsGetAllPostmortemsRequest) GetToDate() string {
+	if p == nil {
 		return ""
 	}
-	return o.ToDate
+	return p.ToDate
 }
 
-func (o *PostmortemsGetAllPostmortemsRequest) GetOwnerID() string {
-	if o == nil {
+func (p *PostmortemsGetAllPostmortemsRequest) GetOwnerID() string {
+	if p == nil {
 		return ""
 	}
-	return o.OwnerID
+	return p.OwnerID
 }
 
-func (o *PostmortemsGetAllPostmortemsRequest) GetLimit() int64 {
-	if o == nil {
+func (p *PostmortemsGetAllPostmortemsRequest) GetLimit() int64 {
+	if p == nil {
 		return 0
 	}
-	return o.Limit
+	return p.Limit
 }
 
 type PostmortemsGetAllPostmortemsData struct {
@@ -49,18 +49,18 @@ type PostmortemsGetAllPostmortemsData struct {
 	TotalCount []components.V3IncidentsPostmortemsTotalPostmortemCount `json:"total_count"`
 }
 
-func (o *PostmortemsGetAllPostmortemsData) GetResult() []components.V3IncidentsPostmortemsPostmortemListResult {
-	if o == nil {
+func (p *PostmortemsGetAllPostmortemsData) GetResult() []components.V3IncidentsPostmortemsPostmortemListResult {
+	if p == nil {
 		return []components.V3IncidentsPostmortemsPostmortemListResult{}
 	}
-	return o.Result
+	return p.Result
 }
 
-func (o *PostmortemsGetAllPostmortemsData) GetTotalCount() []components.V3IncidentsPostmortemsTotalPostmortemCount {
-	if o == nil {
+func (p *PostmortemsGetAllPostmortemsData) GetTotalCount() []components.V3IncidentsPostmortemsTotalPostmortemCount {
+	if p == nil {
 		return []components.V3IncidentsPostmortemsTotalPostmortemCount{}
 	}
-	return o.TotalCount
+	return p.TotalCount
 }
 
 // PostmortemsGetAllPostmortemsResponseBody - The request has succeeded.
@@ -68,11 +68,11 @@ type PostmortemsGetAllPostmortemsResponseBody struct {
 	Data []PostmortemsGetAllPostmortemsData `json:"data"`
 }
 
-func (o *PostmortemsGetAllPostmortemsResponseBody) GetData() []PostmortemsGetAllPostmortemsData {
-	if o == nil {
+func (p *PostmortemsGetAllPostmortemsResponseBody) GetData() []PostmortemsGetAllPostmortemsData {
+	if p == nil {
 		return []PostmortemsGetAllPostmortemsData{}
 	}
-	return o.Data
+	return p.Data
 }
 
 type PostmortemsGetAllPostmortemsResponse struct {
@@ -81,16 +81,16 @@ type PostmortemsGetAllPostmortemsResponse struct {
 	Object *PostmortemsGetAllPostmortemsResponseBody
 }
 
-func (o *PostmortemsGetAllPostmortemsResponse) GetHTTPMeta() components.HTTPMetadata {
-	if o == nil {
+func (p *PostmortemsGetAllPostmortemsResponse) GetHTTPMeta() components.HTTPMetadata {
+	if p == nil {
 		return components.HTTPMetadata{}
 	}
-	return o.HTTPMeta
+	return p.HTTPMeta
 }
 
-func (o *PostmortemsGetAllPostmortemsResponse) GetObject() *PostmortemsGetAllPostmortemsResponseBody {
-	if o == nil {
+func (p *PostmortemsGetAllPostmortemsResponse) GetObject() *PostmortemsGetAllPostmortemsResponseBody {
+	if p == nil {
 		return nil
 	}
-	return o.Object
+	return p.Object
 }

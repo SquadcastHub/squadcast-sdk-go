@@ -8,23 +8,23 @@ type V4StatusPagesComponentGroupsCreateComponentGroupRequest struct {
 	AllowSubscription *bool   `json:"allowSubscription,omitempty"`
 }
 
-func (o *V4StatusPagesComponentGroupsCreateComponentGroupRequest) GetName() string {
-	if o == nil {
+func (v *V4StatusPagesComponentGroupsCreateComponentGroupRequest) GetName() string {
+	if v == nil {
 		return ""
 	}
-	return o.Name
+	return v.Name
 }
 
-func (o *V4StatusPagesComponentGroupsCreateComponentGroupRequest) GetDescription() *string {
-	if o == nil {
+func (v *V4StatusPagesComponentGroupsCreateComponentGroupRequest) GetDescription() *string {
+	if v == nil {
 		return nil
 	}
-	return o.Description
+	return v.Description
 }
 
-func (o *V4StatusPagesComponentGroupsCreateComponentGroupRequest) GetAllowSubscription() *bool {
-	if o == nil {
+func (v *V4StatusPagesComponentGroupsCreateComponentGroupRequest) GetAllowSubscription() *bool {
+	if v == nil {
 		return nil
 	}
-	return o.AllowSubscription
+	return v.AllowSubscription
 }

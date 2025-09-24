@@ -11,18 +11,18 @@ type RunbooksAttachRunbooksRequest struct {
 	V3IncidentsRunbooksAttachRunbooksRequest components.V3IncidentsRunbooksAttachRunbooksRequest `request:"mediaType=application/json"`
 }
 
-func (o *RunbooksAttachRunbooksRequest) GetIncidentID() string {
-	if o == nil {
+func (r *RunbooksAttachRunbooksRequest) GetIncidentID() string {
+	if r == nil {
 		return ""
 	}
-	return o.IncidentID
+	return r.IncidentID
 }
 
-func (o *RunbooksAttachRunbooksRequest) GetV3IncidentsRunbooksAttachRunbooksRequest() components.V3IncidentsRunbooksAttachRunbooksRequest {
-	if o == nil {
+func (r *RunbooksAttachRunbooksRequest) GetV3IncidentsRunbooksAttachRunbooksRequest() components.V3IncidentsRunbooksAttachRunbooksRequest {
+	if r == nil {
 		return components.V3IncidentsRunbooksAttachRunbooksRequest{}
 	}
-	return o.V3IncidentsRunbooksAttachRunbooksRequest
+	return r.V3IncidentsRunbooksAttachRunbooksRequest
 }
 
 // RunbooksAttachRunbooksResponseBody - The request has succeeded and a new resource has been created as a result.
@@ -30,11 +30,11 @@ type RunbooksAttachRunbooksResponseBody struct {
 	Data []components.V3IncidentsRunbooksRunbookResponse `json:"data"`
 }
 
-func (o *RunbooksAttachRunbooksResponseBody) GetData() []components.V3IncidentsRunbooksRunbookResponse {
-	if o == nil {
+func (r *RunbooksAttachRunbooksResponseBody) GetData() []components.V3IncidentsRunbooksRunbookResponse {
+	if r == nil {
 		return []components.V3IncidentsRunbooksRunbookResponse{}
 	}
-	return o.Data
+	return r.Data
 }
 
 type RunbooksAttachRunbooksResponse struct {
@@ -43,16 +43,16 @@ type RunbooksAttachRunbooksResponse struct {
 	Object *RunbooksAttachRunbooksResponseBody
 }
 
-func (o *RunbooksAttachRunbooksResponse) GetHTTPMeta() components.HTTPMetadata {
-	if o == nil {
+func (r *RunbooksAttachRunbooksResponse) GetHTTPMeta() components.HTTPMetadata {
+	if r == nil {
 		return components.HTTPMetadata{}
 	}
-	return o.HTTPMeta
+	return r.HTTPMeta
 }
 
-func (o *RunbooksAttachRunbooksResponse) GetObject() *RunbooksAttachRunbooksResponseBody {
-	if o == nil {
+func (r *RunbooksAttachRunbooksResponse) GetObject() *RunbooksAttachRunbooksResponseBody {
+	if r == nil {
 		return nil
 	}
-	return o.Object
+	return r.Object
 }

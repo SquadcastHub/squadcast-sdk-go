@@ -7,9 +7,9 @@ type V3IncidentsCommunicationCardsArchiveSlackChannelRequest struct {
 	SlackChannelID string `json:"slack_channel_id"`
 }
 
-func (o *V3IncidentsCommunicationCardsArchiveSlackChannelRequest) GetSlackChannelID() string {
-	if o == nil {
+func (v *V3IncidentsCommunicationCardsArchiveSlackChannelRequest) GetSlackChannelID() string {
+	if v == nil {
 		return ""
 	}
-	return o.SlackChannelID
+	return v.SlackChannelID
 }

@@ -24,25 +24,25 @@ func (s *Step) UnmarshalJSON(data []byte) error {
 	return nil
 }
 
-func (o *Step) GetContent() string {
-	if o == nil {
+func (s *Step) GetContent() string {
+	if s == nil {
 		return ""
 	}
-	return o.Content
+	return s.Content
 }
 
-func (o *Step) GetCompleted() bool {
-	if o == nil {
+func (s *Step) GetCompleted() bool {
+	if s == nil {
 		return false
 	}
-	return o.Completed
+	return s.Completed
 }
 
-func (o *Step) GetCompletedAt() *time.Time {
-	if o == nil {
+func (s *Step) GetCompletedAt() *time.Time {
+	if s == nil {
 		return nil
 	}
-	return o.CompletedAt
+	return s.CompletedAt
 }
 
 type V3IncidentsRunbooksRunbookResponse struct {
@@ -66,51 +66,51 @@ func (v *V3IncidentsRunbooksRunbookResponse) UnmarshalJSON(data []byte) error {
 	return nil
 }
 
-func (o *V3IncidentsRunbooksRunbookResponse) GetID() *string {
-	if o == nil {
+func (v *V3IncidentsRunbooksRunbookResponse) GetID() *string {
+	if v == nil {
 		return nil
 	}
-	return o.ID
+	return v.ID
 }
 
-func (o *V3IncidentsRunbooksRunbookResponse) GetIncidentID() string {
-	if o == nil {
+func (v *V3IncidentsRunbooksRunbookResponse) GetIncidentID() string {
+	if v == nil {
 		return ""
 	}
-	return o.IncidentID
+	return v.IncidentID
 }
 
-func (o *V3IncidentsRunbooksRunbookResponse) GetRunbookID() string {
-	if o == nil {
+func (v *V3IncidentsRunbooksRunbookResponse) GetRunbookID() string {
+	if v == nil {
 		return ""
 	}
-	return o.RunbookID
+	return v.RunbookID
 }
 
-func (o *V3IncidentsRunbooksRunbookResponse) GetName() string {
-	if o == nil {
+func (v *V3IncidentsRunbooksRunbookResponse) GetName() string {
+	if v == nil {
 		return ""
 	}
-	return o.Name
+	return v.Name
 }
 
-func (o *V3IncidentsRunbooksRunbookResponse) GetSteps() []Step {
-	if o == nil {
+func (v *V3IncidentsRunbooksRunbookResponse) GetSteps() []Step {
+	if v == nil {
 		return []Step{}
 	}
-	return o.Steps
+	return v.Steps
 }
 
-func (o *V3IncidentsRunbooksRunbookResponse) GetDeleted() *bool {
-	if o == nil {
+func (v *V3IncidentsRunbooksRunbookResponse) GetDeleted() *bool {
+	if v == nil {
 		return nil
 	}
-	return o.Deleted
+	return v.Deleted
 }
 
-func (o *V3IncidentsRunbooksRunbookResponse) GetDeletedAt() *time.Time {
-	if o == nil {
+func (v *V3IncidentsRunbooksRunbookResponse) GetDeletedAt() *time.Time {
+	if v == nil {
 		return nil
 	}
-	return o.DeletedAt
+	return v.DeletedAt
 }

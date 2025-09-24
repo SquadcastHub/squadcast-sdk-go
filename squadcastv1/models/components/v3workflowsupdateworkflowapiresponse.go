@@ -18,93 +18,93 @@ type V3WorkflowsUpdateWorkflowAPIResponse struct {
 	UpdatedBy   *string                     `json:"updated_by,omitempty"`
 }
 
-func (o *V3WorkflowsUpdateWorkflowAPIResponse) GetID() *int {
-	if o == nil {
+func (v *V3WorkflowsUpdateWorkflowAPIResponse) GetID() *int {
+	if v == nil {
 		return nil
 	}
-	return o.ID
+	return v.ID
 }
 
-func (o *V3WorkflowsUpdateWorkflowAPIResponse) GetOwnerID() *string {
-	if o == nil {
+func (v *V3WorkflowsUpdateWorkflowAPIResponse) GetOwnerID() *string {
+	if v == nil {
 		return nil
 	}
-	return o.OwnerID
+	return v.OwnerID
 }
 
-func (o *V3WorkflowsUpdateWorkflowAPIResponse) GetTitle() *string {
-	if o == nil {
+func (v *V3WorkflowsUpdateWorkflowAPIResponse) GetTitle() *string {
+	if v == nil {
 		return nil
 	}
-	return o.Title
+	return v.Title
 }
 
-func (o *V3WorkflowsUpdateWorkflowAPIResponse) GetDescription() *string {
-	if o == nil {
+func (v *V3WorkflowsUpdateWorkflowAPIResponse) GetDescription() *string {
+	if v == nil {
 		return nil
 	}
-	return o.Description
+	return v.Description
 }
 
-func (o *V3WorkflowsUpdateWorkflowAPIResponse) GetEnabled() *bool {
-	if o == nil {
+func (v *V3WorkflowsUpdateWorkflowAPIResponse) GetEnabled() *bool {
+	if v == nil {
 		return nil
 	}
-	return o.Enabled
+	return v.Enabled
 }
 
-func (o *V3WorkflowsUpdateWorkflowAPIResponse) GetTrigger() *string {
-	if o == nil {
+func (v *V3WorkflowsUpdateWorkflowAPIResponse) GetTrigger() *string {
+	if v == nil {
 		return nil
 	}
-	return o.Trigger
+	return v.Trigger
 }
 
-func (o *V3WorkflowsUpdateWorkflowAPIResponse) GetFilters() *V3WorkflowsWorkflowFilters {
-	if o == nil {
+func (v *V3WorkflowsUpdateWorkflowAPIResponse) GetFilters() *V3WorkflowsWorkflowFilters {
+	if v == nil {
 		return nil
 	}
-	return o.Filters
+	return v.Filters
 }
 
-func (o *V3WorkflowsUpdateWorkflowAPIResponse) GetTags() []V3WorkflowsTag {
-	if o == nil {
+func (v *V3WorkflowsUpdateWorkflowAPIResponse) GetTags() []V3WorkflowsTag {
+	if v == nil {
 		return nil
 	}
-	return o.Tags
+	return v.Tags
 }
 
-func (o *V3WorkflowsUpdateWorkflowAPIResponse) GetActions() []V3WorkflowsActionResponse {
-	if o == nil {
+func (v *V3WorkflowsUpdateWorkflowAPIResponse) GetActions() []V3WorkflowsActionResponse {
+	if v == nil {
 		return nil
 	}
-	return o.Actions
+	return v.Actions
 }
 
-func (o *V3WorkflowsUpdateWorkflowAPIResponse) GetCreatedAt() *string {
-	if o == nil {
+func (v *V3WorkflowsUpdateWorkflowAPIResponse) GetCreatedAt() *string {
+	if v == nil {
 		return nil
 	}
-	return o.CreatedAt
+	return v.CreatedAt
 }
 
-func (o *V3WorkflowsUpdateWorkflowAPIResponse) GetCreatedBy() *string {
-	if o == nil {
+func (v *V3WorkflowsUpdateWorkflowAPIResponse) GetCreatedBy() *string {
+	if v == nil {
 		return nil
 	}
-	return o.CreatedBy
+	return v.CreatedBy
 }
 
-func (o *V3WorkflowsUpdateWorkflowAPIResponse) GetUpdatedAt() *string {
-	if o == nil {
+func (v *V3WorkflowsUpdateWorkflowAPIResponse) GetUpdatedAt() *string {
+	if v == nil {
 		return nil
 	}
-	return o.UpdatedAt
+	return v.UpdatedAt
 }
 
-func (o *V3WorkflowsUpdateWorkflowAPIResponse) GetUpdatedBy() *string {
-	if o == nil {
+func (v *V3WorkflowsUpdateWorkflowAPIResponse) GetUpdatedBy() *string {
+	if v == nil {
 		return nil
 	}
-	return o.UpdatedBy
+	return v.UpdatedBy
 }

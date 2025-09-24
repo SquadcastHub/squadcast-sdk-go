@@ -11,18 +11,18 @@ type TeamsUpdateTeamRequest struct {
 	V3TeamsUpdateTeamRequest components.V3TeamsUpdateTeamRequest `request:"mediaType=application/json"`
 }
 
-func (o *TeamsUpdateTeamRequest) GetTeamID() string {
-	if o == nil {
+func (t *TeamsUpdateTeamRequest) GetTeamID() string {
+	if t == nil {
 		return ""
 	}
-	return o.TeamID
+	return t.TeamID
 }
 
-func (o *TeamsUpdateTeamRequest) GetV3TeamsUpdateTeamRequest() components.V3TeamsUpdateTeamRequest {
-	if o == nil {
+func (t *TeamsUpdateTeamRequest) GetV3TeamsUpdateTeamRequest() components.V3TeamsUpdateTeamRequest {
+	if t == nil {
 		return components.V3TeamsUpdateTeamRequest{}
 	}
-	return o.V3TeamsUpdateTeamRequest
+	return t.V3TeamsUpdateTeamRequest
 }
 
 // TeamsUpdateTeamResponseBody - The request has succeeded.
@@ -30,11 +30,11 @@ type TeamsUpdateTeamResponseBody struct {
 	Data components.V3TeamsTeamResponse `json:"data"`
 }
 
-func (o *TeamsUpdateTeamResponseBody) GetData() components.V3TeamsTeamResponse {
-	if o == nil {
+func (t *TeamsUpdateTeamResponseBody) GetData() components.V3TeamsTeamResponse {
+	if t == nil {
 		return components.V3TeamsTeamResponse{}
 	}
-	return o.Data
+	return t.Data
 }
 
 type TeamsUpdateTeamResponse struct {
@@ -43,16 +43,16 @@ type TeamsUpdateTeamResponse struct {
 	Object *TeamsUpdateTeamResponseBody
 }
 
-func (o *TeamsUpdateTeamResponse) GetHTTPMeta() components.HTTPMetadata {
-	if o == nil {
+func (t *TeamsUpdateTeamResponse) GetHTTPMeta() components.HTTPMetadata {
+	if t == nil {
 		return components.HTTPMetadata{}
 	}
-	return o.HTTPMeta
+	return t.HTTPMeta
 }
 
-func (o *TeamsUpdateTeamResponse) GetObject() *TeamsUpdateTeamResponseBody {
-	if o == nil {
+func (t *TeamsUpdateTeamResponse) GetObject() *TeamsUpdateTeamResponseBody {
+	if t == nil {
 		return nil
 	}
-	return o.Object
+	return t.Object
 }

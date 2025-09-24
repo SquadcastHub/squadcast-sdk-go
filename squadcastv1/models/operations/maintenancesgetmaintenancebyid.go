@@ -11,18 +11,18 @@ type MaintenancesGetMaintenanceByIDRequest struct {
 	MaintenanceID string `pathParam:"style=simple,explode=false,name=maintenance_id"`
 }
 
-func (o *MaintenancesGetMaintenanceByIDRequest) GetStatuspageID() string {
-	if o == nil {
+func (m *MaintenancesGetMaintenanceByIDRequest) GetStatuspageID() string {
+	if m == nil {
 		return ""
 	}
-	return o.StatuspageID
+	return m.StatuspageID
 }
 
-func (o *MaintenancesGetMaintenanceByIDRequest) GetMaintenanceID() string {
-	if o == nil {
+func (m *MaintenancesGetMaintenanceByIDRequest) GetMaintenanceID() string {
+	if m == nil {
 		return ""
 	}
-	return o.MaintenanceID
+	return m.MaintenanceID
 }
 
 // MaintenancesGetMaintenanceByIDResponseBody - The request has succeeded.
@@ -30,11 +30,11 @@ type MaintenancesGetMaintenanceByIDResponseBody struct {
 	Data components.V4StatusPagesMaintenancesGetMaintenanceByIDResponse `json:"data"`
 }
 
-func (o *MaintenancesGetMaintenanceByIDResponseBody) GetData() components.V4StatusPagesMaintenancesGetMaintenanceByIDResponse {
-	if o == nil {
+func (m *MaintenancesGetMaintenanceByIDResponseBody) GetData() components.V4StatusPagesMaintenancesGetMaintenanceByIDResponse {
+	if m == nil {
 		return components.V4StatusPagesMaintenancesGetMaintenanceByIDResponse{}
 	}
-	return o.Data
+	return m.Data
 }
 
 type MaintenancesGetMaintenanceByIDResponse struct {
@@ -43,16 +43,16 @@ type MaintenancesGetMaintenanceByIDResponse struct {
 	Object *MaintenancesGetMaintenanceByIDResponseBody
 }
 
-func (o *MaintenancesGetMaintenanceByIDResponse) GetHTTPMeta() components.HTTPMetadata {
-	if o == nil {
+func (m *MaintenancesGetMaintenanceByIDResponse) GetHTTPMeta() components.HTTPMetadata {
+	if m == nil {
 		return components.HTTPMetadata{}
 	}
-	return o.HTTPMeta
+	return m.HTTPMeta
 }
 
-func (o *MaintenancesGetMaintenanceByIDResponse) GetObject() *MaintenancesGetMaintenanceByIDResponseBody {
-	if o == nil {
+func (m *MaintenancesGetMaintenanceByIDResponse) GetObject() *MaintenancesGetMaintenanceByIDResponseBody {
+	if m == nil {
 		return nil
 	}
-	return o.Object
+	return m.Object
 }

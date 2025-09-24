@@ -11,18 +11,18 @@ type ComponentsDeleteComponentByIDRequest struct {
 	ComponentID  string `pathParam:"style=simple,explode=false,name=component_id"`
 }
 
-func (o *ComponentsDeleteComponentByIDRequest) GetStatuspageID() string {
-	if o == nil {
+func (c *ComponentsDeleteComponentByIDRequest) GetStatuspageID() string {
+	if c == nil {
 		return ""
 	}
-	return o.StatuspageID
+	return c.StatuspageID
 }
 
-func (o *ComponentsDeleteComponentByIDRequest) GetComponentID() string {
-	if o == nil {
+func (c *ComponentsDeleteComponentByIDRequest) GetComponentID() string {
+	if c == nil {
 		return ""
 	}
-	return o.ComponentID
+	return c.ComponentID
 }
 
 // ComponentsDeleteComponentByIDResponseBody - The request has succeeded.
@@ -30,11 +30,11 @@ type ComponentsDeleteComponentByIDResponseBody struct {
 	Data components.V4StatusPagesComponentsDeleteComponentByIDResponse `json:"data"`
 }
 
-func (o *ComponentsDeleteComponentByIDResponseBody) GetData() components.V4StatusPagesComponentsDeleteComponentByIDResponse {
-	if o == nil {
+func (c *ComponentsDeleteComponentByIDResponseBody) GetData() components.V4StatusPagesComponentsDeleteComponentByIDResponse {
+	if c == nil {
 		return components.V4StatusPagesComponentsDeleteComponentByIDResponse{}
 	}
-	return o.Data
+	return c.Data
 }
 
 type ComponentsDeleteComponentByIDResponse struct {
@@ -43,16 +43,16 @@ type ComponentsDeleteComponentByIDResponse struct {
 	Object *ComponentsDeleteComponentByIDResponseBody
 }
 
-func (o *ComponentsDeleteComponentByIDResponse) GetHTTPMeta() components.HTTPMetadata {
-	if o == nil {
+func (c *ComponentsDeleteComponentByIDResponse) GetHTTPMeta() components.HTTPMetadata {
+	if c == nil {
 		return components.HTTPMetadata{}
 	}
-	return o.HTTPMeta
+	return c.HTTPMeta
 }
 
-func (o *ComponentsDeleteComponentByIDResponse) GetObject() *ComponentsDeleteComponentByIDResponseBody {
-	if o == nil {
+func (c *ComponentsDeleteComponentByIDResponse) GetObject() *ComponentsDeleteComponentByIDResponseBody {
+	if c == nil {
 		return nil
 	}
-	return o.Object
+	return c.Object
 }

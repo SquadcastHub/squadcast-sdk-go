@@ -11,18 +11,18 @@ type TeamsAddTeamMemberRequest struct {
 	V3TeamsAddTeamMemberRequest components.V3TeamsAddTeamMemberRequest `request:"mediaType=application/json"`
 }
 
-func (o *TeamsAddTeamMemberRequest) GetTeamID() string {
-	if o == nil {
+func (t *TeamsAddTeamMemberRequest) GetTeamID() string {
+	if t == nil {
 		return ""
 	}
-	return o.TeamID
+	return t.TeamID
 }
 
-func (o *TeamsAddTeamMemberRequest) GetV3TeamsAddTeamMemberRequest() components.V3TeamsAddTeamMemberRequest {
-	if o == nil {
+func (t *TeamsAddTeamMemberRequest) GetV3TeamsAddTeamMemberRequest() components.V3TeamsAddTeamMemberRequest {
+	if t == nil {
 		return components.V3TeamsAddTeamMemberRequest{}
 	}
-	return o.V3TeamsAddTeamMemberRequest
+	return t.V3TeamsAddTeamMemberRequest
 }
 
 // TeamsAddTeamMemberResponseBody - The request has succeeded and a new resource has been created as a result.
@@ -30,11 +30,11 @@ type TeamsAddTeamMemberResponseBody struct {
 	Data components.V3TeamsTeamMemberResponse `json:"data"`
 }
 
-func (o *TeamsAddTeamMemberResponseBody) GetData() components.V3TeamsTeamMemberResponse {
-	if o == nil {
+func (t *TeamsAddTeamMemberResponseBody) GetData() components.V3TeamsTeamMemberResponse {
+	if t == nil {
 		return components.V3TeamsTeamMemberResponse{}
 	}
-	return o.Data
+	return t.Data
 }
 
 type TeamsAddTeamMemberResponse struct {
@@ -43,16 +43,16 @@ type TeamsAddTeamMemberResponse struct {
 	Object *TeamsAddTeamMemberResponseBody
 }
 
-func (o *TeamsAddTeamMemberResponse) GetHTTPMeta() components.HTTPMetadata {
-	if o == nil {
+func (t *TeamsAddTeamMemberResponse) GetHTTPMeta() components.HTTPMetadata {
+	if t == nil {
 		return components.HTTPMetadata{}
 	}
-	return o.HTTPMeta
+	return t.HTTPMeta
 }
 
-func (o *TeamsAddTeamMemberResponse) GetObject() *TeamsAddTeamMemberResponseBody {
-	if o == nil {
+func (t *TeamsAddTeamMemberResponse) GetObject() *TeamsAddTeamMemberResponseBody {
+	if t == nil {
 		return nil
 	}
-	return o.Object
+	return t.Object
 }

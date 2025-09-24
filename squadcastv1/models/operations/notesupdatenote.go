@@ -13,25 +13,25 @@ type NotesUpdateNoteRequest struct {
 	V3IncidentsNotesUpdateNoteRequest components.V3IncidentsNotesUpdateNoteRequest `request:"mediaType=application/json"`
 }
 
-func (o *NotesUpdateNoteRequest) GetIncidentID() string {
-	if o == nil {
+func (n *NotesUpdateNoteRequest) GetIncidentID() string {
+	if n == nil {
 		return ""
 	}
-	return o.IncidentID
+	return n.IncidentID
 }
 
-func (o *NotesUpdateNoteRequest) GetNoteID() string {
-	if o == nil {
+func (n *NotesUpdateNoteRequest) GetNoteID() string {
+	if n == nil {
 		return ""
 	}
-	return o.NoteID
+	return n.NoteID
 }
 
-func (o *NotesUpdateNoteRequest) GetV3IncidentsNotesUpdateNoteRequest() components.V3IncidentsNotesUpdateNoteRequest {
-	if o == nil {
+func (n *NotesUpdateNoteRequest) GetV3IncidentsNotesUpdateNoteRequest() components.V3IncidentsNotesUpdateNoteRequest {
+	if n == nil {
 		return components.V3IncidentsNotesUpdateNoteRequest{}
 	}
-	return o.V3IncidentsNotesUpdateNoteRequest
+	return n.V3IncidentsNotesUpdateNoteRequest
 }
 
 // NotesUpdateNoteResponseBody - The request has succeeded.
@@ -39,11 +39,11 @@ type NotesUpdateNoteResponseBody struct {
 	Data components.V3IncidentsNotesNoteResponse `json:"data"`
 }
 
-func (o *NotesUpdateNoteResponseBody) GetData() components.V3IncidentsNotesNoteResponse {
-	if o == nil {
+func (n *NotesUpdateNoteResponseBody) GetData() components.V3IncidentsNotesNoteResponse {
+	if n == nil {
 		return components.V3IncidentsNotesNoteResponse{}
 	}
-	return o.Data
+	return n.Data
 }
 
 type NotesUpdateNoteResponse struct {
@@ -52,16 +52,16 @@ type NotesUpdateNoteResponse struct {
 	Object *NotesUpdateNoteResponseBody
 }
 
-func (o *NotesUpdateNoteResponse) GetHTTPMeta() components.HTTPMetadata {
-	if o == nil {
+func (n *NotesUpdateNoteResponse) GetHTTPMeta() components.HTTPMetadata {
+	if n == nil {
 		return components.HTTPMetadata{}
 	}
-	return o.HTTPMeta
+	return n.HTTPMeta
 }
 
-func (o *NotesUpdateNoteResponse) GetObject() *NotesUpdateNoteResponseBody {
-	if o == nil {
+func (n *NotesUpdateNoteResponse) GetObject() *NotesUpdateNoteResponseBody {
+	if n == nil {
 		return nil
 	}
-	return o.Object
+	return n.Object
 }

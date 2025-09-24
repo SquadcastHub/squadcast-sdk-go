@@ -11,44 +11,44 @@ type V4StatusPagesComponentsUpdateComponentByIDResponse struct {
 	AllowSubscription bool   `json:"allowSubscription"`
 }
 
-func (o *V4StatusPagesComponentsUpdateComponentByIDResponse) GetID() int64 {
-	if o == nil {
+func (v *V4StatusPagesComponentsUpdateComponentByIDResponse) GetID() int64 {
+	if v == nil {
 		return 0
 	}
-	return o.ID
+	return v.ID
 }
 
-func (o *V4StatusPagesComponentsUpdateComponentByIDResponse) GetPageID() int64 {
-	if o == nil {
+func (v *V4StatusPagesComponentsUpdateComponentByIDResponse) GetPageID() int64 {
+	if v == nil {
 		return 0
 	}
-	return o.PageID
+	return v.PageID
 }
 
-func (o *V4StatusPagesComponentsUpdateComponentByIDResponse) GetName() string {
-	if o == nil {
+func (v *V4StatusPagesComponentsUpdateComponentByIDResponse) GetName() string {
+	if v == nil {
 		return ""
 	}
-	return o.Name
+	return v.Name
 }
 
-func (o *V4StatusPagesComponentsUpdateComponentByIDResponse) GetDescription() string {
-	if o == nil {
+func (v *V4StatusPagesComponentsUpdateComponentByIDResponse) GetDescription() string {
+	if v == nil {
 		return ""
 	}
-	return o.Description
+	return v.Description
 }
 
-func (o *V4StatusPagesComponentsUpdateComponentByIDResponse) GetGroupID() *int64 {
-	if o == nil {
+func (v *V4StatusPagesComponentsUpdateComponentByIDResponse) GetGroupID() *int64 {
+	if v == nil {
 		return nil
 	}
-	return o.GroupID
+	return v.GroupID
 }
 
-func (o *V4StatusPagesComponentsUpdateComponentByIDResponse) GetAllowSubscription() bool {
-	if o == nil {
+func (v *V4StatusPagesComponentsUpdateComponentByIDResponse) GetAllowSubscription() bool {
+	if v == nil {
 		return false
 	}
-	return o.AllowSubscription
+	return v.AllowSubscription
 }

@@ -11,18 +11,18 @@ type IssuesCreateIssueRequest struct {
 	V4StatusPagesIssuesCreateIssueRequest components.V4StatusPagesIssuesCreateIssueRequest `request:"mediaType=application/json"`
 }
 
-func (o *IssuesCreateIssueRequest) GetStatuspageID() string {
-	if o == nil {
+func (i *IssuesCreateIssueRequest) GetStatuspageID() string {
+	if i == nil {
 		return ""
 	}
-	return o.StatuspageID
+	return i.StatuspageID
 }
 
-func (o *IssuesCreateIssueRequest) GetV4StatusPagesIssuesCreateIssueRequest() components.V4StatusPagesIssuesCreateIssueRequest {
-	if o == nil {
+func (i *IssuesCreateIssueRequest) GetV4StatusPagesIssuesCreateIssueRequest() components.V4StatusPagesIssuesCreateIssueRequest {
+	if i == nil {
 		return components.V4StatusPagesIssuesCreateIssueRequest{}
 	}
-	return o.V4StatusPagesIssuesCreateIssueRequest
+	return i.V4StatusPagesIssuesCreateIssueRequest
 }
 
 // IssuesCreateIssueResponseBody - The request has succeeded.
@@ -30,11 +30,11 @@ type IssuesCreateIssueResponseBody struct {
 	Data components.V4StatusPagesIssuesCreateIssueResponse `json:"data"`
 }
 
-func (o *IssuesCreateIssueResponseBody) GetData() components.V4StatusPagesIssuesCreateIssueResponse {
-	if o == nil {
+func (i *IssuesCreateIssueResponseBody) GetData() components.V4StatusPagesIssuesCreateIssueResponse {
+	if i == nil {
 		return components.V4StatusPagesIssuesCreateIssueResponse{}
 	}
-	return o.Data
+	return i.Data
 }
 
 type IssuesCreateIssueResponse struct {
@@ -43,16 +43,16 @@ type IssuesCreateIssueResponse struct {
 	Object *IssuesCreateIssueResponseBody
 }
 
-func (o *IssuesCreateIssueResponse) GetHTTPMeta() components.HTTPMetadata {
-	if o == nil {
+func (i *IssuesCreateIssueResponse) GetHTTPMeta() components.HTTPMetadata {
+	if i == nil {
 		return components.HTTPMetadata{}
 	}
-	return o.HTTPMeta
+	return i.HTTPMeta
 }
 
-func (o *IssuesCreateIssueResponse) GetObject() *IssuesCreateIssueResponseBody {
-	if o == nil {
+func (i *IssuesCreateIssueResponse) GetObject() *IssuesCreateIssueResponseBody {
+	if i == nil {
 		return nil
 	}
-	return o.Object
+	return i.Object
 }

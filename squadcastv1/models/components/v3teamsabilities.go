@@ -9,32 +9,32 @@ type EscalationPolicies struct {
 	DeleteEscalationPolicies *bool `json:"delete-escalation-policies,omitempty"`
 }
 
-func (o *EscalationPolicies) GetCreateEscalationPolicies() *bool {
-	if o == nil {
+func (e *EscalationPolicies) GetCreateEscalationPolicies() *bool {
+	if e == nil {
 		return nil
 	}
-	return o.CreateEscalationPolicies
+	return e.CreateEscalationPolicies
 }
 
-func (o *EscalationPolicies) GetReadEscalationPolicies() *bool {
-	if o == nil {
+func (e *EscalationPolicies) GetReadEscalationPolicies() *bool {
+	if e == nil {
 		return nil
 	}
-	return o.ReadEscalationPolicies
+	return e.ReadEscalationPolicies
 }
 
-func (o *EscalationPolicies) GetUpdateEscalationPolicies() *bool {
-	if o == nil {
+func (e *EscalationPolicies) GetUpdateEscalationPolicies() *bool {
+	if e == nil {
 		return nil
 	}
-	return o.UpdateEscalationPolicies
+	return e.UpdateEscalationPolicies
 }
 
-func (o *EscalationPolicies) GetDeleteEscalationPolicies() *bool {
-	if o == nil {
+func (e *EscalationPolicies) GetDeleteEscalationPolicies() *bool {
+	if e == nil {
 		return nil
 	}
-	return o.DeleteEscalationPolicies
+	return e.DeleteEscalationPolicies
 }
 
 type Schedules struct {
@@ -44,32 +44,32 @@ type Schedules struct {
 	DeleteSchedules *bool `json:"delete-schedules,omitempty"`
 }
 
-func (o *Schedules) GetCreateSchedules() *bool {
-	if o == nil {
+func (s *Schedules) GetCreateSchedules() *bool {
+	if s == nil {
 		return nil
 	}
-	return o.CreateSchedules
+	return s.CreateSchedules
 }
 
-func (o *Schedules) GetReadSchedules() *bool {
-	if o == nil {
+func (s *Schedules) GetReadSchedules() *bool {
+	if s == nil {
 		return nil
 	}
-	return o.ReadSchedules
+	return s.ReadSchedules
 }
 
-func (o *Schedules) GetUpdateSchedules() *bool {
-	if o == nil {
+func (s *Schedules) GetUpdateSchedules() *bool {
+	if s == nil {
 		return nil
 	}
-	return o.UpdateSchedules
+	return s.UpdateSchedules
 }
 
-func (o *Schedules) GetDeleteSchedules() *bool {
-	if o == nil {
+func (s *Schedules) GetDeleteSchedules() *bool {
+	if s == nil {
 		return nil
 	}
-	return o.DeleteSchedules
+	return s.DeleteSchedules
 }
 
 type Services struct {
@@ -79,32 +79,32 @@ type Services struct {
 	DeleteServices *bool `json:"delete-services,omitempty"`
 }
 
-func (o *Services) GetCreateServices() *bool {
-	if o == nil {
+func (s *Services) GetCreateServices() *bool {
+	if s == nil {
 		return nil
 	}
-	return o.CreateServices
+	return s.CreateServices
 }
 
-func (o *Services) GetReadServices() *bool {
-	if o == nil {
+func (s *Services) GetReadServices() *bool {
+	if s == nil {
 		return nil
 	}
-	return o.ReadServices
+	return s.ReadServices
 }
 
-func (o *Services) GetUpdateServices() *bool {
-	if o == nil {
+func (s *Services) GetUpdateServices() *bool {
+	if s == nil {
 		return nil
 	}
-	return o.UpdateServices
+	return s.UpdateServices
 }
 
-func (o *Services) GetDeleteServices() *bool {
-	if o == nil {
+func (s *Services) GetDeleteServices() *bool {
+	if s == nil {
 		return nil
 	}
-	return o.DeleteServices
+	return s.DeleteServices
 }
 
 type Squads struct {
@@ -114,32 +114,32 @@ type Squads struct {
 	DeleteSquads *bool `json:"delete-squads,omitempty"`
 }
 
-func (o *Squads) GetCreateSquads() *bool {
-	if o == nil {
+func (s *Squads) GetCreateSquads() *bool {
+	if s == nil {
 		return nil
 	}
-	return o.CreateSquads
+	return s.CreateSquads
 }
 
-func (o *Squads) GetReadSquads() *bool {
-	if o == nil {
+func (s *Squads) GetReadSquads() *bool {
+	if s == nil {
 		return nil
 	}
-	return o.ReadSquads
+	return s.ReadSquads
 }
 
-func (o *Squads) GetUpdateSquads() *bool {
-	if o == nil {
+func (s *Squads) GetUpdateSquads() *bool {
+	if s == nil {
 		return nil
 	}
-	return o.UpdateSquads
+	return s.UpdateSquads
 }
 
-func (o *Squads) GetDeleteSquads() *bool {
-	if o == nil {
+func (s *Squads) GetDeleteSquads() *bool {
+	if s == nil {
 		return nil
 	}
-	return o.DeleteSquads
+	return s.DeleteSquads
 }
 
 type StakeholderGroups struct {
@@ -149,32 +149,32 @@ type StakeholderGroups struct {
 	DeleteStakeholderGroups *bool `json:"delete-stakeholder-groups,omitempty"`
 }
 
-func (o *StakeholderGroups) GetCreateStakeholderGroups() *bool {
-	if o == nil {
+func (s *StakeholderGroups) GetCreateStakeholderGroups() *bool {
+	if s == nil {
 		return nil
 	}
-	return o.CreateStakeholderGroups
+	return s.CreateStakeholderGroups
 }
 
-func (o *StakeholderGroups) GetReadStakeholderGroups() *bool {
-	if o == nil {
+func (s *StakeholderGroups) GetReadStakeholderGroups() *bool {
+	if s == nil {
 		return nil
 	}
-	return o.ReadStakeholderGroups
+	return s.ReadStakeholderGroups
 }
 
-func (o *StakeholderGroups) GetUpdateStakeholderGroups() *bool {
-	if o == nil {
+func (s *StakeholderGroups) GetUpdateStakeholderGroups() *bool {
+	if s == nil {
 		return nil
 	}
-	return o.UpdateStakeholderGroups
+	return s.UpdateStakeholderGroups
 }
 
-func (o *StakeholderGroups) GetDeleteStakeholderGroups() *bool {
-	if o == nil {
+func (s *StakeholderGroups) GetDeleteStakeholderGroups() *bool {
+	if s == nil {
 		return nil
 	}
-	return o.DeleteStakeholderGroups
+	return s.DeleteStakeholderGroups
 }
 
 type Runbooks struct {
@@ -184,32 +184,32 @@ type Runbooks struct {
 	DeleteRunbooks *bool `json:"delete-runbooks,omitempty"`
 }
 
-func (o *Runbooks) GetCreateRunbooks() *bool {
-	if o == nil {
+func (r *Runbooks) GetCreateRunbooks() *bool {
+	if r == nil {
 		return nil
 	}
-	return o.CreateRunbooks
+	return r.CreateRunbooks
 }
 
-func (o *Runbooks) GetReadRunbooks() *bool {
-	if o == nil {
+func (r *Runbooks) GetReadRunbooks() *bool {
+	if r == nil {
 		return nil
 	}
-	return o.ReadRunbooks
+	return r.ReadRunbooks
 }
 
-func (o *Runbooks) GetUpdateRunbooks() *bool {
-	if o == nil {
+func (r *Runbooks) GetUpdateRunbooks() *bool {
+	if r == nil {
 		return nil
 	}
-	return o.UpdateRunbooks
+	return r.UpdateRunbooks
 }
 
-func (o *Runbooks) GetDeleteRunbooks() *bool {
-	if o == nil {
+func (r *Runbooks) GetDeleteRunbooks() *bool {
+	if r == nil {
 		return nil
 	}
-	return o.DeleteRunbooks
+	return r.DeleteRunbooks
 }
 
 type Postmortems struct {
@@ -219,32 +219,32 @@ type Postmortems struct {
 	DeletePostmortems *bool `json:"delete-postmortems,omitempty"`
 }
 
-func (o *Postmortems) GetCreatePostmortems() *bool {
-	if o == nil {
+func (p *Postmortems) GetCreatePostmortems() *bool {
+	if p == nil {
 		return nil
 	}
-	return o.CreatePostmortems
+	return p.CreatePostmortems
 }
 
-func (o *Postmortems) GetReadPostmortems() *bool {
-	if o == nil {
+func (p *Postmortems) GetReadPostmortems() *bool {
+	if p == nil {
 		return nil
 	}
-	return o.ReadPostmortems
+	return p.ReadPostmortems
 }
 
-func (o *Postmortems) GetUpdatePostmortems() *bool {
-	if o == nil {
+func (p *Postmortems) GetUpdatePostmortems() *bool {
+	if p == nil {
 		return nil
 	}
-	return o.UpdatePostmortems
+	return p.UpdatePostmortems
 }
 
-func (o *Postmortems) GetDeletePostmortems() *bool {
-	if o == nil {
+func (p *Postmortems) GetDeletePostmortems() *bool {
+	if p == nil {
 		return nil
 	}
-	return o.DeletePostmortems
+	return p.DeletePostmortems
 }
 
 type StatusPages struct {
@@ -254,43 +254,43 @@ type StatusPages struct {
 	DeleteStatusPages *bool `json:"delete-status-pages,omitempty"`
 }
 
-func (o *StatusPages) GetCreateStatusPages() *bool {
-	if o == nil {
+func (s *StatusPages) GetCreateStatusPages() *bool {
+	if s == nil {
 		return nil
 	}
-	return o.CreateStatusPages
+	return s.CreateStatusPages
 }
 
-func (o *StatusPages) GetReadStatusPages() *bool {
-	if o == nil {
+func (s *StatusPages) GetReadStatusPages() *bool {
+	if s == nil {
 		return nil
 	}
-	return o.ReadStatusPages
+	return s.ReadStatusPages
 }
 
-func (o *StatusPages) GetUpdateStatusPages() *bool {
-	if o == nil {
+func (s *StatusPages) GetUpdateStatusPages() *bool {
+	if s == nil {
 		return nil
 	}
-	return o.UpdateStatusPages
+	return s.UpdateStatusPages
 }
 
-func (o *StatusPages) GetDeleteStatusPages() *bool {
-	if o == nil {
+func (s *StatusPages) GetDeleteStatusPages() *bool {
+	if s == nil {
 		return nil
 	}
-	return o.DeleteStatusPages
+	return s.DeleteStatusPages
 }
 
 type TeamAnalytics struct {
 	ReadTeamAnalytics *bool `json:"read-team-analytics,omitempty"`
 }
 
-func (o *TeamAnalytics) GetReadTeamAnalytics() *bool {
-	if o == nil {
+func (t *TeamAnalytics) GetReadTeamAnalytics() *bool {
+	if t == nil {
 		return nil
 	}
-	return o.ReadTeamAnalytics
+	return t.ReadTeamAnalytics
 }
 
 type Slos struct {
@@ -300,32 +300,32 @@ type Slos struct {
 	DeleteSlos *bool `json:"delete-slos,omitempty"`
 }
 
-func (o *Slos) GetCreateSlos() *bool {
-	if o == nil {
+func (s *Slos) GetCreateSlos() *bool {
+	if s == nil {
 		return nil
 	}
-	return o.CreateSlos
+	return s.CreateSlos
 }
 
-func (o *Slos) GetReadSlos() *bool {
-	if o == nil {
+func (s *Slos) GetReadSlos() *bool {
+	if s == nil {
 		return nil
 	}
-	return o.ReadSlos
+	return s.ReadSlos
 }
 
-func (o *Slos) GetUpdateSlos() *bool {
-	if o == nil {
+func (s *Slos) GetUpdateSlos() *bool {
+	if s == nil {
 		return nil
 	}
-	return o.UpdateSlos
+	return s.UpdateSlos
 }
 
-func (o *Slos) GetDeleteSlos() *bool {
-	if o == nil {
+func (s *Slos) GetDeleteSlos() *bool {
+	if s == nil {
 		return nil
 	}
-	return o.DeleteSlos
+	return s.DeleteSlos
 }
 
 type Webforms struct {
@@ -335,32 +335,32 @@ type Webforms struct {
 	DeleteWebforms *bool `json:"delete-webforms,omitempty"`
 }
 
-func (o *Webforms) GetCreateWebforms() *bool {
-	if o == nil {
+func (w *Webforms) GetCreateWebforms() *bool {
+	if w == nil {
 		return nil
 	}
-	return o.CreateWebforms
+	return w.CreateWebforms
 }
 
-func (o *Webforms) GetReadWebforms() *bool {
-	if o == nil {
+func (w *Webforms) GetReadWebforms() *bool {
+	if w == nil {
 		return nil
 	}
-	return o.ReadWebforms
+	return w.ReadWebforms
 }
 
-func (o *Webforms) GetUpdateWebforms() *bool {
-	if o == nil {
+func (w *Webforms) GetUpdateWebforms() *bool {
+	if w == nil {
 		return nil
 	}
-	return o.UpdateWebforms
+	return w.UpdateWebforms
 }
 
-func (o *Webforms) GetDeleteWebforms() *bool {
-	if o == nil {
+func (w *Webforms) GetDeleteWebforms() *bool {
+	if w == nil {
 		return nil
 	}
-	return o.DeleteWebforms
+	return w.DeleteWebforms
 }
 
 type Workflows struct {
@@ -370,32 +370,32 @@ type Workflows struct {
 	DeleteWorkflows *bool `json:"delete-workflows,omitempty"`
 }
 
-func (o *Workflows) GetCreateWorkflows() *bool {
-	if o == nil {
+func (w *Workflows) GetCreateWorkflows() *bool {
+	if w == nil {
 		return nil
 	}
-	return o.CreateWorkflows
+	return w.CreateWorkflows
 }
 
-func (o *Workflows) GetReadWorkflows() *bool {
-	if o == nil {
+func (w *Workflows) GetReadWorkflows() *bool {
+	if w == nil {
 		return nil
 	}
-	return o.ReadWorkflows
+	return w.ReadWorkflows
 }
 
-func (o *Workflows) GetUpdateWorkflows() *bool {
-	if o == nil {
+func (w *Workflows) GetUpdateWorkflows() *bool {
+	if w == nil {
 		return nil
 	}
-	return o.UpdateWorkflows
+	return w.UpdateWorkflows
 }
 
-func (o *Workflows) GetDeleteWorkflows() *bool {
-	if o == nil {
+func (w *Workflows) GetDeleteWorkflows() *bool {
+	if w == nil {
 		return nil
 	}
-	return o.DeleteWorkflows
+	return w.DeleteWorkflows
 }
 
 type Ger struct {
@@ -405,32 +405,32 @@ type Ger struct {
 	DeleteGer *bool `json:"delete-ger,omitempty"`
 }
 
-func (o *Ger) GetCreateGer() *bool {
-	if o == nil {
+func (g *Ger) GetCreateGer() *bool {
+	if g == nil {
 		return nil
 	}
-	return o.CreateGer
+	return g.CreateGer
 }
 
-func (o *Ger) GetReadGer() *bool {
-	if o == nil {
+func (g *Ger) GetReadGer() *bool {
+	if g == nil {
 		return nil
 	}
-	return o.ReadGer
+	return g.ReadGer
 }
 
-func (o *Ger) GetUpdateGer() *bool {
-	if o == nil {
+func (g *Ger) GetUpdateGer() *bool {
+	if g == nil {
 		return nil
 	}
-	return o.UpdateGer
+	return g.UpdateGer
 }
 
-func (o *Ger) GetDeleteGer() *bool {
-	if o == nil {
+func (g *Ger) GetDeleteGer() *bool {
+	if g == nil {
 		return nil
 	}
-	return o.DeleteGer
+	return g.DeleteGer
 }
 
 type RoutingNumbers struct {
@@ -440,32 +440,32 @@ type RoutingNumbers struct {
 	DeleteRoutingNumbers *bool `json:"delete-routing-numbers,omitempty"`
 }
 
-func (o *RoutingNumbers) GetCreateRoutingNumbers() *bool {
-	if o == nil {
+func (r *RoutingNumbers) GetCreateRoutingNumbers() *bool {
+	if r == nil {
 		return nil
 	}
-	return o.CreateRoutingNumbers
+	return r.CreateRoutingNumbers
 }
 
-func (o *RoutingNumbers) GetReadRoutingNumbers() *bool {
-	if o == nil {
+func (r *RoutingNumbers) GetReadRoutingNumbers() *bool {
+	if r == nil {
 		return nil
 	}
-	return o.ReadRoutingNumbers
+	return r.ReadRoutingNumbers
 }
 
-func (o *RoutingNumbers) GetUpdateRoutingNumbers() *bool {
-	if o == nil {
+func (r *RoutingNumbers) GetUpdateRoutingNumbers() *bool {
+	if r == nil {
 		return nil
 	}
-	return o.UpdateRoutingNumbers
+	return r.UpdateRoutingNumbers
 }
 
-func (o *RoutingNumbers) GetDeleteRoutingNumbers() *bool {
-	if o == nil {
+func (r *RoutingNumbers) GetDeleteRoutingNumbers() *bool {
+	if r == nil {
 		return nil
 	}
-	return o.DeleteRoutingNumbers
+	return r.DeleteRoutingNumbers
 }
 
 type GlobalOncallReminderRules struct {
@@ -475,32 +475,32 @@ type GlobalOncallReminderRules struct {
 	DeleteGlobalOncallReminderRules *bool `json:"delete-global-oncall-reminder-rules,omitempty"`
 }
 
-func (o *GlobalOncallReminderRules) GetCreateGlobalOncallReminderRules() *bool {
-	if o == nil {
+func (g *GlobalOncallReminderRules) GetCreateGlobalOncallReminderRules() *bool {
+	if g == nil {
 		return nil
 	}
-	return o.CreateGlobalOncallReminderRules
+	return g.CreateGlobalOncallReminderRules
 }
 
-func (o *GlobalOncallReminderRules) GetReadGlobalOncallReminderRules() *bool {
-	if o == nil {
+func (g *GlobalOncallReminderRules) GetReadGlobalOncallReminderRules() *bool {
+	if g == nil {
 		return nil
 	}
-	return o.ReadGlobalOncallReminderRules
+	return g.ReadGlobalOncallReminderRules
 }
 
-func (o *GlobalOncallReminderRules) GetUpdateGlobalOncallReminderRules() *bool {
-	if o == nil {
+func (g *GlobalOncallReminderRules) GetUpdateGlobalOncallReminderRules() *bool {
+	if g == nil {
 		return nil
 	}
-	return o.UpdateGlobalOncallReminderRules
+	return g.UpdateGlobalOncallReminderRules
 }
 
-func (o *GlobalOncallReminderRules) GetDeleteGlobalOncallReminderRules() *bool {
-	if o == nil {
+func (g *GlobalOncallReminderRules) GetDeleteGlobalOncallReminderRules() *bool {
+	if g == nil {
 		return nil
 	}
-	return o.DeleteGlobalOncallReminderRules
+	return g.DeleteGlobalOncallReminderRules
 }
 
 type V3TeamsAbilities struct {
@@ -521,107 +521,107 @@ type V3TeamsAbilities struct {
 	GlobalOncallReminderRules *GlobalOncallReminderRules `json:"global_oncall_reminder_rules,omitempty"`
 }
 
-func (o *V3TeamsAbilities) GetEscalationPolicies() *EscalationPolicies {
-	if o == nil {
+func (v *V3TeamsAbilities) GetEscalationPolicies() *EscalationPolicies {
+	if v == nil {
 		return nil
 	}
-	return o.EscalationPolicies
+	return v.EscalationPolicies
 }
 
-func (o *V3TeamsAbilities) GetSchedules() *Schedules {
-	if o == nil {
+func (v *V3TeamsAbilities) GetSchedules() *Schedules {
+	if v == nil {
 		return nil
 	}
-	return o.Schedules
+	return v.Schedules
 }
 
-func (o *V3TeamsAbilities) GetServices() *Services {
-	if o == nil {
+func (v *V3TeamsAbilities) GetServices() *Services {
+	if v == nil {
 		return nil
 	}
-	return o.Services
+	return v.Services
 }
 
-func (o *V3TeamsAbilities) GetSquads() *Squads {
-	if o == nil {
+func (v *V3TeamsAbilities) GetSquads() *Squads {
+	if v == nil {
 		return nil
 	}
-	return o.Squads
+	return v.Squads
 }
 
-func (o *V3TeamsAbilities) GetStakeholderGroups() *StakeholderGroups {
-	if o == nil {
+func (v *V3TeamsAbilities) GetStakeholderGroups() *StakeholderGroups {
+	if v == nil {
 		return nil
 	}
-	return o.StakeholderGroups
+	return v.StakeholderGroups
 }
 
-func (o *V3TeamsAbilities) GetRunbooks() *Runbooks {
-	if o == nil {
+func (v *V3TeamsAbilities) GetRunbooks() *Runbooks {
+	if v == nil {
 		return nil
 	}
-	return o.Runbooks
+	return v.Runbooks
 }
 
-func (o *V3TeamsAbilities) GetPostmortems() *Postmortems {
-	if o == nil {
+func (v *V3TeamsAbilities) GetPostmortems() *Postmortems {
+	if v == nil {
 		return nil
 	}
-	return o.Postmortems
+	return v.Postmortems
 }
 
-func (o *V3TeamsAbilities) GetStatusPages() *StatusPages {
-	if o == nil {
+func (v *V3TeamsAbilities) GetStatusPages() *StatusPages {
+	if v == nil {
 		return nil
 	}
-	return o.StatusPages
+	return v.StatusPages
 }
 
-func (o *V3TeamsAbilities) GetTeamAnalytics() *TeamAnalytics {
-	if o == nil {
+func (v *V3TeamsAbilities) GetTeamAnalytics() *TeamAnalytics {
+	if v == nil {
 		return nil
 	}
-	return o.TeamAnalytics
+	return v.TeamAnalytics
 }
 
-func (o *V3TeamsAbilities) GetSlos() *Slos {
-	if o == nil {
+func (v *V3TeamsAbilities) GetSlos() *Slos {
+	if v == nil {
 		return nil
 	}
-	return o.Slos
+	return v.Slos
 }
 
-func (o *V3TeamsAbilities) GetWebforms() *Webforms {
-	if o == nil {
+func (v *V3TeamsAbilities) GetWebforms() *Webforms {
+	if v == nil {
 		return nil
 	}
-	return o.Webforms
+	return v.Webforms
 }
 
-func (o *V3TeamsAbilities) GetWorkflows() *Workflows {
-	if o == nil {
+func (v *V3TeamsAbilities) GetWorkflows() *Workflows {
+	if v == nil {
 		return nil
 	}
-	return o.Workflows
+	return v.Workflows
 }
 
-func (o *V3TeamsAbilities) GetGer() *Ger {
-	if o == nil {
+func (v *V3TeamsAbilities) GetGer() *Ger {
+	if v == nil {
 		return nil
 	}
-	return o.Ger
+	return v.Ger
 }
 
-func (o *V3TeamsAbilities) GetRoutingNumbers() *RoutingNumbers {
-	if o == nil {
+func (v *V3TeamsAbilities) GetRoutingNumbers() *RoutingNumbers {
+	if v == nil {
 		return nil
 	}
-	return o.RoutingNumbers
+	return v.RoutingNumbers
 }
 
-func (o *V3TeamsAbilities) GetGlobalOncallReminderRules() *GlobalOncallReminderRules {
-	if o == nil {
+func (v *V3TeamsAbilities) GetGlobalOncallReminderRules() *GlobalOncallReminderRules {
+	if v == nil {
 		return nil
 	}
-	return o.GlobalOncallReminderRules
+	return v.GlobalOncallReminderRules
 }

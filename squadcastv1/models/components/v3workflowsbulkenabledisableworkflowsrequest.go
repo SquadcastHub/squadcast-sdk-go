@@ -8,23 +8,23 @@ type V3WorkflowsBulkEnableDisableWorkflowsRequest struct {
 	WorkflowIds []int  `json:"workflow_ids"`
 }
 
-func (o *V3WorkflowsBulkEnableDisableWorkflowsRequest) GetOwnerID() string {
-	if o == nil {
+func (v *V3WorkflowsBulkEnableDisableWorkflowsRequest) GetOwnerID() string {
+	if v == nil {
 		return ""
 	}
-	return o.OwnerID
+	return v.OwnerID
 }
 
-func (o *V3WorkflowsBulkEnableDisableWorkflowsRequest) GetEnabled() bool {
-	if o == nil {
+func (v *V3WorkflowsBulkEnableDisableWorkflowsRequest) GetEnabled() bool {
+	if v == nil {
 		return false
 	}
-	return o.Enabled
+	return v.Enabled
 }
 
-func (o *V3WorkflowsBulkEnableDisableWorkflowsRequest) GetWorkflowIds() []int {
-	if o == nil {
+func (v *V3WorkflowsBulkEnableDisableWorkflowsRequest) GetWorkflowIds() []int {
+	if v == nil {
 		return []int{}
 	}
-	return o.WorkflowIds
+	return v.WorkflowIds
 }

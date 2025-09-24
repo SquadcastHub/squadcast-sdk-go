@@ -10,37 +10,37 @@ type V3ServicesJiraCloudExtension struct {
 	IsManual      bool                      `json:"is_manual"`
 }
 
-func (o *V3ServicesJiraCloudExtension) GetJiraClientKey() string {
-	if o == nil {
+func (v *V3ServicesJiraCloudExtension) GetJiraClientKey() string {
+	if v == nil {
 		return ""
 	}
-	return o.JiraClientKey
+	return v.JiraClientKey
 }
 
-func (o *V3ServicesJiraCloudExtension) GetProject() V3ServicesJiraProject {
-	if o == nil {
+func (v *V3ServicesJiraCloudExtension) GetProject() V3ServicesJiraProject {
+	if v == nil {
 		return V3ServicesJiraProject{}
 	}
-	return o.Project
+	return v.Project
 }
 
-func (o *V3ServicesJiraCloudExtension) GetIssueType() V3ServicesJiraIssueType {
-	if o == nil {
+func (v *V3ServicesJiraCloudExtension) GetIssueType() V3ServicesJiraIssueType {
+	if v == nil {
 		return V3ServicesJiraIssueType{}
 	}
-	return o.IssueType
+	return v.IssueType
 }
 
-func (o *V3ServicesJiraCloudExtension) GetStatusmaps() []V3ServicesJiraStatusMap {
-	if o == nil {
+func (v *V3ServicesJiraCloudExtension) GetStatusmaps() []V3ServicesJiraStatusMap {
+	if v == nil {
 		return nil
 	}
-	return o.Statusmaps
+	return v.Statusmaps
 }
 
-func (o *V3ServicesJiraCloudExtension) GetIsManual() bool {
-	if o == nil {
+func (v *V3ServicesJiraCloudExtension) GetIsManual() bool {
+	if v == nil {
 		return false
 	}
-	return o.IsManual
+	return v.IsManual
 }

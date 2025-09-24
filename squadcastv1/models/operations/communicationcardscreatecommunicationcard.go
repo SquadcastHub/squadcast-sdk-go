@@ -12,18 +12,18 @@ type CommunicationCardsCreateCommunicationCardRequest struct {
 	V3IncidentsCommunicationCardsCreateCommunicationCardRequest components.V3IncidentsCommunicationCardsCreateCommunicationCardRequest `request:"mediaType=application/json"`
 }
 
-func (o *CommunicationCardsCreateCommunicationCardRequest) GetIncidentID() string {
-	if o == nil {
+func (c *CommunicationCardsCreateCommunicationCardRequest) GetIncidentID() string {
+	if c == nil {
 		return ""
 	}
-	return o.IncidentID
+	return c.IncidentID
 }
 
-func (o *CommunicationCardsCreateCommunicationCardRequest) GetV3IncidentsCommunicationCardsCreateCommunicationCardRequest() components.V3IncidentsCommunicationCardsCreateCommunicationCardRequest {
-	if o == nil {
+func (c *CommunicationCardsCreateCommunicationCardRequest) GetV3IncidentsCommunicationCardsCreateCommunicationCardRequest() components.V3IncidentsCommunicationCardsCreateCommunicationCardRequest {
+	if c == nil {
 		return components.V3IncidentsCommunicationCardsCreateCommunicationCardRequest{}
 	}
-	return o.V3IncidentsCommunicationCardsCreateCommunicationCardRequest
+	return c.V3IncidentsCommunicationCardsCreateCommunicationCardRequest
 }
 
 // CommunicationCardsCreateCommunicationCardResponseBody - The request has succeeded.
@@ -31,11 +31,11 @@ type CommunicationCardsCreateCommunicationCardResponseBody struct {
 	Data components.V3IncidentsCommunicationCardsCommunicationCardResponse `json:"data"`
 }
 
-func (o *CommunicationCardsCreateCommunicationCardResponseBody) GetData() components.V3IncidentsCommunicationCardsCommunicationCardResponse {
-	if o == nil {
+func (c *CommunicationCardsCreateCommunicationCardResponseBody) GetData() components.V3IncidentsCommunicationCardsCommunicationCardResponse {
+	if c == nil {
 		return components.V3IncidentsCommunicationCardsCommunicationCardResponse{}
 	}
-	return o.Data
+	return c.Data
 }
 
 type CommunicationCardsCreateCommunicationCardResponse struct {
@@ -44,16 +44,16 @@ type CommunicationCardsCreateCommunicationCardResponse struct {
 	Object *CommunicationCardsCreateCommunicationCardResponseBody
 }
 
-func (o *CommunicationCardsCreateCommunicationCardResponse) GetHTTPMeta() components.HTTPMetadata {
-	if o == nil {
+func (c *CommunicationCardsCreateCommunicationCardResponse) GetHTTPMeta() components.HTTPMetadata {
+	if c == nil {
 		return components.HTTPMetadata{}
 	}
-	return o.HTTPMeta
+	return c.HTTPMeta
 }
 
-func (o *CommunicationCardsCreateCommunicationCardResponse) GetObject() *CommunicationCardsCreateCommunicationCardResponseBody {
-	if o == nil {
+func (c *CommunicationCardsCreateCommunicationCardResponse) GetObject() *CommunicationCardsCreateCommunicationCardResponseBody {
+	if c == nil {
 		return nil
 	}
-	return o.Object
+	return c.Object
 }

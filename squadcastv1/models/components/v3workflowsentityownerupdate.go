@@ -7,16 +7,16 @@ type V3WorkflowsEntityOwnerUpdate struct {
 	Type *string `json:"type,omitempty"`
 }
 
-func (o *V3WorkflowsEntityOwnerUpdate) GetID() *string {
-	if o == nil {
+func (v *V3WorkflowsEntityOwnerUpdate) GetID() *string {
+	if v == nil {
 		return nil
 	}
-	return o.ID
+	return v.ID
 }
 
-func (o *V3WorkflowsEntityOwnerUpdate) GetType() *string {
-	if o == nil {
+func (v *V3WorkflowsEntityOwnerUpdate) GetType() *string {
+	if v == nil {
 		return nil
 	}
-	return o.Type
+	return v.Type
 }

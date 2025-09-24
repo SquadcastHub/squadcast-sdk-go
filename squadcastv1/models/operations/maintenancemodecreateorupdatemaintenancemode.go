@@ -11,18 +11,18 @@ type MaintenanceModeCreateOrUpdateMaintenanceModeRequest struct {
 	V3ServicesMaintenanceModeCreateOrUpdateMaintenanceModeRequest components.V3ServicesMaintenanceModeCreateOrUpdateMaintenanceModeRequest `request:"mediaType=application/json"`
 }
 
-func (o *MaintenanceModeCreateOrUpdateMaintenanceModeRequest) GetServiceID() string {
-	if o == nil {
+func (m *MaintenanceModeCreateOrUpdateMaintenanceModeRequest) GetServiceID() string {
+	if m == nil {
 		return ""
 	}
-	return o.ServiceID
+	return m.ServiceID
 }
 
-func (o *MaintenanceModeCreateOrUpdateMaintenanceModeRequest) GetV3ServicesMaintenanceModeCreateOrUpdateMaintenanceModeRequest() components.V3ServicesMaintenanceModeCreateOrUpdateMaintenanceModeRequest {
-	if o == nil {
+func (m *MaintenanceModeCreateOrUpdateMaintenanceModeRequest) GetV3ServicesMaintenanceModeCreateOrUpdateMaintenanceModeRequest() components.V3ServicesMaintenanceModeCreateOrUpdateMaintenanceModeRequest {
+	if m == nil {
 		return components.V3ServicesMaintenanceModeCreateOrUpdateMaintenanceModeRequest{}
 	}
-	return o.V3ServicesMaintenanceModeCreateOrUpdateMaintenanceModeRequest
+	return m.V3ServicesMaintenanceModeCreateOrUpdateMaintenanceModeRequest
 }
 
 // MaintenanceModeCreateOrUpdateMaintenanceModeResponseBody - The request has succeeded.
@@ -30,11 +30,11 @@ type MaintenanceModeCreateOrUpdateMaintenanceModeResponseBody struct {
 	Data string `json:"data"`
 }
 
-func (o *MaintenanceModeCreateOrUpdateMaintenanceModeResponseBody) GetData() string {
-	if o == nil {
+func (m *MaintenanceModeCreateOrUpdateMaintenanceModeResponseBody) GetData() string {
+	if m == nil {
 		return ""
 	}
-	return o.Data
+	return m.Data
 }
 
 type MaintenanceModeCreateOrUpdateMaintenanceModeResponse struct {
@@ -43,16 +43,16 @@ type MaintenanceModeCreateOrUpdateMaintenanceModeResponse struct {
 	Object *MaintenanceModeCreateOrUpdateMaintenanceModeResponseBody
 }
 
-func (o *MaintenanceModeCreateOrUpdateMaintenanceModeResponse) GetHTTPMeta() components.HTTPMetadata {
-	if o == nil {
+func (m *MaintenanceModeCreateOrUpdateMaintenanceModeResponse) GetHTTPMeta() components.HTTPMetadata {
+	if m == nil {
 		return components.HTTPMetadata{}
 	}
-	return o.HTTPMeta
+	return m.HTTPMeta
 }
 
-func (o *MaintenanceModeCreateOrUpdateMaintenanceModeResponse) GetObject() *MaintenanceModeCreateOrUpdateMaintenanceModeResponseBody {
-	if o == nil {
+func (m *MaintenanceModeCreateOrUpdateMaintenanceModeResponse) GetObject() *MaintenanceModeCreateOrUpdateMaintenanceModeResponseBody {
+	if m == nil {
 		return nil
 	}
-	return o.Object
+	return m.Object
 }

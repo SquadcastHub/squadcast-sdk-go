@@ -7,16 +7,16 @@ type V3UsersContact struct {
 	PhoneNumber string `json:"phone_number"`
 }
 
-func (o *V3UsersContact) GetDialCode() string {
-	if o == nil {
+func (v *V3UsersContact) GetDialCode() string {
+	if v == nil {
 		return ""
 	}
-	return o.DialCode
+	return v.DialCode
 }
 
-func (o *V3UsersContact) GetPhoneNumber() string {
-	if o == nil {
+func (v *V3UsersContact) GetPhoneNumber() string {
+	if v == nil {
 		return ""
 	}
-	return o.PhoneNumber
+	return v.PhoneNumber
 }

@@ -12,36 +12,36 @@ type IncidentActionsRebuildAProjectInCircleciRequest struct {
 	V3IncidentsIncidentActionsRebuildCircleCIProjectRequest components.V3IncidentsIncidentActionsRebuildCircleCIProjectRequest `request:"mediaType=application/json"`
 }
 
-func (o *IncidentActionsRebuildAProjectInCircleciRequest) GetIncidentID() string {
-	if o == nil {
+func (i *IncidentActionsRebuildAProjectInCircleciRequest) GetIncidentID() string {
+	if i == nil {
 		return ""
 	}
-	return o.IncidentID
+	return i.IncidentID
 }
 
-func (o *IncidentActionsRebuildAProjectInCircleciRequest) GetBuildNumber() string {
-	if o == nil {
+func (i *IncidentActionsRebuildAProjectInCircleciRequest) GetBuildNumber() string {
+	if i == nil {
 		return ""
 	}
-	return o.BuildNumber
+	return i.BuildNumber
 }
 
-func (o *IncidentActionsRebuildAProjectInCircleciRequest) GetV3IncidentsIncidentActionsRebuildCircleCIProjectRequest() components.V3IncidentsIncidentActionsRebuildCircleCIProjectRequest {
-	if o == nil {
+func (i *IncidentActionsRebuildAProjectInCircleciRequest) GetV3IncidentsIncidentActionsRebuildCircleCIProjectRequest() components.V3IncidentsIncidentActionsRebuildCircleCIProjectRequest {
+	if i == nil {
 		return components.V3IncidentsIncidentActionsRebuildCircleCIProjectRequest{}
 	}
-	return o.V3IncidentsIncidentActionsRebuildCircleCIProjectRequest
+	return i.V3IncidentsIncidentActionsRebuildCircleCIProjectRequest
 }
 
 type IncidentActionsRebuildAProjectInCircleciMeta struct {
 	StatusCode int64 `json:"status_code"`
 }
 
-func (o *IncidentActionsRebuildAProjectInCircleciMeta) GetStatusCode() int64 {
-	if o == nil {
+func (i *IncidentActionsRebuildAProjectInCircleciMeta) GetStatusCode() int64 {
+	if i == nil {
 		return 0
 	}
-	return o.StatusCode
+	return i.StatusCode
 }
 
 // IncidentActionsRebuildAProjectInCircleciResponseBody - The request has succeeded.
@@ -51,18 +51,18 @@ type IncidentActionsRebuildAProjectInCircleciResponseBody struct {
 	Meta *IncidentActionsRebuildAProjectInCircleciMeta                `json:"meta,omitempty"`
 }
 
-func (o *IncidentActionsRebuildAProjectInCircleciResponseBody) GetData() components.V3IncidentsIncidentActionsCircleCIRebuildResponse {
-	if o == nil {
+func (i *IncidentActionsRebuildAProjectInCircleciResponseBody) GetData() components.V3IncidentsIncidentActionsCircleCIRebuildResponse {
+	if i == nil {
 		return components.V3IncidentsIncidentActionsCircleCIRebuildResponse{}
 	}
-	return o.Data
+	return i.Data
 }
 
-func (o *IncidentActionsRebuildAProjectInCircleciResponseBody) GetMeta() *IncidentActionsRebuildAProjectInCircleciMeta {
-	if o == nil {
+func (i *IncidentActionsRebuildAProjectInCircleciResponseBody) GetMeta() *IncidentActionsRebuildAProjectInCircleciMeta {
+	if i == nil {
 		return nil
 	}
-	return o.Meta
+	return i.Meta
 }
 
 type IncidentActionsRebuildAProjectInCircleciResponse struct {
@@ -71,16 +71,16 @@ type IncidentActionsRebuildAProjectInCircleciResponse struct {
 	Object *IncidentActionsRebuildAProjectInCircleciResponseBody
 }
 
-func (o *IncidentActionsRebuildAProjectInCircleciResponse) GetHTTPMeta() components.HTTPMetadata {
-	if o == nil {
+func (i *IncidentActionsRebuildAProjectInCircleciResponse) GetHTTPMeta() components.HTTPMetadata {
+	if i == nil {
 		return components.HTTPMetadata{}
 	}
-	return o.HTTPMeta
+	return i.HTTPMeta
 }
 
-func (o *IncidentActionsRebuildAProjectInCircleciResponse) GetObject() *IncidentActionsRebuildAProjectInCircleciResponseBody {
-	if o == nil {
+func (i *IncidentActionsRebuildAProjectInCircleciResponse) GetObject() *IncidentActionsRebuildAProjectInCircleciResponseBody {
+	if i == nil {
 		return nil
 	}
-	return o.Object
+	return i.Object
 }

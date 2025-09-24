@@ -14,18 +14,18 @@ type IncidentsGetIncidentsStatusByRequestidsMeta struct {
 	SuccessCount int64 `json:"success_count"`
 }
 
-func (o *IncidentsGetIncidentsStatusByRequestidsMeta) GetErrorCount() int64 {
-	if o == nil {
+func (i *IncidentsGetIncidentsStatusByRequestidsMeta) GetErrorCount() int64 {
+	if i == nil {
 		return 0
 	}
-	return o.ErrorCount
+	return i.ErrorCount
 }
 
-func (o *IncidentsGetIncidentsStatusByRequestidsMeta) GetSuccessCount() int64 {
-	if o == nil {
+func (i *IncidentsGetIncidentsStatusByRequestidsMeta) GetSuccessCount() int64 {
+	if i == nil {
 		return 0
 	}
-	return o.SuccessCount
+	return i.SuccessCount
 }
 
 // IncidentsGetIncidentsStatusByRequestidsResponseBody - The request has succeeded.
@@ -34,18 +34,18 @@ type IncidentsGetIncidentsStatusByRequestidsResponseBody struct {
 	Meta           IncidentsGetIncidentsStatusByRequestidsMeta `json:"meta"`
 }
 
-func (o *IncidentsGetIncidentsStatusByRequestidsResponseBody) GetRequestsStatus() RequestsStatus {
-	if o == nil {
+func (i *IncidentsGetIncidentsStatusByRequestidsResponseBody) GetRequestsStatus() RequestsStatus {
+	if i == nil {
 		return RequestsStatus{}
 	}
-	return o.RequestsStatus
+	return i.RequestsStatus
 }
 
-func (o *IncidentsGetIncidentsStatusByRequestidsResponseBody) GetMeta() IncidentsGetIncidentsStatusByRequestidsMeta {
-	if o == nil {
+func (i *IncidentsGetIncidentsStatusByRequestidsResponseBody) GetMeta() IncidentsGetIncidentsStatusByRequestidsMeta {
+	if i == nil {
 		return IncidentsGetIncidentsStatusByRequestidsMeta{}
 	}
-	return o.Meta
+	return i.Meta
 }
 
 type IncidentsGetIncidentsStatusByRequestidsResponse struct {
@@ -54,16 +54,16 @@ type IncidentsGetIncidentsStatusByRequestidsResponse struct {
 	Object *IncidentsGetIncidentsStatusByRequestidsResponseBody
 }
 
-func (o *IncidentsGetIncidentsStatusByRequestidsResponse) GetHTTPMeta() components.HTTPMetadata {
-	if o == nil {
+func (i *IncidentsGetIncidentsStatusByRequestidsResponse) GetHTTPMeta() components.HTTPMetadata {
+	if i == nil {
 		return components.HTTPMetadata{}
 	}
-	return o.HTTPMeta
+	return i.HTTPMeta
 }
 
-func (o *IncidentsGetIncidentsStatusByRequestidsResponse) GetObject() *IncidentsGetIncidentsStatusByRequestidsResponseBody {
-	if o == nil {
+func (i *IncidentsGetIncidentsStatusByRequestidsResponse) GetObject() *IncidentsGetIncidentsStatusByRequestidsResponseBody {
+	if i == nil {
 		return nil
 	}
-	return o.Object
+	return i.Object
 }

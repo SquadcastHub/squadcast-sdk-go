@@ -35,100 +35,100 @@ func (v *V3SLOSLOViolatingIncidentResponse) UnmarshalJSON(data []byte) error {
 	return nil
 }
 
-func (o *V3SLOSLOViolatingIncidentResponse) GetID() int64 {
-	if o == nil {
+func (v *V3SLOSLOViolatingIncidentResponse) GetID() int64 {
+	if v == nil {
 		return 0
 	}
-	return o.ID
+	return v.ID
 }
 
-func (o *V3SLOSLOViolatingIncidentResponse) GetOwnerType() string {
-	if o == nil {
+func (v *V3SLOSLOViolatingIncidentResponse) GetOwnerType() string {
+	if v == nil {
 		return ""
 	}
-	return o.OwnerType
+	return v.OwnerType
 }
 
-func (o *V3SLOSLOViolatingIncidentResponse) GetOwnerID() string {
-	if o == nil {
+func (v *V3SLOSLOViolatingIncidentResponse) GetOwnerID() string {
+	if v == nil {
 		return ""
 	}
-	return o.OwnerID
+	return v.OwnerID
 }
 
-func (o *V3SLOSLOViolatingIncidentResponse) GetOrgID() string {
-	if o == nil {
+func (v *V3SLOSLOViolatingIncidentResponse) GetOrgID() string {
+	if v == nil {
 		return ""
 	}
-	return o.OrgID
+	return v.OrgID
 }
 
-func (o *V3SLOSLOViolatingIncidentResponse) GetSloID() int64 {
-	if o == nil {
+func (v *V3SLOSLOViolatingIncidentResponse) GetSloID() int64 {
+	if v == nil {
 		return 0
 	}
-	return o.SloID
+	return v.SloID
 }
 
-func (o *V3SLOSLOViolatingIncidentResponse) GetIncidentID() string {
-	if o == nil {
+func (v *V3SLOSLOViolatingIncidentResponse) GetIncidentID() string {
+	if v == nil {
 		return ""
 	}
-	return o.IncidentID
+	return v.IncidentID
 }
 
-func (o *V3SLOSLOViolatingIncidentResponse) GetSlis() []string {
-	if o == nil {
+func (v *V3SLOSLOViolatingIncidentResponse) GetSlis() []string {
+	if v == nil {
 		return []string{}
 	}
-	return o.Slis
+	return v.Slis
 }
 
-func (o *V3SLOSLOViolatingIncidentResponse) GetErrorBudgetSpent() float32 {
-	if o == nil {
+func (v *V3SLOSLOViolatingIncidentResponse) GetErrorBudgetSpent() float32 {
+	if v == nil {
 		return 0.0
 	}
-	return o.ErrorBudgetSpent
+	return v.ErrorBudgetSpent
 }
 
-func (o *V3SLOSLOViolatingIncidentResponse) GetIsFalsePositive() bool {
-	if o == nil {
+func (v *V3SLOSLOViolatingIncidentResponse) GetIsFalsePositive() bool {
+	if v == nil {
 		return false
 	}
-	return o.IsFalsePositive
+	return v.IsFalsePositive
 }
 
-func (o *V3SLOSLOViolatingIncidentResponse) GetStartTime() time.Time {
-	if o == nil {
+func (v *V3SLOSLOViolatingIncidentResponse) GetStartTime() time.Time {
+	if v == nil {
 		return time.Time{}
 	}
-	return o.StartTime
+	return v.StartTime
 }
 
-func (o *V3SLOSLOViolatingIncidentResponse) GetEndTime() time.Time {
-	if o == nil {
+func (v *V3SLOSLOViolatingIncidentResponse) GetEndTime() time.Time {
+	if v == nil {
 		return time.Time{}
 	}
-	return o.EndTime
+	return v.EndTime
 }
 
-func (o *V3SLOSLOViolatingIncidentResponse) GetCreatedAt() time.Time {
-	if o == nil {
+func (v *V3SLOSLOViolatingIncidentResponse) GetCreatedAt() time.Time {
+	if v == nil {
 		return time.Time{}
 	}
-	return o.CreatedAt
+	return v.CreatedAt
 }
 
-func (o *V3SLOSLOViolatingIncidentResponse) GetUpdatedAt() time.Time {
-	if o == nil {
+func (v *V3SLOSLOViolatingIncidentResponse) GetUpdatedAt() time.Time {
+	if v == nil {
 		return time.Time{}
 	}
-	return o.UpdatedAt
+	return v.UpdatedAt
 }
 
-func (o *V3SLOSLOViolatingIncidentResponse) GetDeletedAt() *time.Time {
-	if o == nil {
+func (v *V3SLOSLOViolatingIncidentResponse) GetDeletedAt() *time.Time {
+	if v == nil {
 		return nil
 	}
-	return o.DeletedAt
+	return v.DeletedAt
 }

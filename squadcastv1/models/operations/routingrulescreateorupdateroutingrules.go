@@ -11,29 +11,29 @@ type RoutingRulesCreateOrUpdateRoutingRulesRequest struct {
 	V3ServicesRoutingRulesCreateOrUpdateRoutingRulesRequest components.V3ServicesRoutingRulesCreateOrUpdateRoutingRulesRequest `request:"mediaType=application/json"`
 }
 
-func (o *RoutingRulesCreateOrUpdateRoutingRulesRequest) GetServiceID() string {
-	if o == nil {
+func (r *RoutingRulesCreateOrUpdateRoutingRulesRequest) GetServiceID() string {
+	if r == nil {
 		return ""
 	}
-	return o.ServiceID
+	return r.ServiceID
 }
 
-func (o *RoutingRulesCreateOrUpdateRoutingRulesRequest) GetV3ServicesRoutingRulesCreateOrUpdateRoutingRulesRequest() components.V3ServicesRoutingRulesCreateOrUpdateRoutingRulesRequest {
-	if o == nil {
+func (r *RoutingRulesCreateOrUpdateRoutingRulesRequest) GetV3ServicesRoutingRulesCreateOrUpdateRoutingRulesRequest() components.V3ServicesRoutingRulesCreateOrUpdateRoutingRulesRequest {
+	if r == nil {
 		return components.V3ServicesRoutingRulesCreateOrUpdateRoutingRulesRequest{}
 	}
-	return o.V3ServicesRoutingRulesCreateOrUpdateRoutingRulesRequest
+	return r.V3ServicesRoutingRulesCreateOrUpdateRoutingRulesRequest
 }
 
 type RoutingRulesCreateOrUpdateRoutingRulesData struct {
 	Rules []components.V3ServicesRoutingRulesRoutingRuleResponse `json:"rules"`
 }
 
-func (o *RoutingRulesCreateOrUpdateRoutingRulesData) GetRules() []components.V3ServicesRoutingRulesRoutingRuleResponse {
-	if o == nil {
+func (r *RoutingRulesCreateOrUpdateRoutingRulesData) GetRules() []components.V3ServicesRoutingRulesRoutingRuleResponse {
+	if r == nil {
 		return []components.V3ServicesRoutingRulesRoutingRuleResponse{}
 	}
-	return o.Rules
+	return r.Rules
 }
 
 // RoutingRulesCreateOrUpdateRoutingRulesResponseBody - The request has succeeded and a new resource has been created as a result.
@@ -41,11 +41,11 @@ type RoutingRulesCreateOrUpdateRoutingRulesResponseBody struct {
 	Data RoutingRulesCreateOrUpdateRoutingRulesData `json:"data"`
 }
 
-func (o *RoutingRulesCreateOrUpdateRoutingRulesResponseBody) GetData() RoutingRulesCreateOrUpdateRoutingRulesData {
-	if o == nil {
+func (r *RoutingRulesCreateOrUpdateRoutingRulesResponseBody) GetData() RoutingRulesCreateOrUpdateRoutingRulesData {
+	if r == nil {
 		return RoutingRulesCreateOrUpdateRoutingRulesData{}
 	}
-	return o.Data
+	return r.Data
 }
 
 type RoutingRulesCreateOrUpdateRoutingRulesResponse struct {
@@ -54,16 +54,16 @@ type RoutingRulesCreateOrUpdateRoutingRulesResponse struct {
 	Object *RoutingRulesCreateOrUpdateRoutingRulesResponseBody
 }
 
-func (o *RoutingRulesCreateOrUpdateRoutingRulesResponse) GetHTTPMeta() components.HTTPMetadata {
-	if o == nil {
+func (r *RoutingRulesCreateOrUpdateRoutingRulesResponse) GetHTTPMeta() components.HTTPMetadata {
+	if r == nil {
 		return components.HTTPMetadata{}
 	}
-	return o.HTTPMeta
+	return r.HTTPMeta
 }
 
-func (o *RoutingRulesCreateOrUpdateRoutingRulesResponse) GetObject() *RoutingRulesCreateOrUpdateRoutingRulesResponseBody {
-	if o == nil {
+func (r *RoutingRulesCreateOrUpdateRoutingRulesResponse) GetObject() *RoutingRulesCreateOrUpdateRoutingRulesResponseBody {
+	if r == nil {
 		return nil
 	}
-	return o.Object
+	return r.Object
 }

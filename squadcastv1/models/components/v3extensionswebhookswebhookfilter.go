@@ -7,16 +7,16 @@ type V3ExtensionsWebhooksWebhookFilter struct {
 	Conditions []V3ExtensionsWebhooksWebhookFilterCondition `json:"conditions"`
 }
 
-func (o *V3ExtensionsWebhooksWebhookFilter) GetOp() string {
-	if o == nil {
+func (v *V3ExtensionsWebhooksWebhookFilter) GetOp() string {
+	if v == nil {
 		return ""
 	}
-	return o.Op
+	return v.Op
 }
 
-func (o *V3ExtensionsWebhooksWebhookFilter) GetConditions() []V3ExtensionsWebhooksWebhookFilterCondition {
-	if o == nil {
+func (v *V3ExtensionsWebhooksWebhookFilter) GetConditions() []V3ExtensionsWebhooksWebhookFilterCondition {
+	if v == nil {
 		return []V3ExtensionsWebhooksWebhookFilterCondition{}
 	}
-	return o.Conditions
+	return v.Conditions
 }

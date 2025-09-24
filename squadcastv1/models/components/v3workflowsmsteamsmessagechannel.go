@@ -47,18 +47,18 @@ func (v *V3WorkflowsMsTeamsMessageChannelData) UnmarshalJSON(data []byte) error 
 	return nil
 }
 
-func (o *V3WorkflowsMsTeamsMessageChannelData) GetChannelID() string {
-	if o == nil {
+func (v *V3WorkflowsMsTeamsMessageChannelData) GetChannelID() string {
+	if v == nil {
 		return ""
 	}
-	return o.ChannelID
+	return v.ChannelID
 }
 
-func (o *V3WorkflowsMsTeamsMessageChannelData) GetMessage() string {
-	if o == nil {
+func (v *V3WorkflowsMsTeamsMessageChannelData) GetMessage() string {
+	if v == nil {
 		return ""
 	}
-	return o.Message
+	return v.Message
 }
 
 type V3WorkflowsMsTeamsMessageChannel struct {
@@ -77,16 +77,16 @@ func (v *V3WorkflowsMsTeamsMessageChannel) UnmarshalJSON(data []byte) error {
 	return nil
 }
 
-func (o *V3WorkflowsMsTeamsMessageChannel) GetName() V3WorkflowsMsTeamsMessageChannelName {
-	if o == nil {
+func (v *V3WorkflowsMsTeamsMessageChannel) GetName() V3WorkflowsMsTeamsMessageChannelName {
+	if v == nil {
 		return V3WorkflowsMsTeamsMessageChannelName("")
 	}
-	return o.Name
+	return v.Name
 }
 
-func (o *V3WorkflowsMsTeamsMessageChannel) GetData() V3WorkflowsMsTeamsMessageChannelData {
-	if o == nil {
+func (v *V3WorkflowsMsTeamsMessageChannel) GetData() V3WorkflowsMsTeamsMessageChannelData {
+	if v == nil {
 		return V3WorkflowsMsTeamsMessageChannelData{}
 	}
-	return o.Data
+	return v.Data
 }

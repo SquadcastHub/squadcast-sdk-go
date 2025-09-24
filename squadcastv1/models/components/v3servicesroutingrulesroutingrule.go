@@ -41,18 +41,18 @@ type V3ServicesRoutingRulesRoutingRuleRouteTo struct {
 	EntityID   string                                      `json:"entity_id"`
 }
 
-func (o *V3ServicesRoutingRulesRoutingRuleRouteTo) GetEntityType() V3ServicesRoutingRulesRoutingRuleEntityType {
-	if o == nil {
+func (v *V3ServicesRoutingRulesRoutingRuleRouteTo) GetEntityType() V3ServicesRoutingRulesRoutingRuleEntityType {
+	if v == nil {
 		return V3ServicesRoutingRulesRoutingRuleEntityType("")
 	}
-	return o.EntityType
+	return v.EntityType
 }
 
-func (o *V3ServicesRoutingRulesRoutingRuleRouteTo) GetEntityID() string {
-	if o == nil {
+func (v *V3ServicesRoutingRulesRoutingRuleRouteTo) GetEntityID() string {
+	if v == nil {
 		return ""
 	}
-	return o.EntityID
+	return v.EntityID
 }
 
 type V3ServicesRoutingRulesRoutingRule struct {
@@ -62,30 +62,30 @@ type V3ServicesRoutingRulesRoutingRule struct {
 	BasicExpression []V3ServicesRoutingRulesExpressionBranch `json:"basic_expression,omitempty"`
 }
 
-func (o *V3ServicesRoutingRulesRoutingRule) GetExpression() string {
-	if o == nil {
+func (v *V3ServicesRoutingRulesRoutingRule) GetExpression() string {
+	if v == nil {
 		return ""
 	}
-	return o.Expression
+	return v.Expression
 }
 
-func (o *V3ServicesRoutingRulesRoutingRule) GetRouteTo() V3ServicesRoutingRulesRoutingRuleRouteTo {
-	if o == nil {
+func (v *V3ServicesRoutingRulesRoutingRule) GetRouteTo() V3ServicesRoutingRulesRoutingRuleRouteTo {
+	if v == nil {
 		return V3ServicesRoutingRulesRoutingRuleRouteTo{}
 	}
-	return o.RouteTo
+	return v.RouteTo
 }
 
-func (o *V3ServicesRoutingRulesRoutingRule) GetIsBasic() bool {
-	if o == nil {
+func (v *V3ServicesRoutingRulesRoutingRule) GetIsBasic() bool {
+	if v == nil {
 		return false
 	}
-	return o.IsBasic
+	return v.IsBasic
 }
 
-func (o *V3ServicesRoutingRulesRoutingRule) GetBasicExpression() []V3ServicesRoutingRulesExpressionBranch {
-	if o == nil {
+func (v *V3ServicesRoutingRulesRoutingRule) GetBasicExpression() []V3ServicesRoutingRulesExpressionBranch {
+	if v == nil {
 		return nil
 	}
-	return o.BasicExpression
+	return v.BasicExpression
 }

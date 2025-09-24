@@ -7,16 +7,16 @@ type V3IncidentsIncidentExportAsyncResponse struct {
 	RequestID string
 }
 
-func (o *V3IncidentsIncidentExportAsyncResponse) GetMessage() string {
-	if o == nil {
+func (v *V3IncidentsIncidentExportAsyncResponse) GetMessage() string {
+	if v == nil {
 		return ""
 	}
-	return o.Message
+	return v.Message
 }
 
-func (o *V3IncidentsIncidentExportAsyncResponse) GetRequestID() string {
-	if o == nil {
+func (v *V3IncidentsIncidentExportAsyncResponse) GetRequestID() string {
+	if v == nil {
 		return ""
 	}
-	return o.RequestID
+	return v.RequestID
 }

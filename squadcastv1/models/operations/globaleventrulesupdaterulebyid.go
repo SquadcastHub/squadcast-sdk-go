@@ -14,39 +14,39 @@ type GlobalEventRulesUpdateRuleByIDRequest struct {
 	V3GlobalEventRulesUpdateRuleRequest components.V3GlobalEventRulesUpdateRuleRequest `request:"mediaType=application/json"`
 }
 
-func (o *GlobalEventRulesUpdateRuleByIDRequest) GetGerID() int64 {
-	if o == nil {
+func (g *GlobalEventRulesUpdateRuleByIDRequest) GetGerID() int64 {
+	if g == nil {
 		return 0
 	}
-	return o.GerID
+	return g.GerID
 }
 
-func (o *GlobalEventRulesUpdateRuleByIDRequest) GetAlertSourceVersion() string {
-	if o == nil {
+func (g *GlobalEventRulesUpdateRuleByIDRequest) GetAlertSourceVersion() string {
+	if g == nil {
 		return ""
 	}
-	return o.AlertSourceVersion
+	return g.AlertSourceVersion
 }
 
-func (o *GlobalEventRulesUpdateRuleByIDRequest) GetAlertSourceShortname() string {
-	if o == nil {
+func (g *GlobalEventRulesUpdateRuleByIDRequest) GetAlertSourceShortname() string {
+	if g == nil {
 		return ""
 	}
-	return o.AlertSourceShortname
+	return g.AlertSourceShortname
 }
 
-func (o *GlobalEventRulesUpdateRuleByIDRequest) GetRuleID() string {
-	if o == nil {
+func (g *GlobalEventRulesUpdateRuleByIDRequest) GetRuleID() string {
+	if g == nil {
 		return ""
 	}
-	return o.RuleID
+	return g.RuleID
 }
 
-func (o *GlobalEventRulesUpdateRuleByIDRequest) GetV3GlobalEventRulesUpdateRuleRequest() components.V3GlobalEventRulesUpdateRuleRequest {
-	if o == nil {
+func (g *GlobalEventRulesUpdateRuleByIDRequest) GetV3GlobalEventRulesUpdateRuleRequest() components.V3GlobalEventRulesUpdateRuleRequest {
+	if g == nil {
 		return components.V3GlobalEventRulesUpdateRuleRequest{}
 	}
-	return o.V3GlobalEventRulesUpdateRuleRequest
+	return g.V3GlobalEventRulesUpdateRuleRequest
 }
 
 // GlobalEventRulesUpdateRuleByIDResponseBody - The request has succeeded.
@@ -54,11 +54,11 @@ type GlobalEventRulesUpdateRuleByIDResponseBody struct {
 	Data components.V3GlobalEventRulesRulesetRuleResponse `json:"data"`
 }
 
-func (o *GlobalEventRulesUpdateRuleByIDResponseBody) GetData() components.V3GlobalEventRulesRulesetRuleResponse {
-	if o == nil {
+func (g *GlobalEventRulesUpdateRuleByIDResponseBody) GetData() components.V3GlobalEventRulesRulesetRuleResponse {
+	if g == nil {
 		return components.V3GlobalEventRulesRulesetRuleResponse{}
 	}
-	return o.Data
+	return g.Data
 }
 
 type GlobalEventRulesUpdateRuleByIDResponse struct {
@@ -67,16 +67,16 @@ type GlobalEventRulesUpdateRuleByIDResponse struct {
 	Object *GlobalEventRulesUpdateRuleByIDResponseBody
 }
 
-func (o *GlobalEventRulesUpdateRuleByIDResponse) GetHTTPMeta() components.HTTPMetadata {
-	if o == nil {
+func (g *GlobalEventRulesUpdateRuleByIDResponse) GetHTTPMeta() components.HTTPMetadata {
+	if g == nil {
 		return components.HTTPMetadata{}
 	}
-	return o.HTTPMeta
+	return g.HTTPMeta
 }
 
-func (o *GlobalEventRulesUpdateRuleByIDResponse) GetObject() *GlobalEventRulesUpdateRuleByIDResponseBody {
-	if o == nil {
+func (g *GlobalEventRulesUpdateRuleByIDResponse) GetObject() *GlobalEventRulesUpdateRuleByIDResponseBody {
+	if g == nil {
 		return nil
 	}
-	return o.Object
+	return g.Object
 }

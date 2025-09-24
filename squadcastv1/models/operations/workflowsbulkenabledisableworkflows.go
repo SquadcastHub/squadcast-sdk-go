@@ -15,16 +15,16 @@ type WorkflowsBulkEnabledisableWorkflowsResponse struct {
 	Body     []byte
 }
 
-func (o *WorkflowsBulkEnabledisableWorkflowsResponse) GetHTTPMeta() components.HTTPMetadata {
-	if o == nil {
+func (w *WorkflowsBulkEnabledisableWorkflowsResponse) GetHTTPMeta() components.HTTPMetadata {
+	if w == nil {
 		return components.HTTPMetadata{}
 	}
-	return o.HTTPMeta
+	return w.HTTPMeta
 }
 
-func (o *WorkflowsBulkEnabledisableWorkflowsResponse) GetBody() []byte {
-	if o == nil {
+func (w *WorkflowsBulkEnabledisableWorkflowsResponse) GetBody() []byte {
+	if w == nil {
 		return nil
 	}
-	return o.Body
+	return w.Body
 }

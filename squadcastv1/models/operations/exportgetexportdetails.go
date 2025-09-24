@@ -10,11 +10,11 @@ type ExportGetExportDetailsRequest struct {
 	ExportID string `pathParam:"style=simple,explode=false,name=export_id"`
 }
 
-func (o *ExportGetExportDetailsRequest) GetExportID() string {
-	if o == nil {
+func (e *ExportGetExportDetailsRequest) GetExportID() string {
+	if e == nil {
 		return ""
 	}
-	return o.ExportID
+	return e.ExportID
 }
 
 // ExportGetExportDetailsResponseBody - The request has succeeded.
@@ -22,11 +22,11 @@ type ExportGetExportDetailsResponseBody struct {
 	Data components.V3ExportExportResponse `json:"data"`
 }
 
-func (o *ExportGetExportDetailsResponseBody) GetData() components.V3ExportExportResponse {
-	if o == nil {
+func (e *ExportGetExportDetailsResponseBody) GetData() components.V3ExportExportResponse {
+	if e == nil {
 		return components.V3ExportExportResponse{}
 	}
-	return o.Data
+	return e.Data
 }
 
 type ExportGetExportDetailsResponse struct {
@@ -35,16 +35,16 @@ type ExportGetExportDetailsResponse struct {
 	Object *ExportGetExportDetailsResponseBody
 }
 
-func (o *ExportGetExportDetailsResponse) GetHTTPMeta() components.HTTPMetadata {
-	if o == nil {
+func (e *ExportGetExportDetailsResponse) GetHTTPMeta() components.HTTPMetadata {
+	if e == nil {
 		return components.HTTPMetadata{}
 	}
-	return o.HTTPMeta
+	return e.HTTPMeta
 }
 
-func (o *ExportGetExportDetailsResponse) GetObject() *ExportGetExportDetailsResponseBody {
-	if o == nil {
+func (e *ExportGetExportDetailsResponse) GetObject() *ExportGetExportDetailsResponseBody {
+	if e == nil {
 		return nil
 	}
-	return o.Object
+	return e.Object
 }

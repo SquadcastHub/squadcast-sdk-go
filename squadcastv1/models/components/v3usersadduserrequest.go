@@ -43,30 +43,30 @@ type V3UsersAddUserRequest struct {
 	LastName  string                    `json:"last_name"`
 }
 
-func (o *V3UsersAddUserRequest) GetEmail() string {
-	if o == nil {
+func (v *V3UsersAddUserRequest) GetEmail() string {
+	if v == nil {
 		return ""
 	}
-	return o.Email
+	return v.Email
 }
 
-func (o *V3UsersAddUserRequest) GetRole() V3UsersAddUserRequestRole {
-	if o == nil {
+func (v *V3UsersAddUserRequest) GetRole() V3UsersAddUserRequestRole {
+	if v == nil {
 		return V3UsersAddUserRequestRole("")
 	}
-	return o.Role
+	return v.Role
 }
 
-func (o *V3UsersAddUserRequest) GetFirstName() string {
-	if o == nil {
+func (v *V3UsersAddUserRequest) GetFirstName() string {
+	if v == nil {
 		return ""
 	}
-	return o.FirstName
+	return v.FirstName
 }
 
-func (o *V3UsersAddUserRequest) GetLastName() string {
-	if o == nil {
+func (v *V3UsersAddUserRequest) GetLastName() string {
+	if v == nil {
 		return ""
 	}
-	return o.LastName
+	return v.LastName
 }

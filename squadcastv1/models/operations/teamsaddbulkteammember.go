@@ -11,18 +11,18 @@ type TeamsAddBulkTeamMemberRequest struct {
 	V3TeamsAddBulkTeamMemberRequest components.V3TeamsAddBulkTeamMemberRequest `request:"mediaType=application/json"`
 }
 
-func (o *TeamsAddBulkTeamMemberRequest) GetTeamID() string {
-	if o == nil {
+func (t *TeamsAddBulkTeamMemberRequest) GetTeamID() string {
+	if t == nil {
 		return ""
 	}
-	return o.TeamID
+	return t.TeamID
 }
 
-func (o *TeamsAddBulkTeamMemberRequest) GetV3TeamsAddBulkTeamMemberRequest() components.V3TeamsAddBulkTeamMemberRequest {
-	if o == nil {
+func (t *TeamsAddBulkTeamMemberRequest) GetV3TeamsAddBulkTeamMemberRequest() components.V3TeamsAddBulkTeamMemberRequest {
+	if t == nil {
 		return components.V3TeamsAddBulkTeamMemberRequest{}
 	}
-	return o.V3TeamsAddBulkTeamMemberRequest
+	return t.V3TeamsAddBulkTeamMemberRequest
 }
 
 type Member struct {
@@ -30,18 +30,18 @@ type Member struct {
 	RoleIds []string `json:"role_ids,omitempty"`
 }
 
-func (o *Member) GetUserID() *string {
-	if o == nil {
+func (m *Member) GetUserID() *string {
+	if m == nil {
 		return nil
 	}
-	return o.UserID
+	return m.UserID
 }
 
-func (o *Member) GetRoleIds() []string {
-	if o == nil {
+func (m *Member) GetRoleIds() []string {
+	if m == nil {
 		return nil
 	}
-	return o.RoleIds
+	return m.RoleIds
 }
 
 type TeamsAddBulkTeamMemberData struct {
@@ -49,18 +49,18 @@ type TeamsAddBulkTeamMemberData struct {
 	Members []Member `json:"members"`
 }
 
-func (o *TeamsAddBulkTeamMemberData) GetTeamID() string {
-	if o == nil {
+func (t *TeamsAddBulkTeamMemberData) GetTeamID() string {
+	if t == nil {
 		return ""
 	}
-	return o.TeamID
+	return t.TeamID
 }
 
-func (o *TeamsAddBulkTeamMemberData) GetMembers() []Member {
-	if o == nil {
+func (t *TeamsAddBulkTeamMemberData) GetMembers() []Member {
+	if t == nil {
 		return []Member{}
 	}
-	return o.Members
+	return t.Members
 }
 
 // TeamsAddBulkTeamMemberResponseBody - The request has succeeded.
@@ -68,11 +68,11 @@ type TeamsAddBulkTeamMemberResponseBody struct {
 	Data TeamsAddBulkTeamMemberData `json:"data"`
 }
 
-func (o *TeamsAddBulkTeamMemberResponseBody) GetData() TeamsAddBulkTeamMemberData {
-	if o == nil {
+func (t *TeamsAddBulkTeamMemberResponseBody) GetData() TeamsAddBulkTeamMemberData {
+	if t == nil {
 		return TeamsAddBulkTeamMemberData{}
 	}
-	return o.Data
+	return t.Data
 }
 
 type TeamsAddBulkTeamMemberResponse struct {
@@ -81,16 +81,16 @@ type TeamsAddBulkTeamMemberResponse struct {
 	Object *TeamsAddBulkTeamMemberResponseBody
 }
 
-func (o *TeamsAddBulkTeamMemberResponse) GetHTTPMeta() components.HTTPMetadata {
-	if o == nil {
+func (t *TeamsAddBulkTeamMemberResponse) GetHTTPMeta() components.HTTPMetadata {
+	if t == nil {
 		return components.HTTPMetadata{}
 	}
-	return o.HTTPMeta
+	return t.HTTPMeta
 }
 
-func (o *TeamsAddBulkTeamMemberResponse) GetObject() *TeamsAddBulkTeamMemberResponseBody {
-	if o == nil {
+func (t *TeamsAddBulkTeamMemberResponse) GetObject() *TeamsAddBulkTeamMemberResponseBody {
+	if t == nil {
 		return nil
 	}
-	return o.Object
+	return t.Object
 }

@@ -10,11 +10,11 @@ type IssuesListStatusPageIssueStatesRequest struct {
 	StatuspageID string `pathParam:"style=simple,explode=false,name=statuspageID"`
 }
 
-func (o *IssuesListStatusPageIssueStatesRequest) GetStatuspageID() string {
-	if o == nil {
+func (i *IssuesListStatusPageIssueStatesRequest) GetStatuspageID() string {
+	if i == nil {
 		return ""
 	}
-	return o.StatuspageID
+	return i.StatuspageID
 }
 
 // IssuesListStatusPageIssueStatesResponseBody - The request has succeeded.
@@ -22,11 +22,11 @@ type IssuesListStatusPageIssueStatesResponseBody struct {
 	Data []components.V4StatusPagesIssuesListStatusPageIssueStatesResponse `json:"data"`
 }
 
-func (o *IssuesListStatusPageIssueStatesResponseBody) GetData() []components.V4StatusPagesIssuesListStatusPageIssueStatesResponse {
-	if o == nil {
+func (i *IssuesListStatusPageIssueStatesResponseBody) GetData() []components.V4StatusPagesIssuesListStatusPageIssueStatesResponse {
+	if i == nil {
 		return []components.V4StatusPagesIssuesListStatusPageIssueStatesResponse{}
 	}
-	return o.Data
+	return i.Data
 }
 
 type IssuesListStatusPageIssueStatesResponse struct {
@@ -35,16 +35,16 @@ type IssuesListStatusPageIssueStatesResponse struct {
 	Object *IssuesListStatusPageIssueStatesResponseBody
 }
 
-func (o *IssuesListStatusPageIssueStatesResponse) GetHTTPMeta() components.HTTPMetadata {
-	if o == nil {
+func (i *IssuesListStatusPageIssueStatesResponse) GetHTTPMeta() components.HTTPMetadata {
+	if i == nil {
 		return components.HTTPMetadata{}
 	}
-	return o.HTTPMeta
+	return i.HTTPMeta
 }
 
-func (o *IssuesListStatusPageIssueStatesResponse) GetObject() *IssuesListStatusPageIssueStatesResponseBody {
-	if o == nil {
+func (i *IssuesListStatusPageIssueStatesResponse) GetObject() *IssuesListStatusPageIssueStatesResponseBody {
+	if i == nil {
 		return nil
 	}
-	return o.Object
+	return i.Object
 }

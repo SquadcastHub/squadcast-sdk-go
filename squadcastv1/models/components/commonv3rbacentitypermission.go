@@ -14,16 +14,16 @@ type CommonV3RBACEntityPermission struct {
 	Abilities Abilities `json:"abilities"`
 }
 
-func (o *CommonV3RBACEntityPermission) GetUserID() string {
-	if o == nil {
+func (c *CommonV3RBACEntityPermission) GetUserID() string {
+	if c == nil {
 		return ""
 	}
-	return o.UserID
+	return c.UserID
 }
 
-func (o *CommonV3RBACEntityPermission) GetAbilities() Abilities {
-	if o == nil {
+func (c *CommonV3RBACEntityPermission) GetAbilities() Abilities {
+	if c == nil {
 		return Abilities{}
 	}
-	return o.Abilities
+	return c.Abilities
 }

@@ -10,34 +10,34 @@ type V3TeamsAddBulkTeamMemberRequestMember struct {
 	RoleIds []string `json:"role_ids"`
 }
 
-func (o *V3TeamsAddBulkTeamMemberRequestMember) GetUserID() string {
-	if o == nil {
+func (v *V3TeamsAddBulkTeamMemberRequestMember) GetUserID() string {
+	if v == nil {
 		return ""
 	}
-	return o.UserID
+	return v.UserID
 }
 
-func (o *V3TeamsAddBulkTeamMemberRequestMember) GetRole() *string {
-	if o == nil {
+func (v *V3TeamsAddBulkTeamMemberRequestMember) GetRole() *string {
+	if v == nil {
 		return nil
 	}
-	return o.Role
+	return v.Role
 }
 
-func (o *V3TeamsAddBulkTeamMemberRequestMember) GetRoleIds() []string {
-	if o == nil {
+func (v *V3TeamsAddBulkTeamMemberRequestMember) GetRoleIds() []string {
+	if v == nil {
 		return []string{}
 	}
-	return o.RoleIds
+	return v.RoleIds
 }
 
 type V3TeamsAddBulkTeamMemberRequest struct {
 	Members []V3TeamsAddBulkTeamMemberRequestMember `json:"members"`
 }
 
-func (o *V3TeamsAddBulkTeamMemberRequest) GetMembers() []V3TeamsAddBulkTeamMemberRequestMember {
-	if o == nil {
+func (v *V3TeamsAddBulkTeamMemberRequest) GetMembers() []V3TeamsAddBulkTeamMemberRequestMember {
+	if v == nil {
 		return []V3TeamsAddBulkTeamMemberRequestMember{}
 	}
-	return o.Members
+	return v.Members
 }

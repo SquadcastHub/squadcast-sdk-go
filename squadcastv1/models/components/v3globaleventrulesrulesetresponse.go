@@ -31,72 +31,72 @@ func (v *V3GlobalEventRulesRulesetResponse) UnmarshalJSON(data []byte) error {
 	return nil
 }
 
-func (o *V3GlobalEventRulesRulesetResponse) GetID() *int64 {
-	if o == nil {
+func (v *V3GlobalEventRulesRulesetResponse) GetID() *int64 {
+	if v == nil {
 		return nil
 	}
-	return o.ID
+	return v.ID
 }
 
-func (o *V3GlobalEventRulesRulesetResponse) GetGlobalEventRuleID() *int64 {
-	if o == nil {
+func (v *V3GlobalEventRulesRulesetResponse) GetGlobalEventRuleID() *int64 {
+	if v == nil {
 		return nil
 	}
-	return o.GlobalEventRuleID
+	return v.GlobalEventRuleID
 }
 
-func (o *V3GlobalEventRulesRulesetResponse) GetAlertSourceShortname() *string {
-	if o == nil {
+func (v *V3GlobalEventRulesRulesetResponse) GetAlertSourceShortname() *string {
+	if v == nil {
 		return nil
 	}
-	return o.AlertSourceShortname
+	return v.AlertSourceShortname
 }
 
-func (o *V3GlobalEventRulesRulesetResponse) GetAlertSourceVersion() *string {
-	if o == nil {
+func (v *V3GlobalEventRulesRulesetResponse) GetAlertSourceVersion() *string {
+	if v == nil {
 		return nil
 	}
-	return o.AlertSourceVersion
+	return v.AlertSourceVersion
 }
 
-func (o *V3GlobalEventRulesRulesetResponse) GetOrdering() []int64 {
-	if o == nil {
+func (v *V3GlobalEventRulesRulesetResponse) GetOrdering() []int64 {
+	if v == nil {
 		return nil
 	}
-	return o.Ordering
+	return v.Ordering
 }
 
-func (o *V3GlobalEventRulesRulesetResponse) GetCatchAllAction() *V3GlobalEventRulesRuleAction {
-	if o == nil {
+func (v *V3GlobalEventRulesRulesetResponse) GetCatchAllAction() *V3GlobalEventRulesRuleAction {
+	if v == nil {
 		return nil
 	}
-	return o.CatchAllAction
+	return v.CatchAllAction
 }
 
-func (o *V3GlobalEventRulesRulesetResponse) GetCreatedAt() *time.Time {
-	if o == nil {
+func (v *V3GlobalEventRulesRulesetResponse) GetCreatedAt() *time.Time {
+	if v == nil {
 		return nil
 	}
-	return o.CreatedAt
+	return v.CreatedAt
 }
 
-func (o *V3GlobalEventRulesRulesetResponse) GetCreatedBy() *string {
-	if o == nil {
+func (v *V3GlobalEventRulesRulesetResponse) GetCreatedBy() *string {
+	if v == nil {
 		return nil
 	}
-	return o.CreatedBy
+	return v.CreatedBy
 }
 
-func (o *V3GlobalEventRulesRulesetResponse) GetUpdatedAt() *time.Time {
-	if o == nil {
+func (v *V3GlobalEventRulesRulesetResponse) GetUpdatedAt() *time.Time {
+	if v == nil {
 		return nil
 	}
-	return o.UpdatedAt
+	return v.UpdatedAt
 }
 
-func (o *V3GlobalEventRulesRulesetResponse) GetUpdatedBy() *string {
-	if o == nil {
+func (v *V3GlobalEventRulesRulesetResponse) GetUpdatedBy() *string {
+	if v == nil {
 		return nil
 	}
-	return o.UpdatedBy
+	return v.UpdatedBy
 }

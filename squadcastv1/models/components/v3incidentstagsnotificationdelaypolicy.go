@@ -26,23 +26,23 @@ func (v *V3IncidentsTagsNotificationDelayPolicy) UnmarshalJSON(data []byte) erro
 	return nil
 }
 
-func (o *V3IncidentsTagsNotificationDelayPolicy) GetIsNotificationDelayed() bool {
-	if o == nil {
+func (v *V3IncidentsTagsNotificationDelayPolicy) GetIsNotificationDelayed() bool {
+	if v == nil {
 		return false
 	}
-	return o.IsNotificationDelayed
+	return v.IsNotificationDelayed
 }
 
-func (o *V3IncidentsTagsNotificationDelayPolicy) GetDelayedUntil() time.Time {
-	if o == nil {
+func (v *V3IncidentsTagsNotificationDelayPolicy) GetDelayedUntil() time.Time {
+	if v == nil {
 		return time.Time{}
 	}
-	return o.DelayedUntil
+	return v.DelayedUntil
 }
 
-func (o *V3IncidentsTagsNotificationDelayPolicy) GetAssignTo() V3IncidentsTagsAssignTo {
-	if o == nil {
+func (v *V3IncidentsTagsNotificationDelayPolicy) GetAssignTo() V3IncidentsTagsAssignTo {
+	if v == nil {
 		return V3IncidentsTagsAssignTo{}
 	}
-	return o.AssignTo
+	return v.AssignTo
 }

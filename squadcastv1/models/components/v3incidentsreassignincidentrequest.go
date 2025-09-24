@@ -7,18 +7,18 @@ type ReassignTo struct {
 	Type string `json:"type"`
 }
 
-func (o *ReassignTo) GetID() string {
-	if o == nil {
+func (r *ReassignTo) GetID() string {
+	if r == nil {
 		return ""
 	}
-	return o.ID
+	return r.ID
 }
 
-func (o *ReassignTo) GetType() string {
-	if o == nil {
+func (r *ReassignTo) GetType() string {
+	if r == nil {
 		return ""
 	}
-	return o.Type
+	return r.Type
 }
 
 // V3IncidentsReassignIncidentRequest - Request body for reassigning an incident.
@@ -26,9 +26,9 @@ type V3IncidentsReassignIncidentRequest struct {
 	ReassignTo ReassignTo `json:"reassignTo"`
 }
 
-func (o *V3IncidentsReassignIncidentRequest) GetReassignTo() ReassignTo {
-	if o == nil {
+func (v *V3IncidentsReassignIncidentRequest) GetReassignTo() ReassignTo {
+	if v == nil {
 		return ReassignTo{}
 	}
-	return o.ReassignTo
+	return v.ReassignTo
 }

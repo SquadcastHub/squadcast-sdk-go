@@ -11,11 +11,11 @@ type SquadsCreateSquadV4ResponseBody struct {
 	Data components.V4SquadsCreateSquadResponse `json:"data"`
 }
 
-func (o *SquadsCreateSquadV4ResponseBody) GetData() components.V4SquadsCreateSquadResponse {
-	if o == nil {
+func (s *SquadsCreateSquadV4ResponseBody) GetData() components.V4SquadsCreateSquadResponse {
+	if s == nil {
 		return components.V4SquadsCreateSquadResponse{}
 	}
-	return o.Data
+	return s.Data
 }
 
 type SquadsCreateSquadV4Response struct {
@@ -24,16 +24,16 @@ type SquadsCreateSquadV4Response struct {
 	Object *SquadsCreateSquadV4ResponseBody
 }
 
-func (o *SquadsCreateSquadV4Response) GetHTTPMeta() components.HTTPMetadata {
-	if o == nil {
+func (s *SquadsCreateSquadV4Response) GetHTTPMeta() components.HTTPMetadata {
+	if s == nil {
 		return components.HTTPMetadata{}
 	}
-	return o.HTTPMeta
+	return s.HTTPMeta
 }
 
-func (o *SquadsCreateSquadV4Response) GetObject() *SquadsCreateSquadV4ResponseBody {
-	if o == nil {
+func (s *SquadsCreateSquadV4Response) GetObject() *SquadsCreateSquadV4ResponseBody {
+	if s == nil {
 		return nil
 	}
-	return o.Object
+	return s.Object
 }

@@ -11,11 +11,11 @@ type UsersRemoveUserFromOrgRequest struct {
 	UserID string `pathParam:"style=simple,explode=false,name=userID"`
 }
 
-func (o *UsersRemoveUserFromOrgRequest) GetUserID() string {
-	if o == nil {
+func (u *UsersRemoveUserFromOrgRequest) GetUserID() string {
+	if u == nil {
 		return ""
 	}
-	return o.UserID
+	return u.UserID
 }
 
 // UsersRemoveUserFromOrgResponseBody - There is no content to send for this request, but the headers may be useful.
@@ -27,16 +27,16 @@ type UsersRemoveUserFromOrgResponse struct {
 	Body     []byte
 }
 
-func (o *UsersRemoveUserFromOrgResponse) GetHTTPMeta() components.HTTPMetadata {
-	if o == nil {
+func (u *UsersRemoveUserFromOrgResponse) GetHTTPMeta() components.HTTPMetadata {
+	if u == nil {
 		return components.HTTPMetadata{}
 	}
-	return o.HTTPMeta
+	return u.HTTPMeta
 }
 
-func (o *UsersRemoveUserFromOrgResponse) GetBody() []byte {
-	if o == nil {
+func (u *UsersRemoveUserFromOrgResponse) GetBody() []byte {
+	if u == nil {
 		return nil
 	}
-	return o.Body
+	return u.Body
 }

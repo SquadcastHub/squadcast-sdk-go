@@ -10,11 +10,11 @@ type UsersCreateTokenRequest struct {
 	UserID string `json:"user_id"`
 }
 
-func (o *UsersCreateTokenRequest) GetUserID() string {
-	if o == nil {
+func (u *UsersCreateTokenRequest) GetUserID() string {
+	if u == nil {
 		return ""
 	}
-	return o.UserID
+	return u.UserID
 }
 
 // UsersCreateTokenResponseBody - The request has succeeded and a new resource has been created as a result.
@@ -22,11 +22,11 @@ type UsersCreateTokenResponseBody struct {
 	Data components.V3UsersAPITokenResponse `json:"data"`
 }
 
-func (o *UsersCreateTokenResponseBody) GetData() components.V3UsersAPITokenResponse {
-	if o == nil {
+func (u *UsersCreateTokenResponseBody) GetData() components.V3UsersAPITokenResponse {
+	if u == nil {
 		return components.V3UsersAPITokenResponse{}
 	}
-	return o.Data
+	return u.Data
 }
 
 type UsersCreateTokenResponse struct {
@@ -35,16 +35,16 @@ type UsersCreateTokenResponse struct {
 	Object *UsersCreateTokenResponseBody
 }
 
-func (o *UsersCreateTokenResponse) GetHTTPMeta() components.HTTPMetadata {
-	if o == nil {
+func (u *UsersCreateTokenResponse) GetHTTPMeta() components.HTTPMetadata {
+	if u == nil {
 		return components.HTTPMetadata{}
 	}
-	return o.HTTPMeta
+	return u.HTTPMeta
 }
 
-func (o *UsersCreateTokenResponse) GetObject() *UsersCreateTokenResponseBody {
-	if o == nil {
+func (u *UsersCreateTokenResponse) GetObject() *UsersCreateTokenResponseBody {
+	if u == nil {
 		return nil
 	}
-	return o.Object
+	return u.Object
 }

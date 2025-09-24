@@ -38,107 +38,107 @@ type V3ExtensionsWebhooksWebhook struct {
 	PayloadType *string `json:"payload_type,omitempty"`
 }
 
-func (o *V3ExtensionsWebhooksWebhook) GetName() string {
-	if o == nil {
+func (v *V3ExtensionsWebhooksWebhook) GetName() string {
+	if v == nil {
 		return ""
 	}
-	return o.Name
+	return v.Name
 }
 
-func (o *V3ExtensionsWebhooksWebhook) GetDescription() *string {
-	if o == nil {
+func (v *V3ExtensionsWebhooksWebhook) GetDescription() *string {
+	if v == nil {
 		return nil
 	}
-	return o.Description
+	return v.Description
 }
 
-func (o *V3ExtensionsWebhooksWebhook) GetTriggers() []V3ExtensionsWebhooksWebhookTrigger {
-	if o == nil {
+func (v *V3ExtensionsWebhooksWebhook) GetTriggers() []V3ExtensionsWebhooksWebhookTrigger {
+	if v == nil {
 		return []V3ExtensionsWebhooksWebhookTrigger{}
 	}
-	return o.Triggers
+	return v.Triggers
 }
 
-func (o *V3ExtensionsWebhooksWebhook) GetUrls() []V3ExtensionsWebhooksWebhookURL {
-	if o == nil {
+func (v *V3ExtensionsWebhooksWebhook) GetUrls() []V3ExtensionsWebhooksWebhookURL {
+	if v == nil {
 		return []V3ExtensionsWebhooksWebhookURL{}
 	}
-	return o.Urls
+	return v.Urls
 }
 
-func (o *V3ExtensionsWebhooksWebhook) GetHeader() *V3ExtensionsWebhooksWebhookHeader {
-	if o == nil {
+func (v *V3ExtensionsWebhooksWebhook) GetHeader() *V3ExtensionsWebhooksWebhookHeader {
+	if v == nil {
 		return nil
 	}
-	return o.Header
+	return v.Header
 }
 
-func (o *V3ExtensionsWebhooksWebhook) GetFilters() *V3ExtensionsWebhooksWebhookFilter {
-	if o == nil {
+func (v *V3ExtensionsWebhooksWebhook) GetFilters() *V3ExtensionsWebhooksWebhookFilter {
+	if v == nil {
 		return nil
 	}
-	return o.Filters
+	return v.Filters
 }
 
-func (o *V3ExtensionsWebhooksWebhook) GetMaxRetry() *int64 {
-	if o == nil {
+func (v *V3ExtensionsWebhooksWebhook) GetMaxRetry() *int64 {
+	if v == nil {
 		return nil
 	}
-	return o.MaxRetry
+	return v.MaxRetry
 }
 
-func (o *V3ExtensionsWebhooksWebhook) GetTeams() []string {
-	if o == nil {
+func (v *V3ExtensionsWebhooksWebhook) GetTeams() []string {
+	if v == nil {
 		return nil
 	}
-	return o.Teams
+	return v.Teams
 }
 
-func (o *V3ExtensionsWebhooksWebhook) GetIsAllTeamsConfigured() *bool {
-	if o == nil {
+func (v *V3ExtensionsWebhooksWebhook) GetIsAllTeamsConfigured() *bool {
+	if v == nil {
 		return nil
 	}
-	return o.IsAllTeamsConfigured
+	return v.IsAllTeamsConfigured
 }
 
-func (o *V3ExtensionsWebhooksWebhook) GetCustomPayloadTemplateSlug() *string {
-	if o == nil {
+func (v *V3ExtensionsWebhooksWebhook) GetCustomPayloadTemplateSlug() *string {
+	if v == nil {
 		return nil
 	}
-	return o.CustomPayloadTemplateSlug
+	return v.CustomPayloadTemplateSlug
 }
 
-func (o *V3ExtensionsWebhooksWebhook) GetLanguage() *string {
-	if o == nil {
+func (v *V3ExtensionsWebhooksWebhook) GetLanguage() *string {
+	if v == nil {
 		return nil
 	}
-	return o.Language
+	return v.Language
 }
 
-func (o *V3ExtensionsWebhooksWebhook) GetMailIds() []string {
-	if o == nil {
+func (v *V3ExtensionsWebhooksWebhook) GetMailIds() []string {
+	if v == nil {
 		return nil
 	}
-	return o.MailIds
+	return v.MailIds
 }
 
-func (o *V3ExtensionsWebhooksWebhook) GetTriggerType() string {
-	if o == nil {
+func (v *V3ExtensionsWebhooksWebhook) GetTriggerType() string {
+	if v == nil {
 		return ""
 	}
-	return o.TriggerType
+	return v.TriggerType
 }
 
-func (o *V3ExtensionsWebhooksWebhook) GetCustomPayload() *string {
-	if o == nil {
+func (v *V3ExtensionsWebhooksWebhook) GetCustomPayload() *string {
+	if v == nil {
 		return nil
 	}
-	return o.CustomPayload
+	return v.CustomPayload
 }
 
-func (o *V3ExtensionsWebhooksWebhook) GetPayloadType() *string {
-	if o == nil {
+func (v *V3ExtensionsWebhooksWebhook) GetPayloadType() *string {
+	if v == nil {
 		return nil
 	}
-	return o.PayloadType
+	return v.PayloadType
 }

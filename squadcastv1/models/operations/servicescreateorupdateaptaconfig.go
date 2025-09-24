@@ -11,29 +11,29 @@ type ServicesCreateOrUpdateAPTAConfigRequest struct {
 	V3ServicesAPTAConfigRequest components.V3ServicesAPTAConfigRequest `request:"mediaType=application/json"`
 }
 
-func (o *ServicesCreateOrUpdateAPTAConfigRequest) GetServiceID() string {
-	if o == nil {
+func (s *ServicesCreateOrUpdateAPTAConfigRequest) GetServiceID() string {
+	if s == nil {
 		return ""
 	}
-	return o.ServiceID
+	return s.ServiceID
 }
 
-func (o *ServicesCreateOrUpdateAPTAConfigRequest) GetV3ServicesAPTAConfigRequest() components.V3ServicesAPTAConfigRequest {
-	if o == nil {
+func (s *ServicesCreateOrUpdateAPTAConfigRequest) GetV3ServicesAPTAConfigRequest() components.V3ServicesAPTAConfigRequest {
+	if s == nil {
 		return components.V3ServicesAPTAConfigRequest{}
 	}
-	return o.V3ServicesAPTAConfigRequest
+	return s.V3ServicesAPTAConfigRequest
 }
 
 type ServicesCreateOrUpdateAPTAConfigData struct {
 	Msg string `json:"msg"`
 }
 
-func (o *ServicesCreateOrUpdateAPTAConfigData) GetMsg() string {
-	if o == nil {
+func (s *ServicesCreateOrUpdateAPTAConfigData) GetMsg() string {
+	if s == nil {
 		return ""
 	}
-	return o.Msg
+	return s.Msg
 }
 
 // ServicesCreateOrUpdateAPTAConfigResponseBody - The request has succeeded.
@@ -41,11 +41,11 @@ type ServicesCreateOrUpdateAPTAConfigResponseBody struct {
 	Data ServicesCreateOrUpdateAPTAConfigData `json:"data"`
 }
 
-func (o *ServicesCreateOrUpdateAPTAConfigResponseBody) GetData() ServicesCreateOrUpdateAPTAConfigData {
-	if o == nil {
+func (s *ServicesCreateOrUpdateAPTAConfigResponseBody) GetData() ServicesCreateOrUpdateAPTAConfigData {
+	if s == nil {
 		return ServicesCreateOrUpdateAPTAConfigData{}
 	}
-	return o.Data
+	return s.Data
 }
 
 type ServicesCreateOrUpdateAPTAConfigResponse struct {
@@ -54,16 +54,16 @@ type ServicesCreateOrUpdateAPTAConfigResponse struct {
 	Object *ServicesCreateOrUpdateAPTAConfigResponseBody
 }
 
-func (o *ServicesCreateOrUpdateAPTAConfigResponse) GetHTTPMeta() components.HTTPMetadata {
-	if o == nil {
+func (s *ServicesCreateOrUpdateAPTAConfigResponse) GetHTTPMeta() components.HTTPMetadata {
+	if s == nil {
 		return components.HTTPMetadata{}
 	}
-	return o.HTTPMeta
+	return s.HTTPMeta
 }
 
-func (o *ServicesCreateOrUpdateAPTAConfigResponse) GetObject() *ServicesCreateOrUpdateAPTAConfigResponseBody {
-	if o == nil {
+func (s *ServicesCreateOrUpdateAPTAConfigResponse) GetObject() *ServicesCreateOrUpdateAPTAConfigResponseBody {
+	if s == nil {
 		return nil
 	}
-	return o.Object
+	return s.Object
 }

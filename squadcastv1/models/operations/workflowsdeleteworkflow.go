@@ -10,11 +10,11 @@ type WorkflowsDeleteWorkflowRequest struct {
 	WorkflowID string `pathParam:"style=simple,explode=false,name=workflowID"`
 }
 
-func (o *WorkflowsDeleteWorkflowRequest) GetWorkflowID() string {
-	if o == nil {
+func (w *WorkflowsDeleteWorkflowRequest) GetWorkflowID() string {
+	if w == nil {
 		return ""
 	}
-	return o.WorkflowID
+	return w.WorkflowID
 }
 
 // WorkflowsDeleteWorkflowResponseBody - There is no content to send for this request, but the headers may be useful.
@@ -26,16 +26,16 @@ type WorkflowsDeleteWorkflowResponse struct {
 	Body     []byte
 }
 
-func (o *WorkflowsDeleteWorkflowResponse) GetHTTPMeta() components.HTTPMetadata {
-	if o == nil {
+func (w *WorkflowsDeleteWorkflowResponse) GetHTTPMeta() components.HTTPMetadata {
+	if w == nil {
 		return components.HTTPMetadata{}
 	}
-	return o.HTTPMeta
+	return w.HTTPMeta
 }
 
-func (o *WorkflowsDeleteWorkflowResponse) GetBody() []byte {
-	if o == nil {
+func (w *WorkflowsDeleteWorkflowResponse) GetBody() []byte {
+	if w == nil {
 		return nil
 	}
-	return o.Body
+	return w.Body
 }

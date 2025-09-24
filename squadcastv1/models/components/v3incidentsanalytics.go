@@ -10,16 +10,16 @@ type V3IncidentsAnalytics struct {
 	Ttr V3IncidentsAnalyticsMetrics `json:"ttr"`
 }
 
-func (o *V3IncidentsAnalytics) GetTta() V3IncidentsAnalyticsMetrics {
-	if o == nil {
+func (v *V3IncidentsAnalytics) GetTta() V3IncidentsAnalyticsMetrics {
+	if v == nil {
 		return V3IncidentsAnalyticsMetrics{}
 	}
-	return o.Tta
+	return v.Tta
 }
 
-func (o *V3IncidentsAnalytics) GetTtr() V3IncidentsAnalyticsMetrics {
-	if o == nil {
+func (v *V3IncidentsAnalytics) GetTtr() V3IncidentsAnalyticsMetrics {
+	if v == nil {
 		return V3IncidentsAnalyticsMetrics{}
 	}
-	return o.Ttr
+	return v.Ttr
 }

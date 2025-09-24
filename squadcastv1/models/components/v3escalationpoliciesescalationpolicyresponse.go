@@ -36,107 +36,107 @@ type V3EscalationPoliciesEscalationPolicyResponse struct {
 	AccessControl []CommonV3RBACEntityPermission `json:"access_control"`
 }
 
-func (o *V3EscalationPoliciesEscalationPolicyResponse) GetID() string {
-	if o == nil {
+func (v *V3EscalationPoliciesEscalationPolicyResponse) GetID() string {
+	if v == nil {
 		return ""
 	}
-	return o.ID
+	return v.ID
 }
 
-func (o *V3EscalationPoliciesEscalationPolicyResponse) GetName() string {
-	if o == nil {
+func (v *V3EscalationPoliciesEscalationPolicyResponse) GetName() string {
+	if v == nil {
 		return ""
 	}
-	return o.Name
+	return v.Name
 }
 
-func (o *V3EscalationPoliciesEscalationPolicyResponse) GetDescription() string {
-	if o == nil {
+func (v *V3EscalationPoliciesEscalationPolicyResponse) GetDescription() string {
+	if v == nil {
 		return ""
 	}
-	return o.Description
+	return v.Description
 }
 
-func (o *V3EscalationPoliciesEscalationPolicyResponse) GetOrganizationID() string {
-	if o == nil {
+func (v *V3EscalationPoliciesEscalationPolicyResponse) GetOrganizationID() string {
+	if v == nil {
 		return ""
 	}
-	return o.OrganizationID
+	return v.OrganizationID
 }
 
-func (o *V3EscalationPoliciesEscalationPolicyResponse) GetRepetition() int {
-	if o == nil {
+func (v *V3EscalationPoliciesEscalationPolicyResponse) GetRepetition() int {
+	if v == nil {
 		return 0
 	}
-	return o.Repetition
+	return v.Repetition
 }
 
-func (o *V3EscalationPoliciesEscalationPolicyResponse) GetRepeatAfter() int {
-	if o == nil {
+func (v *V3EscalationPoliciesEscalationPolicyResponse) GetRepeatAfter() int {
+	if v == nil {
 		return 0
 	}
-	return o.RepeatAfter
+	return v.RepeatAfter
 }
 
-func (o *V3EscalationPoliciesEscalationPolicyResponse) GetRules() []V3EscalationPoliciesEscalationPolicyRule {
-	if o == nil {
+func (v *V3EscalationPoliciesEscalationPolicyResponse) GetRules() []V3EscalationPoliciesEscalationPolicyRule {
+	if v == nil {
 		return []V3EscalationPoliciesEscalationPolicyRule{}
 	}
-	return o.Rules
+	return v.Rules
 }
 
-func (o *V3EscalationPoliciesEscalationPolicyResponse) GetSlug() string {
-	if o == nil {
+func (v *V3EscalationPoliciesEscalationPolicyResponse) GetSlug() string {
+	if v == nil {
 		return ""
 	}
-	return o.Slug
+	return v.Slug
 }
 
-func (o *V3EscalationPoliciesEscalationPolicyResponse) GetEnableIncidentReminders() bool {
-	if o == nil {
+func (v *V3EscalationPoliciesEscalationPolicyResponse) GetEnableIncidentReminders() bool {
+	if v == nil {
 		return false
 	}
-	return o.EnableIncidentReminders
+	return v.EnableIncidentReminders
 }
 
-func (o *V3EscalationPoliciesEscalationPolicyResponse) GetIncidentReminderRules() []V3EscalationPoliciesIncidentReminderRule {
-	if o == nil {
+func (v *V3EscalationPoliciesEscalationPolicyResponse) GetIncidentReminderRules() []V3EscalationPoliciesIncidentReminderRule {
+	if v == nil {
 		return []V3EscalationPoliciesIncidentReminderRule{}
 	}
-	return o.IncidentReminderRules
+	return v.IncidentReminderRules
 }
 
-func (o *V3EscalationPoliciesEscalationPolicyResponse) GetEnableIncidentRetrigger() bool {
-	if o == nil {
+func (v *V3EscalationPoliciesEscalationPolicyResponse) GetEnableIncidentRetrigger() bool {
+	if v == nil {
 		return false
 	}
-	return o.EnableIncidentRetrigger
+	return v.EnableIncidentRetrigger
 }
 
-func (o *V3EscalationPoliciesEscalationPolicyResponse) GetRetriggerAfter() int {
-	if o == nil {
+func (v *V3EscalationPoliciesEscalationPolicyResponse) GetRetriggerAfter() int {
+	if v == nil {
 		return 0
 	}
-	return o.RetriggerAfter
+	return v.RetriggerAfter
 }
 
-func (o *V3EscalationPoliciesEscalationPolicyResponse) GetEntityOwner() CommonV3EntityOwner {
-	if o == nil {
+func (v *V3EscalationPoliciesEscalationPolicyResponse) GetEntityOwner() CommonV3EntityOwner {
+	if v == nil {
 		return CommonV3EntityOwner{}
 	}
-	return o.EntityOwner
+	return v.EntityOwner
 }
 
-func (o *V3EscalationPoliciesEscalationPolicyResponse) GetOwner() CommonV3RBACOwner {
-	if o == nil {
+func (v *V3EscalationPoliciesEscalationPolicyResponse) GetOwner() CommonV3RBACOwner {
+	if v == nil {
 		return CommonV3RBACOwner{}
 	}
-	return o.Owner
+	return v.Owner
 }
 
-func (o *V3EscalationPoliciesEscalationPolicyResponse) GetAccessControl() []CommonV3RBACEntityPermission {
-	if o == nil {
+func (v *V3EscalationPoliciesEscalationPolicyResponse) GetAccessControl() []CommonV3RBACEntityPermission {
+	if v == nil {
 		return []CommonV3RBACEntityPermission{}
 	}
-	return o.AccessControl
+	return v.AccessControl
 }

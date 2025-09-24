@@ -11,18 +11,18 @@ type ComponentGroupsDeleteComponentGroupByIDRequest struct {
 	GroupID      string `pathParam:"style=simple,explode=false,name=group_id"`
 }
 
-func (o *ComponentGroupsDeleteComponentGroupByIDRequest) GetStatuspageID() string {
-	if o == nil {
+func (c *ComponentGroupsDeleteComponentGroupByIDRequest) GetStatuspageID() string {
+	if c == nil {
 		return ""
 	}
-	return o.StatuspageID
+	return c.StatuspageID
 }
 
-func (o *ComponentGroupsDeleteComponentGroupByIDRequest) GetGroupID() string {
-	if o == nil {
+func (c *ComponentGroupsDeleteComponentGroupByIDRequest) GetGroupID() string {
+	if c == nil {
 		return ""
 	}
-	return o.GroupID
+	return c.GroupID
 }
 
 // ComponentGroupsDeleteComponentGroupByIDResponseBody - The request has succeeded.
@@ -30,11 +30,11 @@ type ComponentGroupsDeleteComponentGroupByIDResponseBody struct {
 	Data components.V4StatusPagesComponentGroupsDeleteComponentGroupByIDResponse `json:"data"`
 }
 
-func (o *ComponentGroupsDeleteComponentGroupByIDResponseBody) GetData() components.V4StatusPagesComponentGroupsDeleteComponentGroupByIDResponse {
-	if o == nil {
+func (c *ComponentGroupsDeleteComponentGroupByIDResponseBody) GetData() components.V4StatusPagesComponentGroupsDeleteComponentGroupByIDResponse {
+	if c == nil {
 		return components.V4StatusPagesComponentGroupsDeleteComponentGroupByIDResponse{}
 	}
-	return o.Data
+	return c.Data
 }
 
 type ComponentGroupsDeleteComponentGroupByIDResponse struct {
@@ -43,16 +43,16 @@ type ComponentGroupsDeleteComponentGroupByIDResponse struct {
 	Object *ComponentGroupsDeleteComponentGroupByIDResponseBody
 }
 
-func (o *ComponentGroupsDeleteComponentGroupByIDResponse) GetHTTPMeta() components.HTTPMetadata {
-	if o == nil {
+func (c *ComponentGroupsDeleteComponentGroupByIDResponse) GetHTTPMeta() components.HTTPMetadata {
+	if c == nil {
 		return components.HTTPMetadata{}
 	}
-	return o.HTTPMeta
+	return c.HTTPMeta
 }
 
-func (o *ComponentGroupsDeleteComponentGroupByIDResponse) GetObject() *ComponentGroupsDeleteComponentGroupByIDResponseBody {
-	if o == nil {
+func (c *ComponentGroupsDeleteComponentGroupByIDResponse) GetObject() *ComponentGroupsDeleteComponentGroupByIDResponseBody {
+	if c == nil {
 		return nil
 	}
-	return o.Object
+	return c.Object
 }

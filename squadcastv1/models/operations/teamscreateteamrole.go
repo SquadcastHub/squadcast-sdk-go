@@ -11,18 +11,18 @@ type TeamsCreateTeamRoleRequest struct {
 	V3TeamsCreateTeamRoleRequest components.V3TeamsCreateTeamRoleRequest `request:"mediaType=application/json"`
 }
 
-func (o *TeamsCreateTeamRoleRequest) GetTeamID() string {
-	if o == nil {
+func (t *TeamsCreateTeamRoleRequest) GetTeamID() string {
+	if t == nil {
 		return ""
 	}
-	return o.TeamID
+	return t.TeamID
 }
 
-func (o *TeamsCreateTeamRoleRequest) GetV3TeamsCreateTeamRoleRequest() components.V3TeamsCreateTeamRoleRequest {
-	if o == nil {
+func (t *TeamsCreateTeamRoleRequest) GetV3TeamsCreateTeamRoleRequest() components.V3TeamsCreateTeamRoleRequest {
+	if t == nil {
 		return components.V3TeamsCreateTeamRoleRequest{}
 	}
-	return o.V3TeamsCreateTeamRoleRequest
+	return t.V3TeamsCreateTeamRoleRequest
 }
 
 // TeamsCreateTeamRoleResponseBody - The request has succeeded and a new resource has been created as a result.
@@ -30,11 +30,11 @@ type TeamsCreateTeamRoleResponseBody struct {
 	Data components.V3TeamsTeamBaseResponse `json:"data"`
 }
 
-func (o *TeamsCreateTeamRoleResponseBody) GetData() components.V3TeamsTeamBaseResponse {
-	if o == nil {
+func (t *TeamsCreateTeamRoleResponseBody) GetData() components.V3TeamsTeamBaseResponse {
+	if t == nil {
 		return components.V3TeamsTeamBaseResponse{}
 	}
-	return o.Data
+	return t.Data
 }
 
 type TeamsCreateTeamRoleResponse struct {
@@ -43,16 +43,16 @@ type TeamsCreateTeamRoleResponse struct {
 	Object *TeamsCreateTeamRoleResponseBody
 }
 
-func (o *TeamsCreateTeamRoleResponse) GetHTTPMeta() components.HTTPMetadata {
-	if o == nil {
+func (t *TeamsCreateTeamRoleResponse) GetHTTPMeta() components.HTTPMetadata {
+	if t == nil {
 		return components.HTTPMetadata{}
 	}
-	return o.HTTPMeta
+	return t.HTTPMeta
 }
 
-func (o *TeamsCreateTeamRoleResponse) GetObject() *TeamsCreateTeamRoleResponseBody {
-	if o == nil {
+func (t *TeamsCreateTeamRoleResponse) GetObject() *TeamsCreateTeamRoleResponseBody {
+	if t == nil {
 		return nil
 	}
-	return o.Object
+	return t.Object
 }

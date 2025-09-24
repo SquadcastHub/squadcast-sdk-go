@@ -22,16 +22,16 @@ func (v *V3WorkflowsComponentAndImpact) UnmarshalJSON(data []byte) error {
 	return nil
 }
 
-func (o *V3WorkflowsComponentAndImpact) GetComponentID() int {
-	if o == nil {
+func (v *V3WorkflowsComponentAndImpact) GetComponentID() int {
+	if v == nil {
 		return 0
 	}
-	return o.ComponentID
+	return v.ComponentID
 }
 
-func (o *V3WorkflowsComponentAndImpact) GetImpactStatusID() int {
-	if o == nil {
+func (v *V3WorkflowsComponentAndImpact) GetImpactStatusID() int {
+	if v == nil {
 		return 0
 	}
-	return o.ImpactStatusID
+	return v.ImpactStatusID
 }

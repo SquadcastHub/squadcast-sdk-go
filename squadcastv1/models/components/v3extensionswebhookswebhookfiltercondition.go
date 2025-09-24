@@ -8,23 +8,23 @@ type V3ExtensionsWebhooksWebhookFilterCondition struct {
 	RHS *string `json:"rhs,omitempty"`
 }
 
-func (o *V3ExtensionsWebhooksWebhookFilterCondition) GetOp() *string {
-	if o == nil {
+func (v *V3ExtensionsWebhooksWebhookFilterCondition) GetOp() *string {
+	if v == nil {
 		return nil
 	}
-	return o.Op
+	return v.Op
 }
 
-func (o *V3ExtensionsWebhooksWebhookFilterCondition) GetLHS() *string {
-	if o == nil {
+func (v *V3ExtensionsWebhooksWebhookFilterCondition) GetLHS() *string {
+	if v == nil {
 		return nil
 	}
-	return o.LHS
+	return v.LHS
 }
 
-func (o *V3ExtensionsWebhooksWebhookFilterCondition) GetRHS() *string {
-	if o == nil {
+func (v *V3ExtensionsWebhooksWebhookFilterCondition) GetRHS() *string {
+	if v == nil {
 		return nil
 	}
-	return o.RHS
+	return v.RHS
 }

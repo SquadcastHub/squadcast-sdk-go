@@ -84,11 +84,11 @@ func (v *V3WorkflowsUpdateIncidentPriorityUpdateData) UnmarshalJSON(data []byte)
 	return nil
 }
 
-func (o *V3WorkflowsUpdateIncidentPriorityUpdateData) GetPriority() *V3WorkflowsUpdateIncidentPriorityUpdatePriority {
-	if o == nil {
+func (v *V3WorkflowsUpdateIncidentPriorityUpdateData) GetPriority() *V3WorkflowsUpdateIncidentPriorityUpdatePriority {
+	if v == nil {
 		return nil
 	}
-	return o.Priority
+	return v.Priority
 }
 
 type V3WorkflowsUpdateIncidentPriorityUpdate struct {
@@ -107,16 +107,16 @@ func (v *V3WorkflowsUpdateIncidentPriorityUpdate) UnmarshalJSON(data []byte) err
 	return nil
 }
 
-func (o *V3WorkflowsUpdateIncidentPriorityUpdate) GetName() V3WorkflowsUpdateIncidentPriorityUpdateName {
-	if o == nil {
+func (v *V3WorkflowsUpdateIncidentPriorityUpdate) GetName() V3WorkflowsUpdateIncidentPriorityUpdateName {
+	if v == nil {
 		return V3WorkflowsUpdateIncidentPriorityUpdateName("")
 	}
-	return o.Name
+	return v.Name
 }
 
-func (o *V3WorkflowsUpdateIncidentPriorityUpdate) GetData() *V3WorkflowsUpdateIncidentPriorityUpdateData {
-	if o == nil {
+func (v *V3WorkflowsUpdateIncidentPriorityUpdate) GetData() *V3WorkflowsUpdateIncidentPriorityUpdateData {
+	if v == nil {
 		return nil
 	}
-	return o.Data
+	return v.Data
 }

@@ -6,11 +6,11 @@ type Insights struct {
 	ErrorBudgetConsumptionForPast30days int64 `json:"error_budget_consumption_for_past_30days"`
 }
 
-func (o *Insights) GetErrorBudgetConsumptionForPast30days() int64 {
-	if o == nil {
+func (i *Insights) GetErrorBudgetConsumptionForPast30days() int64 {
+	if i == nil {
 		return 0
 	}
-	return o.ErrorBudgetConsumptionForPast30days
+	return i.ErrorBudgetConsumptionForPast30days
 }
 
 type V3SLOSLOWithInsightsResponse struct {
@@ -18,16 +18,16 @@ type V3SLOSLOWithInsightsResponse struct {
 	Slo      V3SloSlo  `json:"slo"`
 }
 
-func (o *V3SLOSLOWithInsightsResponse) GetInsights() *Insights {
-	if o == nil {
+func (v *V3SLOSLOWithInsightsResponse) GetInsights() *Insights {
+	if v == nil {
 		return nil
 	}
-	return o.Insights
+	return v.Insights
 }
 
-func (o *V3SLOSLOWithInsightsResponse) GetSlo() V3SloSlo {
-	if o == nil {
+func (v *V3SLOSLOWithInsightsResponse) GetSlo() V3SloSlo {
+	if v == nil {
 		return V3SloSlo{}
 	}
-	return o.Slo
+	return v.Slo
 }

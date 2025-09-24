@@ -9,23 +9,23 @@ type V3IncidentsPostmortemsPostmortemAttachmentRequest struct {
 	FileSize *string `json:"file_size,omitempty"`
 }
 
-func (o *V3IncidentsPostmortemsPostmortemAttachmentRequest) GetKey() *string {
-	if o == nil {
+func (v *V3IncidentsPostmortemsPostmortemAttachmentRequest) GetKey() *string {
+	if v == nil {
 		return nil
 	}
-	return o.Key
+	return v.Key
 }
 
-func (o *V3IncidentsPostmortemsPostmortemAttachmentRequest) GetMimeType() *string {
-	if o == nil {
+func (v *V3IncidentsPostmortemsPostmortemAttachmentRequest) GetMimeType() *string {
+	if v == nil {
 		return nil
 	}
-	return o.MimeType
+	return v.MimeType
 }
 
-func (o *V3IncidentsPostmortemsPostmortemAttachmentRequest) GetFileSize() *string {
-	if o == nil {
+func (v *V3IncidentsPostmortemsPostmortemAttachmentRequest) GetFileSize() *string {
+	if v == nil {
 		return nil
 	}
-	return o.FileSize
+	return v.FileSize
 }

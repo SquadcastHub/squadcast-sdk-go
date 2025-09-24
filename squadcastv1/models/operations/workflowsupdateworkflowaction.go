@@ -12,25 +12,25 @@ type WorkflowsUpdateWorkflowActionRequest struct {
 	V3WorkflowsActionRequestUpdate components.V3WorkflowsActionRequestUpdate `request:"mediaType=application/json"`
 }
 
-func (o *WorkflowsUpdateWorkflowActionRequest) GetWorkflowID() string {
-	if o == nil {
+func (w *WorkflowsUpdateWorkflowActionRequest) GetWorkflowID() string {
+	if w == nil {
 		return ""
 	}
-	return o.WorkflowID
+	return w.WorkflowID
 }
 
-func (o *WorkflowsUpdateWorkflowActionRequest) GetActionID() string {
-	if o == nil {
+func (w *WorkflowsUpdateWorkflowActionRequest) GetActionID() string {
+	if w == nil {
 		return ""
 	}
-	return o.ActionID
+	return w.ActionID
 }
 
-func (o *WorkflowsUpdateWorkflowActionRequest) GetV3WorkflowsActionRequestUpdate() components.V3WorkflowsActionRequestUpdate {
-	if o == nil {
+func (w *WorkflowsUpdateWorkflowActionRequest) GetV3WorkflowsActionRequestUpdate() components.V3WorkflowsActionRequestUpdate {
+	if w == nil {
 		return components.V3WorkflowsActionRequestUpdate{}
 	}
-	return o.V3WorkflowsActionRequestUpdate
+	return w.V3WorkflowsActionRequestUpdate
 }
 
 type WorkflowsUpdateWorkflowActionResponse struct {
@@ -39,16 +39,16 @@ type WorkflowsUpdateWorkflowActionResponse struct {
 	V3WorkflowsActionResponse *components.V3WorkflowsActionResponse
 }
 
-func (o *WorkflowsUpdateWorkflowActionResponse) GetHTTPMeta() components.HTTPMetadata {
-	if o == nil {
+func (w *WorkflowsUpdateWorkflowActionResponse) GetHTTPMeta() components.HTTPMetadata {
+	if w == nil {
 		return components.HTTPMetadata{}
 	}
-	return o.HTTPMeta
+	return w.HTTPMeta
 }
 
-func (o *WorkflowsUpdateWorkflowActionResponse) GetV3WorkflowsActionResponse() *components.V3WorkflowsActionResponse {
-	if o == nil {
+func (w *WorkflowsUpdateWorkflowActionResponse) GetV3WorkflowsActionResponse() *components.V3WorkflowsActionResponse {
+	if w == nil {
 		return nil
 	}
-	return o.V3WorkflowsActionResponse
+	return w.V3WorkflowsActionResponse
 }

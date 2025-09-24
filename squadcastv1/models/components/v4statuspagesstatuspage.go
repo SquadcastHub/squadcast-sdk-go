@@ -7,18 +7,18 @@ type V4StatusPagesStatusPageComponent struct {
 	Name string `json:"name"`
 }
 
-func (o *V4StatusPagesStatusPageComponent) GetID() int64 {
-	if o == nil {
+func (v *V4StatusPagesStatusPageComponent) GetID() int64 {
+	if v == nil {
 		return 0
 	}
-	return o.ID
+	return v.ID
 }
 
-func (o *V4StatusPagesStatusPageComponent) GetName() string {
-	if o == nil {
+func (v *V4StatusPagesStatusPageComponent) GetName() string {
+	if v == nil {
 		return ""
 	}
-	return o.Name
+	return v.Name
 }
 
 type V4StatusPagesStatusPageStatus struct {
@@ -28,32 +28,32 @@ type V4StatusPagesStatusPageStatus struct {
 	Slug  string `json:"slug"`
 }
 
-func (o *V4StatusPagesStatusPageStatus) GetID() int64 {
-	if o == nil {
+func (v *V4StatusPagesStatusPageStatus) GetID() int64 {
+	if v == nil {
 		return 0
 	}
-	return o.ID
+	return v.ID
 }
 
-func (o *V4StatusPagesStatusPageStatus) GetName() string {
-	if o == nil {
+func (v *V4StatusPagesStatusPageStatus) GetName() string {
+	if v == nil {
 		return ""
 	}
-	return o.Name
+	return v.Name
 }
 
-func (o *V4StatusPagesStatusPageStatus) GetColor() string {
-	if o == nil {
+func (v *V4StatusPagesStatusPageStatus) GetColor() string {
+	if v == nil {
 		return ""
 	}
-	return o.Color
+	return v.Color
 }
 
-func (o *V4StatusPagesStatusPageStatus) GetSlug() string {
-	if o == nil {
+func (v *V4StatusPagesStatusPageStatus) GetSlug() string {
+	if v == nil {
 		return ""
 	}
-	return o.Slug
+	return v.Slug
 }
 
 type StatusMaintenance struct {
@@ -63,32 +63,32 @@ type StatusMaintenance struct {
 	Slug  string `json:"slug"`
 }
 
-func (o *StatusMaintenance) GetID() int64 {
-	if o == nil {
+func (s *StatusMaintenance) GetID() int64 {
+	if s == nil {
 		return 0
 	}
-	return o.ID
+	return s.ID
 }
 
-func (o *StatusMaintenance) GetName() string {
-	if o == nil {
+func (s *StatusMaintenance) GetName() string {
+	if s == nil {
 		return ""
 	}
-	return o.Name
+	return s.Name
 }
 
-func (o *StatusMaintenance) GetColor() string {
-	if o == nil {
+func (s *StatusMaintenance) GetColor() string {
+	if s == nil {
 		return ""
 	}
-	return o.Color
+	return s.Color
 }
 
-func (o *StatusMaintenance) GetSlug() string {
-	if o == nil {
+func (s *StatusMaintenance) GetSlug() string {
+	if s == nil {
 		return ""
 	}
-	return o.Slug
+	return s.Slug
 }
 
 type V4StatusPagesStatusPage struct {
@@ -113,135 +113,135 @@ type V4StatusPagesStatusPage struct {
 	OwnerID                 string                             `json:"ownerID"`
 }
 
-func (o *V4StatusPagesStatusPage) GetID() int64 {
-	if o == nil {
+func (v *V4StatusPagesStatusPage) GetID() int64 {
+	if v == nil {
 		return 0
 	}
-	return o.ID
+	return v.ID
 }
 
-func (o *V4StatusPagesStatusPage) GetName() string {
-	if o == nil {
+func (v *V4StatusPagesStatusPage) GetName() string {
+	if v == nil {
 		return ""
 	}
-	return o.Name
+	return v.Name
 }
 
-func (o *V4StatusPagesStatusPage) GetIsPublic() bool {
-	if o == nil {
+func (v *V4StatusPagesStatusPage) GetIsPublic() bool {
+	if v == nil {
 		return false
 	}
-	return o.IsPublic
+	return v.IsPublic
 }
 
-func (o *V4StatusPagesStatusPage) GetDomainName() string {
-	if o == nil {
+func (v *V4StatusPagesStatusPage) GetDomainName() string {
+	if v == nil {
 		return ""
 	}
-	return o.DomainName
+	return v.DomainName
 }
 
-func (o *V4StatusPagesStatusPage) GetCustomDomainName() string {
-	if o == nil {
+func (v *V4StatusPagesStatusPage) GetCustomDomainName() string {
+	if v == nil {
 		return ""
 	}
-	return o.CustomDomainName
+	return v.CustomDomainName
 }
 
-func (o *V4StatusPagesStatusPage) GetTimezone() string {
-	if o == nil {
+func (v *V4StatusPagesStatusPage) GetTimezone() string {
+	if v == nil {
 		return ""
 	}
-	return o.Timezone
+	return v.Timezone
 }
 
-func (o *V4StatusPagesStatusPage) GetLogoURL() string {
-	if o == nil {
+func (v *V4StatusPagesStatusPage) GetLogoURL() string {
+	if v == nil {
 		return ""
 	}
-	return o.LogoURL
+	return v.LogoURL
 }
 
-func (o *V4StatusPagesStatusPage) GetComponents() []V4StatusPagesStatusPageComponent {
-	if o == nil {
+func (v *V4StatusPagesStatusPage) GetComponents() []V4StatusPagesStatusPageComponent {
+	if v == nil {
 		return []V4StatusPagesStatusPageComponent{}
 	}
-	return o.Components
+	return v.Components
 }
 
-func (o *V4StatusPagesStatusPage) GetIsCustomDomainEnabled() bool {
-	if o == nil {
+func (v *V4StatusPagesStatusPage) GetIsCustomDomainEnabled() bool {
+	if v == nil {
 		return false
 	}
-	return o.IsCustomDomainEnabled
+	return v.IsCustomDomainEnabled
 }
 
-func (o *V4StatusPagesStatusPage) GetIsCustomARecordVerified() bool {
-	if o == nil {
+func (v *V4StatusPagesStatusPage) GetIsCustomARecordVerified() bool {
+	if v == nil {
 		return false
 	}
-	return o.IsCustomARecordVerified
+	return v.IsCustomARecordVerified
 }
 
-func (o *V4StatusPagesStatusPage) GetIsCustomTxtVerified() bool {
-	if o == nil {
+func (v *V4StatusPagesStatusPage) GetIsCustomTxtVerified() bool {
+	if v == nil {
 		return false
 	}
-	return o.IsCustomTxtVerified
+	return v.IsCustomTxtVerified
 }
 
-func (o *V4StatusPagesStatusPage) GetTxtRecord() string {
-	if o == nil {
+func (v *V4StatusPagesStatusPage) GetTxtRecord() string {
+	if v == nil {
 		return ""
 	}
-	return o.TxtRecord
+	return v.TxtRecord
 }
 
-func (o *V4StatusPagesStatusPage) GetARecord() string {
-	if o == nil {
+func (v *V4StatusPagesStatusPage) GetARecord() string {
+	if v == nil {
 		return ""
 	}
-	return o.ARecord
+	return v.ARecord
 }
 
-func (o *V4StatusPagesStatusPage) GetSubscribersCount() int64 {
-	if o == nil {
+func (v *V4StatusPagesStatusPage) GetSubscribersCount() int64 {
+	if v == nil {
 		return 0
 	}
-	return o.SubscribersCount
+	return v.SubscribersCount
 }
 
-func (o *V4StatusPagesStatusPage) GetStatus() V4StatusPagesStatusPageStatus {
-	if o == nil {
+func (v *V4StatusPagesStatusPage) GetStatus() V4StatusPagesStatusPageStatus {
+	if v == nil {
 		return V4StatusPagesStatusPageStatus{}
 	}
-	return o.Status
+	return v.Status
 }
 
-func (o *V4StatusPagesStatusPage) GetUnderMaintenance() bool {
-	if o == nil {
+func (v *V4StatusPagesStatusPage) GetUnderMaintenance() bool {
+	if v == nil {
 		return false
 	}
-	return o.UnderMaintenance
+	return v.UnderMaintenance
 }
 
-func (o *V4StatusPagesStatusPage) GetStatusMaintenance() StatusMaintenance {
-	if o == nil {
+func (v *V4StatusPagesStatusPage) GetStatusMaintenance() StatusMaintenance {
+	if v == nil {
 		return StatusMaintenance{}
 	}
-	return o.StatusMaintenance
+	return v.StatusMaintenance
 }
 
-func (o *V4StatusPagesStatusPage) GetOwnerType() string {
-	if o == nil {
+func (v *V4StatusPagesStatusPage) GetOwnerType() string {
+	if v == nil {
 		return ""
 	}
-	return o.OwnerType
+	return v.OwnerType
 }
 
-func (o *V4StatusPagesStatusPage) GetOwnerID() string {
-	if o == nil {
+func (v *V4StatusPagesStatusPage) GetOwnerID() string {
+	if v == nil {
 		return ""
 	}
-	return o.OwnerID
+	return v.OwnerID
 }

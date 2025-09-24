@@ -10,37 +10,37 @@ type V4StatusPagesComponentsCreateComponentRequest struct {
 	ServiceID         *string `json:"serviceID,omitempty"`
 }
 
-func (o *V4StatusPagesComponentsCreateComponentRequest) GetName() string {
-	if o == nil {
+func (v *V4StatusPagesComponentsCreateComponentRequest) GetName() string {
+	if v == nil {
 		return ""
 	}
-	return o.Name
+	return v.Name
 }
 
-func (o *V4StatusPagesComponentsCreateComponentRequest) GetDescription() *string {
-	if o == nil {
+func (v *V4StatusPagesComponentsCreateComponentRequest) GetDescription() *string {
+	if v == nil {
 		return nil
 	}
-	return o.Description
+	return v.Description
 }
 
-func (o *V4StatusPagesComponentsCreateComponentRequest) GetAllowSubscription() *bool {
-	if o == nil {
+func (v *V4StatusPagesComponentsCreateComponentRequest) GetAllowSubscription() *bool {
+	if v == nil {
 		return nil
 	}
-	return o.AllowSubscription
+	return v.AllowSubscription
 }
 
-func (o *V4StatusPagesComponentsCreateComponentRequest) GetGroupID() *string {
-	if o == nil {
+func (v *V4StatusPagesComponentsCreateComponentRequest) GetGroupID() *string {
+	if v == nil {
 		return nil
 	}
-	return o.GroupID
+	return v.GroupID
 }
 
-func (o *V4StatusPagesComponentsCreateComponentRequest) GetServiceID() *string {
-	if o == nil {
+func (v *V4StatusPagesComponentsCreateComponentRequest) GetServiceID() *string {
+	if v == nil {
 		return nil
 	}
-	return o.ServiceID
+	return v.ServiceID
 }

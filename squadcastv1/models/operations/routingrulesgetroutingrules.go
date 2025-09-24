@@ -10,22 +10,22 @@ type RoutingRulesGetRoutingRulesRequest struct {
 	ServiceID string `pathParam:"style=simple,explode=false,name=serviceID"`
 }
 
-func (o *RoutingRulesGetRoutingRulesRequest) GetServiceID() string {
-	if o == nil {
+func (r *RoutingRulesGetRoutingRulesRequest) GetServiceID() string {
+	if r == nil {
 		return ""
 	}
-	return o.ServiceID
+	return r.ServiceID
 }
 
 type RoutingRulesGetRoutingRulesData struct {
 	Rules []components.V3ServicesRoutingRulesRoutingRuleResponse `json:"rules"`
 }
 
-func (o *RoutingRulesGetRoutingRulesData) GetRules() []components.V3ServicesRoutingRulesRoutingRuleResponse {
-	if o == nil {
+func (r *RoutingRulesGetRoutingRulesData) GetRules() []components.V3ServicesRoutingRulesRoutingRuleResponse {
+	if r == nil {
 		return []components.V3ServicesRoutingRulesRoutingRuleResponse{}
 	}
-	return o.Rules
+	return r.Rules
 }
 
 // RoutingRulesGetRoutingRulesResponseBody - The request has succeeded.
@@ -33,11 +33,11 @@ type RoutingRulesGetRoutingRulesResponseBody struct {
 	Data RoutingRulesGetRoutingRulesData `json:"data"`
 }
 
-func (o *RoutingRulesGetRoutingRulesResponseBody) GetData() RoutingRulesGetRoutingRulesData {
-	if o == nil {
+func (r *RoutingRulesGetRoutingRulesResponseBody) GetData() RoutingRulesGetRoutingRulesData {
+	if r == nil {
 		return RoutingRulesGetRoutingRulesData{}
 	}
-	return o.Data
+	return r.Data
 }
 
 type RoutingRulesGetRoutingRulesResponse struct {
@@ -46,16 +46,16 @@ type RoutingRulesGetRoutingRulesResponse struct {
 	Object *RoutingRulesGetRoutingRulesResponseBody
 }
 
-func (o *RoutingRulesGetRoutingRulesResponse) GetHTTPMeta() components.HTTPMetadata {
-	if o == nil {
+func (r *RoutingRulesGetRoutingRulesResponse) GetHTTPMeta() components.HTTPMetadata {
+	if r == nil {
 		return components.HTTPMetadata{}
 	}
-	return o.HTTPMeta
+	return r.HTTPMeta
 }
 
-func (o *RoutingRulesGetRoutingRulesResponse) GetObject() *RoutingRulesGetRoutingRulesResponseBody {
-	if o == nil {
+func (r *RoutingRulesGetRoutingRulesResponse) GetObject() *RoutingRulesGetRoutingRulesResponseBody {
+	if r == nil {
 		return nil
 	}
-	return o.Object
+	return r.Object
 }

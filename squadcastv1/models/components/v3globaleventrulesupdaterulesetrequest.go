@@ -6,9 +6,9 @@ type V3GlobalEventRulesUpdateRulesetRequest struct {
 	CatchAllAction *V3GlobalEventRulesRuleActionUpdate `json:"catch_all_action,omitempty"`
 }
 
-func (o *V3GlobalEventRulesUpdateRulesetRequest) GetCatchAllAction() *V3GlobalEventRulesRuleActionUpdate {
-	if o == nil {
+func (v *V3GlobalEventRulesUpdateRulesetRequest) GetCatchAllAction() *V3GlobalEventRulesRuleActionUpdate {
+	if v == nil {
 		return nil
 	}
-	return o.CatchAllAction
+	return v.CatchAllAction
 }

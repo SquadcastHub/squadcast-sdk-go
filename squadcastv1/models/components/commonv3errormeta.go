@@ -16,8 +16,8 @@ const (
 )
 
 type Status struct {
-	Str     *string `queryParam:"inline" name:"status"`
-	Integer *int64  `queryParam:"inline" name:"status"`
+	Str     *string `queryParam:"inline,name=status"`
+	Integer *int64  `queryParam:"inline,name=status"`
 
 	Type StatusType
 }
@@ -88,16 +88,16 @@ func (c *CommonV3ErrorMeta) UnmarshalJSON(data []byte) error {
 	return nil
 }
 
-func (o *CommonV3ErrorMeta) GetStatus() Status {
-	if o == nil {
+func (c *CommonV3ErrorMeta) GetStatus() Status {
+	if c == nil {
 		return Status{}
 	}
-	return o.Status
+	return c.Status
 }
 
-func (o *CommonV3ErrorMeta) GetErrorMessage() string {
-	if o == nil {
+func (c *CommonV3ErrorMeta) GetErrorMessage() string {
+	if c == nil {
 		return ""
 	}
-	return o.ErrorMessage
+	return c.ErrorMessage
 }

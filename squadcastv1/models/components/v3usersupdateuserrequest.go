@@ -40,9 +40,9 @@ type V3UsersUpdateUserRequest struct {
 	Role V3UsersUpdateUserRequestRole `json:"role"`
 }
 
-func (o *V3UsersUpdateUserRequest) GetRole() V3UsersUpdateUserRequestRole {
-	if o == nil {
+func (v *V3UsersUpdateUserRequest) GetRole() V3UsersUpdateUserRequestRole {
+	if v == nil {
 		return V3UsersUpdateUserRequestRole("")
 	}
-	return o.Role
+	return v.Role
 }

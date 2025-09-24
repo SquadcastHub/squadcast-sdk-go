@@ -12,23 +12,23 @@ type V3RunbooksUpdateRunbookRequest struct {
 	EntityOwner *CommonV3EntityOwner `json:"entity_owner,omitempty"`
 }
 
-func (o *V3RunbooksUpdateRunbookRequest) GetName() string {
-	if o == nil {
+func (v *V3RunbooksUpdateRunbookRequest) GetName() string {
+	if v == nil {
 		return ""
 	}
-	return o.Name
+	return v.Name
 }
 
-func (o *V3RunbooksUpdateRunbookRequest) GetSteps() []V3RunbooksStep {
-	if o == nil {
+func (v *V3RunbooksUpdateRunbookRequest) GetSteps() []V3RunbooksStep {
+	if v == nil {
 		return []V3RunbooksStep{}
 	}
-	return o.Steps
+	return v.Steps
 }
 
-func (o *V3RunbooksUpdateRunbookRequest) GetEntityOwner() *CommonV3EntityOwner {
-	if o == nil {
+func (v *V3RunbooksUpdateRunbookRequest) GetEntityOwner() *CommonV3EntityOwner {
+	if v == nil {
 		return nil
 	}
-	return o.EntityOwner
+	return v.EntityOwner
 }

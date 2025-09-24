@@ -7,9 +7,9 @@ type V3IncidentsMergeIncidentEntityReference struct {
 	ID string `json:"id"`
 }
 
-func (o *V3IncidentsMergeIncidentEntityReference) GetID() string {
-	if o == nil {
+func (v *V3IncidentsMergeIncidentEntityReference) GetID() string {
+	if v == nil {
 		return ""
 	}
-	return o.ID
+	return v.ID
 }

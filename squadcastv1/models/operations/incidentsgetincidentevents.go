@@ -22,50 +22,50 @@ type IncidentsGetIncidentEventsRequest struct {
 	Deduped string `queryParam:"style=form,explode=true,name=deduped"`
 }
 
-func (o *IncidentsGetIncidentEventsRequest) GetIncidentID() string {
-	if o == nil {
+func (i *IncidentsGetIncidentEventsRequest) GetIncidentID() string {
+	if i == nil {
 		return ""
 	}
-	return o.IncidentID
+	return i.IncidentID
 }
 
-func (o *IncidentsGetIncidentEventsRequest) GetOffset() string {
-	if o == nil {
+func (i *IncidentsGetIncidentEventsRequest) GetOffset() string {
+	if i == nil {
 		return ""
 	}
-	return o.Offset
+	return i.Offset
 }
 
-func (o *IncidentsGetIncidentEventsRequest) GetLimit() string {
-	if o == nil {
+func (i *IncidentsGetIncidentEventsRequest) GetLimit() string {
+	if i == nil {
 		return ""
 	}
-	return o.Limit
+	return i.Limit
 }
 
-func (o *IncidentsGetIncidentEventsRequest) GetSort() string {
-	if o == nil {
+func (i *IncidentsGetIncidentEventsRequest) GetSort() string {
+	if i == nil {
 		return ""
 	}
-	return o.Sort
+	return i.Sort
 }
 
-func (o *IncidentsGetIncidentEventsRequest) GetDeduped() string {
-	if o == nil {
+func (i *IncidentsGetIncidentEventsRequest) GetDeduped() string {
+	if i == nil {
 		return ""
 	}
-	return o.Deduped
+	return i.Deduped
 }
 
 type IncidentsGetIncidentEventsData struct {
 	Events []components.V3IncidentsIncidentEventResponse `json:"events"`
 }
 
-func (o *IncidentsGetIncidentEventsData) GetEvents() []components.V3IncidentsIncidentEventResponse {
-	if o == nil {
+func (i *IncidentsGetIncidentEventsData) GetEvents() []components.V3IncidentsIncidentEventResponse {
+	if i == nil {
 		return []components.V3IncidentsIncidentEventResponse{}
 	}
-	return o.Events
+	return i.Events
 }
 
 type IncidentsGetIncidentEventsMeta struct {
@@ -75,32 +75,32 @@ type IncidentsGetIncidentEventsMeta struct {
 	Next    *string `json:"next,omitempty"`
 }
 
-func (o *IncidentsGetIncidentEventsMeta) GetTotal() int64 {
-	if o == nil {
+func (i *IncidentsGetIncidentEventsMeta) GetTotal() int64 {
+	if i == nil {
 		return 0
 	}
-	return o.Total
+	return i.Total
 }
 
-func (o *IncidentsGetIncidentEventsMeta) GetCount() int64 {
-	if o == nil {
+func (i *IncidentsGetIncidentEventsMeta) GetCount() int64 {
+	if i == nil {
 		return 0
 	}
-	return o.Count
+	return i.Count
 }
 
-func (o *IncidentsGetIncidentEventsMeta) GetCurrent() string {
-	if o == nil {
+func (i *IncidentsGetIncidentEventsMeta) GetCurrent() string {
+	if i == nil {
 		return ""
 	}
-	return o.Current
+	return i.Current
 }
 
-func (o *IncidentsGetIncidentEventsMeta) GetNext() *string {
-	if o == nil {
+func (i *IncidentsGetIncidentEventsMeta) GetNext() *string {
+	if i == nil {
 		return nil
 	}
-	return o.Next
+	return i.Next
 }
 
 // IncidentsGetIncidentEventsResponseBody - The request has succeeded.
@@ -109,18 +109,18 @@ type IncidentsGetIncidentEventsResponseBody struct {
 	Meta IncidentsGetIncidentEventsMeta `json:"meta"`
 }
 
-func (o *IncidentsGetIncidentEventsResponseBody) GetData() IncidentsGetIncidentEventsData {
-	if o == nil {
+func (i *IncidentsGetIncidentEventsResponseBody) GetData() IncidentsGetIncidentEventsData {
+	if i == nil {
 		return IncidentsGetIncidentEventsData{}
 	}
-	return o.Data
+	return i.Data
 }
 
-func (o *IncidentsGetIncidentEventsResponseBody) GetMeta() IncidentsGetIncidentEventsMeta {
-	if o == nil {
+func (i *IncidentsGetIncidentEventsResponseBody) GetMeta() IncidentsGetIncidentEventsMeta {
+	if i == nil {
 		return IncidentsGetIncidentEventsMeta{}
 	}
-	return o.Meta
+	return i.Meta
 }
 
 type IncidentsGetIncidentEventsResponse struct {
@@ -129,16 +129,16 @@ type IncidentsGetIncidentEventsResponse struct {
 	Object *IncidentsGetIncidentEventsResponseBody
 }
 
-func (o *IncidentsGetIncidentEventsResponse) GetHTTPMeta() components.HTTPMetadata {
-	if o == nil {
+func (i *IncidentsGetIncidentEventsResponse) GetHTTPMeta() components.HTTPMetadata {
+	if i == nil {
 		return components.HTTPMetadata{}
 	}
-	return o.HTTPMeta
+	return i.HTTPMeta
 }
 
-func (o *IncidentsGetIncidentEventsResponse) GetObject() *IncidentsGetIncidentEventsResponseBody {
-	if o == nil {
+func (i *IncidentsGetIncidentEventsResponse) GetObject() *IncidentsGetIncidentEventsResponseBody {
+	if i == nil {
 		return nil
 	}
-	return o.Object
+	return i.Object
 }

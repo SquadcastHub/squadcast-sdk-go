@@ -10,11 +10,11 @@ type GlobalOncallReminderRulesDeleteGlobalOncallReminderRulesRequest struct {
 	OwnerID string `queryParam:"style=form,explode=true,name=owner_id"`
 }
 
-func (o *GlobalOncallReminderRulesDeleteGlobalOncallReminderRulesRequest) GetOwnerID() string {
-	if o == nil {
+func (g *GlobalOncallReminderRulesDeleteGlobalOncallReminderRulesRequest) GetOwnerID() string {
+	if g == nil {
 		return ""
 	}
-	return o.OwnerID
+	return g.OwnerID
 }
 
 // GlobalOncallReminderRulesDeleteGlobalOncallReminderRulesResponseBody - There is no content to send for this request, but the headers may be useful.
@@ -26,16 +26,16 @@ type GlobalOncallReminderRulesDeleteGlobalOncallReminderRulesResponse struct {
 	Body     []byte
 }
 
-func (o *GlobalOncallReminderRulesDeleteGlobalOncallReminderRulesResponse) GetHTTPMeta() components.HTTPMetadata {
-	if o == nil {
+func (g *GlobalOncallReminderRulesDeleteGlobalOncallReminderRulesResponse) GetHTTPMeta() components.HTTPMetadata {
+	if g == nil {
 		return components.HTTPMetadata{}
 	}
-	return o.HTTPMeta
+	return g.HTTPMeta
 }
 
-func (o *GlobalOncallReminderRulesDeleteGlobalOncallReminderRulesResponse) GetBody() []byte {
-	if o == nil {
+func (g *GlobalOncallReminderRulesDeleteGlobalOncallReminderRulesResponse) GetBody() []byte {
+	if g == nil {
 		return nil
 	}
-	return o.Body
+	return g.Body
 }

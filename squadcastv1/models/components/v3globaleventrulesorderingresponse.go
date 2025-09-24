@@ -6,9 +6,9 @@ type V3GlobalEventRulesOrderingResponse struct {
 	Ordering []int64 `json:"ordering"`
 }
 
-func (o *V3GlobalEventRulesOrderingResponse) GetOrdering() []int64 {
-	if o == nil {
+func (v *V3GlobalEventRulesOrderingResponse) GetOrdering() []int64 {
+	if v == nil {
 		return []int64{}
 	}
-	return o.Ordering
+	return v.Ordering
 }

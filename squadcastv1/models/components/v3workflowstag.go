@@ -8,23 +8,23 @@ type V3WorkflowsTag struct {
 	Value *string `json:"value,omitempty"`
 }
 
-func (o *V3WorkflowsTag) GetColor() *string {
-	if o == nil {
+func (v *V3WorkflowsTag) GetColor() *string {
+	if v == nil {
 		return nil
 	}
-	return o.Color
+	return v.Color
 }
 
-func (o *V3WorkflowsTag) GetKey() *string {
-	if o == nil {
+func (v *V3WorkflowsTag) GetKey() *string {
+	if v == nil {
 		return nil
 	}
-	return o.Key
+	return v.Key
 }
 
-func (o *V3WorkflowsTag) GetValue() *string {
-	if o == nil {
+func (v *V3WorkflowsTag) GetValue() *string {
+	if v == nil {
 		return nil
 	}
-	return o.Value
+	return v.Value
 }

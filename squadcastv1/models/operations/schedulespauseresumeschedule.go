@@ -38,11 +38,11 @@ type SchedulesPauseresumeScheduleRequestBody struct {
 	Action *Action `json:"action,omitempty"`
 }
 
-func (o *SchedulesPauseresumeScheduleRequestBody) GetAction() *Action {
-	if o == nil {
+func (s *SchedulesPauseresumeScheduleRequestBody) GetAction() *Action {
+	if s == nil {
 		return nil
 	}
-	return o.Action
+	return s.Action
 }
 
 type SchedulesPauseresumeScheduleRequest struct {
@@ -50,18 +50,18 @@ type SchedulesPauseresumeScheduleRequest struct {
 	RequestBody SchedulesPauseresumeScheduleRequestBody `request:"mediaType=application/json"`
 }
 
-func (o *SchedulesPauseresumeScheduleRequest) GetScheduleID() string {
-	if o == nil {
+func (s *SchedulesPauseresumeScheduleRequest) GetScheduleID() string {
+	if s == nil {
 		return ""
 	}
-	return o.ScheduleID
+	return s.ScheduleID
 }
 
-func (o *SchedulesPauseresumeScheduleRequest) GetRequestBody() SchedulesPauseresumeScheduleRequestBody {
-	if o == nil {
+func (s *SchedulesPauseresumeScheduleRequest) GetRequestBody() SchedulesPauseresumeScheduleRequestBody {
+	if s == nil {
 		return SchedulesPauseresumeScheduleRequestBody{}
 	}
-	return o.RequestBody
+	return s.RequestBody
 }
 
 // SchedulesPauseresumeScheduleResponseBody - The request has succeeded.
@@ -69,11 +69,11 @@ type SchedulesPauseresumeScheduleResponseBody struct {
 	Data components.V4PauseResumeScheduleResponse `json:"data"`
 }
 
-func (o *SchedulesPauseresumeScheduleResponseBody) GetData() components.V4PauseResumeScheduleResponse {
-	if o == nil {
+func (s *SchedulesPauseresumeScheduleResponseBody) GetData() components.V4PauseResumeScheduleResponse {
+	if s == nil {
 		return components.V4PauseResumeScheduleResponse{}
 	}
-	return o.Data
+	return s.Data
 }
 
 type SchedulesPauseresumeScheduleResponse struct {
@@ -82,16 +82,16 @@ type SchedulesPauseresumeScheduleResponse struct {
 	Object *SchedulesPauseresumeScheduleResponseBody
 }
 
-func (o *SchedulesPauseresumeScheduleResponse) GetHTTPMeta() components.HTTPMetadata {
-	if o == nil {
+func (s *SchedulesPauseresumeScheduleResponse) GetHTTPMeta() components.HTTPMetadata {
+	if s == nil {
 		return components.HTTPMetadata{}
 	}
-	return o.HTTPMeta
+	return s.HTTPMeta
 }
 
-func (o *SchedulesPauseresumeScheduleResponse) GetObject() *SchedulesPauseresumeScheduleResponseBody {
-	if o == nil {
+func (s *SchedulesPauseresumeScheduleResponse) GetObject() *SchedulesPauseresumeScheduleResponseBody {
+	if s == nil {
 		return nil
 	}
-	return o.Object
+	return s.Object
 }

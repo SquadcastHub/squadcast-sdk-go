@@ -13,32 +13,32 @@ type GlobalEventRulesGetRuleByIDRequest struct {
 	RuleID               string `pathParam:"style=simple,explode=false,name=rule_id"`
 }
 
-func (o *GlobalEventRulesGetRuleByIDRequest) GetGerID() int64 {
-	if o == nil {
+func (g *GlobalEventRulesGetRuleByIDRequest) GetGerID() int64 {
+	if g == nil {
 		return 0
 	}
-	return o.GerID
+	return g.GerID
 }
 
-func (o *GlobalEventRulesGetRuleByIDRequest) GetAlertSourceVersion() string {
-	if o == nil {
+func (g *GlobalEventRulesGetRuleByIDRequest) GetAlertSourceVersion() string {
+	if g == nil {
 		return ""
 	}
-	return o.AlertSourceVersion
+	return g.AlertSourceVersion
 }
 
-func (o *GlobalEventRulesGetRuleByIDRequest) GetAlertSourceShortname() string {
-	if o == nil {
+func (g *GlobalEventRulesGetRuleByIDRequest) GetAlertSourceShortname() string {
+	if g == nil {
 		return ""
 	}
-	return o.AlertSourceShortname
+	return g.AlertSourceShortname
 }
 
-func (o *GlobalEventRulesGetRuleByIDRequest) GetRuleID() string {
-	if o == nil {
+func (g *GlobalEventRulesGetRuleByIDRequest) GetRuleID() string {
+	if g == nil {
 		return ""
 	}
-	return o.RuleID
+	return g.RuleID
 }
 
 // GlobalEventRulesGetRuleByIDResponseBody - The request has succeeded.
@@ -46,11 +46,11 @@ type GlobalEventRulesGetRuleByIDResponseBody struct {
 	Data components.V3GlobalEventRulesRulesetRuleResponse `json:"data"`
 }
 
-func (o *GlobalEventRulesGetRuleByIDResponseBody) GetData() components.V3GlobalEventRulesRulesetRuleResponse {
-	if o == nil {
+func (g *GlobalEventRulesGetRuleByIDResponseBody) GetData() components.V3GlobalEventRulesRulesetRuleResponse {
+	if g == nil {
 		return components.V3GlobalEventRulesRulesetRuleResponse{}
 	}
-	return o.Data
+	return g.Data
 }
 
 type GlobalEventRulesGetRuleByIDResponse struct {
@@ -59,16 +59,16 @@ type GlobalEventRulesGetRuleByIDResponse struct {
 	Object *GlobalEventRulesGetRuleByIDResponseBody
 }
 
-func (o *GlobalEventRulesGetRuleByIDResponse) GetHTTPMeta() components.HTTPMetadata {
-	if o == nil {
+func (g *GlobalEventRulesGetRuleByIDResponse) GetHTTPMeta() components.HTTPMetadata {
+	if g == nil {
 		return components.HTTPMetadata{}
 	}
-	return o.HTTPMeta
+	return g.HTTPMeta
 }
 
-func (o *GlobalEventRulesGetRuleByIDResponse) GetObject() *GlobalEventRulesGetRuleByIDResponseBody {
-	if o == nil {
+func (g *GlobalEventRulesGetRuleByIDResponse) GetObject() *GlobalEventRulesGetRuleByIDResponseBody {
+	if g == nil {
 		return nil
 	}
-	return o.Object
+	return g.Object
 }

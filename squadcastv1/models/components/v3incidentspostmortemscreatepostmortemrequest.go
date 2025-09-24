@@ -13,44 +13,44 @@ type V3IncidentsPostmortemsCreatePostmortemRequest struct {
 	Attachments []V3IncidentsPostmortemsPostmortemAttachmentRequest `json:"attachments"`
 }
 
-func (o *V3IncidentsPostmortemsCreatePostmortemRequest) GetOwnerID() string {
-	if o == nil {
+func (v *V3IncidentsPostmortemsCreatePostmortemRequest) GetOwnerID() string {
+	if v == nil {
 		return ""
 	}
-	return o.OwnerID
+	return v.OwnerID
 }
 
-func (o *V3IncidentsPostmortemsCreatePostmortemRequest) GetTitle() string {
-	if o == nil {
+func (v *V3IncidentsPostmortemsCreatePostmortemRequest) GetTitle() string {
+	if v == nil {
 		return ""
 	}
-	return o.Title
+	return v.Title
 }
 
-func (o *V3IncidentsPostmortemsCreatePostmortemRequest) GetPostmortem() string {
-	if o == nil {
+func (v *V3IncidentsPostmortemsCreatePostmortemRequest) GetPostmortem() string {
+	if v == nil {
 		return ""
 	}
-	return o.Postmortem
+	return v.Postmortem
 }
 
-func (o *V3IncidentsPostmortemsCreatePostmortemRequest) GetStatus() V3IncidentsPostmortemsPostmortemStatus {
-	if o == nil {
+func (v *V3IncidentsPostmortemsCreatePostmortemRequest) GetStatus() V3IncidentsPostmortemsPostmortemStatus {
+	if v == nil {
 		return V3IncidentsPostmortemsPostmortemStatus("")
 	}
-	return o.Status
+	return v.Status
 }
 
-func (o *V3IncidentsPostmortemsCreatePostmortemRequest) GetFollowUps() []V3IncidentsPostmortemsPostmortemFollowUp {
-	if o == nil {
+func (v *V3IncidentsPostmortemsCreatePostmortemRequest) GetFollowUps() []V3IncidentsPostmortemsPostmortemFollowUp {
+	if v == nil {
 		return []V3IncidentsPostmortemsPostmortemFollowUp{}
 	}
-	return o.FollowUps
+	return v.FollowUps
 }
 
-func (o *V3IncidentsPostmortemsCreatePostmortemRequest) GetAttachments() []V3IncidentsPostmortemsPostmortemAttachmentRequest {
-	if o == nil {
+func (v *V3IncidentsPostmortemsCreatePostmortemRequest) GetAttachments() []V3IncidentsPostmortemsPostmortemAttachmentRequest {
+	if v == nil {
 		return []V3IncidentsPostmortemsPostmortemAttachmentRequest{}
 	}
-	return o.Attachments
+	return v.Attachments
 }

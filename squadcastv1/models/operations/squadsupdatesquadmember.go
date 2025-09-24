@@ -13,32 +13,32 @@ type SquadsUpdateSquadMemberRequest struct {
 	V4SquadsUpdateSquadMemberRequest components.V4SquadsUpdateSquadMemberRequest `request:"mediaType=application/json"`
 }
 
-func (o *SquadsUpdateSquadMemberRequest) GetSquadID() string {
-	if o == nil {
+func (s *SquadsUpdateSquadMemberRequest) GetSquadID() string {
+	if s == nil {
 		return ""
 	}
-	return o.SquadID
+	return s.SquadID
 }
 
-func (o *SquadsUpdateSquadMemberRequest) GetMemberID() string {
-	if o == nil {
+func (s *SquadsUpdateSquadMemberRequest) GetMemberID() string {
+	if s == nil {
 		return ""
 	}
-	return o.MemberID
+	return s.MemberID
 }
 
-func (o *SquadsUpdateSquadMemberRequest) GetReplaceWith() string {
-	if o == nil {
+func (s *SquadsUpdateSquadMemberRequest) GetReplaceWith() string {
+	if s == nil {
 		return ""
 	}
-	return o.ReplaceWith
+	return s.ReplaceWith
 }
 
-func (o *SquadsUpdateSquadMemberRequest) GetV4SquadsUpdateSquadMemberRequest() components.V4SquadsUpdateSquadMemberRequest {
-	if o == nil {
+func (s *SquadsUpdateSquadMemberRequest) GetV4SquadsUpdateSquadMemberRequest() components.V4SquadsUpdateSquadMemberRequest {
+	if s == nil {
 		return components.V4SquadsUpdateSquadMemberRequest{}
 	}
-	return o.V4SquadsUpdateSquadMemberRequest
+	return s.V4SquadsUpdateSquadMemberRequest
 }
 
 type SquadsUpdateSquadMemberResponse struct {
@@ -47,16 +47,16 @@ type SquadsUpdateSquadMemberResponse struct {
 	V4SquadsUpdateSquadMemberResponse *components.V4SquadsUpdateSquadMemberResponse
 }
 
-func (o *SquadsUpdateSquadMemberResponse) GetHTTPMeta() components.HTTPMetadata {
-	if o == nil {
+func (s *SquadsUpdateSquadMemberResponse) GetHTTPMeta() components.HTTPMetadata {
+	if s == nil {
 		return components.HTTPMetadata{}
 	}
-	return o.HTTPMeta
+	return s.HTTPMeta
 }
 
-func (o *SquadsUpdateSquadMemberResponse) GetV4SquadsUpdateSquadMemberResponse() *components.V4SquadsUpdateSquadMemberResponse {
-	if o == nil {
+func (s *SquadsUpdateSquadMemberResponse) GetV4SquadsUpdateSquadMemberResponse() *components.V4SquadsUpdateSquadMemberResponse {
+	if s == nil {
 		return nil
 	}
-	return o.V4SquadsUpdateSquadMemberResponse
+	return s.V4SquadsUpdateSquadMemberResponse
 }

@@ -6,11 +6,11 @@ type V4StatusPagesMaintenancesListMaintenancesResponseMeta struct {
 	TotalCount int64 `json:"totalCount"`
 }
 
-func (o *V4StatusPagesMaintenancesListMaintenancesResponseMeta) GetTotalCount() int64 {
-	if o == nil {
+func (v *V4StatusPagesMaintenancesListMaintenancesResponseMeta) GetTotalCount() int64 {
+	if v == nil {
 		return 0
 	}
-	return o.TotalCount
+	return v.TotalCount
 }
 
 type V4StatusPagesMaintenancesListMaintenancesResponse struct {
@@ -18,16 +18,16 @@ type V4StatusPagesMaintenancesListMaintenancesResponse struct {
 	Meta V4StatusPagesMaintenancesListMaintenancesResponseMeta `json:"meta"`
 }
 
-func (o *V4StatusPagesMaintenancesListMaintenancesResponse) GetData() []V4StatusPagesMaintenancesMaintenance {
-	if o == nil {
+func (v *V4StatusPagesMaintenancesListMaintenancesResponse) GetData() []V4StatusPagesMaintenancesMaintenance {
+	if v == nil {
 		return []V4StatusPagesMaintenancesMaintenance{}
 	}
-	return o.Data
+	return v.Data
 }
 
-func (o *V4StatusPagesMaintenancesListMaintenancesResponse) GetMeta() V4StatusPagesMaintenancesListMaintenancesResponseMeta {
-	if o == nil {
+func (v *V4StatusPagesMaintenancesListMaintenancesResponse) GetMeta() V4StatusPagesMaintenancesListMaintenancesResponseMeta {
+	if v == nil {
 		return V4StatusPagesMaintenancesListMaintenancesResponseMeta{}
 	}
-	return o.Meta
+	return v.Meta
 }

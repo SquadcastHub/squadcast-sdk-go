@@ -10,11 +10,11 @@ type GlobalEventRulesDeleteGlobalEventRuleByIDRequest struct {
 	GerID int64 `pathParam:"style=simple,explode=false,name=ger_id"`
 }
 
-func (o *GlobalEventRulesDeleteGlobalEventRuleByIDRequest) GetGerID() int64 {
-	if o == nil {
+func (g *GlobalEventRulesDeleteGlobalEventRuleByIDRequest) GetGerID() int64 {
+	if g == nil {
 		return 0
 	}
-	return o.GerID
+	return g.GerID
 }
 
 // GlobalEventRulesDeleteGlobalEventRuleByIDResponseBody - There is no content to send for this request, but the headers may be useful.
@@ -26,16 +26,16 @@ type GlobalEventRulesDeleteGlobalEventRuleByIDResponse struct {
 	Body     []byte
 }
 
-func (o *GlobalEventRulesDeleteGlobalEventRuleByIDResponse) GetHTTPMeta() components.HTTPMetadata {
-	if o == nil {
+func (g *GlobalEventRulesDeleteGlobalEventRuleByIDResponse) GetHTTPMeta() components.HTTPMetadata {
+	if g == nil {
 		return components.HTTPMetadata{}
 	}
-	return o.HTTPMeta
+	return g.HTTPMeta
 }
 
-func (o *GlobalEventRulesDeleteGlobalEventRuleByIDResponse) GetBody() []byte {
-	if o == nil {
+func (g *GlobalEventRulesDeleteGlobalEventRuleByIDResponse) GetBody() []byte {
+	if g == nil {
 		return nil
 	}
-	return o.Body
+	return g.Body
 }

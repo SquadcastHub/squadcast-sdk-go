@@ -12,25 +12,25 @@ type TeamsUpdateTeamMemberRequest struct {
 	V3TeamsUpdateTeamMemberRequest components.V3TeamsUpdateTeamMemberRequest `request:"mediaType=application/json"`
 }
 
-func (o *TeamsUpdateTeamMemberRequest) GetTeamID() string {
-	if o == nil {
+func (t *TeamsUpdateTeamMemberRequest) GetTeamID() string {
+	if t == nil {
 		return ""
 	}
-	return o.TeamID
+	return t.TeamID
 }
 
-func (o *TeamsUpdateTeamMemberRequest) GetMemberID() string {
-	if o == nil {
+func (t *TeamsUpdateTeamMemberRequest) GetMemberID() string {
+	if t == nil {
 		return ""
 	}
-	return o.MemberID
+	return t.MemberID
 }
 
-func (o *TeamsUpdateTeamMemberRequest) GetV3TeamsUpdateTeamMemberRequest() components.V3TeamsUpdateTeamMemberRequest {
-	if o == nil {
+func (t *TeamsUpdateTeamMemberRequest) GetV3TeamsUpdateTeamMemberRequest() components.V3TeamsUpdateTeamMemberRequest {
+	if t == nil {
 		return components.V3TeamsUpdateTeamMemberRequest{}
 	}
-	return o.V3TeamsUpdateTeamMemberRequest
+	return t.V3TeamsUpdateTeamMemberRequest
 }
 
 // TeamsUpdateTeamMemberResponseBody - The request has succeeded.
@@ -38,11 +38,11 @@ type TeamsUpdateTeamMemberResponseBody struct {
 	Data components.V3TeamsTeamMemberResponse `json:"data"`
 }
 
-func (o *TeamsUpdateTeamMemberResponseBody) GetData() components.V3TeamsTeamMemberResponse {
-	if o == nil {
+func (t *TeamsUpdateTeamMemberResponseBody) GetData() components.V3TeamsTeamMemberResponse {
+	if t == nil {
 		return components.V3TeamsTeamMemberResponse{}
 	}
-	return o.Data
+	return t.Data
 }
 
 type TeamsUpdateTeamMemberResponse struct {
@@ -51,16 +51,16 @@ type TeamsUpdateTeamMemberResponse struct {
 	Object *TeamsUpdateTeamMemberResponseBody
 }
 
-func (o *TeamsUpdateTeamMemberResponse) GetHTTPMeta() components.HTTPMetadata {
-	if o == nil {
+func (t *TeamsUpdateTeamMemberResponse) GetHTTPMeta() components.HTTPMetadata {
+	if t == nil {
 		return components.HTTPMetadata{}
 	}
-	return o.HTTPMeta
+	return t.HTTPMeta
 }
 
-func (o *TeamsUpdateTeamMemberResponse) GetObject() *TeamsUpdateTeamMemberResponseBody {
-	if o == nil {
+func (t *TeamsUpdateTeamMemberResponse) GetObject() *TeamsUpdateTeamMemberResponseBody {
+	if t == nil {
 		return nil
 	}
-	return o.Object
+	return t.Object
 }

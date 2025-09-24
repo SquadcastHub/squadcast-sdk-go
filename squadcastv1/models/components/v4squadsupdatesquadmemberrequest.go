@@ -6,9 +6,9 @@ type V4SquadsUpdateSquadMemberRequest struct {
 	Role string `json:"role"`
 }
 
-func (o *V4SquadsUpdateSquadMemberRequest) GetRole() string {
-	if o == nil {
+func (v *V4SquadsUpdateSquadMemberRequest) GetRole() string {
+	if v == nil {
 		return ""
 	}
-	return o.Role
+	return v.Role
 }

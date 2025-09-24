@@ -11,11 +11,11 @@ type WebhooksGetWebhookByIDRequest struct {
 	EventWebhookID string `pathParam:"style=simple,explode=false,name=eventWebhookID"`
 }
 
-func (o *WebhooksGetWebhookByIDRequest) GetEventWebhookID() string {
-	if o == nil {
+func (w *WebhooksGetWebhookByIDRequest) GetEventWebhookID() string {
+	if w == nil {
 		return ""
 	}
-	return o.EventWebhookID
+	return w.EventWebhookID
 }
 
 // WebhooksGetWebhookByIDResponseBody - The request has succeeded.
@@ -23,11 +23,11 @@ type WebhooksGetWebhookByIDResponseBody struct {
 	Data components.V3ExtensionsWebhooksWebhookResponse `json:"data"`
 }
 
-func (o *WebhooksGetWebhookByIDResponseBody) GetData() components.V3ExtensionsWebhooksWebhookResponse {
-	if o == nil {
+func (w *WebhooksGetWebhookByIDResponseBody) GetData() components.V3ExtensionsWebhooksWebhookResponse {
+	if w == nil {
 		return components.V3ExtensionsWebhooksWebhookResponse{}
 	}
-	return o.Data
+	return w.Data
 }
 
 type WebhooksGetWebhookByIDResponse struct {
@@ -36,16 +36,16 @@ type WebhooksGetWebhookByIDResponse struct {
 	Object *WebhooksGetWebhookByIDResponseBody
 }
 
-func (o *WebhooksGetWebhookByIDResponse) GetHTTPMeta() components.HTTPMetadata {
-	if o == nil {
+func (w *WebhooksGetWebhookByIDResponse) GetHTTPMeta() components.HTTPMetadata {
+	if w == nil {
 		return components.HTTPMetadata{}
 	}
-	return o.HTTPMeta
+	return w.HTTPMeta
 }
 
-func (o *WebhooksGetWebhookByIDResponse) GetObject() *WebhooksGetWebhookByIDResponseBody {
-	if o == nil {
+func (w *WebhooksGetWebhookByIDResponse) GetObject() *WebhooksGetWebhookByIDResponseBody {
+	if w == nil {
 		return nil
 	}
-	return o.Object
+	return w.Object
 }

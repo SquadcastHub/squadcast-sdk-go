@@ -12,23 +12,23 @@ type V3EscalationPoliciesIncidentReminderRule struct {
 	Till int `json:"till"`
 }
 
-func (o *V3EscalationPoliciesIncidentReminderRule) GetVia() []string {
-	if o == nil {
+func (v *V3EscalationPoliciesIncidentReminderRule) GetVia() []string {
+	if v == nil {
 		return []string{}
 	}
-	return o.Via
+	return v.Via
 }
 
-func (o *V3EscalationPoliciesIncidentReminderRule) GetTimeInterval() int {
-	if o == nil {
+func (v *V3EscalationPoliciesIncidentReminderRule) GetTimeInterval() int {
+	if v == nil {
 		return 0
 	}
-	return o.TimeInterval
+	return v.TimeInterval
 }
 
-func (o *V3EscalationPoliciesIncidentReminderRule) GetTill() int {
-	if o == nil {
+func (v *V3EscalationPoliciesIncidentReminderRule) GetTill() int {
+	if v == nil {
 		return 0
 	}
-	return o.Till
+	return v.Till
 }

@@ -8,23 +8,23 @@ type V3IncidentsSnoozeNotificationsUnsnoozeIncidentResponse struct {
 	ReassignTo V3IncidentsSnoozeNotificationsReassignTo `json:"reassign_to"`
 }
 
-func (o *V3IncidentsSnoozeNotificationsUnsnoozeIncidentResponse) GetIncidentID() string {
-	if o == nil {
+func (v *V3IncidentsSnoozeNotificationsUnsnoozeIncidentResponse) GetIncidentID() string {
+	if v == nil {
 		return ""
 	}
-	return o.IncidentID
+	return v.IncidentID
 }
 
-func (o *V3IncidentsSnoozeNotificationsUnsnoozeIncidentResponse) GetIsSnoozed() bool {
-	if o == nil {
+func (v *V3IncidentsSnoozeNotificationsUnsnoozeIncidentResponse) GetIsSnoozed() bool {
+	if v == nil {
 		return false
 	}
-	return o.IsSnoozed
+	return v.IsSnoozed
 }
 
-func (o *V3IncidentsSnoozeNotificationsUnsnoozeIncidentResponse) GetReassignTo() V3IncidentsSnoozeNotificationsReassignTo {
-	if o == nil {
+func (v *V3IncidentsSnoozeNotificationsUnsnoozeIncidentResponse) GetReassignTo() V3IncidentsSnoozeNotificationsReassignTo {
+	if v == nil {
 		return V3IncidentsSnoozeNotificationsReassignTo{}
 	}
-	return o.ReassignTo
+	return v.ReassignTo
 }

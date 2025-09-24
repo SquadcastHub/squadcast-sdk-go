@@ -46,9 +46,9 @@ func (v *V3WorkflowsSlackArchiveChannel) UnmarshalJSON(data []byte) error {
 	return nil
 }
 
-func (o *V3WorkflowsSlackArchiveChannel) GetName() V3WorkflowsSlackArchiveChannelName {
-	if o == nil {
+func (v *V3WorkflowsSlackArchiveChannel) GetName() V3WorkflowsSlackArchiveChannelName {
+	if v == nil {
 		return V3WorkflowsSlackArchiveChannelName("")
 	}
-	return o.Name
+	return v.Name
 }

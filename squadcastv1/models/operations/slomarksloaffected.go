@@ -12,36 +12,36 @@ type SLOMarkSLOAffectedRequest struct {
 	V3SLOMarkSLOAffectedRequest components.V3SLOMarkSLOAffectedRequest `request:"mediaType=application/json"`
 }
 
-func (o *SLOMarkSLOAffectedRequest) GetSloID() int64 {
-	if o == nil {
+func (s *SLOMarkSLOAffectedRequest) GetSloID() int64 {
+	if s == nil {
 		return 0
 	}
-	return o.SloID
+	return s.SloID
 }
 
-func (o *SLOMarkSLOAffectedRequest) GetOwnerID() string {
-	if o == nil {
+func (s *SLOMarkSLOAffectedRequest) GetOwnerID() string {
+	if s == nil {
 		return ""
 	}
-	return o.OwnerID
+	return s.OwnerID
 }
 
-func (o *SLOMarkSLOAffectedRequest) GetV3SLOMarkSLOAffectedRequest() components.V3SLOMarkSLOAffectedRequest {
-	if o == nil {
+func (s *SLOMarkSLOAffectedRequest) GetV3SLOMarkSLOAffectedRequest() components.V3SLOMarkSLOAffectedRequest {
+	if s == nil {
 		return components.V3SLOMarkSLOAffectedRequest{}
 	}
-	return o.V3SLOMarkSLOAffectedRequest
+	return s.V3SLOMarkSLOAffectedRequest
 }
 
 type SLOMarkSLOAffectedData struct {
 	SloViolatingIncident components.V3SLOSLOViolatingIncidentResponse `json:"slo_violating_incident"`
 }
 
-func (o *SLOMarkSLOAffectedData) GetSloViolatingIncident() components.V3SLOSLOViolatingIncidentResponse {
-	if o == nil {
+func (s *SLOMarkSLOAffectedData) GetSloViolatingIncident() components.V3SLOSLOViolatingIncidentResponse {
+	if s == nil {
 		return components.V3SLOSLOViolatingIncidentResponse{}
 	}
-	return o.SloViolatingIncident
+	return s.SloViolatingIncident
 }
 
 // SLOMarkSLOAffectedResponseBody - The request has succeeded and a new resource has been created as a result.
@@ -49,11 +49,11 @@ type SLOMarkSLOAffectedResponseBody struct {
 	Data SLOMarkSLOAffectedData `json:"data"`
 }
 
-func (o *SLOMarkSLOAffectedResponseBody) GetData() SLOMarkSLOAffectedData {
-	if o == nil {
+func (s *SLOMarkSLOAffectedResponseBody) GetData() SLOMarkSLOAffectedData {
+	if s == nil {
 		return SLOMarkSLOAffectedData{}
 	}
-	return o.Data
+	return s.Data
 }
 
 type SLOMarkSLOAffectedResponse struct {
@@ -62,16 +62,16 @@ type SLOMarkSLOAffectedResponse struct {
 	Object *SLOMarkSLOAffectedResponseBody
 }
 
-func (o *SLOMarkSLOAffectedResponse) GetHTTPMeta() components.HTTPMetadata {
-	if o == nil {
+func (s *SLOMarkSLOAffectedResponse) GetHTTPMeta() components.HTTPMetadata {
+	if s == nil {
 		return components.HTTPMetadata{}
 	}
-	return o.HTTPMeta
+	return s.HTTPMeta
 }
 
-func (o *SLOMarkSLOAffectedResponse) GetObject() *SLOMarkSLOAffectedResponseBody {
-	if o == nil {
+func (s *SLOMarkSLOAffectedResponse) GetObject() *SLOMarkSLOAffectedResponseBody {
+	if s == nil {
 		return nil
 	}
-	return o.Object
+	return s.Object
 }

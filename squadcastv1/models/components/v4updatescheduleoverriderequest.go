@@ -10,37 +10,37 @@ type V4UpdateScheduleOverrideRequest struct {
 	OverrideWith          V4OverrideParticipantGroup `json:"overrideWith"`
 }
 
-func (o *V4UpdateScheduleOverrideRequest) GetStartTime() string {
-	if o == nil {
+func (v *V4UpdateScheduleOverrideRequest) GetStartTime() string {
+	if v == nil {
 		return ""
 	}
-	return o.StartTime
+	return v.StartTime
 }
 
-func (o *V4UpdateScheduleOverrideRequest) GetEndTime() string {
-	if o == nil {
+func (v *V4UpdateScheduleOverrideRequest) GetEndTime() string {
+	if v == nil {
 		return ""
 	}
-	return o.EndTime
+	return v.EndTime
 }
 
-func (o *V4UpdateScheduleOverrideRequest) GetReason() string {
-	if o == nil {
+func (v *V4UpdateScheduleOverrideRequest) GetReason() string {
+	if v == nil {
 		return ""
 	}
-	return o.Reason
+	return v.Reason
 }
 
-func (o *V4UpdateScheduleOverrideRequest) GetOverriddenParticipant() V4OverrideParticipantGroup {
-	if o == nil {
+func (v *V4UpdateScheduleOverrideRequest) GetOverriddenParticipant() V4OverrideParticipantGroup {
+	if v == nil {
 		return V4OverrideParticipantGroup{}
 	}
-	return o.OverriddenParticipant
+	return v.OverriddenParticipant
 }
 
-func (o *V4UpdateScheduleOverrideRequest) GetOverrideWith() V4OverrideParticipantGroup {
-	if o == nil {
+func (v *V4UpdateScheduleOverrideRequest) GetOverrideWith() V4OverrideParticipantGroup {
+	if v == nil {
 		return V4OverrideParticipantGroup{}
 	}
-	return o.OverrideWith
+	return v.OverrideWith
 }

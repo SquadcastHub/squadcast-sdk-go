@@ -22,16 +22,16 @@ func (v *V3WorkflowsRunbookResponse) UnmarshalJSON(data []byte) error {
 	return nil
 }
 
-func (o *V3WorkflowsRunbookResponse) GetID() string {
-	if o == nil {
+func (v *V3WorkflowsRunbookResponse) GetID() string {
+	if v == nil {
 		return ""
 	}
-	return o.ID
+	return v.ID
 }
 
-func (o *V3WorkflowsRunbookResponse) GetName() string {
-	if o == nil {
+func (v *V3WorkflowsRunbookResponse) GetName() string {
+	if v == nil {
 		return ""
 	}
-	return o.Name
+	return v.Name
 }

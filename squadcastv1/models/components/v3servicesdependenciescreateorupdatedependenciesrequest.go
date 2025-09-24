@@ -6,9 +6,9 @@ type V3ServicesDependenciesCreateOrUpdateDependenciesRequest struct {
 	Dependencies []string `json:"dependencies"`
 }
 
-func (o *V3ServicesDependenciesCreateOrUpdateDependenciesRequest) GetDependencies() []string {
-	if o == nil {
+func (v *V3ServicesDependenciesCreateOrUpdateDependenciesRequest) GetDependencies() []string {
+	if v == nil {
 		return []string{}
 	}
-	return o.Dependencies
+	return v.Dependencies
 }

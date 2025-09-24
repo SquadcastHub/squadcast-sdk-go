@@ -7,16 +7,16 @@ type V3ExtensionsWebhooksWebhookTrigger struct {
 	EventType  string `json:"event_type"`
 }
 
-func (o *V3ExtensionsWebhooksWebhookTrigger) GetEventClass() string {
-	if o == nil {
+func (v *V3ExtensionsWebhooksWebhookTrigger) GetEventClass() string {
+	if v == nil {
 		return ""
 	}
-	return o.EventClass
+	return v.EventClass
 }
 
-func (o *V3ExtensionsWebhooksWebhookTrigger) GetEventType() string {
-	if o == nil {
+func (v *V3ExtensionsWebhooksWebhookTrigger) GetEventType() string {
+	if v == nil {
 		return ""
 	}
-	return o.EventType
+	return v.EventType
 }

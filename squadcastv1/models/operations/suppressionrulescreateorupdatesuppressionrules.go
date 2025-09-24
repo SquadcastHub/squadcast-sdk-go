@@ -11,18 +11,18 @@ type SuppressionRulesCreateOrUpdateSuppressionRulesRequest struct {
 	V3ServicesSuppressionRulesCreateOrUpdateSuppressionRulesRequest components.V3ServicesSuppressionRulesCreateOrUpdateSuppressionRulesRequest `request:"mediaType=application/json"`
 }
 
-func (o *SuppressionRulesCreateOrUpdateSuppressionRulesRequest) GetServiceID() string {
-	if o == nil {
+func (s *SuppressionRulesCreateOrUpdateSuppressionRulesRequest) GetServiceID() string {
+	if s == nil {
 		return ""
 	}
-	return o.ServiceID
+	return s.ServiceID
 }
 
-func (o *SuppressionRulesCreateOrUpdateSuppressionRulesRequest) GetV3ServicesSuppressionRulesCreateOrUpdateSuppressionRulesRequest() components.V3ServicesSuppressionRulesCreateOrUpdateSuppressionRulesRequest {
-	if o == nil {
+func (s *SuppressionRulesCreateOrUpdateSuppressionRulesRequest) GetV3ServicesSuppressionRulesCreateOrUpdateSuppressionRulesRequest() components.V3ServicesSuppressionRulesCreateOrUpdateSuppressionRulesRequest {
+	if s == nil {
 		return components.V3ServicesSuppressionRulesCreateOrUpdateSuppressionRulesRequest{}
 	}
-	return o.V3ServicesSuppressionRulesCreateOrUpdateSuppressionRulesRequest
+	return s.V3ServicesSuppressionRulesCreateOrUpdateSuppressionRulesRequest
 }
 
 // SuppressionRulesCreateOrUpdateSuppressionRulesResponseBody - The request has succeeded.
@@ -30,11 +30,11 @@ type SuppressionRulesCreateOrUpdateSuppressionRulesResponseBody struct {
 	Data components.V3ServicesSuppressionRulesSuppressionRulesContainerResponse `json:"data"`
 }
 
-func (o *SuppressionRulesCreateOrUpdateSuppressionRulesResponseBody) GetData() components.V3ServicesSuppressionRulesSuppressionRulesContainerResponse {
-	if o == nil {
+func (s *SuppressionRulesCreateOrUpdateSuppressionRulesResponseBody) GetData() components.V3ServicesSuppressionRulesSuppressionRulesContainerResponse {
+	if s == nil {
 		return components.V3ServicesSuppressionRulesSuppressionRulesContainerResponse{}
 	}
-	return o.Data
+	return s.Data
 }
 
 type SuppressionRulesCreateOrUpdateSuppressionRulesResponse struct {
@@ -43,16 +43,16 @@ type SuppressionRulesCreateOrUpdateSuppressionRulesResponse struct {
 	Object *SuppressionRulesCreateOrUpdateSuppressionRulesResponseBody
 }
 
-func (o *SuppressionRulesCreateOrUpdateSuppressionRulesResponse) GetHTTPMeta() components.HTTPMetadata {
-	if o == nil {
+func (s *SuppressionRulesCreateOrUpdateSuppressionRulesResponse) GetHTTPMeta() components.HTTPMetadata {
+	if s == nil {
 		return components.HTTPMetadata{}
 	}
-	return o.HTTPMeta
+	return s.HTTPMeta
 }
 
-func (o *SuppressionRulesCreateOrUpdateSuppressionRulesResponse) GetObject() *SuppressionRulesCreateOrUpdateSuppressionRulesResponseBody {
-	if o == nil {
+func (s *SuppressionRulesCreateOrUpdateSuppressionRulesResponse) GetObject() *SuppressionRulesCreateOrUpdateSuppressionRulesResponseBody {
+	if s == nil {
 		return nil
 	}
-	return o.Object
+	return s.Object
 }

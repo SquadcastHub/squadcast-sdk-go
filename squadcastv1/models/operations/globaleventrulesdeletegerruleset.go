@@ -12,25 +12,25 @@ type GlobalEventRulesDeleteGerRulesetRequest struct {
 	AlertSourceShortname string `pathParam:"style=simple,explode=false,name=alert_source_shortname"`
 }
 
-func (o *GlobalEventRulesDeleteGerRulesetRequest) GetGerID() int64 {
-	if o == nil {
+func (g *GlobalEventRulesDeleteGerRulesetRequest) GetGerID() int64 {
+	if g == nil {
 		return 0
 	}
-	return o.GerID
+	return g.GerID
 }
 
-func (o *GlobalEventRulesDeleteGerRulesetRequest) GetAlertSourceVersion() string {
-	if o == nil {
+func (g *GlobalEventRulesDeleteGerRulesetRequest) GetAlertSourceVersion() string {
+	if g == nil {
 		return ""
 	}
-	return o.AlertSourceVersion
+	return g.AlertSourceVersion
 }
 
-func (o *GlobalEventRulesDeleteGerRulesetRequest) GetAlertSourceShortname() string {
-	if o == nil {
+func (g *GlobalEventRulesDeleteGerRulesetRequest) GetAlertSourceShortname() string {
+	if g == nil {
 		return ""
 	}
-	return o.AlertSourceShortname
+	return g.AlertSourceShortname
 }
 
 // GlobalEventRulesDeleteGerRulesetResponseBody - There is no content to send for this request, but the headers may be useful.
@@ -42,16 +42,16 @@ type GlobalEventRulesDeleteGerRulesetResponse struct {
 	Body     []byte
 }
 
-func (o *GlobalEventRulesDeleteGerRulesetResponse) GetHTTPMeta() components.HTTPMetadata {
-	if o == nil {
+func (g *GlobalEventRulesDeleteGerRulesetResponse) GetHTTPMeta() components.HTTPMetadata {
+	if g == nil {
 		return components.HTTPMetadata{}
 	}
-	return o.HTTPMeta
+	return g.HTTPMeta
 }
 
-func (o *GlobalEventRulesDeleteGerRulesetResponse) GetBody() []byte {
-	if o == nil {
+func (g *GlobalEventRulesDeleteGerRulesetResponse) GetBody() []byte {
+	if g == nil {
 		return nil
 	}
-	return o.Body
+	return g.Body
 }

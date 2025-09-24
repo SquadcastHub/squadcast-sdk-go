@@ -9,30 +9,30 @@ type V4StatusPagesIssuesIssueComponentDetail struct {
 	StatusMaintenance *V4StatusPagesIssuesComponentStatus `json:"statusMaintenance,omitempty"`
 }
 
-func (o *V4StatusPagesIssuesIssueComponentDetail) GetID() *int64 {
-	if o == nil {
+func (v *V4StatusPagesIssuesIssueComponentDetail) GetID() *int64 {
+	if v == nil {
 		return nil
 	}
-	return o.ID
+	return v.ID
 }
 
-func (o *V4StatusPagesIssuesIssueComponentDetail) GetStatus() *V4StatusPagesIssuesComponentStatus {
-	if o == nil {
+func (v *V4StatusPagesIssuesIssueComponentDetail) GetStatus() *V4StatusPagesIssuesComponentStatus {
+	if v == nil {
 		return nil
 	}
-	return o.Status
+	return v.Status
 }
 
-func (o *V4StatusPagesIssuesIssueComponentDetail) GetUnderMaintenance() *bool {
-	if o == nil {
+func (v *V4StatusPagesIssuesIssueComponentDetail) GetUnderMaintenance() *bool {
+	if v == nil {
 		return nil
 	}
-	return o.UnderMaintenance
+	return v.UnderMaintenance
 }
 
-func (o *V4StatusPagesIssuesIssueComponentDetail) GetStatusMaintenance() *V4StatusPagesIssuesComponentStatus {
-	if o == nil {
+func (v *V4StatusPagesIssuesIssueComponentDetail) GetStatusMaintenance() *V4StatusPagesIssuesComponentStatus {
+	if v == nil {
 		return nil
 	}
-	return o.StatusMaintenance
+	return v.StatusMaintenance
 }

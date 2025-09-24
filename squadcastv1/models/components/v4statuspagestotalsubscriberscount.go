@@ -6,9 +6,9 @@ type V4StatusPagesTotalSubscribersCount struct {
 	TotalCount int64 `json:"totalCount"`
 }
 
-func (o *V4StatusPagesTotalSubscribersCount) GetTotalCount() int64 {
-	if o == nil {
+func (v *V4StatusPagesTotalSubscribersCount) GetTotalCount() int64 {
+	if v == nil {
 		return 0
 	}
-	return o.TotalCount
+	return v.TotalCount
 }

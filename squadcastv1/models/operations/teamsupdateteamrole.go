@@ -12,25 +12,25 @@ type TeamsUpdateTeamRoleRequest struct {
 	V3TeamsUpdateTeamRoleRequest components.V3TeamsUpdateTeamRoleRequest `request:"mediaType=application/json"`
 }
 
-func (o *TeamsUpdateTeamRoleRequest) GetTeamID() string {
-	if o == nil {
+func (t *TeamsUpdateTeamRoleRequest) GetTeamID() string {
+	if t == nil {
 		return ""
 	}
-	return o.TeamID
+	return t.TeamID
 }
 
-func (o *TeamsUpdateTeamRoleRequest) GetRoleID() string {
-	if o == nil {
+func (t *TeamsUpdateTeamRoleRequest) GetRoleID() string {
+	if t == nil {
 		return ""
 	}
-	return o.RoleID
+	return t.RoleID
 }
 
-func (o *TeamsUpdateTeamRoleRequest) GetV3TeamsUpdateTeamRoleRequest() components.V3TeamsUpdateTeamRoleRequest {
-	if o == nil {
+func (t *TeamsUpdateTeamRoleRequest) GetV3TeamsUpdateTeamRoleRequest() components.V3TeamsUpdateTeamRoleRequest {
+	if t == nil {
 		return components.V3TeamsUpdateTeamRoleRequest{}
 	}
-	return o.V3TeamsUpdateTeamRoleRequest
+	return t.V3TeamsUpdateTeamRoleRequest
 }
 
 // TeamsUpdateTeamRoleResponseBody - The request has succeeded.
@@ -38,11 +38,11 @@ type TeamsUpdateTeamRoleResponseBody struct {
 	Data components.V3TeamsTeamBaseResponse `json:"data"`
 }
 
-func (o *TeamsUpdateTeamRoleResponseBody) GetData() components.V3TeamsTeamBaseResponse {
-	if o == nil {
+func (t *TeamsUpdateTeamRoleResponseBody) GetData() components.V3TeamsTeamBaseResponse {
+	if t == nil {
 		return components.V3TeamsTeamBaseResponse{}
 	}
-	return o.Data
+	return t.Data
 }
 
 type TeamsUpdateTeamRoleResponse struct {
@@ -51,16 +51,16 @@ type TeamsUpdateTeamRoleResponse struct {
 	Object *TeamsUpdateTeamRoleResponseBody
 }
 
-func (o *TeamsUpdateTeamRoleResponse) GetHTTPMeta() components.HTTPMetadata {
-	if o == nil {
+func (t *TeamsUpdateTeamRoleResponse) GetHTTPMeta() components.HTTPMetadata {
+	if t == nil {
 		return components.HTTPMetadata{}
 	}
-	return o.HTTPMeta
+	return t.HTTPMeta
 }
 
-func (o *TeamsUpdateTeamRoleResponse) GetObject() *TeamsUpdateTeamRoleResponseBody {
-	if o == nil {
+func (t *TeamsUpdateTeamRoleResponse) GetObject() *TeamsUpdateTeamRoleResponseBody {
+	if t == nil {
 		return nil
 	}
-	return o.Object
+	return t.Object
 }

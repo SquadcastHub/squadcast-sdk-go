@@ -7,16 +7,16 @@ type V4StatusPagesNewStatusPageThemeColor struct {
 	Secondary *string `json:"secondary,omitempty"`
 }
 
-func (o *V4StatusPagesNewStatusPageThemeColor) GetPrimary() *string {
-	if o == nil {
+func (v *V4StatusPagesNewStatusPageThemeColor) GetPrimary() *string {
+	if v == nil {
 		return nil
 	}
-	return o.Primary
+	return v.Primary
 }
 
-func (o *V4StatusPagesNewStatusPageThemeColor) GetSecondary() *string {
-	if o == nil {
+func (v *V4StatusPagesNewStatusPageThemeColor) GetSecondary() *string {
+	if v == nil {
 		return nil
 	}
-	return o.Secondary
+	return v.Secondary
 }

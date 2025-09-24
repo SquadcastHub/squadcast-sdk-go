@@ -11,11 +11,11 @@ type IncidentsIncidentExportAsyncBody struct {
 	Data components.V3IncidentsIncidentExportAsyncResponse
 }
 
-func (o *IncidentsIncidentExportAsyncBody) GetData() components.V3IncidentsIncidentExportAsyncResponse {
-	if o == nil {
+func (i *IncidentsIncidentExportAsyncBody) GetData() components.V3IncidentsIncidentExportAsyncResponse {
+	if i == nil {
 		return components.V3IncidentsIncidentExportAsyncResponse{}
 	}
-	return o.Data
+	return i.Data
 }
 
 // IncidentsIncidentExportAsyncResponseBody - The request has been accepted for processing, but processing has not yet completed.
@@ -24,11 +24,11 @@ type IncidentsIncidentExportAsyncResponseBody struct {
 	Body IncidentsIncidentExportAsyncBody
 }
 
-func (o *IncidentsIncidentExportAsyncResponseBody) GetBody() IncidentsIncidentExportAsyncBody {
-	if o == nil {
+func (i *IncidentsIncidentExportAsyncResponseBody) GetBody() IncidentsIncidentExportAsyncBody {
+	if i == nil {
 		return IncidentsIncidentExportAsyncBody{}
 	}
-	return o.Body
+	return i.Body
 }
 
 type IncidentsIncidentExportAsyncResponse struct {
@@ -36,16 +36,16 @@ type IncidentsIncidentExportAsyncResponse struct {
 	Body     []byte
 }
 
-func (o *IncidentsIncidentExportAsyncResponse) GetHTTPMeta() components.HTTPMetadata {
-	if o == nil {
+func (i *IncidentsIncidentExportAsyncResponse) GetHTTPMeta() components.HTTPMetadata {
+	if i == nil {
 		return components.HTTPMetadata{}
 	}
-	return o.HTTPMeta
+	return i.HTTPMeta
 }
 
-func (o *IncidentsIncidentExportAsyncResponse) GetBody() []byte {
-	if o == nil {
+func (i *IncidentsIncidentExportAsyncResponse) GetBody() []byte {
+	if i == nil {
 		return nil
 	}
-	return o.Body
+	return i.Body
 }

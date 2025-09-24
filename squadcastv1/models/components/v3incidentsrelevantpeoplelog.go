@@ -26,30 +26,30 @@ func (v *V3IncidentsRelevantPeopleLog) UnmarshalJSON(data []byte) error {
 	return nil
 }
 
-func (o *V3IncidentsRelevantPeopleLog) GetUserID() string {
-	if o == nil {
+func (v *V3IncidentsRelevantPeopleLog) GetUserID() string {
+	if v == nil {
 		return ""
 	}
-	return o.UserID
+	return v.UserID
 }
 
-func (o *V3IncidentsRelevantPeopleLog) GetActionTaken() string {
-	if o == nil {
+func (v *V3IncidentsRelevantPeopleLog) GetActionTaken() string {
+	if v == nil {
 		return ""
 	}
-	return o.ActionTaken
+	return v.ActionTaken
 }
 
-func (o *V3IncidentsRelevantPeopleLog) GetActionTakenBy() string {
-	if o == nil {
+func (v *V3IncidentsRelevantPeopleLog) GetActionTakenBy() string {
+	if v == nil {
 		return ""
 	}
-	return o.ActionTakenBy
+	return v.ActionTakenBy
 }
 
-func (o *V3IncidentsRelevantPeopleLog) GetActionTime() time.Time {
-	if o == nil {
+func (v *V3IncidentsRelevantPeopleLog) GetActionTime() time.Time {
+	if v == nil {
 		return time.Time{}
 	}
-	return o.ActionTime
+	return v.ActionTime
 }

@@ -11,18 +11,18 @@ type RotationsDeleteRotationRequest struct {
 	RotationID string `pathParam:"style=simple,explode=false,name=rotationID"`
 }
 
-func (o *RotationsDeleteRotationRequest) GetScheduleID() string {
-	if o == nil {
+func (r *RotationsDeleteRotationRequest) GetScheduleID() string {
+	if r == nil {
 		return ""
 	}
-	return o.ScheduleID
+	return r.ScheduleID
 }
 
-func (o *RotationsDeleteRotationRequest) GetRotationID() string {
-	if o == nil {
+func (r *RotationsDeleteRotationRequest) GetRotationID() string {
+	if r == nil {
 		return ""
 	}
-	return o.RotationID
+	return r.RotationID
 }
 
 // RotationsDeleteRotationResponseBody - There is no content to send for this request, but the headers may be useful.
@@ -34,16 +34,16 @@ type RotationsDeleteRotationResponse struct {
 	Body     []byte
 }
 
-func (o *RotationsDeleteRotationResponse) GetHTTPMeta() components.HTTPMetadata {
-	if o == nil {
+func (r *RotationsDeleteRotationResponse) GetHTTPMeta() components.HTTPMetadata {
+	if r == nil {
 		return components.HTTPMetadata{}
 	}
-	return o.HTTPMeta
+	return r.HTTPMeta
 }
 
-func (o *RotationsDeleteRotationResponse) GetBody() []byte {
-	if o == nil {
+func (r *RotationsDeleteRotationResponse) GetBody() []byte {
+	if r == nil {
 		return nil
 	}
-	return o.Body
+	return r.Body
 }

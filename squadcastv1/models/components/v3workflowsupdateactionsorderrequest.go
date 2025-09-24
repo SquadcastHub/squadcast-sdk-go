@@ -6,9 +6,9 @@ type V3WorkflowsUpdateActionsOrderRequest struct {
 	ActionOrder []int `json:"action_order,omitempty"`
 }
 
-func (o *V3WorkflowsUpdateActionsOrderRequest) GetActionOrder() []int {
-	if o == nil {
+func (v *V3WorkflowsUpdateActionsOrderRequest) GetActionOrder() []int {
+	if v == nil {
 		return nil
 	}
-	return o.ActionOrder
+	return v.ActionOrder
 }

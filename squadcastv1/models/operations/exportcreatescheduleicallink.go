@@ -15,25 +15,25 @@ type ExportCreateScheduleIcalLinkRequest struct {
 	RequestBody ExportCreateScheduleIcalLinkRequestBody `request:"mediaType=application/json"`
 }
 
-func (o *ExportCreateScheduleIcalLinkRequest) GetScheduleID() string {
-	if o == nil {
+func (e *ExportCreateScheduleIcalLinkRequest) GetScheduleID() string {
+	if e == nil {
 		return ""
 	}
-	return o.ScheduleID
+	return e.ScheduleID
 }
 
-func (o *ExportCreateScheduleIcalLinkRequest) GetMyOnCall() bool {
-	if o == nil {
+func (e *ExportCreateScheduleIcalLinkRequest) GetMyOnCall() bool {
+	if e == nil {
 		return false
 	}
-	return o.MyOnCall
+	return e.MyOnCall
 }
 
-func (o *ExportCreateScheduleIcalLinkRequest) GetRequestBody() ExportCreateScheduleIcalLinkRequestBody {
-	if o == nil {
+func (e *ExportCreateScheduleIcalLinkRequest) GetRequestBody() ExportCreateScheduleIcalLinkRequestBody {
+	if e == nil {
 		return ExportCreateScheduleIcalLinkRequestBody{}
 	}
-	return o.RequestBody
+	return e.RequestBody
 }
 
 // ExportCreateScheduleIcalLinkResponseBody - The request has succeeded.
@@ -41,11 +41,11 @@ type ExportCreateScheduleIcalLinkResponseBody struct {
 	Data components.V4ICalLinkResponse `json:"data"`
 }
 
-func (o *ExportCreateScheduleIcalLinkResponseBody) GetData() components.V4ICalLinkResponse {
-	if o == nil {
+func (e *ExportCreateScheduleIcalLinkResponseBody) GetData() components.V4ICalLinkResponse {
+	if e == nil {
 		return components.V4ICalLinkResponse{}
 	}
-	return o.Data
+	return e.Data
 }
 
 type ExportCreateScheduleIcalLinkResponse struct {
@@ -54,16 +54,16 @@ type ExportCreateScheduleIcalLinkResponse struct {
 	Object *ExportCreateScheduleIcalLinkResponseBody
 }
 
-func (o *ExportCreateScheduleIcalLinkResponse) GetHTTPMeta() components.HTTPMetadata {
-	if o == nil {
+func (e *ExportCreateScheduleIcalLinkResponse) GetHTTPMeta() components.HTTPMetadata {
+	if e == nil {
 		return components.HTTPMetadata{}
 	}
-	return o.HTTPMeta
+	return e.HTTPMeta
 }
 
-func (o *ExportCreateScheduleIcalLinkResponse) GetObject() *ExportCreateScheduleIcalLinkResponseBody {
-	if o == nil {
+func (e *ExportCreateScheduleIcalLinkResponse) GetObject() *ExportCreateScheduleIcalLinkResponseBody {
+	if e == nil {
 		return nil
 	}
-	return o.Object
+	return e.Object
 }

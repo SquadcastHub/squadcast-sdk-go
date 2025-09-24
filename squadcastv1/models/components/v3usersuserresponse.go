@@ -20,107 +20,107 @@ type V3UsersUserResponse struct {
 	Role               *string                   `json:"role,omitempty"`
 }
 
-func (o *V3UsersUserResponse) GetID() string {
-	if o == nil {
+func (v *V3UsersUserResponse) GetID() string {
+	if v == nil {
 		return ""
 	}
-	return o.ID
+	return v.ID
 }
 
-func (o *V3UsersUserResponse) GetFirstName() string {
-	if o == nil {
+func (v *V3UsersUserResponse) GetFirstName() string {
+	if v == nil {
 		return ""
 	}
-	return o.FirstName
+	return v.FirstName
 }
 
-func (o *V3UsersUserResponse) GetLastName() string {
-	if o == nil {
+func (v *V3UsersUserResponse) GetLastName() string {
+	if v == nil {
 		return ""
 	}
-	return o.LastName
+	return v.LastName
 }
 
-func (o *V3UsersUserResponse) GetUsernameForDisplay() string {
-	if o == nil {
+func (v *V3UsersUserResponse) GetUsernameForDisplay() string {
+	if v == nil {
 		return ""
 	}
-	return o.UsernameForDisplay
+	return v.UsernameForDisplay
 }
 
-func (o *V3UsersUserResponse) GetEmail() string {
-	if o == nil {
+func (v *V3UsersUserResponse) GetEmail() string {
+	if v == nil {
 		return ""
 	}
-	return o.Email
+	return v.Email
 }
 
-func (o *V3UsersUserResponse) GetContact() V3UsersContact {
-	if o == nil {
+func (v *V3UsersUserResponse) GetContact() V3UsersContact {
+	if v == nil {
 		return V3UsersContact{}
 	}
-	return o.Contact
+	return v.Contact
 }
 
-func (o *V3UsersUserResponse) GetSecondaryEmails() []string {
-	if o == nil {
+func (v *V3UsersUserResponse) GetSecondaryEmails() []string {
+	if v == nil {
 		return nil
 	}
-	return o.SecondaryEmails
+	return v.SecondaryEmails
 }
 
-func (o *V3UsersUserResponse) GetEmailVerified() bool {
-	if o == nil {
+func (v *V3UsersUserResponse) GetEmailVerified() bool {
+	if v == nil {
 		return false
 	}
-	return o.EmailVerified
+	return v.EmailVerified
 }
 
-func (o *V3UsersUserResponse) GetTimeZone() string {
-	if o == nil {
+func (v *V3UsersUserResponse) GetTimeZone() string {
+	if v == nil {
 		return ""
 	}
-	return o.TimeZone
+	return v.TimeZone
 }
 
-func (o *V3UsersUserResponse) GetTitle() string {
-	if o == nil {
+func (v *V3UsersUserResponse) GetTitle() string {
+	if v == nil {
 		return ""
 	}
-	return o.Title
+	return v.Title
 }
 
-func (o *V3UsersUserResponse) GetBio() string {
-	if o == nil {
+func (v *V3UsersUserResponse) GetBio() string {
+	if v == nil {
 		return ""
 	}
-	return o.Bio
+	return v.Bio
 }
 
-func (o *V3UsersUserResponse) GetNotificationRules() []V3UsersNotificationRule {
-	if o == nil {
+func (v *V3UsersUserResponse) GetNotificationRules() []V3UsersNotificationRule {
+	if v == nil {
 		return []V3UsersNotificationRule{}
 	}
-	return o.NotificationRules
+	return v.NotificationRules
 }
 
-func (o *V3UsersUserResponse) GetUserImage() bool {
-	if o == nil {
+func (v *V3UsersUserResponse) GetUserImage() bool {
+	if v == nil {
 		return false
 	}
-	return o.UserImage
+	return v.UserImage
 }
 
-func (o *V3UsersUserResponse) GetRoleID() *string {
-	if o == nil {
+func (v *V3UsersUserResponse) GetRoleID() *string {
+	if v == nil {
 		return nil
 	}
-	return o.RoleID
+	return v.RoleID
 }
 
-func (o *V3UsersUserResponse) GetRole() *string {
-	if o == nil {
+func (v *V3UsersUserResponse) GetRole() *string {
+	if v == nil {
 		return nil
 	}
-	return o.Role
+	return v.Role
 }

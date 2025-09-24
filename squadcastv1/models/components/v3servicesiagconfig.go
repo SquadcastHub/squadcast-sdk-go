@@ -7,16 +7,16 @@ type V3ServicesIAGConfig struct {
 	RollingWindowInMins float64 `json:"rolling_window_in_mins"`
 }
 
-func (o *V3ServicesIAGConfig) GetIsEnabled() bool {
-	if o == nil {
+func (v *V3ServicesIAGConfig) GetIsEnabled() bool {
+	if v == nil {
 		return false
 	}
-	return o.IsEnabled
+	return v.IsEnabled
 }
 
-func (o *V3ServicesIAGConfig) GetRollingWindowInMins() float64 {
-	if o == nil {
+func (v *V3ServicesIAGConfig) GetRollingWindowInMins() float64 {
+	if v == nil {
 		return 0.0
 	}
-	return o.RollingWindowInMins
+	return v.RollingWindowInMins
 }

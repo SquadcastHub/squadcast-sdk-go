@@ -10,25 +10,25 @@ type V3TeamsUpdateTeamRequestMember struct {
 	RoleIds []string `json:"role_ids"`
 }
 
-func (o *V3TeamsUpdateTeamRequestMember) GetUserID() string {
-	if o == nil {
+func (v *V3TeamsUpdateTeamRequestMember) GetUserID() string {
+	if v == nil {
 		return ""
 	}
-	return o.UserID
+	return v.UserID
 }
 
-func (o *V3TeamsUpdateTeamRequestMember) GetRole() *string {
-	if o == nil {
+func (v *V3TeamsUpdateTeamRequestMember) GetRole() *string {
+	if v == nil {
 		return nil
 	}
-	return o.Role
+	return v.Role
 }
 
-func (o *V3TeamsUpdateTeamRequestMember) GetRoleIds() []string {
-	if o == nil {
+func (v *V3TeamsUpdateTeamRequestMember) GetRoleIds() []string {
+	if v == nil {
 		return []string{}
 	}
-	return o.RoleIds
+	return v.RoleIds
 }
 
 type V3TeamsUpdateTeamRequest struct {
@@ -37,23 +37,23 @@ type V3TeamsUpdateTeamRequest struct {
 	Members     []V3TeamsUpdateTeamRequestMember `json:"members"`
 }
 
-func (o *V3TeamsUpdateTeamRequest) GetName() *string {
-	if o == nil {
+func (v *V3TeamsUpdateTeamRequest) GetName() *string {
+	if v == nil {
 		return nil
 	}
-	return o.Name
+	return v.Name
 }
 
-func (o *V3TeamsUpdateTeamRequest) GetDescription() *string {
-	if o == nil {
+func (v *V3TeamsUpdateTeamRequest) GetDescription() *string {
+	if v == nil {
 		return nil
 	}
-	return o.Description
+	return v.Description
 }
 
-func (o *V3TeamsUpdateTeamRequest) GetMembers() []V3TeamsUpdateTeamRequestMember {
-	if o == nil {
+func (v *V3TeamsUpdateTeamRequest) GetMembers() []V3TeamsUpdateTeamRequestMember {
+	if v == nil {
 		return []V3TeamsUpdateTeamRequestMember{}
 	}
-	return o.Members
+	return v.Members
 }

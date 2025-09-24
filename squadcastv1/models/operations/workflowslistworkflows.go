@@ -20,81 +20,81 @@ type WorkflowsListWorkflowsRequest struct {
 	Enabled    *string  `queryParam:"style=form,explode=false,name=enabled"`
 }
 
-func (o *WorkflowsListWorkflowsRequest) GetOwnerID() string {
-	if o == nil {
+func (w *WorkflowsListWorkflowsRequest) GetOwnerID() string {
+	if w == nil {
 		return ""
 	}
-	return o.OwnerID
+	return w.OwnerID
 }
 
-func (o *WorkflowsListWorkflowsRequest) GetPageSize() *string {
-	if o == nil {
+func (w *WorkflowsListWorkflowsRequest) GetPageSize() *string {
+	if w == nil {
 		return nil
 	}
-	return o.PageSize
+	return w.PageSize
 }
 
-func (o *WorkflowsListWorkflowsRequest) GetPageNumber() *string {
-	if o == nil {
+func (w *WorkflowsListWorkflowsRequest) GetPageNumber() *string {
+	if w == nil {
 		return nil
 	}
-	return o.PageNumber
+	return w.PageNumber
 }
 
-func (o *WorkflowsListWorkflowsRequest) GetSearch() *string {
-	if o == nil {
+func (w *WorkflowsListWorkflowsRequest) GetSearch() *string {
+	if w == nil {
 		return nil
 	}
-	return o.Search
+	return w.Search
 }
 
-func (o *WorkflowsListWorkflowsRequest) GetEvent() []string {
-	if o == nil {
+func (w *WorkflowsListWorkflowsRequest) GetEvent() []string {
+	if w == nil {
 		return nil
 	}
-	return o.Event
+	return w.Event
 }
 
-func (o *WorkflowsListWorkflowsRequest) GetActions() []string {
-	if o == nil {
+func (w *WorkflowsListWorkflowsRequest) GetActions() []string {
+	if w == nil {
 		return nil
 	}
-	return o.Actions
+	return w.Actions
 }
 
-func (o *WorkflowsListWorkflowsRequest) GetTags() []string {
-	if o == nil {
+func (w *WorkflowsListWorkflowsRequest) GetTags() []string {
+	if w == nil {
 		return nil
 	}
-	return o.Tags
+	return w.Tags
 }
 
-func (o *WorkflowsListWorkflowsRequest) GetOwner() []string {
-	if o == nil {
+func (w *WorkflowsListWorkflowsRequest) GetOwner() []string {
+	if w == nil {
 		return nil
 	}
-	return o.Owner
+	return w.Owner
 }
 
-func (o *WorkflowsListWorkflowsRequest) GetCreatedBy() []string {
-	if o == nil {
+func (w *WorkflowsListWorkflowsRequest) GetCreatedBy() []string {
+	if w == nil {
 		return nil
 	}
-	return o.CreatedBy
+	return w.CreatedBy
 }
 
-func (o *WorkflowsListWorkflowsRequest) GetUpdatedBy() []string {
-	if o == nil {
+func (w *WorkflowsListWorkflowsRequest) GetUpdatedBy() []string {
+	if w == nil {
 		return nil
 	}
-	return o.UpdatedBy
+	return w.UpdatedBy
 }
 
-func (o *WorkflowsListWorkflowsRequest) GetEnabled() *string {
-	if o == nil {
+func (w *WorkflowsListWorkflowsRequest) GetEnabled() *string {
+	if w == nil {
 		return nil
 	}
-	return o.Enabled
+	return w.Enabled
 }
 
 type WorkflowsListWorkflowsResponse struct {
@@ -103,16 +103,16 @@ type WorkflowsListWorkflowsResponse struct {
 	V3WorkflowsListWorkflowAPIResponse *components.V3WorkflowsListWorkflowAPIResponse
 }
 
-func (o *WorkflowsListWorkflowsResponse) GetHTTPMeta() components.HTTPMetadata {
-	if o == nil {
+func (w *WorkflowsListWorkflowsResponse) GetHTTPMeta() components.HTTPMetadata {
+	if w == nil {
 		return components.HTTPMetadata{}
 	}
-	return o.HTTPMeta
+	return w.HTTPMeta
 }
 
-func (o *WorkflowsListWorkflowsResponse) GetV3WorkflowsListWorkflowAPIResponse() *components.V3WorkflowsListWorkflowAPIResponse {
-	if o == nil {
+func (w *WorkflowsListWorkflowsResponse) GetV3WorkflowsListWorkflowAPIResponse() *components.V3WorkflowsListWorkflowAPIResponse {
+	if w == nil {
 		return nil
 	}
-	return o.V3WorkflowsListWorkflowAPIResponse
+	return w.V3WorkflowsListWorkflowAPIResponse
 }

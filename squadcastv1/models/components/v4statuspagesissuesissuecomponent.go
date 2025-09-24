@@ -7,16 +7,16 @@ type V4StatusPagesIssuesIssueComponent struct {
 	Name *string `json:"name,omitempty"`
 }
 
-func (o *V4StatusPagesIssuesIssueComponent) GetID() *int64 {
-	if o == nil {
+func (v *V4StatusPagesIssuesIssueComponent) GetID() *int64 {
+	if v == nil {
 		return nil
 	}
-	return o.ID
+	return v.ID
 }
 
-func (o *V4StatusPagesIssuesIssueComponent) GetName() *string {
-	if o == nil {
+func (v *V4StatusPagesIssuesIssueComponent) GetName() *string {
+	if v == nil {
 		return nil
 	}
-	return o.Name
+	return v.Name
 }

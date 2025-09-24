@@ -10,16 +10,16 @@ type V3ExtensionsMSTeamsSquadCastServiceMapping struct {
 	SquadcastServiceName string `json:"squadcast_service_name"`
 }
 
-func (o *V3ExtensionsMSTeamsSquadCastServiceMapping) GetSquadcastServiceID() string {
-	if o == nil {
+func (v *V3ExtensionsMSTeamsSquadCastServiceMapping) GetSquadcastServiceID() string {
+	if v == nil {
 		return ""
 	}
-	return o.SquadcastServiceID
+	return v.SquadcastServiceID
 }
 
-func (o *V3ExtensionsMSTeamsSquadCastServiceMapping) GetSquadcastServiceName() string {
-	if o == nil {
+func (v *V3ExtensionsMSTeamsSquadCastServiceMapping) GetSquadcastServiceName() string {
+	if v == nil {
 		return ""
 	}
-	return o.SquadcastServiceName
+	return v.SquadcastServiceName
 }

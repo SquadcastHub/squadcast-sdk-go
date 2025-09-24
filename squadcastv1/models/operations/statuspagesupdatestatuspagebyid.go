@@ -11,18 +11,18 @@ type StatusPagesUpdateStatusPageByIDRequest struct {
 	V4StatusPagesUpdateStatusPageByIDRequest components.V4StatusPagesUpdateStatusPageByIDRequest `request:"mediaType=application/json"`
 }
 
-func (o *StatusPagesUpdateStatusPageByIDRequest) GetStatuspageID() string {
-	if o == nil {
+func (s *StatusPagesUpdateStatusPageByIDRequest) GetStatuspageID() string {
+	if s == nil {
 		return ""
 	}
-	return o.StatuspageID
+	return s.StatuspageID
 }
 
-func (o *StatusPagesUpdateStatusPageByIDRequest) GetV4StatusPagesUpdateStatusPageByIDRequest() components.V4StatusPagesUpdateStatusPageByIDRequest {
-	if o == nil {
+func (s *StatusPagesUpdateStatusPageByIDRequest) GetV4StatusPagesUpdateStatusPageByIDRequest() components.V4StatusPagesUpdateStatusPageByIDRequest {
+	if s == nil {
 		return components.V4StatusPagesUpdateStatusPageByIDRequest{}
 	}
-	return o.V4StatusPagesUpdateStatusPageByIDRequest
+	return s.V4StatusPagesUpdateStatusPageByIDRequest
 }
 
 // StatusPagesUpdateStatusPageByIDResponseBody - The request has succeeded.
@@ -30,11 +30,11 @@ type StatusPagesUpdateStatusPageByIDResponseBody struct {
 	Data components.V4StatusPagesUpdateStatusPageByIDResponse `json:"data"`
 }
 
-func (o *StatusPagesUpdateStatusPageByIDResponseBody) GetData() components.V4StatusPagesUpdateStatusPageByIDResponse {
-	if o == nil {
+func (s *StatusPagesUpdateStatusPageByIDResponseBody) GetData() components.V4StatusPagesUpdateStatusPageByIDResponse {
+	if s == nil {
 		return components.V4StatusPagesUpdateStatusPageByIDResponse{}
 	}
-	return o.Data
+	return s.Data
 }
 
 type StatusPagesUpdateStatusPageByIDResponse struct {
@@ -43,16 +43,16 @@ type StatusPagesUpdateStatusPageByIDResponse struct {
 	Object *StatusPagesUpdateStatusPageByIDResponseBody
 }
 
-func (o *StatusPagesUpdateStatusPageByIDResponse) GetHTTPMeta() components.HTTPMetadata {
-	if o == nil {
+func (s *StatusPagesUpdateStatusPageByIDResponse) GetHTTPMeta() components.HTTPMetadata {
+	if s == nil {
 		return components.HTTPMetadata{}
 	}
-	return o.HTTPMeta
+	return s.HTTPMeta
 }
 
-func (o *StatusPagesUpdateStatusPageByIDResponse) GetObject() *StatusPagesUpdateStatusPageByIDResponseBody {
-	if o == nil {
+func (s *StatusPagesUpdateStatusPageByIDResponse) GetObject() *StatusPagesUpdateStatusPageByIDResponseBody {
+	if s == nil {
 		return nil
 	}
-	return o.Object
+	return s.Object
 }

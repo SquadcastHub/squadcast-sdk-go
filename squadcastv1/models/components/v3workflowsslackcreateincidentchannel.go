@@ -47,18 +47,18 @@ func (v *V3WorkflowsSlackCreateIncidentChannelData) UnmarshalJSON(data []byte) e
 	return nil
 }
 
-func (o *V3WorkflowsSlackCreateIncidentChannelData) GetAutoName() bool {
-	if o == nil {
+func (v *V3WorkflowsSlackCreateIncidentChannelData) GetAutoName() bool {
+	if v == nil {
 		return false
 	}
-	return o.AutoName
+	return v.AutoName
 }
 
-func (o *V3WorkflowsSlackCreateIncidentChannelData) GetChannelName() *string {
-	if o == nil {
+func (v *V3WorkflowsSlackCreateIncidentChannelData) GetChannelName() *string {
+	if v == nil {
 		return nil
 	}
-	return o.ChannelName
+	return v.ChannelName
 }
 
 type V3WorkflowsSlackCreateIncidentChannel struct {
@@ -77,16 +77,16 @@ func (v *V3WorkflowsSlackCreateIncidentChannel) UnmarshalJSON(data []byte) error
 	return nil
 }
 
-func (o *V3WorkflowsSlackCreateIncidentChannel) GetName() V3WorkflowsSlackCreateIncidentChannelName {
-	if o == nil {
+func (v *V3WorkflowsSlackCreateIncidentChannel) GetName() V3WorkflowsSlackCreateIncidentChannelName {
+	if v == nil {
 		return V3WorkflowsSlackCreateIncidentChannelName("")
 	}
-	return o.Name
+	return v.Name
 }
 
-func (o *V3WorkflowsSlackCreateIncidentChannel) GetData() V3WorkflowsSlackCreateIncidentChannelData {
-	if o == nil {
+func (v *V3WorkflowsSlackCreateIncidentChannel) GetData() V3WorkflowsSlackCreateIncidentChannelData {
+	if v == nil {
 		return V3WorkflowsSlackCreateIncidentChannelData{}
 	}
-	return o.Data
+	return v.Data
 }

@@ -10,11 +10,11 @@ type SquadsGetSquadByTeamRequest struct {
 	OwnerID string `queryParam:"style=form,explode=true,name=owner_id"`
 }
 
-func (o *SquadsGetSquadByTeamRequest) GetOwnerID() string {
-	if o == nil {
+func (s *SquadsGetSquadByTeamRequest) GetOwnerID() string {
+	if s == nil {
 		return ""
 	}
-	return o.OwnerID
+	return s.OwnerID
 }
 
 // SquadsGetSquadByTeamResponseBody - The request has succeeded.
@@ -22,11 +22,11 @@ type SquadsGetSquadByTeamResponseBody struct {
 	Data []components.V3SquadsSquadResponse `json:"data"`
 }
 
-func (o *SquadsGetSquadByTeamResponseBody) GetData() []components.V3SquadsSquadResponse {
-	if o == nil {
+func (s *SquadsGetSquadByTeamResponseBody) GetData() []components.V3SquadsSquadResponse {
+	if s == nil {
 		return []components.V3SquadsSquadResponse{}
 	}
-	return o.Data
+	return s.Data
 }
 
 type SquadsGetSquadByTeamResponse struct {
@@ -35,16 +35,16 @@ type SquadsGetSquadByTeamResponse struct {
 	Object *SquadsGetSquadByTeamResponseBody
 }
 
-func (o *SquadsGetSquadByTeamResponse) GetHTTPMeta() components.HTTPMetadata {
-	if o == nil {
+func (s *SquadsGetSquadByTeamResponse) GetHTTPMeta() components.HTTPMetadata {
+	if s == nil {
 		return components.HTTPMetadata{}
 	}
-	return o.HTTPMeta
+	return s.HTTPMeta
 }
 
-func (o *SquadsGetSquadByTeamResponse) GetObject() *SquadsGetSquadByTeamResponseBody {
-	if o == nil {
+func (s *SquadsGetSquadByTeamResponse) GetObject() *SquadsGetSquadByTeamResponseBody {
+	if s == nil {
 		return nil
 	}
-	return o.Object
+	return s.Object
 }

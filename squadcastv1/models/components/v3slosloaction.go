@@ -32,79 +32,79 @@ func (v *V3SLOSLOAction) UnmarshalJSON(data []byte) error {
 	return nil
 }
 
-func (o *V3SLOSLOAction) GetID() *int64 {
-	if o == nil {
+func (v *V3SLOSLOAction) GetID() *int64 {
+	if v == nil {
 		return nil
 	}
-	return o.ID
+	return v.ID
 }
 
-func (o *V3SLOSLOAction) GetSloID() *int64 {
-	if o == nil {
+func (v *V3SLOSLOAction) GetSloID() *int64 {
+	if v == nil {
 		return nil
 	}
-	return o.SloID
+	return v.SloID
 }
 
-func (o *V3SLOSLOAction) GetType() V3SLOSLOActionType {
-	if o == nil {
+func (v *V3SLOSLOAction) GetType() V3SLOSLOActionType {
+	if v == nil {
 		return V3SLOSLOActionType("")
 	}
-	return o.Type
+	return v.Type
 }
 
-func (o *V3SLOSLOAction) GetUserID() *string {
-	if o == nil {
+func (v *V3SLOSLOAction) GetUserID() *string {
+	if v == nil {
 		return nil
 	}
-	return o.UserID
+	return v.UserID
 }
 
-func (o *V3SLOSLOAction) GetSquadID() *string {
-	if o == nil {
+func (v *V3SLOSLOAction) GetSquadID() *string {
+	if v == nil {
 		return nil
 	}
-	return o.SquadID
+	return v.SquadID
 }
 
-func (o *V3SLOSLOAction) GetServiceID() *string {
-	if o == nil {
+func (v *V3SLOSLOAction) GetServiceID() *string {
+	if v == nil {
 		return nil
 	}
-	return o.ServiceID
+	return v.ServiceID
 }
 
-func (o *V3SLOSLOAction) GetOwnerType() *string {
-	if o == nil {
+func (v *V3SLOSLOAction) GetOwnerType() *string {
+	if v == nil {
 		return nil
 	}
-	return o.OwnerType
+	return v.OwnerType
 }
 
-func (o *V3SLOSLOAction) GetOwnerID() *string {
-	if o == nil {
+func (v *V3SLOSLOAction) GetOwnerID() *string {
+	if v == nil {
 		return nil
 	}
-	return o.OwnerID
+	return v.OwnerID
 }
 
-func (o *V3SLOSLOAction) GetCreatedAt() *time.Time {
-	if o == nil {
+func (v *V3SLOSLOAction) GetCreatedAt() *time.Time {
+	if v == nil {
 		return nil
 	}
-	return o.CreatedAt
+	return v.CreatedAt
 }
 
-func (o *V3SLOSLOAction) GetUpdatedAt() *time.Time {
-	if o == nil {
+func (v *V3SLOSLOAction) GetUpdatedAt() *time.Time {
+	if v == nil {
 		return nil
 	}
-	return o.UpdatedAt
+	return v.UpdatedAt
 }
 
-func (o *V3SLOSLOAction) GetDeletedAt() *time.Time {
-	if o == nil {
+func (v *V3SLOSLOAction) GetDeletedAt() *time.Time {
+	if v == nil {
 		return nil
 	}
-	return o.DeletedAt
+	return v.DeletedAt
 }

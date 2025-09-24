@@ -11,18 +11,18 @@ type SnoozeNotificationsSnoozeIncidentNotificationsRequest struct {
 	V3IncidentsSnoozeNotificationsSnoozeIncidentRequest components.V3IncidentsSnoozeNotificationsSnoozeIncidentRequest `request:"mediaType=application/json"`
 }
 
-func (o *SnoozeNotificationsSnoozeIncidentNotificationsRequest) GetIncidentID() string {
-	if o == nil {
+func (s *SnoozeNotificationsSnoozeIncidentNotificationsRequest) GetIncidentID() string {
+	if s == nil {
 		return ""
 	}
-	return o.IncidentID
+	return s.IncidentID
 }
 
-func (o *SnoozeNotificationsSnoozeIncidentNotificationsRequest) GetV3IncidentsSnoozeNotificationsSnoozeIncidentRequest() components.V3IncidentsSnoozeNotificationsSnoozeIncidentRequest {
-	if o == nil {
+func (s *SnoozeNotificationsSnoozeIncidentNotificationsRequest) GetV3IncidentsSnoozeNotificationsSnoozeIncidentRequest() components.V3IncidentsSnoozeNotificationsSnoozeIncidentRequest {
+	if s == nil {
 		return components.V3IncidentsSnoozeNotificationsSnoozeIncidentRequest{}
 	}
-	return o.V3IncidentsSnoozeNotificationsSnoozeIncidentRequest
+	return s.V3IncidentsSnoozeNotificationsSnoozeIncidentRequest
 }
 
 // SnoozeNotificationsSnoozeIncidentNotificationsResponseBody - The request has succeeded.
@@ -30,11 +30,11 @@ type SnoozeNotificationsSnoozeIncidentNotificationsResponseBody struct {
 	Data components.V3IncidentsSnoozeNotificationsSnoozeIncidentResponse `json:"data"`
 }
 
-func (o *SnoozeNotificationsSnoozeIncidentNotificationsResponseBody) GetData() components.V3IncidentsSnoozeNotificationsSnoozeIncidentResponse {
-	if o == nil {
+func (s *SnoozeNotificationsSnoozeIncidentNotificationsResponseBody) GetData() components.V3IncidentsSnoozeNotificationsSnoozeIncidentResponse {
+	if s == nil {
 		return components.V3IncidentsSnoozeNotificationsSnoozeIncidentResponse{}
 	}
-	return o.Data
+	return s.Data
 }
 
 type SnoozeNotificationsSnoozeIncidentNotificationsResponse struct {
@@ -43,16 +43,16 @@ type SnoozeNotificationsSnoozeIncidentNotificationsResponse struct {
 	Object *SnoozeNotificationsSnoozeIncidentNotificationsResponseBody
 }
 
-func (o *SnoozeNotificationsSnoozeIncidentNotificationsResponse) GetHTTPMeta() components.HTTPMetadata {
-	if o == nil {
+func (s *SnoozeNotificationsSnoozeIncidentNotificationsResponse) GetHTTPMeta() components.HTTPMetadata {
+	if s == nil {
 		return components.HTTPMetadata{}
 	}
-	return o.HTTPMeta
+	return s.HTTPMeta
 }
 
-func (o *SnoozeNotificationsSnoozeIncidentNotificationsResponse) GetObject() *SnoozeNotificationsSnoozeIncidentNotificationsResponseBody {
-	if o == nil {
+func (s *SnoozeNotificationsSnoozeIncidentNotificationsResponse) GetObject() *SnoozeNotificationsSnoozeIncidentNotificationsResponseBody {
+	if s == nil {
 		return nil
 	}
-	return o.Object
+	return s.Object
 }

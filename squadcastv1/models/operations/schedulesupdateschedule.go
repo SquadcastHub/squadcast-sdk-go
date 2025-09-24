@@ -11,18 +11,18 @@ type SchedulesUpdateScheduleRequest struct {
 	V4UpdateScheduleRequest components.V4UpdateScheduleRequest `request:"mediaType=application/json"`
 }
 
-func (o *SchedulesUpdateScheduleRequest) GetScheduleID() string {
-	if o == nil {
+func (s *SchedulesUpdateScheduleRequest) GetScheduleID() string {
+	if s == nil {
 		return ""
 	}
-	return o.ScheduleID
+	return s.ScheduleID
 }
 
-func (o *SchedulesUpdateScheduleRequest) GetV4UpdateScheduleRequest() components.V4UpdateScheduleRequest {
-	if o == nil {
+func (s *SchedulesUpdateScheduleRequest) GetV4UpdateScheduleRequest() components.V4UpdateScheduleRequest {
+	if s == nil {
 		return components.V4UpdateScheduleRequest{}
 	}
-	return o.V4UpdateScheduleRequest
+	return s.V4UpdateScheduleRequest
 }
 
 // SchedulesUpdateScheduleResponseBody - The request has succeeded.
@@ -30,11 +30,11 @@ type SchedulesUpdateScheduleResponseBody struct {
 	Data components.V4ScheduleResponse `json:"data"`
 }
 
-func (o *SchedulesUpdateScheduleResponseBody) GetData() components.V4ScheduleResponse {
-	if o == nil {
+func (s *SchedulesUpdateScheduleResponseBody) GetData() components.V4ScheduleResponse {
+	if s == nil {
 		return components.V4ScheduleResponse{}
 	}
-	return o.Data
+	return s.Data
 }
 
 type SchedulesUpdateScheduleResponse struct {
@@ -43,16 +43,16 @@ type SchedulesUpdateScheduleResponse struct {
 	Object *SchedulesUpdateScheduleResponseBody
 }
 
-func (o *SchedulesUpdateScheduleResponse) GetHTTPMeta() components.HTTPMetadata {
-	if o == nil {
+func (s *SchedulesUpdateScheduleResponse) GetHTTPMeta() components.HTTPMetadata {
+	if s == nil {
 		return components.HTTPMetadata{}
 	}
-	return o.HTTPMeta
+	return s.HTTPMeta
 }
 
-func (o *SchedulesUpdateScheduleResponse) GetObject() *SchedulesUpdateScheduleResponseBody {
-	if o == nil {
+func (s *SchedulesUpdateScheduleResponse) GetObject() *SchedulesUpdateScheduleResponseBody {
+	if s == nil {
 		return nil
 	}
-	return o.Object
+	return s.Object
 }

@@ -12,25 +12,25 @@ type RotationsUpdateRotationParticipantsRequest struct {
 	V4UpdateRotationParticipantsRequest components.V4UpdateRotationParticipantsRequest `request:"mediaType=application/json"`
 }
 
-func (o *RotationsUpdateRotationParticipantsRequest) GetScheduleID() string {
-	if o == nil {
+func (r *RotationsUpdateRotationParticipantsRequest) GetScheduleID() string {
+	if r == nil {
 		return ""
 	}
-	return o.ScheduleID
+	return r.ScheduleID
 }
 
-func (o *RotationsUpdateRotationParticipantsRequest) GetRotationID() string {
-	if o == nil {
+func (r *RotationsUpdateRotationParticipantsRequest) GetRotationID() string {
+	if r == nil {
 		return ""
 	}
-	return o.RotationID
+	return r.RotationID
 }
 
-func (o *RotationsUpdateRotationParticipantsRequest) GetV4UpdateRotationParticipantsRequest() components.V4UpdateRotationParticipantsRequest {
-	if o == nil {
+func (r *RotationsUpdateRotationParticipantsRequest) GetV4UpdateRotationParticipantsRequest() components.V4UpdateRotationParticipantsRequest {
+	if r == nil {
 		return components.V4UpdateRotationParticipantsRequest{}
 	}
-	return o.V4UpdateRotationParticipantsRequest
+	return r.V4UpdateRotationParticipantsRequest
 }
 
 // RotationsUpdateRotationParticipantsResponseBody - The request has succeeded.
@@ -38,11 +38,11 @@ type RotationsUpdateRotationParticipantsResponseBody struct {
 	Data components.V4RotationParticipantsResponse `json:"data"`
 }
 
-func (o *RotationsUpdateRotationParticipantsResponseBody) GetData() components.V4RotationParticipantsResponse {
-	if o == nil {
+func (r *RotationsUpdateRotationParticipantsResponseBody) GetData() components.V4RotationParticipantsResponse {
+	if r == nil {
 		return components.V4RotationParticipantsResponse{}
 	}
-	return o.Data
+	return r.Data
 }
 
 type RotationsUpdateRotationParticipantsResponse struct {
@@ -51,16 +51,16 @@ type RotationsUpdateRotationParticipantsResponse struct {
 	Object *RotationsUpdateRotationParticipantsResponseBody
 }
 
-func (o *RotationsUpdateRotationParticipantsResponse) GetHTTPMeta() components.HTTPMetadata {
-	if o == nil {
+func (r *RotationsUpdateRotationParticipantsResponse) GetHTTPMeta() components.HTTPMetadata {
+	if r == nil {
 		return components.HTTPMetadata{}
 	}
-	return o.HTTPMeta
+	return r.HTTPMeta
 }
 
-func (o *RotationsUpdateRotationParticipantsResponse) GetObject() *RotationsUpdateRotationParticipantsResponseBody {
-	if o == nil {
+func (r *RotationsUpdateRotationParticipantsResponse) GetObject() *RotationsUpdateRotationParticipantsResponseBody {
+	if r == nil {
 		return nil
 	}
-	return o.Object
+	return r.Object
 }

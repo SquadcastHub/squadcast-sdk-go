@@ -9,30 +9,30 @@ type V3GlobalEventRulesCreateGlobalEventRuleRequest struct {
 	EntityOwner V3GlobalEventRulesEntityOwner `json:"entity_owner"`
 }
 
-func (o *V3GlobalEventRulesCreateGlobalEventRuleRequest) GetName() string {
-	if o == nil {
+func (v *V3GlobalEventRulesCreateGlobalEventRuleRequest) GetName() string {
+	if v == nil {
 		return ""
 	}
-	return o.Name
+	return v.Name
 }
 
-func (o *V3GlobalEventRulesCreateGlobalEventRuleRequest) GetDescription() string {
-	if o == nil {
+func (v *V3GlobalEventRulesCreateGlobalEventRuleRequest) GetDescription() string {
+	if v == nil {
 		return ""
 	}
-	return o.Description
+	return v.Description
 }
 
-func (o *V3GlobalEventRulesCreateGlobalEventRuleRequest) GetOwnerID() string {
-	if o == nil {
+func (v *V3GlobalEventRulesCreateGlobalEventRuleRequest) GetOwnerID() string {
+	if v == nil {
 		return ""
 	}
-	return o.OwnerID
+	return v.OwnerID
 }
 
-func (o *V3GlobalEventRulesCreateGlobalEventRuleRequest) GetEntityOwner() V3GlobalEventRulesEntityOwner {
-	if o == nil {
+func (v *V3GlobalEventRulesCreateGlobalEventRuleRequest) GetEntityOwner() V3GlobalEventRulesEntityOwner {
+	if v == nil {
 		return V3GlobalEventRulesEntityOwner{}
 	}
-	return o.EntityOwner
+	return v.EntityOwner
 }

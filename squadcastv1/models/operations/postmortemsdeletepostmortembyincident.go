@@ -10,11 +10,11 @@ type PostmortemsDeletePostmortemByIncidentRequest struct {
 	IncidentID string `pathParam:"style=simple,explode=false,name=incidentID"`
 }
 
-func (o *PostmortemsDeletePostmortemByIncidentRequest) GetIncidentID() string {
-	if o == nil {
+func (p *PostmortemsDeletePostmortemByIncidentRequest) GetIncidentID() string {
+	if p == nil {
 		return ""
 	}
-	return o.IncidentID
+	return p.IncidentID
 }
 
 // PostmortemsDeletePostmortemByIncidentResponseBody - The request has succeeded.
@@ -22,11 +22,11 @@ type PostmortemsDeletePostmortemByIncidentResponseBody struct {
 	Data components.V3IncidentsPostmortemsPostmortemResponse `json:"data"`
 }
 
-func (o *PostmortemsDeletePostmortemByIncidentResponseBody) GetData() components.V3IncidentsPostmortemsPostmortemResponse {
-	if o == nil {
+func (p *PostmortemsDeletePostmortemByIncidentResponseBody) GetData() components.V3IncidentsPostmortemsPostmortemResponse {
+	if p == nil {
 		return components.V3IncidentsPostmortemsPostmortemResponse{}
 	}
-	return o.Data
+	return p.Data
 }
 
 type PostmortemsDeletePostmortemByIncidentResponse struct {
@@ -35,16 +35,16 @@ type PostmortemsDeletePostmortemByIncidentResponse struct {
 	Object *PostmortemsDeletePostmortemByIncidentResponseBody
 }
 
-func (o *PostmortemsDeletePostmortemByIncidentResponse) GetHTTPMeta() components.HTTPMetadata {
-	if o == nil {
+func (p *PostmortemsDeletePostmortemByIncidentResponse) GetHTTPMeta() components.HTTPMetadata {
+	if p == nil {
 		return components.HTTPMetadata{}
 	}
-	return o.HTTPMeta
+	return p.HTTPMeta
 }
 
-func (o *PostmortemsDeletePostmortemByIncidentResponse) GetObject() *PostmortemsDeletePostmortemByIncidentResponseBody {
-	if o == nil {
+func (p *PostmortemsDeletePostmortemByIncidentResponse) GetObject() *PostmortemsDeletePostmortemByIncidentResponseBody {
+	if p == nil {
 		return nil
 	}
-	return o.Object
+	return p.Object
 }

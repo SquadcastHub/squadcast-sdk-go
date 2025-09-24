@@ -11,11 +11,11 @@ type WebhooksCreateWebhookBody struct {
 	Data components.V3ExtensionsWebhooksWebhookResponse `json:"data"`
 }
 
-func (o *WebhooksCreateWebhookBody) GetData() components.V3ExtensionsWebhooksWebhookResponse {
-	if o == nil {
+func (w *WebhooksCreateWebhookBody) GetData() components.V3ExtensionsWebhooksWebhookResponse {
+	if w == nil {
 		return components.V3ExtensionsWebhooksWebhookResponse{}
 	}
-	return o.Data
+	return w.Data
 }
 
 // WebhooksCreateWebhookResponseBody - The request has succeeded and a new resource has been created as a result.
@@ -24,11 +24,11 @@ type WebhooksCreateWebhookResponseBody struct {
 	Body WebhooksCreateWebhookBody `json:"body"`
 }
 
-func (o *WebhooksCreateWebhookResponseBody) GetBody() WebhooksCreateWebhookBody {
-	if o == nil {
+func (w *WebhooksCreateWebhookResponseBody) GetBody() WebhooksCreateWebhookBody {
+	if w == nil {
 		return WebhooksCreateWebhookBody{}
 	}
-	return o.Body
+	return w.Body
 }
 
 type WebhooksCreateWebhookResponse struct {
@@ -37,16 +37,16 @@ type WebhooksCreateWebhookResponse struct {
 	Object *WebhooksCreateWebhookResponseBody
 }
 
-func (o *WebhooksCreateWebhookResponse) GetHTTPMeta() components.HTTPMetadata {
-	if o == nil {
+func (w *WebhooksCreateWebhookResponse) GetHTTPMeta() components.HTTPMetadata {
+	if w == nil {
 		return components.HTTPMetadata{}
 	}
-	return o.HTTPMeta
+	return w.HTTPMeta
 }
 
-func (o *WebhooksCreateWebhookResponse) GetObject() *WebhooksCreateWebhookResponseBody {
-	if o == nil {
+func (w *WebhooksCreateWebhookResponse) GetObject() *WebhooksCreateWebhookResponseBody {
+	if w == nil {
 		return nil
 	}
-	return o.Object
+	return w.Object
 }

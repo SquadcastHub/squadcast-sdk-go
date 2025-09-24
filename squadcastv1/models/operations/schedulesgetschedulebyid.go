@@ -10,11 +10,11 @@ type SchedulesGetScheduleByIDRequest struct {
 	ScheduleID string `pathParam:"style=simple,explode=false,name=scheduleID"`
 }
 
-func (o *SchedulesGetScheduleByIDRequest) GetScheduleID() string {
-	if o == nil {
+func (s *SchedulesGetScheduleByIDRequest) GetScheduleID() string {
+	if s == nil {
 		return ""
 	}
-	return o.ScheduleID
+	return s.ScheduleID
 }
 
 // SchedulesGetScheduleByIDResponseBody - The request has succeeded.
@@ -22,11 +22,11 @@ type SchedulesGetScheduleByIDResponseBody struct {
 	Data components.V4ScheduleResponse `json:"data"`
 }
 
-func (o *SchedulesGetScheduleByIDResponseBody) GetData() components.V4ScheduleResponse {
-	if o == nil {
+func (s *SchedulesGetScheduleByIDResponseBody) GetData() components.V4ScheduleResponse {
+	if s == nil {
 		return components.V4ScheduleResponse{}
 	}
-	return o.Data
+	return s.Data
 }
 
 type SchedulesGetScheduleByIDResponse struct {
@@ -35,16 +35,16 @@ type SchedulesGetScheduleByIDResponse struct {
 	Object *SchedulesGetScheduleByIDResponseBody
 }
 
-func (o *SchedulesGetScheduleByIDResponse) GetHTTPMeta() components.HTTPMetadata {
-	if o == nil {
+func (s *SchedulesGetScheduleByIDResponse) GetHTTPMeta() components.HTTPMetadata {
+	if s == nil {
 		return components.HTTPMetadata{}
 	}
-	return o.HTTPMeta
+	return s.HTTPMeta
 }
 
-func (o *SchedulesGetScheduleByIDResponse) GetObject() *SchedulesGetScheduleByIDResponseBody {
-	if o == nil {
+func (s *SchedulesGetScheduleByIDResponse) GetObject() *SchedulesGetScheduleByIDResponseBody {
+	if s == nil {
 		return nil
 	}
-	return o.Object
+	return s.Object
 }

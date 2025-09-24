@@ -9,23 +9,23 @@ type V3IncidentsCommunicationCardsUpdateCommunicationCardRequest struct {
 	URL   string `json:"url"`
 }
 
-func (o *V3IncidentsCommunicationCardsUpdateCommunicationCardRequest) GetTitle() string {
-	if o == nil {
+func (v *V3IncidentsCommunicationCardsUpdateCommunicationCardRequest) GetTitle() string {
+	if v == nil {
 		return ""
 	}
-	return o.Title
+	return v.Title
 }
 
-func (o *V3IncidentsCommunicationCardsUpdateCommunicationCardRequest) GetType() string {
-	if o == nil {
+func (v *V3IncidentsCommunicationCardsUpdateCommunicationCardRequest) GetType() string {
+	if v == nil {
 		return ""
 	}
-	return o.Type
+	return v.Type
 }
 
-func (o *V3IncidentsCommunicationCardsUpdateCommunicationCardRequest) GetURL() string {
-	if o == nil {
+func (v *V3IncidentsCommunicationCardsUpdateCommunicationCardRequest) GetURL() string {
+	if v == nil {
 		return ""
 	}
-	return o.URL
+	return v.URL
 }

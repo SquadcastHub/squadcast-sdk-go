@@ -13,32 +13,32 @@ type GlobalEventRulesDeleteRuleByIDRequest struct {
 	RuleID               string `pathParam:"style=simple,explode=false,name=rule_id"`
 }
 
-func (o *GlobalEventRulesDeleteRuleByIDRequest) GetGerID() int64 {
-	if o == nil {
+func (g *GlobalEventRulesDeleteRuleByIDRequest) GetGerID() int64 {
+	if g == nil {
 		return 0
 	}
-	return o.GerID
+	return g.GerID
 }
 
-func (o *GlobalEventRulesDeleteRuleByIDRequest) GetAlertSourceVersion() string {
-	if o == nil {
+func (g *GlobalEventRulesDeleteRuleByIDRequest) GetAlertSourceVersion() string {
+	if g == nil {
 		return ""
 	}
-	return o.AlertSourceVersion
+	return g.AlertSourceVersion
 }
 
-func (o *GlobalEventRulesDeleteRuleByIDRequest) GetAlertSourceShortname() string {
-	if o == nil {
+func (g *GlobalEventRulesDeleteRuleByIDRequest) GetAlertSourceShortname() string {
+	if g == nil {
 		return ""
 	}
-	return o.AlertSourceShortname
+	return g.AlertSourceShortname
 }
 
-func (o *GlobalEventRulesDeleteRuleByIDRequest) GetRuleID() string {
-	if o == nil {
+func (g *GlobalEventRulesDeleteRuleByIDRequest) GetRuleID() string {
+	if g == nil {
 		return ""
 	}
-	return o.RuleID
+	return g.RuleID
 }
 
 // GlobalEventRulesDeleteRuleByIDResponseBody - There is no content to send for this request, but the headers may be useful.
@@ -50,16 +50,16 @@ type GlobalEventRulesDeleteRuleByIDResponse struct {
 	Body     []byte
 }
 
-func (o *GlobalEventRulesDeleteRuleByIDResponse) GetHTTPMeta() components.HTTPMetadata {
-	if o == nil {
+func (g *GlobalEventRulesDeleteRuleByIDResponse) GetHTTPMeta() components.HTTPMetadata {
+	if g == nil {
 		return components.HTTPMetadata{}
 	}
-	return o.HTTPMeta
+	return g.HTTPMeta
 }
 
-func (o *GlobalEventRulesDeleteRuleByIDResponse) GetBody() []byte {
-	if o == nil {
+func (g *GlobalEventRulesDeleteRuleByIDResponse) GetBody() []byte {
+	if g == nil {
 		return nil
 	}
-	return o.Body
+	return g.Body
 }

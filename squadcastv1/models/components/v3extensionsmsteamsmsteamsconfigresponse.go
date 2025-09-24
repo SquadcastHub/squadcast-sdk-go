@@ -30,86 +30,86 @@ type V3ExtensionsMSTeamsMSTeamsConfigResponse struct {
 	ConnectedTeams []V3ExtensionsMSTeamsConnectedTeams `json:"connected_teams"`
 }
 
-func (o *V3ExtensionsMSTeamsMSTeamsConfigResponse) GetCustomIncidentAlertState() *V3ExtensionsMSTeamsIncidentActionAlertState {
-	if o == nil {
+func (v *V3ExtensionsMSTeamsMSTeamsConfigResponse) GetCustomIncidentAlertState() *V3ExtensionsMSTeamsIncidentActionAlertState {
+	if v == nil {
 		return nil
 	}
-	return o.CustomIncidentAlertState
+	return v.CustomIncidentAlertState
 }
 
-func (o *V3ExtensionsMSTeamsMSTeamsConfigResponse) GetID() *string {
-	if o == nil {
+func (v *V3ExtensionsMSTeamsMSTeamsConfigResponse) GetID() *string {
+	if v == nil {
 		return nil
 	}
-	return o.ID
+	return v.ID
 }
 
-func (o *V3ExtensionsMSTeamsMSTeamsConfigResponse) GetOrganizationID() *string {
-	if o == nil {
+func (v *V3ExtensionsMSTeamsMSTeamsConfigResponse) GetOrganizationID() *string {
+	if v == nil {
 		return nil
 	}
-	return o.OrganizationID
+	return v.OrganizationID
 }
 
-func (o *V3ExtensionsMSTeamsMSTeamsConfigResponse) GetDefaultConversationName() string {
-	if o == nil {
+func (v *V3ExtensionsMSTeamsMSTeamsConfigResponse) GetDefaultConversationName() string {
+	if v == nil {
 		return ""
 	}
-	return o.DefaultConversationName
+	return v.DefaultConversationName
 }
 
-func (o *V3ExtensionsMSTeamsMSTeamsConfigResponse) GetDefaultConversationID() string {
-	if o == nil {
+func (v *V3ExtensionsMSTeamsMSTeamsConfigResponse) GetDefaultConversationID() string {
+	if v == nil {
 		return ""
 	}
-	return o.DefaultConversationID
+	return v.DefaultConversationID
 }
 
-func (o *V3ExtensionsMSTeamsMSTeamsConfigResponse) GetIsActive() bool {
-	if o == nil {
+func (v *V3ExtensionsMSTeamsMSTeamsConfigResponse) GetIsActive() bool {
+	if v == nil {
 		return false
 	}
-	return o.IsActive
+	return v.IsActive
 }
 
-func (o *V3ExtensionsMSTeamsMSTeamsConfigResponse) GetIsDefaultActive() bool {
-	if o == nil {
+func (v *V3ExtensionsMSTeamsMSTeamsConfigResponse) GetIsDefaultActive() bool {
+	if v == nil {
 		return false
 	}
-	return o.IsDefaultActive
+	return v.IsDefaultActive
 }
 
-func (o *V3ExtensionsMSTeamsMSTeamsConfigResponse) GetIsCustomChannelsActive() bool {
-	if o == nil {
+func (v *V3ExtensionsMSTeamsMSTeamsConfigResponse) GetIsCustomChannelsActive() bool {
+	if v == nil {
 		return false
 	}
-	return o.IsCustomChannelsActive
+	return v.IsCustomChannelsActive
 }
 
-func (o *V3ExtensionsMSTeamsMSTeamsConfigResponse) GetTriggers() V3ExtensionsMSTeamsTriggers {
-	if o == nil {
+func (v *V3ExtensionsMSTeamsMSTeamsConfigResponse) GetTriggers() V3ExtensionsMSTeamsTriggers {
+	if v == nil {
 		return V3ExtensionsMSTeamsTriggers{}
 	}
-	return o.Triggers
+	return v.Triggers
 }
 
-func (o *V3ExtensionsMSTeamsMSTeamsConfigResponse) GetTenantID() string {
-	if o == nil {
+func (v *V3ExtensionsMSTeamsMSTeamsConfigResponse) GetTenantID() string {
+	if v == nil {
 		return ""
 	}
-	return o.TenantID
+	return v.TenantID
 }
 
-func (o *V3ExtensionsMSTeamsMSTeamsConfigResponse) GetFromID() string {
-	if o == nil {
+func (v *V3ExtensionsMSTeamsMSTeamsConfigResponse) GetFromID() string {
+	if v == nil {
 		return ""
 	}
-	return o.FromID
+	return v.FromID
 }
 
-func (o *V3ExtensionsMSTeamsMSTeamsConfigResponse) GetConnectedTeams() []V3ExtensionsMSTeamsConnectedTeams {
-	if o == nil {
+func (v *V3ExtensionsMSTeamsMSTeamsConfigResponse) GetConnectedTeams() []V3ExtensionsMSTeamsConnectedTeams {
+	if v == nil {
 		return []V3ExtensionsMSTeamsConnectedTeams{}
 	}
-	return o.ConnectedTeams
+	return v.ConnectedTeams
 }

@@ -31,72 +31,72 @@ func (v *V3ServicesMaintenanceModeMaintenanceModeResponse) UnmarshalJSON(data []
 	return nil
 }
 
-func (o *V3ServicesMaintenanceModeMaintenanceModeResponse) GetServiceID() string {
-	if o == nil {
+func (v *V3ServicesMaintenanceModeMaintenanceModeResponse) GetServiceID() string {
+	if v == nil {
 		return ""
 	}
-	return o.ServiceID
+	return v.ServiceID
 }
 
-func (o *V3ServicesMaintenanceModeMaintenanceModeResponse) GetMaintenanceFrom() time.Time {
-	if o == nil {
+func (v *V3ServicesMaintenanceModeMaintenanceModeResponse) GetMaintenanceFrom() time.Time {
+	if v == nil {
 		return time.Time{}
 	}
-	return o.MaintenanceFrom
+	return v.MaintenanceFrom
 }
 
-func (o *V3ServicesMaintenanceModeMaintenanceModeResponse) GetMaintenanceTill() time.Time {
-	if o == nil {
+func (v *V3ServicesMaintenanceModeMaintenanceModeResponse) GetMaintenanceTill() time.Time {
+	if v == nil {
 		return time.Time{}
 	}
-	return o.MaintenanceTill
+	return v.MaintenanceTill
 }
 
-func (o *V3ServicesMaintenanceModeMaintenanceModeResponse) GetRepetitionDaily() bool {
-	if o == nil {
+func (v *V3ServicesMaintenanceModeMaintenanceModeResponse) GetRepetitionDaily() bool {
+	if v == nil {
 		return false
 	}
-	return o.RepetitionDaily
+	return v.RepetitionDaily
 }
 
-func (o *V3ServicesMaintenanceModeMaintenanceModeResponse) GetRepetitionWeekly() bool {
-	if o == nil {
+func (v *V3ServicesMaintenanceModeMaintenanceModeResponse) GetRepetitionWeekly() bool {
+	if v == nil {
 		return false
 	}
-	return o.RepetitionWeekly
+	return v.RepetitionWeekly
 }
 
-func (o *V3ServicesMaintenanceModeMaintenanceModeResponse) GetRepetitionTwoWeekly() bool {
-	if o == nil {
+func (v *V3ServicesMaintenanceModeMaintenanceModeResponse) GetRepetitionTwoWeekly() bool {
+	if v == nil {
 		return false
 	}
-	return o.RepetitionTwoWeekly
+	return v.RepetitionTwoWeekly
 }
 
-func (o *V3ServicesMaintenanceModeMaintenanceModeResponse) GetRepetitionThreeWeekly() bool {
-	if o == nil {
+func (v *V3ServicesMaintenanceModeMaintenanceModeResponse) GetRepetitionThreeWeekly() bool {
+	if v == nil {
 		return false
 	}
-	return o.RepetitionThreeWeekly
+	return v.RepetitionThreeWeekly
 }
 
-func (o *V3ServicesMaintenanceModeMaintenanceModeResponse) GetRepetitionMonthly() bool {
-	if o == nil {
+func (v *V3ServicesMaintenanceModeMaintenanceModeResponse) GetRepetitionMonthly() bool {
+	if v == nil {
 		return false
 	}
-	return o.RepetitionMonthly
+	return v.RepetitionMonthly
 }
 
-func (o *V3ServicesMaintenanceModeMaintenanceModeResponse) GetDeleted() bool {
-	if o == nil {
+func (v *V3ServicesMaintenanceModeMaintenanceModeResponse) GetDeleted() bool {
+	if v == nil {
 		return false
 	}
-	return o.Deleted
+	return v.Deleted
 }
 
-func (o *V3ServicesMaintenanceModeMaintenanceModeResponse) GetRepeatTill() time.Time {
-	if o == nil {
+func (v *V3ServicesMaintenanceModeMaintenanceModeResponse) GetRepeatTill() time.Time {
+	if v == nil {
 		return time.Time{}
 	}
-	return o.RepeatTill
+	return v.RepeatTill
 }

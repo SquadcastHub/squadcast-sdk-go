@@ -11,29 +11,29 @@ type ServicesCreateOrUpdateIAGConfigRequest struct {
 	V3ServicesIAGConfigRequest components.V3ServicesIAGConfigRequest `request:"mediaType=application/json"`
 }
 
-func (o *ServicesCreateOrUpdateIAGConfigRequest) GetServiceID() string {
-	if o == nil {
+func (s *ServicesCreateOrUpdateIAGConfigRequest) GetServiceID() string {
+	if s == nil {
 		return ""
 	}
-	return o.ServiceID
+	return s.ServiceID
 }
 
-func (o *ServicesCreateOrUpdateIAGConfigRequest) GetV3ServicesIAGConfigRequest() components.V3ServicesIAGConfigRequest {
-	if o == nil {
+func (s *ServicesCreateOrUpdateIAGConfigRequest) GetV3ServicesIAGConfigRequest() components.V3ServicesIAGConfigRequest {
+	if s == nil {
 		return components.V3ServicesIAGConfigRequest{}
 	}
-	return o.V3ServicesIAGConfigRequest
+	return s.V3ServicesIAGConfigRequest
 }
 
 type ServicesCreateOrUpdateIAGConfigData struct {
 	Msg string `json:"msg"`
 }
 
-func (o *ServicesCreateOrUpdateIAGConfigData) GetMsg() string {
-	if o == nil {
+func (s *ServicesCreateOrUpdateIAGConfigData) GetMsg() string {
+	if s == nil {
 		return ""
 	}
-	return o.Msg
+	return s.Msg
 }
 
 // ServicesCreateOrUpdateIAGConfigResponseBody - The request has succeeded.
@@ -41,11 +41,11 @@ type ServicesCreateOrUpdateIAGConfigResponseBody struct {
 	Data ServicesCreateOrUpdateIAGConfigData `json:"data"`
 }
 
-func (o *ServicesCreateOrUpdateIAGConfigResponseBody) GetData() ServicesCreateOrUpdateIAGConfigData {
-	if o == nil {
+func (s *ServicesCreateOrUpdateIAGConfigResponseBody) GetData() ServicesCreateOrUpdateIAGConfigData {
+	if s == nil {
 		return ServicesCreateOrUpdateIAGConfigData{}
 	}
-	return o.Data
+	return s.Data
 }
 
 type ServicesCreateOrUpdateIAGConfigResponse struct {
@@ -54,16 +54,16 @@ type ServicesCreateOrUpdateIAGConfigResponse struct {
 	Object *ServicesCreateOrUpdateIAGConfigResponseBody
 }
 
-func (o *ServicesCreateOrUpdateIAGConfigResponse) GetHTTPMeta() components.HTTPMetadata {
-	if o == nil {
+func (s *ServicesCreateOrUpdateIAGConfigResponse) GetHTTPMeta() components.HTTPMetadata {
+	if s == nil {
 		return components.HTTPMetadata{}
 	}
-	return o.HTTPMeta
+	return s.HTTPMeta
 }
 
-func (o *ServicesCreateOrUpdateIAGConfigResponse) GetObject() *ServicesCreateOrUpdateIAGConfigResponseBody {
-	if o == nil {
+func (s *ServicesCreateOrUpdateIAGConfigResponse) GetObject() *ServicesCreateOrUpdateIAGConfigResponseBody {
+	if s == nil {
 		return nil
 	}
-	return o.Object
+	return s.Object
 }

@@ -22,16 +22,16 @@ func (v *V3ServicesOverlayDedupKeyOverlay) UnmarshalJSON(data []byte) error {
 	return nil
 }
 
-func (o *V3ServicesOverlayDedupKeyOverlay) GetTemplate() string {
-	if o == nil {
+func (v *V3ServicesOverlayDedupKeyOverlay) GetTemplate() string {
+	if v == nil {
 		return ""
 	}
-	return o.Template
+	return v.Template
 }
 
-func (o *V3ServicesOverlayDedupKeyOverlay) GetDuration() int {
-	if o == nil {
+func (v *V3ServicesOverlayDedupKeyOverlay) GetDuration() int {
+	if v == nil {
 		return 0
 	}
-	return o.Duration
+	return v.Duration
 }

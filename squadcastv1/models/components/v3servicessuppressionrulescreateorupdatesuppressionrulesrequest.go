@@ -6,9 +6,9 @@ type V3ServicesSuppressionRulesCreateOrUpdateSuppressionRulesRequest struct {
 	Rules []V3ServicesSuppressionRulesSuppressionRule `json:"rules"`
 }
 
-func (o *V3ServicesSuppressionRulesCreateOrUpdateSuppressionRulesRequest) GetRules() []V3ServicesSuppressionRulesSuppressionRule {
-	if o == nil {
+func (v *V3ServicesSuppressionRulesCreateOrUpdateSuppressionRulesRequest) GetRules() []V3ServicesSuppressionRulesSuppressionRule {
+	if v == nil {
 		return []V3ServicesSuppressionRulesSuppressionRule{}
 	}
-	return o.Rules
+	return v.Rules
 }

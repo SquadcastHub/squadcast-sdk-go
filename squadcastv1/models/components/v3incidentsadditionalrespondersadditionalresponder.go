@@ -10,30 +10,30 @@ type V3IncidentsAdditionalRespondersAdditionalResponder struct {
 	TimeOfAssignment *string `json:"time_of_assignment,omitempty"`
 }
 
-func (o *V3IncidentsAdditionalRespondersAdditionalResponder) GetID() string {
-	if o == nil {
+func (v *V3IncidentsAdditionalRespondersAdditionalResponder) GetID() string {
+	if v == nil {
 		return ""
 	}
-	return o.ID
+	return v.ID
 }
 
-func (o *V3IncidentsAdditionalRespondersAdditionalResponder) GetType() string {
-	if o == nil {
+func (v *V3IncidentsAdditionalRespondersAdditionalResponder) GetType() string {
+	if v == nil {
 		return ""
 	}
-	return o.Type
+	return v.Type
 }
 
-func (o *V3IncidentsAdditionalRespondersAdditionalResponder) GetName() *string {
-	if o == nil {
+func (v *V3IncidentsAdditionalRespondersAdditionalResponder) GetName() *string {
+	if v == nil {
 		return nil
 	}
-	return o.Name
+	return v.Name
 }
 
-func (o *V3IncidentsAdditionalRespondersAdditionalResponder) GetTimeOfAssignment() *string {
-	if o == nil {
+func (v *V3IncidentsAdditionalRespondersAdditionalResponder) GetTimeOfAssignment() *string {
+	if v == nil {
 		return nil
 	}
-	return o.TimeOfAssignment
+	return v.TimeOfAssignment
 }

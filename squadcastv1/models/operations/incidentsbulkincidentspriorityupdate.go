@@ -15,16 +15,16 @@ type IncidentsBulkIncidentsPriorityUpdateResponse struct {
 	Body     []byte
 }
 
-func (o *IncidentsBulkIncidentsPriorityUpdateResponse) GetHTTPMeta() components.HTTPMetadata {
-	if o == nil {
+func (i *IncidentsBulkIncidentsPriorityUpdateResponse) GetHTTPMeta() components.HTTPMetadata {
+	if i == nil {
 		return components.HTTPMetadata{}
 	}
-	return o.HTTPMeta
+	return i.HTTPMeta
 }
 
-func (o *IncidentsBulkIncidentsPriorityUpdateResponse) GetBody() []byte {
-	if o == nil {
+func (i *IncidentsBulkIncidentsPriorityUpdateResponse) GetBody() []byte {
+	if i == nil {
 		return nil
 	}
-	return o.Body
+	return i.Body
 }

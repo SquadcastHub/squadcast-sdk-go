@@ -8,23 +8,23 @@ type V3GlobalEventRulesUpdateGlobalEventRuleRequest struct {
 	EntityOwner *V3GlobalEventRulesEntityOwnerUpdate `json:"entity_owner,omitempty"`
 }
 
-func (o *V3GlobalEventRulesUpdateGlobalEventRuleRequest) GetName() *string {
-	if o == nil {
+func (v *V3GlobalEventRulesUpdateGlobalEventRuleRequest) GetName() *string {
+	if v == nil {
 		return nil
 	}
-	return o.Name
+	return v.Name
 }
 
-func (o *V3GlobalEventRulesUpdateGlobalEventRuleRequest) GetDescription() *string {
-	if o == nil {
+func (v *V3GlobalEventRulesUpdateGlobalEventRuleRequest) GetDescription() *string {
+	if v == nil {
 		return nil
 	}
-	return o.Description
+	return v.Description
 }
 
-func (o *V3GlobalEventRulesUpdateGlobalEventRuleRequest) GetEntityOwner() *V3GlobalEventRulesEntityOwnerUpdate {
-	if o == nil {
+func (v *V3GlobalEventRulesUpdateGlobalEventRuleRequest) GetEntityOwner() *V3GlobalEventRulesEntityOwnerUpdate {
+	if v == nil {
 		return nil
 	}
-	return o.EntityOwner
+	return v.EntityOwner
 }

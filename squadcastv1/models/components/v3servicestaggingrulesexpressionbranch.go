@@ -84,10 +84,10 @@ const (
 )
 
 type V3ServicesTaggingRulesExpressionBranchRHS struct {
-	Str     *string  `queryParam:"inline" name:"rhs"`
-	Boolean *bool    `queryParam:"inline" name:"rhs"`
-	Int32   *int     `queryParam:"inline" name:"rhs"`
-	Float32 *float32 `queryParam:"inline" name:"rhs"`
+	Str     *string  `queryParam:"inline,name=rhs"`
+	Boolean *bool    `queryParam:"inline,name=rhs"`
+	Int32   *int     `queryParam:"inline,name=rhs"`
+	Float32 *float32 `queryParam:"inline,name=rhs"`
 
 	Type V3ServicesTaggingRulesExpressionBranchRHSType
 }
@@ -187,23 +187,23 @@ type V3ServicesTaggingRulesExpressionBranch struct {
 	RHS V3ServicesTaggingRulesExpressionBranchRHS `json:"rhs"`
 }
 
-func (o *V3ServicesTaggingRulesExpressionBranch) GetLHS() string {
-	if o == nil {
+func (v *V3ServicesTaggingRulesExpressionBranch) GetLHS() string {
+	if v == nil {
 		return ""
 	}
-	return o.LHS
+	return v.LHS
 }
 
-func (o *V3ServicesTaggingRulesExpressionBranch) GetOp() *V3ServicesTaggingRulesExpressionBranchOp {
-	if o == nil {
+func (v *V3ServicesTaggingRulesExpressionBranch) GetOp() *V3ServicesTaggingRulesExpressionBranchOp {
+	if v == nil {
 		return nil
 	}
-	return o.Op
+	return v.Op
 }
 
-func (o *V3ServicesTaggingRulesExpressionBranch) GetRHS() V3ServicesTaggingRulesExpressionBranchRHS {
-	if o == nil {
+func (v *V3ServicesTaggingRulesExpressionBranch) GetRHS() V3ServicesTaggingRulesExpressionBranchRHS {
+	if v == nil {
 		return V3ServicesTaggingRulesExpressionBranchRHS{}
 	}
-	return o.RHS
+	return v.RHS
 }

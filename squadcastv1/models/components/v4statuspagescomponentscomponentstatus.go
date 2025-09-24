@@ -9,30 +9,30 @@ type V4StatusPagesComponentsComponentStatus struct {
 	Slug  string `json:"slug"`
 }
 
-func (o *V4StatusPagesComponentsComponentStatus) GetID() int64 {
-	if o == nil {
+func (v *V4StatusPagesComponentsComponentStatus) GetID() int64 {
+	if v == nil {
 		return 0
 	}
-	return o.ID
+	return v.ID
 }
 
-func (o *V4StatusPagesComponentsComponentStatus) GetName() string {
-	if o == nil {
+func (v *V4StatusPagesComponentsComponentStatus) GetName() string {
+	if v == nil {
 		return ""
 	}
-	return o.Name
+	return v.Name
 }
 
-func (o *V4StatusPagesComponentsComponentStatus) GetColor() string {
-	if o == nil {
+func (v *V4StatusPagesComponentsComponentStatus) GetColor() string {
+	if v == nil {
 		return ""
 	}
-	return o.Color
+	return v.Color
 }
 
-func (o *V4StatusPagesComponentsComponentStatus) GetSlug() string {
-	if o == nil {
+func (v *V4StatusPagesComponentsComponentStatus) GetSlug() string {
+	if v == nil {
 		return ""
 	}
-	return o.Slug
+	return v.Slug
 }

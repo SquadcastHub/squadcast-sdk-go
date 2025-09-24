@@ -7,16 +7,16 @@ type V4SquadsUpdateSquadNameResponse struct {
 	Name string `json:"name"`
 }
 
-func (o *V4SquadsUpdateSquadNameResponse) GetID() string {
-	if o == nil {
+func (v *V4SquadsUpdateSquadNameResponse) GetID() string {
+	if v == nil {
 		return ""
 	}
-	return o.ID
+	return v.ID
 }
 
-func (o *V4SquadsUpdateSquadNameResponse) GetName() string {
-	if o == nil {
+func (v *V4SquadsUpdateSquadNameResponse) GetName() string {
+	if v == nil {
 		return ""
 	}
-	return o.Name
+	return v.Name
 }

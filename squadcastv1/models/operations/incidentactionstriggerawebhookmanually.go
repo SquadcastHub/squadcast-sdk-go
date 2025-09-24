@@ -11,18 +11,18 @@ type IncidentActionsTriggerAWebhookManuallyRequest struct {
 	EventWebhookID string `pathParam:"style=simple,explode=false,name=eventWebhookID"`
 }
 
-func (o *IncidentActionsTriggerAWebhookManuallyRequest) GetIncidentID() string {
-	if o == nil {
+func (i *IncidentActionsTriggerAWebhookManuallyRequest) GetIncidentID() string {
+	if i == nil {
 		return ""
 	}
-	return o.IncidentID
+	return i.IncidentID
 }
 
-func (o *IncidentActionsTriggerAWebhookManuallyRequest) GetEventWebhookID() string {
-	if o == nil {
+func (i *IncidentActionsTriggerAWebhookManuallyRequest) GetEventWebhookID() string {
+	if i == nil {
 		return ""
 	}
-	return o.EventWebhookID
+	return i.EventWebhookID
 }
 
 // IncidentActionsTriggerAWebhookManuallyResponseBody - The request has succeeded.
@@ -31,11 +31,11 @@ type IncidentActionsTriggerAWebhookManuallyResponseBody struct {
 	Data components.V3IncidentsIncidentActionsWebhookActionResponse `json:"data"`
 }
 
-func (o *IncidentActionsTriggerAWebhookManuallyResponseBody) GetData() components.V3IncidentsIncidentActionsWebhookActionResponse {
-	if o == nil {
+func (i *IncidentActionsTriggerAWebhookManuallyResponseBody) GetData() components.V3IncidentsIncidentActionsWebhookActionResponse {
+	if i == nil {
 		return components.V3IncidentsIncidentActionsWebhookActionResponse{}
 	}
-	return o.Data
+	return i.Data
 }
 
 type IncidentActionsTriggerAWebhookManuallyResponse struct {
@@ -44,16 +44,16 @@ type IncidentActionsTriggerAWebhookManuallyResponse struct {
 	Object *IncidentActionsTriggerAWebhookManuallyResponseBody
 }
 
-func (o *IncidentActionsTriggerAWebhookManuallyResponse) GetHTTPMeta() components.HTTPMetadata {
-	if o == nil {
+func (i *IncidentActionsTriggerAWebhookManuallyResponse) GetHTTPMeta() components.HTTPMetadata {
+	if i == nil {
 		return components.HTTPMetadata{}
 	}
-	return o.HTTPMeta
+	return i.HTTPMeta
 }
 
-func (o *IncidentActionsTriggerAWebhookManuallyResponse) GetObject() *IncidentActionsTriggerAWebhookManuallyResponseBody {
-	if o == nil {
+func (i *IncidentActionsTriggerAWebhookManuallyResponse) GetObject() *IncidentActionsTriggerAWebhookManuallyResponseBody {
+	if i == nil {
 		return nil
 	}
-	return o.Object
+	return i.Object
 }

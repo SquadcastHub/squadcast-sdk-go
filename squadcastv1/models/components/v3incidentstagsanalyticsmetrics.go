@@ -10,30 +10,30 @@ type V3IncidentsTagsAnalyticsMetrics struct {
 	SquadID            string `json:"squadId"`
 }
 
-func (o *V3IncidentsTagsAnalyticsMetrics) GetTime() int64 {
-	if o == nil {
+func (v *V3IncidentsTagsAnalyticsMetrics) GetTime() int64 {
+	if v == nil {
 		return 0
 	}
-	return o.Time
+	return v.Time
 }
 
-func (o *V3IncidentsTagsAnalyticsMetrics) GetUserID() string {
-	if o == nil {
+func (v *V3IncidentsTagsAnalyticsMetrics) GetUserID() string {
+	if v == nil {
 		return ""
 	}
-	return o.UserID
+	return v.UserID
 }
 
-func (o *V3IncidentsTagsAnalyticsMetrics) GetEscalationPolicyID() string {
-	if o == nil {
+func (v *V3IncidentsTagsAnalyticsMetrics) GetEscalationPolicyID() string {
+	if v == nil {
 		return ""
 	}
-	return o.EscalationPolicyID
+	return v.EscalationPolicyID
 }
 
-func (o *V3IncidentsTagsAnalyticsMetrics) GetSquadID() string {
-	if o == nil {
+func (v *V3IncidentsTagsAnalyticsMetrics) GetSquadID() string {
+	if v == nil {
 		return ""
 	}
-	return o.SquadID
+	return v.SquadID
 }

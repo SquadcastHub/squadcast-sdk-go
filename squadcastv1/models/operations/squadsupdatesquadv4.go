@@ -11,18 +11,18 @@ type SquadsUpdateSquadV4Request struct {
 	V4SquadsUpdateSquadRequest components.V4SquadsUpdateSquadRequest `request:"mediaType=application/json"`
 }
 
-func (o *SquadsUpdateSquadV4Request) GetSquadID() string {
-	if o == nil {
+func (s *SquadsUpdateSquadV4Request) GetSquadID() string {
+	if s == nil {
 		return ""
 	}
-	return o.SquadID
+	return s.SquadID
 }
 
-func (o *SquadsUpdateSquadV4Request) GetV4SquadsUpdateSquadRequest() components.V4SquadsUpdateSquadRequest {
-	if o == nil {
+func (s *SquadsUpdateSquadV4Request) GetV4SquadsUpdateSquadRequest() components.V4SquadsUpdateSquadRequest {
+	if s == nil {
 		return components.V4SquadsUpdateSquadRequest{}
 	}
-	return o.V4SquadsUpdateSquadRequest
+	return s.V4SquadsUpdateSquadRequest
 }
 
 // SquadsUpdateSquadV4ResponseBody - The request has succeeded.
@@ -30,11 +30,11 @@ type SquadsUpdateSquadV4ResponseBody struct {
 	Data components.V4SquadsSquadResponse `json:"data"`
 }
 
-func (o *SquadsUpdateSquadV4ResponseBody) GetData() components.V4SquadsSquadResponse {
-	if o == nil {
+func (s *SquadsUpdateSquadV4ResponseBody) GetData() components.V4SquadsSquadResponse {
+	if s == nil {
 		return components.V4SquadsSquadResponse{}
 	}
-	return o.Data
+	return s.Data
 }
 
 type SquadsUpdateSquadV4Response struct {
@@ -43,16 +43,16 @@ type SquadsUpdateSquadV4Response struct {
 	Object *SquadsUpdateSquadV4ResponseBody
 }
 
-func (o *SquadsUpdateSquadV4Response) GetHTTPMeta() components.HTTPMetadata {
-	if o == nil {
+func (s *SquadsUpdateSquadV4Response) GetHTTPMeta() components.HTTPMetadata {
+	if s == nil {
 		return components.HTTPMetadata{}
 	}
-	return o.HTTPMeta
+	return s.HTTPMeta
 }
 
-func (o *SquadsUpdateSquadV4Response) GetObject() *SquadsUpdateSquadV4ResponseBody {
-	if o == nil {
+func (s *SquadsUpdateSquadV4Response) GetObject() *SquadsUpdateSquadV4ResponseBody {
+	if s == nil {
 		return nil
 	}
-	return o.Object
+	return s.Object
 }

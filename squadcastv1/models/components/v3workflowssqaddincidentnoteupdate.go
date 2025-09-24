@@ -46,11 +46,11 @@ func (v *V3WorkflowsSqAddIncidentNoteUpdateData) UnmarshalJSON(data []byte) erro
 	return nil
 }
 
-func (o *V3WorkflowsSqAddIncidentNoteUpdateData) GetNote() *string {
-	if o == nil {
+func (v *V3WorkflowsSqAddIncidentNoteUpdateData) GetNote() *string {
+	if v == nil {
 		return nil
 	}
-	return o.Note
+	return v.Note
 }
 
 type V3WorkflowsSqAddIncidentNoteUpdate struct {
@@ -69,16 +69,16 @@ func (v *V3WorkflowsSqAddIncidentNoteUpdate) UnmarshalJSON(data []byte) error {
 	return nil
 }
 
-func (o *V3WorkflowsSqAddIncidentNoteUpdate) GetName() V3WorkflowsSqAddIncidentNoteUpdateName {
-	if o == nil {
+func (v *V3WorkflowsSqAddIncidentNoteUpdate) GetName() V3WorkflowsSqAddIncidentNoteUpdateName {
+	if v == nil {
 		return V3WorkflowsSqAddIncidentNoteUpdateName("")
 	}
-	return o.Name
+	return v.Name
 }
 
-func (o *V3WorkflowsSqAddIncidentNoteUpdate) GetData() *V3WorkflowsSqAddIncidentNoteUpdateData {
-	if o == nil {
+func (v *V3WorkflowsSqAddIncidentNoteUpdate) GetData() *V3WorkflowsSqAddIncidentNoteUpdateData {
+	if v == nil {
 		return nil
 	}
-	return o.Data
+	return v.Data
 }

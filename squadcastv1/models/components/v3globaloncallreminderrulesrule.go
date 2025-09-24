@@ -7,16 +7,16 @@ type V3GlobalOncallReminderRulesRule struct {
 	Time int64  `json:"time"`
 }
 
-func (o *V3GlobalOncallReminderRulesRule) GetType() string {
-	if o == nil {
+func (v *V3GlobalOncallReminderRulesRule) GetType() string {
+	if v == nil {
 		return ""
 	}
-	return o.Type
+	return v.Type
 }
 
-func (o *V3GlobalOncallReminderRulesRule) GetTime() int64 {
-	if o == nil {
+func (v *V3GlobalOncallReminderRulesRule) GetTime() int64 {
+	if v == nil {
 		return 0
 	}
-	return o.Time
+	return v.Time
 }

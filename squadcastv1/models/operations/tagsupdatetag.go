@@ -11,18 +11,18 @@ type TagsUpdateTagRequest struct {
 	V3IncidentsTagsUpdateTagRequest components.V3IncidentsTagsUpdateTagRequest `request:"mediaType=application/json"`
 }
 
-func (o *TagsUpdateTagRequest) GetIncidentID() string {
-	if o == nil {
+func (t *TagsUpdateTagRequest) GetIncidentID() string {
+	if t == nil {
 		return ""
 	}
-	return o.IncidentID
+	return t.IncidentID
 }
 
-func (o *TagsUpdateTagRequest) GetV3IncidentsTagsUpdateTagRequest() components.V3IncidentsTagsUpdateTagRequest {
-	if o == nil {
+func (t *TagsUpdateTagRequest) GetV3IncidentsTagsUpdateTagRequest() components.V3IncidentsTagsUpdateTagRequest {
+	if t == nil {
 		return components.V3IncidentsTagsUpdateTagRequest{}
 	}
-	return o.V3IncidentsTagsUpdateTagRequest
+	return t.V3IncidentsTagsUpdateTagRequest
 }
 
 // TagsUpdateTagResponseBody - The request has succeeded.
@@ -30,11 +30,11 @@ type TagsUpdateTagResponseBody struct {
 	Data components.V3IncidentsTagsIncidentForTagsResponse `json:"data"`
 }
 
-func (o *TagsUpdateTagResponseBody) GetData() components.V3IncidentsTagsIncidentForTagsResponse {
-	if o == nil {
+func (t *TagsUpdateTagResponseBody) GetData() components.V3IncidentsTagsIncidentForTagsResponse {
+	if t == nil {
 		return components.V3IncidentsTagsIncidentForTagsResponse{}
 	}
-	return o.Data
+	return t.Data
 }
 
 type TagsUpdateTagResponse struct {
@@ -43,16 +43,16 @@ type TagsUpdateTagResponse struct {
 	Object *TagsUpdateTagResponseBody
 }
 
-func (o *TagsUpdateTagResponse) GetHTTPMeta() components.HTTPMetadata {
-	if o == nil {
+func (t *TagsUpdateTagResponse) GetHTTPMeta() components.HTTPMetadata {
+	if t == nil {
 		return components.HTTPMetadata{}
 	}
-	return o.HTTPMeta
+	return t.HTTPMeta
 }
 
-func (o *TagsUpdateTagResponse) GetObject() *TagsUpdateTagResponseBody {
-	if o == nil {
+func (t *TagsUpdateTagResponse) GetObject() *TagsUpdateTagResponseBody {
+	if t == nil {
 		return nil
 	}
-	return o.Object
+	return t.Object
 }

@@ -13,32 +13,32 @@ type StatusPagesListStatusPagesRequest struct {
 	TeamID          string `queryParam:"style=form,explode=false,name=teamID"`
 }
 
-func (o *StatusPagesListStatusPagesRequest) GetPageSize() string {
-	if o == nil {
+func (s *StatusPagesListStatusPagesRequest) GetPageSize() string {
+	if s == nil {
 		return ""
 	}
-	return o.PageSize
+	return s.PageSize
 }
 
-func (o *StatusPagesListStatusPagesRequest) GetPageNumber() string {
-	if o == nil {
+func (s *StatusPagesListStatusPagesRequest) GetPageNumber() string {
+	if s == nil {
 		return ""
 	}
-	return o.PageNumber
+	return s.PageNumber
 }
 
-func (o *StatusPagesListStatusPagesRequest) GetFiltersIsPublic() string {
-	if o == nil {
+func (s *StatusPagesListStatusPagesRequest) GetFiltersIsPublic() string {
+	if s == nil {
 		return ""
 	}
-	return o.FiltersIsPublic
+	return s.FiltersIsPublic
 }
 
-func (o *StatusPagesListStatusPagesRequest) GetTeamID() string {
-	if o == nil {
+func (s *StatusPagesListStatusPagesRequest) GetTeamID() string {
+	if s == nil {
 		return ""
 	}
-	return o.TeamID
+	return s.TeamID
 }
 
 type StatusPagesListStatusPagesResponse struct {
@@ -47,16 +47,16 @@ type StatusPagesListStatusPagesResponse struct {
 	V4StatusPagesListStatusPagesResponse *components.V4StatusPagesListStatusPagesResponse
 }
 
-func (o *StatusPagesListStatusPagesResponse) GetHTTPMeta() components.HTTPMetadata {
-	if o == nil {
+func (s *StatusPagesListStatusPagesResponse) GetHTTPMeta() components.HTTPMetadata {
+	if s == nil {
 		return components.HTTPMetadata{}
 	}
-	return o.HTTPMeta
+	return s.HTTPMeta
 }
 
-func (o *StatusPagesListStatusPagesResponse) GetV4StatusPagesListStatusPagesResponse() *components.V4StatusPagesListStatusPagesResponse {
-	if o == nil {
+func (s *StatusPagesListStatusPagesResponse) GetV4StatusPagesListStatusPagesResponse() *components.V4StatusPagesListStatusPagesResponse {
+	if s == nil {
 		return nil
 	}
-	return o.V4StatusPagesListStatusPagesResponse
+	return s.V4StatusPagesListStatusPagesResponse
 }

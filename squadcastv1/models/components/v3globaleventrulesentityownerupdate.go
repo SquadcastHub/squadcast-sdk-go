@@ -41,16 +41,16 @@ type V3GlobalEventRulesEntityOwnerUpdate struct {
 	Type *V3GlobalEventRulesEntityOwnerUpdateType `json:"type,omitempty"`
 }
 
-func (o *V3GlobalEventRulesEntityOwnerUpdate) GetID() *string {
-	if o == nil {
+func (v *V3GlobalEventRulesEntityOwnerUpdate) GetID() *string {
+	if v == nil {
 		return nil
 	}
-	return o.ID
+	return v.ID
 }
 
-func (o *V3GlobalEventRulesEntityOwnerUpdate) GetType() *V3GlobalEventRulesEntityOwnerUpdateType {
-	if o == nil {
+func (v *V3GlobalEventRulesEntityOwnerUpdate) GetType() *V3GlobalEventRulesEntityOwnerUpdateType {
+	if v == nil {
 		return nil
 	}
-	return o.Type
+	return v.Type
 }

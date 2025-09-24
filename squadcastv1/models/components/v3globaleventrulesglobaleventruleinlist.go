@@ -33,86 +33,86 @@ func (v *V3GlobalEventRulesGlobalEventRuleInList) UnmarshalJSON(data []byte) err
 	return nil
 }
 
-func (o *V3GlobalEventRulesGlobalEventRuleInList) GetID() *int64 {
-	if o == nil {
+func (v *V3GlobalEventRulesGlobalEventRuleInList) GetID() *int64 {
+	if v == nil {
 		return nil
 	}
-	return o.ID
+	return v.ID
 }
 
-func (o *V3GlobalEventRulesGlobalEventRuleInList) GetOrgID() *string {
-	if o == nil {
+func (v *V3GlobalEventRulesGlobalEventRuleInList) GetOrgID() *string {
+	if v == nil {
 		return nil
 	}
-	return o.OrgID
+	return v.OrgID
 }
 
-func (o *V3GlobalEventRulesGlobalEventRuleInList) GetTeamID() *string {
-	if o == nil {
+func (v *V3GlobalEventRulesGlobalEventRuleInList) GetTeamID() *string {
+	if v == nil {
 		return nil
 	}
-	return o.TeamID
+	return v.TeamID
 }
 
-func (o *V3GlobalEventRulesGlobalEventRuleInList) GetName() *string {
-	if o == nil {
+func (v *V3GlobalEventRulesGlobalEventRuleInList) GetName() *string {
+	if v == nil {
 		return nil
 	}
-	return o.Name
+	return v.Name
 }
 
-func (o *V3GlobalEventRulesGlobalEventRuleInList) GetDescription() *string {
-	if o == nil {
+func (v *V3GlobalEventRulesGlobalEventRuleInList) GetDescription() *string {
+	if v == nil {
 		return nil
 	}
-	return o.Description
+	return v.Description
 }
 
-func (o *V3GlobalEventRulesGlobalEventRuleInList) GetRoutingKey() *string {
-	if o == nil {
+func (v *V3GlobalEventRulesGlobalEventRuleInList) GetRoutingKey() *string {
+	if v == nil {
 		return nil
 	}
-	return o.RoutingKey
+	return v.RoutingKey
 }
 
-func (o *V3GlobalEventRulesGlobalEventRuleInList) GetEntityOwner() *V3GlobalEventRulesEntityOwner {
-	if o == nil {
+func (v *V3GlobalEventRulesGlobalEventRuleInList) GetEntityOwner() *V3GlobalEventRulesEntityOwner {
+	if v == nil {
 		return nil
 	}
-	return o.EntityOwner
+	return v.EntityOwner
 }
 
-func (o *V3GlobalEventRulesGlobalEventRuleInList) GetRulesets() []V3GlobalEventRulesRuleset {
-	if o == nil {
+func (v *V3GlobalEventRulesGlobalEventRuleInList) GetRulesets() []V3GlobalEventRulesRuleset {
+	if v == nil {
 		return nil
 	}
-	return o.Rulesets
+	return v.Rulesets
 }
 
-func (o *V3GlobalEventRulesGlobalEventRuleInList) GetCreatedAt() *time.Time {
-	if o == nil {
+func (v *V3GlobalEventRulesGlobalEventRuleInList) GetCreatedAt() *time.Time {
+	if v == nil {
 		return nil
 	}
-	return o.CreatedAt
+	return v.CreatedAt
 }
 
-func (o *V3GlobalEventRulesGlobalEventRuleInList) GetCreatedBy() *string {
-	if o == nil {
+func (v *V3GlobalEventRulesGlobalEventRuleInList) GetCreatedBy() *string {
+	if v == nil {
 		return nil
 	}
-	return o.CreatedBy
+	return v.CreatedBy
 }
 
-func (o *V3GlobalEventRulesGlobalEventRuleInList) GetUpdatedAt() *time.Time {
-	if o == nil {
+func (v *V3GlobalEventRulesGlobalEventRuleInList) GetUpdatedAt() *time.Time {
+	if v == nil {
 		return nil
 	}
-	return o.UpdatedAt
+	return v.UpdatedAt
 }
 
-func (o *V3GlobalEventRulesGlobalEventRuleInList) GetUpdatedBy() *string {
-	if o == nil {
+func (v *V3GlobalEventRulesGlobalEventRuleInList) GetUpdatedBy() *string {
+	if v == nil {
 		return nil
 	}
-	return o.UpdatedBy
+	return v.UpdatedBy
 }

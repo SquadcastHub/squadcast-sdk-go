@@ -11,11 +11,11 @@ type GlobalOncallReminderRulesGetGlobalOncallReminderRulesRequest struct {
 	OwnerID string `queryParam:"style=form,explode=true,name=owner_id"`
 }
 
-func (o *GlobalOncallReminderRulesGetGlobalOncallReminderRulesRequest) GetOwnerID() string {
-	if o == nil {
+func (g *GlobalOncallReminderRulesGetGlobalOncallReminderRulesRequest) GetOwnerID() string {
+	if g == nil {
 		return ""
 	}
-	return o.OwnerID
+	return g.OwnerID
 }
 
 // GlobalOncallReminderRulesGetGlobalOncallReminderRulesResponseBody - The request has succeeded.
@@ -23,11 +23,11 @@ type GlobalOncallReminderRulesGetGlobalOncallReminderRulesResponseBody struct {
 	Data components.V3GlobalOncallReminderRulesGlobalOncallReminderRuleResponse `json:"data"`
 }
 
-func (o *GlobalOncallReminderRulesGetGlobalOncallReminderRulesResponseBody) GetData() components.V3GlobalOncallReminderRulesGlobalOncallReminderRuleResponse {
-	if o == nil {
+func (g *GlobalOncallReminderRulesGetGlobalOncallReminderRulesResponseBody) GetData() components.V3GlobalOncallReminderRulesGlobalOncallReminderRuleResponse {
+	if g == nil {
 		return components.V3GlobalOncallReminderRulesGlobalOncallReminderRuleResponse{}
 	}
-	return o.Data
+	return g.Data
 }
 
 type GlobalOncallReminderRulesGetGlobalOncallReminderRulesResponse struct {
@@ -36,16 +36,16 @@ type GlobalOncallReminderRulesGetGlobalOncallReminderRulesResponse struct {
 	Object *GlobalOncallReminderRulesGetGlobalOncallReminderRulesResponseBody
 }
 
-func (o *GlobalOncallReminderRulesGetGlobalOncallReminderRulesResponse) GetHTTPMeta() components.HTTPMetadata {
-	if o == nil {
+func (g *GlobalOncallReminderRulesGetGlobalOncallReminderRulesResponse) GetHTTPMeta() components.HTTPMetadata {
+	if g == nil {
 		return components.HTTPMetadata{}
 	}
-	return o.HTTPMeta
+	return g.HTTPMeta
 }
 
-func (o *GlobalOncallReminderRulesGetGlobalOncallReminderRulesResponse) GetObject() *GlobalOncallReminderRulesGetGlobalOncallReminderRulesResponseBody {
-	if o == nil {
+func (g *GlobalOncallReminderRulesGetGlobalOncallReminderRulesResponse) GetObject() *GlobalOncallReminderRulesGetGlobalOncallReminderRulesResponseBody {
+	if g == nil {
 		return nil
 	}
-	return o.Object
+	return g.Object
 }

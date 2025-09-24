@@ -12,51 +12,51 @@ type V4StatusPagesComponentsCreateComponentResponse struct {
 	GroupID          *int64 `json:"groupID,omitempty"`
 }
 
-func (o *V4StatusPagesComponentsCreateComponentResponse) GetID() int64 {
-	if o == nil {
+func (v *V4StatusPagesComponentsCreateComponentResponse) GetID() int64 {
+	if v == nil {
 		return 0
 	}
-	return o.ID
+	return v.ID
 }
 
-func (o *V4StatusPagesComponentsCreateComponentResponse) GetPageID() int64 {
-	if o == nil {
+func (v *V4StatusPagesComponentsCreateComponentResponse) GetPageID() int64 {
+	if v == nil {
 		return 0
 	}
-	return o.PageID
+	return v.PageID
 }
 
-func (o *V4StatusPagesComponentsCreateComponentResponse) GetName() string {
-	if o == nil {
+func (v *V4StatusPagesComponentsCreateComponentResponse) GetName() string {
+	if v == nil {
 		return ""
 	}
-	return o.Name
+	return v.Name
 }
 
-func (o *V4StatusPagesComponentsCreateComponentResponse) GetDescription() string {
-	if o == nil {
+func (v *V4StatusPagesComponentsCreateComponentResponse) GetDescription() string {
+	if v == nil {
 		return ""
 	}
-	return o.Description
+	return v.Description
 }
 
-func (o *V4StatusPagesComponentsCreateComponentResponse) GetStatusID() *int64 {
-	if o == nil {
+func (v *V4StatusPagesComponentsCreateComponentResponse) GetStatusID() *int64 {
+	if v == nil {
 		return nil
 	}
-	return o.StatusID
+	return v.StatusID
 }
 
-func (o *V4StatusPagesComponentsCreateComponentResponse) GetUnderMaintenance() bool {
-	if o == nil {
+func (v *V4StatusPagesComponentsCreateComponentResponse) GetUnderMaintenance() bool {
+	if v == nil {
 		return false
 	}
-	return o.UnderMaintenance
+	return v.UnderMaintenance
 }
 
-func (o *V4StatusPagesComponentsCreateComponentResponse) GetGroupID() *int64 {
-	if o == nil {
+func (v *V4StatusPagesComponentsCreateComponentResponse) GetGroupID() *int64 {
+	if v == nil {
 		return nil
 	}
-	return o.GroupID
+	return v.GroupID
 }

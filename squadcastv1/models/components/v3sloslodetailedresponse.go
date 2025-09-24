@@ -52,198 +52,198 @@ func (v *V3SLOSLODetailedResponse) UnmarshalJSON(data []byte) error {
 	return nil
 }
 
-func (o *V3SLOSLODetailedResponse) GetID() int64 {
-	if o == nil {
+func (v *V3SLOSLODetailedResponse) GetID() int64 {
+	if v == nil {
 		return 0
 	}
-	return o.ID
+	return v.ID
 }
 
-func (o *V3SLOSLODetailedResponse) GetName() string {
-	if o == nil {
+func (v *V3SLOSLODetailedResponse) GetName() string {
+	if v == nil {
 		return ""
 	}
-	return o.Name
+	return v.Name
 }
 
-func (o *V3SLOSLODetailedResponse) GetDescription() *string {
-	if o == nil {
+func (v *V3SLOSLODetailedResponse) GetDescription() *string {
+	if v == nil {
 		return nil
 	}
-	return o.Description
+	return v.Description
 }
 
-func (o *V3SLOSLODetailedResponse) GetTimeIntervalType() V3SLOTimeIntervalType {
-	if o == nil {
+func (v *V3SLOSLODetailedResponse) GetTimeIntervalType() V3SLOTimeIntervalType {
+	if v == nil {
 		return V3SLOTimeIntervalType("")
 	}
-	return o.TimeIntervalType
+	return v.TimeIntervalType
 }
 
-func (o *V3SLOSLODetailedResponse) GetServiceIds() []string {
-	if o == nil {
+func (v *V3SLOSLODetailedResponse) GetServiceIds() []string {
+	if v == nil {
 		return []string{}
 	}
-	return o.ServiceIds
+	return v.ServiceIds
 }
 
-func (o *V3SLOSLODetailedResponse) GetSlis() []string {
-	if o == nil {
+func (v *V3SLOSLODetailedResponse) GetSlis() []string {
+	if v == nil {
 		return []string{}
 	}
-	return o.Slis
+	return v.Slis
 }
 
-func (o *V3SLOSLODetailedResponse) GetTargetSlo() float32 {
-	if o == nil {
+func (v *V3SLOSLODetailedResponse) GetTargetSlo() float32 {
+	if v == nil {
 		return 0.0
 	}
-	return o.TargetSlo
+	return v.TargetSlo
 }
 
-func (o *V3SLOSLODetailedResponse) GetCurrentSlo() *float32 {
-	if o == nil {
+func (v *V3SLOSLODetailedResponse) GetCurrentSlo() *float32 {
+	if v == nil {
 		return nil
 	}
-	return o.CurrentSlo
+	return v.CurrentSlo
 }
 
-func (o *V3SLOSLODetailedResponse) GetStartTime() time.Time {
-	if o == nil {
+func (v *V3SLOSLODetailedResponse) GetStartTime() time.Time {
+	if v == nil {
 		return time.Time{}
 	}
-	return o.StartTime
+	return v.StartTime
 }
 
-func (o *V3SLOSLODetailedResponse) GetEndTime() time.Time {
-	if o == nil {
+func (v *V3SLOSLODetailedResponse) GetEndTime() time.Time {
+	if v == nil {
 		return time.Time{}
 	}
-	return o.EndTime
+	return v.EndTime
 }
 
-func (o *V3SLOSLODetailedResponse) GetIsHealthy() *bool {
-	if o == nil {
+func (v *V3SLOSLODetailedResponse) GetIsHealthy() *bool {
+	if v == nil {
 		return nil
 	}
-	return o.IsHealthy
+	return v.IsHealthy
 }
 
-func (o *V3SLOSLODetailedResponse) GetRemainingErrorBudget() *float32 {
-	if o == nil {
+func (v *V3SLOSLODetailedResponse) GetRemainingErrorBudget() *float32 {
+	if v == nil {
 		return nil
 	}
-	return o.RemainingErrorBudget
+	return v.RemainingErrorBudget
 }
 
-func (o *V3SLOSLODetailedResponse) GetAllocatedErrorBudget() float32 {
-	if o == nil {
+func (v *V3SLOSLODetailedResponse) GetAllocatedErrorBudget() float32 {
+	if v == nil {
 		return 0.0
 	}
-	return o.AllocatedErrorBudget
+	return v.AllocatedErrorBudget
 }
 
-func (o *V3SLOSLODetailedResponse) GetIsActive() bool {
-	if o == nil {
+func (v *V3SLOSLODetailedResponse) GetIsActive() bool {
+	if v == nil {
 		return false
 	}
-	return o.IsActive
+	return v.IsActive
 }
 
-func (o *V3SLOSLODetailedResponse) GetTags() *V3SLOSLODetailedResponseTags {
-	if o == nil {
+func (v *V3SLOSLODetailedResponse) GetTags() *V3SLOSLODetailedResponseTags {
+	if v == nil {
 		return nil
 	}
-	return o.Tags
+	return v.Tags
 }
 
-func (o *V3SLOSLODetailedResponse) GetIncidentCount() *int64 {
-	if o == nil {
+func (v *V3SLOSLODetailedResponse) GetIncidentCount() *int64 {
+	if v == nil {
 		return nil
 	}
-	return o.IncidentCount
+	return v.IncidentCount
 }
 
-func (o *V3SLOSLODetailedResponse) GetFalsePositiveCount() *int64 {
-	if o == nil {
+func (v *V3SLOSLODetailedResponse) GetFalsePositiveCount() *int64 {
+	if v == nil {
 		return nil
 	}
-	return o.FalsePositiveCount
+	return v.FalsePositiveCount
 }
 
-func (o *V3SLOSLODetailedResponse) GetSloMonitoringChecks() []V3SLOSLOMonitoringCheck {
-	if o == nil {
+func (v *V3SLOSLODetailedResponse) GetSloMonitoringChecks() []V3SLOSLOMonitoringCheck {
+	if v == nil {
 		return nil
 	}
-	return o.SloMonitoringChecks
+	return v.SloMonitoringChecks
 }
 
-func (o *V3SLOSLODetailedResponse) GetSloActions() []V3SLOSLOAction {
-	if o == nil {
+func (v *V3SLOSLODetailedResponse) GetSloActions() []V3SLOSLOAction {
+	if v == nil {
 		return nil
 	}
-	return o.SloActions
+	return v.SloActions
 }
 
-func (o *V3SLOSLODetailedResponse) GetOwnerType() string {
-	if o == nil {
+func (v *V3SLOSLODetailedResponse) GetOwnerType() string {
+	if v == nil {
 		return ""
 	}
-	return o.OwnerType
+	return v.OwnerType
 }
 
-func (o *V3SLOSLODetailedResponse) GetOwnerID() string {
-	if o == nil {
+func (v *V3SLOSLODetailedResponse) GetOwnerID() string {
+	if v == nil {
 		return ""
 	}
-	return o.OwnerID
+	return v.OwnerID
 }
 
-func (o *V3SLOSLODetailedResponse) GetOrgID() string {
-	if o == nil {
+func (v *V3SLOSLODetailedResponse) GetOrgID() string {
+	if v == nil {
 		return ""
 	}
-	return o.OrgID
+	return v.OrgID
 }
 
-func (o *V3SLOSLODetailedResponse) GetSloOwnerID() *string {
-	if o == nil {
+func (v *V3SLOSLODetailedResponse) GetSloOwnerID() *string {
+	if v == nil {
 		return nil
 	}
-	return o.SloOwnerID
+	return v.SloOwnerID
 }
 
-func (o *V3SLOSLODetailedResponse) GetSloOwnerType() *V3SLOSLOOwnerType {
-	if o == nil {
+func (v *V3SLOSLODetailedResponse) GetSloOwnerType() *V3SLOSLOOwnerType {
+	if v == nil {
 		return nil
 	}
-	return o.SloOwnerType
+	return v.SloOwnerType
 }
 
-func (o *V3SLOSLODetailedResponse) GetCreatedAt() *time.Time {
-	if o == nil {
+func (v *V3SLOSLODetailedResponse) GetCreatedAt() *time.Time {
+	if v == nil {
 		return nil
 	}
-	return o.CreatedAt
+	return v.CreatedAt
 }
 
-func (o *V3SLOSLODetailedResponse) GetUpdatedAt() *time.Time {
-	if o == nil {
+func (v *V3SLOSLODetailedResponse) GetUpdatedAt() *time.Time {
+	if v == nil {
 		return nil
 	}
-	return o.UpdatedAt
+	return v.UpdatedAt
 }
 
-func (o *V3SLOSLODetailedResponse) GetDeletedAt() *time.Time {
-	if o == nil {
+func (v *V3SLOSLODetailedResponse) GetDeletedAt() *time.Time {
+	if v == nil {
 		return nil
 	}
-	return o.DeletedAt
+	return v.DeletedAt
 }
 
-func (o *V3SLOSLODetailedResponse) GetDurationInDays() *int64 {
-	if o == nil {
+func (v *V3SLOSLODetailedResponse) GetDurationInDays() *int64 {
+	if v == nil {
 		return nil
 	}
-	return o.DurationInDays
+	return v.DurationInDays
 }

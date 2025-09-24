@@ -11,44 +11,44 @@ type V3ServicesExtensionsSlackExtensionResponse struct {
 	Name           string `json:"name"`
 }
 
-func (o *V3ServicesExtensionsSlackExtensionResponse) GetID() int {
-	if o == nil {
+func (v *V3ServicesExtensionsSlackExtensionResponse) GetID() int {
+	if v == nil {
 		return 0
 	}
-	return o.ID
+	return v.ID
 }
 
-func (o *V3ServicesExtensionsSlackExtensionResponse) GetServiceID() string {
-	if o == nil {
+func (v *V3ServicesExtensionsSlackExtensionResponse) GetServiceID() string {
+	if v == nil {
 		return ""
 	}
-	return o.ServiceID
+	return v.ServiceID
 }
 
-func (o *V3ServicesExtensionsSlackExtensionResponse) GetOrganizationID() string {
-	if o == nil {
+func (v *V3ServicesExtensionsSlackExtensionResponse) GetOrganizationID() string {
+	if v == nil {
 		return ""
 	}
-	return o.OrganizationID
+	return v.OrganizationID
 }
 
-func (o *V3ServicesExtensionsSlackExtensionResponse) GetChannelID() string {
-	if o == nil {
+func (v *V3ServicesExtensionsSlackExtensionResponse) GetChannelID() string {
+	if v == nil {
 		return ""
 	}
-	return o.ChannelID
+	return v.ChannelID
 }
 
-func (o *V3ServicesExtensionsSlackExtensionResponse) GetCreatedAt() string {
-	if o == nil {
+func (v *V3ServicesExtensionsSlackExtensionResponse) GetCreatedAt() string {
+	if v == nil {
 		return ""
 	}
-	return o.CreatedAt
+	return v.CreatedAt
 }
 
-func (o *V3ServicesExtensionsSlackExtensionResponse) GetName() string {
-	if o == nil {
+func (v *V3ServicesExtensionsSlackExtensionResponse) GetName() string {
+	if v == nil {
 		return ""
 	}
-	return o.Name
+	return v.Name
 }

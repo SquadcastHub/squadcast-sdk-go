@@ -15,57 +15,57 @@ type GlobalEventRulesListRulesetRulesRequest struct {
 	FiltersSearch        *string `queryParam:"style=form,explode=true,name=filters.search"`
 }
 
-func (o *GlobalEventRulesListRulesetRulesRequest) GetGerID() int64 {
-	if o == nil {
+func (g *GlobalEventRulesListRulesetRulesRequest) GetGerID() int64 {
+	if g == nil {
 		return 0
 	}
-	return o.GerID
+	return g.GerID
 }
 
-func (o *GlobalEventRulesListRulesetRulesRequest) GetAlertSourceVersion() string {
-	if o == nil {
+func (g *GlobalEventRulesListRulesetRulesRequest) GetAlertSourceVersion() string {
+	if g == nil {
 		return ""
 	}
-	return o.AlertSourceVersion
+	return g.AlertSourceVersion
 }
 
-func (o *GlobalEventRulesListRulesetRulesRequest) GetAlertSourceShortname() string {
-	if o == nil {
+func (g *GlobalEventRulesListRulesetRulesRequest) GetAlertSourceShortname() string {
+	if g == nil {
 		return ""
 	}
-	return o.AlertSourceShortname
+	return g.AlertSourceShortname
 }
 
-func (o *GlobalEventRulesListRulesetRulesRequest) GetPageSize() *string {
-	if o == nil {
+func (g *GlobalEventRulesListRulesetRulesRequest) GetPageSize() *string {
+	if g == nil {
 		return nil
 	}
-	return o.PageSize
+	return g.PageSize
 }
 
-func (o *GlobalEventRulesListRulesetRulesRequest) GetPageNumber() *string {
-	if o == nil {
+func (g *GlobalEventRulesListRulesetRulesRequest) GetPageNumber() *string {
+	if g == nil {
 		return nil
 	}
-	return o.PageNumber
+	return g.PageNumber
 }
 
-func (o *GlobalEventRulesListRulesetRulesRequest) GetFiltersSearch() *string {
-	if o == nil {
+func (g *GlobalEventRulesListRulesetRulesRequest) GetFiltersSearch() *string {
+	if g == nil {
 		return nil
 	}
-	return o.FiltersSearch
+	return g.FiltersSearch
 }
 
 type GlobalEventRulesListRulesetRulesMeta struct {
 	TotalCount int64 `json:"total_count"`
 }
 
-func (o *GlobalEventRulesListRulesetRulesMeta) GetTotalCount() int64 {
-	if o == nil {
+func (g *GlobalEventRulesListRulesetRulesMeta) GetTotalCount() int64 {
+	if g == nil {
 		return 0
 	}
-	return o.TotalCount
+	return g.TotalCount
 }
 
 // GlobalEventRulesListRulesetRulesResponseBody - The request has succeeded.
@@ -74,18 +74,18 @@ type GlobalEventRulesListRulesetRulesResponseBody struct {
 	Meta GlobalEventRulesListRulesetRulesMeta               `json:"meta"`
 }
 
-func (o *GlobalEventRulesListRulesetRulesResponseBody) GetData() []components.V3GlobalEventRulesRulesetRuleResponse {
-	if o == nil {
+func (g *GlobalEventRulesListRulesetRulesResponseBody) GetData() []components.V3GlobalEventRulesRulesetRuleResponse {
+	if g == nil {
 		return []components.V3GlobalEventRulesRulesetRuleResponse{}
 	}
-	return o.Data
+	return g.Data
 }
 
-func (o *GlobalEventRulesListRulesetRulesResponseBody) GetMeta() GlobalEventRulesListRulesetRulesMeta {
-	if o == nil {
+func (g *GlobalEventRulesListRulesetRulesResponseBody) GetMeta() GlobalEventRulesListRulesetRulesMeta {
+	if g == nil {
 		return GlobalEventRulesListRulesetRulesMeta{}
 	}
-	return o.Meta
+	return g.Meta
 }
 
 type GlobalEventRulesListRulesetRulesResponse struct {
@@ -94,16 +94,16 @@ type GlobalEventRulesListRulesetRulesResponse struct {
 	Object *GlobalEventRulesListRulesetRulesResponseBody
 }
 
-func (o *GlobalEventRulesListRulesetRulesResponse) GetHTTPMeta() components.HTTPMetadata {
-	if o == nil {
+func (g *GlobalEventRulesListRulesetRulesResponse) GetHTTPMeta() components.HTTPMetadata {
+	if g == nil {
 		return components.HTTPMetadata{}
 	}
-	return o.HTTPMeta
+	return g.HTTPMeta
 }
 
-func (o *GlobalEventRulesListRulesetRulesResponse) GetObject() *GlobalEventRulesListRulesetRulesResponseBody {
-	if o == nil {
+func (g *GlobalEventRulesListRulesetRulesResponse) GetObject() *GlobalEventRulesListRulesetRulesResponseBody {
+	if g == nil {
 		return nil
 	}
-	return o.Object
+	return g.Object
 }

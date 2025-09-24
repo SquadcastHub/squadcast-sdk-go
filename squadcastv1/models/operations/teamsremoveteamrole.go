@@ -11,18 +11,18 @@ type TeamsRemoveTeamRoleRequest struct {
 	RoleID string `pathParam:"style=simple,explode=false,name=roleId"`
 }
 
-func (o *TeamsRemoveTeamRoleRequest) GetTeamID() string {
-	if o == nil {
+func (t *TeamsRemoveTeamRoleRequest) GetTeamID() string {
+	if t == nil {
 		return ""
 	}
-	return o.TeamID
+	return t.TeamID
 }
 
-func (o *TeamsRemoveTeamRoleRequest) GetRoleID() string {
-	if o == nil {
+func (t *TeamsRemoveTeamRoleRequest) GetRoleID() string {
+	if t == nil {
 		return ""
 	}
-	return o.RoleID
+	return t.RoleID
 }
 
 // TeamsRemoveTeamRoleResponseBody - There is no content to send for this request, but the headers may be useful.
@@ -34,16 +34,16 @@ type TeamsRemoveTeamRoleResponse struct {
 	Body     []byte
 }
 
-func (o *TeamsRemoveTeamRoleResponse) GetHTTPMeta() components.HTTPMetadata {
-	if o == nil {
+func (t *TeamsRemoveTeamRoleResponse) GetHTTPMeta() components.HTTPMetadata {
+	if t == nil {
 		return components.HTTPMetadata{}
 	}
-	return o.HTTPMeta
+	return t.HTTPMeta
 }
 
-func (o *TeamsRemoveTeamRoleResponse) GetBody() []byte {
-	if o == nil {
+func (t *TeamsRemoveTeamRoleResponse) GetBody() []byte {
+	if t == nil {
 		return nil
 	}
-	return o.Body
+	return t.Body
 }

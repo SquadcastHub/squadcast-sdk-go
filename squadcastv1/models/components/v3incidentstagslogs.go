@@ -38,93 +38,93 @@ func (v *V3IncidentsTagsLogs) UnmarshalJSON(data []byte) error {
 	return nil
 }
 
-func (o *V3IncidentsTagsLogs) GetAction() string {
-	if o == nil {
+func (v *V3IncidentsTagsLogs) GetAction() string {
+	if v == nil {
 		return ""
 	}
-	return o.Action
+	return v.Action
 }
 
-func (o *V3IncidentsTagsLogs) GetIsManuallyCreated() *bool {
-	if o == nil {
+func (v *V3IncidentsTagsLogs) GetIsManuallyCreated() *bool {
+	if v == nil {
 		return nil
 	}
-	return o.IsManuallyCreated
+	return v.IsManuallyCreated
 }
 
-func (o *V3IncidentsTagsLogs) GetCreatedBy() *string {
-	if o == nil {
+func (v *V3IncidentsTagsLogs) GetCreatedBy() *string {
+	if v == nil {
 		return nil
 	}
-	return o.CreatedBy
+	return v.CreatedBy
 }
 
-func (o *V3IncidentsTagsLogs) GetUpdatedBy() *string {
-	if o == nil {
+func (v *V3IncidentsTagsLogs) GetUpdatedBy() *string {
+	if v == nil {
 		return nil
 	}
-	return o.UpdatedBy
+	return v.UpdatedBy
 }
 
-func (o *V3IncidentsTagsLogs) GetAssignedTo() *string {
-	if o == nil {
+func (v *V3IncidentsTagsLogs) GetAssignedTo() *string {
+	if v == nil {
 		return nil
 	}
-	return o.AssignedTo
+	return v.AssignedTo
 }
 
-func (o *V3IncidentsTagsLogs) GetAssignedBy() *string {
-	if o == nil {
+func (v *V3IncidentsTagsLogs) GetAssignedBy() *string {
+	if v == nil {
 		return nil
 	}
-	return o.AssignedBy
+	return v.AssignedBy
 }
 
-func (o *V3IncidentsTagsLogs) GetID() *string {
-	if o == nil {
+func (v *V3IncidentsTagsLogs) GetID() *string {
+	if v == nil {
 		return nil
 	}
-	return o.ID
+	return v.ID
 }
 
-func (o *V3IncidentsTagsLogs) GetWorkflowID() *int64 {
-	if o == nil {
+func (v *V3IncidentsTagsLogs) GetWorkflowID() *int64 {
+	if v == nil {
 		return nil
 	}
-	return o.WorkflowID
+	return v.WorkflowID
 }
 
-func (o *V3IncidentsTagsLogs) GetTime() time.Time {
-	if o == nil {
+func (v *V3IncidentsTagsLogs) GetTime() time.Time {
+	if v == nil {
 		return time.Time{}
 	}
-	return o.Time
+	return v.Time
 }
 
-func (o *V3IncidentsTagsLogs) GetReason() string {
-	if o == nil {
+func (v *V3IncidentsTagsLogs) GetReason() string {
+	if v == nil {
 		return ""
 	}
-	return o.Reason
+	return v.Reason
 }
 
-func (o *V3IncidentsTagsLogs) GetAdditionalInfo() *V3IncidentsTagsLogsAdditionalInfo {
-	if o == nil {
+func (v *V3IncidentsTagsLogs) GetAdditionalInfo() *V3IncidentsTagsLogsAdditionalInfo {
+	if v == nil {
 		return nil
 	}
-	return o.AdditionalInfo
+	return v.AdditionalInfo
 }
 
-func (o *V3IncidentsTagsLogs) GetType() *string {
-	if o == nil {
+func (v *V3IncidentsTagsLogs) GetType() *string {
+	if v == nil {
 		return nil
 	}
-	return o.Type
+	return v.Type
 }
 
-func (o *V3IncidentsTagsLogs) GetShouldShowInPostmortem() *bool {
-	if o == nil {
+func (v *V3IncidentsTagsLogs) GetShouldShowInPostmortem() *bool {
+	if v == nil {
 		return nil
 	}
-	return o.ShouldShowInPostmortem
+	return v.ShouldShowInPostmortem
 }

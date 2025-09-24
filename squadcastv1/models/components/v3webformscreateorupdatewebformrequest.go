@@ -46,128 +46,128 @@ type V3WebformsCreateOrUpdateWebformRequest struct {
 	Description *string `json:"description,omitempty"`
 }
 
-func (o *V3WebformsCreateOrUpdateWebformRequest) GetOwnerID() string {
-	if o == nil {
+func (v *V3WebformsCreateOrUpdateWebformRequest) GetOwnerID() string {
+	if v == nil {
 		return ""
 	}
-	return o.OwnerID
+	return v.OwnerID
 }
 
-func (o *V3WebformsCreateOrUpdateWebformRequest) GetName() string {
-	if o == nil {
+func (v *V3WebformsCreateOrUpdateWebformRequest) GetName() string {
+	if v == nil {
 		return ""
 	}
-	return o.Name
+	return v.Name
 }
 
-func (o *V3WebformsCreateOrUpdateWebformRequest) GetIsCname() bool {
-	if o == nil {
+func (v *V3WebformsCreateOrUpdateWebformRequest) GetIsCname() bool {
+	if v == nil {
 		return false
 	}
-	return o.IsCname
+	return v.IsCname
 }
 
-func (o *V3WebformsCreateOrUpdateWebformRequest) GetHostName() *string {
-	if o == nil {
+func (v *V3WebformsCreateOrUpdateWebformRequest) GetHostName() *string {
+	if v == nil {
 		return nil
 	}
-	return o.HostName
+	return v.HostName
 }
 
-func (o *V3WebformsCreateOrUpdateWebformRequest) GetTags() *V3WebformsCreateOrUpdateWebformRequestTags {
-	if o == nil {
+func (v *V3WebformsCreateOrUpdateWebformRequest) GetTags() *V3WebformsCreateOrUpdateWebformRequestTags {
+	if v == nil {
 		return nil
 	}
-	return o.Tags
+	return v.Tags
 }
 
-func (o *V3WebformsCreateOrUpdateWebformRequest) GetIsCaptchaEnabled() bool {
-	if o == nil {
+func (v *V3WebformsCreateOrUpdateWebformRequest) GetIsCaptchaEnabled() bool {
+	if v == nil {
 		return false
 	}
-	return o.IsCaptchaEnabled
+	return v.IsCaptchaEnabled
 }
 
-func (o *V3WebformsCreateOrUpdateWebformRequest) GetCaptchaSecret() V3WebformsRecaptchaSecrets {
-	if o == nil {
+func (v *V3WebformsCreateOrUpdateWebformRequest) GetCaptchaSecret() V3WebformsRecaptchaSecrets {
+	if v == nil {
 		return V3WebformsRecaptchaSecrets{}
 	}
-	return o.CaptchaSecret
+	return v.CaptchaSecret
 }
 
-func (o *V3WebformsCreateOrUpdateWebformRequest) GetFormOwnerType() string {
-	if o == nil {
+func (v *V3WebformsCreateOrUpdateWebformRequest) GetFormOwnerType() string {
+	if v == nil {
 		return ""
 	}
-	return o.FormOwnerType
+	return v.FormOwnerType
 }
 
-func (o *V3WebformsCreateOrUpdateWebformRequest) GetFormOwnerID() string {
-	if o == nil {
+func (v *V3WebformsCreateOrUpdateWebformRequest) GetFormOwnerID() string {
+	if v == nil {
 		return ""
 	}
-	return o.FormOwnerID
+	return v.FormOwnerID
 }
 
-func (o *V3WebformsCreateOrUpdateWebformRequest) GetServices() []V3WebformsWFService {
-	if o == nil {
+func (v *V3WebformsCreateOrUpdateWebformRequest) GetServices() []V3WebformsWFService {
+	if v == nil {
 		return []V3WebformsWFService{}
 	}
-	return o.Services
+	return v.Services
 }
 
-func (o *V3WebformsCreateOrUpdateWebformRequest) GetInputField() []V3WebformsWFInputField {
-	if o == nil {
+func (v *V3WebformsCreateOrUpdateWebformRequest) GetInputField() []V3WebformsWFInputField {
+	if v == nil {
 		return nil
 	}
-	return o.InputField
+	return v.InputField
 }
 
-func (o *V3WebformsCreateOrUpdateWebformRequest) GetHeader() string {
-	if o == nil {
+func (v *V3WebformsCreateOrUpdateWebformRequest) GetHeader() string {
+	if v == nil {
 		return ""
 	}
-	return o.Header
+	return v.Header
 }
 
-func (o *V3WebformsCreateOrUpdateWebformRequest) GetTitle() string {
-	if o == nil {
+func (v *V3WebformsCreateOrUpdateWebformRequest) GetTitle() string {
+	if v == nil {
 		return ""
 	}
-	return o.Title
+	return v.Title
 }
 
-func (o *V3WebformsCreateOrUpdateWebformRequest) GetLogoURL() *string {
-	if o == nil {
+func (v *V3WebformsCreateOrUpdateWebformRequest) GetLogoURL() *string {
+	if v == nil {
 		return nil
 	}
-	return o.LogoURL
+	return v.LogoURL
 }
 
-func (o *V3WebformsCreateOrUpdateWebformRequest) GetFooterText() string {
-	if o == nil {
+func (v *V3WebformsCreateOrUpdateWebformRequest) GetFooterText() string {
+	if v == nil {
 		return ""
 	}
-	return o.FooterText
+	return v.FooterText
 }
 
-func (o *V3WebformsCreateOrUpdateWebformRequest) GetFooterLink() string {
-	if o == nil {
+func (v *V3WebformsCreateOrUpdateWebformRequest) GetFooterLink() string {
+	if v == nil {
 		return ""
 	}
-	return o.FooterLink
+	return v.FooterLink
 }
 
-func (o *V3WebformsCreateOrUpdateWebformRequest) GetEmailOn() []string {
-	if o == nil {
+func (v *V3WebformsCreateOrUpdateWebformRequest) GetEmailOn() []string {
+	if v == nil {
 		return nil
 	}
-	return o.EmailOn
+	return v.EmailOn
 }
 
-func (o *V3WebformsCreateOrUpdateWebformRequest) GetDescription() *string {
-	if o == nil {
+func (v *V3WebformsCreateOrUpdateWebformRequest) GetDescription() *string {
+	if v == nil {
 		return nil
 	}
-	return o.Description
+	return v.Description
 }

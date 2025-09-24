@@ -9,23 +9,23 @@ type V3IncidentsIncidentActionsRebuildCircleCIProjectRequest struct {
 	Reponame string `json:"reponame"`
 }
 
-func (o *V3IncidentsIncidentActionsRebuildCircleCIProjectRequest) GetVcsType() string {
-	if o == nil {
+func (v *V3IncidentsIncidentActionsRebuildCircleCIProjectRequest) GetVcsType() string {
+	if v == nil {
 		return ""
 	}
-	return o.VcsType
+	return v.VcsType
 }
 
-func (o *V3IncidentsIncidentActionsRebuildCircleCIProjectRequest) GetUsername() string {
-	if o == nil {
+func (v *V3IncidentsIncidentActionsRebuildCircleCIProjectRequest) GetUsername() string {
+	if v == nil {
 		return ""
 	}
-	return o.Username
+	return v.Username
 }
 
-func (o *V3IncidentsIncidentActionsRebuildCircleCIProjectRequest) GetReponame() string {
-	if o == nil {
+func (v *V3IncidentsIncidentActionsRebuildCircleCIProjectRequest) GetReponame() string {
+	if v == nil {
 		return ""
 	}
-	return o.Reponame
+	return v.Reponame
 }

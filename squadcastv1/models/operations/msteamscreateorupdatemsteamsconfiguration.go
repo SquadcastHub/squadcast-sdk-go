@@ -12,11 +12,11 @@ type MSTeamsCreateOrUpdateMsteamsConfigurationResponseBody struct {
 	Data components.V3ExtensionsMSTeamsMSTeamsConfigResponse `json:"data"`
 }
 
-func (o *MSTeamsCreateOrUpdateMsteamsConfigurationResponseBody) GetData() components.V3ExtensionsMSTeamsMSTeamsConfigResponse {
-	if o == nil {
+func (m *MSTeamsCreateOrUpdateMsteamsConfigurationResponseBody) GetData() components.V3ExtensionsMSTeamsMSTeamsConfigResponse {
+	if m == nil {
 		return components.V3ExtensionsMSTeamsMSTeamsConfigResponse{}
 	}
-	return o.Data
+	return m.Data
 }
 
 type MSTeamsCreateOrUpdateMsteamsConfigurationResponse struct {
@@ -25,16 +25,16 @@ type MSTeamsCreateOrUpdateMsteamsConfigurationResponse struct {
 	Object *MSTeamsCreateOrUpdateMsteamsConfigurationResponseBody
 }
 
-func (o *MSTeamsCreateOrUpdateMsteamsConfigurationResponse) GetHTTPMeta() components.HTTPMetadata {
-	if o == nil {
+func (m *MSTeamsCreateOrUpdateMsteamsConfigurationResponse) GetHTTPMeta() components.HTTPMetadata {
+	if m == nil {
 		return components.HTTPMetadata{}
 	}
-	return o.HTTPMeta
+	return m.HTTPMeta
 }
 
-func (o *MSTeamsCreateOrUpdateMsteamsConfigurationResponse) GetObject() *MSTeamsCreateOrUpdateMsteamsConfigurationResponseBody {
-	if o == nil {
+func (m *MSTeamsCreateOrUpdateMsteamsConfigurationResponse) GetObject() *MSTeamsCreateOrUpdateMsteamsConfigurationResponseBody {
+	if m == nil {
 		return nil
 	}
-	return o.Object
+	return m.Object
 }

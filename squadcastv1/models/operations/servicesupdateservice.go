@@ -11,18 +11,18 @@ type ServicesUpdateServiceRequest struct {
 	V3ServicesUpdateServiceRequest components.V3ServicesUpdateServiceRequest `request:"mediaType=application/json"`
 }
 
-func (o *ServicesUpdateServiceRequest) GetServiceID() string {
-	if o == nil {
+func (s *ServicesUpdateServiceRequest) GetServiceID() string {
+	if s == nil {
 		return ""
 	}
-	return o.ServiceID
+	return s.ServiceID
 }
 
-func (o *ServicesUpdateServiceRequest) GetV3ServicesUpdateServiceRequest() components.V3ServicesUpdateServiceRequest {
-	if o == nil {
+func (s *ServicesUpdateServiceRequest) GetV3ServicesUpdateServiceRequest() components.V3ServicesUpdateServiceRequest {
+	if s == nil {
 		return components.V3ServicesUpdateServiceRequest{}
 	}
-	return o.V3ServicesUpdateServiceRequest
+	return s.V3ServicesUpdateServiceRequest
 }
 
 // ServicesUpdateServiceResponseBody - The request has succeeded.
@@ -30,11 +30,11 @@ type ServicesUpdateServiceResponseBody struct {
 	Data components.V3ServicesServiceResponse `json:"data"`
 }
 
-func (o *ServicesUpdateServiceResponseBody) GetData() components.V3ServicesServiceResponse {
-	if o == nil {
+func (s *ServicesUpdateServiceResponseBody) GetData() components.V3ServicesServiceResponse {
+	if s == nil {
 		return components.V3ServicesServiceResponse{}
 	}
-	return o.Data
+	return s.Data
 }
 
 type ServicesUpdateServiceResponse struct {
@@ -43,16 +43,16 @@ type ServicesUpdateServiceResponse struct {
 	Object *ServicesUpdateServiceResponseBody
 }
 
-func (o *ServicesUpdateServiceResponse) GetHTTPMeta() components.HTTPMetadata {
-	if o == nil {
+func (s *ServicesUpdateServiceResponse) GetHTTPMeta() components.HTTPMetadata {
+	if s == nil {
 		return components.HTTPMetadata{}
 	}
-	return o.HTTPMeta
+	return s.HTTPMeta
 }
 
-func (o *ServicesUpdateServiceResponse) GetObject() *ServicesUpdateServiceResponseBody {
-	if o == nil {
+func (s *ServicesUpdateServiceResponse) GetObject() *ServicesUpdateServiceResponseBody {
+	if s == nil {
 		return nil
 	}
-	return o.Object
+	return s.Object
 }

@@ -16,72 +16,72 @@ type V3IncidentsCommunicationCardsCommunicationCardResponse struct {
 	ArchivedAt any    `json:"archived_at"`
 }
 
-func (o *V3IncidentsCommunicationCardsCommunicationCardResponse) GetCreatedAt() string {
-	if o == nil {
+func (v *V3IncidentsCommunicationCardsCommunicationCardResponse) GetCreatedAt() string {
+	if v == nil {
 		return ""
 	}
-	return o.CreatedAt
+	return v.CreatedAt
 }
 
-func (o *V3IncidentsCommunicationCardsCommunicationCardResponse) GetUpdatedAt() string {
-	if o == nil {
+func (v *V3IncidentsCommunicationCardsCommunicationCardResponse) GetUpdatedAt() string {
+	if v == nil {
 		return ""
 	}
-	return o.UpdatedAt
+	return v.UpdatedAt
 }
 
-func (o *V3IncidentsCommunicationCardsCommunicationCardResponse) GetDeletedAt() any {
-	if o == nil {
+func (v *V3IncidentsCommunicationCardsCommunicationCardResponse) GetDeletedAt() any {
+	if v == nil {
 		return nil
 	}
-	return o.DeletedAt
+	return v.DeletedAt
 }
 
-func (o *V3IncidentsCommunicationCardsCommunicationCardResponse) GetID() int64 {
-	if o == nil {
+func (v *V3IncidentsCommunicationCardsCommunicationCardResponse) GetID() int64 {
+	if v == nil {
 		return 0
 	}
-	return o.ID
+	return v.ID
 }
 
-func (o *V3IncidentsCommunicationCardsCommunicationCardResponse) GetIncidentID() string {
-	if o == nil {
+func (v *V3IncidentsCommunicationCardsCommunicationCardResponse) GetIncidentID() string {
+	if v == nil {
 		return ""
 	}
-	return o.IncidentID
+	return v.IncidentID
 }
 
-func (o *V3IncidentsCommunicationCardsCommunicationCardResponse) GetURL() string {
-	if o == nil {
+func (v *V3IncidentsCommunicationCardsCommunicationCardResponse) GetURL() string {
+	if v == nil {
 		return ""
 	}
-	return o.URL
+	return v.URL
 }
 
-func (o *V3IncidentsCommunicationCardsCommunicationCardResponse) GetType() string {
-	if o == nil {
+func (v *V3IncidentsCommunicationCardsCommunicationCardResponse) GetType() string {
+	if v == nil {
 		return ""
 	}
-	return o.Type
+	return v.Type
 }
 
-func (o *V3IncidentsCommunicationCardsCommunicationCardResponse) GetTitle() string {
-	if o == nil {
+func (v *V3IncidentsCommunicationCardsCommunicationCardResponse) GetTitle() string {
+	if v == nil {
 		return ""
 	}
-	return o.Title
+	return v.Title
 }
 
-func (o *V3IncidentsCommunicationCardsCommunicationCardResponse) GetChannelID() string {
-	if o == nil {
+func (v *V3IncidentsCommunicationCardsCommunicationCardResponse) GetChannelID() string {
+	if v == nil {
 		return ""
 	}
-	return o.ChannelID
+	return v.ChannelID
 }
 
-func (o *V3IncidentsCommunicationCardsCommunicationCardResponse) GetArchivedAt() any {
-	if o == nil {
+func (v *V3IncidentsCommunicationCardsCommunicationCardResponse) GetArchivedAt() any {
+	if v == nil {
 		return nil
 	}
-	return o.ArchivedAt
+	return v.ArchivedAt
 }

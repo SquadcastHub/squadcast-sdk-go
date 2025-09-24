@@ -48,25 +48,25 @@ func (v *V3WorkflowsSlackMessageChannelUpdateData) UnmarshalJSON(data []byte) er
 	return nil
 }
 
-func (o *V3WorkflowsSlackMessageChannelUpdateData) GetChannelID() *string {
-	if o == nil {
+func (v *V3WorkflowsSlackMessageChannelUpdateData) GetChannelID() *string {
+	if v == nil {
 		return nil
 	}
-	return o.ChannelID
+	return v.ChannelID
 }
 
-func (o *V3WorkflowsSlackMessageChannelUpdateData) GetChannelName() *string {
-	if o == nil {
+func (v *V3WorkflowsSlackMessageChannelUpdateData) GetChannelName() *string {
+	if v == nil {
 		return nil
 	}
-	return o.ChannelName
+	return v.ChannelName
 }
 
-func (o *V3WorkflowsSlackMessageChannelUpdateData) GetMessage() *string {
-	if o == nil {
+func (v *V3WorkflowsSlackMessageChannelUpdateData) GetMessage() *string {
+	if v == nil {
 		return nil
 	}
-	return o.Message
+	return v.Message
 }
 
 type V3WorkflowsSlackMessageChannelUpdate struct {
@@ -85,16 +85,16 @@ func (v *V3WorkflowsSlackMessageChannelUpdate) UnmarshalJSON(data []byte) error 
 	return nil
 }
 
-func (o *V3WorkflowsSlackMessageChannelUpdate) GetName() V3WorkflowsSlackMessageChannelUpdateName {
-	if o == nil {
+func (v *V3WorkflowsSlackMessageChannelUpdate) GetName() V3WorkflowsSlackMessageChannelUpdateName {
+	if v == nil {
 		return V3WorkflowsSlackMessageChannelUpdateName("")
 	}
-	return o.Name
+	return v.Name
 }
 
-func (o *V3WorkflowsSlackMessageChannelUpdate) GetData() *V3WorkflowsSlackMessageChannelUpdateData {
-	if o == nil {
+func (v *V3WorkflowsSlackMessageChannelUpdate) GetData() *V3WorkflowsSlackMessageChannelUpdateData {
+	if v == nil {
 		return nil
 	}
-	return o.Data
+	return v.Data
 }

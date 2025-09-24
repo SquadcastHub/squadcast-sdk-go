@@ -10,16 +10,16 @@ type V3WebformsWFInputField struct {
 	Options []string `json:"options"`
 }
 
-func (o *V3WebformsWFInputField) GetLabel() string {
-	if o == nil {
+func (v *V3WebformsWFInputField) GetLabel() string {
+	if v == nil {
 		return ""
 	}
-	return o.Label
+	return v.Label
 }
 
-func (o *V3WebformsWFInputField) GetOptions() []string {
-	if o == nil {
+func (v *V3WebformsWFInputField) GetOptions() []string {
+	if v == nil {
 		return []string{}
 	}
-	return o.Options
+	return v.Options
 }

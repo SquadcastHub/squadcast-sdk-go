@@ -7,16 +7,16 @@ type V4StatusPagesStatusPageSubscriberComponent struct {
 	Name string `json:"name"`
 }
 
-func (o *V4StatusPagesStatusPageSubscriberComponent) GetID() int64 {
-	if o == nil {
+func (v *V4StatusPagesStatusPageSubscriberComponent) GetID() int64 {
+	if v == nil {
 		return 0
 	}
-	return o.ID
+	return v.ID
 }
 
-func (o *V4StatusPagesStatusPageSubscriberComponent) GetName() string {
-	if o == nil {
+func (v *V4StatusPagesStatusPageSubscriberComponent) GetName() string {
+	if v == nil {
 		return ""
 	}
-	return o.Name
+	return v.Name
 }

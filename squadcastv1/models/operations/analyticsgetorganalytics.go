@@ -13,32 +13,32 @@ type AnalyticsGetOrgAnalyticsRequest struct {
 	UserID *string `queryParam:"style=form,explode=false,name=user_id"`
 }
 
-func (o *AnalyticsGetOrgAnalyticsRequest) GetFrom() string {
-	if o == nil {
+func (a *AnalyticsGetOrgAnalyticsRequest) GetFrom() string {
+	if a == nil {
 		return ""
 	}
-	return o.From
+	return a.From
 }
 
-func (o *AnalyticsGetOrgAnalyticsRequest) GetTo() string {
-	if o == nil {
+func (a *AnalyticsGetOrgAnalyticsRequest) GetTo() string {
+	if a == nil {
 		return ""
 	}
-	return o.To
+	return a.To
 }
 
-func (o *AnalyticsGetOrgAnalyticsRequest) GetTeamID() *string {
-	if o == nil {
+func (a *AnalyticsGetOrgAnalyticsRequest) GetTeamID() *string {
+	if a == nil {
 		return nil
 	}
-	return o.TeamID
+	return a.TeamID
 }
 
-func (o *AnalyticsGetOrgAnalyticsRequest) GetUserID() *string {
-	if o == nil {
+func (a *AnalyticsGetOrgAnalyticsRequest) GetUserID() *string {
+	if a == nil {
 		return nil
 	}
-	return o.UserID
+	return a.UserID
 }
 
 // AnalyticsGetOrgAnalyticsResponseBody - The request has succeeded.
@@ -46,11 +46,11 @@ type AnalyticsGetOrgAnalyticsResponseBody struct {
 	Data components.V3AnalyticsAnalyticsResponse `json:"data"`
 }
 
-func (o *AnalyticsGetOrgAnalyticsResponseBody) GetData() components.V3AnalyticsAnalyticsResponse {
-	if o == nil {
+func (a *AnalyticsGetOrgAnalyticsResponseBody) GetData() components.V3AnalyticsAnalyticsResponse {
+	if a == nil {
 		return components.V3AnalyticsAnalyticsResponse{}
 	}
-	return o.Data
+	return a.Data
 }
 
 type AnalyticsGetOrgAnalyticsResponse struct {
@@ -59,16 +59,16 @@ type AnalyticsGetOrgAnalyticsResponse struct {
 	Object *AnalyticsGetOrgAnalyticsResponseBody
 }
 
-func (o *AnalyticsGetOrgAnalyticsResponse) GetHTTPMeta() components.HTTPMetadata {
-	if o == nil {
+func (a *AnalyticsGetOrgAnalyticsResponse) GetHTTPMeta() components.HTTPMetadata {
+	if a == nil {
 		return components.HTTPMetadata{}
 	}
-	return o.HTTPMeta
+	return a.HTTPMeta
 }
 
-func (o *AnalyticsGetOrgAnalyticsResponse) GetObject() *AnalyticsGetOrgAnalyticsResponseBody {
-	if o == nil {
+func (a *AnalyticsGetOrgAnalyticsResponse) GetObject() *AnalyticsGetOrgAnalyticsResponseBody {
+	if a == nil {
 		return nil
 	}
-	return o.Object
+	return a.Object
 }

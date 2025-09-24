@@ -7,16 +7,16 @@ type V4Participant struct {
 	Type string `json:"type"`
 }
 
-func (o *V4Participant) GetID() string {
-	if o == nil {
+func (v *V4Participant) GetID() string {
+	if v == nil {
 		return ""
 	}
-	return o.ID
+	return v.ID
 }
 
-func (o *V4Participant) GetType() string {
-	if o == nil {
+func (v *V4Participant) GetType() string {
+	if v == nil {
 		return ""
 	}
-	return o.Type
+	return v.Type
 }

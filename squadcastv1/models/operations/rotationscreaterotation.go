@@ -11,18 +11,18 @@ type RotationsCreateRotationRequest struct {
 	V4CreateRotationRequest components.V4CreateRotationRequest `request:"mediaType=application/json"`
 }
 
-func (o *RotationsCreateRotationRequest) GetScheduleID() string {
-	if o == nil {
+func (r *RotationsCreateRotationRequest) GetScheduleID() string {
+	if r == nil {
 		return ""
 	}
-	return o.ScheduleID
+	return r.ScheduleID
 }
 
-func (o *RotationsCreateRotationRequest) GetV4CreateRotationRequest() components.V4CreateRotationRequest {
-	if o == nil {
+func (r *RotationsCreateRotationRequest) GetV4CreateRotationRequest() components.V4CreateRotationRequest {
+	if r == nil {
 		return components.V4CreateRotationRequest{}
 	}
-	return o.V4CreateRotationRequest
+	return r.V4CreateRotationRequest
 }
 
 // RotationsCreateRotationResponseBody - The request has succeeded and a new resource has been created as a result.
@@ -30,11 +30,11 @@ type RotationsCreateRotationResponseBody struct {
 	Data components.V4RotationResponse `json:"data"`
 }
 
-func (o *RotationsCreateRotationResponseBody) GetData() components.V4RotationResponse {
-	if o == nil {
+func (r *RotationsCreateRotationResponseBody) GetData() components.V4RotationResponse {
+	if r == nil {
 		return components.V4RotationResponse{}
 	}
-	return o.Data
+	return r.Data
 }
 
 type RotationsCreateRotationResponse struct {
@@ -43,16 +43,16 @@ type RotationsCreateRotationResponse struct {
 	Object *RotationsCreateRotationResponseBody
 }
 
-func (o *RotationsCreateRotationResponse) GetHTTPMeta() components.HTTPMetadata {
-	if o == nil {
+func (r *RotationsCreateRotationResponse) GetHTTPMeta() components.HTTPMetadata {
+	if r == nil {
 		return components.HTTPMetadata{}
 	}
-	return o.HTTPMeta
+	return r.HTTPMeta
 }
 
-func (o *RotationsCreateRotationResponse) GetObject() *RotationsCreateRotationResponseBody {
-	if o == nil {
+func (r *RotationsCreateRotationResponse) GetObject() *RotationsCreateRotationResponseBody {
+	if r == nil {
 		return nil
 	}
-	return o.Object
+	return r.Object
 }

@@ -11,44 +11,44 @@ type V3ExtensionsWebhooksWebhookListItem struct {
 	CustomPayloadTemplateName string `json:"custom_payload_template_name"`
 }
 
-func (o *V3ExtensionsWebhooksWebhookListItem) GetID() string {
-	if o == nil {
+func (v *V3ExtensionsWebhooksWebhookListItem) GetID() string {
+	if v == nil {
 		return ""
 	}
-	return o.ID
+	return v.ID
 }
 
-func (o *V3ExtensionsWebhooksWebhookListItem) GetName() string {
-	if o == nil {
+func (v *V3ExtensionsWebhooksWebhookListItem) GetName() string {
+	if v == nil {
 		return ""
 	}
-	return o.Name
+	return v.Name
 }
 
-func (o *V3ExtensionsWebhooksWebhookListItem) GetDescription() string {
-	if o == nil {
+func (v *V3ExtensionsWebhooksWebhookListItem) GetDescription() string {
+	if v == nil {
 		return ""
 	}
-	return o.Description
+	return v.Description
 }
 
-func (o *V3ExtensionsWebhooksWebhookListItem) GetTriggerType() string {
-	if o == nil {
+func (v *V3ExtensionsWebhooksWebhookListItem) GetTriggerType() string {
+	if v == nil {
 		return ""
 	}
-	return o.TriggerType
+	return v.TriggerType
 }
 
-func (o *V3ExtensionsWebhooksWebhookListItem) GetPayloadType() string {
-	if o == nil {
+func (v *V3ExtensionsWebhooksWebhookListItem) GetPayloadType() string {
+	if v == nil {
 		return ""
 	}
-	return o.PayloadType
+	return v.PayloadType
 }
 
-func (o *V3ExtensionsWebhooksWebhookListItem) GetCustomPayloadTemplateName() string {
-	if o == nil {
+func (v *V3ExtensionsWebhooksWebhookListItem) GetCustomPayloadTemplateName() string {
+	if v == nil {
 		return ""
 	}
-	return o.CustomPayloadTemplateName
+	return v.CustomPayloadTemplateName
 }

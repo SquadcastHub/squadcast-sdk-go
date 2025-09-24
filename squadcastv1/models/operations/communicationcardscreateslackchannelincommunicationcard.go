@@ -11,11 +11,11 @@ type CommunicationCardsCreateSlackChannelInCommunicationCardResponseBody struct 
 	Data components.V3IncidentsCommunicationCardsCommunicationCardResponse `json:"data"`
 }
 
-func (o *CommunicationCardsCreateSlackChannelInCommunicationCardResponseBody) GetData() components.V3IncidentsCommunicationCardsCommunicationCardResponse {
-	if o == nil {
+func (c *CommunicationCardsCreateSlackChannelInCommunicationCardResponseBody) GetData() components.V3IncidentsCommunicationCardsCommunicationCardResponse {
+	if c == nil {
 		return components.V3IncidentsCommunicationCardsCommunicationCardResponse{}
 	}
-	return o.Data
+	return c.Data
 }
 
 type CommunicationCardsCreateSlackChannelInCommunicationCardResponse struct {
@@ -24,16 +24,16 @@ type CommunicationCardsCreateSlackChannelInCommunicationCardResponse struct {
 	Object *CommunicationCardsCreateSlackChannelInCommunicationCardResponseBody
 }
 
-func (o *CommunicationCardsCreateSlackChannelInCommunicationCardResponse) GetHTTPMeta() components.HTTPMetadata {
-	if o == nil {
+func (c *CommunicationCardsCreateSlackChannelInCommunicationCardResponse) GetHTTPMeta() components.HTTPMetadata {
+	if c == nil {
 		return components.HTTPMetadata{}
 	}
-	return o.HTTPMeta
+	return c.HTTPMeta
 }
 
-func (o *CommunicationCardsCreateSlackChannelInCommunicationCardResponse) GetObject() *CommunicationCardsCreateSlackChannelInCommunicationCardResponseBody {
-	if o == nil {
+func (c *CommunicationCardsCreateSlackChannelInCommunicationCardResponse) GetObject() *CommunicationCardsCreateSlackChannelInCommunicationCardResponseBody {
+	if c == nil {
 		return nil
 	}
-	return o.Object
+	return c.Object
 }

@@ -9,30 +9,30 @@ type V4ShiftTimeSlot struct {
 	DayOfWeek *string `json:"dayOfWeek,omitempty"`
 }
 
-func (o *V4ShiftTimeSlot) GetStartHour() int64 {
-	if o == nil {
+func (v *V4ShiftTimeSlot) GetStartHour() int64 {
+	if v == nil {
 		return 0
 	}
-	return o.StartHour
+	return v.StartHour
 }
 
-func (o *V4ShiftTimeSlot) GetStartMin() int64 {
-	if o == nil {
+func (v *V4ShiftTimeSlot) GetStartMin() int64 {
+	if v == nil {
 		return 0
 	}
-	return o.StartMin
+	return v.StartMin
 }
 
-func (o *V4ShiftTimeSlot) GetDuration() int64 {
-	if o == nil {
+func (v *V4ShiftTimeSlot) GetDuration() int64 {
+	if v == nil {
 		return 0
 	}
-	return o.Duration
+	return v.Duration
 }
 
-func (o *V4ShiftTimeSlot) GetDayOfWeek() *string {
-	if o == nil {
+func (v *V4ShiftTimeSlot) GetDayOfWeek() *string {
+	if v == nil {
 		return nil
 	}
-	return o.DayOfWeek
+	return v.DayOfWeek
 }

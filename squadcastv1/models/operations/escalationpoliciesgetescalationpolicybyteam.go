@@ -13,36 +13,36 @@ type EscalationPoliciesGetEscalationPolicyByTeamRequest struct {
 	PageSize   *string `queryParam:"style=form,explode=true,name=page_size"`
 }
 
-func (o *EscalationPoliciesGetEscalationPolicyByTeamRequest) GetOwnerID() *string {
-	if o == nil {
+func (e *EscalationPoliciesGetEscalationPolicyByTeamRequest) GetOwnerID() *string {
+	if e == nil {
 		return nil
 	}
-	return o.OwnerID
+	return e.OwnerID
 }
 
-func (o *EscalationPoliciesGetEscalationPolicyByTeamRequest) GetPageNumber() *string {
-	if o == nil {
+func (e *EscalationPoliciesGetEscalationPolicyByTeamRequest) GetPageNumber() *string {
+	if e == nil {
 		return nil
 	}
-	return o.PageNumber
+	return e.PageNumber
 }
 
-func (o *EscalationPoliciesGetEscalationPolicyByTeamRequest) GetPageSize() *string {
-	if o == nil {
+func (e *EscalationPoliciesGetEscalationPolicyByTeamRequest) GetPageSize() *string {
+	if e == nil {
 		return nil
 	}
-	return o.PageSize
+	return e.PageSize
 }
 
 type EscalationPoliciesGetEscalationPolicyByTeamMeta struct {
 	TotalCount int `json:"total_count"`
 }
 
-func (o *EscalationPoliciesGetEscalationPolicyByTeamMeta) GetTotalCount() int {
-	if o == nil {
+func (e *EscalationPoliciesGetEscalationPolicyByTeamMeta) GetTotalCount() int {
+	if e == nil {
 		return 0
 	}
-	return o.TotalCount
+	return e.TotalCount
 }
 
 // EscalationPoliciesGetEscalationPolicyByTeamResponseBody - The request has succeeded.
@@ -51,18 +51,18 @@ type EscalationPoliciesGetEscalationPolicyByTeamResponseBody struct {
 	Meta EscalationPoliciesGetEscalationPolicyByTeamMeta           `json:"meta"`
 }
 
-func (o *EscalationPoliciesGetEscalationPolicyByTeamResponseBody) GetData() []components.V3EscalationPoliciesEscalationPolicyResponse {
-	if o == nil {
+func (e *EscalationPoliciesGetEscalationPolicyByTeamResponseBody) GetData() []components.V3EscalationPoliciesEscalationPolicyResponse {
+	if e == nil {
 		return []components.V3EscalationPoliciesEscalationPolicyResponse{}
 	}
-	return o.Data
+	return e.Data
 }
 
-func (o *EscalationPoliciesGetEscalationPolicyByTeamResponseBody) GetMeta() EscalationPoliciesGetEscalationPolicyByTeamMeta {
-	if o == nil {
+func (e *EscalationPoliciesGetEscalationPolicyByTeamResponseBody) GetMeta() EscalationPoliciesGetEscalationPolicyByTeamMeta {
+	if e == nil {
 		return EscalationPoliciesGetEscalationPolicyByTeamMeta{}
 	}
-	return o.Meta
+	return e.Meta
 }
 
 type EscalationPoliciesGetEscalationPolicyByTeamResponse struct {
@@ -71,16 +71,16 @@ type EscalationPoliciesGetEscalationPolicyByTeamResponse struct {
 	Object *EscalationPoliciesGetEscalationPolicyByTeamResponseBody
 }
 
-func (o *EscalationPoliciesGetEscalationPolicyByTeamResponse) GetHTTPMeta() components.HTTPMetadata {
-	if o == nil {
+func (e *EscalationPoliciesGetEscalationPolicyByTeamResponse) GetHTTPMeta() components.HTTPMetadata {
+	if e == nil {
 		return components.HTTPMetadata{}
 	}
-	return o.HTTPMeta
+	return e.HTTPMeta
 }
 
-func (o *EscalationPoliciesGetEscalationPolicyByTeamResponse) GetObject() *EscalationPoliciesGetEscalationPolicyByTeamResponseBody {
-	if o == nil {
+func (e *EscalationPoliciesGetEscalationPolicyByTeamResponse) GetObject() *EscalationPoliciesGetEscalationPolicyByTeamResponseBody {
+	if e == nil {
 		return nil
 	}
-	return o.Object
+	return e.Object
 }

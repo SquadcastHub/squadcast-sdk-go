@@ -9,30 +9,30 @@ type V4StatusPagesDeleteStatusPageByIDResponse struct {
 	TeamID         string `json:"teamID"`
 }
 
-func (o *V4StatusPagesDeleteStatusPageByIDResponse) GetID() int64 {
-	if o == nil {
+func (v *V4StatusPagesDeleteStatusPageByIDResponse) GetID() int64 {
+	if v == nil {
 		return 0
 	}
-	return o.ID
+	return v.ID
 }
 
-func (o *V4StatusPagesDeleteStatusPageByIDResponse) GetName() string {
-	if o == nil {
+func (v *V4StatusPagesDeleteStatusPageByIDResponse) GetName() string {
+	if v == nil {
 		return ""
 	}
-	return o.Name
+	return v.Name
 }
 
-func (o *V4StatusPagesDeleteStatusPageByIDResponse) GetOrganizationID() string {
-	if o == nil {
+func (v *V4StatusPagesDeleteStatusPageByIDResponse) GetOrganizationID() string {
+	if v == nil {
 		return ""
 	}
-	return o.OrganizationID
+	return v.OrganizationID
 }
 
-func (o *V4StatusPagesDeleteStatusPageByIDResponse) GetTeamID() string {
-	if o == nil {
+func (v *V4StatusPagesDeleteStatusPageByIDResponse) GetTeamID() string {
+	if v == nil {
 		return ""
 	}
-	return o.TeamID
+	return v.TeamID
 }

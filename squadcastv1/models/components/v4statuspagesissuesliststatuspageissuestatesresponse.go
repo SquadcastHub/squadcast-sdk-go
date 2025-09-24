@@ -30,65 +30,65 @@ func (v *V4StatusPagesIssuesListStatusPageIssueStatesResponse) UnmarshalJSON(dat
 	return nil
 }
 
-func (o *V4StatusPagesIssuesListStatusPageIssueStatesResponse) GetID() int64 {
-	if o == nil {
+func (v *V4StatusPagesIssuesListStatusPageIssueStatesResponse) GetID() int64 {
+	if v == nil {
 		return 0
 	}
-	return o.ID
+	return v.ID
 }
 
-func (o *V4StatusPagesIssuesListStatusPageIssueStatesResponse) GetIdx() int64 {
-	if o == nil {
+func (v *V4StatusPagesIssuesListStatusPageIssueStatesResponse) GetIdx() int64 {
+	if v == nil {
 		return 0
 	}
-	return o.Idx
+	return v.Idx
 }
 
-func (o *V4StatusPagesIssuesListStatusPageIssueStatesResponse) GetPageID() int64 {
-	if o == nil {
+func (v *V4StatusPagesIssuesListStatusPageIssueStatesResponse) GetPageID() int64 {
+	if v == nil {
 		return 0
 	}
-	return o.PageID
+	return v.PageID
 }
 
-func (o *V4StatusPagesIssuesListStatusPageIssueStatesResponse) GetName() string {
-	if o == nil {
+func (v *V4StatusPagesIssuesListStatusPageIssueStatesResponse) GetName() string {
+	if v == nil {
 		return ""
 	}
-	return o.Name
+	return v.Name
 }
 
-func (o *V4StatusPagesIssuesListStatusPageIssueStatesResponse) GetColor() string {
-	if o == nil {
+func (v *V4StatusPagesIssuesListStatusPageIssueStatesResponse) GetColor() string {
+	if v == nil {
 		return ""
 	}
-	return o.Color
+	return v.Color
 }
 
-func (o *V4StatusPagesIssuesListStatusPageIssueStatesResponse) GetDefaultMessage() string {
-	if o == nil {
+func (v *V4StatusPagesIssuesListStatusPageIssueStatesResponse) GetDefaultMessage() string {
+	if v == nil {
 		return ""
 	}
-	return o.DefaultMessage
+	return v.DefaultMessage
 }
 
-func (o *V4StatusPagesIssuesListStatusPageIssueStatesResponse) GetCreatedAt() time.Time {
-	if o == nil {
+func (v *V4StatusPagesIssuesListStatusPageIssueStatesResponse) GetCreatedAt() time.Time {
+	if v == nil {
 		return time.Time{}
 	}
-	return o.CreatedAt
+	return v.CreatedAt
 }
 
-func (o *V4StatusPagesIssuesListStatusPageIssueStatesResponse) GetUpdatedAt() time.Time {
-	if o == nil {
+func (v *V4StatusPagesIssuesListStatusPageIssueStatesResponse) GetUpdatedAt() time.Time {
+	if v == nil {
 		return time.Time{}
 	}
-	return o.UpdatedAt
+	return v.UpdatedAt
 }
 
-func (o *V4StatusPagesIssuesListStatusPageIssueStatesResponse) GetDeletedAt() *time.Time {
-	if o == nil {
+func (v *V4StatusPagesIssuesListStatusPageIssueStatesResponse) GetDeletedAt() *time.Time {
+	if v == nil {
 		return nil
 	}
-	return o.DeletedAt
+	return v.DeletedAt
 }

@@ -8,23 +8,23 @@ type V3ServicesJiraProject struct {
 	Name string `json:"name"`
 }
 
-func (o *V3ServicesJiraProject) GetID() string {
-	if o == nil {
+func (v *V3ServicesJiraProject) GetID() string {
+	if v == nil {
 		return ""
 	}
-	return o.ID
+	return v.ID
 }
 
-func (o *V3ServicesJiraProject) GetKey() string {
-	if o == nil {
+func (v *V3ServicesJiraProject) GetKey() string {
+	if v == nil {
 		return ""
 	}
-	return o.Key
+	return v.Key
 }
 
-func (o *V3ServicesJiraProject) GetName() string {
-	if o == nil {
+func (v *V3ServicesJiraProject) GetName() string {
+	if v == nil {
 		return ""
 	}
-	return o.Name
+	return v.Name
 }

@@ -12,18 +12,18 @@ type NotesCreateNotesRequest struct {
 	V3IncidentsNotesCreateNoteRequest components.V3IncidentsNotesCreateNoteRequest `request:"mediaType=application/json"`
 }
 
-func (o *NotesCreateNotesRequest) GetIncidentID() string {
-	if o == nil {
+func (n *NotesCreateNotesRequest) GetIncidentID() string {
+	if n == nil {
 		return ""
 	}
-	return o.IncidentID
+	return n.IncidentID
 }
 
-func (o *NotesCreateNotesRequest) GetV3IncidentsNotesCreateNoteRequest() components.V3IncidentsNotesCreateNoteRequest {
-	if o == nil {
+func (n *NotesCreateNotesRequest) GetV3IncidentsNotesCreateNoteRequest() components.V3IncidentsNotesCreateNoteRequest {
+	if n == nil {
 		return components.V3IncidentsNotesCreateNoteRequest{}
 	}
-	return o.V3IncidentsNotesCreateNoteRequest
+	return n.V3IncidentsNotesCreateNoteRequest
 }
 
 // NotesCreateNotesBody - The body type of the operation request or response.
@@ -31,11 +31,11 @@ type NotesCreateNotesBody struct {
 	Data components.V3IncidentsNotesNoteResponse `json:"data"`
 }
 
-func (o *NotesCreateNotesBody) GetData() components.V3IncidentsNotesNoteResponse {
-	if o == nil {
+func (n *NotesCreateNotesBody) GetData() components.V3IncidentsNotesNoteResponse {
+	if n == nil {
 		return components.V3IncidentsNotesNoteResponse{}
 	}
-	return o.Data
+	return n.Data
 }
 
 // NotesCreateNotesResponseBody - The request has succeeded and a new resource has been created as a result.
@@ -44,11 +44,11 @@ type NotesCreateNotesResponseBody struct {
 	Body NotesCreateNotesBody `json:"body"`
 }
 
-func (o *NotesCreateNotesResponseBody) GetBody() NotesCreateNotesBody {
-	if o == nil {
+func (n *NotesCreateNotesResponseBody) GetBody() NotesCreateNotesBody {
+	if n == nil {
 		return NotesCreateNotesBody{}
 	}
-	return o.Body
+	return n.Body
 }
 
 type NotesCreateNotesResponse struct {
@@ -57,16 +57,16 @@ type NotesCreateNotesResponse struct {
 	Object *NotesCreateNotesResponseBody
 }
 
-func (o *NotesCreateNotesResponse) GetHTTPMeta() components.HTTPMetadata {
-	if o == nil {
+func (n *NotesCreateNotesResponse) GetHTTPMeta() components.HTTPMetadata {
+	if n == nil {
 		return components.HTTPMetadata{}
 	}
-	return o.HTTPMeta
+	return n.HTTPMeta
 }
 
-func (o *NotesCreateNotesResponse) GetObject() *NotesCreateNotesResponseBody {
-	if o == nil {
+func (n *NotesCreateNotesResponse) GetObject() *NotesCreateNotesResponseBody {
+	if n == nil {
 		return nil
 	}
-	return o.Object
+	return n.Object
 }

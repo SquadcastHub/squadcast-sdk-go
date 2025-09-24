@@ -13,58 +13,58 @@ type V4SquadsCreateSquadResponse struct {
 	CreatedBy      string                `json:"created_by"`
 }
 
-func (o *V4SquadsCreateSquadResponse) GetOrganizationID() string {
-	if o == nil {
+func (v *V4SquadsCreateSquadResponse) GetOrganizationID() string {
+	if v == nil {
 		return ""
 	}
-	return o.OrganizationID
+	return v.OrganizationID
 }
 
-func (o *V4SquadsCreateSquadResponse) GetOwnerID() string {
-	if o == nil {
+func (v *V4SquadsCreateSquadResponse) GetOwnerID() string {
+	if v == nil {
 		return ""
 	}
-	return o.OwnerID
+	return v.OwnerID
 }
 
-func (o *V4SquadsCreateSquadResponse) GetID() string {
-	if o == nil {
+func (v *V4SquadsCreateSquadResponse) GetID() string {
+	if v == nil {
 		return ""
 	}
-	return o.ID
+	return v.ID
 }
 
-func (o *V4SquadsCreateSquadResponse) GetName() string {
-	if o == nil {
+func (v *V4SquadsCreateSquadResponse) GetName() string {
+	if v == nil {
 		return ""
 	}
-	return o.Name
+	return v.Name
 }
 
-func (o *V4SquadsCreateSquadResponse) GetSlug() string {
-	if o == nil {
+func (v *V4SquadsCreateSquadResponse) GetSlug() string {
+	if v == nil {
 		return ""
 	}
-	return o.Slug
+	return v.Slug
 }
 
-func (o *V4SquadsCreateSquadResponse) GetMembers() []V4SquadsSquadMember {
-	if o == nil {
+func (v *V4SquadsCreateSquadResponse) GetMembers() []V4SquadsSquadMember {
+	if v == nil {
 		return []V4SquadsSquadMember{}
 	}
-	return o.Members
+	return v.Members
 }
 
-func (o *V4SquadsCreateSquadResponse) GetCreatedAt() string {
-	if o == nil {
+func (v *V4SquadsCreateSquadResponse) GetCreatedAt() string {
+	if v == nil {
 		return ""
 	}
-	return o.CreatedAt
+	return v.CreatedAt
 }
 
-func (o *V4SquadsCreateSquadResponse) GetCreatedBy() string {
-	if o == nil {
+func (v *V4SquadsCreateSquadResponse) GetCreatedBy() string {
+	if v == nil {
 		return ""
 	}
-	return o.CreatedBy
+	return v.CreatedBy
 }

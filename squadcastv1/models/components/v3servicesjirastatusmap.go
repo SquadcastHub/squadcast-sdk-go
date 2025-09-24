@@ -7,16 +7,16 @@ type V3ServicesJiraStatusMap struct {
 	SystemStatus string `json:"system_status"`
 }
 
-func (o *V3ServicesJiraStatusMap) GetJiraStatus() string {
-	if o == nil {
+func (v *V3ServicesJiraStatusMap) GetJiraStatus() string {
+	if v == nil {
 		return ""
 	}
-	return o.JiraStatus
+	return v.JiraStatus
 }
 
-func (o *V3ServicesJiraStatusMap) GetSystemStatus() string {
-	if o == nil {
+func (v *V3ServicesJiraStatusMap) GetSystemStatus() string {
+	if v == nil {
 		return ""
 	}
-	return o.SystemStatus
+	return v.SystemStatus
 }

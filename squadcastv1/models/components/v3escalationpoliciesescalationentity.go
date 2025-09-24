@@ -50,23 +50,23 @@ type V3EscalationPoliciesEscalationEntity struct {
 	Type V3EscalationPoliciesEscalationEntityType `json:"type"`
 }
 
-func (o *V3EscalationPoliciesEscalationEntity) GetID() *string {
-	if o == nil {
+func (v *V3EscalationPoliciesEscalationEntity) GetID() *string {
+	if v == nil {
 		return nil
 	}
-	return o.ID
+	return v.ID
 }
 
-func (o *V3EscalationPoliciesEscalationEntity) GetPid() *int {
-	if o == nil {
+func (v *V3EscalationPoliciesEscalationEntity) GetPid() *int {
+	if v == nil {
 		return nil
 	}
-	return o.Pid
+	return v.Pid
 }
 
-func (o *V3EscalationPoliciesEscalationEntity) GetType() V3EscalationPoliciesEscalationEntityType {
-	if o == nil {
+func (v *V3EscalationPoliciesEscalationEntity) GetType() V3EscalationPoliciesEscalationEntityType {
+	if v == nil {
 		return V3EscalationPoliciesEscalationEntityType("")
 	}
-	return o.Type
+	return v.Type
 }

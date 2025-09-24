@@ -12,23 +12,23 @@ type V3WebformsWFService struct {
 	Alias string `json:"alias"`
 }
 
-func (o *V3WebformsWFService) GetServiceID() string {
-	if o == nil {
+func (v *V3WebformsWFService) GetServiceID() string {
+	if v == nil {
 		return ""
 	}
-	return o.ServiceID
+	return v.ServiceID
 }
 
-func (o *V3WebformsWFService) GetName() string {
-	if o == nil {
+func (v *V3WebformsWFService) GetName() string {
+	if v == nil {
 		return ""
 	}
-	return o.Name
+	return v.Name
 }
 
-func (o *V3WebformsWFService) GetAlias() string {
-	if o == nil {
+func (v *V3WebformsWFService) GetAlias() string {
+	if v == nil {
 		return ""
 	}
-	return o.Alias
+	return v.Alias
 }

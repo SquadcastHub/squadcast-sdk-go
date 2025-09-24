@@ -11,11 +11,11 @@ type WebhooksDeleteWebhookRequest struct {
 	EventWebhookID string `pathParam:"style=simple,explode=false,name=eventWebhookID"`
 }
 
-func (o *WebhooksDeleteWebhookRequest) GetEventWebhookID() string {
-	if o == nil {
+func (w *WebhooksDeleteWebhookRequest) GetEventWebhookID() string {
+	if w == nil {
 		return ""
 	}
-	return o.EventWebhookID
+	return w.EventWebhookID
 }
 
 // WebhooksDeleteWebhookResponseBody - There is no content to send for this request, but the headers may be useful.
@@ -27,16 +27,16 @@ type WebhooksDeleteWebhookResponse struct {
 	Body     []byte
 }
 
-func (o *WebhooksDeleteWebhookResponse) GetHTTPMeta() components.HTTPMetadata {
-	if o == nil {
+func (w *WebhooksDeleteWebhookResponse) GetHTTPMeta() components.HTTPMetadata {
+	if w == nil {
 		return components.HTTPMetadata{}
 	}
-	return o.HTTPMeta
+	return w.HTTPMeta
 }
 
-func (o *WebhooksDeleteWebhookResponse) GetBody() []byte {
-	if o == nil {
+func (w *WebhooksDeleteWebhookResponse) GetBody() []byte {
+	if w == nil {
 		return nil
 	}
-	return o.Body
+	return w.Body
 }

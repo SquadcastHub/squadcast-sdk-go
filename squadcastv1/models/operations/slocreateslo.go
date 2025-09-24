@@ -10,11 +10,11 @@ type SLOCreateSLOData struct {
 	Slo components.V3SLOSLODetailedResponse `json:"slo"`
 }
 
-func (o *SLOCreateSLOData) GetSlo() components.V3SLOSLODetailedResponse {
-	if o == nil {
+func (s *SLOCreateSLOData) GetSlo() components.V3SLOSLODetailedResponse {
+	if s == nil {
 		return components.V3SLOSLODetailedResponse{}
 	}
-	return o.Slo
+	return s.Slo
 }
 
 // SLOCreateSLOResponseBody - The request has succeeded and a new resource has been created as a result.
@@ -22,11 +22,11 @@ type SLOCreateSLOResponseBody struct {
 	Data SLOCreateSLOData `json:"data"`
 }
 
-func (o *SLOCreateSLOResponseBody) GetData() SLOCreateSLOData {
-	if o == nil {
+func (s *SLOCreateSLOResponseBody) GetData() SLOCreateSLOData {
+	if s == nil {
 		return SLOCreateSLOData{}
 	}
-	return o.Data
+	return s.Data
 }
 
 type SLOCreateSLOResponse struct {
@@ -35,16 +35,16 @@ type SLOCreateSLOResponse struct {
 	Object *SLOCreateSLOResponseBody
 }
 
-func (o *SLOCreateSLOResponse) GetHTTPMeta() components.HTTPMetadata {
-	if o == nil {
+func (s *SLOCreateSLOResponse) GetHTTPMeta() components.HTTPMetadata {
+	if s == nil {
 		return components.HTTPMetadata{}
 	}
-	return o.HTTPMeta
+	return s.HTTPMeta
 }
 
-func (o *SLOCreateSLOResponse) GetObject() *SLOCreateSLOResponseBody {
-	if o == nil {
+func (s *SLOCreateSLOResponse) GetObject() *SLOCreateSLOResponseBody {
+	if s == nil {
 		return nil
 	}
-	return o.Object
+	return s.Object
 }

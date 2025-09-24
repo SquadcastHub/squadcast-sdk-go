@@ -10,11 +10,11 @@ type IssuesListIssuesRequest struct {
 	StatuspageID string `pathParam:"style=simple,explode=false,name=statuspageID"`
 }
 
-func (o *IssuesListIssuesRequest) GetStatuspageID() string {
-	if o == nil {
+func (i *IssuesListIssuesRequest) GetStatuspageID() string {
+	if i == nil {
 		return ""
 	}
-	return o.StatuspageID
+	return i.StatuspageID
 }
 
 type IssuesListIssuesResponse struct {
@@ -23,16 +23,16 @@ type IssuesListIssuesResponse struct {
 	V4StatusPagesIssuesListIssuesResponse *components.V4StatusPagesIssuesListIssuesResponse
 }
 
-func (o *IssuesListIssuesResponse) GetHTTPMeta() components.HTTPMetadata {
-	if o == nil {
+func (i *IssuesListIssuesResponse) GetHTTPMeta() components.HTTPMetadata {
+	if i == nil {
 		return components.HTTPMetadata{}
 	}
-	return o.HTTPMeta
+	return i.HTTPMeta
 }
 
-func (o *IssuesListIssuesResponse) GetV4StatusPagesIssuesListIssuesResponse() *components.V4StatusPagesIssuesListIssuesResponse {
-	if o == nil {
+func (i *IssuesListIssuesResponse) GetV4StatusPagesIssuesListIssuesResponse() *components.V4StatusPagesIssuesListIssuesResponse {
+	if i == nil {
 		return nil
 	}
-	return o.V4StatusPagesIssuesListIssuesResponse
+	return i.V4StatusPagesIssuesListIssuesResponse
 }

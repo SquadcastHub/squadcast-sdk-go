@@ -61,86 +61,86 @@ func (v *V3ServicesOverlayCustomContentOverlayResponse) UnmarshalJSON(data []byt
 	return nil
 }
 
-func (o *V3ServicesOverlayCustomContentOverlayResponse) GetCreatedAt() time.Time {
-	if o == nil {
+func (v *V3ServicesOverlayCustomContentOverlayResponse) GetCreatedAt() time.Time {
+	if v == nil {
 		return time.Time{}
 	}
-	return o.CreatedAt
+	return v.CreatedAt
 }
 
-func (o *V3ServicesOverlayCustomContentOverlayResponse) GetUpdatedAt() time.Time {
-	if o == nil {
+func (v *V3ServicesOverlayCustomContentOverlayResponse) GetUpdatedAt() time.Time {
+	if v == nil {
 		return time.Time{}
 	}
-	return o.UpdatedAt
+	return v.UpdatedAt
 }
 
-func (o *V3ServicesOverlayCustomContentOverlayResponse) GetDeletedAt() *time.Time {
-	if o == nil {
+func (v *V3ServicesOverlayCustomContentOverlayResponse) GetDeletedAt() *time.Time {
+	if v == nil {
 		return nil
 	}
-	return o.DeletedAt
+	return v.DeletedAt
 }
 
-func (o *V3ServicesOverlayCustomContentOverlayResponse) GetOrgID() string {
-	if o == nil {
+func (v *V3ServicesOverlayCustomContentOverlayResponse) GetOrgID() string {
+	if v == nil {
 		return ""
 	}
-	return o.OrgID
+	return v.OrgID
 }
 
-func (o *V3ServicesOverlayCustomContentOverlayResponse) GetServiceID() string {
-	if o == nil {
+func (v *V3ServicesOverlayCustomContentOverlayResponse) GetServiceID() string {
+	if v == nil {
 		return ""
 	}
-	return o.ServiceID
+	return v.ServiceID
 }
 
-func (o *V3ServicesOverlayCustomContentOverlayResponse) GetAlertSourceVersion() string {
-	if o == nil {
+func (v *V3ServicesOverlayCustomContentOverlayResponse) GetAlertSourceVersion() string {
+	if v == nil {
 		return ""
 	}
-	return o.AlertSourceVersion
+	return v.AlertSourceVersion
 }
 
-func (o *V3ServicesOverlayCustomContentOverlayResponse) GetAlertSourceShortname() string {
-	if o == nil {
+func (v *V3ServicesOverlayCustomContentOverlayResponse) GetAlertSourceShortname() string {
+	if v == nil {
 		return ""
 	}
-	return o.AlertSourceShortname
+	return v.AlertSourceShortname
 }
 
-func (o *V3ServicesOverlayCustomContentOverlayResponse) GetOverlayTemplateType() V3ServicesOverlayCustomContentOverlayResponseOverlayTemplateType {
-	if o == nil {
+func (v *V3ServicesOverlayCustomContentOverlayResponse) GetOverlayTemplateType() V3ServicesOverlayCustomContentOverlayResponseOverlayTemplateType {
+	if v == nil {
 		return V3ServicesOverlayCustomContentOverlayResponseOverlayTemplateType("")
 	}
-	return o.OverlayTemplateType
+	return v.OverlayTemplateType
 }
 
-func (o *V3ServicesOverlayCustomContentOverlayResponse) GetOverlay() V3ServicesOverlayCustomContent {
-	if o == nil {
+func (v *V3ServicesOverlayCustomContentOverlayResponse) GetOverlay() V3ServicesOverlayCustomContent {
+	if v == nil {
 		return V3ServicesOverlayCustomContent{}
 	}
-	return o.Overlay
+	return v.Overlay
 }
 
-func (o *V3ServicesOverlayCustomContentOverlayResponse) GetCreatedBy() string {
-	if o == nil {
+func (v *V3ServicesOverlayCustomContentOverlayResponse) GetCreatedBy() string {
+	if v == nil {
 		return ""
 	}
-	return o.CreatedBy
+	return v.CreatedBy
 }
 
-func (o *V3ServicesOverlayCustomContentOverlayResponse) GetUpdatedBy() string {
-	if o == nil {
+func (v *V3ServicesOverlayCustomContentOverlayResponse) GetUpdatedBy() string {
+	if v == nil {
 		return ""
 	}
-	return o.UpdatedBy
+	return v.UpdatedBy
 }
 
-func (o *V3ServicesOverlayCustomContentOverlayResponse) GetAlertSourceType() string {
-	if o == nil {
+func (v *V3ServicesOverlayCustomContentOverlayResponse) GetAlertSourceType() string {
+	if v == nil {
 		return ""
 	}
-	return o.AlertSourceType
+	return v.AlertSourceType
 }

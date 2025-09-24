@@ -8,16 +8,16 @@ type V3IncidentsBulkIncidentsPriorityUpdateRequest struct {
 	Priority    string   `json:"priority"`
 }
 
-func (o *V3IncidentsBulkIncidentsPriorityUpdateRequest) GetIncidentIds() []string {
-	if o == nil {
+func (v *V3IncidentsBulkIncidentsPriorityUpdateRequest) GetIncidentIds() []string {
+	if v == nil {
 		return []string{}
 	}
-	return o.IncidentIds
+	return v.IncidentIds
 }
 
-func (o *V3IncidentsBulkIncidentsPriorityUpdateRequest) GetPriority() string {
-	if o == nil {
+func (v *V3IncidentsBulkIncidentsPriorityUpdateRequest) GetPriority() string {
+	if v == nil {
 		return ""
 	}
-	return o.Priority
+	return v.Priority
 }

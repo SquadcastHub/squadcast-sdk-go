@@ -11,44 +11,44 @@ type V3SLOMarkSLOAffectedRequest struct {
 	OrgID            string   `json:"org_id"`
 }
 
-func (o *V3SLOMarkSLOAffectedRequest) GetIncidentID() string {
-	if o == nil {
+func (v *V3SLOMarkSLOAffectedRequest) GetIncidentID() string {
+	if v == nil {
 		return ""
 	}
-	return o.IncidentID
+	return v.IncidentID
 }
 
-func (o *V3SLOMarkSLOAffectedRequest) GetSlis() []string {
-	if o == nil {
+func (v *V3SLOMarkSLOAffectedRequest) GetSlis() []string {
+	if v == nil {
 		return []string{}
 	}
-	return o.Slis
+	return v.Slis
 }
 
-func (o *V3SLOMarkSLOAffectedRequest) GetErrorBudgetSpent() float32 {
-	if o == nil {
+func (v *V3SLOMarkSLOAffectedRequest) GetErrorBudgetSpent() float32 {
+	if v == nil {
 		return 0.0
 	}
-	return o.ErrorBudgetSpent
+	return v.ErrorBudgetSpent
 }
 
-func (o *V3SLOMarkSLOAffectedRequest) GetOwnerType() string {
-	if o == nil {
+func (v *V3SLOMarkSLOAffectedRequest) GetOwnerType() string {
+	if v == nil {
 		return ""
 	}
-	return o.OwnerType
+	return v.OwnerType
 }
 
-func (o *V3SLOMarkSLOAffectedRequest) GetOwnerID() string {
-	if o == nil {
+func (v *V3SLOMarkSLOAffectedRequest) GetOwnerID() string {
+	if v == nil {
 		return ""
 	}
-	return o.OwnerID
+	return v.OwnerID
 }
 
-func (o *V3SLOMarkSLOAffectedRequest) GetOrgID() string {
-	if o == nil {
+func (v *V3SLOMarkSLOAffectedRequest) GetOrgID() string {
+	if v == nil {
 		return ""
 	}
-	return o.OrgID
+	return v.OrgID
 }

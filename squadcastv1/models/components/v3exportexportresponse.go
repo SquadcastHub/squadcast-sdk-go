@@ -12,51 +12,51 @@ type V3ExportExportResponse struct {
 	ErrorMessage         *string `json:"error_message,omitempty"`
 }
 
-func (o *V3ExportExportResponse) GetID() string {
-	if o == nil {
+func (v *V3ExportExportResponse) GetID() string {
+	if v == nil {
 		return ""
 	}
-	return o.ID
+	return v.ID
 }
 
-func (o *V3ExportExportResponse) GetType() string {
-	if o == nil {
+func (v *V3ExportExportResponse) GetType() string {
+	if v == nil {
 		return ""
 	}
-	return o.Type
+	return v.Type
 }
 
-func (o *V3ExportExportResponse) GetStatus() string {
-	if o == nil {
+func (v *V3ExportExportResponse) GetStatus() string {
+	if v == nil {
 		return ""
 	}
-	return o.Status
+	return v.Status
 }
 
-func (o *V3ExportExportResponse) GetDownloadURL() *string {
-	if o == nil {
+func (v *V3ExportExportResponse) GetDownloadURL() *string {
+	if v == nil {
 		return nil
 	}
-	return o.DownloadURL
+	return v.DownloadURL
 }
 
-func (o *V3ExportExportResponse) GetDownloadURLExpiresAt() *string {
-	if o == nil {
+func (v *V3ExportExportResponse) GetDownloadURLExpiresAt() *string {
+	if v == nil {
 		return nil
 	}
-	return o.DownloadURLExpiresAt
+	return v.DownloadURLExpiresAt
 }
 
-func (o *V3ExportExportResponse) GetFormat() string {
-	if o == nil {
+func (v *V3ExportExportResponse) GetFormat() string {
+	if v == nil {
 		return ""
 	}
-	return o.Format
+	return v.Format
 }
 
-func (o *V3ExportExportResponse) GetErrorMessage() *string {
-	if o == nil {
+func (v *V3ExportExportResponse) GetErrorMessage() *string {
+	if v == nil {
 		return nil
 	}
-	return o.ErrorMessage
+	return v.ErrorMessage
 }

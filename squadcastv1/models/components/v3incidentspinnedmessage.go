@@ -29,51 +29,51 @@ func (v *V3IncidentsPinnedMessage) UnmarshalJSON(data []byte) error {
 	return nil
 }
 
-func (o *V3IncidentsPinnedMessage) GetMessage() string {
-	if o == nil {
+func (v *V3IncidentsPinnedMessage) GetMessage() string {
+	if v == nil {
 		return ""
 	}
-	return o.Message
+	return v.Message
 }
 
-func (o *V3IncidentsPinnedMessage) GetMessageSenderID() string {
-	if o == nil {
+func (v *V3IncidentsPinnedMessage) GetMessageSenderID() string {
+	if v == nil {
 		return ""
 	}
-	return o.MessageSenderID
+	return v.MessageSenderID
 }
 
-func (o *V3IncidentsPinnedMessage) GetTime() time.Time {
-	if o == nil {
+func (v *V3IncidentsPinnedMessage) GetTime() time.Time {
+	if v == nil {
 		return time.Time{}
 	}
-	return o.Time
+	return v.Time
 }
 
-func (o *V3IncidentsPinnedMessage) GetTimeOfPinning() time.Time {
-	if o == nil {
+func (v *V3IncidentsPinnedMessage) GetTimeOfPinning() time.Time {
+	if v == nil {
 		return time.Time{}
 	}
-	return o.TimeOfPinning
+	return v.TimeOfPinning
 }
 
-func (o *V3IncidentsPinnedMessage) GetMessageID() string {
-	if o == nil {
+func (v *V3IncidentsPinnedMessage) GetMessageID() string {
+	if v == nil {
 		return ""
 	}
-	return o.MessageID
+	return v.MessageID
 }
 
-func (o *V3IncidentsPinnedMessage) GetMessagePinnedBy() string {
-	if o == nil {
+func (v *V3IncidentsPinnedMessage) GetMessagePinnedBy() string {
+	if v == nil {
 		return ""
 	}
-	return o.MessagePinnedBy
+	return v.MessagePinnedBy
 }
 
-func (o *V3IncidentsPinnedMessage) GetMessageSenderName() string {
-	if o == nil {
+func (v *V3IncidentsPinnedMessage) GetMessageSenderName() string {
+	if v == nil {
 		return ""
 	}
-	return o.MessageSenderName
+	return v.MessageSenderName
 }

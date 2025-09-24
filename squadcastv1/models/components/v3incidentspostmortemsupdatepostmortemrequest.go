@@ -13,44 +13,44 @@ type V3IncidentsPostmortemsUpdatePostmortemRequest struct {
 	Status *V3IncidentsPostmortemsPostmortemStatus `json:"status,omitempty"`
 }
 
-func (o *V3IncidentsPostmortemsUpdatePostmortemRequest) GetOwnerID() *string {
-	if o == nil {
+func (v *V3IncidentsPostmortemsUpdatePostmortemRequest) GetOwnerID() *string {
+	if v == nil {
 		return nil
 	}
-	return o.OwnerID
+	return v.OwnerID
 }
 
-func (o *V3IncidentsPostmortemsUpdatePostmortemRequest) GetPostmortem() *string {
-	if o == nil {
+func (v *V3IncidentsPostmortemsUpdatePostmortemRequest) GetPostmortem() *string {
+	if v == nil {
 		return nil
 	}
-	return o.Postmortem
+	return v.Postmortem
 }
 
-func (o *V3IncidentsPostmortemsUpdatePostmortemRequest) GetFollowUps() []V3IncidentsPostmortemsPostmortemFollowUp {
-	if o == nil {
+func (v *V3IncidentsPostmortemsUpdatePostmortemRequest) GetFollowUps() []V3IncidentsPostmortemsPostmortemFollowUp {
+	if v == nil {
 		return nil
 	}
-	return o.FollowUps
+	return v.FollowUps
 }
 
-func (o *V3IncidentsPostmortemsUpdatePostmortemRequest) GetNewAttachments() []V3IncidentsPostmortemsPostmortemAttachmentRequest {
-	if o == nil {
+func (v *V3IncidentsPostmortemsUpdatePostmortemRequest) GetNewAttachments() []V3IncidentsPostmortemsPostmortemAttachmentRequest {
+	if v == nil {
 		return nil
 	}
-	return o.NewAttachments
+	return v.NewAttachments
 }
 
-func (o *V3IncidentsPostmortemsUpdatePostmortemRequest) GetTitle() *string {
-	if o == nil {
+func (v *V3IncidentsPostmortemsUpdatePostmortemRequest) GetTitle() *string {
+	if v == nil {
 		return nil
 	}
-	return o.Title
+	return v.Title
 }
 
-func (o *V3IncidentsPostmortemsUpdatePostmortemRequest) GetStatus() *V3IncidentsPostmortemsPostmortemStatus {
-	if o == nil {
+func (v *V3IncidentsPostmortemsUpdatePostmortemRequest) GetStatus() *V3IncidentsPostmortemsPostmortemStatus {
+	if v == nil {
 		return nil
 	}
-	return o.Status
+	return v.Status
 }

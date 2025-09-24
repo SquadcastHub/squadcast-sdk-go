@@ -8,23 +8,23 @@ type V3GlobalOncallReminderRulesCreateGlobalOncallReminderRulesRequest struct {
 	Rules     []V3GlobalOncallReminderRulesRule `json:"rules"`
 }
 
-func (o *V3GlobalOncallReminderRulesCreateGlobalOncallReminderRulesRequest) GetIsEnabled() bool {
-	if o == nil {
+func (v *V3GlobalOncallReminderRulesCreateGlobalOncallReminderRulesRequest) GetIsEnabled() bool {
+	if v == nil {
 		return false
 	}
-	return o.IsEnabled
+	return v.IsEnabled
 }
 
-func (o *V3GlobalOncallReminderRulesCreateGlobalOncallReminderRulesRequest) GetOwnerID() string {
-	if o == nil {
+func (v *V3GlobalOncallReminderRulesCreateGlobalOncallReminderRulesRequest) GetOwnerID() string {
+	if v == nil {
 		return ""
 	}
-	return o.OwnerID
+	return v.OwnerID
 }
 
-func (o *V3GlobalOncallReminderRulesCreateGlobalOncallReminderRulesRequest) GetRules() []V3GlobalOncallReminderRulesRule {
-	if o == nil {
+func (v *V3GlobalOncallReminderRulesCreateGlobalOncallReminderRulesRequest) GetRules() []V3GlobalOncallReminderRulesRule {
+	if v == nil {
 		return []V3GlobalOncallReminderRulesRule{}
 	}
-	return o.Rules
+	return v.Rules
 }

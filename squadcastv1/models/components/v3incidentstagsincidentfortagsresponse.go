@@ -27,25 +27,25 @@ func (v *V3IncidentsTagsIncidentForTagsResponseRetriggerPolicy) UnmarshalJSON(da
 	return nil
 }
 
-func (o *V3IncidentsTagsIncidentForTagsResponseRetriggerPolicy) GetEscalationPolicyID() string {
-	if o == nil {
+func (v *V3IncidentsTagsIncidentForTagsResponseRetriggerPolicy) GetEscalationPolicyID() string {
+	if v == nil {
 		return ""
 	}
-	return o.EscalationPolicyID
+	return v.EscalationPolicyID
 }
 
-func (o *V3IncidentsTagsIncidentForTagsResponseRetriggerPolicy) GetRetriggerAt() *time.Time {
-	if o == nil {
+func (v *V3IncidentsTagsIncidentForTagsResponseRetriggerPolicy) GetRetriggerAt() *time.Time {
+	if v == nil {
 		return nil
 	}
-	return o.RetriggerAt
+	return v.RetriggerAt
 }
 
-func (o *V3IncidentsTagsIncidentForTagsResponseRetriggerPolicy) GetRetriggeredAt() *time.Time {
-	if o == nil {
+func (v *V3IncidentsTagsIncidentForTagsResponseRetriggerPolicy) GetRetriggeredAt() *time.Time {
+	if v == nil {
 		return nil
 	}
-	return o.RetriggeredAt
+	return v.RetriggeredAt
 }
 
 type V3IncidentsTagsIncidentForTagsResponse struct {
@@ -116,352 +116,352 @@ func (v *V3IncidentsTagsIncidentForTagsResponse) UnmarshalJSON(data []byte) erro
 	return nil
 }
 
-func (o *V3IncidentsTagsIncidentForTagsResponse) GetID() string {
-	if o == nil {
+func (v *V3IncidentsTagsIncidentForTagsResponse) GetID() string {
+	if v == nil {
 		return ""
 	}
-	return o.ID
+	return v.ID
 }
 
-func (o *V3IncidentsTagsIncidentForTagsResponse) GetServiceID() string {
-	if o == nil {
+func (v *V3IncidentsTagsIncidentForTagsResponse) GetServiceID() string {
+	if v == nil {
 		return ""
 	}
-	return o.ServiceID
+	return v.ServiceID
 }
 
-func (o *V3IncidentsTagsIncidentForTagsResponse) GetAlertSourceID() string {
-	if o == nil {
+func (v *V3IncidentsTagsIncidentForTagsResponse) GetAlertSourceID() string {
+	if v == nil {
 		return ""
 	}
-	return o.AlertSourceID
+	return v.AlertSourceID
 }
 
-func (o *V3IncidentsTagsIncidentForTagsResponse) GetOrganizationID() string {
-	if o == nil {
+func (v *V3IncidentsTagsIncidentForTagsResponse) GetOrganizationID() string {
+	if v == nil {
 		return ""
 	}
-	return o.OrganizationID
+	return v.OrganizationID
 }
 
-func (o *V3IncidentsTagsIncidentForTagsResponse) GetSloID() *int64 {
-	if o == nil {
+func (v *V3IncidentsTagsIncidentForTagsResponse) GetSloID() *int64 {
+	if v == nil {
 		return nil
 	}
-	return o.SloID
+	return v.SloID
 }
 
-func (o *V3IncidentsTagsIncidentForTagsResponse) GetIncidentNumber() int64 {
-	if o == nil {
+func (v *V3IncidentsTagsIncidentForTagsResponse) GetIncidentNumber() int64 {
+	if v == nil {
 		return 0
 	}
-	return o.IncidentNumber
+	return v.IncidentNumber
 }
 
-func (o *V3IncidentsTagsIncidentForTagsResponse) GetMessage() string {
-	if o == nil {
+func (v *V3IncidentsTagsIncidentForTagsResponse) GetMessage() string {
+	if v == nil {
 		return ""
 	}
-	return o.Message
+	return v.Message
 }
 
-func (o *V3IncidentsTagsIncidentForTagsResponse) GetAssignedTo() []V3IncidentsTagsAssignedTo {
-	if o == nil {
+func (v *V3IncidentsTagsIncidentForTagsResponse) GetAssignedTo() []V3IncidentsTagsAssignedTo {
+	if v == nil {
 		return []V3IncidentsTagsAssignedTo{}
 	}
-	return o.AssignedTo
+	return v.AssignedTo
 }
 
-func (o *V3IncidentsTagsIncidentForTagsResponse) GetAdditionalResponders() []V3IncidentsTagsAdditionalResponderDetails {
-	if o == nil {
+func (v *V3IncidentsTagsIncidentForTagsResponse) GetAdditionalResponders() []V3IncidentsTagsAdditionalResponderDetails {
+	if v == nil {
 		return []V3IncidentsTagsAdditionalResponderDetails{}
 	}
-	return o.AdditionalResponders
+	return v.AdditionalResponders
 }
 
-func (o *V3IncidentsTagsIncidentForTagsResponse) GetDescription() string {
-	if o == nil {
+func (v *V3IncidentsTagsIncidentForTagsResponse) GetDescription() string {
+	if v == nil {
 		return ""
 	}
-	return o.Description
+	return v.Description
 }
 
-func (o *V3IncidentsTagsIncidentForTagsResponse) GetStatus() string {
-	if o == nil {
+func (v *V3IncidentsTagsIncidentForTagsResponse) GetStatus() string {
+	if v == nil {
 		return ""
 	}
-	return o.Status
+	return v.Status
 }
 
-func (o *V3IncidentsTagsIncidentForTagsResponse) GetTimeOfCreation() time.Time {
-	if o == nil {
+func (v *V3IncidentsTagsIncidentForTagsResponse) GetTimeOfCreation() time.Time {
+	if v == nil {
 		return time.Time{}
 	}
-	return o.TimeOfCreation
+	return v.TimeOfCreation
 }
 
-func (o *V3IncidentsTagsIncidentForTagsResponse) GetUpdatedAt() time.Time {
-	if o == nil {
+func (v *V3IncidentsTagsIncidentForTagsResponse) GetUpdatedAt() time.Time {
+	if v == nil {
 		return time.Time{}
 	}
-	return o.UpdatedAt
+	return v.UpdatedAt
 }
 
-func (o *V3IncidentsTagsIncidentForTagsResponse) GetLastAcknowledgedAt() *time.Time {
-	if o == nil {
+func (v *V3IncidentsTagsIncidentForTagsResponse) GetLastAcknowledgedAt() *time.Time {
+	if v == nil {
 		return nil
 	}
-	return o.LastAcknowledgedAt
+	return v.LastAcknowledgedAt
 }
 
-func (o *V3IncidentsTagsIncidentForTagsResponse) GetTags() V3IncidentsTagsIncidentForTagsResponseTags {
-	if o == nil {
+func (v *V3IncidentsTagsIncidentForTagsResponse) GetTags() V3IncidentsTagsIncidentForTagsResponseTags {
+	if v == nil {
 		return V3IncidentsTagsIncidentForTagsResponseTags{}
 	}
-	return o.Tags
+	return v.Tags
 }
 
-func (o *V3IncidentsTagsIncidentForTagsResponse) GetLogs() []V3IncidentsTagsLogs {
-	if o == nil {
+func (v *V3IncidentsTagsIncidentForTagsResponse) GetLogs() []V3IncidentsTagsLogs {
+	if v == nil {
 		return []V3IncidentsTagsLogs{}
 	}
-	return o.Logs
+	return v.Logs
 }
 
-func (o *V3IncidentsTagsIncidentForTagsResponse) GetAnalytics() V3IncidentsTagsAnalytics {
-	if o == nil {
+func (v *V3IncidentsTagsIncidentForTagsResponse) GetAnalytics() V3IncidentsTagsAnalytics {
+	if v == nil {
 		return V3IncidentsTagsAnalytics{}
 	}
-	return o.Analytics
+	return v.Analytics
 }
 
-func (o *V3IncidentsTagsIncidentForTagsResponse) GetPinnedMessages() []V3IncidentsTagsPinnedMessage {
-	if o == nil {
+func (v *V3IncidentsTagsIncidentForTagsResponse) GetPinnedMessages() []V3IncidentsTagsPinnedMessage {
+	if v == nil {
 		return nil
 	}
-	return o.PinnedMessages
+	return v.PinnedMessages
 }
 
-func (o *V3IncidentsTagsIncidentForTagsResponse) GetCreatedBy() *string {
-	if o == nil {
+func (v *V3IncidentsTagsIncidentForTagsResponse) GetCreatedBy() *string {
+	if v == nil {
 		return nil
 	}
-	return o.CreatedBy
+	return v.CreatedBy
 }
 
-func (o *V3IncidentsTagsIncidentForTagsResponse) GetSenderEmail() *string {
-	if o == nil {
+func (v *V3IncidentsTagsIncidentForTagsResponse) GetSenderEmail() *string {
+	if v == nil {
 		return nil
 	}
-	return o.SenderEmail
+	return v.SenderEmail
 }
 
-func (o *V3IncidentsTagsIncidentForTagsResponse) GetDeleted() bool {
-	if o == nil {
+func (v *V3IncidentsTagsIncidentForTagsResponse) GetDeleted() bool {
+	if v == nil {
 		return false
 	}
-	return o.Deleted
+	return v.Deleted
 }
 
-func (o *V3IncidentsTagsIncidentForTagsResponse) GetEventCount() int64 {
-	if o == nil {
+func (v *V3IncidentsTagsIncidentForTagsResponse) GetEventCount() int64 {
+	if v == nil {
 		return 0
 	}
-	return o.EventCount
+	return v.EventCount
 }
 
-func (o *V3IncidentsTagsIncidentForTagsResponse) GetDedupData() V3IncidentsTagsDedupData {
-	if o == nil {
+func (v *V3IncidentsTagsIncidentForTagsResponse) GetDedupData() V3IncidentsTagsDedupData {
+	if v == nil {
 		return V3IncidentsTagsDedupData{}
 	}
-	return o.DedupData
+	return v.DedupData
 }
 
-func (o *V3IncidentsTagsIncidentForTagsResponse) GetOwner() CommonV3RBACOwner {
-	if o == nil {
+func (v *V3IncidentsTagsIncidentForTagsResponse) GetOwner() CommonV3RBACOwner {
+	if v == nil {
 		return CommonV3RBACOwner{}
 	}
-	return o.Owner
+	return v.Owner
 }
 
-func (o *V3IncidentsTagsIncidentForTagsResponse) GetAccessControl() []CommonV3RBACEntityPermission {
-	if o == nil {
+func (v *V3IncidentsTagsIncidentForTagsResponse) GetAccessControl() []CommonV3RBACEntityPermission {
+	if v == nil {
 		return nil
 	}
-	return o.AccessControl
+	return v.AccessControl
 }
 
-func (o *V3IncidentsTagsIncidentForTagsResponse) GetRelevantUsers() []string {
-	if o == nil {
+func (v *V3IncidentsTagsIncidentForTagsResponse) GetRelevantUsers() []string {
+	if v == nil {
 		return nil
 	}
-	return o.RelevantUsers
+	return v.RelevantUsers
 }
 
-func (o *V3IncidentsTagsIncidentForTagsResponse) GetRelevantEscalationPolicies() []string {
-	if o == nil {
+func (v *V3IncidentsTagsIncidentForTagsResponse) GetRelevantEscalationPolicies() []string {
+	if v == nil {
 		return nil
 	}
-	return o.RelevantEscalationPolicies
+	return v.RelevantEscalationPolicies
 }
 
-func (o *V3IncidentsTagsIncidentForTagsResponse) GetRelevantSquads() []string {
-	if o == nil {
+func (v *V3IncidentsTagsIncidentForTagsResponse) GetRelevantSquads() []string {
+	if v == nil {
 		return nil
 	}
-	return o.RelevantSquads
+	return v.RelevantSquads
 }
 
-func (o *V3IncidentsTagsIncidentForTagsResponse) GetRelevantSchedules() []string {
-	if o == nil {
+func (v *V3IncidentsTagsIncidentForTagsResponse) GetRelevantSchedules() []string {
+	if v == nil {
 		return nil
 	}
-	return o.RelevantSchedules
+	return v.RelevantSchedules
 }
 
-func (o *V3IncidentsTagsIncidentForTagsResponse) GetRelevantPeopleLogs() []V3IncidentsTagsRelevantPeopleLog {
-	if o == nil {
+func (v *V3IncidentsTagsIncidentForTagsResponse) GetRelevantPeopleLogs() []V3IncidentsTagsRelevantPeopleLog {
+	if v == nil {
 		return nil
 	}
-	return o.RelevantPeopleLogs
+	return v.RelevantPeopleLogs
 }
 
-func (o *V3IncidentsTagsIncidentForTagsResponse) GetResponseNotes() []V3IncidentsTagsResponseNote {
-	if o == nil {
+func (v *V3IncidentsTagsIncidentForTagsResponse) GetResponseNotes() []V3IncidentsTagsResponseNote {
+	if v == nil {
 		return nil
 	}
-	return o.ResponseNotes
+	return v.ResponseNotes
 }
 
-func (o *V3IncidentsTagsIncidentForTagsResponse) GetAttachments() []string {
-	if o == nil {
+func (v *V3IncidentsTagsIncidentForTagsResponse) GetAttachments() []string {
+	if v == nil {
 		return nil
 	}
-	return o.Attachments
+	return v.Attachments
 }
 
-func (o *V3IncidentsTagsIncidentForTagsResponse) GetRetriggerPolicy() *V3IncidentsTagsIncidentForTagsResponseRetriggerPolicy {
-	if o == nil {
+func (v *V3IncidentsTagsIncidentForTagsResponse) GetRetriggerPolicy() *V3IncidentsTagsIncidentForTagsResponseRetriggerPolicy {
+	if v == nil {
 		return nil
 	}
-	return o.RetriggerPolicy
+	return v.RetriggerPolicy
 }
 
-func (o *V3IncidentsTagsIncidentForTagsResponse) GetWebformID() *int64 {
-	if o == nil {
+func (v *V3IncidentsTagsIncidentForTagsResponse) GetWebformID() *int64 {
+	if v == nil {
 		return nil
 	}
-	return o.WebformID
+	return v.WebformID
 }
 
-func (o *V3IncidentsTagsIncidentForTagsResponse) GetWebformSubmissionID() *int64 {
-	if o == nil {
+func (v *V3IncidentsTagsIncidentForTagsResponse) GetWebformSubmissionID() *int64 {
+	if v == nil {
 		return nil
 	}
-	return o.WebformSubmissionID
+	return v.WebformSubmissionID
 }
 
-func (o *V3IncidentsTagsIncidentForTagsResponse) GetIsChild() bool {
-	if o == nil {
+func (v *V3IncidentsTagsIncidentForTagsResponse) GetIsChild() bool {
+	if v == nil {
 		return false
 	}
-	return o.IsChild
+	return v.IsChild
 }
 
-func (o *V3IncidentsTagsIncidentForTagsResponse) GetParent() *V3IncidentsTagsMergeIncidentEntityReference {
-	if o == nil {
+func (v *V3IncidentsTagsIncidentForTagsResponse) GetParent() *V3IncidentsTagsMergeIncidentEntityReference {
+	if v == nil {
 		return nil
 	}
-	return o.Parent
+	return v.Parent
 }
 
-func (o *V3IncidentsTagsIncidentForTagsResponse) GetChildren() []V3IncidentsTagsMergeIncidentEntityReference {
-	if o == nil {
+func (v *V3IncidentsTagsIncidentForTagsResponse) GetChildren() []V3IncidentsTagsMergeIncidentEntityReference {
+	if v == nil {
 		return []V3IncidentsTagsMergeIncidentEntityReference{}
 	}
-	return o.Children
+	return v.Children
 }
 
-func (o *V3IncidentsTagsIncidentForTagsResponse) GetDidAutoPause() bool {
-	if o == nil {
+func (v *V3IncidentsTagsIncidentForTagsResponse) GetDidAutoPause() bool {
+	if v == nil {
 		return false
 	}
-	return o.DidAutoPause
+	return v.DidAutoPause
 }
 
-func (o *V3IncidentsTagsIncidentForTagsResponse) GetDidAutoPauseTimeout() bool {
-	if o == nil {
+func (v *V3IncidentsTagsIncidentForTagsResponse) GetDidAutoPauseTimeout() bool {
+	if v == nil {
 		return false
 	}
-	return o.DidAutoPauseTimeout
+	return v.DidAutoPauseTimeout
 }
 
-func (o *V3IncidentsTagsIncidentForTagsResponse) GetAutoPauseEndsAt() time.Time {
-	if o == nil {
+func (v *V3IncidentsTagsIncidentForTagsResponse) GetAutoPauseEndsAt() time.Time {
+	if v == nil {
 		return time.Time{}
 	}
-	return o.AutoPauseEndsAt
+	return v.AutoPauseEndsAt
 }
 
-func (o *V3IncidentsTagsIncidentForTagsResponse) GetManuallyMarkedTransientAlertFeedbackType() string {
-	if o == nil {
+func (v *V3IncidentsTagsIncidentForTagsResponse) GetManuallyMarkedTransientAlertFeedbackType() string {
+	if v == nil {
 		return ""
 	}
-	return o.ManuallyMarkedTransientAlertFeedbackType
+	return v.ManuallyMarkedTransientAlertFeedbackType
 }
 
-func (o *V3IncidentsTagsIncidentForTagsResponse) GetClassificationID() int64 {
-	if o == nil {
+func (v *V3IncidentsTagsIncidentForTagsResponse) GetClassificationID() int64 {
+	if v == nil {
 		return 0
 	}
-	return o.ClassificationID
+	return v.ClassificationID
 }
 
-func (o *V3IncidentsTagsIncidentForTagsResponse) GetGroupedAlertCount() int64 {
-	if o == nil {
+func (v *V3IncidentsTagsIncidentForTagsResponse) GetGroupedAlertCount() int64 {
+	if v == nil {
 		return 0
 	}
-	return o.GroupedAlertCount
+	return v.GroupedAlertCount
 }
 
-func (o *V3IncidentsTagsIncidentForTagsResponse) GetPriority() *V3IncidentsTagsIncidentPriority {
-	if o == nil {
+func (v *V3IncidentsTagsIncidentForTagsResponse) GetPriority() *V3IncidentsTagsIncidentPriority {
+	if v == nil {
 		return nil
 	}
-	return o.Priority
+	return v.Priority
 }
 
-func (o *V3IncidentsTagsIncidentForTagsResponse) GetHasPriority() bool {
-	if o == nil {
+func (v *V3IncidentsTagsIncidentForTagsResponse) GetHasPriority() bool {
+	if v == nil {
 		return false
 	}
-	return o.HasPriority
+	return v.HasPriority
 }
 
-func (o *V3IncidentsTagsIncidentForTagsResponse) GetSnoozeDetails() V3IncidentsTagsSnoozeDetails {
-	if o == nil {
+func (v *V3IncidentsTagsIncidentForTagsResponse) GetSnoozeDetails() V3IncidentsTagsSnoozeDetails {
+	if v == nil {
 		return V3IncidentsTagsSnoozeDetails{}
 	}
-	return o.SnoozeDetails
+	return v.SnoozeDetails
 }
 
-func (o *V3IncidentsTagsIncidentForTagsResponse) GetDidNotificationDelay() bool {
-	if o == nil {
+func (v *V3IncidentsTagsIncidentForTagsResponse) GetDidNotificationDelay() bool {
+	if v == nil {
 		return false
 	}
-	return o.DidNotificationDelay
+	return v.DidNotificationDelay
 }
 
-func (o *V3IncidentsTagsIncidentForTagsResponse) GetNotificationDelayPolicy() V3IncidentsTagsNotificationDelayPolicy {
-	if o == nil {
+func (v *V3IncidentsTagsIncidentForTagsResponse) GetNotificationDelayPolicy() V3IncidentsTagsNotificationDelayPolicy {
+	if v == nil {
 		return V3IncidentsTagsNotificationDelayPolicy{}
 	}
-	return o.NotificationDelayPolicy
+	return v.NotificationDelayPolicy
 }
 
-func (o *V3IncidentsTagsIncidentForTagsResponse) GetDigestID() string {
-	if o == nil {
+func (v *V3IncidentsTagsIncidentForTagsResponse) GetDigestID() string {
+	if v == nil {
 		return ""
 	}
-	return o.DigestID
+	return v.DigestID
 }

@@ -7,16 +7,16 @@ type V3UsersNotificationRule struct {
 	Time int64  `json:"time"`
 }
 
-func (o *V3UsersNotificationRule) GetType() string {
-	if o == nil {
+func (v *V3UsersNotificationRule) GetType() string {
+	if v == nil {
 		return ""
 	}
-	return o.Type
+	return v.Type
 }
 
-func (o *V3UsersNotificationRule) GetTime() int64 {
-	if o == nil {
+func (v *V3UsersNotificationRule) GetTime() int64 {
+	if v == nil {
 		return 0
 	}
-	return o.Time
+	return v.Time
 }

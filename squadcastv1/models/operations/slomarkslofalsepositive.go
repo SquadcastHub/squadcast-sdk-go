@@ -17,50 +17,50 @@ type SLOMarkSLOFalsePositiveRequest struct {
 	RequestBody SLOMarkSLOFalsePositiveRequestBody `request:"mediaType=application/json"`
 }
 
-func (o *SLOMarkSLOFalsePositiveRequest) GetSloID() int64 {
-	if o == nil {
+func (s *SLOMarkSLOFalsePositiveRequest) GetSloID() int64 {
+	if s == nil {
 		return 0
 	}
-	return o.SloID
+	return s.SloID
 }
 
-func (o *SLOMarkSLOFalsePositiveRequest) GetIncidentID() int64 {
-	if o == nil {
+func (s *SLOMarkSLOFalsePositiveRequest) GetIncidentID() int64 {
+	if s == nil {
 		return 0
 	}
-	return o.IncidentID
+	return s.IncidentID
 }
 
-func (o *SLOMarkSLOFalsePositiveRequest) GetValue() bool {
-	if o == nil {
+func (s *SLOMarkSLOFalsePositiveRequest) GetValue() bool {
+	if s == nil {
 		return false
 	}
-	return o.Value
+	return s.Value
 }
 
-func (o *SLOMarkSLOFalsePositiveRequest) GetOwnerID() string {
-	if o == nil {
+func (s *SLOMarkSLOFalsePositiveRequest) GetOwnerID() string {
+	if s == nil {
 		return ""
 	}
-	return o.OwnerID
+	return s.OwnerID
 }
 
-func (o *SLOMarkSLOFalsePositiveRequest) GetRequestBody() SLOMarkSLOFalsePositiveRequestBody {
-	if o == nil {
+func (s *SLOMarkSLOFalsePositiveRequest) GetRequestBody() SLOMarkSLOFalsePositiveRequestBody {
+	if s == nil {
 		return SLOMarkSLOFalsePositiveRequestBody{}
 	}
-	return o.RequestBody
+	return s.RequestBody
 }
 
 type SLOMarkSLOFalsePositiveData struct {
 	SloViolatingIncident components.V3SLOSLOViolatingIncidentResponse `json:"slo_violating_incident"`
 }
 
-func (o *SLOMarkSLOFalsePositiveData) GetSloViolatingIncident() components.V3SLOSLOViolatingIncidentResponse {
-	if o == nil {
+func (s *SLOMarkSLOFalsePositiveData) GetSloViolatingIncident() components.V3SLOSLOViolatingIncidentResponse {
+	if s == nil {
 		return components.V3SLOSLOViolatingIncidentResponse{}
 	}
-	return o.SloViolatingIncident
+	return s.SloViolatingIncident
 }
 
 // SLOMarkSLOFalsePositiveResponseBody - The request has succeeded.
@@ -68,11 +68,11 @@ type SLOMarkSLOFalsePositiveResponseBody struct {
 	Data SLOMarkSLOFalsePositiveData `json:"data"`
 }
 
-func (o *SLOMarkSLOFalsePositiveResponseBody) GetData() SLOMarkSLOFalsePositiveData {
-	if o == nil {
+func (s *SLOMarkSLOFalsePositiveResponseBody) GetData() SLOMarkSLOFalsePositiveData {
+	if s == nil {
 		return SLOMarkSLOFalsePositiveData{}
 	}
-	return o.Data
+	return s.Data
 }
 
 type SLOMarkSLOFalsePositiveResponse struct {
@@ -81,16 +81,16 @@ type SLOMarkSLOFalsePositiveResponse struct {
 	Object *SLOMarkSLOFalsePositiveResponseBody
 }
 
-func (o *SLOMarkSLOFalsePositiveResponse) GetHTTPMeta() components.HTTPMetadata {
-	if o == nil {
+func (s *SLOMarkSLOFalsePositiveResponse) GetHTTPMeta() components.HTTPMetadata {
+	if s == nil {
 		return components.HTTPMetadata{}
 	}
-	return o.HTTPMeta
+	return s.HTTPMeta
 }
 
-func (o *SLOMarkSLOFalsePositiveResponse) GetObject() *SLOMarkSLOFalsePositiveResponseBody {
-	if o == nil {
+func (s *SLOMarkSLOFalsePositiveResponse) GetObject() *SLOMarkSLOFalsePositiveResponseBody {
+	if s == nil {
 		return nil
 	}
-	return o.Object
+	return s.Object
 }

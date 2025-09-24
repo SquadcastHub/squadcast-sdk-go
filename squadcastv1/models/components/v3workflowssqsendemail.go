@@ -48,25 +48,25 @@ func (v *V3WorkflowsSqSendEmailData) UnmarshalJSON(data []byte) error {
 	return nil
 }
 
-func (o *V3WorkflowsSqSendEmailData) GetTo() []string {
-	if o == nil {
+func (v *V3WorkflowsSqSendEmailData) GetTo() []string {
+	if v == nil {
 		return []string{}
 	}
-	return o.To
+	return v.To
 }
 
-func (o *V3WorkflowsSqSendEmailData) GetSubject() string {
-	if o == nil {
+func (v *V3WorkflowsSqSendEmailData) GetSubject() string {
+	if v == nil {
 		return ""
 	}
-	return o.Subject
+	return v.Subject
 }
 
-func (o *V3WorkflowsSqSendEmailData) GetBody() string {
-	if o == nil {
+func (v *V3WorkflowsSqSendEmailData) GetBody() string {
+	if v == nil {
 		return ""
 	}
-	return o.Body
+	return v.Body
 }
 
 type V3WorkflowsSqSendEmail struct {
@@ -85,16 +85,16 @@ func (v *V3WorkflowsSqSendEmail) UnmarshalJSON(data []byte) error {
 	return nil
 }
 
-func (o *V3WorkflowsSqSendEmail) GetName() V3WorkflowsSqSendEmailName {
-	if o == nil {
+func (v *V3WorkflowsSqSendEmail) GetName() V3WorkflowsSqSendEmailName {
+	if v == nil {
 		return V3WorkflowsSqSendEmailName("")
 	}
-	return o.Name
+	return v.Name
 }
 
-func (o *V3WorkflowsSqSendEmail) GetData() V3WorkflowsSqSendEmailData {
-	if o == nil {
+func (v *V3WorkflowsSqSendEmail) GetData() V3WorkflowsSqSendEmailData {
+	if v == nil {
 		return V3WorkflowsSqSendEmailData{}
 	}
-	return o.Data
+	return v.Data
 }

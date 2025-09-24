@@ -11,18 +11,18 @@ type AdditionalRespondersRemoveAdditionalRespondersRequest struct {
 	ResponderID string `pathParam:"style=simple,explode=false,name=responderID"`
 }
 
-func (o *AdditionalRespondersRemoveAdditionalRespondersRequest) GetIncidentID() string {
-	if o == nil {
+func (a *AdditionalRespondersRemoveAdditionalRespondersRequest) GetIncidentID() string {
+	if a == nil {
 		return ""
 	}
-	return o.IncidentID
+	return a.IncidentID
 }
 
-func (o *AdditionalRespondersRemoveAdditionalRespondersRequest) GetResponderID() string {
-	if o == nil {
+func (a *AdditionalRespondersRemoveAdditionalRespondersRequest) GetResponderID() string {
+	if a == nil {
 		return ""
 	}
-	return o.ResponderID
+	return a.ResponderID
 }
 
 // AdditionalRespondersRemoveAdditionalRespondersResponseBody - There is no content to send for this request, but the headers may be useful.
@@ -34,16 +34,16 @@ type AdditionalRespondersRemoveAdditionalRespondersResponse struct {
 	Body     []byte
 }
 
-func (o *AdditionalRespondersRemoveAdditionalRespondersResponse) GetHTTPMeta() components.HTTPMetadata {
-	if o == nil {
+func (a *AdditionalRespondersRemoveAdditionalRespondersResponse) GetHTTPMeta() components.HTTPMetadata {
+	if a == nil {
 		return components.HTTPMetadata{}
 	}
-	return o.HTTPMeta
+	return a.HTTPMeta
 }
 
-func (o *AdditionalRespondersRemoveAdditionalRespondersResponse) GetBody() []byte {
-	if o == nil {
+func (a *AdditionalRespondersRemoveAdditionalRespondersResponse) GetBody() []byte {
+	if a == nil {
 		return nil
 	}
-	return o.Body
+	return a.Body
 }

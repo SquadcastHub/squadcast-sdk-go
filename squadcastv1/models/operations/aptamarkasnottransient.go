@@ -10,11 +10,11 @@ type AptaMarkAsNotTransientRequest struct {
 	IncidentID string `pathParam:"style=simple,explode=false,name=incidentID"`
 }
 
-func (o *AptaMarkAsNotTransientRequest) GetIncidentID() string {
-	if o == nil {
+func (a *AptaMarkAsNotTransientRequest) GetIncidentID() string {
+	if a == nil {
 		return ""
 	}
-	return o.IncidentID
+	return a.IncidentID
 }
 
 // AptaMarkAsNotTransientResponseBody - The request has succeeded.
@@ -22,11 +22,11 @@ type AptaMarkAsNotTransientResponseBody struct {
 	Data components.V3IncidentsAptaMessageResponse `json:"data"`
 }
 
-func (o *AptaMarkAsNotTransientResponseBody) GetData() components.V3IncidentsAptaMessageResponse {
-	if o == nil {
+func (a *AptaMarkAsNotTransientResponseBody) GetData() components.V3IncidentsAptaMessageResponse {
+	if a == nil {
 		return components.V3IncidentsAptaMessageResponse{}
 	}
-	return o.Data
+	return a.Data
 }
 
 type AptaMarkAsNotTransientResponse struct {
@@ -35,16 +35,16 @@ type AptaMarkAsNotTransientResponse struct {
 	Object *AptaMarkAsNotTransientResponseBody
 }
 
-func (o *AptaMarkAsNotTransientResponse) GetHTTPMeta() components.HTTPMetadata {
-	if o == nil {
+func (a *AptaMarkAsNotTransientResponse) GetHTTPMeta() components.HTTPMetadata {
+	if a == nil {
 		return components.HTTPMetadata{}
 	}
-	return o.HTTPMeta
+	return a.HTTPMeta
 }
 
-func (o *AptaMarkAsNotTransientResponse) GetObject() *AptaMarkAsNotTransientResponseBody {
-	if o == nil {
+func (a *AptaMarkAsNotTransientResponse) GetObject() *AptaMarkAsNotTransientResponseBody {
+	if a == nil {
 		return nil
 	}
-	return o.Object
+	return a.Object
 }

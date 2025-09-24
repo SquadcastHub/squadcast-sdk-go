@@ -13,25 +13,25 @@ type CommunicationCardsUpdateCommunicationCardRequest struct {
 	V3IncidentsCommunicationCardsUpdateCommunicationCardRequest components.V3IncidentsCommunicationCardsUpdateCommunicationCardRequest `request:"mediaType=application/json"`
 }
 
-func (o *CommunicationCardsUpdateCommunicationCardRequest) GetIncidentID() string {
-	if o == nil {
+func (c *CommunicationCardsUpdateCommunicationCardRequest) GetIncidentID() string {
+	if c == nil {
 		return ""
 	}
-	return o.IncidentID
+	return c.IncidentID
 }
 
-func (o *CommunicationCardsUpdateCommunicationCardRequest) GetCommunicationCardID() string {
-	if o == nil {
+func (c *CommunicationCardsUpdateCommunicationCardRequest) GetCommunicationCardID() string {
+	if c == nil {
 		return ""
 	}
-	return o.CommunicationCardID
+	return c.CommunicationCardID
 }
 
-func (o *CommunicationCardsUpdateCommunicationCardRequest) GetV3IncidentsCommunicationCardsUpdateCommunicationCardRequest() components.V3IncidentsCommunicationCardsUpdateCommunicationCardRequest {
-	if o == nil {
+func (c *CommunicationCardsUpdateCommunicationCardRequest) GetV3IncidentsCommunicationCardsUpdateCommunicationCardRequest() components.V3IncidentsCommunicationCardsUpdateCommunicationCardRequest {
+	if c == nil {
 		return components.V3IncidentsCommunicationCardsUpdateCommunicationCardRequest{}
 	}
-	return o.V3IncidentsCommunicationCardsUpdateCommunicationCardRequest
+	return c.V3IncidentsCommunicationCardsUpdateCommunicationCardRequest
 }
 
 // CommunicationCardsUpdateCommunicationCardResponseBody - The request has succeeded.
@@ -39,11 +39,11 @@ type CommunicationCardsUpdateCommunicationCardResponseBody struct {
 	Data components.V3IncidentsCommunicationCardsCommunicationCardResponse `json:"data"`
 }
 
-func (o *CommunicationCardsUpdateCommunicationCardResponseBody) GetData() components.V3IncidentsCommunicationCardsCommunicationCardResponse {
-	if o == nil {
+func (c *CommunicationCardsUpdateCommunicationCardResponseBody) GetData() components.V3IncidentsCommunicationCardsCommunicationCardResponse {
+	if c == nil {
 		return components.V3IncidentsCommunicationCardsCommunicationCardResponse{}
 	}
-	return o.Data
+	return c.Data
 }
 
 type CommunicationCardsUpdateCommunicationCardResponse struct {
@@ -52,16 +52,16 @@ type CommunicationCardsUpdateCommunicationCardResponse struct {
 	Object *CommunicationCardsUpdateCommunicationCardResponseBody
 }
 
-func (o *CommunicationCardsUpdateCommunicationCardResponse) GetHTTPMeta() components.HTTPMetadata {
-	if o == nil {
+func (c *CommunicationCardsUpdateCommunicationCardResponse) GetHTTPMeta() components.HTTPMetadata {
+	if c == nil {
 		return components.HTTPMetadata{}
 	}
-	return o.HTTPMeta
+	return c.HTTPMeta
 }
 
-func (o *CommunicationCardsUpdateCommunicationCardResponse) GetObject() *CommunicationCardsUpdateCommunicationCardResponseBody {
-	if o == nil {
+func (c *CommunicationCardsUpdateCommunicationCardResponse) GetObject() *CommunicationCardsUpdateCommunicationCardResponseBody {
+	if c == nil {
 		return nil
 	}
-	return o.Object
+	return c.Object
 }

@@ -11,18 +11,18 @@ type WorkflowsUpdateWorkflowRequest struct {
 	V3WorkflowsCreateWorkflowRequestUpdate components.V3WorkflowsCreateWorkflowRequestUpdate `request:"mediaType=application/json"`
 }
 
-func (o *WorkflowsUpdateWorkflowRequest) GetWorkflowID() string {
-	if o == nil {
+func (w *WorkflowsUpdateWorkflowRequest) GetWorkflowID() string {
+	if w == nil {
 		return ""
 	}
-	return o.WorkflowID
+	return w.WorkflowID
 }
 
-func (o *WorkflowsUpdateWorkflowRequest) GetV3WorkflowsCreateWorkflowRequestUpdate() components.V3WorkflowsCreateWorkflowRequestUpdate {
-	if o == nil {
+func (w *WorkflowsUpdateWorkflowRequest) GetV3WorkflowsCreateWorkflowRequestUpdate() components.V3WorkflowsCreateWorkflowRequestUpdate {
+	if w == nil {
 		return components.V3WorkflowsCreateWorkflowRequestUpdate{}
 	}
-	return o.V3WorkflowsCreateWorkflowRequestUpdate
+	return w.V3WorkflowsCreateWorkflowRequestUpdate
 }
 
 // WorkflowsUpdateWorkflowResponseBody - The request has succeeded.
@@ -30,11 +30,11 @@ type WorkflowsUpdateWorkflowResponseBody struct {
 	Data components.V3WorkflowsUpdateWorkflowAPIResponse `json:"data"`
 }
 
-func (o *WorkflowsUpdateWorkflowResponseBody) GetData() components.V3WorkflowsUpdateWorkflowAPIResponse {
-	if o == nil {
+func (w *WorkflowsUpdateWorkflowResponseBody) GetData() components.V3WorkflowsUpdateWorkflowAPIResponse {
+	if w == nil {
 		return components.V3WorkflowsUpdateWorkflowAPIResponse{}
 	}
-	return o.Data
+	return w.Data
 }
 
 type WorkflowsUpdateWorkflowResponse struct {
@@ -43,16 +43,16 @@ type WorkflowsUpdateWorkflowResponse struct {
 	Object *WorkflowsUpdateWorkflowResponseBody
 }
 
-func (o *WorkflowsUpdateWorkflowResponse) GetHTTPMeta() components.HTTPMetadata {
-	if o == nil {
+func (w *WorkflowsUpdateWorkflowResponse) GetHTTPMeta() components.HTTPMetadata {
+	if w == nil {
 		return components.HTTPMetadata{}
 	}
-	return o.HTTPMeta
+	return w.HTTPMeta
 }
 
-func (o *WorkflowsUpdateWorkflowResponse) GetObject() *WorkflowsUpdateWorkflowResponseBody {
-	if o == nil {
+func (w *WorkflowsUpdateWorkflowResponse) GetObject() *WorkflowsUpdateWorkflowResponseBody {
+	if w == nil {
 		return nil
 	}
-	return o.Object
+	return w.Object
 }

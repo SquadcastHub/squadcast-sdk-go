@@ -8,23 +8,23 @@ type V3ServicesOverlayRenderDedupKeyTemplateRequest struct {
 	Payload             string `json:"payload"`
 }
 
-func (o *V3ServicesOverlayRenderDedupKeyTemplateRequest) GetOverlayTemplateType() string {
-	if o == nil {
+func (v *V3ServicesOverlayRenderDedupKeyTemplateRequest) GetOverlayTemplateType() string {
+	if v == nil {
 		return ""
 	}
-	return o.OverlayTemplateType
+	return v.OverlayTemplateType
 }
 
-func (o *V3ServicesOverlayRenderDedupKeyTemplateRequest) GetTemplate() string {
-	if o == nil {
+func (v *V3ServicesOverlayRenderDedupKeyTemplateRequest) GetTemplate() string {
+	if v == nil {
 		return ""
 	}
-	return o.Template
+	return v.Template
 }
 
-func (o *V3ServicesOverlayRenderDedupKeyTemplateRequest) GetPayload() string {
-	if o == nil {
+func (v *V3ServicesOverlayRenderDedupKeyTemplateRequest) GetPayload() string {
+	if v == nil {
 		return ""
 	}
-	return o.Payload
+	return v.Payload
 }

@@ -6,9 +6,9 @@ type V3IncidentsRunbooksAttachRunbooksRequest struct {
 	Runbooks []string `json:"runbooks"`
 }
 
-func (o *V3IncidentsRunbooksAttachRunbooksRequest) GetRunbooks() []string {
-	if o == nil {
+func (v *V3IncidentsRunbooksAttachRunbooksRequest) GetRunbooks() []string {
+	if v == nil {
 		return []string{}
 	}
-	return o.Runbooks
+	return v.Runbooks
 }

@@ -10,11 +10,11 @@ type ComponentsListComponentsRequest struct {
 	StatuspageID string `pathParam:"style=simple,explode=false,name=statuspageID"`
 }
 
-func (o *ComponentsListComponentsRequest) GetStatuspageID() string {
-	if o == nil {
+func (c *ComponentsListComponentsRequest) GetStatuspageID() string {
+	if c == nil {
 		return ""
 	}
-	return o.StatuspageID
+	return c.StatuspageID
 }
 
 // ComponentsListComponentsResponseBody - The request has succeeded.
@@ -22,11 +22,11 @@ type ComponentsListComponentsResponseBody struct {
 	Data []components.V4StatusPagesComponentsListComponentsResponse `json:"data"`
 }
 
-func (o *ComponentsListComponentsResponseBody) GetData() []components.V4StatusPagesComponentsListComponentsResponse {
-	if o == nil {
+func (c *ComponentsListComponentsResponseBody) GetData() []components.V4StatusPagesComponentsListComponentsResponse {
+	if c == nil {
 		return []components.V4StatusPagesComponentsListComponentsResponse{}
 	}
-	return o.Data
+	return c.Data
 }
 
 type ComponentsListComponentsResponse struct {
@@ -35,16 +35,16 @@ type ComponentsListComponentsResponse struct {
 	Object *ComponentsListComponentsResponseBody
 }
 
-func (o *ComponentsListComponentsResponse) GetHTTPMeta() components.HTTPMetadata {
-	if o == nil {
+func (c *ComponentsListComponentsResponse) GetHTTPMeta() components.HTTPMetadata {
+	if c == nil {
 		return components.HTTPMetadata{}
 	}
-	return o.HTTPMeta
+	return c.HTTPMeta
 }
 
-func (o *ComponentsListComponentsResponse) GetObject() *ComponentsListComponentsResponseBody {
-	if o == nil {
+func (c *ComponentsListComponentsResponse) GetObject() *ComponentsListComponentsResponseBody {
+	if c == nil {
 		return nil
 	}
-	return o.Object
+	return c.Object
 }

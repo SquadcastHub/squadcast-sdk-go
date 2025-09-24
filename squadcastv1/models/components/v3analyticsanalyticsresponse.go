@@ -7,16 +7,16 @@ type V3AnalyticsAnalyticsResponse struct {
 	Mttr float64 `json:"mttr"`
 }
 
-func (o *V3AnalyticsAnalyticsResponse) GetMtta() float64 {
-	if o == nil {
+func (v *V3AnalyticsAnalyticsResponse) GetMtta() float64 {
+	if v == nil {
 		return 0.0
 	}
-	return o.Mtta
+	return v.Mtta
 }
 
-func (o *V3AnalyticsAnalyticsResponse) GetMttr() float64 {
-	if o == nil {
+func (v *V3AnalyticsAnalyticsResponse) GetMttr() float64 {
+	if v == nil {
 		return 0.0
 	}
-	return o.Mttr
+	return v.Mttr
 }

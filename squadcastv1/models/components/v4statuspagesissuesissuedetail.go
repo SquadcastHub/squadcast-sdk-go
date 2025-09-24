@@ -7,16 +7,16 @@ type V4StatusPagesIssuesIssueDetail struct {
 	StateMessages []V4StatusPagesIssuesIssueStateMessage `json:"stateMessages,omitempty"`
 }
 
-func (o *V4StatusPagesIssuesIssueDetail) GetState() *V4StatusPagesIssuesComponentStatus {
-	if o == nil {
+func (v *V4StatusPagesIssuesIssueDetail) GetState() *V4StatusPagesIssuesComponentStatus {
+	if v == nil {
 		return nil
 	}
-	return o.State
+	return v.State
 }
 
-func (o *V4StatusPagesIssuesIssueDetail) GetStateMessages() []V4StatusPagesIssuesIssueStateMessage {
-	if o == nil {
+func (v *V4StatusPagesIssuesIssueDetail) GetStateMessages() []V4StatusPagesIssuesIssueStateMessage {
+	if v == nil {
 		return nil
 	}
-	return o.StateMessages
+	return v.StateMessages
 }

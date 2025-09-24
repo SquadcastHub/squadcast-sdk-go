@@ -6,9 +6,9 @@ type V3ServicesExtensionsUpdateSlackExtensionRequest struct {
 	ChannelID string `json:"channel_id"`
 }
 
-func (o *V3ServicesExtensionsUpdateSlackExtensionRequest) GetChannelID() string {
-	if o == nil {
+func (v *V3ServicesExtensionsUpdateSlackExtensionRequest) GetChannelID() string {
+	if v == nil {
 		return ""
 	}
-	return o.ChannelID
+	return v.ChannelID
 }

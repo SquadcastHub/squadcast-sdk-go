@@ -12,36 +12,36 @@ type SLOUpdateSLORequest struct {
 	V3SLOCreateSLORequest components.V3SLOCreateSLORequest `request:"mediaType=application/json"`
 }
 
-func (o *SLOUpdateSLORequest) GetSloID() int64 {
-	if o == nil {
+func (s *SLOUpdateSLORequest) GetSloID() int64 {
+	if s == nil {
 		return 0
 	}
-	return o.SloID
+	return s.SloID
 }
 
-func (o *SLOUpdateSLORequest) GetOwnerID() string {
-	if o == nil {
+func (s *SLOUpdateSLORequest) GetOwnerID() string {
+	if s == nil {
 		return ""
 	}
-	return o.OwnerID
+	return s.OwnerID
 }
 
-func (o *SLOUpdateSLORequest) GetV3SLOCreateSLORequest() components.V3SLOCreateSLORequest {
-	if o == nil {
+func (s *SLOUpdateSLORequest) GetV3SLOCreateSLORequest() components.V3SLOCreateSLORequest {
+	if s == nil {
 		return components.V3SLOCreateSLORequest{}
 	}
-	return o.V3SLOCreateSLORequest
+	return s.V3SLOCreateSLORequest
 }
 
 type SLOUpdateSLOData struct {
 	Slo components.V3SLOSLODetailedResponse `json:"slo"`
 }
 
-func (o *SLOUpdateSLOData) GetSlo() components.V3SLOSLODetailedResponse {
-	if o == nil {
+func (s *SLOUpdateSLOData) GetSlo() components.V3SLOSLODetailedResponse {
+	if s == nil {
 		return components.V3SLOSLODetailedResponse{}
 	}
-	return o.Slo
+	return s.Slo
 }
 
 // SLOUpdateSLOResponseBody - The request has succeeded.
@@ -49,11 +49,11 @@ type SLOUpdateSLOResponseBody struct {
 	Data SLOUpdateSLOData `json:"data"`
 }
 
-func (o *SLOUpdateSLOResponseBody) GetData() SLOUpdateSLOData {
-	if o == nil {
+func (s *SLOUpdateSLOResponseBody) GetData() SLOUpdateSLOData {
+	if s == nil {
 		return SLOUpdateSLOData{}
 	}
-	return o.Data
+	return s.Data
 }
 
 type SLOUpdateSLOResponse struct {
@@ -62,16 +62,16 @@ type SLOUpdateSLOResponse struct {
 	Object *SLOUpdateSLOResponseBody
 }
 
-func (o *SLOUpdateSLOResponse) GetHTTPMeta() components.HTTPMetadata {
-	if o == nil {
+func (s *SLOUpdateSLOResponse) GetHTTPMeta() components.HTTPMetadata {
+	if s == nil {
 		return components.HTTPMetadata{}
 	}
-	return o.HTTPMeta
+	return s.HTTPMeta
 }
 
-func (o *SLOUpdateSLOResponse) GetObject() *SLOUpdateSLOResponseBody {
-	if o == nil {
+func (s *SLOUpdateSLOResponse) GetObject() *SLOUpdateSLOResponseBody {
+	if s == nil {
 		return nil
 	}
-	return o.Object
+	return s.Object
 }

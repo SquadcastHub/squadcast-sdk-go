@@ -11,18 +11,18 @@ type WorkflowsUpdateActionsOrderRequest struct {
 	V3WorkflowsUpdateActionsOrderRequest components.V3WorkflowsUpdateActionsOrderRequest `request:"mediaType=application/json"`
 }
 
-func (o *WorkflowsUpdateActionsOrderRequest) GetWorkflowID() string {
-	if o == nil {
+func (w *WorkflowsUpdateActionsOrderRequest) GetWorkflowID() string {
+	if w == nil {
 		return ""
 	}
-	return o.WorkflowID
+	return w.WorkflowID
 }
 
-func (o *WorkflowsUpdateActionsOrderRequest) GetV3WorkflowsUpdateActionsOrderRequest() components.V3WorkflowsUpdateActionsOrderRequest {
-	if o == nil {
+func (w *WorkflowsUpdateActionsOrderRequest) GetV3WorkflowsUpdateActionsOrderRequest() components.V3WorkflowsUpdateActionsOrderRequest {
+	if w == nil {
 		return components.V3WorkflowsUpdateActionsOrderRequest{}
 	}
-	return o.V3WorkflowsUpdateActionsOrderRequest
+	return w.V3WorkflowsUpdateActionsOrderRequest
 }
 
 type WorkflowsUpdateActionsOrderResponse struct {
@@ -31,16 +31,16 @@ type WorkflowsUpdateActionsOrderResponse struct {
 	V3WorkflowsUpdateActionsOrderResponse *components.V3WorkflowsUpdateActionsOrderResponse
 }
 
-func (o *WorkflowsUpdateActionsOrderResponse) GetHTTPMeta() components.HTTPMetadata {
-	if o == nil {
+func (w *WorkflowsUpdateActionsOrderResponse) GetHTTPMeta() components.HTTPMetadata {
+	if w == nil {
 		return components.HTTPMetadata{}
 	}
-	return o.HTTPMeta
+	return w.HTTPMeta
 }
 
-func (o *WorkflowsUpdateActionsOrderResponse) GetV3WorkflowsUpdateActionsOrderResponse() *components.V3WorkflowsUpdateActionsOrderResponse {
-	if o == nil {
+func (w *WorkflowsUpdateActionsOrderResponse) GetV3WorkflowsUpdateActionsOrderResponse() *components.V3WorkflowsUpdateActionsOrderResponse {
+	if w == nil {
 		return nil
 	}
-	return o.V3WorkflowsUpdateActionsOrderResponse
+	return w.V3WorkflowsUpdateActionsOrderResponse
 }

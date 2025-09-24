@@ -8,16 +8,16 @@ type V3IncidentsCommunicationCardsCreateSlackChannelRequest struct {
 	IncidentID  string `json:"incident_id"`
 }
 
-func (o *V3IncidentsCommunicationCardsCreateSlackChannelRequest) GetChannelName() string {
-	if o == nil {
+func (v *V3IncidentsCommunicationCardsCreateSlackChannelRequest) GetChannelName() string {
+	if v == nil {
 		return ""
 	}
-	return o.ChannelName
+	return v.ChannelName
 }
 
-func (o *V3IncidentsCommunicationCardsCreateSlackChannelRequest) GetIncidentID() string {
-	if o == nil {
+func (v *V3IncidentsCommunicationCardsCreateSlackChannelRequest) GetIncidentID() string {
+	if v == nil {
 		return ""
 	}
-	return o.IncidentID
+	return v.IncidentID
 }
