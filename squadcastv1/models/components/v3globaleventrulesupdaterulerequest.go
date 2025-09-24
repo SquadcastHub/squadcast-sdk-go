@@ -8,23 +8,23 @@ type V3GlobalEventRulesUpdateRuleRequest struct {
 	Action      *V3GlobalEventRulesRuleActionUpdate `json:"action,omitempty"`
 }
 
-func (o *V3GlobalEventRulesUpdateRuleRequest) GetDescription() *string {
-	if o == nil {
+func (v *V3GlobalEventRulesUpdateRuleRequest) GetDescription() *string {
+	if v == nil {
 		return nil
 	}
-	return o.Description
+	return v.Description
 }
 
-func (o *V3GlobalEventRulesUpdateRuleRequest) GetExpression() *string {
-	if o == nil {
+func (v *V3GlobalEventRulesUpdateRuleRequest) GetExpression() *string {
+	if v == nil {
 		return nil
 	}
-	return o.Expression
+	return v.Expression
 }
 
-func (o *V3GlobalEventRulesUpdateRuleRequest) GetAction() *V3GlobalEventRulesRuleActionUpdate {
-	if o == nil {
+func (v *V3GlobalEventRulesUpdateRuleRequest) GetAction() *V3GlobalEventRulesRuleActionUpdate {
+	if v == nil {
 		return nil
 	}
-	return o.Action
+	return v.Action
 }

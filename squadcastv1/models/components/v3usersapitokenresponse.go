@@ -12,51 +12,51 @@ type V3UsersAPITokenResponse struct {
 	Deleted        bool   `json:"deleted"`
 }
 
-func (o *V3UsersAPITokenResponse) GetID() string {
-	if o == nil {
+func (v *V3UsersAPITokenResponse) GetID() string {
+	if v == nil {
 		return ""
 	}
-	return o.ID
+	return v.ID
 }
 
-func (o *V3UsersAPITokenResponse) GetOrganizationID() string {
-	if o == nil {
+func (v *V3UsersAPITokenResponse) GetOrganizationID() string {
+	if v == nil {
 		return ""
 	}
-	return o.OrganizationID
+	return v.OrganizationID
 }
 
-func (o *V3UsersAPITokenResponse) GetUserID() string {
-	if o == nil {
+func (v *V3UsersAPITokenResponse) GetUserID() string {
+	if v == nil {
 		return ""
 	}
-	return o.UserID
+	return v.UserID
 }
 
-func (o *V3UsersAPITokenResponse) GetToken() string {
-	if o == nil {
+func (v *V3UsersAPITokenResponse) GetToken() string {
+	if v == nil {
 		return ""
 	}
-	return o.Token
+	return v.Token
 }
 
-func (o *V3UsersAPITokenResponse) GetLastRefresh() string {
-	if o == nil {
+func (v *V3UsersAPITokenResponse) GetLastRefresh() string {
+	if v == nil {
 		return ""
 	}
-	return o.LastRefresh
+	return v.LastRefresh
 }
 
-func (o *V3UsersAPITokenResponse) GetRateLimit() int64 {
-	if o == nil {
+func (v *V3UsersAPITokenResponse) GetRateLimit() int64 {
+	if v == nil {
 		return 0
 	}
-	return o.RateLimit
+	return v.RateLimit
 }
 
-func (o *V3UsersAPITokenResponse) GetDeleted() bool {
-	if o == nil {
+func (v *V3UsersAPITokenResponse) GetDeleted() bool {
+	if v == nil {
 		return false
 	}
-	return o.Deleted
+	return v.Deleted
 }

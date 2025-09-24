@@ -7,29 +7,29 @@ type URLObj struct {
 	Method *string `json:"method,omitempty"`
 }
 
-func (o *URLObj) GetURL() *string {
-	if o == nil {
+func (u *URLObj) GetURL() *string {
+	if u == nil {
 		return nil
 	}
-	return o.URL
+	return u.URL
 }
 
-func (o *URLObj) GetMethod() *string {
-	if o == nil {
+func (u *URLObj) GetMethod() *string {
+	if u == nil {
 		return nil
 	}
-	return o.Method
+	return u.Method
 }
 
 type V3IncidentsIncidentActionsWebhookActionResponseHeader struct {
 	ContentType string `json:"Content-Type"`
 }
 
-func (o *V3IncidentsIncidentActionsWebhookActionResponseHeader) GetContentType() string {
-	if o == nil {
+func (v *V3IncidentsIncidentActionsWebhookActionResponseHeader) GetContentType() string {
+	if v == nil {
 		return ""
 	}
-	return o.ContentType
+	return v.ContentType
 }
 
 // V3IncidentsIncidentActionsWebhookActionResponse - Represents the response structure for triggering a webhook manually.
@@ -58,156 +58,156 @@ type V3IncidentsIncidentActionsWebhookActionResponse struct {
 	CustomPayload             string                                                `json:"custom_payload"`
 }
 
-func (o *V3IncidentsIncidentActionsWebhookActionResponse) GetID() string {
-	if o == nil {
+func (v *V3IncidentsIncidentActionsWebhookActionResponse) GetID() string {
+	if v == nil {
 		return ""
 	}
-	return o.ID
+	return v.ID
 }
 
-func (o *V3IncidentsIncidentActionsWebhookActionResponse) GetCreatedAt() string {
-	if o == nil {
+func (v *V3IncidentsIncidentActionsWebhookActionResponse) GetCreatedAt() string {
+	if v == nil {
 		return ""
 	}
-	return o.CreatedAt
+	return v.CreatedAt
 }
 
-func (o *V3IncidentsIncidentActionsWebhookActionResponse) GetUpdatedAt() string {
-	if o == nil {
+func (v *V3IncidentsIncidentActionsWebhookActionResponse) GetUpdatedAt() string {
+	if v == nil {
 		return ""
 	}
-	return o.UpdatedAt
+	return v.UpdatedAt
 }
 
-func (o *V3IncidentsIncidentActionsWebhookActionResponse) GetVersion() string {
-	if o == nil {
+func (v *V3IncidentsIncidentActionsWebhookActionResponse) GetVersion() string {
+	if v == nil {
 		return ""
 	}
-	return o.Version
+	return v.Version
 }
 
-func (o *V3IncidentsIncidentActionsWebhookActionResponse) GetOrganizationID() string {
-	if o == nil {
+func (v *V3IncidentsIncidentActionsWebhookActionResponse) GetOrganizationID() string {
+	if v == nil {
 		return ""
 	}
-	return o.OrganizationID
+	return v.OrganizationID
 }
 
-func (o *V3IncidentsIncidentActionsWebhookActionResponse) GetAuthorID() string {
-	if o == nil {
+func (v *V3IncidentsIncidentActionsWebhookActionResponse) GetAuthorID() string {
+	if v == nil {
 		return ""
 	}
-	return o.AuthorID
+	return v.AuthorID
 }
 
-func (o *V3IncidentsIncidentActionsWebhookActionResponse) GetName() string {
-	if o == nil {
+func (v *V3IncidentsIncidentActionsWebhookActionResponse) GetName() string {
+	if v == nil {
 		return ""
 	}
-	return o.Name
+	return v.Name
 }
 
-func (o *V3IncidentsIncidentActionsWebhookActionResponse) GetSlug() string {
-	if o == nil {
+func (v *V3IncidentsIncidentActionsWebhookActionResponse) GetSlug() string {
+	if v == nil {
 		return ""
 	}
-	return o.Slug
+	return v.Slug
 }
 
-func (o *V3IncidentsIncidentActionsWebhookActionResponse) GetDescription() string {
-	if o == nil {
+func (v *V3IncidentsIncidentActionsWebhookActionResponse) GetDescription() string {
+	if v == nil {
 		return ""
 	}
-	return o.Description
+	return v.Description
 }
 
-func (o *V3IncidentsIncidentActionsWebhookActionResponse) GetTriggers() []string {
-	if o == nil {
+func (v *V3IncidentsIncidentActionsWebhookActionResponse) GetTriggers() []string {
+	if v == nil {
 		return []string{}
 	}
-	return o.Triggers
+	return v.Triggers
 }
 
-func (o *V3IncidentsIncidentActionsWebhookActionResponse) GetUrls() []URLObj {
-	if o == nil {
+func (v *V3IncidentsIncidentActionsWebhookActionResponse) GetUrls() []URLObj {
+	if v == nil {
 		return []URLObj{}
 	}
-	return o.Urls
+	return v.Urls
 }
 
-func (o *V3IncidentsIncidentActionsWebhookActionResponse) GetTeams() []string {
-	if o == nil {
+func (v *V3IncidentsIncidentActionsWebhookActionResponse) GetTeams() []string {
+	if v == nil {
 		return []string{}
 	}
-	return o.Teams
+	return v.Teams
 }
 
-func (o *V3IncidentsIncidentActionsWebhookActionResponse) GetIsAllTeamsConfigured() bool {
-	if o == nil {
+func (v *V3IncidentsIncidentActionsWebhookActionResponse) GetIsAllTeamsConfigured() bool {
+	if v == nil {
 		return false
 	}
-	return o.IsAllTeamsConfigured
+	return v.IsAllTeamsConfigured
 }
 
-func (o *V3IncidentsIncidentActionsWebhookActionResponse) GetCustomPayloadTemplateSlug() string {
-	if o == nil {
+func (v *V3IncidentsIncidentActionsWebhookActionResponse) GetCustomPayloadTemplateSlug() string {
+	if v == nil {
 		return ""
 	}
-	return o.CustomPayloadTemplateSlug
+	return v.CustomPayloadTemplateSlug
 }
 
-func (o *V3IncidentsIncidentActionsWebhookActionResponse) GetHeader() V3IncidentsIncidentActionsWebhookActionResponseHeader {
-	if o == nil {
+func (v *V3IncidentsIncidentActionsWebhookActionResponse) GetHeader() V3IncidentsIncidentActionsWebhookActionResponseHeader {
+	if v == nil {
 		return V3IncidentsIncidentActionsWebhookActionResponseHeader{}
 	}
-	return o.Header
+	return v.Header
 }
 
-func (o *V3IncidentsIncidentActionsWebhookActionResponse) GetFilters() any {
-	if o == nil {
+func (v *V3IncidentsIncidentActionsWebhookActionResponse) GetFilters() any {
+	if v == nil {
 		return nil
 	}
-	return o.Filters
+	return v.Filters
 }
 
-func (o *V3IncidentsIncidentActionsWebhookActionResponse) GetTriggerType() string {
-	if o == nil {
+func (v *V3IncidentsIncidentActionsWebhookActionResponse) GetTriggerType() string {
+	if v == nil {
 		return ""
 	}
-	return o.TriggerType
+	return v.TriggerType
 }
 
-func (o *V3IncidentsIncidentActionsWebhookActionResponse) GetLanguage() string {
-	if o == nil {
+func (v *V3IncidentsIncidentActionsWebhookActionResponse) GetLanguage() string {
+	if v == nil {
 		return ""
 	}
-	return o.Language
+	return v.Language
 }
 
-func (o *V3IncidentsIncidentActionsWebhookActionResponse) GetMaxRetry() int64 {
-	if o == nil {
+func (v *V3IncidentsIncidentActionsWebhookActionResponse) GetMaxRetry() int64 {
+	if v == nil {
 		return 0
 	}
-	return o.MaxRetry
+	return v.MaxRetry
 }
 
-func (o *V3IncidentsIncidentActionsWebhookActionResponse) GetMailIds() []string {
-	if o == nil {
+func (v *V3IncidentsIncidentActionsWebhookActionResponse) GetMailIds() []string {
+	if v == nil {
 		return []string{}
 	}
-	return o.MailIds
+	return v.MailIds
 }
 
-func (o *V3IncidentsIncidentActionsWebhookActionResponse) GetPayloadType() string {
-	if o == nil {
+func (v *V3IncidentsIncidentActionsWebhookActionResponse) GetPayloadType() string {
+	if v == nil {
 		return ""
 	}
-	return o.PayloadType
+	return v.PayloadType
 }
 
-func (o *V3IncidentsIncidentActionsWebhookActionResponse) GetCustomPayload() string {
-	if o == nil {
+func (v *V3IncidentsIncidentActionsWebhookActionResponse) GetCustomPayload() string {
+	if v == nil {
 		return ""
 	}
-	return o.CustomPayload
+	return v.CustomPayload
 }

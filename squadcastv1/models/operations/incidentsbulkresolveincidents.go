@@ -11,11 +11,11 @@ type IncidentsBulkResolveIncidentsResponseBody struct {
 	Data string `json:"data"`
 }
 
-func (o *IncidentsBulkResolveIncidentsResponseBody) GetData() string {
-	if o == nil {
+func (i *IncidentsBulkResolveIncidentsResponseBody) GetData() string {
+	if i == nil {
 		return ""
 	}
-	return o.Data
+	return i.Data
 }
 
 type IncidentsBulkResolveIncidentsResponse struct {
@@ -24,16 +24,16 @@ type IncidentsBulkResolveIncidentsResponse struct {
 	Object *IncidentsBulkResolveIncidentsResponseBody
 }
 
-func (o *IncidentsBulkResolveIncidentsResponse) GetHTTPMeta() components.HTTPMetadata {
-	if o == nil {
+func (i *IncidentsBulkResolveIncidentsResponse) GetHTTPMeta() components.HTTPMetadata {
+	if i == nil {
 		return components.HTTPMetadata{}
 	}
-	return o.HTTPMeta
+	return i.HTTPMeta
 }
 
-func (o *IncidentsBulkResolveIncidentsResponse) GetObject() *IncidentsBulkResolveIncidentsResponseBody {
-	if o == nil {
+func (i *IncidentsBulkResolveIncidentsResponse) GetObject() *IncidentsBulkResolveIncidentsResponseBody {
+	if i == nil {
 		return nil
 	}
-	return o.Object
+	return i.Object
 }

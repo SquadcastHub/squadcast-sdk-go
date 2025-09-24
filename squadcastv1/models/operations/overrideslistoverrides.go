@@ -11,8 +11,8 @@ type OverridesListOverridesRequest struct {
 	StartTime     string  `queryParam:"style=form,explode=false,name=startTime"`
 	EndTime       string  `queryParam:"style=form,explode=false,name=endTime"`
 	ParticipantID *string `queryParam:"style=form,explode=false,name=participantID"`
-	PageNumber    *int    `queryParam:"style=form,explode=false,name=pageNumber"`
 	PageSize      *int    `queryParam:"style=form,explode=false,name=pageSize"`
+	Cursor        *string `queryParam:"style=form,explode=false,name=cursor"`
 }
 
 func (o *OverridesListOverridesRequest) GetScheduleID() string {
@@ -43,18 +43,18 @@ func (o *OverridesListOverridesRequest) GetParticipantID() *string {
 	return o.ParticipantID
 }
 
-func (o *OverridesListOverridesRequest) GetPageNumber() *int {
-	if o == nil {
-		return nil
-	}
-	return o.PageNumber
-}
-
 func (o *OverridesListOverridesRequest) GetPageSize() *int {
 	if o == nil {
 		return nil
 	}
 	return o.PageSize
+}
+
+func (o *OverridesListOverridesRequest) GetCursor() *string {
+	if o == nil {
+		return nil
+	}
+	return o.Cursor
 }
 
 // OverridesListOverridesResponseBody - The request has succeeded.

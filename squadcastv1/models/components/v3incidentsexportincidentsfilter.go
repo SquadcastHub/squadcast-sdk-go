@@ -16,65 +16,65 @@ type V3IncidentsExportIncidentsFilter struct {
 	Notes                           string                        `json:"notes"`
 }
 
-func (o *V3IncidentsExportIncidentsFilter) GetServices() []string {
-	if o == nil {
+func (v *V3IncidentsExportIncidentsFilter) GetServices() []string {
+	if v == nil {
 		return []string{}
 	}
-	return o.Services
+	return v.Services
 }
 
-func (o *V3IncidentsExportIncidentsFilter) GetSources() []string {
-	if o == nil {
+func (v *V3IncidentsExportIncidentsFilter) GetSources() []string {
+	if v == nil {
 		return []string{}
 	}
-	return o.Sources
+	return v.Sources
 }
 
-func (o *V3IncidentsExportIncidentsFilter) GetServiceOwner() V3IncidentsServiceOwnerFilter {
-	if o == nil {
+func (v *V3IncidentsExportIncidentsFilter) GetServiceOwner() V3IncidentsServiceOwnerFilter {
+	if v == nil {
 		return V3IncidentsServiceOwnerFilter{}
 	}
-	return o.ServiceOwner
+	return v.ServiceOwner
 }
 
-func (o *V3IncidentsExportIncidentsFilter) GetAssignedTo() []string {
-	if o == nil {
+func (v *V3IncidentsExportIncidentsFilter) GetAssignedTo() []string {
+	if v == nil {
 		return []string{}
 	}
-	return o.AssignedTo
+	return v.AssignedTo
 }
 
-func (o *V3IncidentsExportIncidentsFilter) GetAssignedToUserIDsAndTheirSquads() []string {
-	if o == nil {
+func (v *V3IncidentsExportIncidentsFilter) GetAssignedToUserIDsAndTheirSquads() []string {
+	if v == nil {
 		return []string{}
 	}
-	return o.AssignedToUserIDsAndTheirSquads
+	return v.AssignedToUserIDsAndTheirSquads
 }
 
-func (o *V3IncidentsExportIncidentsFilter) GetStatuses() []string {
-	if o == nil {
+func (v *V3IncidentsExportIncidentsFilter) GetStatuses() []string {
+	if v == nil {
 		return []string{}
 	}
-	return o.Statuses
+	return v.Statuses
 }
 
-func (o *V3IncidentsExportIncidentsFilter) GetPriority() []V3IncidentsIncidentPriority {
-	if o == nil {
+func (v *V3IncidentsExportIncidentsFilter) GetPriority() []V3IncidentsIncidentPriority {
+	if v == nil {
 		return []V3IncidentsIncidentPriority{}
 	}
-	return o.Priority
+	return v.Priority
 }
 
-func (o *V3IncidentsExportIncidentsFilter) GetTags() []string {
-	if o == nil {
+func (v *V3IncidentsExportIncidentsFilter) GetTags() []string {
+	if v == nil {
 		return []string{}
 	}
-	return o.Tags
+	return v.Tags
 }
 
-func (o *V3IncidentsExportIncidentsFilter) GetNotes() string {
-	if o == nil {
+func (v *V3IncidentsExportIncidentsFilter) GetNotes() string {
+	if v == nil {
 		return ""
 	}
-	return o.Notes
+	return v.Notes
 }

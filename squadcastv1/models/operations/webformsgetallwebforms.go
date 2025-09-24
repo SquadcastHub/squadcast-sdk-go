@@ -12,36 +12,36 @@ type WebformsGetAllWebformsRequest struct {
 	PageSize   *string `queryParam:"style=form,explode=true,name=page_size"`
 }
 
-func (o *WebformsGetAllWebformsRequest) GetOwnerID() string {
-	if o == nil {
+func (w *WebformsGetAllWebformsRequest) GetOwnerID() string {
+	if w == nil {
 		return ""
 	}
-	return o.OwnerID
+	return w.OwnerID
 }
 
-func (o *WebformsGetAllWebformsRequest) GetPageNumber() *string {
-	if o == nil {
+func (w *WebformsGetAllWebformsRequest) GetPageNumber() *string {
+	if w == nil {
 		return nil
 	}
-	return o.PageNumber
+	return w.PageNumber
 }
 
-func (o *WebformsGetAllWebformsRequest) GetPageSize() *string {
-	if o == nil {
+func (w *WebformsGetAllWebformsRequest) GetPageSize() *string {
+	if w == nil {
 		return nil
 	}
-	return o.PageSize
+	return w.PageSize
 }
 
 type WebformsGetAllWebformsMeta struct {
 	TotalCount int `json:"total_count"`
 }
 
-func (o *WebformsGetAllWebformsMeta) GetTotalCount() int {
-	if o == nil {
+func (w *WebformsGetAllWebformsMeta) GetTotalCount() int {
+	if w == nil {
 		return 0
 	}
-	return o.TotalCount
+	return w.TotalCount
 }
 
 // WebformsGetAllWebformsResponseBody - The request has succeeded.
@@ -50,18 +50,18 @@ type WebformsGetAllWebformsResponseBody struct {
 	Meta WebformsGetAllWebformsMeta             `json:"meta"`
 }
 
-func (o *WebformsGetAllWebformsResponseBody) GetData() []components.V3WebformsWebformResponse {
-	if o == nil {
+func (w *WebformsGetAllWebformsResponseBody) GetData() []components.V3WebformsWebformResponse {
+	if w == nil {
 		return []components.V3WebformsWebformResponse{}
 	}
-	return o.Data
+	return w.Data
 }
 
-func (o *WebformsGetAllWebformsResponseBody) GetMeta() WebformsGetAllWebformsMeta {
-	if o == nil {
+func (w *WebformsGetAllWebformsResponseBody) GetMeta() WebformsGetAllWebformsMeta {
+	if w == nil {
 		return WebformsGetAllWebformsMeta{}
 	}
-	return o.Meta
+	return w.Meta
 }
 
 type WebformsGetAllWebformsResponse struct {
@@ -70,16 +70,16 @@ type WebformsGetAllWebformsResponse struct {
 	Object *WebformsGetAllWebformsResponseBody
 }
 
-func (o *WebformsGetAllWebformsResponse) GetHTTPMeta() components.HTTPMetadata {
-	if o == nil {
+func (w *WebformsGetAllWebformsResponse) GetHTTPMeta() components.HTTPMetadata {
+	if w == nil {
 		return components.HTTPMetadata{}
 	}
-	return o.HTTPMeta
+	return w.HTTPMeta
 }
 
-func (o *WebformsGetAllWebformsResponse) GetObject() *WebformsGetAllWebformsResponseBody {
-	if o == nil {
+func (w *WebformsGetAllWebformsResponse) GetObject() *WebformsGetAllWebformsResponseBody {
+	if w == nil {
 		return nil
 	}
-	return o.Object
+	return w.Object
 }

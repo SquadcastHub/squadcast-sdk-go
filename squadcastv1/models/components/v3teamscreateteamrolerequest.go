@@ -7,16 +7,16 @@ type V3TeamsCreateTeamRoleRequest struct {
 	Abilities V3TeamsAbilities `json:"abilities"`
 }
 
-func (o *V3TeamsCreateTeamRoleRequest) GetName() string {
-	if o == nil {
+func (v *V3TeamsCreateTeamRoleRequest) GetName() string {
+	if v == nil {
 		return ""
 	}
-	return o.Name
+	return v.Name
 }
 
-func (o *V3TeamsCreateTeamRoleRequest) GetAbilities() V3TeamsAbilities {
-	if o == nil {
+func (v *V3TeamsCreateTeamRoleRequest) GetAbilities() V3TeamsAbilities {
+	if v == nil {
 		return V3TeamsAbilities{}
 	}
-	return o.Abilities
+	return v.Abilities
 }

@@ -84,10 +84,10 @@ const (
 )
 
 type V3ServicesDeduplicationRulesExpressionBranchRHS struct {
-	Str     *string  `queryParam:"inline" name:"rhs"`
-	Boolean *bool    `queryParam:"inline" name:"rhs"`
-	Int32   *int     `queryParam:"inline" name:"rhs"`
-	Float32 *float32 `queryParam:"inline" name:"rhs"`
+	Str     *string  `queryParam:"inline,name=rhs"`
+	Boolean *bool    `queryParam:"inline,name=rhs"`
+	Int32   *int     `queryParam:"inline,name=rhs"`
+	Float32 *float32 `queryParam:"inline,name=rhs"`
 
 	Type V3ServicesDeduplicationRulesExpressionBranchRHSType
 }
@@ -187,23 +187,23 @@ type V3ServicesDeduplicationRulesExpressionBranch struct {
 	RHS V3ServicesDeduplicationRulesExpressionBranchRHS `json:"rhs"`
 }
 
-func (o *V3ServicesDeduplicationRulesExpressionBranch) GetLHS() string {
-	if o == nil {
+func (v *V3ServicesDeduplicationRulesExpressionBranch) GetLHS() string {
+	if v == nil {
 		return ""
 	}
-	return o.LHS
+	return v.LHS
 }
 
-func (o *V3ServicesDeduplicationRulesExpressionBranch) GetOp() *V3ServicesDeduplicationRulesExpressionBranchOp {
-	if o == nil {
+func (v *V3ServicesDeduplicationRulesExpressionBranch) GetOp() *V3ServicesDeduplicationRulesExpressionBranchOp {
+	if v == nil {
 		return nil
 	}
-	return o.Op
+	return v.Op
 }
 
-func (o *V3ServicesDeduplicationRulesExpressionBranch) GetRHS() V3ServicesDeduplicationRulesExpressionBranchRHS {
-	if o == nil {
+func (v *V3ServicesDeduplicationRulesExpressionBranch) GetRHS() V3ServicesDeduplicationRulesExpressionBranchRHS {
+	if v == nil {
 		return V3ServicesDeduplicationRulesExpressionBranchRHS{}
 	}
-	return o.RHS
+	return v.RHS
 }

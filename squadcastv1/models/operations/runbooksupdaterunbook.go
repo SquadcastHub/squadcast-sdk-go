@@ -11,18 +11,18 @@ type RunbooksUpdateRunbookRequest struct {
 	V3RunbooksUpdateRunbookRequest components.V3RunbooksUpdateRunbookRequest `request:"mediaType=application/json"`
 }
 
-func (o *RunbooksUpdateRunbookRequest) GetRunbookID() string {
-	if o == nil {
+func (r *RunbooksUpdateRunbookRequest) GetRunbookID() string {
+	if r == nil {
 		return ""
 	}
-	return o.RunbookID
+	return r.RunbookID
 }
 
-func (o *RunbooksUpdateRunbookRequest) GetV3RunbooksUpdateRunbookRequest() components.V3RunbooksUpdateRunbookRequest {
-	if o == nil {
+func (r *RunbooksUpdateRunbookRequest) GetV3RunbooksUpdateRunbookRequest() components.V3RunbooksUpdateRunbookRequest {
+	if r == nil {
 		return components.V3RunbooksUpdateRunbookRequest{}
 	}
-	return o.V3RunbooksUpdateRunbookRequest
+	return r.V3RunbooksUpdateRunbookRequest
 }
 
 // RunbooksUpdateRunbookResponseBody - The request has succeeded.
@@ -30,11 +30,11 @@ type RunbooksUpdateRunbookResponseBody struct {
 	Data components.V3RunbooksRunbookResponse `json:"data"`
 }
 
-func (o *RunbooksUpdateRunbookResponseBody) GetData() components.V3RunbooksRunbookResponse {
-	if o == nil {
+func (r *RunbooksUpdateRunbookResponseBody) GetData() components.V3RunbooksRunbookResponse {
+	if r == nil {
 		return components.V3RunbooksRunbookResponse{}
 	}
-	return o.Data
+	return r.Data
 }
 
 type RunbooksUpdateRunbookResponse struct {
@@ -43,16 +43,16 @@ type RunbooksUpdateRunbookResponse struct {
 	Object *RunbooksUpdateRunbookResponseBody
 }
 
-func (o *RunbooksUpdateRunbookResponse) GetHTTPMeta() components.HTTPMetadata {
-	if o == nil {
+func (r *RunbooksUpdateRunbookResponse) GetHTTPMeta() components.HTTPMetadata {
+	if r == nil {
 		return components.HTTPMetadata{}
 	}
-	return o.HTTPMeta
+	return r.HTTPMeta
 }
 
-func (o *RunbooksUpdateRunbookResponse) GetObject() *RunbooksUpdateRunbookResponseBody {
-	if o == nil {
+func (r *RunbooksUpdateRunbookResponse) GetObject() *RunbooksUpdateRunbookResponseBody {
+	if r == nil {
 		return nil
 	}
-	return o.Object
+	return r.Object
 }

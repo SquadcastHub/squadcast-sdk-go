@@ -10,16 +10,16 @@ type CommonV3EntityOwner struct {
 	Type string `json:"type"`
 }
 
-func (o *CommonV3EntityOwner) GetID() string {
-	if o == nil {
+func (c *CommonV3EntityOwner) GetID() string {
+	if c == nil {
 		return ""
 	}
-	return o.ID
+	return c.ID
 }
 
-func (o *CommonV3EntityOwner) GetType() string {
-	if o == nil {
+func (c *CommonV3EntityOwner) GetType() string {
+	if c == nil {
 		return ""
 	}
-	return o.Type
+	return c.Type
 }

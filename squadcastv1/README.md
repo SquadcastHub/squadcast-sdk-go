@@ -808,7 +808,7 @@ func main() {
 	ctx := context.Background()
 
 	s := squadcastsdk.New(
-		squadcastsdk.WithServerURL("https://api.squadcast.tech"),
+		squadcastsdk.WithServerURL("https://api.squadcast.com"),
 		squadcastsdk.WithSecurity(os.Getenv("SQUADCASTSDK_BEARER_AUTH")),
 	)
 

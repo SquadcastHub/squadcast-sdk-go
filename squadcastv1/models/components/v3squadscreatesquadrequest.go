@@ -8,23 +8,23 @@ type V3SquadsCreateSquadRequest struct {
 	OwnerID string   `json:"owner_id"`
 }
 
-func (o *V3SquadsCreateSquadRequest) GetName() string {
-	if o == nil {
+func (v *V3SquadsCreateSquadRequest) GetName() string {
+	if v == nil {
 		return ""
 	}
-	return o.Name
+	return v.Name
 }
 
-func (o *V3SquadsCreateSquadRequest) GetMembers() []string {
-	if o == nil {
+func (v *V3SquadsCreateSquadRequest) GetMembers() []string {
+	if v == nil {
 		return []string{}
 	}
-	return o.Members
+	return v.Members
 }
 
-func (o *V3SquadsCreateSquadRequest) GetOwnerID() string {
-	if o == nil {
+func (v *V3SquadsCreateSquadRequest) GetOwnerID() string {
+	if v == nil {
 		return ""
 	}
-	return o.OwnerID
+	return v.OwnerID
 }

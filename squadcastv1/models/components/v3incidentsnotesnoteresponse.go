@@ -9,32 +9,32 @@ type User struct {
 	Deleted   bool   `json:"deleted"`
 }
 
-func (o *User) GetID() string {
-	if o == nil {
+func (u *User) GetID() string {
+	if u == nil {
 		return ""
 	}
-	return o.ID
+	return u.ID
 }
 
-func (o *User) GetFirstName() string {
-	if o == nil {
+func (u *User) GetFirstName() string {
+	if u == nil {
 		return ""
 	}
-	return o.FirstName
+	return u.FirstName
 }
 
-func (o *User) GetLastName() string {
-	if o == nil {
+func (u *User) GetLastName() string {
+	if u == nil {
 		return ""
 	}
-	return o.LastName
+	return u.LastName
 }
 
-func (o *User) GetDeleted() bool {
-	if o == nil {
+func (u *User) GetDeleted() bool {
+	if u == nil {
 		return false
 	}
-	return o.Deleted
+	return u.Deleted
 }
 
 // V3IncidentsNotesNoteResponse - Represents a note associated with an incident.
@@ -52,79 +52,79 @@ type V3IncidentsNotesNoteResponse struct {
 	ReplacedMessage string   `json:"replaced_message"`
 }
 
-func (o *V3IncidentsNotesNoteResponse) GetID() string {
-	if o == nil {
+func (v *V3IncidentsNotesNoteResponse) GetID() string {
+	if v == nil {
 		return ""
 	}
-	return o.ID
+	return v.ID
 }
 
-func (o *V3IncidentsNotesNoteResponse) GetCreatedAt() string {
-	if o == nil {
+func (v *V3IncidentsNotesNoteResponse) GetCreatedAt() string {
+	if v == nil {
 		return ""
 	}
-	return o.CreatedAt
+	return v.CreatedAt
 }
 
-func (o *V3IncidentsNotesNoteResponse) GetUpdatedAt() string {
-	if o == nil {
+func (v *V3IncidentsNotesNoteResponse) GetUpdatedAt() string {
+	if v == nil {
 		return ""
 	}
-	return o.UpdatedAt
+	return v.UpdatedAt
 }
 
-func (o *V3IncidentsNotesNoteResponse) GetOrganizationID() string {
-	if o == nil {
+func (v *V3IncidentsNotesNoteResponse) GetOrganizationID() string {
+	if v == nil {
 		return ""
 	}
-	return o.OrganizationID
+	return v.OrganizationID
 }
 
-func (o *V3IncidentsNotesNoteResponse) GetIncidentID() string {
-	if o == nil {
+func (v *V3IncidentsNotesNoteResponse) GetIncidentID() string {
+	if v == nil {
 		return ""
 	}
-	return o.IncidentID
+	return v.IncidentID
 }
 
-func (o *V3IncidentsNotesNoteResponse) GetUserID() string {
-	if o == nil {
+func (v *V3IncidentsNotesNoteResponse) GetUserID() string {
+	if v == nil {
 		return ""
 	}
-	return o.UserID
+	return v.UserID
 }
 
-func (o *V3IncidentsNotesNoteResponse) GetMessage() string {
-	if o == nil {
+func (v *V3IncidentsNotesNoteResponse) GetMessage() string {
+	if v == nil {
 		return ""
 	}
-	return o.Message
+	return v.Message
 }
 
-func (o *V3IncidentsNotesNoteResponse) GetType() string {
-	if o == nil {
+func (v *V3IncidentsNotesNoteResponse) GetType() string {
+	if v == nil {
 		return ""
 	}
-	return o.Type
+	return v.Type
 }
 
-func (o *V3IncidentsNotesNoteResponse) GetAttachments() []string {
-	if o == nil {
+func (v *V3IncidentsNotesNoteResponse) GetAttachments() []string {
+	if v == nil {
 		return []string{}
 	}
-	return o.Attachments
+	return v.Attachments
 }
 
-func (o *V3IncidentsNotesNoteResponse) GetUser() User {
-	if o == nil {
+func (v *V3IncidentsNotesNoteResponse) GetUser() User {
+	if v == nil {
 		return User{}
 	}
-	return o.User
+	return v.User
 }
 
-func (o *V3IncidentsNotesNoteResponse) GetReplacedMessage() string {
-	if o == nil {
+func (v *V3IncidentsNotesNoteResponse) GetReplacedMessage() string {
+	if v == nil {
 		return ""
 	}
-	return o.ReplacedMessage
+	return v.ReplacedMessage
 }

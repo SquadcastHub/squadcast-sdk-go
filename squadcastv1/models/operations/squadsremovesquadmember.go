@@ -12,25 +12,25 @@ type SquadsRemoveSquadMemberRequest struct {
 	ReplaceWith string `queryParam:"style=form,explode=true,name=replaceWith"`
 }
 
-func (o *SquadsRemoveSquadMemberRequest) GetSquadID() string {
-	if o == nil {
+func (s *SquadsRemoveSquadMemberRequest) GetSquadID() string {
+	if s == nil {
 		return ""
 	}
-	return o.SquadID
+	return s.SquadID
 }
 
-func (o *SquadsRemoveSquadMemberRequest) GetMemberID() string {
-	if o == nil {
+func (s *SquadsRemoveSquadMemberRequest) GetMemberID() string {
+	if s == nil {
 		return ""
 	}
-	return o.MemberID
+	return s.MemberID
 }
 
-func (o *SquadsRemoveSquadMemberRequest) GetReplaceWith() string {
-	if o == nil {
+func (s *SquadsRemoveSquadMemberRequest) GetReplaceWith() string {
+	if s == nil {
 		return ""
 	}
-	return o.ReplaceWith
+	return s.ReplaceWith
 }
 
 type SquadsRemoveSquadMemberResponse struct {
@@ -39,16 +39,16 @@ type SquadsRemoveSquadMemberResponse struct {
 	V4SquadsRemoveSquadMemberResponse *components.V4SquadsRemoveSquadMemberResponse
 }
 
-func (o *SquadsRemoveSquadMemberResponse) GetHTTPMeta() components.HTTPMetadata {
-	if o == nil {
+func (s *SquadsRemoveSquadMemberResponse) GetHTTPMeta() components.HTTPMetadata {
+	if s == nil {
 		return components.HTTPMetadata{}
 	}
-	return o.HTTPMeta
+	return s.HTTPMeta
 }
 
-func (o *SquadsRemoveSquadMemberResponse) GetV4SquadsRemoveSquadMemberResponse() *components.V4SquadsRemoveSquadMemberResponse {
-	if o == nil {
+func (s *SquadsRemoveSquadMemberResponse) GetV4SquadsRemoveSquadMemberResponse() *components.V4SquadsRemoveSquadMemberResponse {
+	if s == nil {
 		return nil
 	}
-	return o.V4SquadsRemoveSquadMemberResponse
+	return s.V4SquadsRemoveSquadMemberResponse
 }

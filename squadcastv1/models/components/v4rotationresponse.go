@@ -21,114 +21,114 @@ type V4RotationResponse struct {
 	UpdatedAt                   string               `json:"updatedAt"`
 }
 
-func (o *V4RotationResponse) GetID() int64 {
-	if o == nil {
+func (v *V4RotationResponse) GetID() int64 {
+	if v == nil {
 		return 0
 	}
-	return o.ID
+	return v.ID
 }
 
-func (o *V4RotationResponse) GetName() string {
-	if o == nil {
+func (v *V4RotationResponse) GetName() string {
+	if v == nil {
 		return ""
 	}
-	return o.Name
+	return v.Name
 }
 
-func (o *V4RotationResponse) GetScheduleID() int64 {
-	if o == nil {
+func (v *V4RotationResponse) GetScheduleID() int64 {
+	if v == nil {
 		return 0
 	}
-	return o.ScheduleID
+	return v.ScheduleID
 }
 
-func (o *V4RotationResponse) GetColor() string {
-	if o == nil {
+func (v *V4RotationResponse) GetColor() string {
+	if v == nil {
 		return ""
 	}
-	return o.Color
+	return v.Color
 }
 
-func (o *V4RotationResponse) GetStartDate() string {
-	if o == nil {
+func (v *V4RotationResponse) GetStartDate() string {
+	if v == nil {
 		return ""
 	}
-	return o.StartDate
+	return v.StartDate
 }
 
-func (o *V4RotationResponse) GetPeriod() string {
-	if o == nil {
+func (v *V4RotationResponse) GetPeriod() string {
+	if v == nil {
 		return ""
 	}
-	return o.Period
+	return v.Period
 }
 
-func (o *V4RotationResponse) GetCustomPeriodFrequency() *int64 {
-	if o == nil {
+func (v *V4RotationResponse) GetCustomPeriodFrequency() *int64 {
+	if v == nil {
 		return nil
 	}
-	return o.CustomPeriodFrequency
+	return v.CustomPeriodFrequency
 }
 
-func (o *V4RotationResponse) GetCustomPeriodUnit() *string {
-	if o == nil {
+func (v *V4RotationResponse) GetCustomPeriodUnit() *string {
+	if v == nil {
 		return nil
 	}
-	return o.CustomPeriodUnit
+	return v.CustomPeriodUnit
 }
 
-func (o *V4RotationResponse) GetShiftTimeSlots() []V4ShiftTimeSlot {
-	if o == nil {
+func (v *V4RotationResponse) GetShiftTimeSlots() []V4ShiftTimeSlot {
+	if v == nil {
 		return nil
 	}
-	return o.ShiftTimeSlots
+	return v.ShiftTimeSlots
 }
 
-func (o *V4RotationResponse) GetChangeParticipantsFrequency() int64 {
-	if o == nil {
+func (v *V4RotationResponse) GetChangeParticipantsFrequency() int64 {
+	if v == nil {
 		return 0
 	}
-	return o.ChangeParticipantsFrequency
+	return v.ChangeParticipantsFrequency
 }
 
-func (o *V4RotationResponse) GetChangeParticipantsUnit() string {
-	if o == nil {
+func (v *V4RotationResponse) GetChangeParticipantsUnit() string {
+	if v == nil {
 		return ""
 	}
-	return o.ChangeParticipantsUnit
+	return v.ChangeParticipantsUnit
 }
 
-func (o *V4RotationResponse) GetEndDate() *string {
-	if o == nil {
+func (v *V4RotationResponse) GetEndDate() *string {
+	if v == nil {
 		return nil
 	}
-	return o.EndDate
+	return v.EndDate
 }
 
-func (o *V4RotationResponse) GetEndsAfterIterations() *int64 {
-	if o == nil {
+func (v *V4RotationResponse) GetEndsAfterIterations() *int64 {
+	if v == nil {
 		return nil
 	}
-	return o.EndsAfterIterations
+	return v.EndsAfterIterations
 }
 
-func (o *V4RotationResponse) GetRotationParticipants() []V4ParticipantGroup {
-	if o == nil {
+func (v *V4RotationResponse) GetRotationParticipants() []V4ParticipantGroup {
+	if v == nil {
 		return nil
 	}
-	return o.RotationParticipants
+	return v.RotationParticipants
 }
 
-func (o *V4RotationResponse) GetCreatedAt() string {
-	if o == nil {
+func (v *V4RotationResponse) GetCreatedAt() string {
+	if v == nil {
 		return ""
 	}
-	return o.CreatedAt
+	return v.CreatedAt
 }
 
-func (o *V4RotationResponse) GetUpdatedAt() string {
-	if o == nil {
+func (v *V4RotationResponse) GetUpdatedAt() string {
+	if v == nil {
 		return ""
 	}
-	return o.UpdatedAt
+	return v.UpdatedAt
 }

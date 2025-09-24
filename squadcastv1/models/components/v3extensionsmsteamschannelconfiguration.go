@@ -20,51 +20,51 @@ type V3ExtensionsMSTeamsChannelConfiguration struct {
 	MsteamsChannelName string `json:"msteams_channel_name"`
 }
 
-func (o *V3ExtensionsMSTeamsChannelConfiguration) GetID() *string {
-	if o == nil {
+func (v *V3ExtensionsMSTeamsChannelConfiguration) GetID() *string {
+	if v == nil {
 		return nil
 	}
-	return o.ID
+	return v.ID
 }
 
-func (o *V3ExtensionsMSTeamsChannelConfiguration) GetSquadcastTeamID() string {
-	if o == nil {
+func (v *V3ExtensionsMSTeamsChannelConfiguration) GetSquadcastTeamID() string {
+	if v == nil {
 		return ""
 	}
-	return o.SquadcastTeamID
+	return v.SquadcastTeamID
 }
 
-func (o *V3ExtensionsMSTeamsChannelConfiguration) GetSquadcastTeamName() string {
-	if o == nil {
+func (v *V3ExtensionsMSTeamsChannelConfiguration) GetSquadcastTeamName() string {
+	if v == nil {
 		return ""
 	}
-	return o.SquadcastTeamName
+	return v.SquadcastTeamName
 }
 
-func (o *V3ExtensionsMSTeamsChannelConfiguration) GetIsAllServices() bool {
-	if o == nil {
+func (v *V3ExtensionsMSTeamsChannelConfiguration) GetIsAllServices() bool {
+	if v == nil {
 		return false
 	}
-	return o.IsAllServices
+	return v.IsAllServices
 }
 
-func (o *V3ExtensionsMSTeamsChannelConfiguration) GetServices() []V3ExtensionsMSTeamsSquadCastServiceMapping {
-	if o == nil {
+func (v *V3ExtensionsMSTeamsChannelConfiguration) GetServices() []V3ExtensionsMSTeamsSquadCastServiceMapping {
+	if v == nil {
 		return []V3ExtensionsMSTeamsSquadCastServiceMapping{}
 	}
-	return o.Services
+	return v.Services
 }
 
-func (o *V3ExtensionsMSTeamsChannelConfiguration) GetMsteamsChannelID() string {
-	if o == nil {
+func (v *V3ExtensionsMSTeamsChannelConfiguration) GetMsteamsChannelID() string {
+	if v == nil {
 		return ""
 	}
-	return o.MsteamsChannelID
+	return v.MsteamsChannelID
 }
 
-func (o *V3ExtensionsMSTeamsChannelConfiguration) GetMsteamsChannelName() string {
-	if o == nil {
+func (v *V3ExtensionsMSTeamsChannelConfiguration) GetMsteamsChannelName() string {
+	if v == nil {
 		return ""
 	}
-	return o.MsteamsChannelName
+	return v.MsteamsChannelName
 }

@@ -48,86 +48,86 @@ type V4ScheduleResponse struct {
 	UpdatedAt   string                      `json:"updatedAt"`
 }
 
-func (o *V4ScheduleResponse) GetID() int64 {
-	if o == nil {
+func (v *V4ScheduleResponse) GetID() int64 {
+	if v == nil {
 		return 0
 	}
-	return o.ID
+	return v.ID
 }
 
-func (o *V4ScheduleResponse) GetName() string {
-	if o == nil {
+func (v *V4ScheduleResponse) GetName() string {
+	if v == nil {
 		return ""
 	}
-	return o.Name
+	return v.Name
 }
 
-func (o *V4ScheduleResponse) GetDescription() string {
-	if o == nil {
+func (v *V4ScheduleResponse) GetDescription() string {
+	if v == nil {
 		return ""
 	}
-	return o.Description
+	return v.Description
 }
 
-func (o *V4ScheduleResponse) GetOrgID() string {
-	if o == nil {
+func (v *V4ScheduleResponse) GetOrgID() string {
+	if v == nil {
 		return ""
 	}
-	return o.OrgID
+	return v.OrgID
 }
 
-func (o *V4ScheduleResponse) GetTeamID() string {
-	if o == nil {
+func (v *V4ScheduleResponse) GetTeamID() string {
+	if v == nil {
 		return ""
 	}
-	return o.TeamID
+	return v.TeamID
 }
 
-func (o *V4ScheduleResponse) GetTimeZone() string {
-	if o == nil {
+func (v *V4ScheduleResponse) GetTimeZone() string {
+	if v == nil {
 		return ""
 	}
-	return o.TimeZone
+	return v.TimeZone
 }
 
-func (o *V4ScheduleResponse) GetPaused() bool {
-	if o == nil {
+func (v *V4ScheduleResponse) GetPaused() bool {
+	if v == nil {
 		return false
 	}
-	return o.Paused
+	return v.Paused
 }
 
-func (o *V4ScheduleResponse) GetOwnerID() string {
-	if o == nil {
+func (v *V4ScheduleResponse) GetOwnerID() string {
+	if v == nil {
 		return ""
 	}
-	return o.OwnerID
+	return v.OwnerID
 }
 
-func (o *V4ScheduleResponse) GetOwnerType() V4ScheduleResponseOwnerType {
-	if o == nil {
+func (v *V4ScheduleResponse) GetOwnerType() V4ScheduleResponseOwnerType {
+	if v == nil {
 		return V4ScheduleResponseOwnerType("")
 	}
-	return o.OwnerType
+	return v.OwnerType
 }
 
-func (o *V4ScheduleResponse) GetTags() []V4Tag {
-	if o == nil {
+func (v *V4ScheduleResponse) GetTags() []V4Tag {
+	if v == nil {
 		return nil
 	}
-	return o.Tags
+	return v.Tags
 }
 
-func (o *V4ScheduleResponse) GetCreatedAt() string {
-	if o == nil {
+func (v *V4ScheduleResponse) GetCreatedAt() string {
+	if v == nil {
 		return ""
 	}
-	return o.CreatedAt
+	return v.CreatedAt
 }
 
-func (o *V4ScheduleResponse) GetUpdatedAt() string {
-	if o == nil {
+func (v *V4ScheduleResponse) GetUpdatedAt() string {
+	if v == nil {
 		return ""
 	}
-	return o.UpdatedAt
+	return v.UpdatedAt
 }

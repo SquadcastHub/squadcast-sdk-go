@@ -12,25 +12,25 @@ type WorkflowsGetWorkflowLogsRequest struct {
 	PageNumber *string `queryParam:"style=form,explode=false,name=page_number"`
 }
 
-func (o *WorkflowsGetWorkflowLogsRequest) GetWorkflowID() string {
-	if o == nil {
+func (w *WorkflowsGetWorkflowLogsRequest) GetWorkflowID() string {
+	if w == nil {
 		return ""
 	}
-	return o.WorkflowID
+	return w.WorkflowID
 }
 
-func (o *WorkflowsGetWorkflowLogsRequest) GetPageSize() *string {
-	if o == nil {
+func (w *WorkflowsGetWorkflowLogsRequest) GetPageSize() *string {
+	if w == nil {
 		return nil
 	}
-	return o.PageSize
+	return w.PageSize
 }
 
-func (o *WorkflowsGetWorkflowLogsRequest) GetPageNumber() *string {
-	if o == nil {
+func (w *WorkflowsGetWorkflowLogsRequest) GetPageNumber() *string {
+	if w == nil {
 		return nil
 	}
-	return o.PageNumber
+	return w.PageNumber
 }
 
 type WorkflowsGetWorkflowLogsResponse struct {
@@ -39,16 +39,16 @@ type WorkflowsGetWorkflowLogsResponse struct {
 	V3WorkflowsGetWorkflowLogsResponse *components.V3WorkflowsGetWorkflowLogsResponse
 }
 
-func (o *WorkflowsGetWorkflowLogsResponse) GetHTTPMeta() components.HTTPMetadata {
-	if o == nil {
+func (w *WorkflowsGetWorkflowLogsResponse) GetHTTPMeta() components.HTTPMetadata {
+	if w == nil {
 		return components.HTTPMetadata{}
 	}
-	return o.HTTPMeta
+	return w.HTTPMeta
 }
 
-func (o *WorkflowsGetWorkflowLogsResponse) GetV3WorkflowsGetWorkflowLogsResponse() *components.V3WorkflowsGetWorkflowLogsResponse {
-	if o == nil {
+func (w *WorkflowsGetWorkflowLogsResponse) GetV3WorkflowsGetWorkflowLogsResponse() *components.V3WorkflowsGetWorkflowLogsResponse {
+	if w == nil {
 		return nil
 	}
-	return o.V3WorkflowsGetWorkflowLogsResponse
+	return w.V3WorkflowsGetWorkflowLogsResponse
 }

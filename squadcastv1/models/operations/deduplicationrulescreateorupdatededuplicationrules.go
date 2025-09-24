@@ -11,29 +11,29 @@ type DeduplicationRulesCreateOrUpdateDeduplicationRulesRequest struct {
 	V3ServicesDeduplicationRulesCreateDeduplicationRulesRequest components.V3ServicesDeduplicationRulesCreateDeduplicationRulesRequest `request:"mediaType=application/json"`
 }
 
-func (o *DeduplicationRulesCreateOrUpdateDeduplicationRulesRequest) GetServiceID() string {
-	if o == nil {
+func (d *DeduplicationRulesCreateOrUpdateDeduplicationRulesRequest) GetServiceID() string {
+	if d == nil {
 		return ""
 	}
-	return o.ServiceID
+	return d.ServiceID
 }
 
-func (o *DeduplicationRulesCreateOrUpdateDeduplicationRulesRequest) GetV3ServicesDeduplicationRulesCreateDeduplicationRulesRequest() components.V3ServicesDeduplicationRulesCreateDeduplicationRulesRequest {
-	if o == nil {
+func (d *DeduplicationRulesCreateOrUpdateDeduplicationRulesRequest) GetV3ServicesDeduplicationRulesCreateDeduplicationRulesRequest() components.V3ServicesDeduplicationRulesCreateDeduplicationRulesRequest {
+	if d == nil {
 		return components.V3ServicesDeduplicationRulesCreateDeduplicationRulesRequest{}
 	}
-	return o.V3ServicesDeduplicationRulesCreateDeduplicationRulesRequest
+	return d.V3ServicesDeduplicationRulesCreateDeduplicationRulesRequest
 }
 
 type DeduplicationRulesCreateOrUpdateDeduplicationRulesData struct {
 	Rules []components.V3ServicesDeduplicationRulesDeduplicationRuleResponse `json:"rules"`
 }
 
-func (o *DeduplicationRulesCreateOrUpdateDeduplicationRulesData) GetRules() []components.V3ServicesDeduplicationRulesDeduplicationRuleResponse {
-	if o == nil {
+func (d *DeduplicationRulesCreateOrUpdateDeduplicationRulesData) GetRules() []components.V3ServicesDeduplicationRulesDeduplicationRuleResponse {
+	if d == nil {
 		return []components.V3ServicesDeduplicationRulesDeduplicationRuleResponse{}
 	}
-	return o.Rules
+	return d.Rules
 }
 
 // DeduplicationRulesCreateOrUpdateDeduplicationRulesResponseBody - The request has succeeded and a new resource has been created as a result.
@@ -41,11 +41,11 @@ type DeduplicationRulesCreateOrUpdateDeduplicationRulesResponseBody struct {
 	Data DeduplicationRulesCreateOrUpdateDeduplicationRulesData `json:"data"`
 }
 
-func (o *DeduplicationRulesCreateOrUpdateDeduplicationRulesResponseBody) GetData() DeduplicationRulesCreateOrUpdateDeduplicationRulesData {
-	if o == nil {
+func (d *DeduplicationRulesCreateOrUpdateDeduplicationRulesResponseBody) GetData() DeduplicationRulesCreateOrUpdateDeduplicationRulesData {
+	if d == nil {
 		return DeduplicationRulesCreateOrUpdateDeduplicationRulesData{}
 	}
-	return o.Data
+	return d.Data
 }
 
 type DeduplicationRulesCreateOrUpdateDeduplicationRulesResponse struct {
@@ -54,16 +54,16 @@ type DeduplicationRulesCreateOrUpdateDeduplicationRulesResponse struct {
 	Object *DeduplicationRulesCreateOrUpdateDeduplicationRulesResponseBody
 }
 
-func (o *DeduplicationRulesCreateOrUpdateDeduplicationRulesResponse) GetHTTPMeta() components.HTTPMetadata {
-	if o == nil {
+func (d *DeduplicationRulesCreateOrUpdateDeduplicationRulesResponse) GetHTTPMeta() components.HTTPMetadata {
+	if d == nil {
 		return components.HTTPMetadata{}
 	}
-	return o.HTTPMeta
+	return d.HTTPMeta
 }
 
-func (o *DeduplicationRulesCreateOrUpdateDeduplicationRulesResponse) GetObject() *DeduplicationRulesCreateOrUpdateDeduplicationRulesResponseBody {
-	if o == nil {
+func (d *DeduplicationRulesCreateOrUpdateDeduplicationRulesResponse) GetObject() *DeduplicationRulesCreateOrUpdateDeduplicationRulesResponseBody {
+	if d == nil {
 		return nil
 	}
-	return o.Object
+	return d.Object
 }

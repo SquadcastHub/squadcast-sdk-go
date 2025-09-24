@@ -32,79 +32,79 @@ func (v *V3SLOSLOMonitoringCheck) UnmarshalJSON(data []byte) error {
 	return nil
 }
 
-func (o *V3SLOSLOMonitoringCheck) GetID() *int64 {
-	if o == nil {
+func (v *V3SLOSLOMonitoringCheck) GetID() *int64 {
+	if v == nil {
 		return nil
 	}
-	return o.ID
+	return v.ID
 }
 
-func (o *V3SLOSLOMonitoringCheck) GetSloID() *int64 {
-	if o == nil {
+func (v *V3SLOSLOMonitoringCheck) GetSloID() *int64 {
+	if v == nil {
 		return nil
 	}
-	return o.SloID
+	return v.SloID
 }
 
-func (o *V3SLOSLOMonitoringCheck) GetName() string {
-	if o == nil {
+func (v *V3SLOSLOMonitoringCheck) GetName() string {
+	if v == nil {
 		return ""
 	}
-	return o.Name
+	return v.Name
 }
 
-func (o *V3SLOSLOMonitoringCheck) GetThreshold() *int64 {
-	if o == nil {
+func (v *V3SLOSLOMonitoringCheck) GetThreshold() *int64 {
+	if v == nil {
 		return nil
 	}
-	return o.Threshold
+	return v.Threshold
 }
 
-func (o *V3SLOSLOMonitoringCheck) GetOwnerType() string {
-	if o == nil {
+func (v *V3SLOSLOMonitoringCheck) GetOwnerType() string {
+	if v == nil {
 		return ""
 	}
-	return o.OwnerType
+	return v.OwnerType
 }
 
-func (o *V3SLOSLOMonitoringCheck) GetOwnerID() string {
-	if o == nil {
+func (v *V3SLOSLOMonitoringCheck) GetOwnerID() string {
+	if v == nil {
 		return ""
 	}
-	return o.OwnerID
+	return v.OwnerID
 }
 
-func (o *V3SLOSLOMonitoringCheck) GetOrgID() *string {
-	if o == nil {
+func (v *V3SLOSLOMonitoringCheck) GetOrgID() *string {
+	if v == nil {
 		return nil
 	}
-	return o.OrgID
+	return v.OrgID
 }
 
-func (o *V3SLOSLOMonitoringCheck) GetIsChecked() *bool {
-	if o == nil {
+func (v *V3SLOSLOMonitoringCheck) GetIsChecked() *bool {
+	if v == nil {
 		return nil
 	}
-	return o.IsChecked
+	return v.IsChecked
 }
 
-func (o *V3SLOSLOMonitoringCheck) GetCreatedAt() *time.Time {
-	if o == nil {
+func (v *V3SLOSLOMonitoringCheck) GetCreatedAt() *time.Time {
+	if v == nil {
 		return nil
 	}
-	return o.CreatedAt
+	return v.CreatedAt
 }
 
-func (o *V3SLOSLOMonitoringCheck) GetUpdatedAt() *time.Time {
-	if o == nil {
+func (v *V3SLOSLOMonitoringCheck) GetUpdatedAt() *time.Time {
+	if v == nil {
 		return nil
 	}
-	return o.UpdatedAt
+	return v.UpdatedAt
 }
 
-func (o *V3SLOSLOMonitoringCheck) GetDeletedAt() *time.Time {
-	if o == nil {
+func (v *V3SLOSLOMonitoringCheck) GetDeletedAt() *time.Time {
+	if v == nil {
 		return nil
 	}
-	return o.DeletedAt
+	return v.DeletedAt
 }

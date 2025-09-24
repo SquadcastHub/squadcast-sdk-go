@@ -8,23 +8,23 @@ type V3ServicesOverlayRenderCustomContentOverlayRequest struct {
 	Payload             string `json:"payload"`
 }
 
-func (o *V3ServicesOverlayRenderCustomContentOverlayRequest) GetOverlayTemplateType() string {
-	if o == nil {
+func (v *V3ServicesOverlayRenderCustomContentOverlayRequest) GetOverlayTemplateType() string {
+	if v == nil {
 		return ""
 	}
-	return o.OverlayTemplateType
+	return v.OverlayTemplateType
 }
 
-func (o *V3ServicesOverlayRenderCustomContentOverlayRequest) GetTemplate() string {
-	if o == nil {
+func (v *V3ServicesOverlayRenderCustomContentOverlayRequest) GetTemplate() string {
+	if v == nil {
 		return ""
 	}
-	return o.Template
+	return v.Template
 }
 
-func (o *V3ServicesOverlayRenderCustomContentOverlayRequest) GetPayload() string {
-	if o == nil {
+func (v *V3ServicesOverlayRenderCustomContentOverlayRequest) GetPayload() string {
+	if v == nil {
 		return ""
 	}
-	return o.Payload
+	return v.Payload
 }

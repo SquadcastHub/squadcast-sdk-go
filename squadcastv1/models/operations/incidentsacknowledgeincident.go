@@ -10,11 +10,11 @@ type IncidentsAcknowledgeIncidentRequest struct {
 	IncidentID string `pathParam:"style=simple,explode=false,name=incidentID"`
 }
 
-func (o *IncidentsAcknowledgeIncidentRequest) GetIncidentID() string {
-	if o == nil {
+func (i *IncidentsAcknowledgeIncidentRequest) GetIncidentID() string {
+	if i == nil {
 		return ""
 	}
-	return o.IncidentID
+	return i.IncidentID
 }
 
 // IncidentsAcknowledgeIncidentResponseBody - The request has succeeded.
@@ -22,11 +22,11 @@ type IncidentsAcknowledgeIncidentResponseBody struct {
 	Data string `json:"data"`
 }
 
-func (o *IncidentsAcknowledgeIncidentResponseBody) GetData() string {
-	if o == nil {
+func (i *IncidentsAcknowledgeIncidentResponseBody) GetData() string {
+	if i == nil {
 		return ""
 	}
-	return o.Data
+	return i.Data
 }
 
 type IncidentsAcknowledgeIncidentResponse struct {
@@ -35,16 +35,16 @@ type IncidentsAcknowledgeIncidentResponse struct {
 	Object *IncidentsAcknowledgeIncidentResponseBody
 }
 
-func (o *IncidentsAcknowledgeIncidentResponse) GetHTTPMeta() components.HTTPMetadata {
-	if o == nil {
+func (i *IncidentsAcknowledgeIncidentResponse) GetHTTPMeta() components.HTTPMetadata {
+	if i == nil {
 		return components.HTTPMetadata{}
 	}
-	return o.HTTPMeta
+	return i.HTTPMeta
 }
 
-func (o *IncidentsAcknowledgeIncidentResponse) GetObject() *IncidentsAcknowledgeIncidentResponseBody {
-	if o == nil {
+func (i *IncidentsAcknowledgeIncidentResponse) GetObject() *IncidentsAcknowledgeIncidentResponseBody {
+	if i == nil {
 		return nil
 	}
-	return o.Object
+	return i.Object
 }

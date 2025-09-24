@@ -11,18 +11,18 @@ type ServicesDelayedNotificationConfigRequest struct {
 	V3ServicesNotificationDelayConfigRequest components.V3ServicesNotificationDelayConfigRequest `request:"mediaType=application/json"`
 }
 
-func (o *ServicesDelayedNotificationConfigRequest) GetServiceID() string {
-	if o == nil {
+func (s *ServicesDelayedNotificationConfigRequest) GetServiceID() string {
+	if s == nil {
 		return ""
 	}
-	return o.ServiceID
+	return s.ServiceID
 }
 
-func (o *ServicesDelayedNotificationConfigRequest) GetV3ServicesNotificationDelayConfigRequest() components.V3ServicesNotificationDelayConfigRequest {
-	if o == nil {
+func (s *ServicesDelayedNotificationConfigRequest) GetV3ServicesNotificationDelayConfigRequest() components.V3ServicesNotificationDelayConfigRequest {
+	if s == nil {
 		return components.V3ServicesNotificationDelayConfigRequest{}
 	}
-	return o.V3ServicesNotificationDelayConfigRequest
+	return s.V3ServicesNotificationDelayConfigRequest
 }
 
 // ServicesDelayedNotificationConfigResponseBody - The request has succeeded.
@@ -30,11 +30,11 @@ type ServicesDelayedNotificationConfigResponseBody struct {
 	Data components.V3ServicesServiceResponse `json:"data"`
 }
 
-func (o *ServicesDelayedNotificationConfigResponseBody) GetData() components.V3ServicesServiceResponse {
-	if o == nil {
+func (s *ServicesDelayedNotificationConfigResponseBody) GetData() components.V3ServicesServiceResponse {
+	if s == nil {
 		return components.V3ServicesServiceResponse{}
 	}
-	return o.Data
+	return s.Data
 }
 
 type ServicesDelayedNotificationConfigResponse struct {
@@ -43,16 +43,16 @@ type ServicesDelayedNotificationConfigResponse struct {
 	Object *ServicesDelayedNotificationConfigResponseBody
 }
 
-func (o *ServicesDelayedNotificationConfigResponse) GetHTTPMeta() components.HTTPMetadata {
-	if o == nil {
+func (s *ServicesDelayedNotificationConfigResponse) GetHTTPMeta() components.HTTPMetadata {
+	if s == nil {
 		return components.HTTPMetadata{}
 	}
-	return o.HTTPMeta
+	return s.HTTPMeta
 }
 
-func (o *ServicesDelayedNotificationConfigResponse) GetObject() *ServicesDelayedNotificationConfigResponseBody {
-	if o == nil {
+func (s *ServicesDelayedNotificationConfigResponse) GetObject() *ServicesDelayedNotificationConfigResponseBody {
+	if s == nil {
 		return nil
 	}
-	return o.Object
+	return s.Object
 }

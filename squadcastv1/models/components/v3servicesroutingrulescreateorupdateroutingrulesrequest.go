@@ -6,9 +6,9 @@ type V3ServicesRoutingRulesCreateOrUpdateRoutingRulesRequest struct {
 	Rules []V3ServicesRoutingRulesRoutingRule `json:"rules"`
 }
 
-func (o *V3ServicesRoutingRulesCreateOrUpdateRoutingRulesRequest) GetRules() []V3ServicesRoutingRulesRoutingRule {
-	if o == nil {
+func (v *V3ServicesRoutingRulesCreateOrUpdateRoutingRulesRequest) GetRules() []V3ServicesRoutingRulesRoutingRule {
+	if v == nil {
 		return []V3ServicesRoutingRulesRoutingRule{}
 	}
-	return o.Rules
+	return v.Rules
 }

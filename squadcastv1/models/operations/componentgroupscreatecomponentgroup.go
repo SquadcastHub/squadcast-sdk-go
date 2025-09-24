@@ -11,18 +11,18 @@ type ComponentGroupsCreateComponentGroupRequest struct {
 	V4StatusPagesComponentGroupsCreateComponentGroupRequest components.V4StatusPagesComponentGroupsCreateComponentGroupRequest `request:"mediaType=application/json"`
 }
 
-func (o *ComponentGroupsCreateComponentGroupRequest) GetStatuspageID() string {
-	if o == nil {
+func (c *ComponentGroupsCreateComponentGroupRequest) GetStatuspageID() string {
+	if c == nil {
 		return ""
 	}
-	return o.StatuspageID
+	return c.StatuspageID
 }
 
-func (o *ComponentGroupsCreateComponentGroupRequest) GetV4StatusPagesComponentGroupsCreateComponentGroupRequest() components.V4StatusPagesComponentGroupsCreateComponentGroupRequest {
-	if o == nil {
+func (c *ComponentGroupsCreateComponentGroupRequest) GetV4StatusPagesComponentGroupsCreateComponentGroupRequest() components.V4StatusPagesComponentGroupsCreateComponentGroupRequest {
+	if c == nil {
 		return components.V4StatusPagesComponentGroupsCreateComponentGroupRequest{}
 	}
-	return o.V4StatusPagesComponentGroupsCreateComponentGroupRequest
+	return c.V4StatusPagesComponentGroupsCreateComponentGroupRequest
 }
 
 // ComponentGroupsCreateComponentGroupResponseBody - The request has succeeded.
@@ -30,11 +30,11 @@ type ComponentGroupsCreateComponentGroupResponseBody struct {
 	Data components.V4StatusPagesComponentGroupsCreateComponentGroupResponse `json:"data"`
 }
 
-func (o *ComponentGroupsCreateComponentGroupResponseBody) GetData() components.V4StatusPagesComponentGroupsCreateComponentGroupResponse {
-	if o == nil {
+func (c *ComponentGroupsCreateComponentGroupResponseBody) GetData() components.V4StatusPagesComponentGroupsCreateComponentGroupResponse {
+	if c == nil {
 		return components.V4StatusPagesComponentGroupsCreateComponentGroupResponse{}
 	}
-	return o.Data
+	return c.Data
 }
 
 type ComponentGroupsCreateComponentGroupResponse struct {
@@ -43,16 +43,16 @@ type ComponentGroupsCreateComponentGroupResponse struct {
 	Object *ComponentGroupsCreateComponentGroupResponseBody
 }
 
-func (o *ComponentGroupsCreateComponentGroupResponse) GetHTTPMeta() components.HTTPMetadata {
-	if o == nil {
+func (c *ComponentGroupsCreateComponentGroupResponse) GetHTTPMeta() components.HTTPMetadata {
+	if c == nil {
 		return components.HTTPMetadata{}
 	}
-	return o.HTTPMeta
+	return c.HTTPMeta
 }
 
-func (o *ComponentGroupsCreateComponentGroupResponse) GetObject() *ComponentGroupsCreateComponentGroupResponseBody {
-	if o == nil {
+func (c *ComponentGroupsCreateComponentGroupResponse) GetObject() *ComponentGroupsCreateComponentGroupResponseBody {
+	if c == nil {
 		return nil
 	}
-	return o.Object
+	return c.Object
 }

@@ -43,51 +43,51 @@ type V3ServicesDeduplicationRulesDeduplicationRuleResponse struct {
 	Description             *string                                                       `json:"description,omitempty"`
 }
 
-func (o *V3ServicesDeduplicationRulesDeduplicationRuleResponse) GetExpression() string {
-	if o == nil {
+func (v *V3ServicesDeduplicationRulesDeduplicationRuleResponse) GetExpression() string {
+	if v == nil {
 		return ""
 	}
-	return o.Expression
+	return v.Expression
 }
 
-func (o *V3ServicesDeduplicationRulesDeduplicationRuleResponse) GetTimeWindow() int64 {
-	if o == nil {
+func (v *V3ServicesDeduplicationRulesDeduplicationRuleResponse) GetTimeWindow() int64 {
+	if v == nil {
 		return 0
 	}
-	return o.TimeWindow
+	return v.TimeWindow
 }
 
-func (o *V3ServicesDeduplicationRulesDeduplicationRuleResponse) GetTimeUnit() V3ServicesDeduplicationRulesDeduplicationRuleResponseTimeUnit {
-	if o == nil {
+func (v *V3ServicesDeduplicationRulesDeduplicationRuleResponse) GetTimeUnit() V3ServicesDeduplicationRulesDeduplicationRuleResponseTimeUnit {
+	if v == nil {
 		return V3ServicesDeduplicationRulesDeduplicationRuleResponseTimeUnit("")
 	}
-	return o.TimeUnit
+	return v.TimeUnit
 }
 
-func (o *V3ServicesDeduplicationRulesDeduplicationRuleResponse) GetIsBasic() bool {
-	if o == nil {
+func (v *V3ServicesDeduplicationRulesDeduplicationRuleResponse) GetIsBasic() bool {
+	if v == nil {
 		return false
 	}
-	return o.IsBasic
+	return v.IsBasic
 }
 
-func (o *V3ServicesDeduplicationRulesDeduplicationRuleResponse) GetBasicExpression() []V3ServicesDeduplicationRulesExpressionBranch {
-	if o == nil {
+func (v *V3ServicesDeduplicationRulesDeduplicationRuleResponse) GetBasicExpression() []V3ServicesDeduplicationRulesExpressionBranch {
+	if v == nil {
 		return nil
 	}
-	return o.BasicExpression
+	return v.BasicExpression
 }
 
-func (o *V3ServicesDeduplicationRulesDeduplicationRuleResponse) GetDependencyDeduplication() *bool {
-	if o == nil {
+func (v *V3ServicesDeduplicationRulesDeduplicationRuleResponse) GetDependencyDeduplication() *bool {
+	if v == nil {
 		return nil
 	}
-	return o.DependencyDeduplication
+	return v.DependencyDeduplication
 }
 
-func (o *V3ServicesDeduplicationRulesDeduplicationRuleResponse) GetDescription() *string {
-	if o == nil {
+func (v *V3ServicesDeduplicationRulesDeduplicationRuleResponse) GetDescription() *string {
+	if v == nil {
 		return nil
 	}
-	return o.Description
+	return v.Description
 }

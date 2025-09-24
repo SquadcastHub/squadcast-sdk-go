@@ -7,16 +7,16 @@ type V3ServicesJiraStatus struct {
 	Name string `json:"name"`
 }
 
-func (o *V3ServicesJiraStatus) GetID() string {
-	if o == nil {
+func (v *V3ServicesJiraStatus) GetID() string {
+	if v == nil {
 		return ""
 	}
-	return o.ID
+	return v.ID
 }
 
-func (o *V3ServicesJiraStatus) GetName() string {
-	if o == nil {
+func (v *V3ServicesJiraStatus) GetName() string {
+	if v == nil {
 		return ""
 	}
-	return o.Name
+	return v.Name
 }

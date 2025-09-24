@@ -7,16 +7,16 @@ type V3IncidentsSnoozeNotificationsReassignTo struct {
 	Type string `json:"type"`
 }
 
-func (o *V3IncidentsSnoozeNotificationsReassignTo) GetID() string {
-	if o == nil {
+func (v *V3IncidentsSnoozeNotificationsReassignTo) GetID() string {
+	if v == nil {
 		return ""
 	}
-	return o.ID
+	return v.ID
 }
 
-func (o *V3IncidentsSnoozeNotificationsReassignTo) GetType() string {
-	if o == nil {
+func (v *V3IncidentsSnoozeNotificationsReassignTo) GetType() string {
+	if v == nil {
 		return ""
 	}
-	return o.Type
+	return v.Type
 }

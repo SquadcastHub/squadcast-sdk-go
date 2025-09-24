@@ -14,30 +14,30 @@ type V3ExtensionsMSTeamsConnectedTeams struct {
 	ChannelConfigurations []V3ExtensionsMSTeamsChannelConfiguration `json:"channel_configurations"`
 }
 
-func (o *V3ExtensionsMSTeamsConnectedTeams) GetID() *string {
-	if o == nil {
+func (v *V3ExtensionsMSTeamsConnectedTeams) GetID() *string {
+	if v == nil {
 		return nil
 	}
-	return o.ID
+	return v.ID
 }
 
-func (o *V3ExtensionsMSTeamsConnectedTeams) GetTeamID() string {
-	if o == nil {
+func (v *V3ExtensionsMSTeamsConnectedTeams) GetTeamID() string {
+	if v == nil {
 		return ""
 	}
-	return o.TeamID
+	return v.TeamID
 }
 
-func (o *V3ExtensionsMSTeamsConnectedTeams) GetTeamName() string {
-	if o == nil {
+func (v *V3ExtensionsMSTeamsConnectedTeams) GetTeamName() string {
+	if v == nil {
 		return ""
 	}
-	return o.TeamName
+	return v.TeamName
 }
 
-func (o *V3ExtensionsMSTeamsConnectedTeams) GetChannelConfigurations() []V3ExtensionsMSTeamsChannelConfiguration {
-	if o == nil {
+func (v *V3ExtensionsMSTeamsConnectedTeams) GetChannelConfigurations() []V3ExtensionsMSTeamsChannelConfiguration {
+	if v == nil {
 		return []V3ExtensionsMSTeamsChannelConfiguration{}
 	}
-	return o.ChannelConfigurations
+	return v.ChannelConfigurations
 }

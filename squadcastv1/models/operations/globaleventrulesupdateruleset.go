@@ -13,32 +13,32 @@ type GlobalEventRulesUpdateRulesetRequest struct {
 	V3GlobalEventRulesUpdateRulesetRequest components.V3GlobalEventRulesUpdateRulesetRequest `request:"mediaType=application/json"`
 }
 
-func (o *GlobalEventRulesUpdateRulesetRequest) GetGerID() int64 {
-	if o == nil {
+func (g *GlobalEventRulesUpdateRulesetRequest) GetGerID() int64 {
+	if g == nil {
 		return 0
 	}
-	return o.GerID
+	return g.GerID
 }
 
-func (o *GlobalEventRulesUpdateRulesetRequest) GetAlertSourceVersion() string {
-	if o == nil {
+func (g *GlobalEventRulesUpdateRulesetRequest) GetAlertSourceVersion() string {
+	if g == nil {
 		return ""
 	}
-	return o.AlertSourceVersion
+	return g.AlertSourceVersion
 }
 
-func (o *GlobalEventRulesUpdateRulesetRequest) GetAlertSourceShortname() string {
-	if o == nil {
+func (g *GlobalEventRulesUpdateRulesetRequest) GetAlertSourceShortname() string {
+	if g == nil {
 		return ""
 	}
-	return o.AlertSourceShortname
+	return g.AlertSourceShortname
 }
 
-func (o *GlobalEventRulesUpdateRulesetRequest) GetV3GlobalEventRulesUpdateRulesetRequest() components.V3GlobalEventRulesUpdateRulesetRequest {
-	if o == nil {
+func (g *GlobalEventRulesUpdateRulesetRequest) GetV3GlobalEventRulesUpdateRulesetRequest() components.V3GlobalEventRulesUpdateRulesetRequest {
+	if g == nil {
 		return components.V3GlobalEventRulesUpdateRulesetRequest{}
 	}
-	return o.V3GlobalEventRulesUpdateRulesetRequest
+	return g.V3GlobalEventRulesUpdateRulesetRequest
 }
 
 // GlobalEventRulesUpdateRulesetResponseBody - The request has succeeded.
@@ -46,11 +46,11 @@ type GlobalEventRulesUpdateRulesetResponseBody struct {
 	Data components.V3GlobalEventRulesRulesetResponse `json:"data"`
 }
 
-func (o *GlobalEventRulesUpdateRulesetResponseBody) GetData() components.V3GlobalEventRulesRulesetResponse {
-	if o == nil {
+func (g *GlobalEventRulesUpdateRulesetResponseBody) GetData() components.V3GlobalEventRulesRulesetResponse {
+	if g == nil {
 		return components.V3GlobalEventRulesRulesetResponse{}
 	}
-	return o.Data
+	return g.Data
 }
 
 type GlobalEventRulesUpdateRulesetResponse struct {
@@ -59,16 +59,16 @@ type GlobalEventRulesUpdateRulesetResponse struct {
 	Object *GlobalEventRulesUpdateRulesetResponseBody
 }
 
-func (o *GlobalEventRulesUpdateRulesetResponse) GetHTTPMeta() components.HTTPMetadata {
-	if o == nil {
+func (g *GlobalEventRulesUpdateRulesetResponse) GetHTTPMeta() components.HTTPMetadata {
+	if g == nil {
 		return components.HTTPMetadata{}
 	}
-	return o.HTTPMeta
+	return g.HTTPMeta
 }
 
-func (o *GlobalEventRulesUpdateRulesetResponse) GetObject() *GlobalEventRulesUpdateRulesetResponseBody {
-	if o == nil {
+func (g *GlobalEventRulesUpdateRulesetResponse) GetObject() *GlobalEventRulesUpdateRulesetResponseBody {
+	if g == nil {
 		return nil
 	}
-	return o.Object
+	return g.Object
 }

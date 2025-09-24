@@ -6,9 +6,9 @@ type V3IncidentsAptaMessageResponse struct {
 	Message string `json:"message"`
 }
 
-func (o *V3IncidentsAptaMessageResponse) GetMessage() string {
-	if o == nil {
+func (v *V3IncidentsAptaMessageResponse) GetMessage() string {
+	if v == nil {
 		return ""
 	}
-	return o.Message
+	return v.Message
 }

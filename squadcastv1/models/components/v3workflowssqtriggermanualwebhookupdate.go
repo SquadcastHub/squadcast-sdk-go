@@ -46,11 +46,11 @@ func (v *V3WorkflowsSqTriggerManualWebhookUpdateData) UnmarshalJSON(data []byte)
 	return nil
 }
 
-func (o *V3WorkflowsSqTriggerManualWebhookUpdateData) GetID() *string {
-	if o == nil {
+func (v *V3WorkflowsSqTriggerManualWebhookUpdateData) GetID() *string {
+	if v == nil {
 		return nil
 	}
-	return o.ID
+	return v.ID
 }
 
 type V3WorkflowsSqTriggerManualWebhookUpdate struct {
@@ -69,16 +69,16 @@ func (v *V3WorkflowsSqTriggerManualWebhookUpdate) UnmarshalJSON(data []byte) err
 	return nil
 }
 
-func (o *V3WorkflowsSqTriggerManualWebhookUpdate) GetName() V3WorkflowsSqTriggerManualWebhookUpdateName {
-	if o == nil {
+func (v *V3WorkflowsSqTriggerManualWebhookUpdate) GetName() V3WorkflowsSqTriggerManualWebhookUpdateName {
+	if v == nil {
 		return V3WorkflowsSqTriggerManualWebhookUpdateName("")
 	}
-	return o.Name
+	return v.Name
 }
 
-func (o *V3WorkflowsSqTriggerManualWebhookUpdate) GetData() *V3WorkflowsSqTriggerManualWebhookUpdateData {
-	if o == nil {
+func (v *V3WorkflowsSqTriggerManualWebhookUpdate) GetData() *V3WorkflowsSqTriggerManualWebhookUpdateData {
+	if v == nil {
 		return nil
 	}
-	return o.Data
+	return v.Data
 }

@@ -11,18 +11,18 @@ type RotationsGetRotationParticipantsRequest struct {
 	RotationID string `pathParam:"style=simple,explode=false,name=rotationID"`
 }
 
-func (o *RotationsGetRotationParticipantsRequest) GetScheduleID() string {
-	if o == nil {
+func (r *RotationsGetRotationParticipantsRequest) GetScheduleID() string {
+	if r == nil {
 		return ""
 	}
-	return o.ScheduleID
+	return r.ScheduleID
 }
 
-func (o *RotationsGetRotationParticipantsRequest) GetRotationID() string {
-	if o == nil {
+func (r *RotationsGetRotationParticipantsRequest) GetRotationID() string {
+	if r == nil {
 		return ""
 	}
-	return o.RotationID
+	return r.RotationID
 }
 
 // RotationsGetRotationParticipantsResponseBody - The request has succeeded.
@@ -30,11 +30,11 @@ type RotationsGetRotationParticipantsResponseBody struct {
 	Data components.V4GetRotationParticipantsResponse `json:"data"`
 }
 
-func (o *RotationsGetRotationParticipantsResponseBody) GetData() components.V4GetRotationParticipantsResponse {
-	if o == nil {
+func (r *RotationsGetRotationParticipantsResponseBody) GetData() components.V4GetRotationParticipantsResponse {
+	if r == nil {
 		return components.V4GetRotationParticipantsResponse{}
 	}
-	return o.Data
+	return r.Data
 }
 
 type RotationsGetRotationParticipantsResponse struct {
@@ -43,16 +43,16 @@ type RotationsGetRotationParticipantsResponse struct {
 	Object *RotationsGetRotationParticipantsResponseBody
 }
 
-func (o *RotationsGetRotationParticipantsResponse) GetHTTPMeta() components.HTTPMetadata {
-	if o == nil {
+func (r *RotationsGetRotationParticipantsResponse) GetHTTPMeta() components.HTTPMetadata {
+	if r == nil {
 		return components.HTTPMetadata{}
 	}
-	return o.HTTPMeta
+	return r.HTTPMeta
 }
 
-func (o *RotationsGetRotationParticipantsResponse) GetObject() *RotationsGetRotationParticipantsResponseBody {
-	if o == nil {
+func (r *RotationsGetRotationParticipantsResponse) GetObject() *RotationsGetRotationParticipantsResponseBody {
+	if r == nil {
 		return nil
 	}
-	return o.Object
+	return r.Object
 }

@@ -6,11 +6,11 @@ type ResolutionReason struct {
 	Message string `json:"message"`
 }
 
-func (o *ResolutionReason) GetMessage() string {
-	if o == nil {
+func (r *ResolutionReason) GetMessage() string {
+	if r == nil {
 		return ""
 	}
-	return o.Message
+	return r.Message
 }
 
 // V3IncidentsResolveIncidentRequest - Request body for resolving an incident.
@@ -18,9 +18,9 @@ type V3IncidentsResolveIncidentRequest struct {
 	ResolutionReason ResolutionReason `json:"resolution_reason"`
 }
 
-func (o *V3IncidentsResolveIncidentRequest) GetResolutionReason() ResolutionReason {
-	if o == nil {
+func (v *V3IncidentsResolveIncidentRequest) GetResolutionReason() ResolutionReason {
+	if v == nil {
 		return ResolutionReason{}
 	}
-	return o.ResolutionReason
+	return v.ResolutionReason
 }

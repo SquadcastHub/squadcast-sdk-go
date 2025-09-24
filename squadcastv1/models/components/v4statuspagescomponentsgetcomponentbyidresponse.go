@@ -11,44 +11,44 @@ type V4StatusPagesComponentsGetComponentByIDResponse struct {
 	UnderMaintenance bool   `json:"underMaintenance"`
 }
 
-func (o *V4StatusPagesComponentsGetComponentByIDResponse) GetID() int64 {
-	if o == nil {
+func (v *V4StatusPagesComponentsGetComponentByIDResponse) GetID() int64 {
+	if v == nil {
 		return 0
 	}
-	return o.ID
+	return v.ID
 }
 
-func (o *V4StatusPagesComponentsGetComponentByIDResponse) GetPageID() int64 {
-	if o == nil {
+func (v *V4StatusPagesComponentsGetComponentByIDResponse) GetPageID() int64 {
+	if v == nil {
 		return 0
 	}
-	return o.PageID
+	return v.PageID
 }
 
-func (o *V4StatusPagesComponentsGetComponentByIDResponse) GetName() string {
-	if o == nil {
+func (v *V4StatusPagesComponentsGetComponentByIDResponse) GetName() string {
+	if v == nil {
 		return ""
 	}
-	return o.Name
+	return v.Name
 }
 
-func (o *V4StatusPagesComponentsGetComponentByIDResponse) GetDescription() string {
-	if o == nil {
+func (v *V4StatusPagesComponentsGetComponentByIDResponse) GetDescription() string {
+	if v == nil {
 		return ""
 	}
-	return o.Description
+	return v.Description
 }
 
-func (o *V4StatusPagesComponentsGetComponentByIDResponse) GetStatusID() *int64 {
-	if o == nil {
+func (v *V4StatusPagesComponentsGetComponentByIDResponse) GetStatusID() *int64 {
+	if v == nil {
 		return nil
 	}
-	return o.StatusID
+	return v.StatusID
 }
 
-func (o *V4StatusPagesComponentsGetComponentByIDResponse) GetUnderMaintenance() bool {
-	if o == nil {
+func (v *V4StatusPagesComponentsGetComponentByIDResponse) GetUnderMaintenance() bool {
+	if v == nil {
 		return false
 	}
-	return o.UnderMaintenance
+	return v.UnderMaintenance
 }

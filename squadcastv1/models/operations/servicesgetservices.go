@@ -12,25 +12,25 @@ type ServicesGetServicesRequest struct {
 	Name        *string `queryParam:"style=form,explode=false,name=name"`
 }
 
-func (o *ServicesGetServicesRequest) GetOwnerID() *string {
-	if o == nil {
+func (s *ServicesGetServicesRequest) GetOwnerID() *string {
+	if s == nil {
 		return nil
 	}
-	return o.OwnerID
+	return s.OwnerID
 }
 
-func (o *ServicesGetServicesRequest) GetEntityOwner() *string {
-	if o == nil {
+func (s *ServicesGetServicesRequest) GetEntityOwner() *string {
+	if s == nil {
 		return nil
 	}
-	return o.EntityOwner
+	return s.EntityOwner
 }
 
-func (o *ServicesGetServicesRequest) GetName() *string {
-	if o == nil {
+func (s *ServicesGetServicesRequest) GetName() *string {
+	if s == nil {
 		return nil
 	}
-	return o.Name
+	return s.Name
 }
 
 // ServicesGetServicesResponseBody - The request has succeeded.
@@ -38,11 +38,11 @@ type ServicesGetServicesResponseBody struct {
 	Data []components.V3ServicesServiceResponse `json:"data"`
 }
 
-func (o *ServicesGetServicesResponseBody) GetData() []components.V3ServicesServiceResponse {
-	if o == nil {
+func (s *ServicesGetServicesResponseBody) GetData() []components.V3ServicesServiceResponse {
+	if s == nil {
 		return []components.V3ServicesServiceResponse{}
 	}
-	return o.Data
+	return s.Data
 }
 
 type ServicesGetServicesResponse struct {
@@ -51,16 +51,16 @@ type ServicesGetServicesResponse struct {
 	Object *ServicesGetServicesResponseBody
 }
 
-func (o *ServicesGetServicesResponse) GetHTTPMeta() components.HTTPMetadata {
-	if o == nil {
+func (s *ServicesGetServicesResponse) GetHTTPMeta() components.HTTPMetadata {
+	if s == nil {
 		return components.HTTPMetadata{}
 	}
-	return o.HTTPMeta
+	return s.HTTPMeta
 }
 
-func (o *ServicesGetServicesResponse) GetObject() *ServicesGetServicesResponseBody {
-	if o == nil {
+func (s *ServicesGetServicesResponse) GetObject() *ServicesGetServicesResponseBody {
+	if s == nil {
 		return nil
 	}
-	return o.Object
+	return s.Object
 }

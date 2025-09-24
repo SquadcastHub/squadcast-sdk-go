@@ -8,25 +8,25 @@ type V3ServicesNotificationDelayConfigFixedTimeslotConfig struct {
 	RepeatDays []int   `json:"repeat_days,omitempty"`
 }
 
-func (o *V3ServicesNotificationDelayConfigFixedTimeslotConfig) GetStartTime() *string {
-	if o == nil {
+func (v *V3ServicesNotificationDelayConfigFixedTimeslotConfig) GetStartTime() *string {
+	if v == nil {
 		return nil
 	}
-	return o.StartTime
+	return v.StartTime
 }
 
-func (o *V3ServicesNotificationDelayConfigFixedTimeslotConfig) GetEndTime() *string {
-	if o == nil {
+func (v *V3ServicesNotificationDelayConfigFixedTimeslotConfig) GetEndTime() *string {
+	if v == nil {
 		return nil
 	}
-	return o.EndTime
+	return v.EndTime
 }
 
-func (o *V3ServicesNotificationDelayConfigFixedTimeslotConfig) GetRepeatDays() []int {
-	if o == nil {
+func (v *V3ServicesNotificationDelayConfigFixedTimeslotConfig) GetRepeatDays() []int {
+	if v == nil {
 		return nil
 	}
-	return o.RepeatDays
+	return v.RepeatDays
 }
 
 type V3ServicesNotificationDelayConfigCustomTimeslots struct {
@@ -37,18 +37,18 @@ type V3ServicesNotificationDelayConfigAssignedTo struct {
 	Type *string `json:"type,omitempty"`
 }
 
-func (o *V3ServicesNotificationDelayConfigAssignedTo) GetID() *string {
-	if o == nil {
+func (v *V3ServicesNotificationDelayConfigAssignedTo) GetID() *string {
+	if v == nil {
 		return nil
 	}
-	return o.ID
+	return v.ID
 }
 
-func (o *V3ServicesNotificationDelayConfigAssignedTo) GetType() *string {
-	if o == nil {
+func (v *V3ServicesNotificationDelayConfigAssignedTo) GetType() *string {
+	if v == nil {
 		return nil
 	}
-	return o.Type
+	return v.Type
 }
 
 type V3ServicesNotificationDelayConfig struct {
@@ -60,44 +60,44 @@ type V3ServicesNotificationDelayConfig struct {
 	AssignedTo             *V3ServicesNotificationDelayConfigAssignedTo          `json:"assigned_to,omitempty"`
 }
 
-func (o *V3ServicesNotificationDelayConfig) GetIsEnabled() bool {
-	if o == nil {
+func (v *V3ServicesNotificationDelayConfig) GetIsEnabled() bool {
+	if v == nil {
 		return false
 	}
-	return o.IsEnabled
+	return v.IsEnabled
 }
 
-func (o *V3ServicesNotificationDelayConfig) GetTimezone() *string {
-	if o == nil {
+func (v *V3ServicesNotificationDelayConfig) GetTimezone() *string {
+	if v == nil {
 		return nil
 	}
-	return o.Timezone
+	return v.Timezone
 }
 
-func (o *V3ServicesNotificationDelayConfig) GetFixedTimeslotConfig() *V3ServicesNotificationDelayConfigFixedTimeslotConfig {
-	if o == nil {
+func (v *V3ServicesNotificationDelayConfig) GetFixedTimeslotConfig() *V3ServicesNotificationDelayConfigFixedTimeslotConfig {
+	if v == nil {
 		return nil
 	}
-	return o.FixedTimeslotConfig
+	return v.FixedTimeslotConfig
 }
 
-func (o *V3ServicesNotificationDelayConfig) GetCustomTimeslotsEnabled() *bool {
-	if o == nil {
+func (v *V3ServicesNotificationDelayConfig) GetCustomTimeslotsEnabled() *bool {
+	if v == nil {
 		return nil
 	}
-	return o.CustomTimeslotsEnabled
+	return v.CustomTimeslotsEnabled
 }
 
-func (o *V3ServicesNotificationDelayConfig) GetCustomTimeslots() *V3ServicesNotificationDelayConfigCustomTimeslots {
-	if o == nil {
+func (v *V3ServicesNotificationDelayConfig) GetCustomTimeslots() *V3ServicesNotificationDelayConfigCustomTimeslots {
+	if v == nil {
 		return nil
 	}
-	return o.CustomTimeslots
+	return v.CustomTimeslots
 }
 
-func (o *V3ServicesNotificationDelayConfig) GetAssignedTo() *V3ServicesNotificationDelayConfigAssignedTo {
-	if o == nil {
+func (v *V3ServicesNotificationDelayConfig) GetAssignedTo() *V3ServicesNotificationDelayConfigAssignedTo {
+	if v == nil {
 		return nil
 	}
-	return o.AssignedTo
+	return v.AssignedTo
 }

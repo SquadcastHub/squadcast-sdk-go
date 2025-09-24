@@ -43,51 +43,51 @@ type V4CreateScheduleRequest struct {
 	Tags        []V4Tag                          `json:"tags"`
 }
 
-func (o *V4CreateScheduleRequest) GetName() string {
-	if o == nil {
+func (v *V4CreateScheduleRequest) GetName() string {
+	if v == nil {
 		return ""
 	}
-	return o.Name
+	return v.Name
 }
 
-func (o *V4CreateScheduleRequest) GetDescription() string {
-	if o == nil {
+func (v *V4CreateScheduleRequest) GetDescription() string {
+	if v == nil {
 		return ""
 	}
-	return o.Description
+	return v.Description
 }
 
-func (o *V4CreateScheduleRequest) GetTeamID() string {
-	if o == nil {
+func (v *V4CreateScheduleRequest) GetTeamID() string {
+	if v == nil {
 		return ""
 	}
-	return o.TeamID
+	return v.TeamID
 }
 
-func (o *V4CreateScheduleRequest) GetOwnerID() string {
-	if o == nil {
+func (v *V4CreateScheduleRequest) GetOwnerID() string {
+	if v == nil {
 		return ""
 	}
-	return o.OwnerID
+	return v.OwnerID
 }
 
-func (o *V4CreateScheduleRequest) GetOwnerType() V4CreateScheduleRequestOwnerType {
-	if o == nil {
+func (v *V4CreateScheduleRequest) GetOwnerType() V4CreateScheduleRequestOwnerType {
+	if v == nil {
 		return V4CreateScheduleRequestOwnerType("")
 	}
-	return o.OwnerType
+	return v.OwnerType
 }
 
-func (o *V4CreateScheduleRequest) GetTimeZone() string {
-	if o == nil {
+func (v *V4CreateScheduleRequest) GetTimeZone() string {
+	if v == nil {
 		return ""
 	}
-	return o.TimeZone
+	return v.TimeZone
 }
 
-func (o *V4CreateScheduleRequest) GetTags() []V4Tag {
-	if o == nil {
+func (v *V4CreateScheduleRequest) GetTags() []V4Tag {
+	if v == nil {
 		return []V4Tag{}
 	}
-	return o.Tags
+	return v.Tags
 }

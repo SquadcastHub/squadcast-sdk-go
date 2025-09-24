@@ -11,18 +11,18 @@ type MaintenancesCreateMaintenanceRequest struct {
 	V4StatusPagesMaintenancesCreateMaintenanceRequest components.V4StatusPagesMaintenancesCreateMaintenanceRequest `request:"mediaType=application/json"`
 }
 
-func (o *MaintenancesCreateMaintenanceRequest) GetStatuspageID() string {
-	if o == nil {
+func (m *MaintenancesCreateMaintenanceRequest) GetStatuspageID() string {
+	if m == nil {
 		return ""
 	}
-	return o.StatuspageID
+	return m.StatuspageID
 }
 
-func (o *MaintenancesCreateMaintenanceRequest) GetV4StatusPagesMaintenancesCreateMaintenanceRequest() components.V4StatusPagesMaintenancesCreateMaintenanceRequest {
-	if o == nil {
+func (m *MaintenancesCreateMaintenanceRequest) GetV4StatusPagesMaintenancesCreateMaintenanceRequest() components.V4StatusPagesMaintenancesCreateMaintenanceRequest {
+	if m == nil {
 		return components.V4StatusPagesMaintenancesCreateMaintenanceRequest{}
 	}
-	return o.V4StatusPagesMaintenancesCreateMaintenanceRequest
+	return m.V4StatusPagesMaintenancesCreateMaintenanceRequest
 }
 
 // MaintenancesCreateMaintenanceResponseBody - The request has succeeded.
@@ -30,11 +30,11 @@ type MaintenancesCreateMaintenanceResponseBody struct {
 	Data components.V4StatusPagesMaintenancesCreateMaintenanceResponse `json:"data"`
 }
 
-func (o *MaintenancesCreateMaintenanceResponseBody) GetData() components.V4StatusPagesMaintenancesCreateMaintenanceResponse {
-	if o == nil {
+func (m *MaintenancesCreateMaintenanceResponseBody) GetData() components.V4StatusPagesMaintenancesCreateMaintenanceResponse {
+	if m == nil {
 		return components.V4StatusPagesMaintenancesCreateMaintenanceResponse{}
 	}
-	return o.Data
+	return m.Data
 }
 
 type MaintenancesCreateMaintenanceResponse struct {
@@ -43,16 +43,16 @@ type MaintenancesCreateMaintenanceResponse struct {
 	Object *MaintenancesCreateMaintenanceResponseBody
 }
 
-func (o *MaintenancesCreateMaintenanceResponse) GetHTTPMeta() components.HTTPMetadata {
-	if o == nil {
+func (m *MaintenancesCreateMaintenanceResponse) GetHTTPMeta() components.HTTPMetadata {
+	if m == nil {
 		return components.HTTPMetadata{}
 	}
-	return o.HTTPMeta
+	return m.HTTPMeta
 }
 
-func (o *MaintenancesCreateMaintenanceResponse) GetObject() *MaintenancesCreateMaintenanceResponseBody {
-	if o == nil {
+func (m *MaintenancesCreateMaintenanceResponse) GetObject() *MaintenancesCreateMaintenanceResponseBody {
+	if m == nil {
 		return nil
 	}
-	return o.Object
+	return m.Object
 }

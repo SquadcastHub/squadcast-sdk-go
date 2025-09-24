@@ -51,11 +51,11 @@ func (r *ResponseBody2) UnmarshalJSON(data []byte) error {
 	return nil
 }
 
-func (o *ResponseBody2) GetData() components.V3ServicesOverlayOverlayResponse {
-	if o == nil {
+func (r *ResponseBody2) GetData() components.V3ServicesOverlayOverlayResponse {
+	if r == nil {
 		return components.V3ServicesOverlayOverlayResponse{}
 	}
-	return o.Data
+	return r.Data
 }
 
 type ResponseBody1 struct {
@@ -73,11 +73,11 @@ func (r *ResponseBody1) UnmarshalJSON(data []byte) error {
 	return nil
 }
 
-func (o *ResponseBody1) GetData() components.V3ServicesOverlayOverlayResponse {
-	if o == nil {
+func (r *ResponseBody1) GetData() components.V3ServicesOverlayOverlayResponse {
+	if r == nil {
 		return components.V3ServicesOverlayOverlayResponse{}
 	}
-	return o.Data
+	return r.Data
 }
 
 type OverlayUpdateDedupKeyOverlayResponseBodyType string
@@ -89,8 +89,8 @@ const (
 
 // OverlayUpdateDedupKeyOverlayResponseBody - The request has succeeded.
 type OverlayUpdateDedupKeyOverlayResponseBody struct {
-	ResponseBody1 *ResponseBody1 `queryParam:"inline" name:"ResponseBody"`
-	ResponseBody2 *ResponseBody2 `queryParam:"inline" name:"ResponseBody"`
+	ResponseBody1 *ResponseBody1 `queryParam:"inline,name=ResponseBody"`
+	ResponseBody2 *ResponseBody2 `queryParam:"inline,name=ResponseBody"`
 
 	Type OverlayUpdateDedupKeyOverlayResponseBodyType
 }

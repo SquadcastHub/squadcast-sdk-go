@@ -11,18 +11,18 @@ type WorkflowsEnabledisableWorkflowRequest struct {
 	V3WorkflowsEnableDisableWorkflowRequest components.V3WorkflowsEnableDisableWorkflowRequest `request:"mediaType=application/json"`
 }
 
-func (o *WorkflowsEnabledisableWorkflowRequest) GetWorkflowID() string {
-	if o == nil {
+func (w *WorkflowsEnabledisableWorkflowRequest) GetWorkflowID() string {
+	if w == nil {
 		return ""
 	}
-	return o.WorkflowID
+	return w.WorkflowID
 }
 
-func (o *WorkflowsEnabledisableWorkflowRequest) GetV3WorkflowsEnableDisableWorkflowRequest() components.V3WorkflowsEnableDisableWorkflowRequest {
-	if o == nil {
+func (w *WorkflowsEnabledisableWorkflowRequest) GetV3WorkflowsEnableDisableWorkflowRequest() components.V3WorkflowsEnableDisableWorkflowRequest {
+	if w == nil {
 		return components.V3WorkflowsEnableDisableWorkflowRequest{}
 	}
-	return o.V3WorkflowsEnableDisableWorkflowRequest
+	return w.V3WorkflowsEnableDisableWorkflowRequest
 }
 
 // WorkflowsEnabledisableWorkflowResponseBody - There is no content to send for this request, but the headers may be useful.
@@ -34,16 +34,16 @@ type WorkflowsEnabledisableWorkflowResponse struct {
 	Body     []byte
 }
 
-func (o *WorkflowsEnabledisableWorkflowResponse) GetHTTPMeta() components.HTTPMetadata {
-	if o == nil {
+func (w *WorkflowsEnabledisableWorkflowResponse) GetHTTPMeta() components.HTTPMetadata {
+	if w == nil {
 		return components.HTTPMetadata{}
 	}
-	return o.HTTPMeta
+	return w.HTTPMeta
 }
 
-func (o *WorkflowsEnabledisableWorkflowResponse) GetBody() []byte {
-	if o == nil {
+func (w *WorkflowsEnabledisableWorkflowResponse) GetBody() []byte {
+	if w == nil {
 		return nil
 	}
-	return o.Body
+	return w.Body
 }

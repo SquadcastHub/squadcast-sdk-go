@@ -9,30 +9,30 @@ type V3GlobalOncallReminderRulesGlobalOncallReminderRuleResponse struct {
 	Rules     []V3GlobalOncallReminderRulesRule `json:"rules"`
 }
 
-func (o *V3GlobalOncallReminderRulesGlobalOncallReminderRuleResponse) GetID() int64 {
-	if o == nil {
+func (v *V3GlobalOncallReminderRulesGlobalOncallReminderRuleResponse) GetID() int64 {
+	if v == nil {
 		return 0
 	}
-	return o.ID
+	return v.ID
 }
 
-func (o *V3GlobalOncallReminderRulesGlobalOncallReminderRuleResponse) GetIsEnabled() bool {
-	if o == nil {
+func (v *V3GlobalOncallReminderRulesGlobalOncallReminderRuleResponse) GetIsEnabled() bool {
+	if v == nil {
 		return false
 	}
-	return o.IsEnabled
+	return v.IsEnabled
 }
 
-func (o *V3GlobalOncallReminderRulesGlobalOncallReminderRuleResponse) GetOwnerID() string {
-	if o == nil {
+func (v *V3GlobalOncallReminderRulesGlobalOncallReminderRuleResponse) GetOwnerID() string {
+	if v == nil {
 		return ""
 	}
-	return o.OwnerID
+	return v.OwnerID
 }
 
-func (o *V3GlobalOncallReminderRulesGlobalOncallReminderRuleResponse) GetRules() []V3GlobalOncallReminderRulesRule {
-	if o == nil {
+func (v *V3GlobalOncallReminderRulesGlobalOncallReminderRuleResponse) GetRules() []V3GlobalOncallReminderRulesRule {
+	if v == nil {
 		return []V3GlobalOncallReminderRulesRule{}
 	}
-	return o.Rules
+	return v.Rules
 }

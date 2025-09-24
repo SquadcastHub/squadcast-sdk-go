@@ -16,79 +16,79 @@ type V3TeamsTeamBaseResponse struct {
 	Default        bool                `json:"default"`
 }
 
-func (o *V3TeamsTeamBaseResponse) GetID() string {
-	if o == nil {
+func (v *V3TeamsTeamBaseResponse) GetID() string {
+	if v == nil {
 		return ""
 	}
-	return o.ID
+	return v.ID
 }
 
-func (o *V3TeamsTeamBaseResponse) GetCreatedAt() string {
-	if o == nil {
+func (v *V3TeamsTeamBaseResponse) GetCreatedAt() string {
+	if v == nil {
 		return ""
 	}
-	return o.CreatedAt
+	return v.CreatedAt
 }
 
-func (o *V3TeamsTeamBaseResponse) GetUpdatedAt() string {
-	if o == nil {
+func (v *V3TeamsTeamBaseResponse) GetUpdatedAt() string {
+	if v == nil {
 		return ""
 	}
-	return o.UpdatedAt
+	return v.UpdatedAt
 }
 
-func (o *V3TeamsTeamBaseResponse) GetCreatedBy() string {
-	if o == nil {
+func (v *V3TeamsTeamBaseResponse) GetCreatedBy() string {
+	if v == nil {
 		return ""
 	}
-	return o.CreatedBy
+	return v.CreatedBy
 }
 
-func (o *V3TeamsTeamBaseResponse) GetOrganizationID() string {
-	if o == nil {
+func (v *V3TeamsTeamBaseResponse) GetOrganizationID() string {
+	if v == nil {
 		return ""
 	}
-	return o.OrganizationID
+	return v.OrganizationID
 }
 
-func (o *V3TeamsTeamBaseResponse) GetName() string {
-	if o == nil {
+func (v *V3TeamsTeamBaseResponse) GetName() string {
+	if v == nil {
 		return ""
 	}
-	return o.Name
+	return v.Name
 }
 
-func (o *V3TeamsTeamBaseResponse) GetDescription() string {
-	if o == nil {
+func (v *V3TeamsTeamBaseResponse) GetDescription() string {
+	if v == nil {
 		return ""
 	}
-	return o.Description
+	return v.Description
 }
 
-func (o *V3TeamsTeamBaseResponse) GetSlug() string {
-	if o == nil {
+func (v *V3TeamsTeamBaseResponse) GetSlug() string {
+	if v == nil {
 		return ""
 	}
-	return o.Slug
+	return v.Slug
 }
 
-func (o *V3TeamsTeamBaseResponse) GetMembers() []V3TeamsTeamMember {
-	if o == nil {
+func (v *V3TeamsTeamBaseResponse) GetMembers() []V3TeamsTeamMember {
+	if v == nil {
 		return []V3TeamsTeamMember{}
 	}
-	return o.Members
+	return v.Members
 }
 
-func (o *V3TeamsTeamBaseResponse) GetRoles() []V3TeamsTeamRole {
-	if o == nil {
+func (v *V3TeamsTeamBaseResponse) GetRoles() []V3TeamsTeamRole {
+	if v == nil {
 		return []V3TeamsTeamRole{}
 	}
-	return o.Roles
+	return v.Roles
 }
 
-func (o *V3TeamsTeamBaseResponse) GetDefault() bool {
-	if o == nil {
+func (v *V3TeamsTeamBaseResponse) GetDefault() bool {
+	if v == nil {
 		return false
 	}
-	return o.Default
+	return v.Default
 }

@@ -13,25 +13,25 @@ type V4StatusPagesMaintenancesMaintenanceComponent struct {
 	GroupName *string `json:"groupName,omitempty"`
 }
 
-func (o *V4StatusPagesMaintenancesMaintenanceComponent) GetID() *int64 {
-	if o == nil {
+func (v *V4StatusPagesMaintenancesMaintenanceComponent) GetID() *int64 {
+	if v == nil {
 		return nil
 	}
-	return o.ID
+	return v.ID
 }
 
-func (o *V4StatusPagesMaintenancesMaintenanceComponent) GetName() *string {
-	if o == nil {
+func (v *V4StatusPagesMaintenancesMaintenanceComponent) GetName() *string {
+	if v == nil {
 		return nil
 	}
-	return o.Name
+	return v.Name
 }
 
-func (o *V4StatusPagesMaintenancesMaintenanceComponent) GetGroupName() *string {
-	if o == nil {
+func (v *V4StatusPagesMaintenancesMaintenanceComponent) GetGroupName() *string {
+	if v == nil {
 		return nil
 	}
-	return o.GroupName
+	return v.GroupName
 }
 
 type V4StatusPagesMaintenancesMaintenance struct {
@@ -56,58 +56,58 @@ func (v *V4StatusPagesMaintenancesMaintenance) UnmarshalJSON(data []byte) error 
 	return nil
 }
 
-func (o *V4StatusPagesMaintenancesMaintenance) GetID() *int64 {
-	if o == nil {
+func (v *V4StatusPagesMaintenancesMaintenance) GetID() *int64 {
+	if v == nil {
 		return nil
 	}
-	return o.ID
+	return v.ID
 }
 
-func (o *V4StatusPagesMaintenancesMaintenance) GetTitle() *string {
-	if o == nil {
+func (v *V4StatusPagesMaintenancesMaintenance) GetTitle() *string {
+	if v == nil {
 		return nil
 	}
-	return o.Title
+	return v.Title
 }
 
-func (o *V4StatusPagesMaintenancesMaintenance) GetPageID() *int64 {
-	if o == nil {
+func (v *V4StatusPagesMaintenancesMaintenance) GetPageID() *int64 {
+	if v == nil {
 		return nil
 	}
-	return o.PageID
+	return v.PageID
 }
 
-func (o *V4StatusPagesMaintenancesMaintenance) GetNote() *string {
-	if o == nil {
+func (v *V4StatusPagesMaintenancesMaintenance) GetNote() *string {
+	if v == nil {
 		return nil
 	}
-	return o.Note
+	return v.Note
 }
 
-func (o *V4StatusPagesMaintenancesMaintenance) GetComponents() []V4StatusPagesMaintenancesMaintenanceComponent {
-	if o == nil {
+func (v *V4StatusPagesMaintenancesMaintenance) GetComponents() []V4StatusPagesMaintenancesMaintenanceComponent {
+	if v == nil {
 		return nil
 	}
-	return o.Components
+	return v.Components
 }
 
-func (o *V4StatusPagesMaintenancesMaintenance) GetStartTime() *time.Time {
-	if o == nil {
+func (v *V4StatusPagesMaintenancesMaintenance) GetStartTime() *time.Time {
+	if v == nil {
 		return nil
 	}
-	return o.StartTime
+	return v.StartTime
 }
 
-func (o *V4StatusPagesMaintenancesMaintenance) GetEndTime() *time.Time {
-	if o == nil {
+func (v *V4StatusPagesMaintenancesMaintenance) GetEndTime() *time.Time {
+	if v == nil {
 		return nil
 	}
-	return o.EndTime
+	return v.EndTime
 }
 
-func (o *V4StatusPagesMaintenancesMaintenance) GetMaintenanceState() *string {
-	if o == nil {
+func (v *V4StatusPagesMaintenancesMaintenance) GetMaintenanceState() *string {
+	if v == nil {
 		return nil
 	}
-	return o.MaintenanceState
+	return v.MaintenanceState
 }

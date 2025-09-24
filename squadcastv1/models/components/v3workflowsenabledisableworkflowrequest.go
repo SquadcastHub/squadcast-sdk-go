@@ -6,9 +6,9 @@ type V3WorkflowsEnableDisableWorkflowRequest struct {
 	Enabled *bool `json:"enabled,omitempty"`
 }
 
-func (o *V3WorkflowsEnableDisableWorkflowRequest) GetEnabled() *bool {
-	if o == nil {
+func (v *V3WorkflowsEnableDisableWorkflowRequest) GetEnabled() *bool {
+	if v == nil {
 		return nil
 	}
-	return o.Enabled
+	return v.Enabled
 }

@@ -8,9 +8,9 @@ type V3RunbooksStep struct {
 	Content string `json:"content"`
 }
 
-func (o *V3RunbooksStep) GetContent() string {
-	if o == nil {
+func (v *V3RunbooksStep) GetContent() string {
+	if v == nil {
 		return ""
 	}
-	return o.Content
+	return v.Content
 }

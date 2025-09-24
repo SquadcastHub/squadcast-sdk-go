@@ -13,18 +13,18 @@ type NotesDeleteNoteRequest struct {
 	NoteID string `pathParam:"style=simple,explode=false,name=NoteId"`
 }
 
-func (o *NotesDeleteNoteRequest) GetIncidentID() string {
-	if o == nil {
+func (n *NotesDeleteNoteRequest) GetIncidentID() string {
+	if n == nil {
 		return ""
 	}
-	return o.IncidentID
+	return n.IncidentID
 }
 
-func (o *NotesDeleteNoteRequest) GetNoteID() string {
-	if o == nil {
+func (n *NotesDeleteNoteRequest) GetNoteID() string {
+	if n == nil {
 		return ""
 	}
-	return o.NoteID
+	return n.NoteID
 }
 
 // NotesDeleteNoteResponseBody - There is no content to send for this request, but the headers may be useful.
@@ -36,16 +36,16 @@ type NotesDeleteNoteResponse struct {
 	Body     []byte
 }
 
-func (o *NotesDeleteNoteResponse) GetHTTPMeta() components.HTTPMetadata {
-	if o == nil {
+func (n *NotesDeleteNoteResponse) GetHTTPMeta() components.HTTPMetadata {
+	if n == nil {
 		return components.HTTPMetadata{}
 	}
-	return o.HTTPMeta
+	return n.HTTPMeta
 }
 
-func (o *NotesDeleteNoteResponse) GetBody() []byte {
-	if o == nil {
+func (n *NotesDeleteNoteResponse) GetBody() []byte {
+	if n == nil {
 		return nil
 	}
-	return o.Body
+	return n.Body
 }

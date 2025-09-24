@@ -31,72 +31,72 @@ func (v *V4StatusPagesMaintenancesGetMaintenanceByIDResponse) UnmarshalJSON(data
 	return nil
 }
 
-func (o *V4StatusPagesMaintenancesGetMaintenanceByIDResponse) GetID() int64 {
-	if o == nil {
+func (v *V4StatusPagesMaintenancesGetMaintenanceByIDResponse) GetID() int64 {
+	if v == nil {
 		return 0
 	}
-	return o.ID
+	return v.ID
 }
 
-func (o *V4StatusPagesMaintenancesGetMaintenanceByIDResponse) GetPageID() int64 {
-	if o == nil {
+func (v *V4StatusPagesMaintenancesGetMaintenanceByIDResponse) GetPageID() int64 {
+	if v == nil {
 		return 0
 	}
-	return o.PageID
+	return v.PageID
 }
 
-func (o *V4StatusPagesMaintenancesGetMaintenanceByIDResponse) GetComponentIDList() []int64 {
-	if o == nil {
+func (v *V4StatusPagesMaintenancesGetMaintenanceByIDResponse) GetComponentIDList() []int64 {
+	if v == nil {
 		return nil
 	}
-	return o.ComponentIDList
+	return v.ComponentIDList
 }
 
-func (o *V4StatusPagesMaintenancesGetMaintenanceByIDResponse) GetTitle() string {
-	if o == nil {
+func (v *V4StatusPagesMaintenancesGetMaintenanceByIDResponse) GetTitle() string {
+	if v == nil {
 		return ""
 	}
-	return o.Title
+	return v.Title
 }
 
-func (o *V4StatusPagesMaintenancesGetMaintenanceByIDResponse) GetNote() string {
-	if o == nil {
+func (v *V4StatusPagesMaintenancesGetMaintenanceByIDResponse) GetNote() string {
+	if v == nil {
 		return ""
 	}
-	return o.Note
+	return v.Note
 }
 
-func (o *V4StatusPagesMaintenancesGetMaintenanceByIDResponse) GetStartTime() time.Time {
-	if o == nil {
+func (v *V4StatusPagesMaintenancesGetMaintenanceByIDResponse) GetStartTime() time.Time {
+	if v == nil {
 		return time.Time{}
 	}
-	return o.StartTime
+	return v.StartTime
 }
 
-func (o *V4StatusPagesMaintenancesGetMaintenanceByIDResponse) GetEndTime() time.Time {
-	if o == nil {
+func (v *V4StatusPagesMaintenancesGetMaintenanceByIDResponse) GetEndTime() time.Time {
+	if v == nil {
 		return time.Time{}
 	}
-	return o.EndTime
+	return v.EndTime
 }
 
-func (o *V4StatusPagesMaintenancesGetMaintenanceByIDResponse) GetCreatedAt() time.Time {
-	if o == nil {
+func (v *V4StatusPagesMaintenancesGetMaintenanceByIDResponse) GetCreatedAt() time.Time {
+	if v == nil {
 		return time.Time{}
 	}
-	return o.CreatedAt
+	return v.CreatedAt
 }
 
-func (o *V4StatusPagesMaintenancesGetMaintenanceByIDResponse) GetUpdatedAt() time.Time {
-	if o == nil {
+func (v *V4StatusPagesMaintenancesGetMaintenanceByIDResponse) GetUpdatedAt() time.Time {
+	if v == nil {
 		return time.Time{}
 	}
-	return o.UpdatedAt
+	return v.UpdatedAt
 }
 
-func (o *V4StatusPagesMaintenancesGetMaintenanceByIDResponse) GetDeletedAt() *time.Time {
-	if o == nil {
+func (v *V4StatusPagesMaintenancesGetMaintenanceByIDResponse) GetDeletedAt() *time.Time {
+	if v == nil {
 		return nil
 	}
-	return o.DeletedAt
+	return v.DeletedAt
 }

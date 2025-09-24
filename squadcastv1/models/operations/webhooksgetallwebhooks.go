@@ -11,18 +11,18 @@ type WebhooksGetAllWebhooksRequest struct {
 	Offset    *string `queryParam:"style=form,explode=true,name=offset"`
 }
 
-func (o *WebhooksGetAllWebhooksRequest) GetPageLimit() *string {
-	if o == nil {
+func (w *WebhooksGetAllWebhooksRequest) GetPageLimit() *string {
+	if w == nil {
 		return nil
 	}
-	return o.PageLimit
+	return w.PageLimit
 }
 
-func (o *WebhooksGetAllWebhooksRequest) GetOffset() *string {
-	if o == nil {
+func (w *WebhooksGetAllWebhooksRequest) GetOffset() *string {
+	if w == nil {
 		return nil
 	}
-	return o.Offset
+	return w.Offset
 }
 
 type WebhooksGetAllWebhooksResponse struct {
@@ -31,16 +31,16 @@ type WebhooksGetAllWebhooksResponse struct {
 	V3ExtensionsWebhooksGetAllWebhooksResponse *components.V3ExtensionsWebhooksGetAllWebhooksResponse
 }
 
-func (o *WebhooksGetAllWebhooksResponse) GetHTTPMeta() components.HTTPMetadata {
-	if o == nil {
+func (w *WebhooksGetAllWebhooksResponse) GetHTTPMeta() components.HTTPMetadata {
+	if w == nil {
 		return components.HTTPMetadata{}
 	}
-	return o.HTTPMeta
+	return w.HTTPMeta
 }
 
-func (o *WebhooksGetAllWebhooksResponse) GetV3ExtensionsWebhooksGetAllWebhooksResponse() *components.V3ExtensionsWebhooksGetAllWebhooksResponse {
-	if o == nil {
+func (w *WebhooksGetAllWebhooksResponse) GetV3ExtensionsWebhooksGetAllWebhooksResponse() *components.V3ExtensionsWebhooksGetAllWebhooksResponse {
+	if w == nil {
 		return nil
 	}
-	return o.V3ExtensionsWebhooksGetAllWebhooksResponse
+	return w.V3ExtensionsWebhooksGetAllWebhooksResponse
 }

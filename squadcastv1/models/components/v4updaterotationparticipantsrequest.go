@@ -6,9 +6,9 @@ type V4UpdateRotationParticipantsRequest struct {
 	ParticipantGroups []V4ParticipantGroup `json:"participantGroups"`
 }
 
-func (o *V4UpdateRotationParticipantsRequest) GetParticipantGroups() []V4ParticipantGroup {
-	if o == nil {
+func (v *V4UpdateRotationParticipantsRequest) GetParticipantGroups() []V4ParticipantGroup {
+	if v == nil {
 		return []V4ParticipantGroup{}
 	}
-	return o.ParticipantGroups
+	return v.ParticipantGroups
 }

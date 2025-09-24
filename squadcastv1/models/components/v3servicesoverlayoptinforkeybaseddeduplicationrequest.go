@@ -6,9 +6,9 @@ type V3ServicesOverlayOptInForKeyBasedDeduplicationRequest struct {
 	DedupKeyEnabled *bool `json:"dedup_key_enabled,omitempty"`
 }
 
-func (o *V3ServicesOverlayOptInForKeyBasedDeduplicationRequest) GetDedupKeyEnabled() *bool {
-	if o == nil {
+func (v *V3ServicesOverlayOptInForKeyBasedDeduplicationRequest) GetDedupKeyEnabled() *bool {
+	if v == nil {
 		return nil
 	}
-	return o.DedupKeyEnabled
+	return v.DedupKeyEnabled
 }

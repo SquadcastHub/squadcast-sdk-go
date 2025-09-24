@@ -8,23 +8,23 @@ type V3GlobalEventRulesCreateRulesetRequest struct {
 	CatchAllAction       *V3GlobalEventRulesRuleAction `json:"catch_all_action,omitempty"`
 }
 
-func (o *V3GlobalEventRulesCreateRulesetRequest) GetAlertSourceShortname() string {
-	if o == nil {
+func (v *V3GlobalEventRulesCreateRulesetRequest) GetAlertSourceShortname() string {
+	if v == nil {
 		return ""
 	}
-	return o.AlertSourceShortname
+	return v.AlertSourceShortname
 }
 
-func (o *V3GlobalEventRulesCreateRulesetRequest) GetAlertSourceVersion() string {
-	if o == nil {
+func (v *V3GlobalEventRulesCreateRulesetRequest) GetAlertSourceVersion() string {
+	if v == nil {
 		return ""
 	}
-	return o.AlertSourceVersion
+	return v.AlertSourceVersion
 }
 
-func (o *V3GlobalEventRulesCreateRulesetRequest) GetCatchAllAction() *V3GlobalEventRulesRuleAction {
-	if o == nil {
+func (v *V3GlobalEventRulesCreateRulesetRequest) GetCatchAllAction() *V3GlobalEventRulesRuleAction {
+	if v == nil {
 		return nil
 	}
-	return o.CatchAllAction
+	return v.CatchAllAction
 }

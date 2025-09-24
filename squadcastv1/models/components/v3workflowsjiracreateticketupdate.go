@@ -50,39 +50,39 @@ func (v *V3WorkflowsJiraCreateTicketUpdateData) UnmarshalJSON(data []byte) error
 	return nil
 }
 
-func (o *V3WorkflowsJiraCreateTicketUpdateData) GetAccount() *string {
-	if o == nil {
+func (v *V3WorkflowsJiraCreateTicketUpdateData) GetAccount() *string {
+	if v == nil {
 		return nil
 	}
-	return o.Account
+	return v.Account
 }
 
-func (o *V3WorkflowsJiraCreateTicketUpdateData) GetProject() *string {
-	if o == nil {
+func (v *V3WorkflowsJiraCreateTicketUpdateData) GetProject() *string {
+	if v == nil {
 		return nil
 	}
-	return o.Project
+	return v.Project
 }
 
-func (o *V3WorkflowsJiraCreateTicketUpdateData) GetIssueType() *string {
-	if o == nil {
+func (v *V3WorkflowsJiraCreateTicketUpdateData) GetIssueType() *string {
+	if v == nil {
 		return nil
 	}
-	return o.IssueType
+	return v.IssueType
 }
 
-func (o *V3WorkflowsJiraCreateTicketUpdateData) GetTitle() *string {
-	if o == nil {
+func (v *V3WorkflowsJiraCreateTicketUpdateData) GetTitle() *string {
+	if v == nil {
 		return nil
 	}
-	return o.Title
+	return v.Title
 }
 
-func (o *V3WorkflowsJiraCreateTicketUpdateData) GetDescription() *string {
-	if o == nil {
+func (v *V3WorkflowsJiraCreateTicketUpdateData) GetDescription() *string {
+	if v == nil {
 		return nil
 	}
-	return o.Description
+	return v.Description
 }
 
 type V3WorkflowsJiraCreateTicketUpdate struct {
@@ -101,16 +101,16 @@ func (v *V3WorkflowsJiraCreateTicketUpdate) UnmarshalJSON(data []byte) error {
 	return nil
 }
 
-func (o *V3WorkflowsJiraCreateTicketUpdate) GetName() V3WorkflowsJiraCreateTicketUpdateName {
-	if o == nil {
+func (v *V3WorkflowsJiraCreateTicketUpdate) GetName() V3WorkflowsJiraCreateTicketUpdateName {
+	if v == nil {
 		return V3WorkflowsJiraCreateTicketUpdateName("")
 	}
-	return o.Name
+	return v.Name
 }
 
-func (o *V3WorkflowsJiraCreateTicketUpdate) GetData() *V3WorkflowsJiraCreateTicketUpdateData {
-	if o == nil {
+func (v *V3WorkflowsJiraCreateTicketUpdate) GetData() *V3WorkflowsJiraCreateTicketUpdateData {
+	if v == nil {
 		return nil
 	}
-	return o.Data
+	return v.Data
 }

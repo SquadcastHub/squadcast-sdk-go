@@ -14,65 +14,65 @@ type V3ServicesSuppressionRulesTimeslot struct {
 	EndsOn     string                                     `json:"ends_on"`
 }
 
-func (o *V3ServicesSuppressionRulesTimeslot) GetTimeZone() string {
-	if o == nil {
+func (v *V3ServicesSuppressionRulesTimeslot) GetTimeZone() string {
+	if v == nil {
 		return ""
 	}
-	return o.TimeZone
+	return v.TimeZone
 }
 
-func (o *V3ServicesSuppressionRulesTimeslot) GetStartTime() string {
-	if o == nil {
+func (v *V3ServicesSuppressionRulesTimeslot) GetStartTime() string {
+	if v == nil {
 		return ""
 	}
-	return o.StartTime
+	return v.StartTime
 }
 
-func (o *V3ServicesSuppressionRulesTimeslot) GetEndTime() string {
-	if o == nil {
+func (v *V3ServicesSuppressionRulesTimeslot) GetEndTime() string {
+	if v == nil {
 		return ""
 	}
-	return o.EndTime
+	return v.EndTime
 }
 
-func (o *V3ServicesSuppressionRulesTimeslot) GetIsAllday() bool {
-	if o == nil {
+func (v *V3ServicesSuppressionRulesTimeslot) GetIsAllday() bool {
+	if v == nil {
 		return false
 	}
-	return o.IsAllday
+	return v.IsAllday
 }
 
-func (o *V3ServicesSuppressionRulesTimeslot) GetRepetition() string {
-	if o == nil {
+func (v *V3ServicesSuppressionRulesTimeslot) GetRepetition() string {
+	if v == nil {
 		return ""
 	}
-	return o.Repetition
+	return v.Repetition
 }
 
-func (o *V3ServicesSuppressionRulesTimeslot) GetIsCustom() bool {
-	if o == nil {
+func (v *V3ServicesSuppressionRulesTimeslot) GetIsCustom() bool {
+	if v == nil {
 		return false
 	}
-	return o.IsCustom
+	return v.IsCustom
 }
 
-func (o *V3ServicesSuppressionRulesTimeslot) GetCustom() V3ServicesSuppressionRulesCustomRepetition {
-	if o == nil {
+func (v *V3ServicesSuppressionRulesTimeslot) GetCustom() V3ServicesSuppressionRulesCustomRepetition {
+	if v == nil {
 		return V3ServicesSuppressionRulesCustomRepetition{}
 	}
-	return o.Custom
+	return v.Custom
 }
 
-func (o *V3ServicesSuppressionRulesTimeslot) GetEndsNever() bool {
-	if o == nil {
+func (v *V3ServicesSuppressionRulesTimeslot) GetEndsNever() bool {
+	if v == nil {
 		return false
 	}
-	return o.EndsNever
+	return v.EndsNever
 }
 
-func (o *V3ServicesSuppressionRulesTimeslot) GetEndsOn() string {
-	if o == nil {
+func (v *V3ServicesSuppressionRulesTimeslot) GetEndsOn() string {
+	if v == nil {
 		return ""
 	}
-	return o.EndsOn
+	return v.EndsOn
 }

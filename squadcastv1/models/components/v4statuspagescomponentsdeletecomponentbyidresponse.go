@@ -9,30 +9,30 @@ type V4StatusPagesComponentsDeleteComponentByIDResponse struct {
 	AllowSubscription bool   `json:"allowSubscription"`
 }
 
-func (o *V4StatusPagesComponentsDeleteComponentByIDResponse) GetID() int64 {
-	if o == nil {
+func (v *V4StatusPagesComponentsDeleteComponentByIDResponse) GetID() int64 {
+	if v == nil {
 		return 0
 	}
-	return o.ID
+	return v.ID
 }
 
-func (o *V4StatusPagesComponentsDeleteComponentByIDResponse) GetName() string {
-	if o == nil {
+func (v *V4StatusPagesComponentsDeleteComponentByIDResponse) GetName() string {
+	if v == nil {
 		return ""
 	}
-	return o.Name
+	return v.Name
 }
 
-func (o *V4StatusPagesComponentsDeleteComponentByIDResponse) GetDescription() string {
-	if o == nil {
+func (v *V4StatusPagesComponentsDeleteComponentByIDResponse) GetDescription() string {
+	if v == nil {
 		return ""
 	}
-	return o.Description
+	return v.Description
 }
 
-func (o *V4StatusPagesComponentsDeleteComponentByIDResponse) GetAllowSubscription() bool {
-	if o == nil {
+func (v *V4StatusPagesComponentsDeleteComponentByIDResponse) GetAllowSubscription() bool {
+	if v == nil {
 		return false
 	}
-	return o.AllowSubscription
+	return v.AllowSubscription
 }

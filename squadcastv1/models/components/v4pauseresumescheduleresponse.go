@@ -7,16 +7,16 @@ type V4PauseResumeScheduleResponse struct {
 	Success bool   `json:"success"`
 }
 
-func (o *V4PauseResumeScheduleResponse) GetAction() string {
-	if o == nil {
+func (v *V4PauseResumeScheduleResponse) GetAction() string {
+	if v == nil {
 		return ""
 	}
-	return o.Action
+	return v.Action
 }
 
-func (o *V4PauseResumeScheduleResponse) GetSuccess() bool {
-	if o == nil {
+func (v *V4PauseResumeScheduleResponse) GetSuccess() bool {
+	if v == nil {
 		return false
 	}
-	return o.Success
+	return v.Success
 }

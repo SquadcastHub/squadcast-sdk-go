@@ -13,32 +13,32 @@ type UsersDeleteUserRequest struct {
 	ReassignIncidents bool   `json:"reassign_incidents"`
 }
 
-func (o *UsersDeleteUserRequest) GetUserID() string {
-	if o == nil {
+func (u *UsersDeleteUserRequest) GetUserID() string {
+	if u == nil {
 		return ""
 	}
-	return o.UserID
+	return u.UserID
 }
 
-func (o *UsersDeleteUserRequest) GetSwapUserID() string {
-	if o == nil {
+func (u *UsersDeleteUserRequest) GetSwapUserID() string {
+	if u == nil {
 		return ""
 	}
-	return o.SwapUserID
+	return u.SwapUserID
 }
 
-func (o *UsersDeleteUserRequest) GetSuppressIncidents() bool {
-	if o == nil {
+func (u *UsersDeleteUserRequest) GetSuppressIncidents() bool {
+	if u == nil {
 		return false
 	}
-	return o.SuppressIncidents
+	return u.SuppressIncidents
 }
 
-func (o *UsersDeleteUserRequest) GetReassignIncidents() bool {
-	if o == nil {
+func (u *UsersDeleteUserRequest) GetReassignIncidents() bool {
+	if u == nil {
 		return false
 	}
-	return o.ReassignIncidents
+	return u.ReassignIncidents
 }
 
 type UsersDeleteUserData struct {
@@ -49,11 +49,11 @@ type UsersDeleteUserResponseBody struct {
 	Data UsersDeleteUserData `json:"data"`
 }
 
-func (o *UsersDeleteUserResponseBody) GetData() UsersDeleteUserData {
-	if o == nil {
+func (u *UsersDeleteUserResponseBody) GetData() UsersDeleteUserData {
+	if u == nil {
 		return UsersDeleteUserData{}
 	}
-	return o.Data
+	return u.Data
 }
 
 type UsersDeleteUserResponse struct {
@@ -62,16 +62,16 @@ type UsersDeleteUserResponse struct {
 	Object *UsersDeleteUserResponseBody
 }
 
-func (o *UsersDeleteUserResponse) GetHTTPMeta() components.HTTPMetadata {
-	if o == nil {
+func (u *UsersDeleteUserResponse) GetHTTPMeta() components.HTTPMetadata {
+	if u == nil {
 		return components.HTTPMetadata{}
 	}
-	return o.HTTPMeta
+	return u.HTTPMeta
 }
 
-func (o *UsersDeleteUserResponse) GetObject() *UsersDeleteUserResponseBody {
-	if o == nil {
+func (u *UsersDeleteUserResponse) GetObject() *UsersDeleteUserResponseBody {
+	if u == nil {
 		return nil
 	}
-	return o.Object
+	return u.Object
 }

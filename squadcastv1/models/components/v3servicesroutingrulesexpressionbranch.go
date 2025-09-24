@@ -84,10 +84,10 @@ const (
 )
 
 type V3ServicesRoutingRulesExpressionBranchRHS struct {
-	Str     *string  `queryParam:"inline" name:"rhs"`
-	Boolean *bool    `queryParam:"inline" name:"rhs"`
-	Int32   *int     `queryParam:"inline" name:"rhs"`
-	Float32 *float32 `queryParam:"inline" name:"rhs"`
+	Str     *string  `queryParam:"inline,name=rhs"`
+	Boolean *bool    `queryParam:"inline,name=rhs"`
+	Int32   *int     `queryParam:"inline,name=rhs"`
+	Float32 *float32 `queryParam:"inline,name=rhs"`
 
 	Type V3ServicesRoutingRulesExpressionBranchRHSType
 }
@@ -187,23 +187,23 @@ type V3ServicesRoutingRulesExpressionBranch struct {
 	RHS V3ServicesRoutingRulesExpressionBranchRHS `json:"rhs"`
 }
 
-func (o *V3ServicesRoutingRulesExpressionBranch) GetLHS() string {
-	if o == nil {
+func (v *V3ServicesRoutingRulesExpressionBranch) GetLHS() string {
+	if v == nil {
 		return ""
 	}
-	return o.LHS
+	return v.LHS
 }
 
-func (o *V3ServicesRoutingRulesExpressionBranch) GetOp() *V3ServicesRoutingRulesExpressionBranchOp {
-	if o == nil {
+func (v *V3ServicesRoutingRulesExpressionBranch) GetOp() *V3ServicesRoutingRulesExpressionBranchOp {
+	if v == nil {
 		return nil
 	}
-	return o.Op
+	return v.Op
 }
 
-func (o *V3ServicesRoutingRulesExpressionBranch) GetRHS() V3ServicesRoutingRulesExpressionBranchRHS {
-	if o == nil {
+func (v *V3ServicesRoutingRulesExpressionBranch) GetRHS() V3ServicesRoutingRulesExpressionBranchRHS {
+	if v == nil {
 		return V3ServicesRoutingRulesExpressionBranchRHS{}
 	}
-	return o.RHS
+	return v.RHS
 }

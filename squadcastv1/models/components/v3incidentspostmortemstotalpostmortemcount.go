@@ -7,9 +7,9 @@ type V3IncidentsPostmortemsTotalPostmortemCount struct {
 	Count int64 `json:"count"`
 }
 
-func (o *V3IncidentsPostmortemsTotalPostmortemCount) GetCount() int64 {
-	if o == nil {
+func (v *V3IncidentsPostmortemsTotalPostmortemCount) GetCount() int64 {
+	if v == nil {
 		return 0
 	}
-	return o.Count
+	return v.Count
 }

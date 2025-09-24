@@ -10,37 +10,37 @@ type CommonV4PageInfo struct {
 	PreviousCursor *string `json:"previousCursor,omitempty"`
 }
 
-func (o *CommonV4PageInfo) GetPageSize() int {
-	if o == nil {
+func (c *CommonV4PageInfo) GetPageSize() int {
+	if c == nil {
 		return 0
 	}
-	return o.PageSize
+	return c.PageSize
 }
 
-func (o *CommonV4PageInfo) GetHasNext() bool {
-	if o == nil {
+func (c *CommonV4PageInfo) GetHasNext() bool {
+	if c == nil {
 		return false
 	}
-	return o.HasNext
+	return c.HasNext
 }
 
-func (o *CommonV4PageInfo) GetHasPrevious() bool {
-	if o == nil {
+func (c *CommonV4PageInfo) GetHasPrevious() bool {
+	if c == nil {
 		return false
 	}
-	return o.HasPrevious
+	return c.HasPrevious
 }
 
-func (o *CommonV4PageInfo) GetNextCursor() *string {
-	if o == nil {
+func (c *CommonV4PageInfo) GetNextCursor() *string {
+	if c == nil {
 		return nil
 	}
-	return o.NextCursor
+	return c.NextCursor
 }
 
-func (o *CommonV4PageInfo) GetPreviousCursor() *string {
-	if o == nil {
+func (c *CommonV4PageInfo) GetPreviousCursor() *string {
+	if c == nil {
 		return nil
 	}
-	return o.PreviousCursor
+	return c.PreviousCursor
 }

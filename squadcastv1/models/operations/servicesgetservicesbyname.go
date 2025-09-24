@@ -11,18 +11,18 @@ type ServicesGetServicesByNameRequest struct {
 	OwnerID string `queryParam:"style=form,explode=false,name=owner_id"`
 }
 
-func (o *ServicesGetServicesByNameRequest) GetName() string {
-	if o == nil {
+func (s *ServicesGetServicesByNameRequest) GetName() string {
+	if s == nil {
 		return ""
 	}
-	return o.Name
+	return s.Name
 }
 
-func (o *ServicesGetServicesByNameRequest) GetOwnerID() string {
-	if o == nil {
+func (s *ServicesGetServicesByNameRequest) GetOwnerID() string {
+	if s == nil {
 		return ""
 	}
-	return o.OwnerID
+	return s.OwnerID
 }
 
 // ServicesGetServicesByNameResponseBody - The request has succeeded.
@@ -30,11 +30,11 @@ type ServicesGetServicesByNameResponseBody struct {
 	Data components.V3ServicesServiceResponse `json:"data"`
 }
 
-func (o *ServicesGetServicesByNameResponseBody) GetData() components.V3ServicesServiceResponse {
-	if o == nil {
+func (s *ServicesGetServicesByNameResponseBody) GetData() components.V3ServicesServiceResponse {
+	if s == nil {
 		return components.V3ServicesServiceResponse{}
 	}
-	return o.Data
+	return s.Data
 }
 
 type ServicesGetServicesByNameResponse struct {
@@ -43,16 +43,16 @@ type ServicesGetServicesByNameResponse struct {
 	Object *ServicesGetServicesByNameResponseBody
 }
 
-func (o *ServicesGetServicesByNameResponse) GetHTTPMeta() components.HTTPMetadata {
-	if o == nil {
+func (s *ServicesGetServicesByNameResponse) GetHTTPMeta() components.HTTPMetadata {
+	if s == nil {
 		return components.HTTPMetadata{}
 	}
-	return o.HTTPMeta
+	return s.HTTPMeta
 }
 
-func (o *ServicesGetServicesByNameResponse) GetObject() *ServicesGetServicesByNameResponseBody {
-	if o == nil {
+func (s *ServicesGetServicesByNameResponse) GetObject() *ServicesGetServicesByNameResponseBody {
+	if s == nil {
 		return nil
 	}
-	return o.Object
+	return s.Object
 }

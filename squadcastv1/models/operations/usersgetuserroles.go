@@ -11,11 +11,11 @@ type UsersGetUserRolesResponseBody struct {
 	Data []components.V3UsersUserRoleResponse `json:"data"`
 }
 
-func (o *UsersGetUserRolesResponseBody) GetData() []components.V3UsersUserRoleResponse {
-	if o == nil {
+func (u *UsersGetUserRolesResponseBody) GetData() []components.V3UsersUserRoleResponse {
+	if u == nil {
 		return []components.V3UsersUserRoleResponse{}
 	}
-	return o.Data
+	return u.Data
 }
 
 type UsersGetUserRolesResponse struct {
@@ -24,16 +24,16 @@ type UsersGetUserRolesResponse struct {
 	Object *UsersGetUserRolesResponseBody
 }
 
-func (o *UsersGetUserRolesResponse) GetHTTPMeta() components.HTTPMetadata {
-	if o == nil {
+func (u *UsersGetUserRolesResponse) GetHTTPMeta() components.HTTPMetadata {
+	if u == nil {
 		return components.HTTPMetadata{}
 	}
-	return o.HTTPMeta
+	return u.HTTPMeta
 }
 
-func (o *UsersGetUserRolesResponse) GetObject() *UsersGetUserRolesResponseBody {
-	if o == nil {
+func (u *UsersGetUserRolesResponse) GetObject() *UsersGetUserRolesResponseBody {
+	if u == nil {
 		return nil
 	}
-	return o.Object
+	return u.Object
 }

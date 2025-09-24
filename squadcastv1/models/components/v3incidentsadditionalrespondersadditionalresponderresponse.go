@@ -6,9 +6,9 @@ type V3IncidentsAdditionalRespondersAdditionalResponderResponse struct {
 	AdditionalResponders []V3IncidentsAdditionalRespondersAdditionalResponder `json:"additional_responders"`
 }
 
-func (o *V3IncidentsAdditionalRespondersAdditionalResponderResponse) GetAdditionalResponders() []V3IncidentsAdditionalRespondersAdditionalResponder {
-	if o == nil {
+func (v *V3IncidentsAdditionalRespondersAdditionalResponderResponse) GetAdditionalResponders() []V3IncidentsAdditionalRespondersAdditionalResponder {
+	if v == nil {
 		return []V3IncidentsAdditionalRespondersAdditionalResponder{}
 	}
-	return o.AdditionalResponders
+	return v.AdditionalResponders
 }

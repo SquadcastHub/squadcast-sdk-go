@@ -6,20 +6,20 @@ type V3WorkflowsUpdateActionsOrderResponseData struct {
 	ActionOrder []int `json:"action_order"`
 }
 
-func (o *V3WorkflowsUpdateActionsOrderResponseData) GetActionOrder() []int {
-	if o == nil {
+func (v *V3WorkflowsUpdateActionsOrderResponseData) GetActionOrder() []int {
+	if v == nil {
 		return []int{}
 	}
-	return o.ActionOrder
+	return v.ActionOrder
 }
 
 type V3WorkflowsUpdateActionsOrderResponse struct {
 	Data V3WorkflowsUpdateActionsOrderResponseData `json:"data"`
 }
 
-func (o *V3WorkflowsUpdateActionsOrderResponse) GetData() V3WorkflowsUpdateActionsOrderResponseData {
-	if o == nil {
+func (v *V3WorkflowsUpdateActionsOrderResponse) GetData() V3WorkflowsUpdateActionsOrderResponseData {
+	if v == nil {
 		return V3WorkflowsUpdateActionsOrderResponseData{}
 	}
-	return o.Data
+	return v.Data
 }

@@ -6,9 +6,9 @@ type V4SquadsUpdateSquadNameRequest struct {
 	Name string `json:"name"`
 }
 
-func (o *V4SquadsUpdateSquadNameRequest) GetName() string {
-	if o == nil {
+func (v *V4SquadsUpdateSquadNameRequest) GetName() string {
+	if v == nil {
 		return ""
 	}
-	return o.Name
+	return v.Name
 }

@@ -13,32 +13,32 @@ type GlobalEventRulesReorderRulesetRequest struct {
 	V3GlobalEventRulesReorderRulesetRequest components.V3GlobalEventRulesReorderRulesetRequest `request:"mediaType=application/json"`
 }
 
-func (o *GlobalEventRulesReorderRulesetRequest) GetGerID() int64 {
-	if o == nil {
+func (g *GlobalEventRulesReorderRulesetRequest) GetGerID() int64 {
+	if g == nil {
 		return 0
 	}
-	return o.GerID
+	return g.GerID
 }
 
-func (o *GlobalEventRulesReorderRulesetRequest) GetAlertSourceVersion() string {
-	if o == nil {
+func (g *GlobalEventRulesReorderRulesetRequest) GetAlertSourceVersion() string {
+	if g == nil {
 		return ""
 	}
-	return o.AlertSourceVersion
+	return g.AlertSourceVersion
 }
 
-func (o *GlobalEventRulesReorderRulesetRequest) GetAlertSourceShortname() string {
-	if o == nil {
+func (g *GlobalEventRulesReorderRulesetRequest) GetAlertSourceShortname() string {
+	if g == nil {
 		return ""
 	}
-	return o.AlertSourceShortname
+	return g.AlertSourceShortname
 }
 
-func (o *GlobalEventRulesReorderRulesetRequest) GetV3GlobalEventRulesReorderRulesetRequest() components.V3GlobalEventRulesReorderRulesetRequest {
-	if o == nil {
+func (g *GlobalEventRulesReorderRulesetRequest) GetV3GlobalEventRulesReorderRulesetRequest() components.V3GlobalEventRulesReorderRulesetRequest {
+	if g == nil {
 		return components.V3GlobalEventRulesReorderRulesetRequest{}
 	}
-	return o.V3GlobalEventRulesReorderRulesetRequest
+	return g.V3GlobalEventRulesReorderRulesetRequest
 }
 
 // GlobalEventRulesReorderRulesetResponseBody - The request has succeeded.
@@ -46,11 +46,11 @@ type GlobalEventRulesReorderRulesetResponseBody struct {
 	Data components.V3GlobalEventRulesOrderingResponse `json:"data"`
 }
 
-func (o *GlobalEventRulesReorderRulesetResponseBody) GetData() components.V3GlobalEventRulesOrderingResponse {
-	if o == nil {
+func (g *GlobalEventRulesReorderRulesetResponseBody) GetData() components.V3GlobalEventRulesOrderingResponse {
+	if g == nil {
 		return components.V3GlobalEventRulesOrderingResponse{}
 	}
-	return o.Data
+	return g.Data
 }
 
 type GlobalEventRulesReorderRulesetResponse struct {
@@ -59,16 +59,16 @@ type GlobalEventRulesReorderRulesetResponse struct {
 	Object *GlobalEventRulesReorderRulesetResponseBody
 }
 
-func (o *GlobalEventRulesReorderRulesetResponse) GetHTTPMeta() components.HTTPMetadata {
-	if o == nil {
+func (g *GlobalEventRulesReorderRulesetResponse) GetHTTPMeta() components.HTTPMetadata {
+	if g == nil {
 		return components.HTTPMetadata{}
 	}
-	return o.HTTPMeta
+	return g.HTTPMeta
 }
 
-func (o *GlobalEventRulesReorderRulesetResponse) GetObject() *GlobalEventRulesReorderRulesetResponseBody {
-	if o == nil {
+func (g *GlobalEventRulesReorderRulesetResponse) GetObject() *GlobalEventRulesReorderRulesetResponseBody {
+	if g == nil {
 		return nil
 	}
-	return o.Object
+	return g.Object
 }

@@ -10,11 +10,11 @@ type NotesGetAllNotesRequest struct {
 	IncidentID string `pathParam:"style=simple,explode=false,name=IncidentId"`
 }
 
-func (o *NotesGetAllNotesRequest) GetIncidentID() string {
-	if o == nil {
+func (n *NotesGetAllNotesRequest) GetIncidentID() string {
+	if n == nil {
 		return ""
 	}
-	return o.IncidentID
+	return n.IncidentID
 }
 
 // NotesGetAllNotesResponseBody - The request has succeeded.
@@ -22,11 +22,11 @@ type NotesGetAllNotesResponseBody struct {
 	Data []components.V3IncidentsNotesNoteResponse `json:"data"`
 }
 
-func (o *NotesGetAllNotesResponseBody) GetData() []components.V3IncidentsNotesNoteResponse {
-	if o == nil {
+func (n *NotesGetAllNotesResponseBody) GetData() []components.V3IncidentsNotesNoteResponse {
+	if n == nil {
 		return []components.V3IncidentsNotesNoteResponse{}
 	}
-	return o.Data
+	return n.Data
 }
 
 type NotesGetAllNotesResponse struct {
@@ -35,16 +35,16 @@ type NotesGetAllNotesResponse struct {
 	Object *NotesGetAllNotesResponseBody
 }
 
-func (o *NotesGetAllNotesResponse) GetHTTPMeta() components.HTTPMetadata {
-	if o == nil {
+func (n *NotesGetAllNotesResponse) GetHTTPMeta() components.HTTPMetadata {
+	if n == nil {
 		return components.HTTPMetadata{}
 	}
-	return o.HTTPMeta
+	return n.HTTPMeta
 }
 
-func (o *NotesGetAllNotesResponse) GetObject() *NotesGetAllNotesResponseBody {
-	if o == nil {
+func (n *NotesGetAllNotesResponse) GetObject() *NotesGetAllNotesResponseBody {
+	if n == nil {
 		return nil
 	}
-	return o.Object
+	return n.Object
 }

@@ -46,72 +46,72 @@ type V3WorkflowsCreateWorkflowRequest struct {
 	Enabled     *bool                                      `json:"enabled,omitempty"`
 }
 
-func (o *V3WorkflowsCreateWorkflowRequest) GetTitle() string {
-	if o == nil {
+func (v *V3WorkflowsCreateWorkflowRequest) GetTitle() string {
+	if v == nil {
 		return ""
 	}
-	return o.Title
+	return v.Title
 }
 
-func (o *V3WorkflowsCreateWorkflowRequest) GetDescription() *string {
-	if o == nil {
+func (v *V3WorkflowsCreateWorkflowRequest) GetDescription() *string {
+	if v == nil {
 		return nil
 	}
-	return o.Description
+	return v.Description
 }
 
-func (o *V3WorkflowsCreateWorkflowRequest) GetOwnerID() string {
-	if o == nil {
+func (v *V3WorkflowsCreateWorkflowRequest) GetOwnerID() string {
+	if v == nil {
 		return ""
 	}
-	return o.OwnerID
+	return v.OwnerID
 }
 
-func (o *V3WorkflowsCreateWorkflowRequest) GetOwnerType() *V3WorkflowsCreateWorkflowRequestOwnerType {
-	if o == nil {
+func (v *V3WorkflowsCreateWorkflowRequest) GetOwnerType() *V3WorkflowsCreateWorkflowRequestOwnerType {
+	if v == nil {
 		return nil
 	}
-	return o.OwnerType
+	return v.OwnerType
 }
 
-func (o *V3WorkflowsCreateWorkflowRequest) GetEntityOwner() *V3WorkflowsEntityOwner {
-	if o == nil {
+func (v *V3WorkflowsCreateWorkflowRequest) GetEntityOwner() *V3WorkflowsEntityOwner {
+	if v == nil {
 		return nil
 	}
-	return o.EntityOwner
+	return v.EntityOwner
 }
 
-func (o *V3WorkflowsCreateWorkflowRequest) GetTags() []V3WorkflowsTag {
-	if o == nil {
+func (v *V3WorkflowsCreateWorkflowRequest) GetTags() []V3WorkflowsTag {
+	if v == nil {
 		return nil
 	}
-	return o.Tags
+	return v.Tags
 }
 
-func (o *V3WorkflowsCreateWorkflowRequest) GetTrigger() V3WorkflowsWorkflowTrigger {
-	if o == nil {
+func (v *V3WorkflowsCreateWorkflowRequest) GetTrigger() V3WorkflowsWorkflowTrigger {
+	if v == nil {
 		return V3WorkflowsWorkflowTrigger("")
 	}
-	return o.Trigger
+	return v.Trigger
 }
 
-func (o *V3WorkflowsCreateWorkflowRequest) GetFilters() V3WorkflowsCreateWorkflowFilter {
-	if o == nil {
+func (v *V3WorkflowsCreateWorkflowRequest) GetFilters() V3WorkflowsCreateWorkflowFilter {
+	if v == nil {
 		return V3WorkflowsCreateWorkflowFilter{}
 	}
-	return o.Filters
+	return v.Filters
 }
 
-func (o *V3WorkflowsCreateWorkflowRequest) GetActions() []V3WorkflowsActionRequest {
-	if o == nil {
+func (v *V3WorkflowsCreateWorkflowRequest) GetActions() []V3WorkflowsActionRequest {
+	if v == nil {
 		return []V3WorkflowsActionRequest{}
 	}
-	return o.Actions
+	return v.Actions
 }
 
-func (o *V3WorkflowsCreateWorkflowRequest) GetEnabled() *bool {
-	if o == nil {
+func (v *V3WorkflowsCreateWorkflowRequest) GetEnabled() *bool {
+	if v == nil {
 		return nil
 	}
-	return o.Enabled
+	return v.Enabled
 }

@@ -16,25 +16,25 @@ type DeduplicationReason struct {
 	TimeWindow          int64  `json:"time_window"`
 }
 
-func (o *DeduplicationReason) GetMatchedEventID() string {
-	if o == nil {
+func (d *DeduplicationReason) GetMatchedEventID() string {
+	if d == nil {
 		return ""
 	}
-	return o.MatchedEventID
+	return d.MatchedEventID
 }
 
-func (o *DeduplicationReason) GetEvaluatedExpression() string {
-	if o == nil {
+func (d *DeduplicationReason) GetEvaluatedExpression() string {
+	if d == nil {
 		return ""
 	}
-	return o.EvaluatedExpression
+	return d.EvaluatedExpression
 }
 
-func (o *DeduplicationReason) GetTimeWindow() int64 {
-	if o == nil {
+func (d *DeduplicationReason) GetTimeWindow() int64 {
+	if d == nil {
 		return 0
 	}
-	return o.TimeWindow
+	return d.TimeWindow
 }
 
 type Payload struct {
@@ -63,58 +63,58 @@ func (v *V3IncidentsIncidentEventResponse) UnmarshalJSON(data []byte) error {
 	return nil
 }
 
-func (o *V3IncidentsIncidentEventResponse) GetIncidentID() string {
-	if o == nil {
+func (v *V3IncidentsIncidentEventResponse) GetIncidentID() string {
+	if v == nil {
 		return ""
 	}
-	return o.IncidentID
+	return v.IncidentID
 }
 
-func (o *V3IncidentsIncidentEventResponse) GetAlertSourceID() string {
-	if o == nil {
+func (v *V3IncidentsIncidentEventResponse) GetAlertSourceID() string {
+	if v == nil {
 		return ""
 	}
-	return o.AlertSourceID
+	return v.AlertSourceID
 }
 
-func (o *V3IncidentsIncidentEventResponse) GetMessage() string {
-	if o == nil {
+func (v *V3IncidentsIncidentEventResponse) GetMessage() string {
+	if v == nil {
 		return ""
 	}
-	return o.Message
+	return v.Message
 }
 
-func (o *V3IncidentsIncidentEventResponse) GetDescription() string {
-	if o == nil {
+func (v *V3IncidentsIncidentEventResponse) GetDescription() string {
+	if v == nil {
 		return ""
 	}
-	return o.Description
+	return v.Description
 }
 
-func (o *V3IncidentsIncidentEventResponse) GetTimeOfCreation() time.Time {
-	if o == nil {
+func (v *V3IncidentsIncidentEventResponse) GetTimeOfCreation() time.Time {
+	if v == nil {
 		return time.Time{}
 	}
-	return o.TimeOfCreation
+	return v.TimeOfCreation
 }
 
-func (o *V3IncidentsIncidentEventResponse) GetTags() *V3IncidentsIncidentEventResponseTags {
-	if o == nil {
+func (v *V3IncidentsIncidentEventResponse) GetTags() *V3IncidentsIncidentEventResponseTags {
+	if v == nil {
 		return nil
 	}
-	return o.Tags
+	return v.Tags
 }
 
-func (o *V3IncidentsIncidentEventResponse) GetDeduplicationReason() *DeduplicationReason {
-	if o == nil {
+func (v *V3IncidentsIncidentEventResponse) GetDeduplicationReason() *DeduplicationReason {
+	if v == nil {
 		return nil
 	}
-	return o.DeduplicationReason
+	return v.DeduplicationReason
 }
 
-func (o *V3IncidentsIncidentEventResponse) GetPayload() Payload {
-	if o == nil {
+func (v *V3IncidentsIncidentEventResponse) GetPayload() Payload {
+	if v == nil {
 		return Payload{}
 	}
-	return o.Payload
+	return v.Payload
 }

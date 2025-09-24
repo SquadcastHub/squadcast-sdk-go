@@ -12,18 +12,18 @@ type UsersUpdateUserByIDRequest struct {
 	V3UsersUpdateUserRequest components.V3UsersUpdateUserRequest `request:"mediaType=application/json"`
 }
 
-func (o *UsersUpdateUserByIDRequest) GetUserID() string {
-	if o == nil {
+func (u *UsersUpdateUserByIDRequest) GetUserID() string {
+	if u == nil {
 		return ""
 	}
-	return o.UserID
+	return u.UserID
 }
 
-func (o *UsersUpdateUserByIDRequest) GetV3UsersUpdateUserRequest() components.V3UsersUpdateUserRequest {
-	if o == nil {
+func (u *UsersUpdateUserByIDRequest) GetV3UsersUpdateUserRequest() components.V3UsersUpdateUserRequest {
+	if u == nil {
 		return components.V3UsersUpdateUserRequest{}
 	}
-	return o.V3UsersUpdateUserRequest
+	return u.V3UsersUpdateUserRequest
 }
 
 // UsersUpdateUserByIDResponseBody - The request has succeeded.
@@ -31,11 +31,11 @@ type UsersUpdateUserByIDResponseBody struct {
 	Data components.V3UsersUserResponse `json:"data"`
 }
 
-func (o *UsersUpdateUserByIDResponseBody) GetData() components.V3UsersUserResponse {
-	if o == nil {
+func (u *UsersUpdateUserByIDResponseBody) GetData() components.V3UsersUserResponse {
+	if u == nil {
 		return components.V3UsersUserResponse{}
 	}
-	return o.Data
+	return u.Data
 }
 
 type UsersUpdateUserByIDResponse struct {
@@ -44,16 +44,16 @@ type UsersUpdateUserByIDResponse struct {
 	Object *UsersUpdateUserByIDResponseBody
 }
 
-func (o *UsersUpdateUserByIDResponse) GetHTTPMeta() components.HTTPMetadata {
-	if o == nil {
+func (u *UsersUpdateUserByIDResponse) GetHTTPMeta() components.HTTPMetadata {
+	if u == nil {
 		return components.HTTPMetadata{}
 	}
-	return o.HTTPMeta
+	return u.HTTPMeta
 }
 
-func (o *UsersUpdateUserByIDResponse) GetObject() *UsersUpdateUserByIDResponseBody {
-	if o == nil {
+func (u *UsersUpdateUserByIDResponse) GetObject() *UsersUpdateUserByIDResponseBody {
+	if u == nil {
 		return nil
 	}
-	return o.Object
+	return u.Object
 }

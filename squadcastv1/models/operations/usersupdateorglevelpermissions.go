@@ -11,11 +11,11 @@ type UsersUpdateOrgLevelPermissionsResponseBody struct {
 	Data string `json:"data"`
 }
 
-func (o *UsersUpdateOrgLevelPermissionsResponseBody) GetData() string {
-	if o == nil {
+func (u *UsersUpdateOrgLevelPermissionsResponseBody) GetData() string {
+	if u == nil {
 		return ""
 	}
-	return o.Data
+	return u.Data
 }
 
 type UsersUpdateOrgLevelPermissionsResponse struct {
@@ -24,16 +24,16 @@ type UsersUpdateOrgLevelPermissionsResponse struct {
 	Object *UsersUpdateOrgLevelPermissionsResponseBody
 }
 
-func (o *UsersUpdateOrgLevelPermissionsResponse) GetHTTPMeta() components.HTTPMetadata {
-	if o == nil {
+func (u *UsersUpdateOrgLevelPermissionsResponse) GetHTTPMeta() components.HTTPMetadata {
+	if u == nil {
 		return components.HTTPMetadata{}
 	}
-	return o.HTTPMeta
+	return u.HTTPMeta
 }
 
-func (o *UsersUpdateOrgLevelPermissionsResponse) GetObject() *UsersUpdateOrgLevelPermissionsResponseBody {
-	if o == nil {
+func (u *UsersUpdateOrgLevelPermissionsResponse) GetObject() *UsersUpdateOrgLevelPermissionsResponseBody {
+	if u == nil {
 		return nil
 	}
-	return o.Object
+	return u.Object
 }

@@ -50,39 +50,39 @@ func (v *V3WorkflowsJiraCreateTicketData) UnmarshalJSON(data []byte) error {
 	return nil
 }
 
-func (o *V3WorkflowsJiraCreateTicketData) GetAccount() string {
-	if o == nil {
+func (v *V3WorkflowsJiraCreateTicketData) GetAccount() string {
+	if v == nil {
 		return ""
 	}
-	return o.Account
+	return v.Account
 }
 
-func (o *V3WorkflowsJiraCreateTicketData) GetProject() string {
-	if o == nil {
+func (v *V3WorkflowsJiraCreateTicketData) GetProject() string {
+	if v == nil {
 		return ""
 	}
-	return o.Project
+	return v.Project
 }
 
-func (o *V3WorkflowsJiraCreateTicketData) GetIssueType() string {
-	if o == nil {
+func (v *V3WorkflowsJiraCreateTicketData) GetIssueType() string {
+	if v == nil {
 		return ""
 	}
-	return o.IssueType
+	return v.IssueType
 }
 
-func (o *V3WorkflowsJiraCreateTicketData) GetTitle() string {
-	if o == nil {
+func (v *V3WorkflowsJiraCreateTicketData) GetTitle() string {
+	if v == nil {
 		return ""
 	}
-	return o.Title
+	return v.Title
 }
 
-func (o *V3WorkflowsJiraCreateTicketData) GetDescription() string {
-	if o == nil {
+func (v *V3WorkflowsJiraCreateTicketData) GetDescription() string {
+	if v == nil {
 		return ""
 	}
-	return o.Description
+	return v.Description
 }
 
 type V3WorkflowsJiraCreateTicket struct {
@@ -101,16 +101,16 @@ func (v *V3WorkflowsJiraCreateTicket) UnmarshalJSON(data []byte) error {
 	return nil
 }
 
-func (o *V3WorkflowsJiraCreateTicket) GetName() V3WorkflowsJiraCreateTicketName {
-	if o == nil {
+func (v *V3WorkflowsJiraCreateTicket) GetName() V3WorkflowsJiraCreateTicketName {
+	if v == nil {
 		return V3WorkflowsJiraCreateTicketName("")
 	}
-	return o.Name
+	return v.Name
 }
 
-func (o *V3WorkflowsJiraCreateTicket) GetData() V3WorkflowsJiraCreateTicketData {
-	if o == nil {
+func (v *V3WorkflowsJiraCreateTicket) GetData() V3WorkflowsJiraCreateTicketData {
+	if v == nil {
 		return V3WorkflowsJiraCreateTicketData{}
 	}
-	return o.Data
+	return v.Data
 }

@@ -11,18 +11,18 @@ type ExportDeleteIcalLinkRequest struct {
 	MyOnCall   bool   `queryParam:"style=form,explode=false,name=myOnCall"`
 }
 
-func (o *ExportDeleteIcalLinkRequest) GetScheduleID() string {
-	if o == nil {
+func (e *ExportDeleteIcalLinkRequest) GetScheduleID() string {
+	if e == nil {
 		return ""
 	}
-	return o.ScheduleID
+	return e.ScheduleID
 }
 
-func (o *ExportDeleteIcalLinkRequest) GetMyOnCall() bool {
-	if o == nil {
+func (e *ExportDeleteIcalLinkRequest) GetMyOnCall() bool {
+	if e == nil {
 		return false
 	}
-	return o.MyOnCall
+	return e.MyOnCall
 }
 
 // ExportDeleteIcalLinkResponseBody - There is no content to send for this request, but the headers may be useful.
@@ -34,16 +34,16 @@ type ExportDeleteIcalLinkResponse struct {
 	Body     []byte
 }
 
-func (o *ExportDeleteIcalLinkResponse) GetHTTPMeta() components.HTTPMetadata {
-	if o == nil {
+func (e *ExportDeleteIcalLinkResponse) GetHTTPMeta() components.HTTPMetadata {
+	if e == nil {
 		return components.HTTPMetadata{}
 	}
-	return o.HTTPMeta
+	return e.HTTPMeta
 }
 
-func (o *ExportDeleteIcalLinkResponse) GetBody() []byte {
-	if o == nil {
+func (e *ExportDeleteIcalLinkResponse) GetBody() []byte {
+	if e == nil {
 		return nil
 	}
-	return o.Body
+	return e.Body
 }

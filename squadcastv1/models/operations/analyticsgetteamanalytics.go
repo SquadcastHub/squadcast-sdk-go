@@ -14,39 +14,39 @@ type AnalyticsGetTeamAnalyticsRequest struct {
 	ServiceID *string `queryParam:"style=form,explode=false,name=service_id"`
 }
 
-func (o *AnalyticsGetTeamAnalyticsRequest) GetOwnerID() string {
-	if o == nil {
+func (a *AnalyticsGetTeamAnalyticsRequest) GetOwnerID() string {
+	if a == nil {
 		return ""
 	}
-	return o.OwnerID
+	return a.OwnerID
 }
 
-func (o *AnalyticsGetTeamAnalyticsRequest) GetFrom() string {
-	if o == nil {
+func (a *AnalyticsGetTeamAnalyticsRequest) GetFrom() string {
+	if a == nil {
 		return ""
 	}
-	return o.From
+	return a.From
 }
 
-func (o *AnalyticsGetTeamAnalyticsRequest) GetTo() string {
-	if o == nil {
+func (a *AnalyticsGetTeamAnalyticsRequest) GetTo() string {
+	if a == nil {
 		return ""
 	}
-	return o.To
+	return a.To
 }
 
-func (o *AnalyticsGetTeamAnalyticsRequest) GetUserID() *string {
-	if o == nil {
+func (a *AnalyticsGetTeamAnalyticsRequest) GetUserID() *string {
+	if a == nil {
 		return nil
 	}
-	return o.UserID
+	return a.UserID
 }
 
-func (o *AnalyticsGetTeamAnalyticsRequest) GetServiceID() *string {
-	if o == nil {
+func (a *AnalyticsGetTeamAnalyticsRequest) GetServiceID() *string {
+	if a == nil {
 		return nil
 	}
-	return o.ServiceID
+	return a.ServiceID
 }
 
 // AnalyticsGetTeamAnalyticsResponseBody - The request has succeeded.
@@ -54,11 +54,11 @@ type AnalyticsGetTeamAnalyticsResponseBody struct {
 	Data components.V3AnalyticsAnalyticsResponse `json:"data"`
 }
 
-func (o *AnalyticsGetTeamAnalyticsResponseBody) GetData() components.V3AnalyticsAnalyticsResponse {
-	if o == nil {
+func (a *AnalyticsGetTeamAnalyticsResponseBody) GetData() components.V3AnalyticsAnalyticsResponse {
+	if a == nil {
 		return components.V3AnalyticsAnalyticsResponse{}
 	}
-	return o.Data
+	return a.Data
 }
 
 type AnalyticsGetTeamAnalyticsResponse struct {
@@ -67,16 +67,16 @@ type AnalyticsGetTeamAnalyticsResponse struct {
 	Object *AnalyticsGetTeamAnalyticsResponseBody
 }
 
-func (o *AnalyticsGetTeamAnalyticsResponse) GetHTTPMeta() components.HTTPMetadata {
-	if o == nil {
+func (a *AnalyticsGetTeamAnalyticsResponse) GetHTTPMeta() components.HTTPMetadata {
+	if a == nil {
 		return components.HTTPMetadata{}
 	}
-	return o.HTTPMeta
+	return a.HTTPMeta
 }
 
-func (o *AnalyticsGetTeamAnalyticsResponse) GetObject() *AnalyticsGetTeamAnalyticsResponseBody {
-	if o == nil {
+func (a *AnalyticsGetTeamAnalyticsResponse) GetObject() *AnalyticsGetTeamAnalyticsResponseBody {
+	if a == nil {
 		return nil
 	}
-	return o.Object
+	return a.Object
 }

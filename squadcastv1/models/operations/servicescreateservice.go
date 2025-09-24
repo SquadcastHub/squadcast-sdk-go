@@ -11,18 +11,18 @@ type ServicesCreateServiceRequest struct {
 	V3ServicesCreateServiceRequest components.V3ServicesCreateServiceRequest `request:"mediaType=application/json"`
 }
 
-func (o *ServicesCreateServiceRequest) GetOwnerID() string {
-	if o == nil {
+func (s *ServicesCreateServiceRequest) GetOwnerID() string {
+	if s == nil {
 		return ""
 	}
-	return o.OwnerID
+	return s.OwnerID
 }
 
-func (o *ServicesCreateServiceRequest) GetV3ServicesCreateServiceRequest() components.V3ServicesCreateServiceRequest {
-	if o == nil {
+func (s *ServicesCreateServiceRequest) GetV3ServicesCreateServiceRequest() components.V3ServicesCreateServiceRequest {
+	if s == nil {
 		return components.V3ServicesCreateServiceRequest{}
 	}
-	return o.V3ServicesCreateServiceRequest
+	return s.V3ServicesCreateServiceRequest
 }
 
 // ServicesCreateServiceBody - The body type of the operation request or response.
@@ -30,11 +30,11 @@ type ServicesCreateServiceBody struct {
 	Data components.V3ServicesServiceResponse `json:"data"`
 }
 
-func (o *ServicesCreateServiceBody) GetData() components.V3ServicesServiceResponse {
-	if o == nil {
+func (s *ServicesCreateServiceBody) GetData() components.V3ServicesServiceResponse {
+	if s == nil {
 		return components.V3ServicesServiceResponse{}
 	}
-	return o.Data
+	return s.Data
 }
 
 // ServicesCreateServiceResponseBody - The request has succeeded and a new resource has been created as a result.
@@ -43,11 +43,11 @@ type ServicesCreateServiceResponseBody struct {
 	Body ServicesCreateServiceBody `json:"body"`
 }
 
-func (o *ServicesCreateServiceResponseBody) GetBody() ServicesCreateServiceBody {
-	if o == nil {
+func (s *ServicesCreateServiceResponseBody) GetBody() ServicesCreateServiceBody {
+	if s == nil {
 		return ServicesCreateServiceBody{}
 	}
-	return o.Body
+	return s.Body
 }
 
 type ServicesCreateServiceResponse struct {
@@ -56,16 +56,16 @@ type ServicesCreateServiceResponse struct {
 	Object *ServicesCreateServiceResponseBody
 }
 
-func (o *ServicesCreateServiceResponse) GetHTTPMeta() components.HTTPMetadata {
-	if o == nil {
+func (s *ServicesCreateServiceResponse) GetHTTPMeta() components.HTTPMetadata {
+	if s == nil {
 		return components.HTTPMetadata{}
 	}
-	return o.HTTPMeta
+	return s.HTTPMeta
 }
 
-func (o *ServicesCreateServiceResponse) GetObject() *ServicesCreateServiceResponseBody {
-	if o == nil {
+func (s *ServicesCreateServiceResponse) GetObject() *ServicesCreateServiceResponseBody {
+	if s == nil {
 		return nil
 	}
-	return o.Object
+	return s.Object
 }

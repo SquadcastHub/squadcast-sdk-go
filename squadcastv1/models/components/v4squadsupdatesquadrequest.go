@@ -7,16 +7,16 @@ type V4SquadsUpdateSquadRequest struct {
 	Members []V4SquadsSquadMember `json:"members,omitempty"`
 }
 
-func (o *V4SquadsUpdateSquadRequest) GetName() *string {
-	if o == nil {
+func (v *V4SquadsUpdateSquadRequest) GetName() *string {
+	if v == nil {
 		return nil
 	}
-	return o.Name
+	return v.Name
 }
 
-func (o *V4SquadsUpdateSquadRequest) GetMembers() []V4SquadsSquadMember {
-	if o == nil {
+func (v *V4SquadsUpdateSquadRequest) GetMembers() []V4SquadsSquadMember {
+	if v == nil {
 		return nil
 	}
-	return o.Members
+	return v.Members
 }

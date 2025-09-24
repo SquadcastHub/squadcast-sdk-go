@@ -7,18 +7,18 @@ type V3IncidentsPostmortemsPostmortemResponseIncident struct {
 	TimeOfCreation string `json:"time_of_creation"`
 }
 
-func (o *V3IncidentsPostmortemsPostmortemResponseIncident) GetMessage() string {
-	if o == nil {
+func (v *V3IncidentsPostmortemsPostmortemResponseIncident) GetMessage() string {
+	if v == nil {
 		return ""
 	}
-	return o.Message
+	return v.Message
 }
 
-func (o *V3IncidentsPostmortemsPostmortemResponseIncident) GetTimeOfCreation() string {
-	if o == nil {
+func (v *V3IncidentsPostmortemsPostmortemResponseIncident) GetTimeOfCreation() string {
+	if v == nil {
 		return ""
 	}
-	return o.TimeOfCreation
+	return v.TimeOfCreation
 }
 
 // V3IncidentsPostmortemsPostmortemResponse - Represents a Postmortem in the system.
@@ -39,86 +39,86 @@ type V3IncidentsPostmortemsPostmortemResponse struct {
 	Incident      *V3IncidentsPostmortemsPostmortemResponseIncident `json:"incident,omitempty"`
 }
 
-func (o *V3IncidentsPostmortemsPostmortemResponse) GetID() string {
-	if o == nil {
+func (v *V3IncidentsPostmortemsPostmortemResponse) GetID() string {
+	if v == nil {
 		return ""
 	}
-	return o.ID
+	return v.ID
 }
 
-func (o *V3IncidentsPostmortemsPostmortemResponse) GetOrganizationID() string {
-	if o == nil {
+func (v *V3IncidentsPostmortemsPostmortemResponse) GetOrganizationID() string {
+	if v == nil {
 		return ""
 	}
-	return o.OrganizationID
+	return v.OrganizationID
 }
 
-func (o *V3IncidentsPostmortemsPostmortemResponse) GetIncidentID() string {
-	if o == nil {
+func (v *V3IncidentsPostmortemsPostmortemResponse) GetIncidentID() string {
+	if v == nil {
 		return ""
 	}
-	return o.IncidentID
+	return v.IncidentID
 }
 
-func (o *V3IncidentsPostmortemsPostmortemResponse) GetPostmortem() string {
-	if o == nil {
+func (v *V3IncidentsPostmortemsPostmortemResponse) GetPostmortem() string {
+	if v == nil {
 		return ""
 	}
-	return o.Postmortem
+	return v.Postmortem
 }
 
-func (o *V3IncidentsPostmortemsPostmortemResponse) GetFollowUps() []V3IncidentsPostmortemsPostmortemFollowUp {
-	if o == nil {
+func (v *V3IncidentsPostmortemsPostmortemResponse) GetFollowUps() []V3IncidentsPostmortemsPostmortemFollowUp {
+	if v == nil {
 		return nil
 	}
-	return o.FollowUps
+	return v.FollowUps
 }
 
-func (o *V3IncidentsPostmortemsPostmortemResponse) GetCreatedAt() string {
-	if o == nil {
+func (v *V3IncidentsPostmortemsPostmortemResponse) GetCreatedAt() string {
+	if v == nil {
 		return ""
 	}
-	return o.CreatedAt
+	return v.CreatedAt
 }
 
-func (o *V3IncidentsPostmortemsPostmortemResponse) GetTitle() string {
-	if o == nil {
+func (v *V3IncidentsPostmortemsPostmortemResponse) GetTitle() string {
+	if v == nil {
 		return ""
 	}
-	return o.Title
+	return v.Title
 }
 
-func (o *V3IncidentsPostmortemsPostmortemResponse) GetStatus() V3IncidentsPostmortemsPostmortemStatus {
-	if o == nil {
+func (v *V3IncidentsPostmortemsPostmortemResponse) GetStatus() V3IncidentsPostmortemsPostmortemStatus {
+	if v == nil {
 		return V3IncidentsPostmortemsPostmortemStatus("")
 	}
-	return o.Status
+	return v.Status
 }
 
-func (o *V3IncidentsPostmortemsPostmortemResponse) GetOwner() CommonV3RBACOwner {
-	if o == nil {
+func (v *V3IncidentsPostmortemsPostmortemResponse) GetOwner() CommonV3RBACOwner {
+	if v == nil {
 		return CommonV3RBACOwner{}
 	}
-	return o.Owner
+	return v.Owner
 }
 
-func (o *V3IncidentsPostmortemsPostmortemResponse) GetAccessControl() []CommonV3RBACEntityPermission {
-	if o == nil {
+func (v *V3IncidentsPostmortemsPostmortemResponse) GetAccessControl() []CommonV3RBACEntityPermission {
+	if v == nil {
 		return []CommonV3RBACEntityPermission{}
 	}
-	return o.AccessControl
+	return v.AccessControl
 }
 
-func (o *V3IncidentsPostmortemsPostmortemResponse) GetAttachments() []string {
-	if o == nil {
+func (v *V3IncidentsPostmortemsPostmortemResponse) GetAttachments() []string {
+	if v == nil {
 		return nil
 	}
-	return o.Attachments
+	return v.Attachments
 }
 
-func (o *V3IncidentsPostmortemsPostmortemResponse) GetIncident() *V3IncidentsPostmortemsPostmortemResponseIncident {
-	if o == nil {
+func (v *V3IncidentsPostmortemsPostmortemResponse) GetIncident() *V3IncidentsPostmortemsPostmortemResponseIncident {
+	if v == nil {
 		return nil
 	}
-	return o.Incident
+	return v.Incident
 }

@@ -6,9 +6,9 @@ type V4ParticipantGroup struct {
 	Participants []V4Participant `json:"participants"`
 }
 
-func (o *V4ParticipantGroup) GetParticipants() []V4Participant {
-	if o == nil {
+func (v *V4ParticipantGroup) GetParticipants() []V4Participant {
+	if v == nil {
 		return []V4Participant{}
 	}
-	return o.Participants
+	return v.Participants
 }

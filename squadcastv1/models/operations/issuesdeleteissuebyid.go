@@ -11,18 +11,18 @@ type IssuesDeleteIssueByIDRequest struct {
 	IssueID      string `pathParam:"style=simple,explode=false,name=issue_id"`
 }
 
-func (o *IssuesDeleteIssueByIDRequest) GetStatuspageID() string {
-	if o == nil {
+func (i *IssuesDeleteIssueByIDRequest) GetStatuspageID() string {
+	if i == nil {
 		return ""
 	}
-	return o.StatuspageID
+	return i.StatuspageID
 }
 
-func (o *IssuesDeleteIssueByIDRequest) GetIssueID() string {
-	if o == nil {
+func (i *IssuesDeleteIssueByIDRequest) GetIssueID() string {
+	if i == nil {
 		return ""
 	}
-	return o.IssueID
+	return i.IssueID
 }
 
 // IssuesDeleteIssueByIDResponseBody - The request has succeeded.
@@ -30,11 +30,11 @@ type IssuesDeleteIssueByIDResponseBody struct {
 	Data components.V4StatusPagesIssuesDeleteIssueByIDResponse `json:"data"`
 }
 
-func (o *IssuesDeleteIssueByIDResponseBody) GetData() components.V4StatusPagesIssuesDeleteIssueByIDResponse {
-	if o == nil {
+func (i *IssuesDeleteIssueByIDResponseBody) GetData() components.V4StatusPagesIssuesDeleteIssueByIDResponse {
+	if i == nil {
 		return components.V4StatusPagesIssuesDeleteIssueByIDResponse{}
 	}
-	return o.Data
+	return i.Data
 }
 
 type IssuesDeleteIssueByIDResponse struct {
@@ -43,16 +43,16 @@ type IssuesDeleteIssueByIDResponse struct {
 	Object *IssuesDeleteIssueByIDResponseBody
 }
 
-func (o *IssuesDeleteIssueByIDResponse) GetHTTPMeta() components.HTTPMetadata {
-	if o == nil {
+func (i *IssuesDeleteIssueByIDResponse) GetHTTPMeta() components.HTTPMetadata {
+	if i == nil {
 		return components.HTTPMetadata{}
 	}
-	return o.HTTPMeta
+	return i.HTTPMeta
 }
 
-func (o *IssuesDeleteIssueByIDResponse) GetObject() *IssuesDeleteIssueByIDResponseBody {
-	if o == nil {
+func (i *IssuesDeleteIssueByIDResponse) GetObject() *IssuesDeleteIssueByIDResponseBody {
+	if i == nil {
 		return nil
 	}
-	return o.Object
+	return i.Object
 }

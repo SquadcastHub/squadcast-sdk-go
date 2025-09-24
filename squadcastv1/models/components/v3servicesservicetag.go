@@ -7,16 +7,16 @@ type V3ServicesServiceTag struct {
 	Value string `json:"value"`
 }
 
-func (o *V3ServicesServiceTag) GetKey() string {
-	if o == nil {
+func (v *V3ServicesServiceTag) GetKey() string {
+	if v == nil {
 		return ""
 	}
-	return o.Key
+	return v.Key
 }
 
-func (o *V3ServicesServiceTag) GetValue() string {
-	if o == nil {
+func (v *V3ServicesServiceTag) GetValue() string {
+	if v == nil {
 		return ""
 	}
-	return o.Value
+	return v.Value
 }

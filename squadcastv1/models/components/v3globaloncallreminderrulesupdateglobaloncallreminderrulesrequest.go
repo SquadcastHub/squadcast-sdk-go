@@ -7,16 +7,16 @@ type V3GlobalOncallReminderRulesUpdateGlobalOncallReminderRulesRequest struct {
 	Rules     []V3GlobalOncallReminderRulesRule `json:"rules"`
 }
 
-func (o *V3GlobalOncallReminderRulesUpdateGlobalOncallReminderRulesRequest) GetIsEnabled() bool {
-	if o == nil {
+func (v *V3GlobalOncallReminderRulesUpdateGlobalOncallReminderRulesRequest) GetIsEnabled() bool {
+	if v == nil {
 		return false
 	}
-	return o.IsEnabled
+	return v.IsEnabled
 }
 
-func (o *V3GlobalOncallReminderRulesUpdateGlobalOncallReminderRulesRequest) GetRules() []V3GlobalOncallReminderRulesRule {
-	if o == nil {
+func (v *V3GlobalOncallReminderRulesUpdateGlobalOncallReminderRulesRequest) GetRules() []V3GlobalOncallReminderRulesRule {
+	if v == nil {
 		return []V3GlobalOncallReminderRulesRule{}
 	}
-	return o.Rules
+	return v.Rules
 }

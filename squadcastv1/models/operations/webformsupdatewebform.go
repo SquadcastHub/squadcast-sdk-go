@@ -11,18 +11,18 @@ type WebformsUpdateWebformRequest struct {
 	V3WebformsCreateOrUpdateWebformRequest components.V3WebformsCreateOrUpdateWebformRequest `request:"mediaType=application/json"`
 }
 
-func (o *WebformsUpdateWebformRequest) GetWebformID() int64 {
-	if o == nil {
+func (w *WebformsUpdateWebformRequest) GetWebformID() int64 {
+	if w == nil {
 		return 0
 	}
-	return o.WebformID
+	return w.WebformID
 }
 
-func (o *WebformsUpdateWebformRequest) GetV3WebformsCreateOrUpdateWebformRequest() components.V3WebformsCreateOrUpdateWebformRequest {
-	if o == nil {
+func (w *WebformsUpdateWebformRequest) GetV3WebformsCreateOrUpdateWebformRequest() components.V3WebformsCreateOrUpdateWebformRequest {
+	if w == nil {
 		return components.V3WebformsCreateOrUpdateWebformRequest{}
 	}
-	return o.V3WebformsCreateOrUpdateWebformRequest
+	return w.V3WebformsCreateOrUpdateWebformRequest
 }
 
 // WebformsUpdateWebformResponseBody - The request has succeeded.
@@ -30,11 +30,11 @@ type WebformsUpdateWebformResponseBody struct {
 	Data components.V3WebformsWebformResponse `json:"data"`
 }
 
-func (o *WebformsUpdateWebformResponseBody) GetData() components.V3WebformsWebformResponse {
-	if o == nil {
+func (w *WebformsUpdateWebformResponseBody) GetData() components.V3WebformsWebformResponse {
+	if w == nil {
 		return components.V3WebformsWebformResponse{}
 	}
-	return o.Data
+	return w.Data
 }
 
 type WebformsUpdateWebformResponse struct {
@@ -43,16 +43,16 @@ type WebformsUpdateWebformResponse struct {
 	Object *WebformsUpdateWebformResponseBody
 }
 
-func (o *WebformsUpdateWebformResponse) GetHTTPMeta() components.HTTPMetadata {
-	if o == nil {
+func (w *WebformsUpdateWebformResponse) GetHTTPMeta() components.HTTPMetadata {
+	if w == nil {
 		return components.HTTPMetadata{}
 	}
-	return o.HTTPMeta
+	return w.HTTPMeta
 }
 
-func (o *WebformsUpdateWebformResponse) GetObject() *WebformsUpdateWebformResponseBody {
-	if o == nil {
+func (w *WebformsUpdateWebformResponse) GetObject() *WebformsUpdateWebformResponseBody {
+	if w == nil {
 		return nil
 	}
-	return o.Object
+	return w.Object
 }

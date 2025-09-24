@@ -11,18 +11,18 @@ type MaintenancesDeleteMaintenanceByIDRequest struct {
 	MaintenanceID string `pathParam:"style=simple,explode=false,name=maintenance_id"`
 }
 
-func (o *MaintenancesDeleteMaintenanceByIDRequest) GetStatuspageID() string {
-	if o == nil {
+func (m *MaintenancesDeleteMaintenanceByIDRequest) GetStatuspageID() string {
+	if m == nil {
 		return ""
 	}
-	return o.StatuspageID
+	return m.StatuspageID
 }
 
-func (o *MaintenancesDeleteMaintenanceByIDRequest) GetMaintenanceID() string {
-	if o == nil {
+func (m *MaintenancesDeleteMaintenanceByIDRequest) GetMaintenanceID() string {
+	if m == nil {
 		return ""
 	}
-	return o.MaintenanceID
+	return m.MaintenanceID
 }
 
 // MaintenancesDeleteMaintenanceByIDResponseBody - The request has succeeded.
@@ -30,11 +30,11 @@ type MaintenancesDeleteMaintenanceByIDResponseBody struct {
 	Data components.V4StatusPagesMaintenancesDeleteMaintenanceByIDResponse `json:"data"`
 }
 
-func (o *MaintenancesDeleteMaintenanceByIDResponseBody) GetData() components.V4StatusPagesMaintenancesDeleteMaintenanceByIDResponse {
-	if o == nil {
+func (m *MaintenancesDeleteMaintenanceByIDResponseBody) GetData() components.V4StatusPagesMaintenancesDeleteMaintenanceByIDResponse {
+	if m == nil {
 		return components.V4StatusPagesMaintenancesDeleteMaintenanceByIDResponse{}
 	}
-	return o.Data
+	return m.Data
 }
 
 type MaintenancesDeleteMaintenanceByIDResponse struct {
@@ -43,16 +43,16 @@ type MaintenancesDeleteMaintenanceByIDResponse struct {
 	Object *MaintenancesDeleteMaintenanceByIDResponseBody
 }
 
-func (o *MaintenancesDeleteMaintenanceByIDResponse) GetHTTPMeta() components.HTTPMetadata {
-	if o == nil {
+func (m *MaintenancesDeleteMaintenanceByIDResponse) GetHTTPMeta() components.HTTPMetadata {
+	if m == nil {
 		return components.HTTPMetadata{}
 	}
-	return o.HTTPMeta
+	return m.HTTPMeta
 }
 
-func (o *MaintenancesDeleteMaintenanceByIDResponse) GetObject() *MaintenancesDeleteMaintenanceByIDResponseBody {
-	if o == nil {
+func (m *MaintenancesDeleteMaintenanceByIDResponse) GetObject() *MaintenancesDeleteMaintenanceByIDResponseBody {
+	if m == nil {
 		return nil
 	}
-	return o.Object
+	return m.Object
 }

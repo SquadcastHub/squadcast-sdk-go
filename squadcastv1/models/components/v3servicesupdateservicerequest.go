@@ -14,65 +14,65 @@ type V3ServicesUpdateServiceRequest struct {
 	DelayNotificationConfig         *V3ServicesNotificationDelayConfigRequest `json:"delay_notification_config,omitempty"`
 }
 
-func (o *V3ServicesUpdateServiceRequest) GetName() *string {
-	if o == nil {
+func (v *V3ServicesUpdateServiceRequest) GetName() *string {
+	if v == nil {
 		return nil
 	}
-	return o.Name
+	return v.Name
 }
 
-func (o *V3ServicesUpdateServiceRequest) GetEscalationPolicyID() *string {
-	if o == nil {
+func (v *V3ServicesUpdateServiceRequest) GetEscalationPolicyID() *string {
+	if v == nil {
 		return nil
 	}
-	return o.EscalationPolicyID
+	return v.EscalationPolicyID
 }
 
-func (o *V3ServicesUpdateServiceRequest) GetDescription() *string {
-	if o == nil {
+func (v *V3ServicesUpdateServiceRequest) GetDescription() *string {
+	if v == nil {
 		return nil
 	}
-	return o.Description
+	return v.Description
 }
 
-func (o *V3ServicesUpdateServiceRequest) GetEmailPrefix() *string {
-	if o == nil {
+func (v *V3ServicesUpdateServiceRequest) GetEmailPrefix() *string {
+	if v == nil {
 		return nil
 	}
-	return o.EmailPrefix
+	return v.EmailPrefix
 }
 
-func (o *V3ServicesUpdateServiceRequest) GetMaintainer() *V3ServicesServiceMaintainer {
-	if o == nil {
+func (v *V3ServicesUpdateServiceRequest) GetMaintainer() *V3ServicesServiceMaintainer {
+	if v == nil {
 		return nil
 	}
-	return o.Maintainer
+	return v.Maintainer
 }
 
-func (o *V3ServicesUpdateServiceRequest) GetTags() []V3ServicesServiceTag {
-	if o == nil {
+func (v *V3ServicesUpdateServiceRequest) GetTags() []V3ServicesServiceTag {
+	if v == nil {
 		return nil
 	}
-	return o.Tags
+	return v.Tags
 }
 
-func (o *V3ServicesUpdateServiceRequest) GetAutoPauseTransientAlertsConfig() *V3ServicesAPTAConfig {
-	if o == nil {
+func (v *V3ServicesUpdateServiceRequest) GetAutoPauseTransientAlertsConfig() *V3ServicesAPTAConfig {
+	if v == nil {
 		return nil
 	}
-	return o.AutoPauseTransientAlertsConfig
+	return v.AutoPauseTransientAlertsConfig
 }
 
-func (o *V3ServicesUpdateServiceRequest) GetIntelligentAlertsGroupingConfig() *V3ServicesIAGConfig {
-	if o == nil {
+func (v *V3ServicesUpdateServiceRequest) GetIntelligentAlertsGroupingConfig() *V3ServicesIAGConfig {
+	if v == nil {
 		return nil
 	}
-	return o.IntelligentAlertsGroupingConfig
+	return v.IntelligentAlertsGroupingConfig
 }
 
-func (o *V3ServicesUpdateServiceRequest) GetDelayNotificationConfig() *V3ServicesNotificationDelayConfigRequest {
-	if o == nil {
+func (v *V3ServicesUpdateServiceRequest) GetDelayNotificationConfig() *V3ServicesNotificationDelayConfigRequest {
+	if v == nil {
 		return nil
 	}
-	return o.DelayNotificationConfig
+	return v.DelayNotificationConfig
 }

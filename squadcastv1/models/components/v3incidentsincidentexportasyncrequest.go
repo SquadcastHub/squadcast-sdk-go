@@ -29,37 +29,37 @@ func (v *V3IncidentsIncidentExportAsyncRequest) UnmarshalJSON(data []byte) error
 	return nil
 }
 
-func (o *V3IncidentsIncidentExportAsyncRequest) GetOwnerID() string {
-	if o == nil {
+func (v *V3IncidentsIncidentExportAsyncRequest) GetOwnerID() string {
+	if v == nil {
 		return ""
 	}
-	return o.OwnerID
+	return v.OwnerID
 }
 
-func (o *V3IncidentsIncidentExportAsyncRequest) GetType() V3IncidentsExportFormat {
-	if o == nil {
+func (v *V3IncidentsIncidentExportAsyncRequest) GetType() V3IncidentsExportFormat {
+	if v == nil {
 		return V3IncidentsExportFormat("")
 	}
-	return o.Type
+	return v.Type
 }
 
-func (o *V3IncidentsIncidentExportAsyncRequest) GetStartTime() time.Time {
-	if o == nil {
+func (v *V3IncidentsIncidentExportAsyncRequest) GetStartTime() time.Time {
+	if v == nil {
 		return time.Time{}
 	}
-	return o.StartTime
+	return v.StartTime
 }
 
-func (o *V3IncidentsIncidentExportAsyncRequest) GetEndTime() time.Time {
-	if o == nil {
+func (v *V3IncidentsIncidentExportAsyncRequest) GetEndTime() time.Time {
+	if v == nil {
 		return time.Time{}
 	}
-	return o.EndTime
+	return v.EndTime
 }
 
-func (o *V3IncidentsIncidentExportAsyncRequest) GetIncidentFilters() V3IncidentsExportIncidentsFilter {
-	if o == nil {
+func (v *V3IncidentsIncidentExportAsyncRequest) GetIncidentFilters() V3IncidentsExportIncidentsFilter {
+	if v == nil {
 		return V3IncidentsExportIncidentsFilter{}
 	}
-	return o.IncidentFilters
+	return v.IncidentFilters
 }

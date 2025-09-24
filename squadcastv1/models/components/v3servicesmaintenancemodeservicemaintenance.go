@@ -14,65 +14,65 @@ type V3ServicesMaintenanceModeServiceMaintenance struct {
 	RepeatTill           string  `json:"repeatTill"`
 }
 
-func (o *V3ServicesMaintenanceModeServiceMaintenance) GetMaintenanceStartDate() string {
-	if o == nil {
+func (v *V3ServicesMaintenanceModeServiceMaintenance) GetMaintenanceStartDate() string {
+	if v == nil {
 		return ""
 	}
-	return o.MaintenanceStartDate
+	return v.MaintenanceStartDate
 }
 
-func (o *V3ServicesMaintenanceModeServiceMaintenance) GetMaintenanceEndDate() *string {
-	if o == nil {
+func (v *V3ServicesMaintenanceModeServiceMaintenance) GetMaintenanceEndDate() *string {
+	if v == nil {
 		return nil
 	}
-	return o.MaintenanceEndDate
+	return v.MaintenanceEndDate
 }
 
-func (o *V3ServicesMaintenanceModeServiceMaintenance) GetDaily() bool {
-	if o == nil {
+func (v *V3ServicesMaintenanceModeServiceMaintenance) GetDaily() bool {
+	if v == nil {
 		return false
 	}
-	return o.Daily
+	return v.Daily
 }
 
-func (o *V3ServicesMaintenanceModeServiceMaintenance) GetWeekly() bool {
-	if o == nil {
+func (v *V3ServicesMaintenanceModeServiceMaintenance) GetWeekly() bool {
+	if v == nil {
 		return false
 	}
-	return o.Weekly
+	return v.Weekly
 }
 
-func (o *V3ServicesMaintenanceModeServiceMaintenance) GetTwoWeekly() bool {
-	if o == nil {
+func (v *V3ServicesMaintenanceModeServiceMaintenance) GetTwoWeekly() bool {
+	if v == nil {
 		return false
 	}
-	return o.TwoWeekly
+	return v.TwoWeekly
 }
 
-func (o *V3ServicesMaintenanceModeServiceMaintenance) GetThreeWeekly() bool {
-	if o == nil {
+func (v *V3ServicesMaintenanceModeServiceMaintenance) GetThreeWeekly() bool {
+	if v == nil {
 		return false
 	}
-	return o.ThreeWeekly
+	return v.ThreeWeekly
 }
 
-func (o *V3ServicesMaintenanceModeServiceMaintenance) GetMonthly() bool {
-	if o == nil {
+func (v *V3ServicesMaintenanceModeServiceMaintenance) GetMonthly() bool {
+	if v == nil {
 		return false
 	}
-	return o.Monthly
+	return v.Monthly
 }
 
-func (o *V3ServicesMaintenanceModeServiceMaintenance) GetDeleted() bool {
-	if o == nil {
+func (v *V3ServicesMaintenanceModeServiceMaintenance) GetDeleted() bool {
+	if v == nil {
 		return false
 	}
-	return o.Deleted
+	return v.Deleted
 }
 
-func (o *V3ServicesMaintenanceModeServiceMaintenance) GetRepeatTill() string {
-	if o == nil {
+func (v *V3ServicesMaintenanceModeServiceMaintenance) GetRepeatTill() string {
+	if v == nil {
 		return ""
 	}
-	return o.RepeatTill
+	return v.RepeatTill
 }

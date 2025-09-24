@@ -11,18 +11,18 @@ type IncidentsReassignIncidentRequest struct {
 	V3IncidentsReassignIncidentRequest components.V3IncidentsReassignIncidentRequest `request:"mediaType=application/json"`
 }
 
-func (o *IncidentsReassignIncidentRequest) GetIncidentID() string {
-	if o == nil {
+func (i *IncidentsReassignIncidentRequest) GetIncidentID() string {
+	if i == nil {
 		return ""
 	}
-	return o.IncidentID
+	return i.IncidentID
 }
 
-func (o *IncidentsReassignIncidentRequest) GetV3IncidentsReassignIncidentRequest() components.V3IncidentsReassignIncidentRequest {
-	if o == nil {
+func (i *IncidentsReassignIncidentRequest) GetV3IncidentsReassignIncidentRequest() components.V3IncidentsReassignIncidentRequest {
+	if i == nil {
 		return components.V3IncidentsReassignIncidentRequest{}
 	}
-	return o.V3IncidentsReassignIncidentRequest
+	return i.V3IncidentsReassignIncidentRequest
 }
 
 // IncidentsReassignIncidentResponseBody - The request has succeeded.
@@ -30,11 +30,11 @@ type IncidentsReassignIncidentResponseBody struct {
 	Data string `json:"data"`
 }
 
-func (o *IncidentsReassignIncidentResponseBody) GetData() string {
-	if o == nil {
+func (i *IncidentsReassignIncidentResponseBody) GetData() string {
+	if i == nil {
 		return ""
 	}
-	return o.Data
+	return i.Data
 }
 
 type IncidentsReassignIncidentResponse struct {
@@ -43,16 +43,16 @@ type IncidentsReassignIncidentResponse struct {
 	Object *IncidentsReassignIncidentResponseBody
 }
 
-func (o *IncidentsReassignIncidentResponse) GetHTTPMeta() components.HTTPMetadata {
-	if o == nil {
+func (i *IncidentsReassignIncidentResponse) GetHTTPMeta() components.HTTPMetadata {
+	if i == nil {
 		return components.HTTPMetadata{}
 	}
-	return o.HTTPMeta
+	return i.HTTPMeta
 }
 
-func (o *IncidentsReassignIncidentResponse) GetObject() *IncidentsReassignIncidentResponseBody {
-	if o == nil {
+func (i *IncidentsReassignIncidentResponse) GetObject() *IncidentsReassignIncidentResponseBody {
+	if i == nil {
 		return nil
 	}
-	return o.Object
+	return i.Object
 }

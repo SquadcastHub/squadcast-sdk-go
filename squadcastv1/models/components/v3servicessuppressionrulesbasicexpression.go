@@ -8,23 +8,23 @@ type V3ServicesSuppressionRulesBasicExpression struct {
 	RHS string `json:"rhs"`
 }
 
-func (o *V3ServicesSuppressionRulesBasicExpression) GetLHS() string {
-	if o == nil {
+func (v *V3ServicesSuppressionRulesBasicExpression) GetLHS() string {
+	if v == nil {
 		return ""
 	}
-	return o.LHS
+	return v.LHS
 }
 
-func (o *V3ServicesSuppressionRulesBasicExpression) GetOp() string {
-	if o == nil {
+func (v *V3ServicesSuppressionRulesBasicExpression) GetOp() string {
+	if v == nil {
 		return ""
 	}
-	return o.Op
+	return v.Op
 }
 
-func (o *V3ServicesSuppressionRulesBasicExpression) GetRHS() string {
-	if o == nil {
+func (v *V3ServicesSuppressionRulesBasicExpression) GetRHS() string {
+	if v == nil {
 		return ""
 	}
-	return o.RHS
+	return v.RHS
 }

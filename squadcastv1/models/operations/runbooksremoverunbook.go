@@ -10,11 +10,11 @@ type RunbooksRemoveRunbookRequest struct {
 	RunbookID string `pathParam:"style=simple,explode=false,name=runbookID"`
 }
 
-func (o *RunbooksRemoveRunbookRequest) GetRunbookID() string {
-	if o == nil {
+func (r *RunbooksRemoveRunbookRequest) GetRunbookID() string {
+	if r == nil {
 		return ""
 	}
-	return o.RunbookID
+	return r.RunbookID
 }
 
 // RunbooksRemoveRunbookResponseBody - There is no content to send for this request, but the headers may be useful.
@@ -26,16 +26,16 @@ type RunbooksRemoveRunbookResponse struct {
 	Body     []byte
 }
 
-func (o *RunbooksRemoveRunbookResponse) GetHTTPMeta() components.HTTPMetadata {
-	if o == nil {
+func (r *RunbooksRemoveRunbookResponse) GetHTTPMeta() components.HTTPMetadata {
+	if r == nil {
 		return components.HTTPMetadata{}
 	}
-	return o.HTTPMeta
+	return r.HTTPMeta
 }
 
-func (o *RunbooksRemoveRunbookResponse) GetBody() []byte {
-	if o == nil {
+func (r *RunbooksRemoveRunbookResponse) GetBody() []byte {
+	if r == nil {
 		return nil
 	}
-	return o.Body
+	return r.Body
 }

@@ -14,18 +14,18 @@ type SchedulesCloneScheduleRequest struct {
 	RequestBody SchedulesCloneScheduleRequestBody `request:"mediaType=application/json"`
 }
 
-func (o *SchedulesCloneScheduleRequest) GetScheduleID() string {
-	if o == nil {
+func (s *SchedulesCloneScheduleRequest) GetScheduleID() string {
+	if s == nil {
 		return ""
 	}
-	return o.ScheduleID
+	return s.ScheduleID
 }
 
-func (o *SchedulesCloneScheduleRequest) GetRequestBody() SchedulesCloneScheduleRequestBody {
-	if o == nil {
+func (s *SchedulesCloneScheduleRequest) GetRequestBody() SchedulesCloneScheduleRequestBody {
+	if s == nil {
 		return SchedulesCloneScheduleRequestBody{}
 	}
-	return o.RequestBody
+	return s.RequestBody
 }
 
 // SchedulesCloneScheduleResponseBody - The request has succeeded and a new resource has been created as a result.
@@ -33,11 +33,11 @@ type SchedulesCloneScheduleResponseBody struct {
 	Data components.V4ScheduleResponse `json:"data"`
 }
 
-func (o *SchedulesCloneScheduleResponseBody) GetData() components.V4ScheduleResponse {
-	if o == nil {
+func (s *SchedulesCloneScheduleResponseBody) GetData() components.V4ScheduleResponse {
+	if s == nil {
 		return components.V4ScheduleResponse{}
 	}
-	return o.Data
+	return s.Data
 }
 
 type SchedulesCloneScheduleResponse struct {
@@ -46,16 +46,16 @@ type SchedulesCloneScheduleResponse struct {
 	Object *SchedulesCloneScheduleResponseBody
 }
 
-func (o *SchedulesCloneScheduleResponse) GetHTTPMeta() components.HTTPMetadata {
-	if o == nil {
+func (s *SchedulesCloneScheduleResponse) GetHTTPMeta() components.HTTPMetadata {
+	if s == nil {
 		return components.HTTPMetadata{}
 	}
-	return o.HTTPMeta
+	return s.HTTPMeta
 }
 
-func (o *SchedulesCloneScheduleResponse) GetObject() *SchedulesCloneScheduleResponseBody {
-	if o == nil {
+func (s *SchedulesCloneScheduleResponse) GetObject() *SchedulesCloneScheduleResponseBody {
+	if s == nil {
 		return nil
 	}
-	return o.Object
+	return s.Object
 }

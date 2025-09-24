@@ -7,16 +7,16 @@ type V4SquadsSquadMember struct {
 	Role   *string `json:"role,omitempty"`
 }
 
-func (o *V4SquadsSquadMember) GetUserID() string {
-	if o == nil {
+func (v *V4SquadsSquadMember) GetUserID() string {
+	if v == nil {
 		return ""
 	}
-	return o.UserID
+	return v.UserID
 }
 
-func (o *V4SquadsSquadMember) GetRole() *string {
-	if o == nil {
+func (v *V4SquadsSquadMember) GetRole() *string {
+	if v == nil {
 		return nil
 	}
-	return o.Role
+	return v.Role
 }

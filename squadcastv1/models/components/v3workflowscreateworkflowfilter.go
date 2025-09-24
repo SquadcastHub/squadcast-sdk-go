@@ -16,58 +16,58 @@ type V3WorkflowsCreateWorkflowFilter struct {
 	FilterType *string                           `json:"filterType,omitempty"`
 }
 
-func (o *V3WorkflowsCreateWorkflowFilter) GetType() *string {
-	if o == nil {
+func (v *V3WorkflowsCreateWorkflowFilter) GetType() *string {
+	if v == nil {
 		return nil
 	}
-	return o.Type
+	return v.Type
 }
 
-func (o *V3WorkflowsCreateWorkflowFilter) GetKey() *string {
-	if o == nil {
+func (v *V3WorkflowsCreateWorkflowFilter) GetKey() *string {
+	if v == nil {
 		return nil
 	}
-	return o.Key
+	return v.Key
 }
 
-func (o *V3WorkflowsCreateWorkflowFilter) GetValue() any {
-	if o == nil {
+func (v *V3WorkflowsCreateWorkflowFilter) GetValue() any {
+	if v == nil {
 		return nil
 	}
-	return o.Value
+	return v.Value
 }
 
-func (o *V3WorkflowsCreateWorkflowFilter) GetFields() *V3WorkflowsCreateWorkflowFilter {
-	if o == nil {
+func (v *V3WorkflowsCreateWorkflowFilter) GetFields() *V3WorkflowsCreateWorkflowFilter {
+	if v == nil {
 		return nil
 	}
-	return o.Fields
+	return v.Fields
 }
 
-func (o *V3WorkflowsCreateWorkflowFilter) GetChildren() []V3WorkflowsCreateWorkflowFilter {
-	if o == nil {
+func (v *V3WorkflowsCreateWorkflowFilter) GetChildren() []V3WorkflowsCreateWorkflowFilter {
+	if v == nil {
 		return nil
 	}
-	return o.Children
+	return v.Children
 }
 
-func (o *V3WorkflowsCreateWorkflowFilter) GetLabel() *string {
-	if o == nil {
+func (v *V3WorkflowsCreateWorkflowFilter) GetLabel() *string {
+	if v == nil {
 		return nil
 	}
-	return o.Label
+	return v.Label
 }
 
-func (o *V3WorkflowsCreateWorkflowFilter) GetEntity() *Entity {
-	if o == nil {
+func (v *V3WorkflowsCreateWorkflowFilter) GetEntity() *Entity {
+	if v == nil {
 		return nil
 	}
-	return o.Entity
+	return v.Entity
 }
 
-func (o *V3WorkflowsCreateWorkflowFilter) GetFilterType() *string {
-	if o == nil {
+func (v *V3WorkflowsCreateWorkflowFilter) GetFilterType() *string {
+	if v == nil {
 		return nil
 	}
-	return o.FilterType
+	return v.FilterType
 }

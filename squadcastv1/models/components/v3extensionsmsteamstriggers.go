@@ -10,16 +10,16 @@ type V3ExtensionsMSTeamsTriggers struct {
 	Custom []V3ExtensionsMSTeamsEventClass `json:"custom"`
 }
 
-func (o *V3ExtensionsMSTeamsTriggers) GetAllActive() bool {
-	if o == nil {
+func (v *V3ExtensionsMSTeamsTriggers) GetAllActive() bool {
+	if v == nil {
 		return false
 	}
-	return o.AllActive
+	return v.AllActive
 }
 
-func (o *V3ExtensionsMSTeamsTriggers) GetCustom() []V3ExtensionsMSTeamsEventClass {
-	if o == nil {
+func (v *V3ExtensionsMSTeamsTriggers) GetCustom() []V3ExtensionsMSTeamsEventClass {
+	if v == nil {
 		return []V3ExtensionsMSTeamsEventClass{}
 	}
-	return o.Custom
+	return v.Custom
 }

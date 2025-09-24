@@ -11,11 +11,11 @@ type WorkflowsCreateWorkflowResponseBody struct {
 	Data components.V3WorkflowsWorkflowAPIResponse `json:"data"`
 }
 
-func (o *WorkflowsCreateWorkflowResponseBody) GetData() components.V3WorkflowsWorkflowAPIResponse {
-	if o == nil {
+func (w *WorkflowsCreateWorkflowResponseBody) GetData() components.V3WorkflowsWorkflowAPIResponse {
+	if w == nil {
 		return components.V3WorkflowsWorkflowAPIResponse{}
 	}
-	return o.Data
+	return w.Data
 }
 
 type WorkflowsCreateWorkflowResponse struct {
@@ -24,16 +24,16 @@ type WorkflowsCreateWorkflowResponse struct {
 	Object *WorkflowsCreateWorkflowResponseBody
 }
 
-func (o *WorkflowsCreateWorkflowResponse) GetHTTPMeta() components.HTTPMetadata {
-	if o == nil {
+func (w *WorkflowsCreateWorkflowResponse) GetHTTPMeta() components.HTTPMetadata {
+	if w == nil {
 		return components.HTTPMetadata{}
 	}
-	return o.HTTPMeta
+	return w.HTTPMeta
 }
 
-func (o *WorkflowsCreateWorkflowResponse) GetObject() *WorkflowsCreateWorkflowResponseBody {
-	if o == nil {
+func (w *WorkflowsCreateWorkflowResponse) GetObject() *WorkflowsCreateWorkflowResponseBody {
+	if w == nil {
 		return nil
 	}
-	return o.Object
+	return w.Object
 }

@@ -12,11 +12,11 @@ type EscalationPoliciesCreateEscalationPoliciesResponseBody struct {
 	Data components.V3EscalationPoliciesEscalationPolicyResponse `json:"data"`
 }
 
-func (o *EscalationPoliciesCreateEscalationPoliciesResponseBody) GetData() components.V3EscalationPoliciesEscalationPolicyResponse {
-	if o == nil {
+func (e *EscalationPoliciesCreateEscalationPoliciesResponseBody) GetData() components.V3EscalationPoliciesEscalationPolicyResponse {
+	if e == nil {
 		return components.V3EscalationPoliciesEscalationPolicyResponse{}
 	}
-	return o.Data
+	return e.Data
 }
 
 type EscalationPoliciesCreateEscalationPoliciesResponse struct {
@@ -25,16 +25,16 @@ type EscalationPoliciesCreateEscalationPoliciesResponse struct {
 	Object *EscalationPoliciesCreateEscalationPoliciesResponseBody
 }
 
-func (o *EscalationPoliciesCreateEscalationPoliciesResponse) GetHTTPMeta() components.HTTPMetadata {
-	if o == nil {
+func (e *EscalationPoliciesCreateEscalationPoliciesResponse) GetHTTPMeta() components.HTTPMetadata {
+	if e == nil {
 		return components.HTTPMetadata{}
 	}
-	return o.HTTPMeta
+	return e.HTTPMeta
 }
 
-func (o *EscalationPoliciesCreateEscalationPoliciesResponse) GetObject() *EscalationPoliciesCreateEscalationPoliciesResponseBody {
-	if o == nil {
+func (e *EscalationPoliciesCreateEscalationPoliciesResponse) GetObject() *EscalationPoliciesCreateEscalationPoliciesResponseBody {
+	if e == nil {
 		return nil
 	}
-	return o.Object
+	return e.Object
 }

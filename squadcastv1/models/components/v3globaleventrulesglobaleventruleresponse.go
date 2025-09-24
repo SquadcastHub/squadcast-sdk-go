@@ -32,79 +32,79 @@ func (v *V3GlobalEventRulesGlobalEventRuleResponse) UnmarshalJSON(data []byte) e
 	return nil
 }
 
-func (o *V3GlobalEventRulesGlobalEventRuleResponse) GetID() int64 {
-	if o == nil {
+func (v *V3GlobalEventRulesGlobalEventRuleResponse) GetID() int64 {
+	if v == nil {
 		return 0
 	}
-	return o.ID
+	return v.ID
 }
 
-func (o *V3GlobalEventRulesGlobalEventRuleResponse) GetOwnerID() string {
-	if o == nil {
+func (v *V3GlobalEventRulesGlobalEventRuleResponse) GetOwnerID() string {
+	if v == nil {
 		return ""
 	}
-	return o.OwnerID
+	return v.OwnerID
 }
 
-func (o *V3GlobalEventRulesGlobalEventRuleResponse) GetName() string {
-	if o == nil {
+func (v *V3GlobalEventRulesGlobalEventRuleResponse) GetName() string {
+	if v == nil {
 		return ""
 	}
-	return o.Name
+	return v.Name
 }
 
-func (o *V3GlobalEventRulesGlobalEventRuleResponse) GetDescription() string {
-	if o == nil {
+func (v *V3GlobalEventRulesGlobalEventRuleResponse) GetDescription() string {
+	if v == nil {
 		return ""
 	}
-	return o.Description
+	return v.Description
 }
 
-func (o *V3GlobalEventRulesGlobalEventRuleResponse) GetRoutingKey() string {
-	if o == nil {
+func (v *V3GlobalEventRulesGlobalEventRuleResponse) GetRoutingKey() string {
+	if v == nil {
 		return ""
 	}
-	return o.RoutingKey
+	return v.RoutingKey
 }
 
-func (o *V3GlobalEventRulesGlobalEventRuleResponse) GetEntityOwner() *V3GlobalEventRulesEntityOwner {
-	if o == nil {
+func (v *V3GlobalEventRulesGlobalEventRuleResponse) GetEntityOwner() *V3GlobalEventRulesEntityOwner {
+	if v == nil {
 		return nil
 	}
-	return o.EntityOwner
+	return v.EntityOwner
 }
 
-func (o *V3GlobalEventRulesGlobalEventRuleResponse) GetRulesets() []V3GlobalEventRulesRuleset {
-	if o == nil {
+func (v *V3GlobalEventRulesGlobalEventRuleResponse) GetRulesets() []V3GlobalEventRulesRuleset {
+	if v == nil {
 		return nil
 	}
-	return o.Rulesets
+	return v.Rulesets
 }
 
-func (o *V3GlobalEventRulesGlobalEventRuleResponse) GetCreatedAt() time.Time {
-	if o == nil {
+func (v *V3GlobalEventRulesGlobalEventRuleResponse) GetCreatedAt() time.Time {
+	if v == nil {
 		return time.Time{}
 	}
-	return o.CreatedAt
+	return v.CreatedAt
 }
 
-func (o *V3GlobalEventRulesGlobalEventRuleResponse) GetCreatedBy() string {
-	if o == nil {
+func (v *V3GlobalEventRulesGlobalEventRuleResponse) GetCreatedBy() string {
+	if v == nil {
 		return ""
 	}
-	return o.CreatedBy
+	return v.CreatedBy
 }
 
-func (o *V3GlobalEventRulesGlobalEventRuleResponse) GetUpdatedAt() time.Time {
-	if o == nil {
+func (v *V3GlobalEventRulesGlobalEventRuleResponse) GetUpdatedAt() time.Time {
+	if v == nil {
 		return time.Time{}
 	}
-	return o.UpdatedAt
+	return v.UpdatedAt
 }
 
-func (o *V3GlobalEventRulesGlobalEventRuleResponse) GetUpdatedBy() string {
-	if o == nil {
+func (v *V3GlobalEventRulesGlobalEventRuleResponse) GetUpdatedBy() string {
+	if v == nil {
 		return ""
 	}
-	return o.UpdatedBy
+	return v.UpdatedBy
 }

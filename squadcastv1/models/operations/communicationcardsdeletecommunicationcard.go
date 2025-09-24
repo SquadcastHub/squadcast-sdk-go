@@ -12,18 +12,18 @@ type CommunicationCardsDeleteCommunicationCardRequest struct {
 	CommunicationCardID string `pathParam:"style=simple,explode=false,name=communicationCardId"`
 }
 
-func (o *CommunicationCardsDeleteCommunicationCardRequest) GetIncidentID() string {
-	if o == nil {
+func (c *CommunicationCardsDeleteCommunicationCardRequest) GetIncidentID() string {
+	if c == nil {
 		return ""
 	}
-	return o.IncidentID
+	return c.IncidentID
 }
 
-func (o *CommunicationCardsDeleteCommunicationCardRequest) GetCommunicationCardID() string {
-	if o == nil {
+func (c *CommunicationCardsDeleteCommunicationCardRequest) GetCommunicationCardID() string {
+	if c == nil {
 		return ""
 	}
-	return o.CommunicationCardID
+	return c.CommunicationCardID
 }
 
 // CommunicationCardsDeleteCommunicationCardResponseBody - The request has succeeded.
@@ -31,11 +31,11 @@ type CommunicationCardsDeleteCommunicationCardResponseBody struct {
 	Data string `json:"data"`
 }
 
-func (o *CommunicationCardsDeleteCommunicationCardResponseBody) GetData() string {
-	if o == nil {
+func (c *CommunicationCardsDeleteCommunicationCardResponseBody) GetData() string {
+	if c == nil {
 		return ""
 	}
-	return o.Data
+	return c.Data
 }
 
 type CommunicationCardsDeleteCommunicationCardResponse struct {
@@ -44,16 +44,16 @@ type CommunicationCardsDeleteCommunicationCardResponse struct {
 	Object *CommunicationCardsDeleteCommunicationCardResponseBody
 }
 
-func (o *CommunicationCardsDeleteCommunicationCardResponse) GetHTTPMeta() components.HTTPMetadata {
-	if o == nil {
+func (c *CommunicationCardsDeleteCommunicationCardResponse) GetHTTPMeta() components.HTTPMetadata {
+	if c == nil {
 		return components.HTTPMetadata{}
 	}
-	return o.HTTPMeta
+	return c.HTTPMeta
 }
 
-func (o *CommunicationCardsDeleteCommunicationCardResponse) GetObject() *CommunicationCardsDeleteCommunicationCardResponseBody {
-	if o == nil {
+func (c *CommunicationCardsDeleteCommunicationCardResponse) GetObject() *CommunicationCardsDeleteCommunicationCardResponseBody {
+	if c == nil {
 		return nil
 	}
-	return o.Object
+	return c.Object
 }

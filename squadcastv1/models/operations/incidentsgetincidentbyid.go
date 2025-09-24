@@ -10,11 +10,11 @@ type IncidentsGetIncidentByIDRequest struct {
 	IncidentID string `pathParam:"style=simple,explode=false,name=incidentID"`
 }
 
-func (o *IncidentsGetIncidentByIDRequest) GetIncidentID() string {
-	if o == nil {
+func (i *IncidentsGetIncidentByIDRequest) GetIncidentID() string {
+	if i == nil {
 		return ""
 	}
-	return o.IncidentID
+	return i.IncidentID
 }
 
 // IncidentsGetIncidentByIDResponseBody - The request has succeeded.
@@ -22,11 +22,11 @@ type IncidentsGetIncidentByIDResponseBody struct {
 	Data components.V3IncidentsIncidentResponse `json:"data"`
 }
 
-func (o *IncidentsGetIncidentByIDResponseBody) GetData() components.V3IncidentsIncidentResponse {
-	if o == nil {
+func (i *IncidentsGetIncidentByIDResponseBody) GetData() components.V3IncidentsIncidentResponse {
+	if i == nil {
 		return components.V3IncidentsIncidentResponse{}
 	}
-	return o.Data
+	return i.Data
 }
 
 type IncidentsGetIncidentByIDResponse struct {
@@ -35,16 +35,16 @@ type IncidentsGetIncidentByIDResponse struct {
 	Object *IncidentsGetIncidentByIDResponseBody
 }
 
-func (o *IncidentsGetIncidentByIDResponse) GetHTTPMeta() components.HTTPMetadata {
-	if o == nil {
+func (i *IncidentsGetIncidentByIDResponse) GetHTTPMeta() components.HTTPMetadata {
+	if i == nil {
 		return components.HTTPMetadata{}
 	}
-	return o.HTTPMeta
+	return i.HTTPMeta
 }
 
-func (o *IncidentsGetIncidentByIDResponse) GetObject() *IncidentsGetIncidentByIDResponseBody {
-	if o == nil {
+func (i *IncidentsGetIncidentByIDResponse) GetObject() *IncidentsGetIncidentByIDResponseBody {
+	if i == nil {
 		return nil
 	}
-	return o.Object
+	return i.Object
 }

@@ -25,23 +25,23 @@ func (v *V3IncidentsTagsResponseNote) UnmarshalJSON(data []byte) error {
 	return nil
 }
 
-func (o *V3IncidentsTagsResponseNote) GetTimeOfNote() time.Time {
-	if o == nil {
+func (v *V3IncidentsTagsResponseNote) GetTimeOfNote() time.Time {
+	if v == nil {
 		return time.Time{}
 	}
-	return o.TimeOfNote
+	return v.TimeOfNote
 }
 
-func (o *V3IncidentsTagsResponseNote) GetNote() string {
-	if o == nil {
+func (v *V3IncidentsTagsResponseNote) GetNote() string {
+	if v == nil {
 		return ""
 	}
-	return o.Note
+	return v.Note
 }
 
-func (o *V3IncidentsTagsResponseNote) GetUserID() string {
-	if o == nil {
+func (v *V3IncidentsTagsResponseNote) GetUserID() string {
+	if v == nil {
 		return ""
 	}
-	return o.UserID
+	return v.UserID
 }

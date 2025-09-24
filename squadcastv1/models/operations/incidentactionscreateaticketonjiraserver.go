@@ -10,11 +10,11 @@ type IncidentActionsCreateATicketOnJiraServerRequest struct {
 	IncidentID string `pathParam:"style=simple,explode=false,name=incidentID"`
 }
 
-func (o *IncidentActionsCreateATicketOnJiraServerRequest) GetIncidentID() string {
-	if o == nil {
+func (i *IncidentActionsCreateATicketOnJiraServerRequest) GetIncidentID() string {
+	if i == nil {
 		return ""
 	}
-	return o.IncidentID
+	return i.IncidentID
 }
 
 // IncidentActionsCreateATicketOnJiraServerResponseBody - The request has succeeded.
@@ -22,11 +22,11 @@ type IncidentActionsCreateATicketOnJiraServerResponseBody struct {
 	Data string `json:"data"`
 }
 
-func (o *IncidentActionsCreateATicketOnJiraServerResponseBody) GetData() string {
-	if o == nil {
+func (i *IncidentActionsCreateATicketOnJiraServerResponseBody) GetData() string {
+	if i == nil {
 		return ""
 	}
-	return o.Data
+	return i.Data
 }
 
 type IncidentActionsCreateATicketOnJiraServerResponse struct {
@@ -35,16 +35,16 @@ type IncidentActionsCreateATicketOnJiraServerResponse struct {
 	Object *IncidentActionsCreateATicketOnJiraServerResponseBody
 }
 
-func (o *IncidentActionsCreateATicketOnJiraServerResponse) GetHTTPMeta() components.HTTPMetadata {
-	if o == nil {
+func (i *IncidentActionsCreateATicketOnJiraServerResponse) GetHTTPMeta() components.HTTPMetadata {
+	if i == nil {
 		return components.HTTPMetadata{}
 	}
-	return o.HTTPMeta
+	return i.HTTPMeta
 }
 
-func (o *IncidentActionsCreateATicketOnJiraServerResponse) GetObject() *IncidentActionsCreateATicketOnJiraServerResponseBody {
-	if o == nil {
+func (i *IncidentActionsCreateATicketOnJiraServerResponse) GetObject() *IncidentActionsCreateATicketOnJiraServerResponseBody {
+	if i == nil {
 		return nil
 	}
-	return o.Object
+	return i.Object
 }

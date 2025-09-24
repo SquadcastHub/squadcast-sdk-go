@@ -10,11 +10,11 @@ type IncidentActionsCreateAnIncidentInServicenowRequest struct {
 	IncidentID string `pathParam:"style=simple,explode=false,name=incidentID"`
 }
 
-func (o *IncidentActionsCreateAnIncidentInServicenowRequest) GetIncidentID() string {
-	if o == nil {
+func (i *IncidentActionsCreateAnIncidentInServicenowRequest) GetIncidentID() string {
+	if i == nil {
 		return ""
 	}
-	return o.IncidentID
+	return i.IncidentID
 }
 
 // IncidentActionsCreateAnIncidentInServicenowResponseBody - The request has succeeded and a new resource has been created as a result.
@@ -27,16 +27,16 @@ type IncidentActionsCreateAnIncidentInServicenowResponse struct {
 	Object *IncidentActionsCreateAnIncidentInServicenowResponseBody
 }
 
-func (o *IncidentActionsCreateAnIncidentInServicenowResponse) GetHTTPMeta() components.HTTPMetadata {
-	if o == nil {
+func (i *IncidentActionsCreateAnIncidentInServicenowResponse) GetHTTPMeta() components.HTTPMetadata {
+	if i == nil {
 		return components.HTTPMetadata{}
 	}
-	return o.HTTPMeta
+	return i.HTTPMeta
 }
 
-func (o *IncidentActionsCreateAnIncidentInServicenowResponse) GetObject() *IncidentActionsCreateAnIncidentInServicenowResponseBody {
-	if o == nil {
+func (i *IncidentActionsCreateAnIncidentInServicenowResponse) GetObject() *IncidentActionsCreateAnIncidentInServicenowResponseBody {
+	if i == nil {
 		return nil
 	}
-	return o.Object
+	return i.Object
 }

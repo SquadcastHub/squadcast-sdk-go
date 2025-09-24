@@ -12,18 +12,18 @@ type SquadsGetAllSquadsResponseBody struct {
 	PageInfo components.CommonV4PageInfo        `json:"pageInfo"`
 }
 
-func (o *SquadsGetAllSquadsResponseBody) GetData() []components.V4SquadsSquadResponse {
-	if o == nil {
+func (s *SquadsGetAllSquadsResponseBody) GetData() []components.V4SquadsSquadResponse {
+	if s == nil {
 		return []components.V4SquadsSquadResponse{}
 	}
-	return o.Data
+	return s.Data
 }
 
-func (o *SquadsGetAllSquadsResponseBody) GetPageInfo() components.CommonV4PageInfo {
-	if o == nil {
+func (s *SquadsGetAllSquadsResponseBody) GetPageInfo() components.CommonV4PageInfo {
+	if s == nil {
 		return components.CommonV4PageInfo{}
 	}
-	return o.PageInfo
+	return s.PageInfo
 }
 
 type SquadsGetAllSquadsResponse struct {
@@ -32,16 +32,16 @@ type SquadsGetAllSquadsResponse struct {
 	Object *SquadsGetAllSquadsResponseBody
 }
 
-func (o *SquadsGetAllSquadsResponse) GetHTTPMeta() components.HTTPMetadata {
-	if o == nil {
+func (s *SquadsGetAllSquadsResponse) GetHTTPMeta() components.HTTPMetadata {
+	if s == nil {
 		return components.HTTPMetadata{}
 	}
-	return o.HTTPMeta
+	return s.HTTPMeta
 }
 
-func (o *SquadsGetAllSquadsResponse) GetObject() *SquadsGetAllSquadsResponseBody {
-	if o == nil {
+func (s *SquadsGetAllSquadsResponse) GetObject() *SquadsGetAllSquadsResponseBody {
+	if s == nil {
 		return nil
 	}
-	return o.Object
+	return s.Object
 }

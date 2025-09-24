@@ -8,23 +8,23 @@ type V3IncidentsSnoozeNotificationsSnoozeIncidentResponse struct {
 	SnoozeEndTime string `json:"snooze_end_time"`
 }
 
-func (o *V3IncidentsSnoozeNotificationsSnoozeIncidentResponse) GetIncidentID() string {
-	if o == nil {
+func (v *V3IncidentsSnoozeNotificationsSnoozeIncidentResponse) GetIncidentID() string {
+	if v == nil {
 		return ""
 	}
-	return o.IncidentID
+	return v.IncidentID
 }
 
-func (o *V3IncidentsSnoozeNotificationsSnoozeIncidentResponse) GetIsSnoozed() bool {
-	if o == nil {
+func (v *V3IncidentsSnoozeNotificationsSnoozeIncidentResponse) GetIsSnoozed() bool {
+	if v == nil {
 		return false
 	}
-	return o.IsSnoozed
+	return v.IsSnoozed
 }
 
-func (o *V3IncidentsSnoozeNotificationsSnoozeIncidentResponse) GetSnoozeEndTime() string {
-	if o == nil {
+func (v *V3IncidentsSnoozeNotificationsSnoozeIncidentResponse) GetSnoozeEndTime() string {
+	if v == nil {
 		return ""
 	}
-	return o.SnoozeEndTime
+	return v.SnoozeEndTime
 }

@@ -11,18 +11,18 @@ type PostmortemsCreatePostmortemRequest struct {
 	V3IncidentsPostmortemsCreatePostmortemRequest components.V3IncidentsPostmortemsCreatePostmortemRequest `request:"mediaType=application/json"`
 }
 
-func (o *PostmortemsCreatePostmortemRequest) GetIncidentID() string {
-	if o == nil {
+func (p *PostmortemsCreatePostmortemRequest) GetIncidentID() string {
+	if p == nil {
 		return ""
 	}
-	return o.IncidentID
+	return p.IncidentID
 }
 
-func (o *PostmortemsCreatePostmortemRequest) GetV3IncidentsPostmortemsCreatePostmortemRequest() components.V3IncidentsPostmortemsCreatePostmortemRequest {
-	if o == nil {
+func (p *PostmortemsCreatePostmortemRequest) GetV3IncidentsPostmortemsCreatePostmortemRequest() components.V3IncidentsPostmortemsCreatePostmortemRequest {
+	if p == nil {
 		return components.V3IncidentsPostmortemsCreatePostmortemRequest{}
 	}
-	return o.V3IncidentsPostmortemsCreatePostmortemRequest
+	return p.V3IncidentsPostmortemsCreatePostmortemRequest
 }
 
 // PostmortemsCreatePostmortemBody - The body type of the operation request or response.
@@ -30,11 +30,11 @@ type PostmortemsCreatePostmortemBody struct {
 	Data components.V3IncidentsPostmortemsPostmortemResponse `json:"data"`
 }
 
-func (o *PostmortemsCreatePostmortemBody) GetData() components.V3IncidentsPostmortemsPostmortemResponse {
-	if o == nil {
+func (p *PostmortemsCreatePostmortemBody) GetData() components.V3IncidentsPostmortemsPostmortemResponse {
+	if p == nil {
 		return components.V3IncidentsPostmortemsPostmortemResponse{}
 	}
-	return o.Data
+	return p.Data
 }
 
 // PostmortemsCreatePostmortemResponseBody - The request has succeeded and a new resource has been created as a result.
@@ -43,11 +43,11 @@ type PostmortemsCreatePostmortemResponseBody struct {
 	Body PostmortemsCreatePostmortemBody `json:"body"`
 }
 
-func (o *PostmortemsCreatePostmortemResponseBody) GetBody() PostmortemsCreatePostmortemBody {
-	if o == nil {
+func (p *PostmortemsCreatePostmortemResponseBody) GetBody() PostmortemsCreatePostmortemBody {
+	if p == nil {
 		return PostmortemsCreatePostmortemBody{}
 	}
-	return o.Body
+	return p.Body
 }
 
 type PostmortemsCreatePostmortemResponse struct {
@@ -56,16 +56,16 @@ type PostmortemsCreatePostmortemResponse struct {
 	Object *PostmortemsCreatePostmortemResponseBody
 }
 
-func (o *PostmortemsCreatePostmortemResponse) GetHTTPMeta() components.HTTPMetadata {
-	if o == nil {
+func (p *PostmortemsCreatePostmortemResponse) GetHTTPMeta() components.HTTPMetadata {
+	if p == nil {
 		return components.HTTPMetadata{}
 	}
-	return o.HTTPMeta
+	return p.HTTPMeta
 }
 
-func (o *PostmortemsCreatePostmortemResponse) GetObject() *PostmortemsCreatePostmortemResponseBody {
-	if o == nil {
+func (p *PostmortemsCreatePostmortemResponse) GetObject() *PostmortemsCreatePostmortemResponseBody {
+	if p == nil {
 		return nil
 	}
-	return o.Object
+	return p.Object
 }

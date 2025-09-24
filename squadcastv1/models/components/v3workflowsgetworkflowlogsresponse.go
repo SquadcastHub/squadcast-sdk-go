@@ -51,57 +51,57 @@ type V3WorkflowsGetWorkflowLogsResponseData struct {
 	ExecutedAt      string     `json:"executed_at"`
 }
 
-func (o *V3WorkflowsGetWorkflowLogsResponseData) GetID() string {
-	if o == nil {
+func (v *V3WorkflowsGetWorkflowLogsResponseData) GetID() string {
+	if v == nil {
 		return ""
 	}
-	return o.ID
+	return v.ID
 }
 
-func (o *V3WorkflowsGetWorkflowLogsResponseData) GetStatus() StatusEnum {
-	if o == nil {
+func (v *V3WorkflowsGetWorkflowLogsResponseData) GetStatus() StatusEnum {
+	if v == nil {
 		return StatusEnum("")
 	}
-	return o.Status
+	return v.Status
 }
 
-func (o *V3WorkflowsGetWorkflowLogsResponseData) GetIncidentID() string {
-	if o == nil {
+func (v *V3WorkflowsGetWorkflowLogsResponseData) GetIncidentID() string {
+	if v == nil {
 		return ""
 	}
-	return o.IncidentID
+	return v.IncidentID
 }
 
-func (o *V3WorkflowsGetWorkflowLogsResponseData) GetActionExecution() string {
-	if o == nil {
+func (v *V3WorkflowsGetWorkflowLogsResponseData) GetActionExecution() string {
+	if v == nil {
 		return ""
 	}
-	return o.ActionExecution
+	return v.ActionExecution
 }
 
-func (o *V3WorkflowsGetWorkflowLogsResponseData) GetMessage() string {
-	if o == nil {
+func (v *V3WorkflowsGetWorkflowLogsResponseData) GetMessage() string {
+	if v == nil {
 		return ""
 	}
-	return o.Message
+	return v.Message
 }
 
-func (o *V3WorkflowsGetWorkflowLogsResponseData) GetExecutedAt() string {
-	if o == nil {
+func (v *V3WorkflowsGetWorkflowLogsResponseData) GetExecutedAt() string {
+	if v == nil {
 		return ""
 	}
-	return o.ExecutedAt
+	return v.ExecutedAt
 }
 
 type V3WorkflowsGetWorkflowLogsResponseMeta struct {
 	TotalCount int64 `json:"total_count"`
 }
 
-func (o *V3WorkflowsGetWorkflowLogsResponseMeta) GetTotalCount() int64 {
-	if o == nil {
+func (v *V3WorkflowsGetWorkflowLogsResponseMeta) GetTotalCount() int64 {
+	if v == nil {
 		return 0
 	}
-	return o.TotalCount
+	return v.TotalCount
 }
 
 type V3WorkflowsGetWorkflowLogsResponse struct {
@@ -109,16 +109,16 @@ type V3WorkflowsGetWorkflowLogsResponse struct {
 	Meta V3WorkflowsGetWorkflowLogsResponseMeta   `json:"meta"`
 }
 
-func (o *V3WorkflowsGetWorkflowLogsResponse) GetData() []V3WorkflowsGetWorkflowLogsResponseData {
-	if o == nil {
+func (v *V3WorkflowsGetWorkflowLogsResponse) GetData() []V3WorkflowsGetWorkflowLogsResponseData {
+	if v == nil {
 		return []V3WorkflowsGetWorkflowLogsResponseData{}
 	}
-	return o.Data
+	return v.Data
 }
 
-func (o *V3WorkflowsGetWorkflowLogsResponse) GetMeta() V3WorkflowsGetWorkflowLogsResponseMeta {
-	if o == nil {
+func (v *V3WorkflowsGetWorkflowLogsResponse) GetMeta() V3WorkflowsGetWorkflowLogsResponseMeta {
+	if v == nil {
 		return V3WorkflowsGetWorkflowLogsResponseMeta{}
 	}
-	return o.Meta
+	return v.Meta
 }

@@ -54,23 +54,23 @@ func (v *V3WorkflowsCommunicationChannel) UnmarshalJSON(data []byte) error {
 	return nil
 }
 
-func (o *V3WorkflowsCommunicationChannel) GetDisplayText() string {
-	if o == nil {
+func (v *V3WorkflowsCommunicationChannel) GetDisplayText() string {
+	if v == nil {
 		return ""
 	}
-	return o.DisplayText
+	return v.DisplayText
 }
 
-func (o *V3WorkflowsCommunicationChannel) GetLink() string {
-	if o == nil {
+func (v *V3WorkflowsCommunicationChannel) GetLink() string {
+	if v == nil {
 		return ""
 	}
-	return o.Link
+	return v.Link
 }
 
-func (o *V3WorkflowsCommunicationChannel) GetType() V3WorkflowsCommunicationChannelType {
-	if o == nil {
+func (v *V3WorkflowsCommunicationChannel) GetType() V3WorkflowsCommunicationChannelType {
+	if v == nil {
 		return V3WorkflowsCommunicationChannelType("")
 	}
-	return o.Type
+	return v.Type
 }

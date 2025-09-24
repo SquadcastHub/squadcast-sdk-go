@@ -14,30 +14,30 @@ type V3ServicesEscalationPolicyBasic struct {
 	Slug string `json:"slug"`
 }
 
-func (o *V3ServicesEscalationPolicyBasic) GetID() string {
-	if o == nil {
+func (v *V3ServicesEscalationPolicyBasic) GetID() string {
+	if v == nil {
 		return ""
 	}
-	return o.ID
+	return v.ID
 }
 
-func (o *V3ServicesEscalationPolicyBasic) GetName() string {
-	if o == nil {
+func (v *V3ServicesEscalationPolicyBasic) GetName() string {
+	if v == nil {
 		return ""
 	}
-	return o.Name
+	return v.Name
 }
 
-func (o *V3ServicesEscalationPolicyBasic) GetDescription() string {
-	if o == nil {
+func (v *V3ServicesEscalationPolicyBasic) GetDescription() string {
+	if v == nil {
 		return ""
 	}
-	return o.Description
+	return v.Description
 }
 
-func (o *V3ServicesEscalationPolicyBasic) GetSlug() string {
-	if o == nil {
+func (v *V3ServicesEscalationPolicyBasic) GetSlug() string {
+	if v == nil {
 		return ""
 	}
-	return o.Slug
+	return v.Slug
 }

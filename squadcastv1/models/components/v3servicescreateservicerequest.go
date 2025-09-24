@@ -15,72 +15,72 @@ type V3ServicesCreateServiceRequest struct {
 	DedupInitConfig                 *V3ServicesDedupInitConfig                `json:"dedup_init_config,omitempty"`
 }
 
-func (o *V3ServicesCreateServiceRequest) GetName() string {
-	if o == nil {
+func (v *V3ServicesCreateServiceRequest) GetName() string {
+	if v == nil {
 		return ""
 	}
-	return o.Name
+	return v.Name
 }
 
-func (o *V3ServicesCreateServiceRequest) GetEscalationPolicyID() string {
-	if o == nil {
+func (v *V3ServicesCreateServiceRequest) GetEscalationPolicyID() string {
+	if v == nil {
 		return ""
 	}
-	return o.EscalationPolicyID
+	return v.EscalationPolicyID
 }
 
-func (o *V3ServicesCreateServiceRequest) GetDescription() *string {
-	if o == nil {
+func (v *V3ServicesCreateServiceRequest) GetDescription() *string {
+	if v == nil {
 		return nil
 	}
-	return o.Description
+	return v.Description
 }
 
-func (o *V3ServicesCreateServiceRequest) GetEmailPrefix() *string {
-	if o == nil {
+func (v *V3ServicesCreateServiceRequest) GetEmailPrefix() *string {
+	if v == nil {
 		return nil
 	}
-	return o.EmailPrefix
+	return v.EmailPrefix
 }
 
-func (o *V3ServicesCreateServiceRequest) GetMaintainer() *V3ServicesServiceMaintainer {
-	if o == nil {
+func (v *V3ServicesCreateServiceRequest) GetMaintainer() *V3ServicesServiceMaintainer {
+	if v == nil {
 		return nil
 	}
-	return o.Maintainer
+	return v.Maintainer
 }
 
-func (o *V3ServicesCreateServiceRequest) GetTags() []V3ServicesServiceTag {
-	if o == nil {
+func (v *V3ServicesCreateServiceRequest) GetTags() []V3ServicesServiceTag {
+	if v == nil {
 		return nil
 	}
-	return o.Tags
+	return v.Tags
 }
 
-func (o *V3ServicesCreateServiceRequest) GetAutoPauseTransientAlertsConfig() *V3ServicesAPTAConfig {
-	if o == nil {
+func (v *V3ServicesCreateServiceRequest) GetAutoPauseTransientAlertsConfig() *V3ServicesAPTAConfig {
+	if v == nil {
 		return nil
 	}
-	return o.AutoPauseTransientAlertsConfig
+	return v.AutoPauseTransientAlertsConfig
 }
 
-func (o *V3ServicesCreateServiceRequest) GetIntelligentAlertsGroupingConfig() *V3ServicesIAGConfig {
-	if o == nil {
+func (v *V3ServicesCreateServiceRequest) GetIntelligentAlertsGroupingConfig() *V3ServicesIAGConfig {
+	if v == nil {
 		return nil
 	}
-	return o.IntelligentAlertsGroupingConfig
+	return v.IntelligentAlertsGroupingConfig
 }
 
-func (o *V3ServicesCreateServiceRequest) GetDelayNotificationConfig() *V3ServicesNotificationDelayConfigRequest {
-	if o == nil {
+func (v *V3ServicesCreateServiceRequest) GetDelayNotificationConfig() *V3ServicesNotificationDelayConfigRequest {
+	if v == nil {
 		return nil
 	}
-	return o.DelayNotificationConfig
+	return v.DelayNotificationConfig
 }
 
-func (o *V3ServicesCreateServiceRequest) GetDedupInitConfig() *V3ServicesDedupInitConfig {
-	if o == nil {
+func (v *V3ServicesCreateServiceRequest) GetDedupInitConfig() *V3ServicesDedupInitConfig {
+	if v == nil {
 		return nil
 	}
-	return o.DedupInitConfig
+	return v.DedupInitConfig
 }

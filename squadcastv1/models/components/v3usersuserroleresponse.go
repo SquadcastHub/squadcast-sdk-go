@@ -9,30 +9,30 @@ type V3UsersUserRoleResponse struct {
 	Order int64  `json:"order"`
 }
 
-func (o *V3UsersUserRoleResponse) GetID() string {
-	if o == nil {
+func (v *V3UsersUserRoleResponse) GetID() string {
+	if v == nil {
 		return ""
 	}
-	return o.ID
+	return v.ID
 }
 
-func (o *V3UsersUserRoleResponse) GetName() string {
-	if o == nil {
+func (v *V3UsersUserRoleResponse) GetName() string {
+	if v == nil {
 		return ""
 	}
-	return o.Name
+	return v.Name
 }
 
-func (o *V3UsersUserRoleResponse) GetLimit() int64 {
-	if o == nil {
+func (v *V3UsersUserRoleResponse) GetLimit() int64 {
+	if v == nil {
 		return 0
 	}
-	return o.Limit
+	return v.Limit
 }
 
-func (o *V3UsersUserRoleResponse) GetOrder() int64 {
-	if o == nil {
+func (v *V3UsersUserRoleResponse) GetOrder() int64 {
+	if v == nil {
 		return 0
 	}
-	return o.Order
+	return v.Order
 }

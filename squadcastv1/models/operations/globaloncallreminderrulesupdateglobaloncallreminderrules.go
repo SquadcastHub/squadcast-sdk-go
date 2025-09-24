@@ -11,18 +11,18 @@ type GlobalOncallReminderRulesUpdateGlobalOncallReminderRulesRequest struct {
 	V3GlobalOncallReminderRulesUpdateGlobalOncallReminderRulesRequest components.V3GlobalOncallReminderRulesUpdateGlobalOncallReminderRulesRequest `request:"mediaType=application/json"`
 }
 
-func (o *GlobalOncallReminderRulesUpdateGlobalOncallReminderRulesRequest) GetOwnerID() string {
-	if o == nil {
+func (g *GlobalOncallReminderRulesUpdateGlobalOncallReminderRulesRequest) GetOwnerID() string {
+	if g == nil {
 		return ""
 	}
-	return o.OwnerID
+	return g.OwnerID
 }
 
-func (o *GlobalOncallReminderRulesUpdateGlobalOncallReminderRulesRequest) GetV3GlobalOncallReminderRulesUpdateGlobalOncallReminderRulesRequest() components.V3GlobalOncallReminderRulesUpdateGlobalOncallReminderRulesRequest {
-	if o == nil {
+func (g *GlobalOncallReminderRulesUpdateGlobalOncallReminderRulesRequest) GetV3GlobalOncallReminderRulesUpdateGlobalOncallReminderRulesRequest() components.V3GlobalOncallReminderRulesUpdateGlobalOncallReminderRulesRequest {
+	if g == nil {
 		return components.V3GlobalOncallReminderRulesUpdateGlobalOncallReminderRulesRequest{}
 	}
-	return o.V3GlobalOncallReminderRulesUpdateGlobalOncallReminderRulesRequest
+	return g.V3GlobalOncallReminderRulesUpdateGlobalOncallReminderRulesRequest
 }
 
 // GlobalOncallReminderRulesUpdateGlobalOncallReminderRulesResponseBody - The request has succeeded.
@@ -30,11 +30,11 @@ type GlobalOncallReminderRulesUpdateGlobalOncallReminderRulesResponseBody struct
 	Data components.V3GlobalOncallReminderRulesGlobalOncallReminderRuleResponse `json:"data"`
 }
 
-func (o *GlobalOncallReminderRulesUpdateGlobalOncallReminderRulesResponseBody) GetData() components.V3GlobalOncallReminderRulesGlobalOncallReminderRuleResponse {
-	if o == nil {
+func (g *GlobalOncallReminderRulesUpdateGlobalOncallReminderRulesResponseBody) GetData() components.V3GlobalOncallReminderRulesGlobalOncallReminderRuleResponse {
+	if g == nil {
 		return components.V3GlobalOncallReminderRulesGlobalOncallReminderRuleResponse{}
 	}
-	return o.Data
+	return g.Data
 }
 
 type GlobalOncallReminderRulesUpdateGlobalOncallReminderRulesResponse struct {
@@ -43,16 +43,16 @@ type GlobalOncallReminderRulesUpdateGlobalOncallReminderRulesResponse struct {
 	Object *GlobalOncallReminderRulesUpdateGlobalOncallReminderRulesResponseBody
 }
 
-func (o *GlobalOncallReminderRulesUpdateGlobalOncallReminderRulesResponse) GetHTTPMeta() components.HTTPMetadata {
-	if o == nil {
+func (g *GlobalOncallReminderRulesUpdateGlobalOncallReminderRulesResponse) GetHTTPMeta() components.HTTPMetadata {
+	if g == nil {
 		return components.HTTPMetadata{}
 	}
-	return o.HTTPMeta
+	return g.HTTPMeta
 }
 
-func (o *GlobalOncallReminderRulesUpdateGlobalOncallReminderRulesResponse) GetObject() *GlobalOncallReminderRulesUpdateGlobalOncallReminderRulesResponseBody {
-	if o == nil {
+func (g *GlobalOncallReminderRulesUpdateGlobalOncallReminderRulesResponse) GetObject() *GlobalOncallReminderRulesUpdateGlobalOncallReminderRulesResponseBody {
+	if g == nil {
 		return nil
 	}
-	return o.Object
+	return g.Object
 }

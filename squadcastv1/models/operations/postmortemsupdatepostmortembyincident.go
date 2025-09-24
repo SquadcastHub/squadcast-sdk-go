@@ -11,18 +11,18 @@ type PostmortemsUpdatePostmortemByIncidentRequest struct {
 	V3IncidentsPostmortemsUpdatePostmortemRequest components.V3IncidentsPostmortemsUpdatePostmortemRequest `request:"mediaType=application/json"`
 }
 
-func (o *PostmortemsUpdatePostmortemByIncidentRequest) GetIncidentID() string {
-	if o == nil {
+func (p *PostmortemsUpdatePostmortemByIncidentRequest) GetIncidentID() string {
+	if p == nil {
 		return ""
 	}
-	return o.IncidentID
+	return p.IncidentID
 }
 
-func (o *PostmortemsUpdatePostmortemByIncidentRequest) GetV3IncidentsPostmortemsUpdatePostmortemRequest() components.V3IncidentsPostmortemsUpdatePostmortemRequest {
-	if o == nil {
+func (p *PostmortemsUpdatePostmortemByIncidentRequest) GetV3IncidentsPostmortemsUpdatePostmortemRequest() components.V3IncidentsPostmortemsUpdatePostmortemRequest {
+	if p == nil {
 		return components.V3IncidentsPostmortemsUpdatePostmortemRequest{}
 	}
-	return o.V3IncidentsPostmortemsUpdatePostmortemRequest
+	return p.V3IncidentsPostmortemsUpdatePostmortemRequest
 }
 
 // PostmortemsUpdatePostmortemByIncidentResponseBody - The request has succeeded.
@@ -30,11 +30,11 @@ type PostmortemsUpdatePostmortemByIncidentResponseBody struct {
 	Data components.V3IncidentsPostmortemsPostmortemResponse `json:"data"`
 }
 
-func (o *PostmortemsUpdatePostmortemByIncidentResponseBody) GetData() components.V3IncidentsPostmortemsPostmortemResponse {
-	if o == nil {
+func (p *PostmortemsUpdatePostmortemByIncidentResponseBody) GetData() components.V3IncidentsPostmortemsPostmortemResponse {
+	if p == nil {
 		return components.V3IncidentsPostmortemsPostmortemResponse{}
 	}
-	return o.Data
+	return p.Data
 }
 
 type PostmortemsUpdatePostmortemByIncidentResponse struct {
@@ -43,16 +43,16 @@ type PostmortemsUpdatePostmortemByIncidentResponse struct {
 	Object *PostmortemsUpdatePostmortemByIncidentResponseBody
 }
 
-func (o *PostmortemsUpdatePostmortemByIncidentResponse) GetHTTPMeta() components.HTTPMetadata {
-	if o == nil {
+func (p *PostmortemsUpdatePostmortemByIncidentResponse) GetHTTPMeta() components.HTTPMetadata {
+	if p == nil {
 		return components.HTTPMetadata{}
 	}
-	return o.HTTPMeta
+	return p.HTTPMeta
 }
 
-func (o *PostmortemsUpdatePostmortemByIncidentResponse) GetObject() *PostmortemsUpdatePostmortemByIncidentResponseBody {
-	if o == nil {
+func (p *PostmortemsUpdatePostmortemByIncidentResponse) GetObject() *PostmortemsUpdatePostmortemByIncidentResponseBody {
+	if p == nil {
 		return nil
 	}
-	return o.Object
+	return p.Object
 }

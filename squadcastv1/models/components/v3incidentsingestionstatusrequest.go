@@ -7,9 +7,9 @@ type V3IncidentsIngestionStatusRequest struct {
 	RequestIds []string `json:"request_ids"`
 }
 
-func (o *V3IncidentsIngestionStatusRequest) GetRequestIds() []string {
-	if o == nil {
+func (v *V3IncidentsIngestionStatusRequest) GetRequestIds() []string {
+	if v == nil {
 		return []string{}
 	}
-	return o.RequestIds
+	return v.RequestIds
 }

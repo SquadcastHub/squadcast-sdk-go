@@ -10,11 +10,11 @@ type CommunicationCardsGetAllCommunicationCardRequest struct {
 	IncidentID string `pathParam:"style=simple,explode=false,name=IncidentId"`
 }
 
-func (o *CommunicationCardsGetAllCommunicationCardRequest) GetIncidentID() string {
-	if o == nil {
+func (c *CommunicationCardsGetAllCommunicationCardRequest) GetIncidentID() string {
+	if c == nil {
 		return ""
 	}
-	return o.IncidentID
+	return c.IncidentID
 }
 
 // CommunicationCardsGetAllCommunicationCardResponseBody - The request has succeeded.
@@ -22,11 +22,11 @@ type CommunicationCardsGetAllCommunicationCardResponseBody struct {
 	Data []components.V3IncidentsCommunicationCardsCommunicationCardResponse `json:"data"`
 }
 
-func (o *CommunicationCardsGetAllCommunicationCardResponseBody) GetData() []components.V3IncidentsCommunicationCardsCommunicationCardResponse {
-	if o == nil {
+func (c *CommunicationCardsGetAllCommunicationCardResponseBody) GetData() []components.V3IncidentsCommunicationCardsCommunicationCardResponse {
+	if c == nil {
 		return []components.V3IncidentsCommunicationCardsCommunicationCardResponse{}
 	}
-	return o.Data
+	return c.Data
 }
 
 type CommunicationCardsGetAllCommunicationCardResponse struct {
@@ -35,16 +35,16 @@ type CommunicationCardsGetAllCommunicationCardResponse struct {
 	Object *CommunicationCardsGetAllCommunicationCardResponseBody
 }
 
-func (o *CommunicationCardsGetAllCommunicationCardResponse) GetHTTPMeta() components.HTTPMetadata {
-	if o == nil {
+func (c *CommunicationCardsGetAllCommunicationCardResponse) GetHTTPMeta() components.HTTPMetadata {
+	if c == nil {
 		return components.HTTPMetadata{}
 	}
-	return o.HTTPMeta
+	return c.HTTPMeta
 }
 
-func (o *CommunicationCardsGetAllCommunicationCardResponse) GetObject() *CommunicationCardsGetAllCommunicationCardResponseBody {
-	if o == nil {
+func (c *CommunicationCardsGetAllCommunicationCardResponse) GetObject() *CommunicationCardsGetAllCommunicationCardResponseBody {
+	if c == nil {
 		return nil
 	}
-	return o.Object
+	return c.Object
 }

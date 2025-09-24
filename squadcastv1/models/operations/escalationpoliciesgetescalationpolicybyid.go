@@ -11,11 +11,11 @@ type EscalationPoliciesGetEscalationPolicyByIDRequest struct {
 	EscalationPolicyID string `pathParam:"style=simple,explode=false,name=escalationPolicyID"`
 }
 
-func (o *EscalationPoliciesGetEscalationPolicyByIDRequest) GetEscalationPolicyID() string {
-	if o == nil {
+func (e *EscalationPoliciesGetEscalationPolicyByIDRequest) GetEscalationPolicyID() string {
+	if e == nil {
 		return ""
 	}
-	return o.EscalationPolicyID
+	return e.EscalationPolicyID
 }
 
 // EscalationPoliciesGetEscalationPolicyByIDResponseBody - The request has succeeded.
@@ -24,11 +24,11 @@ type EscalationPoliciesGetEscalationPolicyByIDResponseBody struct {
 	Data components.V3EscalationPoliciesEscalationPolicyResponse `json:"data"`
 }
 
-func (o *EscalationPoliciesGetEscalationPolicyByIDResponseBody) GetData() components.V3EscalationPoliciesEscalationPolicyResponse {
-	if o == nil {
+func (e *EscalationPoliciesGetEscalationPolicyByIDResponseBody) GetData() components.V3EscalationPoliciesEscalationPolicyResponse {
+	if e == nil {
 		return components.V3EscalationPoliciesEscalationPolicyResponse{}
 	}
-	return o.Data
+	return e.Data
 }
 
 type EscalationPoliciesGetEscalationPolicyByIDResponse struct {
@@ -37,16 +37,16 @@ type EscalationPoliciesGetEscalationPolicyByIDResponse struct {
 	Object *EscalationPoliciesGetEscalationPolicyByIDResponseBody
 }
 
-func (o *EscalationPoliciesGetEscalationPolicyByIDResponse) GetHTTPMeta() components.HTTPMetadata {
-	if o == nil {
+func (e *EscalationPoliciesGetEscalationPolicyByIDResponse) GetHTTPMeta() components.HTTPMetadata {
+	if e == nil {
 		return components.HTTPMetadata{}
 	}
-	return o.HTTPMeta
+	return e.HTTPMeta
 }
 
-func (o *EscalationPoliciesGetEscalationPolicyByIDResponse) GetObject() *EscalationPoliciesGetEscalationPolicyByIDResponseBody {
-	if o == nil {
+func (e *EscalationPoliciesGetEscalationPolicyByIDResponse) GetObject() *EscalationPoliciesGetEscalationPolicyByIDResponseBody {
+	if e == nil {
 		return nil
 	}
-	return o.Object
+	return e.Object
 }

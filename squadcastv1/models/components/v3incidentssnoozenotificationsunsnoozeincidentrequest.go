@@ -6,9 +6,9 @@ type V3IncidentsSnoozeNotificationsUnsnoozeIncidentRequest struct {
 	ReassignTo V3IncidentsSnoozeNotificationsReassignTo `json:"reassign_to"`
 }
 
-func (o *V3IncidentsSnoozeNotificationsUnsnoozeIncidentRequest) GetReassignTo() V3IncidentsSnoozeNotificationsReassignTo {
-	if o == nil {
+func (v *V3IncidentsSnoozeNotificationsUnsnoozeIncidentRequest) GetReassignTo() V3IncidentsSnoozeNotificationsReassignTo {
+	if v == nil {
 		return V3IncidentsSnoozeNotificationsReassignTo{}
 	}
-	return o.ReassignTo
+	return v.ReassignTo
 }

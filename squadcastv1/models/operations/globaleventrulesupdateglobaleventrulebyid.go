@@ -11,18 +11,18 @@ type GlobalEventRulesUpdateGlobalEventRuleByIDRequest struct {
 	V3GlobalEventRulesUpdateGlobalEventRuleRequest components.V3GlobalEventRulesUpdateGlobalEventRuleRequest `request:"mediaType=application/json"`
 }
 
-func (o *GlobalEventRulesUpdateGlobalEventRuleByIDRequest) GetGerID() int64 {
-	if o == nil {
+func (g *GlobalEventRulesUpdateGlobalEventRuleByIDRequest) GetGerID() int64 {
+	if g == nil {
 		return 0
 	}
-	return o.GerID
+	return g.GerID
 }
 
-func (o *GlobalEventRulesUpdateGlobalEventRuleByIDRequest) GetV3GlobalEventRulesUpdateGlobalEventRuleRequest() components.V3GlobalEventRulesUpdateGlobalEventRuleRequest {
-	if o == nil {
+func (g *GlobalEventRulesUpdateGlobalEventRuleByIDRequest) GetV3GlobalEventRulesUpdateGlobalEventRuleRequest() components.V3GlobalEventRulesUpdateGlobalEventRuleRequest {
+	if g == nil {
 		return components.V3GlobalEventRulesUpdateGlobalEventRuleRequest{}
 	}
-	return o.V3GlobalEventRulesUpdateGlobalEventRuleRequest
+	return g.V3GlobalEventRulesUpdateGlobalEventRuleRequest
 }
 
 // GlobalEventRulesUpdateGlobalEventRuleByIDResponseBody - The request has succeeded.
@@ -30,11 +30,11 @@ type GlobalEventRulesUpdateGlobalEventRuleByIDResponseBody struct {
 	Data components.V3GlobalEventRulesGlobalEventRuleResponse `json:"data"`
 }
 
-func (o *GlobalEventRulesUpdateGlobalEventRuleByIDResponseBody) GetData() components.V3GlobalEventRulesGlobalEventRuleResponse {
-	if o == nil {
+func (g *GlobalEventRulesUpdateGlobalEventRuleByIDResponseBody) GetData() components.V3GlobalEventRulesGlobalEventRuleResponse {
+	if g == nil {
 		return components.V3GlobalEventRulesGlobalEventRuleResponse{}
 	}
-	return o.Data
+	return g.Data
 }
 
 type GlobalEventRulesUpdateGlobalEventRuleByIDResponse struct {
@@ -43,16 +43,16 @@ type GlobalEventRulesUpdateGlobalEventRuleByIDResponse struct {
 	Object *GlobalEventRulesUpdateGlobalEventRuleByIDResponseBody
 }
 
-func (o *GlobalEventRulesUpdateGlobalEventRuleByIDResponse) GetHTTPMeta() components.HTTPMetadata {
-	if o == nil {
+func (g *GlobalEventRulesUpdateGlobalEventRuleByIDResponse) GetHTTPMeta() components.HTTPMetadata {
+	if g == nil {
 		return components.HTTPMetadata{}
 	}
-	return o.HTTPMeta
+	return g.HTTPMeta
 }
 
-func (o *GlobalEventRulesUpdateGlobalEventRuleByIDResponse) GetObject() *GlobalEventRulesUpdateGlobalEventRuleByIDResponseBody {
-	if o == nil {
+func (g *GlobalEventRulesUpdateGlobalEventRuleByIDResponse) GetObject() *GlobalEventRulesUpdateGlobalEventRuleByIDResponseBody {
+	if g == nil {
 		return nil
 	}
-	return o.Object
+	return g.Object
 }

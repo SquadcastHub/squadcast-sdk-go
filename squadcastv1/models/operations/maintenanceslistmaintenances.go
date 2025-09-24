@@ -12,25 +12,25 @@ type MaintenancesListMaintenancesRequest struct {
 	EndTime      string `queryParam:"style=form,explode=false,name=endTime"`
 }
 
-func (o *MaintenancesListMaintenancesRequest) GetStatuspageID() string {
-	if o == nil {
+func (m *MaintenancesListMaintenancesRequest) GetStatuspageID() string {
+	if m == nil {
 		return ""
 	}
-	return o.StatuspageID
+	return m.StatuspageID
 }
 
-func (o *MaintenancesListMaintenancesRequest) GetStartTime() string {
-	if o == nil {
+func (m *MaintenancesListMaintenancesRequest) GetStartTime() string {
+	if m == nil {
 		return ""
 	}
-	return o.StartTime
+	return m.StartTime
 }
 
-func (o *MaintenancesListMaintenancesRequest) GetEndTime() string {
-	if o == nil {
+func (m *MaintenancesListMaintenancesRequest) GetEndTime() string {
+	if m == nil {
 		return ""
 	}
-	return o.EndTime
+	return m.EndTime
 }
 
 type MaintenancesListMaintenancesResponse struct {
@@ -39,16 +39,16 @@ type MaintenancesListMaintenancesResponse struct {
 	V4StatusPagesMaintenancesListMaintenancesResponse *components.V4StatusPagesMaintenancesListMaintenancesResponse
 }
 
-func (o *MaintenancesListMaintenancesResponse) GetHTTPMeta() components.HTTPMetadata {
-	if o == nil {
+func (m *MaintenancesListMaintenancesResponse) GetHTTPMeta() components.HTTPMetadata {
+	if m == nil {
 		return components.HTTPMetadata{}
 	}
-	return o.HTTPMeta
+	return m.HTTPMeta
 }
 
-func (o *MaintenancesListMaintenancesResponse) GetV4StatusPagesMaintenancesListMaintenancesResponse() *components.V4StatusPagesMaintenancesListMaintenancesResponse {
-	if o == nil {
+func (m *MaintenancesListMaintenancesResponse) GetV4StatusPagesMaintenancesListMaintenancesResponse() *components.V4StatusPagesMaintenancesListMaintenancesResponse {
+	if m == nil {
 		return nil
 	}
-	return o.V4StatusPagesMaintenancesListMaintenancesResponse
+	return m.V4StatusPagesMaintenancesListMaintenancesResponse
 }

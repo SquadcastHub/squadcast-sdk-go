@@ -50,39 +50,39 @@ func (v *V3WorkflowsSqCreateStatusPageIssueUpdateData) UnmarshalJSON(data []byte
 	return nil
 }
 
-func (o *V3WorkflowsSqCreateStatusPageIssueUpdateData) GetComponentAndImpact() []V3WorkflowsComponentAndImpact {
-	if o == nil {
+func (v *V3WorkflowsSqCreateStatusPageIssueUpdateData) GetComponentAndImpact() []V3WorkflowsComponentAndImpact {
+	if v == nil {
 		return nil
 	}
-	return o.ComponentAndImpact
+	return v.ComponentAndImpact
 }
 
-func (o *V3WorkflowsSqCreateStatusPageIssueUpdateData) GetIssueTitle() *string {
-	if o == nil {
+func (v *V3WorkflowsSqCreateStatusPageIssueUpdateData) GetIssueTitle() *string {
+	if v == nil {
 		return nil
 	}
-	return o.IssueTitle
+	return v.IssueTitle
 }
 
-func (o *V3WorkflowsSqCreateStatusPageIssueUpdateData) GetPageStatusID() *int {
-	if o == nil {
+func (v *V3WorkflowsSqCreateStatusPageIssueUpdateData) GetPageStatusID() *int {
+	if v == nil {
 		return nil
 	}
-	return o.PageStatusID
+	return v.PageStatusID
 }
 
-func (o *V3WorkflowsSqCreateStatusPageIssueUpdateData) GetStatusAndMessage() []V3WorkflowsIssueStatusAndMessage {
-	if o == nil {
+func (v *V3WorkflowsSqCreateStatusPageIssueUpdateData) GetStatusAndMessage() []V3WorkflowsIssueStatusAndMessage {
+	if v == nil {
 		return nil
 	}
-	return o.StatusAndMessage
+	return v.StatusAndMessage
 }
 
-func (o *V3WorkflowsSqCreateStatusPageIssueUpdateData) GetStatusPageID() *int {
-	if o == nil {
+func (v *V3WorkflowsSqCreateStatusPageIssueUpdateData) GetStatusPageID() *int {
+	if v == nil {
 		return nil
 	}
-	return o.StatusPageID
+	return v.StatusPageID
 }
 
 type V3WorkflowsSqCreateStatusPageIssueUpdate struct {
@@ -101,16 +101,16 @@ func (v *V3WorkflowsSqCreateStatusPageIssueUpdate) UnmarshalJSON(data []byte) er
 	return nil
 }
 
-func (o *V3WorkflowsSqCreateStatusPageIssueUpdate) GetName() V3WorkflowsSqCreateStatusPageIssueUpdateName {
-	if o == nil {
+func (v *V3WorkflowsSqCreateStatusPageIssueUpdate) GetName() V3WorkflowsSqCreateStatusPageIssueUpdateName {
+	if v == nil {
 		return V3WorkflowsSqCreateStatusPageIssueUpdateName("")
 	}
-	return o.Name
+	return v.Name
 }
 
-func (o *V3WorkflowsSqCreateStatusPageIssueUpdate) GetData() *V3WorkflowsSqCreateStatusPageIssueUpdateData {
-	if o == nil {
+func (v *V3WorkflowsSqCreateStatusPageIssueUpdate) GetData() *V3WorkflowsSqCreateStatusPageIssueUpdateData {
+	if v == nil {
 		return nil
 	}
-	return o.Data
+	return v.Data
 }

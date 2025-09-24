@@ -7,16 +7,16 @@ type V3ServicesMaintenanceModeCreateOrUpdateMaintenanceModeRequest struct {
 	ServiceMaintenance []V3ServicesMaintenanceModeServiceMaintenance `json:"serviceMaintenance"`
 }
 
-func (o *V3ServicesMaintenanceModeCreateOrUpdateMaintenanceModeRequest) GetOnMaintenance() bool {
-	if o == nil {
+func (v *V3ServicesMaintenanceModeCreateOrUpdateMaintenanceModeRequest) GetOnMaintenance() bool {
+	if v == nil {
 		return false
 	}
-	return o.OnMaintenance
+	return v.OnMaintenance
 }
 
-func (o *V3ServicesMaintenanceModeCreateOrUpdateMaintenanceModeRequest) GetServiceMaintenance() []V3ServicesMaintenanceModeServiceMaintenance {
-	if o == nil {
+func (v *V3ServicesMaintenanceModeCreateOrUpdateMaintenanceModeRequest) GetServiceMaintenance() []V3ServicesMaintenanceModeServiceMaintenance {
+	if v == nil {
 		return []V3ServicesMaintenanceModeServiceMaintenance{}
 	}
-	return o.ServiceMaintenance
+	return v.ServiceMaintenance
 }

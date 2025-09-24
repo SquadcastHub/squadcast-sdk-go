@@ -7,16 +7,16 @@ type V4GetRotationParticipantsResponse struct {
 	Participants []V4ParticipantGroup `json:"participants"`
 }
 
-func (o *V4GetRotationParticipantsResponse) GetRotationID() int64 {
-	if o == nil {
+func (v *V4GetRotationParticipantsResponse) GetRotationID() int64 {
+	if v == nil {
 		return 0
 	}
-	return o.RotationID
+	return v.RotationID
 }
 
-func (o *V4GetRotationParticipantsResponse) GetParticipants() []V4ParticipantGroup {
-	if o == nil {
+func (v *V4GetRotationParticipantsResponse) GetParticipants() []V4ParticipantGroup {
+	if v == nil {
 		return []V4ParticipantGroup{}
 	}
-	return o.Participants
+	return v.Participants
 }

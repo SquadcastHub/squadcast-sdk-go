@@ -8,23 +8,23 @@ type V4StatusPagesListSubscribersResponseMeta struct {
 	LastWeekSubscribersCount int64                               `json:"lastWeekSubscribersCount"`
 }
 
-func (o *V4StatusPagesListSubscribersResponseMeta) GetTotalSubscribersCount() *V4StatusPagesTotalSubscribersCount {
-	if o == nil {
+func (v *V4StatusPagesListSubscribersResponseMeta) GetTotalSubscribersCount() *V4StatusPagesTotalSubscribersCount {
+	if v == nil {
 		return nil
 	}
-	return o.TotalSubscribersCount
+	return v.TotalSubscribersCount
 }
 
-func (o *V4StatusPagesListSubscribersResponseMeta) GetMaximumSubscribersLimit() int64 {
-	if o == nil {
+func (v *V4StatusPagesListSubscribersResponseMeta) GetMaximumSubscribersLimit() int64 {
+	if v == nil {
 		return 0
 	}
-	return o.MaximumSubscribersLimit
+	return v.MaximumSubscribersLimit
 }
 
-func (o *V4StatusPagesListSubscribersResponseMeta) GetLastWeekSubscribersCount() int64 {
-	if o == nil {
+func (v *V4StatusPagesListSubscribersResponseMeta) GetLastWeekSubscribersCount() int64 {
+	if v == nil {
 		return 0
 	}
-	return o.LastWeekSubscribersCount
+	return v.LastWeekSubscribersCount
 }

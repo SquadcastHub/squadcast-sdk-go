@@ -41,37 +41,37 @@ type V4StatusPagesNewStatusPageComponent struct {
 	ServiceID         *string                                 `json:"serviceID,omitempty"`
 }
 
-func (o *V4StatusPagesNewStatusPageComponent) GetType() V4StatusPagesNewStatusPageComponentType {
-	if o == nil {
+func (v *V4StatusPagesNewStatusPageComponent) GetType() V4StatusPagesNewStatusPageComponentType {
+	if v == nil {
 		return V4StatusPagesNewStatusPageComponentType("")
 	}
-	return o.Type
+	return v.Type
 }
 
-func (o *V4StatusPagesNewStatusPageComponent) GetName() string {
-	if o == nil {
+func (v *V4StatusPagesNewStatusPageComponent) GetName() string {
+	if v == nil {
 		return ""
 	}
-	return o.Name
+	return v.Name
 }
 
-func (o *V4StatusPagesNewStatusPageComponent) GetAllowSubscription() bool {
-	if o == nil {
+func (v *V4StatusPagesNewStatusPageComponent) GetAllowSubscription() bool {
+	if v == nil {
 		return false
 	}
-	return o.AllowSubscription
+	return v.AllowSubscription
 }
 
-func (o *V4StatusPagesNewStatusPageComponent) GetDescription() *string {
-	if o == nil {
+func (v *V4StatusPagesNewStatusPageComponent) GetDescription() *string {
+	if v == nil {
 		return nil
 	}
-	return o.Description
+	return v.Description
 }
 
-func (o *V4StatusPagesNewStatusPageComponent) GetServiceID() *string {
-	if o == nil {
+func (v *V4StatusPagesNewStatusPageComponent) GetServiceID() *string {
+	if v == nil {
 		return nil
 	}
-	return o.ServiceID
+	return v.ServiceID
 }

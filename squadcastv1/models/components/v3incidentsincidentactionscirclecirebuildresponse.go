@@ -6,11 +6,11 @@ type BuildParameters struct {
 	CircleJob string `json:"CIRCLE_JOB"`
 }
 
-func (o *BuildParameters) GetCircleJob() string {
-	if o == nil {
+func (b *BuildParameters) GetCircleJob() string {
+	if b == nil {
 		return ""
 	}
-	return o.CircleJob
+	return b.CircleJob
 }
 
 type Previous struct {
@@ -19,25 +19,25 @@ type Previous struct {
 	Status          string `json:"status"`
 }
 
-func (o *Previous) GetBuildNum() int64 {
-	if o == nil {
+func (p *Previous) GetBuildNum() int64 {
+	if p == nil {
 		return 0
 	}
-	return o.BuildNum
+	return p.BuildNum
 }
 
-func (o *Previous) GetBuildTimeMillis() int64 {
-	if o == nil {
+func (p *Previous) GetBuildTimeMillis() int64 {
+	if p == nil {
 		return 0
 	}
-	return o.BuildTimeMillis
+	return p.BuildTimeMillis
 }
 
-func (o *Previous) GetStatus() string {
-	if o == nil {
+func (p *Previous) GetStatus() string {
+	if p == nil {
 		return ""
 	}
-	return o.Status
+	return p.Status
 }
 
 type PreviousSuccessfulBuild struct {
@@ -46,25 +46,25 @@ type PreviousSuccessfulBuild struct {
 	Status          string `json:"status"`
 }
 
-func (o *PreviousSuccessfulBuild) GetBuildNum() int64 {
-	if o == nil {
+func (p *PreviousSuccessfulBuild) GetBuildNum() int64 {
+	if p == nil {
 		return 0
 	}
-	return o.BuildNum
+	return p.BuildNum
 }
 
-func (o *PreviousSuccessfulBuild) GetBuildTimeMillis() int64 {
-	if o == nil {
+func (p *PreviousSuccessfulBuild) GetBuildTimeMillis() int64 {
+	if p == nil {
 		return 0
 	}
-	return o.BuildTimeMillis
+	return p.BuildTimeMillis
 }
 
-func (o *PreviousSuccessfulBuild) GetStatus() string {
-	if o == nil {
+func (p *PreviousSuccessfulBuild) GetStatus() string {
+	if p == nil {
 		return ""
 	}
-	return o.Status
+	return p.Status
 }
 
 type CircleciResponse struct {
@@ -94,172 +94,172 @@ type CircleciResponse struct {
 	StopTime                string                  `json:"stop_time"`
 }
 
-func (o *CircleciResponse) GetUsername() string {
-	if o == nil {
+func (c *CircleciResponse) GetUsername() string {
+	if c == nil {
 		return ""
 	}
-	return o.Username
+	return c.Username
 }
 
-func (o *CircleciResponse) GetReponame() string {
-	if o == nil {
+func (c *CircleciResponse) GetReponame() string {
+	if c == nil {
 		return ""
 	}
-	return o.Reponame
+	return c.Reponame
 }
 
-func (o *CircleciResponse) GetBuildNum() int64 {
-	if o == nil {
+func (c *CircleciResponse) GetBuildNum() int64 {
+	if c == nil {
 		return 0
 	}
-	return o.BuildNum
+	return c.BuildNum
 }
 
-func (o *CircleciResponse) GetBuildURL() string {
-	if o == nil {
+func (c *CircleciResponse) GetBuildURL() string {
+	if c == nil {
 		return ""
 	}
-	return o.BuildURL
+	return c.BuildURL
 }
 
-func (o *CircleciResponse) GetBuildParameters() BuildParameters {
-	if o == nil {
+func (c *CircleciResponse) GetBuildParameters() BuildParameters {
+	if c == nil {
 		return BuildParameters{}
 	}
-	return o.BuildParameters
+	return c.BuildParameters
 }
 
-func (o *CircleciResponse) GetPrevious() Previous {
-	if o == nil {
+func (c *CircleciResponse) GetPrevious() Previous {
+	if c == nil {
 		return Previous{}
 	}
-	return o.Previous
+	return c.Previous
 }
 
-func (o *CircleciResponse) GetPreviousSuccessfulBuild() PreviousSuccessfulBuild {
-	if o == nil {
+func (c *CircleciResponse) GetPreviousSuccessfulBuild() PreviousSuccessfulBuild {
+	if c == nil {
 		return PreviousSuccessfulBuild{}
 	}
-	return o.PreviousSuccessfulBuild
+	return c.PreviousSuccessfulBuild
 }
 
-func (o *CircleciResponse) GetRetryOf() int64 {
-	if o == nil {
+func (c *CircleciResponse) GetRetryOf() int64 {
+	if c == nil {
 		return 0
 	}
-	return o.RetryOf
+	return c.RetryOf
 }
 
-func (o *CircleciResponse) GetBody() string {
-	if o == nil {
+func (c *CircleciResponse) GetBody() string {
+	if c == nil {
 		return ""
 	}
-	return o.Body
+	return c.Body
 }
 
-func (o *CircleciResponse) GetSubject() string {
-	if o == nil {
+func (c *CircleciResponse) GetSubject() string {
+	if c == nil {
 		return ""
 	}
-	return o.Subject
+	return c.Subject
 }
 
-func (o *CircleciResponse) GetStatus() string {
-	if o == nil {
+func (c *CircleciResponse) GetStatus() string {
+	if c == nil {
 		return ""
 	}
-	return o.Status
+	return c.Status
 }
 
-func (o *CircleciResponse) GetLifecycle() string {
-	if o == nil {
+func (c *CircleciResponse) GetLifecycle() string {
+	if c == nil {
 		return ""
 	}
-	return o.Lifecycle
+	return c.Lifecycle
 }
 
-func (o *CircleciResponse) GetOutcome() string {
-	if o == nil {
+func (c *CircleciResponse) GetOutcome() string {
+	if c == nil {
 		return ""
 	}
-	return o.Outcome
+	return c.Outcome
 }
 
-func (o *CircleciResponse) GetCommitterDate() string {
-	if o == nil {
+func (c *CircleciResponse) GetCommitterDate() string {
+	if c == nil {
 		return ""
 	}
-	return o.CommitterDate
+	return c.CommitterDate
 }
 
-func (o *CircleciResponse) GetCommitterEmail() string {
-	if o == nil {
+func (c *CircleciResponse) GetCommitterEmail() string {
+	if c == nil {
 		return ""
 	}
-	return o.CommitterEmail
+	return c.CommitterEmail
 }
 
-func (o *CircleciResponse) GetCommitterName() string {
-	if o == nil {
+func (c *CircleciResponse) GetCommitterName() string {
+	if c == nil {
 		return ""
 	}
-	return o.CommitterName
+	return c.CommitterName
 }
 
-func (o *CircleciResponse) GetAuthorDate() string {
-	if o == nil {
+func (c *CircleciResponse) GetAuthorDate() string {
+	if c == nil {
 		return ""
 	}
-	return o.AuthorDate
+	return c.AuthorDate
 }
 
-func (o *CircleciResponse) GetAuthorEmail() string {
-	if o == nil {
+func (c *CircleciResponse) GetAuthorEmail() string {
+	if c == nil {
 		return ""
 	}
-	return o.AuthorEmail
+	return c.AuthorEmail
 }
 
-func (o *CircleciResponse) GetAuthorName() string {
-	if o == nil {
+func (c *CircleciResponse) GetAuthorName() string {
+	if c == nil {
 		return ""
 	}
-	return o.AuthorName
+	return c.AuthorName
 }
 
-func (o *CircleciResponse) GetBranch() string {
-	if o == nil {
+func (c *CircleciResponse) GetBranch() string {
+	if c == nil {
 		return ""
 	}
-	return o.Branch
+	return c.Branch
 }
 
-func (o *CircleciResponse) GetVcsType() string {
-	if o == nil {
+func (c *CircleciResponse) GetVcsType() string {
+	if c == nil {
 		return ""
 	}
-	return o.VcsType
+	return c.VcsType
 }
 
-func (o *CircleciResponse) GetVcsURL() string {
-	if o == nil {
+func (c *CircleciResponse) GetVcsURL() string {
+	if c == nil {
 		return ""
 	}
-	return o.VcsURL
+	return c.VcsURL
 }
 
-func (o *CircleciResponse) GetStartTime() string {
-	if o == nil {
+func (c *CircleciResponse) GetStartTime() string {
+	if c == nil {
 		return ""
 	}
-	return o.StartTime
+	return c.StartTime
 }
 
-func (o *CircleciResponse) GetStopTime() string {
-	if o == nil {
+func (c *CircleciResponse) GetStopTime() string {
+	if c == nil {
 		return ""
 	}
-	return o.StopTime
+	return c.StopTime
 }
 
 // V3IncidentsIncidentActionsCircleCIRebuildResponse - Represents the response structure for rebuilding a project in CircleCI.
@@ -268,16 +268,16 @@ type V3IncidentsIncidentActionsCircleCIRebuildResponse struct {
 	CircleciResponse CircleciResponse `json:"circleci_response"`
 }
 
-func (o *V3IncidentsIncidentActionsCircleCIRebuildResponse) GetActionID() string {
-	if o == nil {
+func (v *V3IncidentsIncidentActionsCircleCIRebuildResponse) GetActionID() string {
+	if v == nil {
 		return ""
 	}
-	return o.ActionID
+	return v.ActionID
 }
 
-func (o *V3IncidentsIncidentActionsCircleCIRebuildResponse) GetCircleciResponse() CircleciResponse {
-	if o == nil {
+func (v *V3IncidentsIncidentActionsCircleCIRebuildResponse) GetCircleciResponse() CircleciResponse {
+	if v == nil {
 		return CircleciResponse{}
 	}
-	return o.CircleciResponse
+	return v.CircleciResponse
 }

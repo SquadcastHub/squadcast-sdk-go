@@ -11,11 +11,11 @@ type SchedulesCreateScheduleResponseBody struct {
 	Data components.V4ScheduleResponse `json:"data"`
 }
 
-func (o *SchedulesCreateScheduleResponseBody) GetData() components.V4ScheduleResponse {
-	if o == nil {
+func (s *SchedulesCreateScheduleResponseBody) GetData() components.V4ScheduleResponse {
+	if s == nil {
 		return components.V4ScheduleResponse{}
 	}
-	return o.Data
+	return s.Data
 }
 
 type SchedulesCreateScheduleResponse struct {
@@ -24,16 +24,16 @@ type SchedulesCreateScheduleResponse struct {
 	Object *SchedulesCreateScheduleResponseBody
 }
 
-func (o *SchedulesCreateScheduleResponse) GetHTTPMeta() components.HTTPMetadata {
-	if o == nil {
+func (s *SchedulesCreateScheduleResponse) GetHTTPMeta() components.HTTPMetadata {
+	if s == nil {
 		return components.HTTPMetadata{}
 	}
-	return o.HTTPMeta
+	return s.HTTPMeta
 }
 
-func (o *SchedulesCreateScheduleResponse) GetObject() *SchedulesCreateScheduleResponseBody {
-	if o == nil {
+func (s *SchedulesCreateScheduleResponse) GetObject() *SchedulesCreateScheduleResponseBody {
+	if s == nil {
 		return nil
 	}
-	return o.Object
+	return s.Object
 }

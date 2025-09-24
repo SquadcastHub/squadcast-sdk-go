@@ -11,18 +11,18 @@ type WorkflowsCreateActionRequest struct {
 	V3WorkflowsActionRequest components.V3WorkflowsActionRequest `request:"mediaType=application/json"`
 }
 
-func (o *WorkflowsCreateActionRequest) GetWorkflowID() string {
-	if o == nil {
+func (w *WorkflowsCreateActionRequest) GetWorkflowID() string {
+	if w == nil {
 		return ""
 	}
-	return o.WorkflowID
+	return w.WorkflowID
 }
 
-func (o *WorkflowsCreateActionRequest) GetV3WorkflowsActionRequest() components.V3WorkflowsActionRequest {
-	if o == nil {
+func (w *WorkflowsCreateActionRequest) GetV3WorkflowsActionRequest() components.V3WorkflowsActionRequest {
+	if w == nil {
 		return components.V3WorkflowsActionRequest{}
 	}
-	return o.V3WorkflowsActionRequest
+	return w.V3WorkflowsActionRequest
 }
 
 // WorkflowsCreateActionResponseBody - The request has succeeded and a new resource has been created as a result.
@@ -30,11 +30,11 @@ type WorkflowsCreateActionResponseBody struct {
 	Data components.V3WorkflowsActionResponse `json:"data"`
 }
 
-func (o *WorkflowsCreateActionResponseBody) GetData() components.V3WorkflowsActionResponse {
-	if o == nil {
+func (w *WorkflowsCreateActionResponseBody) GetData() components.V3WorkflowsActionResponse {
+	if w == nil {
 		return components.V3WorkflowsActionResponse{}
 	}
-	return o.Data
+	return w.Data
 }
 
 type WorkflowsCreateActionResponse struct {
@@ -43,16 +43,16 @@ type WorkflowsCreateActionResponse struct {
 	Object *WorkflowsCreateActionResponseBody
 }
 
-func (o *WorkflowsCreateActionResponse) GetHTTPMeta() components.HTTPMetadata {
-	if o == nil {
+func (w *WorkflowsCreateActionResponse) GetHTTPMeta() components.HTTPMetadata {
+	if w == nil {
 		return components.HTTPMetadata{}
 	}
-	return o.HTTPMeta
+	return w.HTTPMeta
 }
 
-func (o *WorkflowsCreateActionResponse) GetObject() *WorkflowsCreateActionResponseBody {
-	if o == nil {
+func (w *WorkflowsCreateActionResponse) GetObject() *WorkflowsCreateActionResponseBody {
+	if w == nil {
 		return nil
 	}
-	return o.Object
+	return w.Object
 }

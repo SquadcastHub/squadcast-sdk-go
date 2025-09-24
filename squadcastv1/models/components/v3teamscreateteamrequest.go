@@ -8,23 +8,23 @@ type V3TeamsCreateTeamRequest struct {
 	MemberIds   []string `json:"member_ids"`
 }
 
-func (o *V3TeamsCreateTeamRequest) GetName() string {
-	if o == nil {
+func (v *V3TeamsCreateTeamRequest) GetName() string {
+	if v == nil {
 		return ""
 	}
-	return o.Name
+	return v.Name
 }
 
-func (o *V3TeamsCreateTeamRequest) GetDescription() *string {
-	if o == nil {
+func (v *V3TeamsCreateTeamRequest) GetDescription() *string {
+	if v == nil {
 		return nil
 	}
-	return o.Description
+	return v.Description
 }
 
-func (o *V3TeamsCreateTeamRequest) GetMemberIds() []string {
-	if o == nil {
+func (v *V3TeamsCreateTeamRequest) GetMemberIds() []string {
+	if v == nil {
 		return []string{}
 	}
-	return o.MemberIds
+	return v.MemberIds
 }

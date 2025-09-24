@@ -27,79 +27,79 @@ type V3EscalationPoliciesCreateEscalationPolicyRequest struct {
 	EntityOwner *CommonV3EntityOwner `json:"entity_owner,omitempty"`
 }
 
-func (o *V3EscalationPoliciesCreateEscalationPolicyRequest) GetOwnerID() string {
-	if o == nil {
+func (v *V3EscalationPoliciesCreateEscalationPolicyRequest) GetOwnerID() string {
+	if v == nil {
 		return ""
 	}
-	return o.OwnerID
+	return v.OwnerID
 }
 
-func (o *V3EscalationPoliciesCreateEscalationPolicyRequest) GetName() string {
-	if o == nil {
+func (v *V3EscalationPoliciesCreateEscalationPolicyRequest) GetName() string {
+	if v == nil {
 		return ""
 	}
-	return o.Name
+	return v.Name
 }
 
-func (o *V3EscalationPoliciesCreateEscalationPolicyRequest) GetDescription() string {
-	if o == nil {
+func (v *V3EscalationPoliciesCreateEscalationPolicyRequest) GetDescription() string {
+	if v == nil {
 		return ""
 	}
-	return o.Description
+	return v.Description
 }
 
-func (o *V3EscalationPoliciesCreateEscalationPolicyRequest) GetRepetition() int {
-	if o == nil {
+func (v *V3EscalationPoliciesCreateEscalationPolicyRequest) GetRepetition() int {
+	if v == nil {
 		return 0
 	}
-	return o.Repetition
+	return v.Repetition
 }
 
-func (o *V3EscalationPoliciesCreateEscalationPolicyRequest) GetRepeatAfter() int {
-	if o == nil {
+func (v *V3EscalationPoliciesCreateEscalationPolicyRequest) GetRepeatAfter() int {
+	if v == nil {
 		return 0
 	}
-	return o.RepeatAfter
+	return v.RepeatAfter
 }
 
-func (o *V3EscalationPoliciesCreateEscalationPolicyRequest) GetRules() []V3EscalationPoliciesEscalationPolicyRule {
-	if o == nil {
+func (v *V3EscalationPoliciesCreateEscalationPolicyRequest) GetRules() []V3EscalationPoliciesEscalationPolicyRule {
+	if v == nil {
 		return []V3EscalationPoliciesEscalationPolicyRule{}
 	}
-	return o.Rules
+	return v.Rules
 }
 
-func (o *V3EscalationPoliciesCreateEscalationPolicyRequest) GetEnableIncidentReminders() bool {
-	if o == nil {
+func (v *V3EscalationPoliciesCreateEscalationPolicyRequest) GetEnableIncidentReminders() bool {
+	if v == nil {
 		return false
 	}
-	return o.EnableIncidentReminders
+	return v.EnableIncidentReminders
 }
 
-func (o *V3EscalationPoliciesCreateEscalationPolicyRequest) GetIncidentReminderRules() []V3EscalationPoliciesIncidentReminderRule {
-	if o == nil {
+func (v *V3EscalationPoliciesCreateEscalationPolicyRequest) GetIncidentReminderRules() []V3EscalationPoliciesIncidentReminderRule {
+	if v == nil {
 		return []V3EscalationPoliciesIncidentReminderRule{}
 	}
-	return o.IncidentReminderRules
+	return v.IncidentReminderRules
 }
 
-func (o *V3EscalationPoliciesCreateEscalationPolicyRequest) GetEnableIncidentRetrigger() bool {
-	if o == nil {
+func (v *V3EscalationPoliciesCreateEscalationPolicyRequest) GetEnableIncidentRetrigger() bool {
+	if v == nil {
 		return false
 	}
-	return o.EnableIncidentRetrigger
+	return v.EnableIncidentRetrigger
 }
 
-func (o *V3EscalationPoliciesCreateEscalationPolicyRequest) GetRetriggerAfter() int {
-	if o == nil {
+func (v *V3EscalationPoliciesCreateEscalationPolicyRequest) GetRetriggerAfter() int {
+	if v == nil {
 		return 0
 	}
-	return o.RetriggerAfter
+	return v.RetriggerAfter
 }
 
-func (o *V3EscalationPoliciesCreateEscalationPolicyRequest) GetEntityOwner() *CommonV3EntityOwner {
-	if o == nil {
+func (v *V3EscalationPoliciesCreateEscalationPolicyRequest) GetEntityOwner() *CommonV3EntityOwner {
+	if v == nil {
 		return nil
 	}
-	return o.EntityOwner
+	return v.EntityOwner
 }

@@ -11,18 +11,18 @@ type WorkflowsGetWorkflowActionByIDRequest struct {
 	ActionID   string `pathParam:"style=simple,explode=false,name=actionID"`
 }
 
-func (o *WorkflowsGetWorkflowActionByIDRequest) GetWorkflowID() string {
-	if o == nil {
+func (w *WorkflowsGetWorkflowActionByIDRequest) GetWorkflowID() string {
+	if w == nil {
 		return ""
 	}
-	return o.WorkflowID
+	return w.WorkflowID
 }
 
-func (o *WorkflowsGetWorkflowActionByIDRequest) GetActionID() string {
-	if o == nil {
+func (w *WorkflowsGetWorkflowActionByIDRequest) GetActionID() string {
+	if w == nil {
 		return ""
 	}
-	return o.ActionID
+	return w.ActionID
 }
 
 // WorkflowsGetWorkflowActionByIDResponseBody - The request has succeeded.
@@ -30,11 +30,11 @@ type WorkflowsGetWorkflowActionByIDResponseBody struct {
 	Data components.V3WorkflowsGetWorkflowActionByIDResponse `json:"data"`
 }
 
-func (o *WorkflowsGetWorkflowActionByIDResponseBody) GetData() components.V3WorkflowsGetWorkflowActionByIDResponse {
-	if o == nil {
+func (w *WorkflowsGetWorkflowActionByIDResponseBody) GetData() components.V3WorkflowsGetWorkflowActionByIDResponse {
+	if w == nil {
 		return components.V3WorkflowsGetWorkflowActionByIDResponse{}
 	}
-	return o.Data
+	return w.Data
 }
 
 type WorkflowsGetWorkflowActionByIDResponse struct {
@@ -43,16 +43,16 @@ type WorkflowsGetWorkflowActionByIDResponse struct {
 	Object *WorkflowsGetWorkflowActionByIDResponseBody
 }
 
-func (o *WorkflowsGetWorkflowActionByIDResponse) GetHTTPMeta() components.HTTPMetadata {
-	if o == nil {
+func (w *WorkflowsGetWorkflowActionByIDResponse) GetHTTPMeta() components.HTTPMetadata {
+	if w == nil {
 		return components.HTTPMetadata{}
 	}
-	return o.HTTPMeta
+	return w.HTTPMeta
 }
 
-func (o *WorkflowsGetWorkflowActionByIDResponse) GetObject() *WorkflowsGetWorkflowActionByIDResponseBody {
-	if o == nil {
+func (w *WorkflowsGetWorkflowActionByIDResponse) GetObject() *WorkflowsGetWorkflowActionByIDResponseBody {
+	if w == nil {
 		return nil
 	}
-	return o.Object
+	return w.Object
 }

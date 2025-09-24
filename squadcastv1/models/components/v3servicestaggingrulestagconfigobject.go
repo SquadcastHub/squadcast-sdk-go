@@ -7,16 +7,16 @@ type V3ServicesTaggingRulesTagConfigObject struct {
 	Color string `json:"color"`
 }
 
-func (o *V3ServicesTaggingRulesTagConfigObject) GetValue() string {
-	if o == nil {
+func (v *V3ServicesTaggingRulesTagConfigObject) GetValue() string {
+	if v == nil {
 		return ""
 	}
-	return o.Value
+	return v.Value
 }
 
-func (o *V3ServicesTaggingRulesTagConfigObject) GetColor() string {
-	if o == nil {
+func (v *V3ServicesTaggingRulesTagConfigObject) GetColor() string {
+	if v == nil {
 		return ""
 	}
-	return o.Color
+	return v.Color
 }

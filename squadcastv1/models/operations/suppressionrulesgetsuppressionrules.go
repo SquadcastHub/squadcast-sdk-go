@@ -10,22 +10,22 @@ type SuppressionRulesGetSuppressionRulesRequest struct {
 	ServiceID string `pathParam:"style=simple,explode=false,name=serviceID"`
 }
 
-func (o *SuppressionRulesGetSuppressionRulesRequest) GetServiceID() string {
-	if o == nil {
+func (s *SuppressionRulesGetSuppressionRulesRequest) GetServiceID() string {
+	if s == nil {
 		return ""
 	}
-	return o.ServiceID
+	return s.ServiceID
 }
 
 type SuppressionRulesGetSuppressionRulesData struct {
 	Rules []components.V3ServicesSuppressionRulesSuppressionRuleResponse `json:"rules"`
 }
 
-func (o *SuppressionRulesGetSuppressionRulesData) GetRules() []components.V3ServicesSuppressionRulesSuppressionRuleResponse {
-	if o == nil {
+func (s *SuppressionRulesGetSuppressionRulesData) GetRules() []components.V3ServicesSuppressionRulesSuppressionRuleResponse {
+	if s == nil {
 		return []components.V3ServicesSuppressionRulesSuppressionRuleResponse{}
 	}
-	return o.Rules
+	return s.Rules
 }
 
 // SuppressionRulesGetSuppressionRulesResponseBody - The request has succeeded.
@@ -33,11 +33,11 @@ type SuppressionRulesGetSuppressionRulesResponseBody struct {
 	Data SuppressionRulesGetSuppressionRulesData `json:"data"`
 }
 
-func (o *SuppressionRulesGetSuppressionRulesResponseBody) GetData() SuppressionRulesGetSuppressionRulesData {
-	if o == nil {
+func (s *SuppressionRulesGetSuppressionRulesResponseBody) GetData() SuppressionRulesGetSuppressionRulesData {
+	if s == nil {
 		return SuppressionRulesGetSuppressionRulesData{}
 	}
-	return o.Data
+	return s.Data
 }
 
 type SuppressionRulesGetSuppressionRulesResponse struct {
@@ -46,16 +46,16 @@ type SuppressionRulesGetSuppressionRulesResponse struct {
 	Object *SuppressionRulesGetSuppressionRulesResponseBody
 }
 
-func (o *SuppressionRulesGetSuppressionRulesResponse) GetHTTPMeta() components.HTTPMetadata {
-	if o == nil {
+func (s *SuppressionRulesGetSuppressionRulesResponse) GetHTTPMeta() components.HTTPMetadata {
+	if s == nil {
 		return components.HTTPMetadata{}
 	}
-	return o.HTTPMeta
+	return s.HTTPMeta
 }
 
-func (o *SuppressionRulesGetSuppressionRulesResponse) GetObject() *SuppressionRulesGetSuppressionRulesResponseBody {
-	if o == nil {
+func (s *SuppressionRulesGetSuppressionRulesResponse) GetObject() *SuppressionRulesGetSuppressionRulesResponseBody {
+	if s == nil {
 		return nil
 	}
-	return o.Object
+	return s.Object
 }

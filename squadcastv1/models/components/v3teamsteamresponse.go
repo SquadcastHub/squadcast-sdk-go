@@ -8,25 +8,25 @@ type V3TeamsTeamResponseOrganization struct {
 	Slug string `json:"slug"`
 }
 
-func (o *V3TeamsTeamResponseOrganization) GetID() string {
-	if o == nil {
+func (v *V3TeamsTeamResponseOrganization) GetID() string {
+	if v == nil {
 		return ""
 	}
-	return o.ID
+	return v.ID
 }
 
-func (o *V3TeamsTeamResponseOrganization) GetName() string {
-	if o == nil {
+func (v *V3TeamsTeamResponseOrganization) GetName() string {
+	if v == nil {
 		return ""
 	}
-	return o.Name
+	return v.Name
 }
 
-func (o *V3TeamsTeamResponseOrganization) GetSlug() string {
-	if o == nil {
+func (v *V3TeamsTeamResponseOrganization) GetSlug() string {
+	if v == nil {
 		return ""
 	}
-	return o.Slug
+	return v.Slug
 }
 
 type V3TeamsTeamResponse struct {
@@ -44,86 +44,86 @@ type V3TeamsTeamResponse struct {
 	Organization   V3TeamsTeamResponseOrganization `json:"organization"`
 }
 
-func (o *V3TeamsTeamResponse) GetID() string {
-	if o == nil {
+func (v *V3TeamsTeamResponse) GetID() string {
+	if v == nil {
 		return ""
 	}
-	return o.ID
+	return v.ID
 }
 
-func (o *V3TeamsTeamResponse) GetCreatedAt() string {
-	if o == nil {
+func (v *V3TeamsTeamResponse) GetCreatedAt() string {
+	if v == nil {
 		return ""
 	}
-	return o.CreatedAt
+	return v.CreatedAt
 }
 
-func (o *V3TeamsTeamResponse) GetUpdatedAt() string {
-	if o == nil {
+func (v *V3TeamsTeamResponse) GetUpdatedAt() string {
+	if v == nil {
 		return ""
 	}
-	return o.UpdatedAt
+	return v.UpdatedAt
 }
 
-func (o *V3TeamsTeamResponse) GetCreatedBy() string {
-	if o == nil {
+func (v *V3TeamsTeamResponse) GetCreatedBy() string {
+	if v == nil {
 		return ""
 	}
-	return o.CreatedBy
+	return v.CreatedBy
 }
 
-func (o *V3TeamsTeamResponse) GetOrganizationID() string {
-	if o == nil {
+func (v *V3TeamsTeamResponse) GetOrganizationID() string {
+	if v == nil {
 		return ""
 	}
-	return o.OrganizationID
+	return v.OrganizationID
 }
 
-func (o *V3TeamsTeamResponse) GetName() string {
-	if o == nil {
+func (v *V3TeamsTeamResponse) GetName() string {
+	if v == nil {
 		return ""
 	}
-	return o.Name
+	return v.Name
 }
 
-func (o *V3TeamsTeamResponse) GetDescription() string {
-	if o == nil {
+func (v *V3TeamsTeamResponse) GetDescription() string {
+	if v == nil {
 		return ""
 	}
-	return o.Description
+	return v.Description
 }
 
-func (o *V3TeamsTeamResponse) GetSlug() string {
-	if o == nil {
+func (v *V3TeamsTeamResponse) GetSlug() string {
+	if v == nil {
 		return ""
 	}
-	return o.Slug
+	return v.Slug
 }
 
-func (o *V3TeamsTeamResponse) GetMembers() []V3TeamsTeamMember {
-	if o == nil {
+func (v *V3TeamsTeamResponse) GetMembers() []V3TeamsTeamMember {
+	if v == nil {
 		return []V3TeamsTeamMember{}
 	}
-	return o.Members
+	return v.Members
 }
 
-func (o *V3TeamsTeamResponse) GetRoles() []V3TeamsTeamRole {
-	if o == nil {
+func (v *V3TeamsTeamResponse) GetRoles() []V3TeamsTeamRole {
+	if v == nil {
 		return []V3TeamsTeamRole{}
 	}
-	return o.Roles
+	return v.Roles
 }
 
-func (o *V3TeamsTeamResponse) GetDefault() bool {
-	if o == nil {
+func (v *V3TeamsTeamResponse) GetDefault() bool {
+	if v == nil {
 		return false
 	}
-	return o.Default
+	return v.Default
 }
 
-func (o *V3TeamsTeamResponse) GetOrganization() V3TeamsTeamResponseOrganization {
-	if o == nil {
+func (v *V3TeamsTeamResponse) GetOrganization() V3TeamsTeamResponseOrganization {
+	if v == nil {
 		return V3TeamsTeamResponseOrganization{}
 	}
-	return o.Organization
+	return v.Organization
 }

@@ -10,11 +10,11 @@ type SchedulesDeleteScheduleRequest struct {
 	ScheduleID string `pathParam:"style=simple,explode=false,name=scheduleID"`
 }
 
-func (o *SchedulesDeleteScheduleRequest) GetScheduleID() string {
-	if o == nil {
+func (s *SchedulesDeleteScheduleRequest) GetScheduleID() string {
+	if s == nil {
 		return ""
 	}
-	return o.ScheduleID
+	return s.ScheduleID
 }
 
 // SchedulesDeleteScheduleResponseBody - There is no content to send for this request, but the headers may be useful.
@@ -26,16 +26,16 @@ type SchedulesDeleteScheduleResponse struct {
 	Body     []byte
 }
 
-func (o *SchedulesDeleteScheduleResponse) GetHTTPMeta() components.HTTPMetadata {
-	if o == nil {
+func (s *SchedulesDeleteScheduleResponse) GetHTTPMeta() components.HTTPMetadata {
+	if s == nil {
 		return components.HTTPMetadata{}
 	}
-	return o.HTTPMeta
+	return s.HTTPMeta
 }
 
-func (o *SchedulesDeleteScheduleResponse) GetBody() []byte {
-	if o == nil {
+func (s *SchedulesDeleteScheduleResponse) GetBody() []byte {
+	if s == nil {
 		return nil
 	}
-	return o.Body
+	return s.Body
 }

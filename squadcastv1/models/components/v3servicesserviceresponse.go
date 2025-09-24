@@ -11,11 +11,11 @@ type Config struct {
 	DedupKeyEnabled bool `json:"dedup_key_enabled"`
 }
 
-func (o *Config) GetDedupKeyEnabled() bool {
-	if o == nil {
+func (c *Config) GetDedupKeyEnabled() bool {
+	if c == nil {
 		return false
 	}
-	return o.DedupKeyEnabled
+	return c.DedupKeyEnabled
 }
 
 type V3ServicesServiceResponse struct {
@@ -56,156 +56,156 @@ func (v *V3ServicesServiceResponse) UnmarshalJSON(data []byte) error {
 	return nil
 }
 
-func (o *V3ServicesServiceResponse) GetID() string {
-	if o == nil {
+func (v *V3ServicesServiceResponse) GetID() string {
+	if v == nil {
 		return ""
 	}
-	return o.ID
+	return v.ID
 }
 
-func (o *V3ServicesServiceResponse) GetName() string {
-	if o == nil {
+func (v *V3ServicesServiceResponse) GetName() string {
+	if v == nil {
 		return ""
 	}
-	return o.Name
+	return v.Name
 }
 
-func (o *V3ServicesServiceResponse) GetSlug() string {
-	if o == nil {
+func (v *V3ServicesServiceResponse) GetSlug() string {
+	if v == nil {
 		return ""
 	}
-	return o.Slug
+	return v.Slug
 }
 
-func (o *V3ServicesServiceResponse) GetEmail() string {
-	if o == nil {
+func (v *V3ServicesServiceResponse) GetEmail() string {
+	if v == nil {
 		return ""
 	}
-	return o.Email
+	return v.Email
 }
 
-func (o *V3ServicesServiceResponse) GetEscalationPolicyID() string {
-	if o == nil {
+func (v *V3ServicesServiceResponse) GetEscalationPolicyID() string {
+	if v == nil {
 		return ""
 	}
-	return o.EscalationPolicyID
+	return v.EscalationPolicyID
 }
 
-func (o *V3ServicesServiceResponse) GetOrganizationID() string {
-	if o == nil {
+func (v *V3ServicesServiceResponse) GetOrganizationID() string {
+	if v == nil {
 		return ""
 	}
-	return o.OrganizationID
+	return v.OrganizationID
 }
 
-func (o *V3ServicesServiceResponse) GetAPIKey() string {
-	if o == nil {
+func (v *V3ServicesServiceResponse) GetAPIKey() string {
+	if v == nil {
 		return ""
 	}
-	return o.APIKey
+	return v.APIKey
 }
 
-func (o *V3ServicesServiceResponse) GetDescription() string {
-	if o == nil {
+func (v *V3ServicesServiceResponse) GetDescription() string {
+	if v == nil {
 		return ""
 	}
-	return o.Description
+	return v.Description
 }
 
-func (o *V3ServicesServiceResponse) GetDepends() []string {
-	if o == nil {
+func (v *V3ServicesServiceResponse) GetDepends() []string {
+	if v == nil {
 		return nil
 	}
-	return o.Depends
+	return v.Depends
 }
 
-func (o *V3ServicesServiceResponse) GetOwner() CommonV3RBACOwner {
-	if o == nil {
+func (v *V3ServicesServiceResponse) GetOwner() CommonV3RBACOwner {
+	if v == nil {
 		return CommonV3RBACOwner{}
 	}
-	return o.Owner
+	return v.Owner
 }
 
-func (o *V3ServicesServiceResponse) GetOnMaintenance() *bool {
-	if o == nil {
+func (v *V3ServicesServiceResponse) GetOnMaintenance() *bool {
+	if v == nil {
 		return nil
 	}
-	return o.OnMaintenance
+	return v.OnMaintenance
 }
 
-func (o *V3ServicesServiceResponse) GetSlack() *V3ServicesServiceSlack {
-	if o == nil {
+func (v *V3ServicesServiceResponse) GetSlack() *V3ServicesServiceSlack {
+	if v == nil {
 		return nil
 	}
-	return o.Slack
+	return v.Slack
 }
 
-func (o *V3ServicesServiceResponse) GetEscalationPolicy() *V3ServicesEscalationPolicyBasic {
-	if o == nil {
+func (v *V3ServicesServiceResponse) GetEscalationPolicy() *V3ServicesEscalationPolicyBasic {
+	if v == nil {
 		return nil
 	}
-	return o.EscalationPolicy
+	return v.EscalationPolicy
 }
 
-func (o *V3ServicesServiceResponse) GetJiraCloud() *V3ServicesJiraCloudExtension {
-	if o == nil {
+func (v *V3ServicesServiceResponse) GetJiraCloud() *V3ServicesJiraCloudExtension {
+	if v == nil {
 		return nil
 	}
-	return o.JiraCloud
+	return v.JiraCloud
 }
 
-func (o *V3ServicesServiceResponse) GetMaintainer() V3ServicesServiceMaintainer {
-	if o == nil {
+func (v *V3ServicesServiceResponse) GetMaintainer() V3ServicesServiceMaintainer {
+	if v == nil {
 		return V3ServicesServiceMaintainer{}
 	}
-	return o.Maintainer
+	return v.Maintainer
 }
 
-func (o *V3ServicesServiceResponse) GetTags() []V3ServicesServiceTag {
-	if o == nil {
+func (v *V3ServicesServiceResponse) GetTags() []V3ServicesServiceTag {
+	if v == nil {
 		return []V3ServicesServiceTag{}
 	}
-	return o.Tags
+	return v.Tags
 }
 
-func (o *V3ServicesServiceResponse) GetAutoPauseTransientAlertsConfig() V3ServicesAPTAConfig {
-	if o == nil {
+func (v *V3ServicesServiceResponse) GetAutoPauseTransientAlertsConfig() V3ServicesAPTAConfig {
+	if v == nil {
 		return V3ServicesAPTAConfig{}
 	}
-	return o.AutoPauseTransientAlertsConfig
+	return v.AutoPauseTransientAlertsConfig
 }
 
-func (o *V3ServicesServiceResponse) GetIntelligentAlertsGroupingConfig() V3ServicesIAGConfig {
-	if o == nil {
+func (v *V3ServicesServiceResponse) GetIntelligentAlertsGroupingConfig() V3ServicesIAGConfig {
+	if v == nil {
 		return V3ServicesIAGConfig{}
 	}
-	return o.IntelligentAlertsGroupingConfig
+	return v.IntelligentAlertsGroupingConfig
 }
 
-func (o *V3ServicesServiceResponse) GetDelayNotificationConfig() V3ServicesNotificationDelayConfig {
-	if o == nil {
+func (v *V3ServicesServiceResponse) GetDelayNotificationConfig() V3ServicesNotificationDelayConfig {
+	if v == nil {
 		return V3ServicesNotificationDelayConfig{}
 	}
-	return o.DelayNotificationConfig
+	return v.DelayNotificationConfig
 }
 
-func (o *V3ServicesServiceResponse) GetConfig() Config {
-	if o == nil {
+func (v *V3ServicesServiceResponse) GetConfig() Config {
+	if v == nil {
 		return Config{}
 	}
-	return o.Config
+	return v.Config
 }
 
-func (o *V3ServicesServiceResponse) GetCreatedAt() time.Time {
-	if o == nil {
+func (v *V3ServicesServiceResponse) GetCreatedAt() time.Time {
+	if v == nil {
 		return time.Time{}
 	}
-	return o.CreatedAt
+	return v.CreatedAt
 }
 
-func (o *V3ServicesServiceResponse) GetUpdatedAt() time.Time {
-	if o == nil {
+func (v *V3ServicesServiceResponse) GetUpdatedAt() time.Time {
+	if v == nil {
 		return time.Time{}
 	}
-	return o.UpdatedAt
+	return v.UpdatedAt
 }

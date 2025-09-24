@@ -10,37 +10,37 @@ type V4StatusPagesStatusPageStatusesResponse struct {
 	Color       string `json:"color"`
 }
 
-func (o *V4StatusPagesStatusPageStatusesResponse) GetID() int64 {
-	if o == nil {
+func (v *V4StatusPagesStatusPageStatusesResponse) GetID() int64 {
+	if v == nil {
 		return 0
 	}
-	return o.ID
+	return v.ID
 }
 
-func (o *V4StatusPagesStatusPageStatusesResponse) GetName() string {
-	if o == nil {
+func (v *V4StatusPagesStatusPageStatusesResponse) GetName() string {
+	if v == nil {
 		return ""
 	}
-	return o.Name
+	return v.Name
 }
 
-func (o *V4StatusPagesStatusPageStatusesResponse) GetStatus() string {
-	if o == nil {
+func (v *V4StatusPagesStatusPageStatusesResponse) GetStatus() string {
+	if v == nil {
 		return ""
 	}
-	return o.Status
+	return v.Status
 }
 
-func (o *V4StatusPagesStatusPageStatusesResponse) GetDescription() string {
-	if o == nil {
+func (v *V4StatusPagesStatusPageStatusesResponse) GetDescription() string {
+	if v == nil {
 		return ""
 	}
-	return o.Description
+	return v.Description
 }
 
-func (o *V4StatusPagesStatusPageStatusesResponse) GetColor() string {
-	if o == nil {
+func (v *V4StatusPagesStatusPageStatusesResponse) GetColor() string {
+	if v == nil {
 		return ""
 	}
-	return o.Color
+	return v.Color
 }

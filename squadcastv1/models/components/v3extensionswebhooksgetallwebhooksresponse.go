@@ -6,11 +6,11 @@ type V3ExtensionsWebhooksGetAllWebhooksResponseMeta struct {
 	TotalCount int64 `json:"total_count"`
 }
 
-func (o *V3ExtensionsWebhooksGetAllWebhooksResponseMeta) GetTotalCount() int64 {
-	if o == nil {
+func (v *V3ExtensionsWebhooksGetAllWebhooksResponseMeta) GetTotalCount() int64 {
+	if v == nil {
 		return 0
 	}
-	return o.TotalCount
+	return v.TotalCount
 }
 
 type V3ExtensionsWebhooksGetAllWebhooksResponseData struct {
@@ -18,27 +18,27 @@ type V3ExtensionsWebhooksGetAllWebhooksResponseData struct {
 	Meta   V3ExtensionsWebhooksGetAllWebhooksResponseMeta `json:"meta"`
 }
 
-func (o *V3ExtensionsWebhooksGetAllWebhooksResponseData) GetResult() []V3ExtensionsWebhooksWebhookListItem {
-	if o == nil {
+func (v *V3ExtensionsWebhooksGetAllWebhooksResponseData) GetResult() []V3ExtensionsWebhooksWebhookListItem {
+	if v == nil {
 		return []V3ExtensionsWebhooksWebhookListItem{}
 	}
-	return o.Result
+	return v.Result
 }
 
-func (o *V3ExtensionsWebhooksGetAllWebhooksResponseData) GetMeta() V3ExtensionsWebhooksGetAllWebhooksResponseMeta {
-	if o == nil {
+func (v *V3ExtensionsWebhooksGetAllWebhooksResponseData) GetMeta() V3ExtensionsWebhooksGetAllWebhooksResponseMeta {
+	if v == nil {
 		return V3ExtensionsWebhooksGetAllWebhooksResponseMeta{}
 	}
-	return o.Meta
+	return v.Meta
 }
 
 type V3ExtensionsWebhooksGetAllWebhooksResponse struct {
 	Data V3ExtensionsWebhooksGetAllWebhooksResponseData `json:"data"`
 }
 
-func (o *V3ExtensionsWebhooksGetAllWebhooksResponse) GetData() V3ExtensionsWebhooksGetAllWebhooksResponseData {
-	if o == nil {
+func (v *V3ExtensionsWebhooksGetAllWebhooksResponse) GetData() V3ExtensionsWebhooksGetAllWebhooksResponseData {
+	if v == nil {
 		return V3ExtensionsWebhooksGetAllWebhooksResponseData{}
 	}
-	return o.Data
+	return v.Data
 }

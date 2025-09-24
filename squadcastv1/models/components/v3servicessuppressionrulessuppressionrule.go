@@ -32,79 +32,79 @@ func (v *V3ServicesSuppressionRulesSuppressionRule) UnmarshalJSON(data []byte) e
 	return nil
 }
 
-func (o *V3ServicesSuppressionRulesSuppressionRule) GetRuleID() string {
-	if o == nil {
+func (v *V3ServicesSuppressionRulesSuppressionRule) GetRuleID() string {
+	if v == nil {
 		return ""
 	}
-	return o.RuleID
+	return v.RuleID
 }
 
-func (o *V3ServicesSuppressionRulesSuppressionRule) GetCreatedAt() time.Time {
-	if o == nil {
+func (v *V3ServicesSuppressionRulesSuppressionRule) GetCreatedAt() time.Time {
+	if v == nil {
 		return time.Time{}
 	}
-	return o.CreatedAt
+	return v.CreatedAt
 }
 
-func (o *V3ServicesSuppressionRulesSuppressionRule) GetUpdatedAt() time.Time {
-	if o == nil {
+func (v *V3ServicesSuppressionRulesSuppressionRule) GetUpdatedAt() time.Time {
+	if v == nil {
 		return time.Time{}
 	}
-	return o.UpdatedAt
+	return v.UpdatedAt
 }
 
-func (o *V3ServicesSuppressionRulesSuppressionRule) GetCreatedBy() string {
-	if o == nil {
+func (v *V3ServicesSuppressionRulesSuppressionRule) GetCreatedBy() string {
+	if v == nil {
 		return ""
 	}
-	return o.CreatedBy
+	return v.CreatedBy
 }
 
-func (o *V3ServicesSuppressionRulesSuppressionRule) GetUpdatedBy() string {
-	if o == nil {
+func (v *V3ServicesSuppressionRulesSuppressionRule) GetUpdatedBy() string {
+	if v == nil {
 		return ""
 	}
-	return o.UpdatedBy
+	return v.UpdatedBy
 }
 
-func (o *V3ServicesSuppressionRulesSuppressionRule) GetDescription() string {
-	if o == nil {
+func (v *V3ServicesSuppressionRulesSuppressionRule) GetDescription() string {
+	if v == nil {
 		return ""
 	}
-	return o.Description
+	return v.Description
 }
 
-func (o *V3ServicesSuppressionRulesSuppressionRule) GetExpression() string {
-	if o == nil {
+func (v *V3ServicesSuppressionRulesSuppressionRule) GetExpression() string {
+	if v == nil {
 		return ""
 	}
-	return o.Expression
+	return v.Expression
 }
 
-func (o *V3ServicesSuppressionRulesSuppressionRule) GetIsBasic() bool {
-	if o == nil {
+func (v *V3ServicesSuppressionRulesSuppressionRule) GetIsBasic() bool {
+	if v == nil {
 		return false
 	}
-	return o.IsBasic
+	return v.IsBasic
 }
 
-func (o *V3ServicesSuppressionRulesSuppressionRule) GetIsTimebased() bool {
-	if o == nil {
+func (v *V3ServicesSuppressionRulesSuppressionRule) GetIsTimebased() bool {
+	if v == nil {
 		return false
 	}
-	return o.IsTimebased
+	return v.IsTimebased
 }
 
-func (o *V3ServicesSuppressionRulesSuppressionRule) GetTimeslots() []V3ServicesSuppressionRulesTimeslot {
-	if o == nil {
+func (v *V3ServicesSuppressionRulesSuppressionRule) GetTimeslots() []V3ServicesSuppressionRulesTimeslot {
+	if v == nil {
 		return nil
 	}
-	return o.Timeslots
+	return v.Timeslots
 }
 
-func (o *V3ServicesSuppressionRulesSuppressionRule) GetBasicExpression() []V3ServicesSuppressionRulesBasicExpression {
-	if o == nil {
+func (v *V3ServicesSuppressionRulesSuppressionRule) GetBasicExpression() []V3ServicesSuppressionRulesBasicExpression {
+	if v == nil {
 		return []V3ServicesSuppressionRulesBasicExpression{}
 	}
-	return o.BasicExpression
+	return v.BasicExpression
 }

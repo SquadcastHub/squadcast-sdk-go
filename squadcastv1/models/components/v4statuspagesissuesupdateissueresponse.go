@@ -8,23 +8,23 @@ type V4StatusPagesIssuesUpdateIssueResponse struct {
 	Title        string  `json:"title"`
 }
 
-func (o *V4StatusPagesIssuesUpdateIssueResponse) GetID() int64 {
-	if o == nil {
+func (v *V4StatusPagesIssuesUpdateIssueResponse) GetID() int64 {
+	if v == nil {
 		return 0
 	}
-	return o.ID
+	return v.ID
 }
 
-func (o *V4StatusPagesIssuesUpdateIssueResponse) GetComponentIDs() []int64 {
-	if o == nil {
+func (v *V4StatusPagesIssuesUpdateIssueResponse) GetComponentIDs() []int64 {
+	if v == nil {
 		return []int64{}
 	}
-	return o.ComponentIDs
+	return v.ComponentIDs
 }
 
-func (o *V4StatusPagesIssuesUpdateIssueResponse) GetTitle() string {
-	if o == nil {
+func (v *V4StatusPagesIssuesUpdateIssueResponse) GetTitle() string {
+	if v == nil {
 		return ""
 	}
-	return o.Title
+	return v.Title
 }

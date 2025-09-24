@@ -10,11 +10,11 @@ type TeamsGetAllTeamRolesRequest struct {
 	TeamID string `pathParam:"style=simple,explode=false,name=teamId"`
 }
 
-func (o *TeamsGetAllTeamRolesRequest) GetTeamID() string {
-	if o == nil {
+func (t *TeamsGetAllTeamRolesRequest) GetTeamID() string {
+	if t == nil {
 		return ""
 	}
-	return o.TeamID
+	return t.TeamID
 }
 
 // TeamsGetAllTeamRolesResponseBody - The request has succeeded.
@@ -22,11 +22,11 @@ type TeamsGetAllTeamRolesResponseBody struct {
 	Data []components.V3TeamsTeamRoleResponse `json:"data"`
 }
 
-func (o *TeamsGetAllTeamRolesResponseBody) GetData() []components.V3TeamsTeamRoleResponse {
-	if o == nil {
+func (t *TeamsGetAllTeamRolesResponseBody) GetData() []components.V3TeamsTeamRoleResponse {
+	if t == nil {
 		return []components.V3TeamsTeamRoleResponse{}
 	}
-	return o.Data
+	return t.Data
 }
 
 type TeamsGetAllTeamRolesResponse struct {
@@ -35,16 +35,16 @@ type TeamsGetAllTeamRolesResponse struct {
 	Object *TeamsGetAllTeamRolesResponseBody
 }
 
-func (o *TeamsGetAllTeamRolesResponse) GetHTTPMeta() components.HTTPMetadata {
-	if o == nil {
+func (t *TeamsGetAllTeamRolesResponse) GetHTTPMeta() components.HTTPMetadata {
+	if t == nil {
 		return components.HTTPMetadata{}
 	}
-	return o.HTTPMeta
+	return t.HTTPMeta
 }
 
-func (o *TeamsGetAllTeamRolesResponse) GetObject() *TeamsGetAllTeamRolesResponseBody {
-	if o == nil {
+func (t *TeamsGetAllTeamRolesResponse) GetObject() *TeamsGetAllTeamRolesResponseBody {
+	if t == nil {
 		return nil
 	}
-	return o.Object
+	return t.Object
 }

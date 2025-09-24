@@ -10,11 +10,11 @@ type WebformsCreateWebformData struct {
 	Webform components.V3WebformsWebformResponse `json:"webform"`
 }
 
-func (o *WebformsCreateWebformData) GetWebform() components.V3WebformsWebformResponse {
-	if o == nil {
+func (w *WebformsCreateWebformData) GetWebform() components.V3WebformsWebformResponse {
+	if w == nil {
 		return components.V3WebformsWebformResponse{}
 	}
-	return o.Webform
+	return w.Webform
 }
 
 // WebformsCreateWebformResponseBody - The request has succeeded and a new resource has been created as a result.
@@ -22,11 +22,11 @@ type WebformsCreateWebformResponseBody struct {
 	Data WebformsCreateWebformData `json:"data"`
 }
 
-func (o *WebformsCreateWebformResponseBody) GetData() WebformsCreateWebformData {
-	if o == nil {
+func (w *WebformsCreateWebformResponseBody) GetData() WebformsCreateWebformData {
+	if w == nil {
 		return WebformsCreateWebformData{}
 	}
-	return o.Data
+	return w.Data
 }
 
 type WebformsCreateWebformResponse struct {
@@ -35,16 +35,16 @@ type WebformsCreateWebformResponse struct {
 	Object *WebformsCreateWebformResponseBody
 }
 
-func (o *WebformsCreateWebformResponse) GetHTTPMeta() components.HTTPMetadata {
-	if o == nil {
+func (w *WebformsCreateWebformResponse) GetHTTPMeta() components.HTTPMetadata {
+	if w == nil {
 		return components.HTTPMetadata{}
 	}
-	return o.HTTPMeta
+	return w.HTTPMeta
 }
 
-func (o *WebformsCreateWebformResponse) GetObject() *WebformsCreateWebformResponseBody {
-	if o == nil {
+func (w *WebformsCreateWebformResponse) GetObject() *WebformsCreateWebformResponseBody {
+	if w == nil {
 		return nil
 	}
-	return o.Object
+	return w.Object
 }

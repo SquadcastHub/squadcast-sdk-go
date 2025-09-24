@@ -11,18 +11,18 @@ type IncidentsMarkIncidentSloFalsePositiveRequest struct {
 	Value      string `pathParam:"style=simple,explode=false,name=value"`
 }
 
-func (o *IncidentsMarkIncidentSloFalsePositiveRequest) GetIncidentID() string {
-	if o == nil {
+func (i *IncidentsMarkIncidentSloFalsePositiveRequest) GetIncidentID() string {
+	if i == nil {
 		return ""
 	}
-	return o.IncidentID
+	return i.IncidentID
 }
 
-func (o *IncidentsMarkIncidentSloFalsePositiveRequest) GetValue() string {
-	if o == nil {
+func (i *IncidentsMarkIncidentSloFalsePositiveRequest) GetValue() string {
+	if i == nil {
 		return ""
 	}
-	return o.Value
+	return i.Value
 }
 
 // IncidentsMarkIncidentSloFalsePositiveResponseBody - The request has succeeded.
@@ -35,16 +35,16 @@ type IncidentsMarkIncidentSloFalsePositiveResponse struct {
 	Object *IncidentsMarkIncidentSloFalsePositiveResponseBody
 }
 
-func (o *IncidentsMarkIncidentSloFalsePositiveResponse) GetHTTPMeta() components.HTTPMetadata {
-	if o == nil {
+func (i *IncidentsMarkIncidentSloFalsePositiveResponse) GetHTTPMeta() components.HTTPMetadata {
+	if i == nil {
 		return components.HTTPMetadata{}
 	}
-	return o.HTTPMeta
+	return i.HTTPMeta
 }
 
-func (o *IncidentsMarkIncidentSloFalsePositiveResponse) GetObject() *IncidentsMarkIncidentSloFalsePositiveResponseBody {
-	if o == nil {
+func (i *IncidentsMarkIncidentSloFalsePositiveResponse) GetObject() *IncidentsMarkIncidentSloFalsePositiveResponseBody {
+	if i == nil {
 		return nil
 	}
-	return o.Object
+	return i.Object
 }

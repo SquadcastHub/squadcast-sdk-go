@@ -10,11 +10,11 @@ type TeamsGetTeamByIDRequest struct {
 	TeamID string `pathParam:"style=simple,explode=false,name=teamId"`
 }
 
-func (o *TeamsGetTeamByIDRequest) GetTeamID() string {
-	if o == nil {
+func (t *TeamsGetTeamByIDRequest) GetTeamID() string {
+	if t == nil {
 		return ""
 	}
-	return o.TeamID
+	return t.TeamID
 }
 
 // TeamsGetTeamByIDResponseBody - The request has succeeded.
@@ -22,11 +22,11 @@ type TeamsGetTeamByIDResponseBody struct {
 	Data components.V3TeamsTeamResponse `json:"data"`
 }
 
-func (o *TeamsGetTeamByIDResponseBody) GetData() components.V3TeamsTeamResponse {
-	if o == nil {
+func (t *TeamsGetTeamByIDResponseBody) GetData() components.V3TeamsTeamResponse {
+	if t == nil {
 		return components.V3TeamsTeamResponse{}
 	}
-	return o.Data
+	return t.Data
 }
 
 type TeamsGetTeamByIDResponse struct {
@@ -35,16 +35,16 @@ type TeamsGetTeamByIDResponse struct {
 	Object *TeamsGetTeamByIDResponseBody
 }
 
-func (o *TeamsGetTeamByIDResponse) GetHTTPMeta() components.HTTPMetadata {
-	if o == nil {
+func (t *TeamsGetTeamByIDResponse) GetHTTPMeta() components.HTTPMetadata {
+	if t == nil {
 		return components.HTTPMetadata{}
 	}
-	return o.HTTPMeta
+	return t.HTTPMeta
 }
 
-func (o *TeamsGetTeamByIDResponse) GetObject() *TeamsGetTeamByIDResponseBody {
-	if o == nil {
+func (t *TeamsGetTeamByIDResponse) GetObject() *TeamsGetTeamByIDResponseBody {
+	if t == nil {
 		return nil
 	}
-	return o.Object
+	return t.Object
 }

@@ -55,114 +55,114 @@ type V4StatusPagesCreateStatusPageRequest struct {
 	OwnerID                      string                                        `json:"ownerID"`
 }
 
-func (o *V4StatusPagesCreateStatusPageRequest) GetName() string {
-	if o == nil {
+func (v *V4StatusPagesCreateStatusPageRequest) GetName() string {
+	if v == nil {
 		return ""
 	}
-	return o.Name
+	return v.Name
 }
 
-func (o *V4StatusPagesCreateStatusPageRequest) GetDescription() *string {
-	if o == nil {
+func (v *V4StatusPagesCreateStatusPageRequest) GetDescription() *string {
+	if v == nil {
 		return nil
 	}
-	return o.Description
+	return v.Description
 }
 
-func (o *V4StatusPagesCreateStatusPageRequest) GetIsPublic() *bool {
-	if o == nil {
+func (v *V4StatusPagesCreateStatusPageRequest) GetIsPublic() *bool {
+	if v == nil {
 		return nil
 	}
-	return o.IsPublic
+	return v.IsPublic
 }
 
-func (o *V4StatusPagesCreateStatusPageRequest) GetDomainName() string {
-	if o == nil {
+func (v *V4StatusPagesCreateStatusPageRequest) GetDomainName() string {
+	if v == nil {
 		return ""
 	}
-	return o.DomainName
+	return v.DomainName
 }
 
-func (o *V4StatusPagesCreateStatusPageRequest) GetCustomDomainName() *string {
-	if o == nil {
+func (v *V4StatusPagesCreateStatusPageRequest) GetCustomDomainName() *string {
+	if v == nil {
 		return nil
 	}
-	return o.CustomDomainName
+	return v.CustomDomainName
 }
 
-func (o *V4StatusPagesCreateStatusPageRequest) GetLogoURL() string {
-	if o == nil {
+func (v *V4StatusPagesCreateStatusPageRequest) GetLogoURL() string {
+	if v == nil {
 		return ""
 	}
-	return o.LogoURL
+	return v.LogoURL
 }
 
-func (o *V4StatusPagesCreateStatusPageRequest) GetTimezone() string {
-	if o == nil {
+func (v *V4StatusPagesCreateStatusPageRequest) GetTimezone() string {
+	if v == nil {
 		return ""
 	}
-	return o.Timezone
+	return v.Timezone
 }
 
-func (o *V4StatusPagesCreateStatusPageRequest) GetTeamID() string {
-	if o == nil {
+func (v *V4StatusPagesCreateStatusPageRequest) GetTeamID() string {
+	if v == nil {
 		return ""
 	}
-	return o.TeamID
+	return v.TeamID
 }
 
-func (o *V4StatusPagesCreateStatusPageRequest) GetThemeColor() *V4StatusPagesNewStatusPageThemeColor {
-	if o == nil {
+func (v *V4StatusPagesCreateStatusPageRequest) GetThemeColor() *V4StatusPagesNewStatusPageThemeColor {
+	if v == nil {
 		return nil
 	}
-	return o.ThemeColor
+	return v.ThemeColor
 }
 
-func (o *V4StatusPagesCreateStatusPageRequest) GetComponents() []V4StatusPagesNewStatusPageComponentList {
-	if o == nil {
+func (v *V4StatusPagesCreateStatusPageRequest) GetComponents() []V4StatusPagesNewStatusPageComponentList {
+	if v == nil {
 		return nil
 	}
-	return o.Components
+	return v.Components
 }
 
-func (o *V4StatusPagesCreateStatusPageRequest) GetContactEmail() string {
-	if o == nil {
+func (v *V4StatusPagesCreateStatusPageRequest) GetContactEmail() string {
+	if v == nil {
 		return ""
 	}
-	return o.ContactEmail
+	return v.ContactEmail
 }
 
-func (o *V4StatusPagesCreateStatusPageRequest) GetAllowWebhookSubscription() *bool {
-	if o == nil {
+func (v *V4StatusPagesCreateStatusPageRequest) GetAllowWebhookSubscription() *bool {
+	if v == nil {
 		return nil
 	}
-	return o.AllowWebhookSubscription
+	return v.AllowWebhookSubscription
 }
 
-func (o *V4StatusPagesCreateStatusPageRequest) GetAllowComponentsSubscription() *bool {
-	if o == nil {
+func (v *V4StatusPagesCreateStatusPageRequest) GetAllowComponentsSubscription() *bool {
+	if v == nil {
 		return nil
 	}
-	return o.AllowComponentsSubscription
+	return v.AllowComponentsSubscription
 }
 
-func (o *V4StatusPagesCreateStatusPageRequest) GetAllowMaintenanceSubscription() *bool {
-	if o == nil {
+func (v *V4StatusPagesCreateStatusPageRequest) GetAllowMaintenanceSubscription() *bool {
+	if v == nil {
 		return nil
 	}
-	return o.AllowMaintenanceSubscription
+	return v.AllowMaintenanceSubscription
 }
 
-func (o *V4StatusPagesCreateStatusPageRequest) GetOwnerType() V4StatusPagesCreateStatusPageRequestOwnerType {
-	if o == nil {
+func (v *V4StatusPagesCreateStatusPageRequest) GetOwnerType() V4StatusPagesCreateStatusPageRequestOwnerType {
+	if v == nil {
 		return V4StatusPagesCreateStatusPageRequestOwnerType("")
 	}
-	return o.OwnerType
+	return v.OwnerType
 }
 
-func (o *V4StatusPagesCreateStatusPageRequest) GetOwnerID() string {
-	if o == nil {
+func (v *V4StatusPagesCreateStatusPageRequest) GetOwnerID() string {
+	if v == nil {
 		return ""
 	}
-	return o.OwnerID
+	return v.OwnerID
 }

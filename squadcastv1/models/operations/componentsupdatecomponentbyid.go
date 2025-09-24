@@ -12,25 +12,25 @@ type ComponentsUpdateComponentByIDRequest struct {
 	V4StatusPagesComponentsUpdateComponentByIDRequest components.V4StatusPagesComponentsUpdateComponentByIDRequest `request:"mediaType=application/json"`
 }
 
-func (o *ComponentsUpdateComponentByIDRequest) GetStatuspageID() string {
-	if o == nil {
+func (c *ComponentsUpdateComponentByIDRequest) GetStatuspageID() string {
+	if c == nil {
 		return ""
 	}
-	return o.StatuspageID
+	return c.StatuspageID
 }
 
-func (o *ComponentsUpdateComponentByIDRequest) GetComponentID() string {
-	if o == nil {
+func (c *ComponentsUpdateComponentByIDRequest) GetComponentID() string {
+	if c == nil {
 		return ""
 	}
-	return o.ComponentID
+	return c.ComponentID
 }
 
-func (o *ComponentsUpdateComponentByIDRequest) GetV4StatusPagesComponentsUpdateComponentByIDRequest() components.V4StatusPagesComponentsUpdateComponentByIDRequest {
-	if o == nil {
+func (c *ComponentsUpdateComponentByIDRequest) GetV4StatusPagesComponentsUpdateComponentByIDRequest() components.V4StatusPagesComponentsUpdateComponentByIDRequest {
+	if c == nil {
 		return components.V4StatusPagesComponentsUpdateComponentByIDRequest{}
 	}
-	return o.V4StatusPagesComponentsUpdateComponentByIDRequest
+	return c.V4StatusPagesComponentsUpdateComponentByIDRequest
 }
 
 // ComponentsUpdateComponentByIDResponseBody - The request has succeeded.
@@ -38,11 +38,11 @@ type ComponentsUpdateComponentByIDResponseBody struct {
 	Data components.V4StatusPagesComponentsUpdateComponentByIDResponse `json:"data"`
 }
 
-func (o *ComponentsUpdateComponentByIDResponseBody) GetData() components.V4StatusPagesComponentsUpdateComponentByIDResponse {
-	if o == nil {
+func (c *ComponentsUpdateComponentByIDResponseBody) GetData() components.V4StatusPagesComponentsUpdateComponentByIDResponse {
+	if c == nil {
 		return components.V4StatusPagesComponentsUpdateComponentByIDResponse{}
 	}
-	return o.Data
+	return c.Data
 }
 
 type ComponentsUpdateComponentByIDResponse struct {
@@ -51,16 +51,16 @@ type ComponentsUpdateComponentByIDResponse struct {
 	Object *ComponentsUpdateComponentByIDResponseBody
 }
 
-func (o *ComponentsUpdateComponentByIDResponse) GetHTTPMeta() components.HTTPMetadata {
-	if o == nil {
+func (c *ComponentsUpdateComponentByIDResponse) GetHTTPMeta() components.HTTPMetadata {
+	if c == nil {
 		return components.HTTPMetadata{}
 	}
-	return o.HTTPMeta
+	return c.HTTPMeta
 }
 
-func (o *ComponentsUpdateComponentByIDResponse) GetObject() *ComponentsUpdateComponentByIDResponseBody {
-	if o == nil {
+func (c *ComponentsUpdateComponentByIDResponse) GetObject() *ComponentsUpdateComponentByIDResponseBody {
+	if c == nil {
 		return nil
 	}
-	return o.Object
+	return c.Object
 }

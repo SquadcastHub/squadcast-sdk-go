@@ -11,11 +11,11 @@ type RunbooksCreateRunbookResponseBody struct {
 	Data components.V3RunbooksRunbookResponse `json:"data"`
 }
 
-func (o *RunbooksCreateRunbookResponseBody) GetData() components.V3RunbooksRunbookResponse {
-	if o == nil {
+func (r *RunbooksCreateRunbookResponseBody) GetData() components.V3RunbooksRunbookResponse {
+	if r == nil {
 		return components.V3RunbooksRunbookResponse{}
 	}
-	return o.Data
+	return r.Data
 }
 
 type RunbooksCreateRunbookResponse struct {
@@ -24,16 +24,16 @@ type RunbooksCreateRunbookResponse struct {
 	Object *RunbooksCreateRunbookResponseBody
 }
 
-func (o *RunbooksCreateRunbookResponse) GetHTTPMeta() components.HTTPMetadata {
-	if o == nil {
+func (r *RunbooksCreateRunbookResponse) GetHTTPMeta() components.HTTPMetadata {
+	if r == nil {
 		return components.HTTPMetadata{}
 	}
-	return o.HTTPMeta
+	return r.HTTPMeta
 }
 
-func (o *RunbooksCreateRunbookResponse) GetObject() *RunbooksCreateRunbookResponseBody {
-	if o == nil {
+func (r *RunbooksCreateRunbookResponse) GetObject() *RunbooksCreateRunbookResponseBody {
+	if r == nil {
 		return nil
 	}
-	return o.Object
+	return r.Object
 }

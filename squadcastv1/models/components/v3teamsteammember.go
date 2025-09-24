@@ -9,30 +9,30 @@ type V3TeamsTeamMember struct {
 	Abilities *V3TeamsAbilities `json:"abilities,omitempty"`
 }
 
-func (o *V3TeamsTeamMember) GetUserID() string {
-	if o == nil {
+func (v *V3TeamsTeamMember) GetUserID() string {
+	if v == nil {
 		return ""
 	}
-	return o.UserID
+	return v.UserID
 }
 
-func (o *V3TeamsTeamMember) GetRole() *string {
-	if o == nil {
+func (v *V3TeamsTeamMember) GetRole() *string {
+	if v == nil {
 		return nil
 	}
-	return o.Role
+	return v.Role
 }
 
-func (o *V3TeamsTeamMember) GetRoleIds() []string {
-	if o == nil {
+func (v *V3TeamsTeamMember) GetRoleIds() []string {
+	if v == nil {
 		return nil
 	}
-	return o.RoleIds
+	return v.RoleIds
 }
 
-func (o *V3TeamsTeamMember) GetAbilities() *V3TeamsAbilities {
-	if o == nil {
+func (v *V3TeamsTeamMember) GetAbilities() *V3TeamsAbilities {
+	if v == nil {
 		return nil
 	}
-	return o.Abilities
+	return v.Abilities
 }

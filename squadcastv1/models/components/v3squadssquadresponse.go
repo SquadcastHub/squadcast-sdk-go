@@ -27,25 +27,25 @@ type V3SquadsSquadResponseOrganization struct {
 	Slug string `json:"slug"`
 }
 
-func (o *V3SquadsSquadResponseOrganization) GetID() string {
-	if o == nil {
+func (v *V3SquadsSquadResponseOrganization) GetID() string {
+	if v == nil {
 		return ""
 	}
-	return o.ID
+	return v.ID
 }
 
-func (o *V3SquadsSquadResponseOrganization) GetName() string {
-	if o == nil {
+func (v *V3SquadsSquadResponseOrganization) GetName() string {
+	if v == nil {
 		return ""
 	}
-	return o.Name
+	return v.Name
 }
 
-func (o *V3SquadsSquadResponseOrganization) GetSlug() string {
-	if o == nil {
+func (v *V3SquadsSquadResponseOrganization) GetSlug() string {
+	if v == nil {
 		return ""
 	}
-	return o.Slug
+	return v.Slug
 }
 
 type V3SquadsSquadResponse struct {
@@ -58,51 +58,51 @@ type V3SquadsSquadResponse struct {
 	Organization   V3SquadsSquadResponseOrganization `json:"organization"`
 }
 
-func (o *V3SquadsSquadResponse) GetID() string {
-	if o == nil {
+func (v *V3SquadsSquadResponse) GetID() string {
+	if v == nil {
 		return ""
 	}
-	return o.ID
+	return v.ID
 }
 
-func (o *V3SquadsSquadResponse) GetName() string {
-	if o == nil {
+func (v *V3SquadsSquadResponse) GetName() string {
+	if v == nil {
 		return ""
 	}
-	return o.Name
+	return v.Name
 }
 
-func (o *V3SquadsSquadResponse) GetSlug() string {
-	if o == nil {
+func (v *V3SquadsSquadResponse) GetSlug() string {
+	if v == nil {
 		return ""
 	}
-	return o.Slug
+	return v.Slug
 }
 
-func (o *V3SquadsSquadResponse) GetMembers() []string {
-	if o == nil {
+func (v *V3SquadsSquadResponse) GetMembers() []string {
+	if v == nil {
 		return []string{}
 	}
-	return o.Members
+	return v.Members
 }
 
-func (o *V3SquadsSquadResponse) GetOrganizationID() string {
-	if o == nil {
+func (v *V3SquadsSquadResponse) GetOrganizationID() string {
+	if v == nil {
 		return ""
 	}
-	return o.OrganizationID
+	return v.OrganizationID
 }
 
-func (o *V3SquadsSquadResponse) GetOwner() Owner {
-	if o == nil {
+func (v *V3SquadsSquadResponse) GetOwner() Owner {
+	if v == nil {
 		return Owner{}
 	}
-	return o.Owner
+	return v.Owner
 }
 
-func (o *V3SquadsSquadResponse) GetOrganization() V3SquadsSquadResponseOrganization {
-	if o == nil {
+func (v *V3SquadsSquadResponse) GetOrganization() V3SquadsSquadResponseOrganization {
+	if v == nil {
 		return V3SquadsSquadResponseOrganization{}
 	}
-	return o.Organization
+	return v.Organization
 }

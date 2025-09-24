@@ -6,9 +6,9 @@ type V3ServicesDeduplicationRulesCreateDeduplicationRulesRequest struct {
 	Rules []V3ServicesDeduplicationRulesDeduplicationRule `json:"rules"`
 }
 
-func (o *V3ServicesDeduplicationRulesCreateDeduplicationRulesRequest) GetRules() []V3ServicesDeduplicationRulesDeduplicationRule {
-	if o == nil {
+func (v *V3ServicesDeduplicationRulesCreateDeduplicationRulesRequest) GetRules() []V3ServicesDeduplicationRulesDeduplicationRule {
+	if v == nil {
 		return []V3ServicesDeduplicationRulesDeduplicationRule{}
 	}
-	return o.Rules
+	return v.Rules
 }

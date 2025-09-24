@@ -11,18 +11,18 @@ type WebformsGetWebformByIDRequest struct {
 	OwnerID   *string `queryParam:"style=form,explode=false,name=owner_id"`
 }
 
-func (o *WebformsGetWebformByIDRequest) GetWebformID() int64 {
-	if o == nil {
+func (w *WebformsGetWebformByIDRequest) GetWebformID() int64 {
+	if w == nil {
 		return 0
 	}
-	return o.WebformID
+	return w.WebformID
 }
 
-func (o *WebformsGetWebformByIDRequest) GetOwnerID() *string {
-	if o == nil {
+func (w *WebformsGetWebformByIDRequest) GetOwnerID() *string {
+	if w == nil {
 		return nil
 	}
-	return o.OwnerID
+	return w.OwnerID
 }
 
 // WebformsGetWebformByIDResponseBody - The request has succeeded.
@@ -30,11 +30,11 @@ type WebformsGetWebformByIDResponseBody struct {
 	Data components.V3WebformsWebformResponse `json:"data"`
 }
 
-func (o *WebformsGetWebformByIDResponseBody) GetData() components.V3WebformsWebformResponse {
-	if o == nil {
+func (w *WebformsGetWebformByIDResponseBody) GetData() components.V3WebformsWebformResponse {
+	if w == nil {
 		return components.V3WebformsWebformResponse{}
 	}
-	return o.Data
+	return w.Data
 }
 
 type WebformsGetWebformByIDResponse struct {
@@ -43,16 +43,16 @@ type WebformsGetWebformByIDResponse struct {
 	Object *WebformsGetWebformByIDResponseBody
 }
 
-func (o *WebformsGetWebformByIDResponse) GetHTTPMeta() components.HTTPMetadata {
-	if o == nil {
+func (w *WebformsGetWebformByIDResponse) GetHTTPMeta() components.HTTPMetadata {
+	if w == nil {
 		return components.HTTPMetadata{}
 	}
-	return o.HTTPMeta
+	return w.HTTPMeta
 }
 
-func (o *WebformsGetWebformByIDResponse) GetObject() *WebformsGetWebformByIDResponseBody {
-	if o == nil {
+func (w *WebformsGetWebformByIDResponse) GetObject() *WebformsGetWebformByIDResponseBody {
+	if w == nil {
 		return nil
 	}
-	return o.Object
+	return w.Object
 }

@@ -7,27 +7,27 @@ type V3UsersUpdateUserAbilitiesRequestData struct {
 	Abilities []V3UsersGlobalRBACAbilityName `json:"abilities"`
 }
 
-func (o *V3UsersUpdateUserAbilitiesRequestData) GetUserID() string {
-	if o == nil {
+func (v *V3UsersUpdateUserAbilitiesRequestData) GetUserID() string {
+	if v == nil {
 		return ""
 	}
-	return o.UserID
+	return v.UserID
 }
 
-func (o *V3UsersUpdateUserAbilitiesRequestData) GetAbilities() []V3UsersGlobalRBACAbilityName {
-	if o == nil {
+func (v *V3UsersUpdateUserAbilitiesRequestData) GetAbilities() []V3UsersGlobalRBACAbilityName {
+	if v == nil {
 		return []V3UsersGlobalRBACAbilityName{}
 	}
-	return o.Abilities
+	return v.Abilities
 }
 
 type V3UsersUpdateUserAbilitiesRequest struct {
 	Data []V3UsersUpdateUserAbilitiesRequestData `json:"data"`
 }
 
-func (o *V3UsersUpdateUserAbilitiesRequest) GetData() []V3UsersUpdateUserAbilitiesRequestData {
-	if o == nil {
+func (v *V3UsersUpdateUserAbilitiesRequest) GetData() []V3UsersUpdateUserAbilitiesRequestData {
+	if v == nil {
 		return []V3UsersUpdateUserAbilitiesRequestData{}
 	}
-	return o.Data
+	return v.Data
 }

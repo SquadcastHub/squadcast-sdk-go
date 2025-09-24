@@ -12,25 +12,25 @@ type SLOGetAllSLOsRequest struct {
 	Limit   string `queryParam:"style=form,explode=true,name=limit"`
 }
 
-func (o *SLOGetAllSLOsRequest) GetOwnerID() string {
-	if o == nil {
+func (s *SLOGetAllSLOsRequest) GetOwnerID() string {
+	if s == nil {
 		return ""
 	}
-	return o.OwnerID
+	return s.OwnerID
 }
 
-func (o *SLOGetAllSLOsRequest) GetOffset() string {
-	if o == nil {
+func (s *SLOGetAllSLOsRequest) GetOffset() string {
+	if s == nil {
 		return ""
 	}
-	return o.Offset
+	return s.Offset
 }
 
-func (o *SLOGetAllSLOsRequest) GetLimit() string {
-	if o == nil {
+func (s *SLOGetAllSLOsRequest) GetLimit() string {
+	if s == nil {
 		return ""
 	}
-	return o.Limit
+	return s.Limit
 }
 
 type SLOGetAllSLOsMeta struct {
@@ -39,25 +39,25 @@ type SLOGetAllSLOsMeta struct {
 	Limit  int64 `json:"limit"`
 }
 
-func (o *SLOGetAllSLOsMeta) GetTotal() int64 {
-	if o == nil {
+func (s *SLOGetAllSLOsMeta) GetTotal() int64 {
+	if s == nil {
 		return 0
 	}
-	return o.Total
+	return s.Total
 }
 
-func (o *SLOGetAllSLOsMeta) GetOffset() int64 {
-	if o == nil {
+func (s *SLOGetAllSLOsMeta) GetOffset() int64 {
+	if s == nil {
 		return 0
 	}
-	return o.Offset
+	return s.Offset
 }
 
-func (o *SLOGetAllSLOsMeta) GetLimit() int64 {
-	if o == nil {
+func (s *SLOGetAllSLOsMeta) GetLimit() int64 {
+	if s == nil {
 		return 0
 	}
-	return o.Limit
+	return s.Limit
 }
 
 type SLOGetAllSLOsData struct {
@@ -65,18 +65,18 @@ type SLOGetAllSLOsData struct {
 	Slos []components.V3SloSlo `json:"slos"`
 }
 
-func (o *SLOGetAllSLOsData) GetMeta() SLOGetAllSLOsMeta {
-	if o == nil {
+func (s *SLOGetAllSLOsData) GetMeta() SLOGetAllSLOsMeta {
+	if s == nil {
 		return SLOGetAllSLOsMeta{}
 	}
-	return o.Meta
+	return s.Meta
 }
 
-func (o *SLOGetAllSLOsData) GetSlos() []components.V3SloSlo {
-	if o == nil {
+func (s *SLOGetAllSLOsData) GetSlos() []components.V3SloSlo {
+	if s == nil {
 		return []components.V3SloSlo{}
 	}
-	return o.Slos
+	return s.Slos
 }
 
 // SLOGetAllSLOsResponseBody - The request has succeeded.
@@ -84,11 +84,11 @@ type SLOGetAllSLOsResponseBody struct {
 	Data SLOGetAllSLOsData `json:"data"`
 }
 
-func (o *SLOGetAllSLOsResponseBody) GetData() SLOGetAllSLOsData {
-	if o == nil {
+func (s *SLOGetAllSLOsResponseBody) GetData() SLOGetAllSLOsData {
+	if s == nil {
 		return SLOGetAllSLOsData{}
 	}
-	return o.Data
+	return s.Data
 }
 
 type SLOGetAllSLOsResponse struct {
@@ -97,16 +97,16 @@ type SLOGetAllSLOsResponse struct {
 	Object *SLOGetAllSLOsResponseBody
 }
 
-func (o *SLOGetAllSLOsResponse) GetHTTPMeta() components.HTTPMetadata {
-	if o == nil {
+func (s *SLOGetAllSLOsResponse) GetHTTPMeta() components.HTTPMetadata {
+	if s == nil {
 		return components.HTTPMetadata{}
 	}
-	return o.HTTPMeta
+	return s.HTTPMeta
 }
 
-func (o *SLOGetAllSLOsResponse) GetObject() *SLOGetAllSLOsResponseBody {
-	if o == nil {
+func (s *SLOGetAllSLOsResponse) GetObject() *SLOGetAllSLOsResponseBody {
+	if s == nil {
 		return nil
 	}
-	return o.Object
+	return s.Object
 }

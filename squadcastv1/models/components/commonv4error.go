@@ -7,18 +7,18 @@ type Detail struct {
 	Message string `json:"message"`
 }
 
-func (o *Detail) GetField() string {
-	if o == nil {
+func (d *Detail) GetField() string {
+	if d == nil {
 		return ""
 	}
-	return o.Field
+	return d.Field
 }
 
-func (o *Detail) GetMessage() string {
-	if o == nil {
+func (d *Detail) GetMessage() string {
+	if d == nil {
 		return ""
 	}
-	return o.Message
+	return d.Message
 }
 
 type Error struct {
@@ -27,23 +27,23 @@ type Error struct {
 	Details []Detail `json:"details,omitempty"`
 }
 
-func (o *Error) GetCode() string {
-	if o == nil {
+func (e *Error) GetCode() string {
+	if e == nil {
 		return ""
 	}
-	return o.Code
+	return e.Code
 }
 
-func (o *Error) GetMessage() string {
-	if o == nil {
+func (e *Error) GetMessage() string {
+	if e == nil {
 		return ""
 	}
-	return o.Message
+	return e.Message
 }
 
-func (o *Error) GetDetails() []Detail {
-	if o == nil {
+func (e *Error) GetDetails() []Detail {
+	if e == nil {
 		return nil
 	}
-	return o.Details
+	return e.Details
 }

@@ -10,11 +10,11 @@ type StatusPagesDeleteStatusPageByIDRequest struct {
 	StatuspageID string `pathParam:"style=simple,explode=false,name=statuspageID"`
 }
 
-func (o *StatusPagesDeleteStatusPageByIDRequest) GetStatuspageID() string {
-	if o == nil {
+func (s *StatusPagesDeleteStatusPageByIDRequest) GetStatuspageID() string {
+	if s == nil {
 		return ""
 	}
-	return o.StatuspageID
+	return s.StatuspageID
 }
 
 // StatusPagesDeleteStatusPageByIDResponseBody - The request has succeeded.
@@ -22,11 +22,11 @@ type StatusPagesDeleteStatusPageByIDResponseBody struct {
 	Data components.V4StatusPagesDeleteStatusPageByIDResponse `json:"data"`
 }
 
-func (o *StatusPagesDeleteStatusPageByIDResponseBody) GetData() components.V4StatusPagesDeleteStatusPageByIDResponse {
-	if o == nil {
+func (s *StatusPagesDeleteStatusPageByIDResponseBody) GetData() components.V4StatusPagesDeleteStatusPageByIDResponse {
+	if s == nil {
 		return components.V4StatusPagesDeleteStatusPageByIDResponse{}
 	}
-	return o.Data
+	return s.Data
 }
 
 type StatusPagesDeleteStatusPageByIDResponse struct {
@@ -35,16 +35,16 @@ type StatusPagesDeleteStatusPageByIDResponse struct {
 	Object *StatusPagesDeleteStatusPageByIDResponseBody
 }
 
-func (o *StatusPagesDeleteStatusPageByIDResponse) GetHTTPMeta() components.HTTPMetadata {
-	if o == nil {
+func (s *StatusPagesDeleteStatusPageByIDResponse) GetHTTPMeta() components.HTTPMetadata {
+	if s == nil {
 		return components.HTTPMetadata{}
 	}
-	return o.HTTPMeta
+	return s.HTTPMeta
 }
 
-func (o *StatusPagesDeleteStatusPageByIDResponse) GetObject() *StatusPagesDeleteStatusPageByIDResponseBody {
-	if o == nil {
+func (s *StatusPagesDeleteStatusPageByIDResponse) GetObject() *StatusPagesDeleteStatusPageByIDResponseBody {
+	if s == nil {
 		return nil
 	}
-	return o.Object
+	return s.Object
 }

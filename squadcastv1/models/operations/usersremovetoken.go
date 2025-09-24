@@ -11,11 +11,11 @@ type UsersRemoveTokenRequest struct {
 	RefreshTokenID string `pathParam:"style=simple,explode=false,name=refreshTokenID"`
 }
 
-func (o *UsersRemoveTokenRequest) GetRefreshTokenID() string {
-	if o == nil {
+func (u *UsersRemoveTokenRequest) GetRefreshTokenID() string {
+	if u == nil {
 		return ""
 	}
-	return o.RefreshTokenID
+	return u.RefreshTokenID
 }
 
 // UsersRemoveTokenResponseBody - There is no content to send for this request, but the headers may be useful.
@@ -27,16 +27,16 @@ type UsersRemoveTokenResponse struct {
 	Body     []byte
 }
 
-func (o *UsersRemoveTokenResponse) GetHTTPMeta() components.HTTPMetadata {
-	if o == nil {
+func (u *UsersRemoveTokenResponse) GetHTTPMeta() components.HTTPMetadata {
+	if u == nil {
 		return components.HTTPMetadata{}
 	}
-	return o.HTTPMeta
+	return u.HTTPMeta
 }
 
-func (o *UsersRemoveTokenResponse) GetBody() []byte {
-	if o == nil {
+func (u *UsersRemoveTokenResponse) GetBody() []byte {
+	if u == nil {
 		return nil
 	}
-	return o.Body
+	return u.Body
 }

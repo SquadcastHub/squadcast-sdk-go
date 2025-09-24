@@ -7,16 +7,16 @@ type V3ExtensionsWebhooksWebhookURL struct {
 	Method *string `json:"method,omitempty"`
 }
 
-func (o *V3ExtensionsWebhooksWebhookURL) GetURL() *string {
-	if o == nil {
+func (v *V3ExtensionsWebhooksWebhookURL) GetURL() *string {
+	if v == nil {
 		return nil
 	}
-	return o.URL
+	return v.URL
 }
 
-func (o *V3ExtensionsWebhooksWebhookURL) GetMethod() *string {
-	if o == nil {
+func (v *V3ExtensionsWebhooksWebhookURL) GetMethod() *string {
+	if v == nil {
 		return nil
 	}
-	return o.Method
+	return v.Method
 }

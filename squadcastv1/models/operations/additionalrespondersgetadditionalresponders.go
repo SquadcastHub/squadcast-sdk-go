@@ -10,11 +10,11 @@ type AdditionalRespondersGetAdditionalRespondersRequest struct {
 	IncidentID string `pathParam:"style=simple,explode=false,name=incidentID"`
 }
 
-func (o *AdditionalRespondersGetAdditionalRespondersRequest) GetIncidentID() string {
-	if o == nil {
+func (a *AdditionalRespondersGetAdditionalRespondersRequest) GetIncidentID() string {
+	if a == nil {
 		return ""
 	}
-	return o.IncidentID
+	return a.IncidentID
 }
 
 // AdditionalRespondersGetAdditionalRespondersResponseBody - The request has succeeded.
@@ -22,11 +22,11 @@ type AdditionalRespondersGetAdditionalRespondersResponseBody struct {
 	Data components.V3IncidentsAdditionalRespondersAdditionalResponderResponse `json:"data"`
 }
 
-func (o *AdditionalRespondersGetAdditionalRespondersResponseBody) GetData() components.V3IncidentsAdditionalRespondersAdditionalResponderResponse {
-	if o == nil {
+func (a *AdditionalRespondersGetAdditionalRespondersResponseBody) GetData() components.V3IncidentsAdditionalRespondersAdditionalResponderResponse {
+	if a == nil {
 		return components.V3IncidentsAdditionalRespondersAdditionalResponderResponse{}
 	}
-	return o.Data
+	return a.Data
 }
 
 type AdditionalRespondersGetAdditionalRespondersResponse struct {
@@ -35,16 +35,16 @@ type AdditionalRespondersGetAdditionalRespondersResponse struct {
 	Object *AdditionalRespondersGetAdditionalRespondersResponseBody
 }
 
-func (o *AdditionalRespondersGetAdditionalRespondersResponse) GetHTTPMeta() components.HTTPMetadata {
-	if o == nil {
+func (a *AdditionalRespondersGetAdditionalRespondersResponse) GetHTTPMeta() components.HTTPMetadata {
+	if a == nil {
 		return components.HTTPMetadata{}
 	}
-	return o.HTTPMeta
+	return a.HTTPMeta
 }
 
-func (o *AdditionalRespondersGetAdditionalRespondersResponse) GetObject() *AdditionalRespondersGetAdditionalRespondersResponseBody {
-	if o == nil {
+func (a *AdditionalRespondersGetAdditionalRespondersResponse) GetObject() *AdditionalRespondersGetAdditionalRespondersResponseBody {
+	if a == nil {
 		return nil
 	}
-	return o.Object
+	return a.Object
 }

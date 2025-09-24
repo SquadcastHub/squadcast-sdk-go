@@ -41,18 +41,18 @@ type V3ServicesRoutingRulesRoutingRuleResponseRouteTo struct {
 	EntityID   string                                              `json:"entity_id"`
 }
 
-func (o *V3ServicesRoutingRulesRoutingRuleResponseRouteTo) GetEntityType() V3ServicesRoutingRulesRoutingRuleResponseEntityType {
-	if o == nil {
+func (v *V3ServicesRoutingRulesRoutingRuleResponseRouteTo) GetEntityType() V3ServicesRoutingRulesRoutingRuleResponseEntityType {
+	if v == nil {
 		return V3ServicesRoutingRulesRoutingRuleResponseEntityType("")
 	}
-	return o.EntityType
+	return v.EntityType
 }
 
-func (o *V3ServicesRoutingRulesRoutingRuleResponseRouteTo) GetEntityID() string {
-	if o == nil {
+func (v *V3ServicesRoutingRulesRoutingRuleResponseRouteTo) GetEntityID() string {
+	if v == nil {
 		return ""
 	}
-	return o.EntityID
+	return v.EntityID
 }
 
 type V3ServicesRoutingRulesRoutingRuleResponse struct {
@@ -62,30 +62,30 @@ type V3ServicesRoutingRulesRoutingRuleResponse struct {
 	BasicExpression []V3ServicesRoutingRulesExpressionBranch         `json:"basic_expression,omitempty"`
 }
 
-func (o *V3ServicesRoutingRulesRoutingRuleResponse) GetExpression() string {
-	if o == nil {
+func (v *V3ServicesRoutingRulesRoutingRuleResponse) GetExpression() string {
+	if v == nil {
 		return ""
 	}
-	return o.Expression
+	return v.Expression
 }
 
-func (o *V3ServicesRoutingRulesRoutingRuleResponse) GetRouteTo() V3ServicesRoutingRulesRoutingRuleResponseRouteTo {
-	if o == nil {
+func (v *V3ServicesRoutingRulesRoutingRuleResponse) GetRouteTo() V3ServicesRoutingRulesRoutingRuleResponseRouteTo {
+	if v == nil {
 		return V3ServicesRoutingRulesRoutingRuleResponseRouteTo{}
 	}
-	return o.RouteTo
+	return v.RouteTo
 }
 
-func (o *V3ServicesRoutingRulesRoutingRuleResponse) GetIsBasic() bool {
-	if o == nil {
+func (v *V3ServicesRoutingRulesRoutingRuleResponse) GetIsBasic() bool {
+	if v == nil {
 		return false
 	}
-	return o.IsBasic
+	return v.IsBasic
 }
 
-func (o *V3ServicesRoutingRulesRoutingRuleResponse) GetBasicExpression() []V3ServicesRoutingRulesExpressionBranch {
-	if o == nil {
+func (v *V3ServicesRoutingRulesRoutingRuleResponse) GetBasicExpression() []V3ServicesRoutingRulesExpressionBranch {
+	if v == nil {
 		return nil
 	}
-	return o.BasicExpression
+	return v.BasicExpression
 }

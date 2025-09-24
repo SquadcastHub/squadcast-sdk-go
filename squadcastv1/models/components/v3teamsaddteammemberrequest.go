@@ -10,23 +10,23 @@ type V3TeamsAddTeamMemberRequest struct {
 	Role *string `json:"role,omitempty"`
 }
 
-func (o *V3TeamsAddTeamMemberRequest) GetUserID() string {
-	if o == nil {
+func (v *V3TeamsAddTeamMemberRequest) GetUserID() string {
+	if v == nil {
 		return ""
 	}
-	return o.UserID
+	return v.UserID
 }
 
-func (o *V3TeamsAddTeamMemberRequest) GetRoleIds() []string {
-	if o == nil {
+func (v *V3TeamsAddTeamMemberRequest) GetRoleIds() []string {
+	if v == nil {
 		return []string{}
 	}
-	return o.RoleIds
+	return v.RoleIds
 }
 
-func (o *V3TeamsAddTeamMemberRequest) GetRole() *string {
-	if o == nil {
+func (v *V3TeamsAddTeamMemberRequest) GetRole() *string {
+	if v == nil {
 		return nil
 	}
-	return o.Role
+	return v.Role
 }

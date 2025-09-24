@@ -28,44 +28,44 @@ func (v *V3IncidentsAdditionalResponderDetails) UnmarshalJSON(data []byte) error
 	return nil
 }
 
-func (o *V3IncidentsAdditionalResponderDetails) GetID() string {
-	if o == nil {
+func (v *V3IncidentsAdditionalResponderDetails) GetID() string {
+	if v == nil {
 		return ""
 	}
-	return o.ID
+	return v.ID
 }
 
-func (o *V3IncidentsAdditionalResponderDetails) GetType() string {
-	if o == nil {
+func (v *V3IncidentsAdditionalResponderDetails) GetType() string {
+	if v == nil {
 		return ""
 	}
-	return o.Type
+	return v.Type
 }
 
-func (o *V3IncidentsAdditionalResponderDetails) GetTimeOfAssignment() time.Time {
-	if o == nil {
+func (v *V3IncidentsAdditionalResponderDetails) GetTimeOfAssignment() time.Time {
+	if v == nil {
 		return time.Time{}
 	}
-	return o.TimeOfAssignment
+	return v.TimeOfAssignment
 }
 
-func (o *V3IncidentsAdditionalResponderDetails) GetReason() string {
-	if o == nil {
+func (v *V3IncidentsAdditionalResponderDetails) GetReason() string {
+	if v == nil {
 		return ""
 	}
-	return o.Reason
+	return v.Reason
 }
 
-func (o *V3IncidentsAdditionalResponderDetails) GetName() string {
-	if o == nil {
+func (v *V3IncidentsAdditionalResponderDetails) GetName() string {
+	if v == nil {
 		return ""
 	}
-	return o.Name
+	return v.Name
 }
 
-func (o *V3IncidentsAdditionalResponderDetails) GetLastNotifiedAt() time.Time {
-	if o == nil {
+func (v *V3IncidentsAdditionalResponderDetails) GetLastNotifiedAt() time.Time {
+	if v == nil {
 		return time.Time{}
 	}
-	return o.LastNotifiedAt
+	return v.LastNotifiedAt
 }

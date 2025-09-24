@@ -13,32 +13,32 @@ type GlobalEventRulesCreateRuleRequest struct {
 	V3GlobalEventRulesCreateOrUpdateRuleRequest components.V3GlobalEventRulesCreateOrUpdateRuleRequest `request:"mediaType=application/json"`
 }
 
-func (o *GlobalEventRulesCreateRuleRequest) GetGerID() int64 {
-	if o == nil {
+func (g *GlobalEventRulesCreateRuleRequest) GetGerID() int64 {
+	if g == nil {
 		return 0
 	}
-	return o.GerID
+	return g.GerID
 }
 
-func (o *GlobalEventRulesCreateRuleRequest) GetAlertSourceVersion() string {
-	if o == nil {
+func (g *GlobalEventRulesCreateRuleRequest) GetAlertSourceVersion() string {
+	if g == nil {
 		return ""
 	}
-	return o.AlertSourceVersion
+	return g.AlertSourceVersion
 }
 
-func (o *GlobalEventRulesCreateRuleRequest) GetAlertSourceShortname() string {
-	if o == nil {
+func (g *GlobalEventRulesCreateRuleRequest) GetAlertSourceShortname() string {
+	if g == nil {
 		return ""
 	}
-	return o.AlertSourceShortname
+	return g.AlertSourceShortname
 }
 
-func (o *GlobalEventRulesCreateRuleRequest) GetV3GlobalEventRulesCreateOrUpdateRuleRequest() components.V3GlobalEventRulesCreateOrUpdateRuleRequest {
-	if o == nil {
+func (g *GlobalEventRulesCreateRuleRequest) GetV3GlobalEventRulesCreateOrUpdateRuleRequest() components.V3GlobalEventRulesCreateOrUpdateRuleRequest {
+	if g == nil {
 		return components.V3GlobalEventRulesCreateOrUpdateRuleRequest{}
 	}
-	return o.V3GlobalEventRulesCreateOrUpdateRuleRequest
+	return g.V3GlobalEventRulesCreateOrUpdateRuleRequest
 }
 
 // GlobalEventRulesCreateRuleResponseBody - The request has succeeded and a new resource has been created as a result.
@@ -46,11 +46,11 @@ type GlobalEventRulesCreateRuleResponseBody struct {
 	Data components.V3GlobalEventRulesRulesetRuleResponse `json:"data"`
 }
 
-func (o *GlobalEventRulesCreateRuleResponseBody) GetData() components.V3GlobalEventRulesRulesetRuleResponse {
-	if o == nil {
+func (g *GlobalEventRulesCreateRuleResponseBody) GetData() components.V3GlobalEventRulesRulesetRuleResponse {
+	if g == nil {
 		return components.V3GlobalEventRulesRulesetRuleResponse{}
 	}
-	return o.Data
+	return g.Data
 }
 
 type GlobalEventRulesCreateRuleResponse struct {
@@ -59,16 +59,16 @@ type GlobalEventRulesCreateRuleResponse struct {
 	Object *GlobalEventRulesCreateRuleResponseBody
 }
 
-func (o *GlobalEventRulesCreateRuleResponse) GetHTTPMeta() components.HTTPMetadata {
-	if o == nil {
+func (g *GlobalEventRulesCreateRuleResponse) GetHTTPMeta() components.HTTPMetadata {
+	if g == nil {
 		return components.HTTPMetadata{}
 	}
-	return o.HTTPMeta
+	return g.HTTPMeta
 }
 
-func (o *GlobalEventRulesCreateRuleResponse) GetObject() *GlobalEventRulesCreateRuleResponseBody {
-	if o == nil {
+func (g *GlobalEventRulesCreateRuleResponse) GetObject() *GlobalEventRulesCreateRuleResponseBody {
+	if g == nil {
 		return nil
 	}
-	return o.Object
+	return g.Object
 }

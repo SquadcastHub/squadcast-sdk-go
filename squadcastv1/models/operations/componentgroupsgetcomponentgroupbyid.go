@@ -11,18 +11,18 @@ type ComponentGroupsGetComponentGroupByIDRequest struct {
 	GroupID      string `pathParam:"style=simple,explode=false,name=group_id"`
 }
 
-func (o *ComponentGroupsGetComponentGroupByIDRequest) GetStatuspageID() string {
-	if o == nil {
+func (c *ComponentGroupsGetComponentGroupByIDRequest) GetStatuspageID() string {
+	if c == nil {
 		return ""
 	}
-	return o.StatuspageID
+	return c.StatuspageID
 }
 
-func (o *ComponentGroupsGetComponentGroupByIDRequest) GetGroupID() string {
-	if o == nil {
+func (c *ComponentGroupsGetComponentGroupByIDRequest) GetGroupID() string {
+	if c == nil {
 		return ""
 	}
-	return o.GroupID
+	return c.GroupID
 }
 
 // ComponentGroupsGetComponentGroupByIDResponseBody - The request has succeeded.
@@ -30,11 +30,11 @@ type ComponentGroupsGetComponentGroupByIDResponseBody struct {
 	Data components.V4StatusPagesComponentGroupsGetComponentGroupByIDResponse `json:"data"`
 }
 
-func (o *ComponentGroupsGetComponentGroupByIDResponseBody) GetData() components.V4StatusPagesComponentGroupsGetComponentGroupByIDResponse {
-	if o == nil {
+func (c *ComponentGroupsGetComponentGroupByIDResponseBody) GetData() components.V4StatusPagesComponentGroupsGetComponentGroupByIDResponse {
+	if c == nil {
 		return components.V4StatusPagesComponentGroupsGetComponentGroupByIDResponse{}
 	}
-	return o.Data
+	return c.Data
 }
 
 type ComponentGroupsGetComponentGroupByIDResponse struct {
@@ -43,16 +43,16 @@ type ComponentGroupsGetComponentGroupByIDResponse struct {
 	Object *ComponentGroupsGetComponentGroupByIDResponseBody
 }
 
-func (o *ComponentGroupsGetComponentGroupByIDResponse) GetHTTPMeta() components.HTTPMetadata {
-	if o == nil {
+func (c *ComponentGroupsGetComponentGroupByIDResponse) GetHTTPMeta() components.HTTPMetadata {
+	if c == nil {
 		return components.HTTPMetadata{}
 	}
-	return o.HTTPMeta
+	return c.HTTPMeta
 }
 
-func (o *ComponentGroupsGetComponentGroupByIDResponse) GetObject() *ComponentGroupsGetComponentGroupByIDResponseBody {
-	if o == nil {
+func (c *ComponentGroupsGetComponentGroupByIDResponse) GetObject() *ComponentGroupsGetComponentGroupByIDResponseBody {
+	if c == nil {
 		return nil
 	}
-	return o.Object
+	return c.Object
 }

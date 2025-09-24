@@ -11,44 +11,44 @@ type V4StatusPagesComponentsUpdateComponentByIDRequest struct {
 	BelongsToGroup    *string `json:"belongsToGroup,omitempty"`
 }
 
-func (o *V4StatusPagesComponentsUpdateComponentByIDRequest) GetName() string {
-	if o == nil {
+func (v *V4StatusPagesComponentsUpdateComponentByIDRequest) GetName() string {
+	if v == nil {
 		return ""
 	}
-	return o.Name
+	return v.Name
 }
 
-func (o *V4StatusPagesComponentsUpdateComponentByIDRequest) GetDescription() *string {
-	if o == nil {
+func (v *V4StatusPagesComponentsUpdateComponentByIDRequest) GetDescription() *string {
+	if v == nil {
 		return nil
 	}
-	return o.Description
+	return v.Description
 }
 
-func (o *V4StatusPagesComponentsUpdateComponentByIDRequest) GetAllowSubscription() *bool {
-	if o == nil {
+func (v *V4StatusPagesComponentsUpdateComponentByIDRequest) GetAllowSubscription() *bool {
+	if v == nil {
 		return nil
 	}
-	return o.AllowSubscription
+	return v.AllowSubscription
 }
 
-func (o *V4StatusPagesComponentsUpdateComponentByIDRequest) GetGroupID() *string {
-	if o == nil {
+func (v *V4StatusPagesComponentsUpdateComponentByIDRequest) GetGroupID() *string {
+	if v == nil {
 		return nil
 	}
-	return o.GroupID
+	return v.GroupID
 }
 
-func (o *V4StatusPagesComponentsUpdateComponentByIDRequest) GetServiceID() *string {
-	if o == nil {
+func (v *V4StatusPagesComponentsUpdateComponentByIDRequest) GetServiceID() *string {
+	if v == nil {
 		return nil
 	}
-	return o.ServiceID
+	return v.ServiceID
 }
 
-func (o *V4StatusPagesComponentsUpdateComponentByIDRequest) GetBelongsToGroup() *string {
-	if o == nil {
+func (v *V4StatusPagesComponentsUpdateComponentByIDRequest) GetBelongsToGroup() *string {
+	if v == nil {
 		return nil
 	}
-	return o.BelongsToGroup
+	return v.BelongsToGroup
 }

@@ -41,37 +41,37 @@ type V3WorkflowsWorkflowFilters struct {
 	Filters   []V3WorkflowsWorkflowFilters `json:"filters,omitempty"`
 }
 
-func (o *V3WorkflowsWorkflowFilters) GetType() *string {
-	if o == nil {
+func (v *V3WorkflowsWorkflowFilters) GetType() *string {
+	if v == nil {
 		return nil
 	}
-	return o.Type
+	return v.Type
 }
 
-func (o *V3WorkflowsWorkflowFilters) GetKey() *string {
-	if o == nil {
+func (v *V3WorkflowsWorkflowFilters) GetKey() *string {
+	if v == nil {
 		return nil
 	}
-	return o.Key
+	return v.Key
 }
 
-func (o *V3WorkflowsWorkflowFilters) GetValue() *string {
-	if o == nil {
+func (v *V3WorkflowsWorkflowFilters) GetValue() *string {
+	if v == nil {
 		return nil
 	}
-	return o.Value
+	return v.Value
 }
 
-func (o *V3WorkflowsWorkflowFilters) GetCondition() *Condition {
-	if o == nil {
+func (v *V3WorkflowsWorkflowFilters) GetCondition() *Condition {
+	if v == nil {
 		return nil
 	}
-	return o.Condition
+	return v.Condition
 }
 
-func (o *V3WorkflowsWorkflowFilters) GetFilters() []V3WorkflowsWorkflowFilters {
-	if o == nil {
+func (v *V3WorkflowsWorkflowFilters) GetFilters() []V3WorkflowsWorkflowFilters {
+	if v == nil {
 		return nil
 	}
-	return o.Filters
+	return v.Filters
 }

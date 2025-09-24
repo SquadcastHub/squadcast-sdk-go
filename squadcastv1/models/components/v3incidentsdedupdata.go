@@ -8,16 +8,16 @@ type V3IncidentsDedupData struct {
 	Hash *string `json:"hash,omitempty"`
 }
 
-func (o *V3IncidentsDedupData) GetKey() *string {
-	if o == nil {
+func (v *V3IncidentsDedupData) GetKey() *string {
+	if v == nil {
 		return nil
 	}
-	return o.Key
+	return v.Key
 }
 
-func (o *V3IncidentsDedupData) GetHash() *string {
-	if o == nil {
+func (v *V3IncidentsDedupData) GetHash() *string {
+	if v == nil {
 		return nil
 	}
-	return o.Hash
+	return v.Hash
 }

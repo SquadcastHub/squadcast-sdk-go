@@ -10,11 +10,11 @@ type GlobalEventRulesGetGlobalEventRuleByIDRequest struct {
 	GerID int64 `pathParam:"style=simple,explode=false,name=ger_id"`
 }
 
-func (o *GlobalEventRulesGetGlobalEventRuleByIDRequest) GetGerID() int64 {
-	if o == nil {
+func (g *GlobalEventRulesGetGlobalEventRuleByIDRequest) GetGerID() int64 {
+	if g == nil {
 		return 0
 	}
-	return o.GerID
+	return g.GerID
 }
 
 // GlobalEventRulesGetGlobalEventRuleByIDResponseBody - The request has succeeded.
@@ -22,11 +22,11 @@ type GlobalEventRulesGetGlobalEventRuleByIDResponseBody struct {
 	Data components.V3GlobalEventRulesGlobalEventRuleResponse `json:"data"`
 }
 
-func (o *GlobalEventRulesGetGlobalEventRuleByIDResponseBody) GetData() components.V3GlobalEventRulesGlobalEventRuleResponse {
-	if o == nil {
+func (g *GlobalEventRulesGetGlobalEventRuleByIDResponseBody) GetData() components.V3GlobalEventRulesGlobalEventRuleResponse {
+	if g == nil {
 		return components.V3GlobalEventRulesGlobalEventRuleResponse{}
 	}
-	return o.Data
+	return g.Data
 }
 
 type GlobalEventRulesGetGlobalEventRuleByIDResponse struct {
@@ -35,16 +35,16 @@ type GlobalEventRulesGetGlobalEventRuleByIDResponse struct {
 	Object *GlobalEventRulesGetGlobalEventRuleByIDResponseBody
 }
 
-func (o *GlobalEventRulesGetGlobalEventRuleByIDResponse) GetHTTPMeta() components.HTTPMetadata {
-	if o == nil {
+func (g *GlobalEventRulesGetGlobalEventRuleByIDResponse) GetHTTPMeta() components.HTTPMetadata {
+	if g == nil {
 		return components.HTTPMetadata{}
 	}
-	return o.HTTPMeta
+	return g.HTTPMeta
 }
 
-func (o *GlobalEventRulesGetGlobalEventRuleByIDResponse) GetObject() *GlobalEventRulesGetGlobalEventRuleByIDResponseBody {
-	if o == nil {
+func (g *GlobalEventRulesGetGlobalEventRuleByIDResponse) GetObject() *GlobalEventRulesGetGlobalEventRuleByIDResponseBody {
+	if g == nil {
 		return nil
 	}
-	return o.Object
+	return g.Object
 }

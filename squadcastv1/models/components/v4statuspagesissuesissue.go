@@ -26,37 +26,37 @@ func (v *V4StatusPagesIssuesIssue) UnmarshalJSON(data []byte) error {
 	return nil
 }
 
-func (o *V4StatusPagesIssuesIssue) GetID() *int64 {
-	if o == nil {
+func (v *V4StatusPagesIssuesIssue) GetID() *int64 {
+	if v == nil {
 		return nil
 	}
-	return o.ID
+	return v.ID
 }
 
-func (o *V4StatusPagesIssuesIssue) GetTitle() *string {
-	if o == nil {
+func (v *V4StatusPagesIssuesIssue) GetTitle() *string {
+	if v == nil {
 		return nil
 	}
-	return o.Title
+	return v.Title
 }
 
-func (o *V4StatusPagesIssuesIssue) GetComponents() []V4StatusPagesIssuesIssueComponent {
-	if o == nil {
+func (v *V4StatusPagesIssuesIssue) GetComponents() []V4StatusPagesIssuesIssueComponent {
+	if v == nil {
 		return nil
 	}
-	return o.Components
+	return v.Components
 }
 
-func (o *V4StatusPagesIssuesIssue) GetCurrentState() *V4StatusPagesIssuesIssueState {
-	if o == nil {
+func (v *V4StatusPagesIssuesIssue) GetCurrentState() *V4StatusPagesIssuesIssueState {
+	if v == nil {
 		return nil
 	}
-	return o.CurrentState
+	return v.CurrentState
 }
 
-func (o *V4StatusPagesIssuesIssue) GetCreatedAt() *time.Time {
-	if o == nil {
+func (v *V4StatusPagesIssuesIssue) GetCreatedAt() *time.Time {
+	if v == nil {
 		return nil
 	}
-	return o.CreatedAt
+	return v.CreatedAt
 }

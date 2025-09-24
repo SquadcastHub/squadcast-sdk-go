@@ -8,16 +8,16 @@ type V3IncidentsPostmortemsPostmortemFollowUp struct {
 	IsDone bool   `json:"is_done"`
 }
 
-func (o *V3IncidentsPostmortemsPostmortemFollowUp) GetTask() string {
-	if o == nil {
+func (v *V3IncidentsPostmortemsPostmortemFollowUp) GetTask() string {
+	if v == nil {
 		return ""
 	}
-	return o.Task
+	return v.Task
 }
 
-func (o *V3IncidentsPostmortemsPostmortemFollowUp) GetIsDone() bool {
-	if o == nil {
+func (v *V3IncidentsPostmortemsPostmortemFollowUp) GetIsDone() bool {
+	if v == nil {
 		return false
 	}
-	return o.IsDone
+	return v.IsDone
 }

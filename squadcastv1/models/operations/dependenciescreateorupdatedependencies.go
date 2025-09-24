@@ -11,29 +11,29 @@ type DependenciesCreateOrUpdateDependenciesRequest struct {
 	V3ServicesDependenciesCreateOrUpdateDependenciesRequest components.V3ServicesDependenciesCreateOrUpdateDependenciesRequest `request:"mediaType=application/json"`
 }
 
-func (o *DependenciesCreateOrUpdateDependenciesRequest) GetServiceID() string {
-	if o == nil {
+func (d *DependenciesCreateOrUpdateDependenciesRequest) GetServiceID() string {
+	if d == nil {
 		return ""
 	}
-	return o.ServiceID
+	return d.ServiceID
 }
 
-func (o *DependenciesCreateOrUpdateDependenciesRequest) GetV3ServicesDependenciesCreateOrUpdateDependenciesRequest() components.V3ServicesDependenciesCreateOrUpdateDependenciesRequest {
-	if o == nil {
+func (d *DependenciesCreateOrUpdateDependenciesRequest) GetV3ServicesDependenciesCreateOrUpdateDependenciesRequest() components.V3ServicesDependenciesCreateOrUpdateDependenciesRequest {
+	if d == nil {
 		return components.V3ServicesDependenciesCreateOrUpdateDependenciesRequest{}
 	}
-	return o.V3ServicesDependenciesCreateOrUpdateDependenciesRequest
+	return d.V3ServicesDependenciesCreateOrUpdateDependenciesRequest
 }
 
 type DependenciesCreateOrUpdateDependenciesData struct {
 	Ok bool `json:"ok"`
 }
 
-func (o *DependenciesCreateOrUpdateDependenciesData) GetOk() bool {
-	if o == nil {
+func (d *DependenciesCreateOrUpdateDependenciesData) GetOk() bool {
+	if d == nil {
 		return false
 	}
-	return o.Ok
+	return d.Ok
 }
 
 // DependenciesCreateOrUpdateDependenciesResponseBody - The request has succeeded and a new resource has been created as a result.
@@ -41,11 +41,11 @@ type DependenciesCreateOrUpdateDependenciesResponseBody struct {
 	Data DependenciesCreateOrUpdateDependenciesData `json:"data"`
 }
 
-func (o *DependenciesCreateOrUpdateDependenciesResponseBody) GetData() DependenciesCreateOrUpdateDependenciesData {
-	if o == nil {
+func (d *DependenciesCreateOrUpdateDependenciesResponseBody) GetData() DependenciesCreateOrUpdateDependenciesData {
+	if d == nil {
 		return DependenciesCreateOrUpdateDependenciesData{}
 	}
-	return o.Data
+	return d.Data
 }
 
 type DependenciesCreateOrUpdateDependenciesResponse struct {
@@ -54,16 +54,16 @@ type DependenciesCreateOrUpdateDependenciesResponse struct {
 	Object *DependenciesCreateOrUpdateDependenciesResponseBody
 }
 
-func (o *DependenciesCreateOrUpdateDependenciesResponse) GetHTTPMeta() components.HTTPMetadata {
-	if o == nil {
+func (d *DependenciesCreateOrUpdateDependenciesResponse) GetHTTPMeta() components.HTTPMetadata {
+	if d == nil {
 		return components.HTTPMetadata{}
 	}
-	return o.HTTPMeta
+	return d.HTTPMeta
 }
 
-func (o *DependenciesCreateOrUpdateDependenciesResponse) GetObject() *DependenciesCreateOrUpdateDependenciesResponseBody {
-	if o == nil {
+func (d *DependenciesCreateOrUpdateDependenciesResponse) GetObject() *DependenciesCreateOrUpdateDependenciesResponseBody {
+	if d == nil {
 		return nil
 	}
-	return o.Object
+	return d.Object
 }

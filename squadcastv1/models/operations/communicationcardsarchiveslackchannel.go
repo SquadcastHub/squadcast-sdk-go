@@ -11,11 +11,11 @@ type CommunicationCardsArchiveSlackChannelResponseBody struct {
 	Data components.V3IncidentsCommunicationCardsCommunicationCardResponse `json:"data"`
 }
 
-func (o *CommunicationCardsArchiveSlackChannelResponseBody) GetData() components.V3IncidentsCommunicationCardsCommunicationCardResponse {
-	if o == nil {
+func (c *CommunicationCardsArchiveSlackChannelResponseBody) GetData() components.V3IncidentsCommunicationCardsCommunicationCardResponse {
+	if c == nil {
 		return components.V3IncidentsCommunicationCardsCommunicationCardResponse{}
 	}
-	return o.Data
+	return c.Data
 }
 
 type CommunicationCardsArchiveSlackChannelResponse struct {
@@ -24,16 +24,16 @@ type CommunicationCardsArchiveSlackChannelResponse struct {
 	Object *CommunicationCardsArchiveSlackChannelResponseBody
 }
 
-func (o *CommunicationCardsArchiveSlackChannelResponse) GetHTTPMeta() components.HTTPMetadata {
-	if o == nil {
+func (c *CommunicationCardsArchiveSlackChannelResponse) GetHTTPMeta() components.HTTPMetadata {
+	if c == nil {
 		return components.HTTPMetadata{}
 	}
-	return o.HTTPMeta
+	return c.HTTPMeta
 }
 
-func (o *CommunicationCardsArchiveSlackChannelResponse) GetObject() *CommunicationCardsArchiveSlackChannelResponseBody {
-	if o == nil {
+func (c *CommunicationCardsArchiveSlackChannelResponse) GetObject() *CommunicationCardsArchiveSlackChannelResponseBody {
+	if c == nil {
 		return nil
 	}
-	return o.Object
+	return c.Object
 }

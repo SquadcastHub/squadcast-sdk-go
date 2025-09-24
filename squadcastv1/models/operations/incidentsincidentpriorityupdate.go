@@ -11,18 +11,18 @@ type IncidentsIncidentPriorityUpdateRequest struct {
 	V3IncidentsIncidentPriorityUpdateRequest components.V3IncidentsIncidentPriorityUpdateRequest `request:"mediaType=application/json"`
 }
 
-func (o *IncidentsIncidentPriorityUpdateRequest) GetIncidentID() string {
-	if o == nil {
+func (i *IncidentsIncidentPriorityUpdateRequest) GetIncidentID() string {
+	if i == nil {
 		return ""
 	}
-	return o.IncidentID
+	return i.IncidentID
 }
 
-func (o *IncidentsIncidentPriorityUpdateRequest) GetV3IncidentsIncidentPriorityUpdateRequest() components.V3IncidentsIncidentPriorityUpdateRequest {
-	if o == nil {
+func (i *IncidentsIncidentPriorityUpdateRequest) GetV3IncidentsIncidentPriorityUpdateRequest() components.V3IncidentsIncidentPriorityUpdateRequest {
+	if i == nil {
 		return components.V3IncidentsIncidentPriorityUpdateRequest{}
 	}
-	return o.V3IncidentsIncidentPriorityUpdateRequest
+	return i.V3IncidentsIncidentPriorityUpdateRequest
 }
 
 // IncidentsIncidentPriorityUpdateResponseBody - The request has succeeded.
@@ -30,11 +30,11 @@ type IncidentsIncidentPriorityUpdateResponseBody struct {
 	Data components.V3IncidentsIncidentPriorityUpdateResponse `json:"data"`
 }
 
-func (o *IncidentsIncidentPriorityUpdateResponseBody) GetData() components.V3IncidentsIncidentPriorityUpdateResponse {
-	if o == nil {
+func (i *IncidentsIncidentPriorityUpdateResponseBody) GetData() components.V3IncidentsIncidentPriorityUpdateResponse {
+	if i == nil {
 		return components.V3IncidentsIncidentPriorityUpdateResponse{}
 	}
-	return o.Data
+	return i.Data
 }
 
 type IncidentsIncidentPriorityUpdateResponse struct {
@@ -43,16 +43,16 @@ type IncidentsIncidentPriorityUpdateResponse struct {
 	Object *IncidentsIncidentPriorityUpdateResponseBody
 }
 
-func (o *IncidentsIncidentPriorityUpdateResponse) GetHTTPMeta() components.HTTPMetadata {
-	if o == nil {
+func (i *IncidentsIncidentPriorityUpdateResponse) GetHTTPMeta() components.HTTPMetadata {
+	if i == nil {
 		return components.HTTPMetadata{}
 	}
-	return o.HTTPMeta
+	return i.HTTPMeta
 }
 
-func (o *IncidentsIncidentPriorityUpdateResponse) GetObject() *IncidentsIncidentPriorityUpdateResponseBody {
-	if o == nil {
+func (i *IncidentsIncidentPriorityUpdateResponse) GetObject() *IncidentsIncidentPriorityUpdateResponseBody {
+	if i == nil {
 		return nil
 	}
-	return o.Object
+	return i.Object
 }

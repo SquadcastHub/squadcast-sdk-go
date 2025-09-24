@@ -47,18 +47,18 @@ func (v *V3WorkflowsSlackMessageUserUpdateData) UnmarshalJSON(data []byte) error
 	return nil
 }
 
-func (o *V3WorkflowsSlackMessageUserUpdateData) GetMemberID() *string {
-	if o == nil {
+func (v *V3WorkflowsSlackMessageUserUpdateData) GetMemberID() *string {
+	if v == nil {
 		return nil
 	}
-	return o.MemberID
+	return v.MemberID
 }
 
-func (o *V3WorkflowsSlackMessageUserUpdateData) GetMessage() *string {
-	if o == nil {
+func (v *V3WorkflowsSlackMessageUserUpdateData) GetMessage() *string {
+	if v == nil {
 		return nil
 	}
-	return o.Message
+	return v.Message
 }
 
 type V3WorkflowsSlackMessageUserUpdate struct {
@@ -77,16 +77,16 @@ func (v *V3WorkflowsSlackMessageUserUpdate) UnmarshalJSON(data []byte) error {
 	return nil
 }
 
-func (o *V3WorkflowsSlackMessageUserUpdate) GetName() V3WorkflowsSlackMessageUserUpdateName {
-	if o == nil {
+func (v *V3WorkflowsSlackMessageUserUpdate) GetName() V3WorkflowsSlackMessageUserUpdateName {
+	if v == nil {
 		return V3WorkflowsSlackMessageUserUpdateName("")
 	}
-	return o.Name
+	return v.Name
 }
 
-func (o *V3WorkflowsSlackMessageUserUpdate) GetData() *V3WorkflowsSlackMessageUserUpdateData {
-	if o == nil {
+func (v *V3WorkflowsSlackMessageUserUpdate) GetData() *V3WorkflowsSlackMessageUserUpdateData {
+	if v == nil {
 		return nil
 	}
-	return o.Data
+	return v.Data
 }

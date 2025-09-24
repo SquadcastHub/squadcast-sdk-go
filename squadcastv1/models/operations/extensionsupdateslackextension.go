@@ -11,18 +11,18 @@ type ExtensionsUpdateSlackExtensionRequest struct {
 	V3ServicesExtensionsUpdateSlackExtensionRequest components.V3ServicesExtensionsUpdateSlackExtensionRequest `request:"mediaType=application/json"`
 }
 
-func (o *ExtensionsUpdateSlackExtensionRequest) GetServiceID() string {
-	if o == nil {
+func (e *ExtensionsUpdateSlackExtensionRequest) GetServiceID() string {
+	if e == nil {
 		return ""
 	}
-	return o.ServiceID
+	return e.ServiceID
 }
 
-func (o *ExtensionsUpdateSlackExtensionRequest) GetV3ServicesExtensionsUpdateSlackExtensionRequest() components.V3ServicesExtensionsUpdateSlackExtensionRequest {
-	if o == nil {
+func (e *ExtensionsUpdateSlackExtensionRequest) GetV3ServicesExtensionsUpdateSlackExtensionRequest() components.V3ServicesExtensionsUpdateSlackExtensionRequest {
+	if e == nil {
 		return components.V3ServicesExtensionsUpdateSlackExtensionRequest{}
 	}
-	return o.V3ServicesExtensionsUpdateSlackExtensionRequest
+	return e.V3ServicesExtensionsUpdateSlackExtensionRequest
 }
 
 // ExtensionsUpdateSlackExtensionResponseBody - The request has succeeded.
@@ -30,11 +30,11 @@ type ExtensionsUpdateSlackExtensionResponseBody struct {
 	Data components.V3ServicesExtensionsSlackExtensionResponse `json:"data"`
 }
 
-func (o *ExtensionsUpdateSlackExtensionResponseBody) GetData() components.V3ServicesExtensionsSlackExtensionResponse {
-	if o == nil {
+func (e *ExtensionsUpdateSlackExtensionResponseBody) GetData() components.V3ServicesExtensionsSlackExtensionResponse {
+	if e == nil {
 		return components.V3ServicesExtensionsSlackExtensionResponse{}
 	}
-	return o.Data
+	return e.Data
 }
 
 type ExtensionsUpdateSlackExtensionResponse struct {
@@ -43,16 +43,16 @@ type ExtensionsUpdateSlackExtensionResponse struct {
 	Object *ExtensionsUpdateSlackExtensionResponseBody
 }
 
-func (o *ExtensionsUpdateSlackExtensionResponse) GetHTTPMeta() components.HTTPMetadata {
-	if o == nil {
+func (e *ExtensionsUpdateSlackExtensionResponse) GetHTTPMeta() components.HTTPMetadata {
+	if e == nil {
 		return components.HTTPMetadata{}
 	}
-	return o.HTTPMeta
+	return e.HTTPMeta
 }
 
-func (o *ExtensionsUpdateSlackExtensionResponse) GetObject() *ExtensionsUpdateSlackExtensionResponseBody {
-	if o == nil {
+func (e *ExtensionsUpdateSlackExtensionResponse) GetObject() *ExtensionsUpdateSlackExtensionResponseBody {
+	if e == nil {
 		return nil
 	}
-	return o.Object
+	return e.Object
 }

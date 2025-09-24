@@ -46,11 +46,11 @@ func (v *V3WorkflowsSqAddCommunicationChannelData) UnmarshalJSON(data []byte) er
 	return nil
 }
 
-func (o *V3WorkflowsSqAddCommunicationChannelData) GetChannels() []V3WorkflowsCommunicationChannel {
-	if o == nil {
+func (v *V3WorkflowsSqAddCommunicationChannelData) GetChannels() []V3WorkflowsCommunicationChannel {
+	if v == nil {
 		return []V3WorkflowsCommunicationChannel{}
 	}
-	return o.Channels
+	return v.Channels
 }
 
 type V3WorkflowsSqAddCommunicationChannel struct {
@@ -69,16 +69,16 @@ func (v *V3WorkflowsSqAddCommunicationChannel) UnmarshalJSON(data []byte) error 
 	return nil
 }
 
-func (o *V3WorkflowsSqAddCommunicationChannel) GetName() V3WorkflowsSqAddCommunicationChannelName {
-	if o == nil {
+func (v *V3WorkflowsSqAddCommunicationChannel) GetName() V3WorkflowsSqAddCommunicationChannelName {
+	if v == nil {
 		return V3WorkflowsSqAddCommunicationChannelName("")
 	}
-	return o.Name
+	return v.Name
 }
 
-func (o *V3WorkflowsSqAddCommunicationChannel) GetData() V3WorkflowsSqAddCommunicationChannelData {
-	if o == nil {
+func (v *V3WorkflowsSqAddCommunicationChannel) GetData() V3WorkflowsSqAddCommunicationChannelData {
+	if v == nil {
 		return V3WorkflowsSqAddCommunicationChannelData{}
 	}
-	return o.Data
+	return v.Data
 }

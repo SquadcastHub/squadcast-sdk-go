@@ -16,79 +16,79 @@ type V4OverrideResponse struct {
 	UpdatedAt             string                     `json:"updatedAt"`
 }
 
-func (o *V4OverrideResponse) GetID() int64 {
-	if o == nil {
+func (v *V4OverrideResponse) GetID() int64 {
+	if v == nil {
 		return 0
 	}
-	return o.ID
+	return v.ID
 }
 
-func (o *V4OverrideResponse) GetOrgID() string {
-	if o == nil {
+func (v *V4OverrideResponse) GetOrgID() string {
+	if v == nil {
 		return ""
 	}
-	return o.OrgID
+	return v.OrgID
 }
 
-func (o *V4OverrideResponse) GetTeamID() string {
-	if o == nil {
+func (v *V4OverrideResponse) GetTeamID() string {
+	if v == nil {
 		return ""
 	}
-	return o.TeamID
+	return v.TeamID
 }
 
-func (o *V4OverrideResponse) GetScheduleID() int64 {
-	if o == nil {
+func (v *V4OverrideResponse) GetScheduleID() int64 {
+	if v == nil {
 		return 0
 	}
-	return o.ScheduleID
+	return v.ScheduleID
 }
 
-func (o *V4OverrideResponse) GetStartTime() string {
-	if o == nil {
+func (v *V4OverrideResponse) GetStartTime() string {
+	if v == nil {
 		return ""
 	}
-	return o.StartTime
+	return v.StartTime
 }
 
-func (o *V4OverrideResponse) GetEndTime() string {
-	if o == nil {
+func (v *V4OverrideResponse) GetEndTime() string {
+	if v == nil {
 		return ""
 	}
-	return o.EndTime
+	return v.EndTime
 }
 
-func (o *V4OverrideResponse) GetReason() string {
-	if o == nil {
+func (v *V4OverrideResponse) GetReason() string {
+	if v == nil {
 		return ""
 	}
-	return o.Reason
+	return v.Reason
 }
 
-func (o *V4OverrideResponse) GetOverriddenParticipant() V4OverrideParticipantGroup {
-	if o == nil {
+func (v *V4OverrideResponse) GetOverriddenParticipant() V4OverrideParticipantGroup {
+	if v == nil {
 		return V4OverrideParticipantGroup{}
 	}
-	return o.OverriddenParticipant
+	return v.OverriddenParticipant
 }
 
-func (o *V4OverrideResponse) GetOverrideWith() V4OverrideParticipantGroup {
-	if o == nil {
+func (v *V4OverrideResponse) GetOverrideWith() V4OverrideParticipantGroup {
+	if v == nil {
 		return V4OverrideParticipantGroup{}
 	}
-	return o.OverrideWith
+	return v.OverrideWith
 }
 
-func (o *V4OverrideResponse) GetCreatedAt() string {
-	if o == nil {
+func (v *V4OverrideResponse) GetCreatedAt() string {
+	if v == nil {
 		return ""
 	}
-	return o.CreatedAt
+	return v.CreatedAt
 }
 
-func (o *V4OverrideResponse) GetUpdatedAt() string {
-	if o == nil {
+func (v *V4OverrideResponse) GetUpdatedAt() string {
+	if v == nil {
 		return ""
 	}
-	return o.UpdatedAt
+	return v.UpdatedAt
 }

@@ -1,16 +1,19 @@
 lockVersion: 2.0.0
 id: 279dacab-faec-448f-bc08-f41bb3b1dd64
 management:
-  docChecksum: d01a392a89770fcf91bdc28daf426c87
+  docChecksum: ca3f815a3fbf41a0590f978e49c52bac
   docVersion: 1.0.0
-  speakeasyVersion: 1.615.2
-  generationVersion: 2.698.4
-  releaseVersion: 1.0.0
-  configChecksum: 3f5bc09c24249eac53095e8aa323ee6f
+  speakeasyVersion: 1.623.0
+  generationVersion: 2.713.0
+  releaseVersion: 1.1.0
+  configChecksum: dc55bea293974edbe965c3f786ca0497
+  repoURL: https://github.com/SquadcastHub/squadcast-sdk-go.git
+  repoSubDirectory: squadcastv1
+  installationURL: https://github.com/SquadcastHub/squadcast-sdk-go/squadcastv1
 features:
   go:
     additionalDependencies: 0.1.0
-    core: 3.9.6
+    core: 3.11.1
     defaultEnabledRetries: 0.2.0
     devContainers: 2.90.0
     envVarSecurityUsage: 0.3.2
@@ -23,7 +26,7 @@ features:
     groups: 2.81.2
     intellisenseMarkdownSupport: 0.1.0
     nameOverrides: 2.81.2
-    nullables: 0.1.1
+    nullables: 0.2.0
     responseFormat: 0.1.2
     retries: 2.84.2
     sdkHooks: 0.2.0
@@ -4409,6 +4412,8 @@ generatedFiles:
   - models/operations/options.go
   - msteams.go
   - notes.go
+  - optionalnullable/optionalnullable.go
+  - optionalnullable/optionalnullable_test.go
   - overlay.go
   - overlays.go
   - overrides.go
@@ -10005,7 +10010,7 @@ examples:
           scheduleID: "<id>"
       responses:
         "200":
-          application/json: {"data": [{"id": 359729, "name": "<value>", "scheduleID": 521344, "color": "olive", "startDate": "<value>", "period": "<value>", "changeParticipantsFrequency": 748500, "changeParticipantsUnit": "<value>", "createdAt": "1718170524109", "updatedAt": "1735680605621"}], "pageInfo": {"pageSize": 729163, "hasNext": false, "hasPrevious": true}}
+          application/json: {"data": [{"id": 359729, "name": "<value>", "scheduleID": 521344, "color": "olive", "startDate": "<value>", "period": "<value>", "changeParticipantsFrequency": 748500, "changeParticipantsUnit": "<value>", "createdAt": "1718170524109", "updatedAt": "1735680605621"}]}
         "400":
           application/json: {"error": {"code": "<value>", "message": "<value>"}}
         "500":
@@ -10965,3 +10970,8 @@ examples:
         "504":
           application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
 examplesVersion: 1.0.2
+releaseNotes: |
+  ## Go SDK Changes Detected:
+  * `SquadcastSdk.Schedules.List()`:  `request.Request` **Changed** **Breaking** :warning:
+  * `SquadcastSdk.Schedules.Overrides.List()`:  `request.Request` **Changed** **Breaking** :warning:
+  * `SquadcastSdk.Schedules.Rotations.List()`:  `response.PageInfo` **Removed** **Breaking** :warning:

@@ -10,11 +10,11 @@ type SquadsGetSquadByIDV4Request struct {
 	SquadID string `pathParam:"style=simple,explode=false,name=squadID"`
 }
 
-func (o *SquadsGetSquadByIDV4Request) GetSquadID() string {
-	if o == nil {
+func (s *SquadsGetSquadByIDV4Request) GetSquadID() string {
+	if s == nil {
 		return ""
 	}
-	return o.SquadID
+	return s.SquadID
 }
 
 // SquadsGetSquadByIDV4ResponseBody - The request has succeeded.
@@ -22,11 +22,11 @@ type SquadsGetSquadByIDV4ResponseBody struct {
 	Data components.V4SquadsSquadResponse `json:"data"`
 }
 
-func (o *SquadsGetSquadByIDV4ResponseBody) GetData() components.V4SquadsSquadResponse {
-	if o == nil {
+func (s *SquadsGetSquadByIDV4ResponseBody) GetData() components.V4SquadsSquadResponse {
+	if s == nil {
 		return components.V4SquadsSquadResponse{}
 	}
-	return o.Data
+	return s.Data
 }
 
 type SquadsGetSquadByIDV4Response struct {
@@ -35,16 +35,16 @@ type SquadsGetSquadByIDV4Response struct {
 	Object *SquadsGetSquadByIDV4ResponseBody
 }
 
-func (o *SquadsGetSquadByIDV4Response) GetHTTPMeta() components.HTTPMetadata {
-	if o == nil {
+func (s *SquadsGetSquadByIDV4Response) GetHTTPMeta() components.HTTPMetadata {
+	if s == nil {
 		return components.HTTPMetadata{}
 	}
-	return o.HTTPMeta
+	return s.HTTPMeta
 }
 
-func (o *SquadsGetSquadByIDV4Response) GetObject() *SquadsGetSquadByIDV4ResponseBody {
-	if o == nil {
+func (s *SquadsGetSquadByIDV4Response) GetObject() *SquadsGetSquadByIDV4ResponseBody {
+	if s == nil {
 		return nil
 	}
-	return o.Object
+	return s.Object
 }

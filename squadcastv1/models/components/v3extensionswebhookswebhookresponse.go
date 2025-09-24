@@ -45,156 +45,156 @@ type V3ExtensionsWebhooksWebhookResponse struct {
 	Version        *string `json:"version,omitempty"`
 }
 
-func (o *V3ExtensionsWebhooksWebhookResponse) GetName() string {
-	if o == nil {
+func (v *V3ExtensionsWebhooksWebhookResponse) GetName() string {
+	if v == nil {
 		return ""
 	}
-	return o.Name
+	return v.Name
 }
 
-func (o *V3ExtensionsWebhooksWebhookResponse) GetDescription() *string {
-	if o == nil {
+func (v *V3ExtensionsWebhooksWebhookResponse) GetDescription() *string {
+	if v == nil {
 		return nil
 	}
-	return o.Description
+	return v.Description
 }
 
-func (o *V3ExtensionsWebhooksWebhookResponse) GetTriggers() []V3ExtensionsWebhooksWebhookTrigger {
-	if o == nil {
+func (v *V3ExtensionsWebhooksWebhookResponse) GetTriggers() []V3ExtensionsWebhooksWebhookTrigger {
+	if v == nil {
 		return []V3ExtensionsWebhooksWebhookTrigger{}
 	}
-	return o.Triggers
+	return v.Triggers
 }
 
-func (o *V3ExtensionsWebhooksWebhookResponse) GetUrls() []V3ExtensionsWebhooksWebhookURL {
-	if o == nil {
+func (v *V3ExtensionsWebhooksWebhookResponse) GetUrls() []V3ExtensionsWebhooksWebhookURL {
+	if v == nil {
 		return []V3ExtensionsWebhooksWebhookURL{}
 	}
-	return o.Urls
+	return v.Urls
 }
 
-func (o *V3ExtensionsWebhooksWebhookResponse) GetHeader() *V3ExtensionsWebhooksWebhookResponseHeader {
-	if o == nil {
+func (v *V3ExtensionsWebhooksWebhookResponse) GetHeader() *V3ExtensionsWebhooksWebhookResponseHeader {
+	if v == nil {
 		return nil
 	}
-	return o.Header
+	return v.Header
 }
 
-func (o *V3ExtensionsWebhooksWebhookResponse) GetFilters() *V3ExtensionsWebhooksWebhookFilter {
-	if o == nil {
+func (v *V3ExtensionsWebhooksWebhookResponse) GetFilters() *V3ExtensionsWebhooksWebhookFilter {
+	if v == nil {
 		return nil
 	}
-	return o.Filters
+	return v.Filters
 }
 
-func (o *V3ExtensionsWebhooksWebhookResponse) GetMaxRetry() *int64 {
-	if o == nil {
+func (v *V3ExtensionsWebhooksWebhookResponse) GetMaxRetry() *int64 {
+	if v == nil {
 		return nil
 	}
-	return o.MaxRetry
+	return v.MaxRetry
 }
 
-func (o *V3ExtensionsWebhooksWebhookResponse) GetTeams() []string {
-	if o == nil {
+func (v *V3ExtensionsWebhooksWebhookResponse) GetTeams() []string {
+	if v == nil {
 		return nil
 	}
-	return o.Teams
+	return v.Teams
 }
 
-func (o *V3ExtensionsWebhooksWebhookResponse) GetIsAllTeamsConfigured() *bool {
-	if o == nil {
+func (v *V3ExtensionsWebhooksWebhookResponse) GetIsAllTeamsConfigured() *bool {
+	if v == nil {
 		return nil
 	}
-	return o.IsAllTeamsConfigured
+	return v.IsAllTeamsConfigured
 }
 
-func (o *V3ExtensionsWebhooksWebhookResponse) GetCustomPayloadTemplateSlug() *string {
-	if o == nil {
+func (v *V3ExtensionsWebhooksWebhookResponse) GetCustomPayloadTemplateSlug() *string {
+	if v == nil {
 		return nil
 	}
-	return o.CustomPayloadTemplateSlug
+	return v.CustomPayloadTemplateSlug
 }
 
-func (o *V3ExtensionsWebhooksWebhookResponse) GetLanguage() *string {
-	if o == nil {
+func (v *V3ExtensionsWebhooksWebhookResponse) GetLanguage() *string {
+	if v == nil {
 		return nil
 	}
-	return o.Language
+	return v.Language
 }
 
-func (o *V3ExtensionsWebhooksWebhookResponse) GetMailIds() []string {
-	if o == nil {
+func (v *V3ExtensionsWebhooksWebhookResponse) GetMailIds() []string {
+	if v == nil {
 		return nil
 	}
-	return o.MailIds
+	return v.MailIds
 }
 
-func (o *V3ExtensionsWebhooksWebhookResponse) GetTriggerType() string {
-	if o == nil {
+func (v *V3ExtensionsWebhooksWebhookResponse) GetTriggerType() string {
+	if v == nil {
 		return ""
 	}
-	return o.TriggerType
+	return v.TriggerType
 }
 
-func (o *V3ExtensionsWebhooksWebhookResponse) GetCustomPayload() *string {
-	if o == nil {
+func (v *V3ExtensionsWebhooksWebhookResponse) GetCustomPayload() *string {
+	if v == nil {
 		return nil
 	}
-	return o.CustomPayload
+	return v.CustomPayload
 }
 
-func (o *V3ExtensionsWebhooksWebhookResponse) GetPayloadType() *string {
-	if o == nil {
+func (v *V3ExtensionsWebhooksWebhookResponse) GetPayloadType() *string {
+	if v == nil {
 		return nil
 	}
-	return o.PayloadType
+	return v.PayloadType
 }
 
-func (o *V3ExtensionsWebhooksWebhookResponse) GetID() string {
-	if o == nil {
+func (v *V3ExtensionsWebhooksWebhookResponse) GetID() string {
+	if v == nil {
 		return ""
 	}
-	return o.ID
+	return v.ID
 }
 
-func (o *V3ExtensionsWebhooksWebhookResponse) GetCreatedAt() string {
-	if o == nil {
+func (v *V3ExtensionsWebhooksWebhookResponse) GetCreatedAt() string {
+	if v == nil {
 		return ""
 	}
-	return o.CreatedAt
+	return v.CreatedAt
 }
 
-func (o *V3ExtensionsWebhooksWebhookResponse) GetUpdatedAt() string {
-	if o == nil {
+func (v *V3ExtensionsWebhooksWebhookResponse) GetUpdatedAt() string {
+	if v == nil {
 		return ""
 	}
-	return o.UpdatedAt
+	return v.UpdatedAt
 }
 
-func (o *V3ExtensionsWebhooksWebhookResponse) GetOrganizationID() *string {
-	if o == nil {
+func (v *V3ExtensionsWebhooksWebhookResponse) GetOrganizationID() *string {
+	if v == nil {
 		return nil
 	}
-	return o.OrganizationID
+	return v.OrganizationID
 }
 
-func (o *V3ExtensionsWebhooksWebhookResponse) GetAuthorID() string {
-	if o == nil {
+func (v *V3ExtensionsWebhooksWebhookResponse) GetAuthorID() string {
+	if v == nil {
 		return ""
 	}
-	return o.AuthorID
+	return v.AuthorID
 }
 
-func (o *V3ExtensionsWebhooksWebhookResponse) GetSlug() string {
-	if o == nil {
+func (v *V3ExtensionsWebhooksWebhookResponse) GetSlug() string {
+	if v == nil {
 		return ""
 	}
-	return o.Slug
+	return v.Slug
 }
 
-func (o *V3ExtensionsWebhooksWebhookResponse) GetVersion() *string {
-	if o == nil {
+func (v *V3ExtensionsWebhooksWebhookResponse) GetVersion() *string {
+	if v == nil {
 		return nil
 	}
-	return o.Version
+	return v.Version
 }

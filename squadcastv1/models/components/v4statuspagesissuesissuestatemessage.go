@@ -24,23 +24,23 @@ func (v *V4StatusPagesIssuesIssueStateMessage) UnmarshalJSON(data []byte) error 
 	return nil
 }
 
-func (o *V4StatusPagesIssuesIssueStateMessage) GetID() *int64 {
-	if o == nil {
+func (v *V4StatusPagesIssuesIssueStateMessage) GetID() *int64 {
+	if v == nil {
 		return nil
 	}
-	return o.ID
+	return v.ID
 }
 
-func (o *V4StatusPagesIssuesIssueStateMessage) GetText() *string {
-	if o == nil {
+func (v *V4StatusPagesIssuesIssueStateMessage) GetText() *string {
+	if v == nil {
 		return nil
 	}
-	return o.Text
+	return v.Text
 }
 
-func (o *V4StatusPagesIssuesIssueStateMessage) GetTimestamp() *time.Time {
-	if o == nil {
+func (v *V4StatusPagesIssuesIssueStateMessage) GetTimestamp() *time.Time {
+	if v == nil {
 		return nil
 	}
-	return o.Timestamp
+	return v.Timestamp
 }

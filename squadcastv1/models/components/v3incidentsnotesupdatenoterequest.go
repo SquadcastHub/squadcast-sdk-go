@@ -8,16 +8,16 @@ type V3IncidentsNotesUpdateNoteRequest struct {
 	Attachments []string `json:"attachments"`
 }
 
-func (o *V3IncidentsNotesUpdateNoteRequest) GetMessage() string {
-	if o == nil {
+func (v *V3IncidentsNotesUpdateNoteRequest) GetMessage() string {
+	if v == nil {
 		return ""
 	}
-	return o.Message
+	return v.Message
 }
 
-func (o *V3IncidentsNotesUpdateNoteRequest) GetAttachments() []string {
-	if o == nil {
+func (v *V3IncidentsNotesUpdateNoteRequest) GetAttachments() []string {
+	if v == nil {
 		return []string{}
 	}
-	return o.Attachments
+	return v.Attachments
 }

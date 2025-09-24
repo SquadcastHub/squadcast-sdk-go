@@ -6,9 +6,9 @@ type V4OverrideParticipantGroup struct {
 	Group []V4Participant `json:"group"`
 }
 
-func (o *V4OverrideParticipantGroup) GetGroup() []V4Participant {
-	if o == nil {
+func (v *V4OverrideParticipantGroup) GetGroup() []V4Participant {
+	if v == nil {
 		return []V4Participant{}
 	}
-	return o.Group
+	return v.Group
 }

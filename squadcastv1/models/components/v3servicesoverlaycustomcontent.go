@@ -7,16 +7,16 @@ type V3ServicesOverlayCustomContent struct {
 	Description string `json:"description"`
 }
 
-func (o *V3ServicesOverlayCustomContent) GetMessage() string {
-	if o == nil {
+func (v *V3ServicesOverlayCustomContent) GetMessage() string {
+	if v == nil {
 		return ""
 	}
-	return o.Message
+	return v.Message
 }
 
-func (o *V3ServicesOverlayCustomContent) GetDescription() string {
-	if o == nil {
+func (v *V3ServicesOverlayCustomContent) GetDescription() string {
+	if v == nil {
 		return ""
 	}
-	return o.Description
+	return v.Description
 }

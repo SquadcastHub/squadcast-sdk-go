@@ -46,9 +46,9 @@ func (v *V3WorkflowsMsTeamsCreateMeetingLink) UnmarshalJSON(data []byte) error {
 	return nil
 }
 
-func (o *V3WorkflowsMsTeamsCreateMeetingLink) GetName() V3WorkflowsMsTeamsCreateMeetingLinkName {
-	if o == nil {
+func (v *V3WorkflowsMsTeamsCreateMeetingLink) GetName() V3WorkflowsMsTeamsCreateMeetingLinkName {
+	if v == nil {
 		return V3WorkflowsMsTeamsCreateMeetingLinkName("")
 	}
-	return o.Name
+	return v.Name
 }

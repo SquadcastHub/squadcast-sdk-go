@@ -11,11 +11,11 @@ type GlobalEventRulesCreateGlobalEventRuleResponseBody struct {
 	Data components.V3GlobalEventRulesCreatedGlobalEventRuleResponse `json:"data"`
 }
 
-func (o *GlobalEventRulesCreateGlobalEventRuleResponseBody) GetData() components.V3GlobalEventRulesCreatedGlobalEventRuleResponse {
-	if o == nil {
+func (g *GlobalEventRulesCreateGlobalEventRuleResponseBody) GetData() components.V3GlobalEventRulesCreatedGlobalEventRuleResponse {
+	if g == nil {
 		return components.V3GlobalEventRulesCreatedGlobalEventRuleResponse{}
 	}
-	return o.Data
+	return g.Data
 }
 
 type GlobalEventRulesCreateGlobalEventRuleResponse struct {
@@ -24,16 +24,16 @@ type GlobalEventRulesCreateGlobalEventRuleResponse struct {
 	Object *GlobalEventRulesCreateGlobalEventRuleResponseBody
 }
 
-func (o *GlobalEventRulesCreateGlobalEventRuleResponse) GetHTTPMeta() components.HTTPMetadata {
-	if o == nil {
+func (g *GlobalEventRulesCreateGlobalEventRuleResponse) GetHTTPMeta() components.HTTPMetadata {
+	if g == nil {
 		return components.HTTPMetadata{}
 	}
-	return o.HTTPMeta
+	return g.HTTPMeta
 }
 
-func (o *GlobalEventRulesCreateGlobalEventRuleResponse) GetObject() *GlobalEventRulesCreateGlobalEventRuleResponseBody {
-	if o == nil {
+func (g *GlobalEventRulesCreateGlobalEventRuleResponse) GetObject() *GlobalEventRulesCreateGlobalEventRuleResponseBody {
+	if g == nil {
 		return nil
 	}
-	return o.Object
+	return g.Object
 }

@@ -12,25 +12,25 @@ type IssuesUpdateIssueRequest struct {
 	V4StatusPagesIssuesUpdateIssueRequest components.V4StatusPagesIssuesUpdateIssueRequest `request:"mediaType=application/json"`
 }
 
-func (o *IssuesUpdateIssueRequest) GetStatuspageID() string {
-	if o == nil {
+func (i *IssuesUpdateIssueRequest) GetStatuspageID() string {
+	if i == nil {
 		return ""
 	}
-	return o.StatuspageID
+	return i.StatuspageID
 }
 
-func (o *IssuesUpdateIssueRequest) GetIssueID() string {
-	if o == nil {
+func (i *IssuesUpdateIssueRequest) GetIssueID() string {
+	if i == nil {
 		return ""
 	}
-	return o.IssueID
+	return i.IssueID
 }
 
-func (o *IssuesUpdateIssueRequest) GetV4StatusPagesIssuesUpdateIssueRequest() components.V4StatusPagesIssuesUpdateIssueRequest {
-	if o == nil {
+func (i *IssuesUpdateIssueRequest) GetV4StatusPagesIssuesUpdateIssueRequest() components.V4StatusPagesIssuesUpdateIssueRequest {
+	if i == nil {
 		return components.V4StatusPagesIssuesUpdateIssueRequest{}
 	}
-	return o.V4StatusPagesIssuesUpdateIssueRequest
+	return i.V4StatusPagesIssuesUpdateIssueRequest
 }
 
 // IssuesUpdateIssueResponseBody - The request has succeeded.
@@ -38,11 +38,11 @@ type IssuesUpdateIssueResponseBody struct {
 	Data components.V4StatusPagesIssuesUpdateIssueResponse `json:"data"`
 }
 
-func (o *IssuesUpdateIssueResponseBody) GetData() components.V4StatusPagesIssuesUpdateIssueResponse {
-	if o == nil {
+func (i *IssuesUpdateIssueResponseBody) GetData() components.V4StatusPagesIssuesUpdateIssueResponse {
+	if i == nil {
 		return components.V4StatusPagesIssuesUpdateIssueResponse{}
 	}
-	return o.Data
+	return i.Data
 }
 
 type IssuesUpdateIssueResponse struct {
@@ -51,16 +51,16 @@ type IssuesUpdateIssueResponse struct {
 	Object *IssuesUpdateIssueResponseBody
 }
 
-func (o *IssuesUpdateIssueResponse) GetHTTPMeta() components.HTTPMetadata {
-	if o == nil {
+func (i *IssuesUpdateIssueResponse) GetHTTPMeta() components.HTTPMetadata {
+	if i == nil {
 		return components.HTTPMetadata{}
 	}
-	return o.HTTPMeta
+	return i.HTTPMeta
 }
 
-func (o *IssuesUpdateIssueResponse) GetObject() *IssuesUpdateIssueResponseBody {
-	if o == nil {
+func (i *IssuesUpdateIssueResponse) GetObject() *IssuesUpdateIssueResponseBody {
+	if i == nil {
 		return nil
 	}
-	return o.Object
+	return i.Object
 }

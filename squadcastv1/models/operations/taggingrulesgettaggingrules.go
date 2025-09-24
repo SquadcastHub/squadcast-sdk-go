@@ -10,22 +10,22 @@ type TaggingRulesGetTaggingRulesRequest struct {
 	ServiceID string `pathParam:"style=simple,explode=false,name=serviceID"`
 }
 
-func (o *TaggingRulesGetTaggingRulesRequest) GetServiceID() string {
-	if o == nil {
+func (t *TaggingRulesGetTaggingRulesRequest) GetServiceID() string {
+	if t == nil {
 		return ""
 	}
-	return o.ServiceID
+	return t.ServiceID
 }
 
 type TaggingRulesGetTaggingRulesData struct {
 	Rules []components.V3ServicesTaggingRulesTaggingRuleResponse `json:"rules"`
 }
 
-func (o *TaggingRulesGetTaggingRulesData) GetRules() []components.V3ServicesTaggingRulesTaggingRuleResponse {
-	if o == nil {
+func (t *TaggingRulesGetTaggingRulesData) GetRules() []components.V3ServicesTaggingRulesTaggingRuleResponse {
+	if t == nil {
 		return []components.V3ServicesTaggingRulesTaggingRuleResponse{}
 	}
-	return o.Rules
+	return t.Rules
 }
 
 // TaggingRulesGetTaggingRulesResponseBody - The request has succeeded.
@@ -33,11 +33,11 @@ type TaggingRulesGetTaggingRulesResponseBody struct {
 	Data TaggingRulesGetTaggingRulesData `json:"data"`
 }
 
-func (o *TaggingRulesGetTaggingRulesResponseBody) GetData() TaggingRulesGetTaggingRulesData {
-	if o == nil {
+func (t *TaggingRulesGetTaggingRulesResponseBody) GetData() TaggingRulesGetTaggingRulesData {
+	if t == nil {
 		return TaggingRulesGetTaggingRulesData{}
 	}
-	return o.Data
+	return t.Data
 }
 
 type TaggingRulesGetTaggingRulesResponse struct {
@@ -46,16 +46,16 @@ type TaggingRulesGetTaggingRulesResponse struct {
 	Object *TaggingRulesGetTaggingRulesResponseBody
 }
 
-func (o *TaggingRulesGetTaggingRulesResponse) GetHTTPMeta() components.HTTPMetadata {
-	if o == nil {
+func (t *TaggingRulesGetTaggingRulesResponse) GetHTTPMeta() components.HTTPMetadata {
+	if t == nil {
 		return components.HTTPMetadata{}
 	}
-	return o.HTTPMeta
+	return t.HTTPMeta
 }
 
-func (o *TaggingRulesGetTaggingRulesResponse) GetObject() *TaggingRulesGetTaggingRulesResponseBody {
-	if o == nil {
+func (t *TaggingRulesGetTaggingRulesResponse) GetObject() *TaggingRulesGetTaggingRulesResponseBody {
+	if t == nil {
 		return nil
 	}
-	return o.Object
+	return t.Object
 }

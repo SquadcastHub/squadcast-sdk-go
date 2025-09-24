@@ -13,18 +13,18 @@ type EscalationPoliciesUpdateEscalationPolicyRequest struct {
 	V3EscalationPoliciesUpdateEscalationPolicyRequest any `request:"mediaType=text/plain"`
 }
 
-func (o *EscalationPoliciesUpdateEscalationPolicyRequest) GetEscalationPolicyID() string {
-	if o == nil {
+func (e *EscalationPoliciesUpdateEscalationPolicyRequest) GetEscalationPolicyID() string {
+	if e == nil {
 		return ""
 	}
-	return o.EscalationPolicyID
+	return e.EscalationPolicyID
 }
 
-func (o *EscalationPoliciesUpdateEscalationPolicyRequest) GetV3EscalationPoliciesUpdateEscalationPolicyRequest() any {
-	if o == nil {
+func (e *EscalationPoliciesUpdateEscalationPolicyRequest) GetV3EscalationPoliciesUpdateEscalationPolicyRequest() any {
+	if e == nil {
 		return nil
 	}
-	return o.V3EscalationPoliciesUpdateEscalationPolicyRequest
+	return e.V3EscalationPoliciesUpdateEscalationPolicyRequest
 }
 
 // EscalationPoliciesUpdateEscalationPolicyResponseBody - The request has succeeded.
@@ -33,11 +33,11 @@ type EscalationPoliciesUpdateEscalationPolicyResponseBody struct {
 	Data components.V3EscalationPoliciesEscalationPolicyResponse `json:"data"`
 }
 
-func (o *EscalationPoliciesUpdateEscalationPolicyResponseBody) GetData() components.V3EscalationPoliciesEscalationPolicyResponse {
-	if o == nil {
+func (e *EscalationPoliciesUpdateEscalationPolicyResponseBody) GetData() components.V3EscalationPoliciesEscalationPolicyResponse {
+	if e == nil {
 		return components.V3EscalationPoliciesEscalationPolicyResponse{}
 	}
-	return o.Data
+	return e.Data
 }
 
 type EscalationPoliciesUpdateEscalationPolicyResponse struct {
@@ -46,16 +46,16 @@ type EscalationPoliciesUpdateEscalationPolicyResponse struct {
 	Object *EscalationPoliciesUpdateEscalationPolicyResponseBody
 }
 
-func (o *EscalationPoliciesUpdateEscalationPolicyResponse) GetHTTPMeta() components.HTTPMetadata {
-	if o == nil {
+func (e *EscalationPoliciesUpdateEscalationPolicyResponse) GetHTTPMeta() components.HTTPMetadata {
+	if e == nil {
 		return components.HTTPMetadata{}
 	}
-	return o.HTTPMeta
+	return e.HTTPMeta
 }
 
-func (o *EscalationPoliciesUpdateEscalationPolicyResponse) GetObject() *EscalationPoliciesUpdateEscalationPolicyResponseBody {
-	if o == nil {
+func (e *EscalationPoliciesUpdateEscalationPolicyResponse) GetObject() *EscalationPoliciesUpdateEscalationPolicyResponseBody {
+	if e == nil {
 		return nil
 	}
-	return o.Object
+	return e.Object
 }

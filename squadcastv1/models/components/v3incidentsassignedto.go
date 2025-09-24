@@ -26,30 +26,30 @@ func (v *V3IncidentsAssignedTo) UnmarshalJSON(data []byte) error {
 	return nil
 }
 
-func (o *V3IncidentsAssignedTo) GetID() string {
-	if o == nil {
+func (v *V3IncidentsAssignedTo) GetID() string {
+	if v == nil {
 		return ""
 	}
-	return o.ID
+	return v.ID
 }
 
-func (o *V3IncidentsAssignedTo) GetType() string {
-	if o == nil {
+func (v *V3IncidentsAssignedTo) GetType() string {
+	if v == nil {
 		return ""
 	}
-	return o.Type
+	return v.Type
 }
 
-func (o *V3IncidentsAssignedTo) GetTimeOfAssignment() time.Time {
-	if o == nil {
+func (v *V3IncidentsAssignedTo) GetTimeOfAssignment() time.Time {
+	if v == nil {
 		return time.Time{}
 	}
-	return o.TimeOfAssignment
+	return v.TimeOfAssignment
 }
 
-func (o *V3IncidentsAssignedTo) GetReason() string {
-	if o == nil {
+func (v *V3IncidentsAssignedTo) GetReason() string {
+	if v == nil {
 		return ""
 	}
-	return o.Reason
+	return v.Reason
 }

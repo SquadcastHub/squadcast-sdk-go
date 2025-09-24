@@ -10,11 +10,11 @@ type SchedulesChangeTimezoneRequestBody struct {
 	TimeZone *string `json:"timeZone,omitempty"`
 }
 
-func (o *SchedulesChangeTimezoneRequestBody) GetTimeZone() *string {
-	if o == nil {
+func (s *SchedulesChangeTimezoneRequestBody) GetTimeZone() *string {
+	if s == nil {
 		return nil
 	}
-	return o.TimeZone
+	return s.TimeZone
 }
 
 type SchedulesChangeTimezoneRequest struct {
@@ -22,18 +22,18 @@ type SchedulesChangeTimezoneRequest struct {
 	RequestBody SchedulesChangeTimezoneRequestBody `request:"mediaType=application/json"`
 }
 
-func (o *SchedulesChangeTimezoneRequest) GetScheduleID() string {
-	if o == nil {
+func (s *SchedulesChangeTimezoneRequest) GetScheduleID() string {
+	if s == nil {
 		return ""
 	}
-	return o.ScheduleID
+	return s.ScheduleID
 }
 
-func (o *SchedulesChangeTimezoneRequest) GetRequestBody() SchedulesChangeTimezoneRequestBody {
-	if o == nil {
+func (s *SchedulesChangeTimezoneRequest) GetRequestBody() SchedulesChangeTimezoneRequestBody {
+	if s == nil {
 		return SchedulesChangeTimezoneRequestBody{}
 	}
-	return o.RequestBody
+	return s.RequestBody
 }
 
 // SchedulesChangeTimezoneResponseBody - The request has succeeded.
@@ -41,11 +41,11 @@ type SchedulesChangeTimezoneResponseBody struct {
 	Data components.V4ChangeTimezoneResponse `json:"data"`
 }
 
-func (o *SchedulesChangeTimezoneResponseBody) GetData() components.V4ChangeTimezoneResponse {
-	if o == nil {
+func (s *SchedulesChangeTimezoneResponseBody) GetData() components.V4ChangeTimezoneResponse {
+	if s == nil {
 		return components.V4ChangeTimezoneResponse{}
 	}
-	return o.Data
+	return s.Data
 }
 
 type SchedulesChangeTimezoneResponse struct {
@@ -54,16 +54,16 @@ type SchedulesChangeTimezoneResponse struct {
 	Object *SchedulesChangeTimezoneResponseBody
 }
 
-func (o *SchedulesChangeTimezoneResponse) GetHTTPMeta() components.HTTPMetadata {
-	if o == nil {
+func (s *SchedulesChangeTimezoneResponse) GetHTTPMeta() components.HTTPMetadata {
+	if s == nil {
 		return components.HTTPMetadata{}
 	}
-	return o.HTTPMeta
+	return s.HTTPMeta
 }
 
-func (o *SchedulesChangeTimezoneResponse) GetObject() *SchedulesChangeTimezoneResponseBody {
-	if o == nil {
+func (s *SchedulesChangeTimezoneResponse) GetObject() *SchedulesChangeTimezoneResponseBody {
+	if s == nil {
 		return nil
 	}
-	return o.Object
+	return s.Object
 }

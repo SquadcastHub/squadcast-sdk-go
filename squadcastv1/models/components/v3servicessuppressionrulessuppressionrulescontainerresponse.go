@@ -27,44 +27,44 @@ func (v *V3ServicesSuppressionRulesSuppressionRulesContainerResponse) UnmarshalJ
 	return nil
 }
 
-func (o *V3ServicesSuppressionRulesSuppressionRulesContainerResponse) GetID() string {
-	if o == nil {
+func (v *V3ServicesSuppressionRulesSuppressionRulesContainerResponse) GetID() string {
+	if v == nil {
 		return ""
 	}
-	return o.ID
+	return v.ID
 }
 
-func (o *V3ServicesSuppressionRulesSuppressionRulesContainerResponse) GetCreatedAt() time.Time {
-	if o == nil {
+func (v *V3ServicesSuppressionRulesSuppressionRulesContainerResponse) GetCreatedAt() time.Time {
+	if v == nil {
 		return time.Time{}
 	}
-	return o.CreatedAt
+	return v.CreatedAt
 }
 
-func (o *V3ServicesSuppressionRulesSuppressionRulesContainerResponse) GetUpdatedAt() time.Time {
-	if o == nil {
+func (v *V3ServicesSuppressionRulesSuppressionRulesContainerResponse) GetUpdatedAt() time.Time {
+	if v == nil {
 		return time.Time{}
 	}
-	return o.UpdatedAt
+	return v.UpdatedAt
 }
 
-func (o *V3ServicesSuppressionRulesSuppressionRulesContainerResponse) GetServiceID() string {
-	if o == nil {
+func (v *V3ServicesSuppressionRulesSuppressionRulesContainerResponse) GetServiceID() string {
+	if v == nil {
 		return ""
 	}
-	return o.ServiceID
+	return v.ServiceID
 }
 
-func (o *V3ServicesSuppressionRulesSuppressionRulesContainerResponse) GetOrganizationID() string {
-	if o == nil {
+func (v *V3ServicesSuppressionRulesSuppressionRulesContainerResponse) GetOrganizationID() string {
+	if v == nil {
 		return ""
 	}
-	return o.OrganizationID
+	return v.OrganizationID
 }
 
-func (o *V3ServicesSuppressionRulesSuppressionRulesContainerResponse) GetRules() []V3ServicesSuppressionRulesSuppressionRule {
-	if o == nil {
+func (v *V3ServicesSuppressionRulesSuppressionRulesContainerResponse) GetRules() []V3ServicesSuppressionRulesSuppressionRule {
+	if v == nil {
 		return []V3ServicesSuppressionRulesSuppressionRule{}
 	}
-	return o.Rules
+	return v.Rules
 }

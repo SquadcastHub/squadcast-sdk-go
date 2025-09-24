@@ -10,11 +10,11 @@ type ServicesGetServiceByIDRequest struct {
 	ServiceID string `pathParam:"style=simple,explode=false,name=serviceID"`
 }
 
-func (o *ServicesGetServiceByIDRequest) GetServiceID() string {
-	if o == nil {
+func (s *ServicesGetServiceByIDRequest) GetServiceID() string {
+	if s == nil {
 		return ""
 	}
-	return o.ServiceID
+	return s.ServiceID
 }
 
 // ServicesGetServiceByIDResponseBody - The request has succeeded.
@@ -22,11 +22,11 @@ type ServicesGetServiceByIDResponseBody struct {
 	Data components.V3ServicesServiceResponse `json:"data"`
 }
 
-func (o *ServicesGetServiceByIDResponseBody) GetData() components.V3ServicesServiceResponse {
-	if o == nil {
+func (s *ServicesGetServiceByIDResponseBody) GetData() components.V3ServicesServiceResponse {
+	if s == nil {
 		return components.V3ServicesServiceResponse{}
 	}
-	return o.Data
+	return s.Data
 }
 
 type ServicesGetServiceByIDResponse struct {
@@ -35,16 +35,16 @@ type ServicesGetServiceByIDResponse struct {
 	Object *ServicesGetServiceByIDResponseBody
 }
 
-func (o *ServicesGetServiceByIDResponse) GetHTTPMeta() components.HTTPMetadata {
-	if o == nil {
+func (s *ServicesGetServiceByIDResponse) GetHTTPMeta() components.HTTPMetadata {
+	if s == nil {
 		return components.HTTPMetadata{}
 	}
-	return o.HTTPMeta
+	return s.HTTPMeta
 }
 
-func (o *ServicesGetServiceByIDResponse) GetObject() *ServicesGetServiceByIDResponseBody {
-	if o == nil {
+func (s *ServicesGetServiceByIDResponse) GetObject() *ServicesGetServiceByIDResponseBody {
+	if s == nil {
 		return nil
 	}
-	return o.Object
+	return s.Object
 }

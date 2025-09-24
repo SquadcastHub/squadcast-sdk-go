@@ -24,65 +24,65 @@ type V3RunbooksRunbookResponse struct {
 	Owner CommonV3RBACOwner `json:"owner"`
 }
 
-func (o *V3RunbooksRunbookResponse) GetID() string {
-	if o == nil {
+func (v *V3RunbooksRunbookResponse) GetID() string {
+	if v == nil {
 		return ""
 	}
-	return o.ID
+	return v.ID
 }
 
-func (o *V3RunbooksRunbookResponse) GetName() string {
-	if o == nil {
+func (v *V3RunbooksRunbookResponse) GetName() string {
+	if v == nil {
 		return ""
 	}
-	return o.Name
+	return v.Name
 }
 
-func (o *V3RunbooksRunbookResponse) GetCreated() V3RunbooksUpdationInfo {
-	if o == nil {
+func (v *V3RunbooksRunbookResponse) GetCreated() V3RunbooksUpdationInfo {
+	if v == nil {
 		return V3RunbooksUpdationInfo{}
 	}
-	return o.Created
+	return v.Created
 }
 
-func (o *V3RunbooksRunbookResponse) GetUpdated() V3RunbooksUpdationInfo {
-	if o == nil {
+func (v *V3RunbooksRunbookResponse) GetUpdated() V3RunbooksUpdationInfo {
+	if v == nil {
 		return V3RunbooksUpdationInfo{}
 	}
-	return o.Updated
+	return v.Updated
 }
 
-func (o *V3RunbooksRunbookResponse) GetUsedCount() int {
-	if o == nil {
+func (v *V3RunbooksRunbookResponse) GetUsedCount() int {
+	if v == nil {
 		return 0
 	}
-	return o.UsedCount
+	return v.UsedCount
 }
 
-func (o *V3RunbooksRunbookResponse) GetSteps() []V3RunbooksStep {
-	if o == nil {
+func (v *V3RunbooksRunbookResponse) GetSteps() []V3RunbooksStep {
+	if v == nil {
 		return []V3RunbooksStep{}
 	}
-	return o.Steps
+	return v.Steps
 }
 
-func (o *V3RunbooksRunbookResponse) GetEntityOwner() CommonV3EntityOwner {
-	if o == nil {
+func (v *V3RunbooksRunbookResponse) GetEntityOwner() CommonV3EntityOwner {
+	if v == nil {
 		return CommonV3EntityOwner{}
 	}
-	return o.EntityOwner
+	return v.EntityOwner
 }
 
-func (o *V3RunbooksRunbookResponse) GetOrganizationID() string {
-	if o == nil {
+func (v *V3RunbooksRunbookResponse) GetOrganizationID() string {
+	if v == nil {
 		return ""
 	}
-	return o.OrganizationID
+	return v.OrganizationID
 }
 
-func (o *V3RunbooksRunbookResponse) GetOwner() CommonV3RBACOwner {
-	if o == nil {
+func (v *V3RunbooksRunbookResponse) GetOwner() CommonV3RBACOwner {
+	if v == nil {
 		return CommonV3RBACOwner{}
 	}
-	return o.Owner
+	return v.Owner
 }

@@ -7,16 +7,16 @@ type V4ICalLinkResponse struct {
 	ICalLinkForMyOnCalls *string `json:"iCalLinkForMyOnCalls,omitempty"`
 }
 
-func (o *V4ICalLinkResponse) GetICalLink() *string {
-	if o == nil {
+func (v *V4ICalLinkResponse) GetICalLink() *string {
+	if v == nil {
 		return nil
 	}
-	return o.ICalLink
+	return v.ICalLink
 }
 
-func (o *V4ICalLinkResponse) GetICalLinkForMyOnCalls() *string {
-	if o == nil {
+func (v *V4ICalLinkResponse) GetICalLinkForMyOnCalls() *string {
+	if v == nil {
 		return nil
 	}
-	return o.ICalLinkForMyOnCalls
+	return v.ICalLinkForMyOnCalls
 }

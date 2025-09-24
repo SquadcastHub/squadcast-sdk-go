@@ -11,18 +11,18 @@ type WebformsRemoveWebformRequest struct {
 	OwnerID   *string `queryParam:"style=form,explode=false,name=owner_id"`
 }
 
-func (o *WebformsRemoveWebformRequest) GetWebformID() int64 {
-	if o == nil {
+func (w *WebformsRemoveWebformRequest) GetWebformID() int64 {
+	if w == nil {
 		return 0
 	}
-	return o.WebformID
+	return w.WebformID
 }
 
-func (o *WebformsRemoveWebformRequest) GetOwnerID() *string {
-	if o == nil {
+func (w *WebformsRemoveWebformRequest) GetOwnerID() *string {
+	if w == nil {
 		return nil
 	}
-	return o.OwnerID
+	return w.OwnerID
 }
 
 // WebformsRemoveWebformResponseBody - The request has succeeded.
@@ -30,11 +30,11 @@ type WebformsRemoveWebformResponseBody struct {
 	Data string `json:"data"`
 }
 
-func (o *WebformsRemoveWebformResponseBody) GetData() string {
-	if o == nil {
+func (w *WebformsRemoveWebformResponseBody) GetData() string {
+	if w == nil {
 		return ""
 	}
-	return o.Data
+	return w.Data
 }
 
 type WebformsRemoveWebformResponse struct {
@@ -43,16 +43,16 @@ type WebformsRemoveWebformResponse struct {
 	Object *WebformsRemoveWebformResponseBody
 }
 
-func (o *WebformsRemoveWebformResponse) GetHTTPMeta() components.HTTPMetadata {
-	if o == nil {
+func (w *WebformsRemoveWebformResponse) GetHTTPMeta() components.HTTPMetadata {
+	if w == nil {
 		return components.HTTPMetadata{}
 	}
-	return o.HTTPMeta
+	return w.HTTPMeta
 }
 
-func (o *WebformsRemoveWebformResponse) GetObject() *WebformsRemoveWebformResponseBody {
-	if o == nil {
+func (w *WebformsRemoveWebformResponse) GetObject() *WebformsRemoveWebformResponseBody {
+	if w == nil {
 		return nil
 	}
-	return o.Object
+	return w.Object
 }

@@ -7,18 +7,18 @@ type DedupKeyOverlay struct {
 	Duration int64  `json:"duration"`
 }
 
-func (o *DedupKeyOverlay) GetTemplate() string {
-	if o == nil {
+func (d *DedupKeyOverlay) GetTemplate() string {
+	if d == nil {
 		return ""
 	}
-	return o.Template
+	return d.Template
 }
 
-func (o *DedupKeyOverlay) GetDuration() int64 {
-	if o == nil {
+func (d *DedupKeyOverlay) GetDuration() int64 {
+	if d == nil {
 		return 0
 	}
-	return o.Duration
+	return d.Duration
 }
 
 type V3ServicesOverlayUpdateDedupKeyOverlayRequest struct {
@@ -26,16 +26,16 @@ type V3ServicesOverlayUpdateDedupKeyOverlayRequest struct {
 	DedupKeyOverlay     DedupKeyOverlay `json:"dedup_key_overlay"`
 }
 
-func (o *V3ServicesOverlayUpdateDedupKeyOverlayRequest) GetOverlayTemplateType() string {
-	if o == nil {
+func (v *V3ServicesOverlayUpdateDedupKeyOverlayRequest) GetOverlayTemplateType() string {
+	if v == nil {
 		return ""
 	}
-	return o.OverlayTemplateType
+	return v.OverlayTemplateType
 }
 
-func (o *V3ServicesOverlayUpdateDedupKeyOverlayRequest) GetDedupKeyOverlay() DedupKeyOverlay {
-	if o == nil {
+func (v *V3ServicesOverlayUpdateDedupKeyOverlayRequest) GetDedupKeyOverlay() DedupKeyOverlay {
+	if v == nil {
 		return DedupKeyOverlay{}
 	}
-	return o.DedupKeyOverlay
+	return v.DedupKeyOverlay
 }

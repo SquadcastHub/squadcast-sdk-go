@@ -12,25 +12,25 @@ type GlobalEventRulesGetRulesetRequest struct {
 	AlertSourceShortname string `pathParam:"style=simple,explode=false,name=alert_source_shortname"`
 }
 
-func (o *GlobalEventRulesGetRulesetRequest) GetGerID() int64 {
-	if o == nil {
+func (g *GlobalEventRulesGetRulesetRequest) GetGerID() int64 {
+	if g == nil {
 		return 0
 	}
-	return o.GerID
+	return g.GerID
 }
 
-func (o *GlobalEventRulesGetRulesetRequest) GetAlertSourceVersion() string {
-	if o == nil {
+func (g *GlobalEventRulesGetRulesetRequest) GetAlertSourceVersion() string {
+	if g == nil {
 		return ""
 	}
-	return o.AlertSourceVersion
+	return g.AlertSourceVersion
 }
 
-func (o *GlobalEventRulesGetRulesetRequest) GetAlertSourceShortname() string {
-	if o == nil {
+func (g *GlobalEventRulesGetRulesetRequest) GetAlertSourceShortname() string {
+	if g == nil {
 		return ""
 	}
-	return o.AlertSourceShortname
+	return g.AlertSourceShortname
 }
 
 // GlobalEventRulesGetRulesetResponseBody - The request has succeeded.
@@ -38,11 +38,11 @@ type GlobalEventRulesGetRulesetResponseBody struct {
 	Data components.V3GlobalEventRulesRulesetResponse `json:"data"`
 }
 
-func (o *GlobalEventRulesGetRulesetResponseBody) GetData() components.V3GlobalEventRulesRulesetResponse {
-	if o == nil {
+func (g *GlobalEventRulesGetRulesetResponseBody) GetData() components.V3GlobalEventRulesRulesetResponse {
+	if g == nil {
 		return components.V3GlobalEventRulesRulesetResponse{}
 	}
-	return o.Data
+	return g.Data
 }
 
 type GlobalEventRulesGetRulesetResponse struct {
@@ -51,16 +51,16 @@ type GlobalEventRulesGetRulesetResponse struct {
 	Object *GlobalEventRulesGetRulesetResponseBody
 }
 
-func (o *GlobalEventRulesGetRulesetResponse) GetHTTPMeta() components.HTTPMetadata {
-	if o == nil {
+func (g *GlobalEventRulesGetRulesetResponse) GetHTTPMeta() components.HTTPMetadata {
+	if g == nil {
 		return components.HTTPMetadata{}
 	}
-	return o.HTTPMeta
+	return g.HTTPMeta
 }
 
-func (o *GlobalEventRulesGetRulesetResponse) GetObject() *GlobalEventRulesGetRulesetResponseBody {
-	if o == nil {
+func (g *GlobalEventRulesGetRulesetResponse) GetObject() *GlobalEventRulesGetRulesetResponseBody {
+	if g == nil {
 		return nil
 	}
-	return o.Object
+	return g.Object
 }

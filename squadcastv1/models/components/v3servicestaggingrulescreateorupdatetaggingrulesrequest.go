@@ -6,9 +6,9 @@ type V3ServicesTaggingRulesCreateOrUpdateTaggingRulesRequest struct {
 	Rules []V3ServicesTaggingRulesTagRule `json:"rules"`
 }
 
-func (o *V3ServicesTaggingRulesCreateOrUpdateTaggingRulesRequest) GetRules() []V3ServicesTaggingRulesTagRule {
-	if o == nil {
+func (v *V3ServicesTaggingRulesCreateOrUpdateTaggingRulesRequest) GetRules() []V3ServicesTaggingRulesTagRule {
+	if v == nil {
 		return []V3ServicesTaggingRulesTagRule{}
 	}
-	return o.Rules
+	return v.Rules
 }

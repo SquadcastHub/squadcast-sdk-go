@@ -10,11 +10,11 @@ type ServicesDeleteServiceRequest struct {
 	ServiceID string `pathParam:"style=simple,explode=false,name=serviceID"`
 }
 
-func (o *ServicesDeleteServiceRequest) GetServiceID() string {
-	if o == nil {
+func (s *ServicesDeleteServiceRequest) GetServiceID() string {
+	if s == nil {
 		return ""
 	}
-	return o.ServiceID
+	return s.ServiceID
 }
 
 // ServicesDeleteServiceResponseBody - There is no content to send for this request, but the headers may be useful.
@@ -26,16 +26,16 @@ type ServicesDeleteServiceResponse struct {
 	Body     []byte
 }
 
-func (o *ServicesDeleteServiceResponse) GetHTTPMeta() components.HTTPMetadata {
-	if o == nil {
+func (s *ServicesDeleteServiceResponse) GetHTTPMeta() components.HTTPMetadata {
+	if s == nil {
 		return components.HTTPMetadata{}
 	}
-	return o.HTTPMeta
+	return s.HTTPMeta
 }
 
-func (o *ServicesDeleteServiceResponse) GetBody() []byte {
-	if o == nil {
+func (s *ServicesDeleteServiceResponse) GetBody() []byte {
+	if s == nil {
 		return nil
 	}
-	return o.Body
+	return s.Body
 }

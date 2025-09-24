@@ -11,11 +11,11 @@ type UsersGetUserByIDRequest struct {
 	UserID string `pathParam:"style=simple,explode=false,name=userID"`
 }
 
-func (o *UsersGetUserByIDRequest) GetUserID() string {
-	if o == nil {
+func (u *UsersGetUserByIDRequest) GetUserID() string {
+	if u == nil {
 		return ""
 	}
-	return o.UserID
+	return u.UserID
 }
 
 // UsersGetUserByIDResponseBody - The request has succeeded.
@@ -23,11 +23,11 @@ type UsersGetUserByIDResponseBody struct {
 	Data components.V3UsersUserResponse `json:"data"`
 }
 
-func (o *UsersGetUserByIDResponseBody) GetData() components.V3UsersUserResponse {
-	if o == nil {
+func (u *UsersGetUserByIDResponseBody) GetData() components.V3UsersUserResponse {
+	if u == nil {
 		return components.V3UsersUserResponse{}
 	}
-	return o.Data
+	return u.Data
 }
 
 type UsersGetUserByIDResponse struct {
@@ -36,16 +36,16 @@ type UsersGetUserByIDResponse struct {
 	Object *UsersGetUserByIDResponseBody
 }
 
-func (o *UsersGetUserByIDResponse) GetHTTPMeta() components.HTTPMetadata {
-	if o == nil {
+func (u *UsersGetUserByIDResponse) GetHTTPMeta() components.HTTPMetadata {
+	if u == nil {
 		return components.HTTPMetadata{}
 	}
-	return o.HTTPMeta
+	return u.HTTPMeta
 }
 
-func (o *UsersGetUserByIDResponse) GetObject() *UsersGetUserByIDResponseBody {
-	if o == nil {
+func (u *UsersGetUserByIDResponse) GetObject() *UsersGetUserByIDResponseBody {
+	if u == nil {
 		return nil
 	}
-	return o.Object
+	return u.Object
 }

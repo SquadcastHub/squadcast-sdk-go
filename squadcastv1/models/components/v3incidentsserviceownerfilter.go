@@ -9,23 +9,23 @@ type V3IncidentsServiceOwnerFilter struct {
 	UserIDsAndTheirSquads []string `json:"userIDsAndTheirSquads,omitempty"`
 }
 
-func (o *V3IncidentsServiceOwnerFilter) GetUserIDs() []string {
-	if o == nil {
+func (v *V3IncidentsServiceOwnerFilter) GetUserIDs() []string {
+	if v == nil {
 		return []string{}
 	}
-	return o.UserIDs
+	return v.UserIDs
 }
 
-func (o *V3IncidentsServiceOwnerFilter) GetSquadIDs() []string {
-	if o == nil {
+func (v *V3IncidentsServiceOwnerFilter) GetSquadIDs() []string {
+	if v == nil {
 		return []string{}
 	}
-	return o.SquadIDs
+	return v.SquadIDs
 }
 
-func (o *V3IncidentsServiceOwnerFilter) GetUserIDsAndTheirSquads() []string {
-	if o == nil {
+func (v *V3IncidentsServiceOwnerFilter) GetUserIDsAndTheirSquads() []string {
+	if v == nil {
 		return nil
 	}
-	return o.UserIDsAndTheirSquads
+	return v.UserIDsAndTheirSquads
 }

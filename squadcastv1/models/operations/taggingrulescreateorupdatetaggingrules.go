@@ -11,29 +11,29 @@ type TaggingRulesCreateOrUpdateTaggingRulesRequest struct {
 	V3ServicesTaggingRulesCreateOrUpdateTaggingRulesRequest components.V3ServicesTaggingRulesCreateOrUpdateTaggingRulesRequest `request:"mediaType=application/json"`
 }
 
-func (o *TaggingRulesCreateOrUpdateTaggingRulesRequest) GetServiceID() string {
-	if o == nil {
+func (t *TaggingRulesCreateOrUpdateTaggingRulesRequest) GetServiceID() string {
+	if t == nil {
 		return ""
 	}
-	return o.ServiceID
+	return t.ServiceID
 }
 
-func (o *TaggingRulesCreateOrUpdateTaggingRulesRequest) GetV3ServicesTaggingRulesCreateOrUpdateTaggingRulesRequest() components.V3ServicesTaggingRulesCreateOrUpdateTaggingRulesRequest {
-	if o == nil {
+func (t *TaggingRulesCreateOrUpdateTaggingRulesRequest) GetV3ServicesTaggingRulesCreateOrUpdateTaggingRulesRequest() components.V3ServicesTaggingRulesCreateOrUpdateTaggingRulesRequest {
+	if t == nil {
 		return components.V3ServicesTaggingRulesCreateOrUpdateTaggingRulesRequest{}
 	}
-	return o.V3ServicesTaggingRulesCreateOrUpdateTaggingRulesRequest
+	return t.V3ServicesTaggingRulesCreateOrUpdateTaggingRulesRequest
 }
 
 type TaggingRulesCreateOrUpdateTaggingRulesData struct {
 	Rules []components.V3ServicesTaggingRulesTaggingRuleResponse `json:"rules"`
 }
 
-func (o *TaggingRulesCreateOrUpdateTaggingRulesData) GetRules() []components.V3ServicesTaggingRulesTaggingRuleResponse {
-	if o == nil {
+func (t *TaggingRulesCreateOrUpdateTaggingRulesData) GetRules() []components.V3ServicesTaggingRulesTaggingRuleResponse {
+	if t == nil {
 		return []components.V3ServicesTaggingRulesTaggingRuleResponse{}
 	}
-	return o.Rules
+	return t.Rules
 }
 
 // TaggingRulesCreateOrUpdateTaggingRulesResponseBody - The request has succeeded and a new resource has been created as a result.
@@ -41,11 +41,11 @@ type TaggingRulesCreateOrUpdateTaggingRulesResponseBody struct {
 	Data TaggingRulesCreateOrUpdateTaggingRulesData `json:"data"`
 }
 
-func (o *TaggingRulesCreateOrUpdateTaggingRulesResponseBody) GetData() TaggingRulesCreateOrUpdateTaggingRulesData {
-	if o == nil {
+func (t *TaggingRulesCreateOrUpdateTaggingRulesResponseBody) GetData() TaggingRulesCreateOrUpdateTaggingRulesData {
+	if t == nil {
 		return TaggingRulesCreateOrUpdateTaggingRulesData{}
 	}
-	return o.Data
+	return t.Data
 }
 
 type TaggingRulesCreateOrUpdateTaggingRulesResponse struct {
@@ -54,16 +54,16 @@ type TaggingRulesCreateOrUpdateTaggingRulesResponse struct {
 	Object *TaggingRulesCreateOrUpdateTaggingRulesResponseBody
 }
 
-func (o *TaggingRulesCreateOrUpdateTaggingRulesResponse) GetHTTPMeta() components.HTTPMetadata {
-	if o == nil {
+func (t *TaggingRulesCreateOrUpdateTaggingRulesResponse) GetHTTPMeta() components.HTTPMetadata {
+	if t == nil {
 		return components.HTTPMetadata{}
 	}
-	return o.HTTPMeta
+	return t.HTTPMeta
 }
 
-func (o *TaggingRulesCreateOrUpdateTaggingRulesResponse) GetObject() *TaggingRulesCreateOrUpdateTaggingRulesResponseBody {
-	if o == nil {
+func (t *TaggingRulesCreateOrUpdateTaggingRulesResponse) GetObject() *TaggingRulesCreateOrUpdateTaggingRulesResponseBody {
+	if t == nil {
 		return nil
 	}
-	return o.Object
+	return t.Object
 }

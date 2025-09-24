@@ -7,9 +7,9 @@ type V3GlobalEventRulesRuleAction struct {
 	RouteTo string `json:"route_to"`
 }
 
-func (o *V3GlobalEventRulesRuleAction) GetRouteTo() string {
-	if o == nil {
+func (v *V3GlobalEventRulesRuleAction) GetRouteTo() string {
+	if v == nil {
 		return ""
 	}
-	return o.RouteTo
+	return v.RouteTo
 }

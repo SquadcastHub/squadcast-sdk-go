@@ -32,37 +32,37 @@ func (v *V3RunbooksUpdationInfo) UnmarshalJSON(data []byte) error {
 	return nil
 }
 
-func (o *V3RunbooksUpdationInfo) GetUserName() string {
-	if o == nil {
+func (v *V3RunbooksUpdationInfo) GetUserName() string {
+	if v == nil {
 		return ""
 	}
-	return o.UserName
+	return v.UserName
 }
 
-func (o *V3RunbooksUpdationInfo) GetUsernameForDisplay() string {
-	if o == nil {
+func (v *V3RunbooksUpdationInfo) GetUsernameForDisplay() string {
+	if v == nil {
 		return ""
 	}
-	return o.UsernameForDisplay
+	return v.UsernameForDisplay
 }
 
-func (o *V3RunbooksUpdationInfo) GetUserID() string {
-	if o == nil {
+func (v *V3RunbooksUpdationInfo) GetUserID() string {
+	if v == nil {
 		return ""
 	}
-	return o.UserID
+	return v.UserID
 }
 
-func (o *V3RunbooksUpdationInfo) GetAt() time.Time {
-	if o == nil {
+func (v *V3RunbooksUpdationInfo) GetAt() time.Time {
+	if v == nil {
 		return time.Time{}
 	}
-	return o.At
+	return v.At
 }
 
-func (o *V3RunbooksUpdationInfo) GetEntityOwner() *CommonV3EntityOwner {
-	if o == nil {
+func (v *V3RunbooksUpdationInfo) GetEntityOwner() *CommonV3EntityOwner {
+	if v == nil {
 		return nil
 	}
-	return o.EntityOwner
+	return v.EntityOwner
 }

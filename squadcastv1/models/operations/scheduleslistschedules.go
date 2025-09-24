@@ -7,6 +7,7 @@ import (
 )
 
 type SchedulesListSchedulesRequest struct {
+	TeamID                  string   `queryParam:"style=form,explode=false,name=teamID"`
 	ScheduleIDs             []int64  `queryParam:"style=form,explode=false,name=scheduleIDs"`
 	Participants            []string `queryParam:"style=form,explode=false,name=participants"`
 	ScheduleName            *string  `queryParam:"style=form,explode=false,name=scheduleName"`
@@ -18,99 +19,98 @@ type SchedulesListSchedulesRequest struct {
 	EscalationPolicies      []string `queryParam:"style=form,explode=false,name=escalationPolicies"`
 	WithoutEscalationPolicy *bool    `queryParam:"style=form,explode=false,name=withoutEscalationPolicy"`
 	PageSize                *int64   `queryParam:"style=form,explode=false,name=pageSize"`
-	PageNumber              *int64   `queryParam:"style=form,explode=false,name=pageNumber"`
-	TeamID                  string   `queryParam:"style=form,explode=false,name=teamID"`
+	Cursor                  *string  `queryParam:"style=form,explode=false,name=cursor"`
 }
 
-func (o *SchedulesListSchedulesRequest) GetScheduleIDs() []int64 {
-	if o == nil {
-		return nil
-	}
-	return o.ScheduleIDs
-}
-
-func (o *SchedulesListSchedulesRequest) GetParticipants() []string {
-	if o == nil {
-		return nil
-	}
-	return o.Participants
-}
-
-func (o *SchedulesListSchedulesRequest) GetScheduleName() *string {
-	if o == nil {
-		return nil
-	}
-	return o.ScheduleName
-}
-
-func (o *SchedulesListSchedulesRequest) GetMyOnCall() *bool {
-	if o == nil {
-		return nil
-	}
-	return o.MyOnCall
-}
-
-func (o *SchedulesListSchedulesRequest) GetYouAndYourSquads() *bool {
-	if o == nil {
-		return nil
-	}
-	return o.YouAndYourSquads
-}
-
-func (o *SchedulesListSchedulesRequest) GetSearch() *string {
-	if o == nil {
-		return nil
-	}
-	return o.Search
-}
-
-func (o *SchedulesListSchedulesRequest) GetHidePaused() *bool {
-	if o == nil {
-		return nil
-	}
-	return o.HidePaused
-}
-
-func (o *SchedulesListSchedulesRequest) GetOwnerID() *string {
-	if o == nil {
-		return nil
-	}
-	return o.OwnerID
-}
-
-func (o *SchedulesListSchedulesRequest) GetEscalationPolicies() []string {
-	if o == nil {
-		return nil
-	}
-	return o.EscalationPolicies
-}
-
-func (o *SchedulesListSchedulesRequest) GetWithoutEscalationPolicy() *bool {
-	if o == nil {
-		return nil
-	}
-	return o.WithoutEscalationPolicy
-}
-
-func (o *SchedulesListSchedulesRequest) GetPageSize() *int64 {
-	if o == nil {
-		return nil
-	}
-	return o.PageSize
-}
-
-func (o *SchedulesListSchedulesRequest) GetPageNumber() *int64 {
-	if o == nil {
-		return nil
-	}
-	return o.PageNumber
-}
-
-func (o *SchedulesListSchedulesRequest) GetTeamID() string {
-	if o == nil {
+func (s *SchedulesListSchedulesRequest) GetTeamID() string {
+	if s == nil {
 		return ""
 	}
-	return o.TeamID
+	return s.TeamID
+}
+
+func (s *SchedulesListSchedulesRequest) GetScheduleIDs() []int64 {
+	if s == nil {
+		return nil
+	}
+	return s.ScheduleIDs
+}
+
+func (s *SchedulesListSchedulesRequest) GetParticipants() []string {
+	if s == nil {
+		return nil
+	}
+	return s.Participants
+}
+
+func (s *SchedulesListSchedulesRequest) GetScheduleName() *string {
+	if s == nil {
+		return nil
+	}
+	return s.ScheduleName
+}
+
+func (s *SchedulesListSchedulesRequest) GetMyOnCall() *bool {
+	if s == nil {
+		return nil
+	}
+	return s.MyOnCall
+}
+
+func (s *SchedulesListSchedulesRequest) GetYouAndYourSquads() *bool {
+	if s == nil {
+		return nil
+	}
+	return s.YouAndYourSquads
+}
+
+func (s *SchedulesListSchedulesRequest) GetSearch() *string {
+	if s == nil {
+		return nil
+	}
+	return s.Search
+}
+
+func (s *SchedulesListSchedulesRequest) GetHidePaused() *bool {
+	if s == nil {
+		return nil
+	}
+	return s.HidePaused
+}
+
+func (s *SchedulesListSchedulesRequest) GetOwnerID() *string {
+	if s == nil {
+		return nil
+	}
+	return s.OwnerID
+}
+
+func (s *SchedulesListSchedulesRequest) GetEscalationPolicies() []string {
+	if s == nil {
+		return nil
+	}
+	return s.EscalationPolicies
+}
+
+func (s *SchedulesListSchedulesRequest) GetWithoutEscalationPolicy() *bool {
+	if s == nil {
+		return nil
+	}
+	return s.WithoutEscalationPolicy
+}
+
+func (s *SchedulesListSchedulesRequest) GetPageSize() *int64 {
+	if s == nil {
+		return nil
+	}
+	return s.PageSize
+}
+
+func (s *SchedulesListSchedulesRequest) GetCursor() *string {
+	if s == nil {
+		return nil
+	}
+	return s.Cursor
 }
 
 // SchedulesListSchedulesResponseBody - The request has succeeded.
@@ -119,18 +119,18 @@ type SchedulesListSchedulesResponseBody struct {
 	PageInfo components.CommonV4PageInfo     `json:"pageInfo"`
 }
 
-func (o *SchedulesListSchedulesResponseBody) GetData() []components.V4ScheduleResponse {
-	if o == nil {
+func (s *SchedulesListSchedulesResponseBody) GetData() []components.V4ScheduleResponse {
+	if s == nil {
 		return []components.V4ScheduleResponse{}
 	}
-	return o.Data
+	return s.Data
 }
 
-func (o *SchedulesListSchedulesResponseBody) GetPageInfo() components.CommonV4PageInfo {
-	if o == nil {
+func (s *SchedulesListSchedulesResponseBody) GetPageInfo() components.CommonV4PageInfo {
+	if s == nil {
 		return components.CommonV4PageInfo{}
 	}
-	return o.PageInfo
+	return s.PageInfo
 }
 
 type SchedulesListSchedulesResponse struct {
@@ -139,16 +139,16 @@ type SchedulesListSchedulesResponse struct {
 	Object *SchedulesListSchedulesResponseBody
 }
 
-func (o *SchedulesListSchedulesResponse) GetHTTPMeta() components.HTTPMetadata {
-	if o == nil {
+func (s *SchedulesListSchedulesResponse) GetHTTPMeta() components.HTTPMetadata {
+	if s == nil {
 		return components.HTTPMetadata{}
 	}
-	return o.HTTPMeta
+	return s.HTTPMeta
 }
 
-func (o *SchedulesListSchedulesResponse) GetObject() *SchedulesListSchedulesResponseBody {
-	if o == nil {
+func (s *SchedulesListSchedulesResponse) GetObject() *SchedulesListSchedulesResponseBody {
+	if s == nil {
 		return nil
 	}
-	return o.Object
+	return s.Object
 }

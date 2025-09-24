@@ -10,11 +10,11 @@ type WorkflowsGetWorkflowByIDRequest struct {
 	WorkflowID string `pathParam:"style=simple,explode=false,name=workflowID"`
 }
 
-func (o *WorkflowsGetWorkflowByIDRequest) GetWorkflowID() string {
-	if o == nil {
+func (w *WorkflowsGetWorkflowByIDRequest) GetWorkflowID() string {
+	if w == nil {
 		return ""
 	}
-	return o.WorkflowID
+	return w.WorkflowID
 }
 
 type WorkflowsGetWorkflowByIDResponse struct {
@@ -23,16 +23,16 @@ type WorkflowsGetWorkflowByIDResponse struct {
 	V3WorkflowsGetWorkflowByIDResponse *components.V3WorkflowsGetWorkflowByIDResponse
 }
 
-func (o *WorkflowsGetWorkflowByIDResponse) GetHTTPMeta() components.HTTPMetadata {
-	if o == nil {
+func (w *WorkflowsGetWorkflowByIDResponse) GetHTTPMeta() components.HTTPMetadata {
+	if w == nil {
 		return components.HTTPMetadata{}
 	}
-	return o.HTTPMeta
+	return w.HTTPMeta
 }
 
-func (o *WorkflowsGetWorkflowByIDResponse) GetV3WorkflowsGetWorkflowByIDResponse() *components.V3WorkflowsGetWorkflowByIDResponse {
-	if o == nil {
+func (w *WorkflowsGetWorkflowByIDResponse) GetV3WorkflowsGetWorkflowByIDResponse() *components.V3WorkflowsGetWorkflowByIDResponse {
+	if w == nil {
 		return nil
 	}
-	return o.V3WorkflowsGetWorkflowByIDResponse
+	return w.V3WorkflowsGetWorkflowByIDResponse
 }

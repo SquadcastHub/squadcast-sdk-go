@@ -11,18 +11,18 @@ type ExportGetScheduleIcalLinkRequest struct {
 	MyOnCall   bool   `queryParam:"style=form,explode=false,name=myOnCall"`
 }
 
-func (o *ExportGetScheduleIcalLinkRequest) GetScheduleID() string {
-	if o == nil {
+func (e *ExportGetScheduleIcalLinkRequest) GetScheduleID() string {
+	if e == nil {
 		return ""
 	}
-	return o.ScheduleID
+	return e.ScheduleID
 }
 
-func (o *ExportGetScheduleIcalLinkRequest) GetMyOnCall() bool {
-	if o == nil {
+func (e *ExportGetScheduleIcalLinkRequest) GetMyOnCall() bool {
+	if e == nil {
 		return false
 	}
-	return o.MyOnCall
+	return e.MyOnCall
 }
 
 // ExportGetScheduleIcalLinkResponseBody - The request has succeeded.
@@ -30,11 +30,11 @@ type ExportGetScheduleIcalLinkResponseBody struct {
 	Data components.V4ICalLinkResponse `json:"data"`
 }
 
-func (o *ExportGetScheduleIcalLinkResponseBody) GetData() components.V4ICalLinkResponse {
-	if o == nil {
+func (e *ExportGetScheduleIcalLinkResponseBody) GetData() components.V4ICalLinkResponse {
+	if e == nil {
 		return components.V4ICalLinkResponse{}
 	}
-	return o.Data
+	return e.Data
 }
 
 type ExportGetScheduleIcalLinkResponse struct {
@@ -43,16 +43,16 @@ type ExportGetScheduleIcalLinkResponse struct {
 	Object *ExportGetScheduleIcalLinkResponseBody
 }
 
-func (o *ExportGetScheduleIcalLinkResponse) GetHTTPMeta() components.HTTPMetadata {
-	if o == nil {
+func (e *ExportGetScheduleIcalLinkResponse) GetHTTPMeta() components.HTTPMetadata {
+	if e == nil {
 		return components.HTTPMetadata{}
 	}
-	return o.HTTPMeta
+	return e.HTTPMeta
 }
 
-func (o *ExportGetScheduleIcalLinkResponse) GetObject() *ExportGetScheduleIcalLinkResponseBody {
-	if o == nil {
+func (e *ExportGetScheduleIcalLinkResponse) GetObject() *ExportGetScheduleIcalLinkResponseBody {
+	if e == nil {
 		return nil
 	}
-	return o.Object
+	return e.Object
 }

@@ -41,37 +41,37 @@ type V4UpdateScheduleRequest struct {
 	Tags        []V4Tag                          `json:"tags"`
 }
 
-func (o *V4UpdateScheduleRequest) GetName() string {
-	if o == nil {
+func (v *V4UpdateScheduleRequest) GetName() string {
+	if v == nil {
 		return ""
 	}
-	return o.Name
+	return v.Name
 }
 
-func (o *V4UpdateScheduleRequest) GetDescription() string {
-	if o == nil {
+func (v *V4UpdateScheduleRequest) GetDescription() string {
+	if v == nil {
 		return ""
 	}
-	return o.Description
+	return v.Description
 }
 
-func (o *V4UpdateScheduleRequest) GetOwnerID() string {
-	if o == nil {
+func (v *V4UpdateScheduleRequest) GetOwnerID() string {
+	if v == nil {
 		return ""
 	}
-	return o.OwnerID
+	return v.OwnerID
 }
 
-func (o *V4UpdateScheduleRequest) GetOwnerType() V4UpdateScheduleRequestOwnerType {
-	if o == nil {
+func (v *V4UpdateScheduleRequest) GetOwnerType() V4UpdateScheduleRequestOwnerType {
+	if v == nil {
 		return V4UpdateScheduleRequestOwnerType("")
 	}
-	return o.OwnerType
+	return v.OwnerType
 }
 
-func (o *V4UpdateScheduleRequest) GetTags() []V4Tag {
-	if o == nil {
+func (v *V4UpdateScheduleRequest) GetTags() []V4Tag {
+	if v == nil {
 		return []V4Tag{}
 	}
-	return o.Tags
+	return v.Tags
 }

@@ -10,22 +10,22 @@ type DeduplicationRulesGetDeduplicationRulesRequest struct {
 	ServiceID string `pathParam:"style=simple,explode=false,name=serviceID"`
 }
 
-func (o *DeduplicationRulesGetDeduplicationRulesRequest) GetServiceID() string {
-	if o == nil {
+func (d *DeduplicationRulesGetDeduplicationRulesRequest) GetServiceID() string {
+	if d == nil {
 		return ""
 	}
-	return o.ServiceID
+	return d.ServiceID
 }
 
 type DeduplicationRulesGetDeduplicationRulesData struct {
 	Rules []components.V3ServicesDeduplicationRulesDeduplicationRuleResponse `json:"rules"`
 }
 
-func (o *DeduplicationRulesGetDeduplicationRulesData) GetRules() []components.V3ServicesDeduplicationRulesDeduplicationRuleResponse {
-	if o == nil {
+func (d *DeduplicationRulesGetDeduplicationRulesData) GetRules() []components.V3ServicesDeduplicationRulesDeduplicationRuleResponse {
+	if d == nil {
 		return []components.V3ServicesDeduplicationRulesDeduplicationRuleResponse{}
 	}
-	return o.Rules
+	return d.Rules
 }
 
 // DeduplicationRulesGetDeduplicationRulesResponseBody - The request has succeeded.
@@ -33,11 +33,11 @@ type DeduplicationRulesGetDeduplicationRulesResponseBody struct {
 	Data DeduplicationRulesGetDeduplicationRulesData `json:"data"`
 }
 
-func (o *DeduplicationRulesGetDeduplicationRulesResponseBody) GetData() DeduplicationRulesGetDeduplicationRulesData {
-	if o == nil {
+func (d *DeduplicationRulesGetDeduplicationRulesResponseBody) GetData() DeduplicationRulesGetDeduplicationRulesData {
+	if d == nil {
 		return DeduplicationRulesGetDeduplicationRulesData{}
 	}
-	return o.Data
+	return d.Data
 }
 
 type DeduplicationRulesGetDeduplicationRulesResponse struct {
@@ -46,16 +46,16 @@ type DeduplicationRulesGetDeduplicationRulesResponse struct {
 	Object *DeduplicationRulesGetDeduplicationRulesResponseBody
 }
 
-func (o *DeduplicationRulesGetDeduplicationRulesResponse) GetHTTPMeta() components.HTTPMetadata {
-	if o == nil {
+func (d *DeduplicationRulesGetDeduplicationRulesResponse) GetHTTPMeta() components.HTTPMetadata {
+	if d == nil {
 		return components.HTTPMetadata{}
 	}
-	return o.HTTPMeta
+	return d.HTTPMeta
 }
 
-func (o *DeduplicationRulesGetDeduplicationRulesResponse) GetObject() *DeduplicationRulesGetDeduplicationRulesResponseBody {
-	if o == nil {
+func (d *DeduplicationRulesGetDeduplicationRulesResponse) GetObject() *DeduplicationRulesGetDeduplicationRulesResponseBody {
+	if d == nil {
 		return nil
 	}
-	return o.Object
+	return d.Object
 }

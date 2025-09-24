@@ -8,23 +8,23 @@ type V3ServicesServiceSlack struct {
 	Time      int64  `json:"time"`
 }
 
-func (o *V3ServicesServiceSlack) GetChannelID() string {
-	if o == nil {
+func (v *V3ServicesServiceSlack) GetChannelID() string {
+	if v == nil {
 		return ""
 	}
-	return o.ChannelID
+	return v.ChannelID
 }
 
-func (o *V3ServicesServiceSlack) GetName() string {
-	if o == nil {
+func (v *V3ServicesServiceSlack) GetName() string {
+	if v == nil {
 		return ""
 	}
-	return o.Name
+	return v.Name
 }
 
-func (o *V3ServicesServiceSlack) GetTime() int64 {
-	if o == nil {
+func (v *V3ServicesServiceSlack) GetTime() int64 {
+	if v == nil {
 		return 0
 	}
-	return o.Time
+	return v.Time
 }

@@ -6,9 +6,9 @@ type V3ServicesTaggingRulesTagsObject struct {
 	Severity *V3ServicesTaggingRulesTagConfigObject `json:"severity,omitempty"`
 }
 
-func (o *V3ServicesTaggingRulesTagsObject) GetSeverity() *V3ServicesTaggingRulesTagConfigObject {
-	if o == nil {
+func (v *V3ServicesTaggingRulesTagsObject) GetSeverity() *V3ServicesTaggingRulesTagConfigObject {
+	if v == nil {
 		return nil
 	}
-	return o.Severity
+	return v.Severity
 }

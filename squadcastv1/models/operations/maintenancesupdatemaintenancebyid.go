@@ -12,25 +12,25 @@ type MaintenancesUpdateMaintenanceByIDRequest struct {
 	V4StatusPagesMaintenancesUpdateMaintenanceByIDRequest components.V4StatusPagesMaintenancesUpdateMaintenanceByIDRequest `request:"mediaType=application/json"`
 }
 
-func (o *MaintenancesUpdateMaintenanceByIDRequest) GetStatuspageID() string {
-	if o == nil {
+func (m *MaintenancesUpdateMaintenanceByIDRequest) GetStatuspageID() string {
+	if m == nil {
 		return ""
 	}
-	return o.StatuspageID
+	return m.StatuspageID
 }
 
-func (o *MaintenancesUpdateMaintenanceByIDRequest) GetMaintenanceID() string {
-	if o == nil {
+func (m *MaintenancesUpdateMaintenanceByIDRequest) GetMaintenanceID() string {
+	if m == nil {
 		return ""
 	}
-	return o.MaintenanceID
+	return m.MaintenanceID
 }
 
-func (o *MaintenancesUpdateMaintenanceByIDRequest) GetV4StatusPagesMaintenancesUpdateMaintenanceByIDRequest() components.V4StatusPagesMaintenancesUpdateMaintenanceByIDRequest {
-	if o == nil {
+func (m *MaintenancesUpdateMaintenanceByIDRequest) GetV4StatusPagesMaintenancesUpdateMaintenanceByIDRequest() components.V4StatusPagesMaintenancesUpdateMaintenanceByIDRequest {
+	if m == nil {
 		return components.V4StatusPagesMaintenancesUpdateMaintenanceByIDRequest{}
 	}
-	return o.V4StatusPagesMaintenancesUpdateMaintenanceByIDRequest
+	return m.V4StatusPagesMaintenancesUpdateMaintenanceByIDRequest
 }
 
 // MaintenancesUpdateMaintenanceByIDResponseBody - The request has succeeded.
@@ -38,11 +38,11 @@ type MaintenancesUpdateMaintenanceByIDResponseBody struct {
 	Data components.V4StatusPagesMaintenancesUpdateMaintenanceByIDResponse `json:"data"`
 }
 
-func (o *MaintenancesUpdateMaintenanceByIDResponseBody) GetData() components.V4StatusPagesMaintenancesUpdateMaintenanceByIDResponse {
-	if o == nil {
+func (m *MaintenancesUpdateMaintenanceByIDResponseBody) GetData() components.V4StatusPagesMaintenancesUpdateMaintenanceByIDResponse {
+	if m == nil {
 		return components.V4StatusPagesMaintenancesUpdateMaintenanceByIDResponse{}
 	}
-	return o.Data
+	return m.Data
 }
 
 type MaintenancesUpdateMaintenanceByIDResponse struct {
@@ -51,16 +51,16 @@ type MaintenancesUpdateMaintenanceByIDResponse struct {
 	Object *MaintenancesUpdateMaintenanceByIDResponseBody
 }
 
-func (o *MaintenancesUpdateMaintenanceByIDResponse) GetHTTPMeta() components.HTTPMetadata {
-	if o == nil {
+func (m *MaintenancesUpdateMaintenanceByIDResponse) GetHTTPMeta() components.HTTPMetadata {
+	if m == nil {
 		return components.HTTPMetadata{}
 	}
-	return o.HTTPMeta
+	return m.HTTPMeta
 }
 
-func (o *MaintenancesUpdateMaintenanceByIDResponse) GetObject() *MaintenancesUpdateMaintenanceByIDResponseBody {
-	if o == nil {
+func (m *MaintenancesUpdateMaintenanceByIDResponse) GetObject() *MaintenancesUpdateMaintenanceByIDResponseBody {
+	if m == nil {
 		return nil
 	}
-	return o.Object
+	return m.Object
 }

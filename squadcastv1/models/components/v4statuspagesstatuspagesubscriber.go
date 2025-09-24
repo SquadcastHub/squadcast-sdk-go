@@ -28,51 +28,51 @@ func (v *V4StatusPagesStatusPageSubscriber) UnmarshalJSON(data []byte) error {
 	return nil
 }
 
-func (o *V4StatusPagesStatusPageSubscriber) GetID() int64 {
-	if o == nil {
+func (v *V4StatusPagesStatusPageSubscriber) GetID() int64 {
+	if v == nil {
 		return 0
 	}
-	return o.ID
+	return v.ID
 }
 
-func (o *V4StatusPagesStatusPageSubscriber) GetType() string {
-	if o == nil {
+func (v *V4StatusPagesStatusPageSubscriber) GetType() string {
+	if v == nil {
 		return ""
 	}
-	return o.Type
+	return v.Type
 }
 
-func (o *V4StatusPagesStatusPageSubscriber) GetEmailID() string {
-	if o == nil {
+func (v *V4StatusPagesStatusPageSubscriber) GetEmailID() string {
+	if v == nil {
 		return ""
 	}
-	return o.EmailID
+	return v.EmailID
 }
 
-func (o *V4StatusPagesStatusPageSubscriber) GetWebhookURL() string {
-	if o == nil {
+func (v *V4StatusPagesStatusPageSubscriber) GetWebhookURL() string {
+	if v == nil {
 		return ""
 	}
-	return o.WebhookURL
+	return v.WebhookURL
 }
 
-func (o *V4StatusPagesStatusPageSubscriber) GetStatus() string {
-	if o == nil {
+func (v *V4StatusPagesStatusPageSubscriber) GetStatus() string {
+	if v == nil {
 		return ""
 	}
-	return o.Status
+	return v.Status
 }
 
-func (o *V4StatusPagesStatusPageSubscriber) GetComponentList() []V4StatusPagesStatusPageSubscriberComponent {
-	if o == nil {
+func (v *V4StatusPagesStatusPageSubscriber) GetComponentList() []V4StatusPagesStatusPageSubscriberComponent {
+	if v == nil {
 		return nil
 	}
-	return o.ComponentList
+	return v.ComponentList
 }
 
-func (o *V4StatusPagesStatusPageSubscriber) GetSubscribedOn() time.Time {
-	if o == nil {
+func (v *V4StatusPagesStatusPageSubscriber) GetSubscribedOn() time.Time {
+	if v == nil {
 		return time.Time{}
 	}
-	return o.SubscribedOn
+	return v.SubscribedOn
 }

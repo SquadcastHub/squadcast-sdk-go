@@ -8,23 +8,23 @@ type V4Tag struct {
 	Color string `json:"color"`
 }
 
-func (o *V4Tag) GetKey() string {
-	if o == nil {
+func (v *V4Tag) GetKey() string {
+	if v == nil {
 		return ""
 	}
-	return o.Key
+	return v.Key
 }
 
-func (o *V4Tag) GetValue() string {
-	if o == nil {
+func (v *V4Tag) GetValue() string {
+	if v == nil {
 		return ""
 	}
-	return o.Value
+	return v.Value
 }
 
-func (o *V4Tag) GetColor() string {
-	if o == nil {
+func (v *V4Tag) GetColor() string {
+	if v == nil {
 		return ""
 	}
-	return o.Color
+	return v.Color
 }

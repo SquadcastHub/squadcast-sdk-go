@@ -12,18 +12,18 @@ type V4StatusPagesIssuesCreateIssueRequestComponent struct {
 	StatusID *int64 `json:"statusID,omitempty"`
 }
 
-func (o *V4StatusPagesIssuesCreateIssueRequestComponent) GetID() *int64 {
-	if o == nil {
+func (v *V4StatusPagesIssuesCreateIssueRequestComponent) GetID() *int64 {
+	if v == nil {
 		return nil
 	}
-	return o.ID
+	return v.ID
 }
 
-func (o *V4StatusPagesIssuesCreateIssueRequestComponent) GetStatusID() *int64 {
-	if o == nil {
+func (v *V4StatusPagesIssuesCreateIssueRequestComponent) GetStatusID() *int64 {
+	if v == nil {
 		return nil
 	}
-	return o.StatusID
+	return v.StatusID
 }
 
 type V4StatusPagesIssuesCreateIssueRequestStateMessage struct {
@@ -42,18 +42,18 @@ func (v *V4StatusPagesIssuesCreateIssueRequestStateMessage) UnmarshalJSON(data [
 	return nil
 }
 
-func (o *V4StatusPagesIssuesCreateIssueRequestStateMessage) GetText() *string {
-	if o == nil {
+func (v *V4StatusPagesIssuesCreateIssueRequestStateMessage) GetText() *string {
+	if v == nil {
 		return nil
 	}
-	return o.Text
+	return v.Text
 }
 
-func (o *V4StatusPagesIssuesCreateIssueRequestStateMessage) GetTimestamp() *time.Time {
-	if o == nil {
+func (v *V4StatusPagesIssuesCreateIssueRequestStateMessage) GetTimestamp() *time.Time {
+	if v == nil {
 		return nil
 	}
-	return o.Timestamp
+	return v.Timestamp
 }
 
 type V4StatusPagesIssuesCreateIssueRequestIssue struct {
@@ -61,18 +61,18 @@ type V4StatusPagesIssuesCreateIssueRequestIssue struct {
 	StateMessages []V4StatusPagesIssuesCreateIssueRequestStateMessage `json:"stateMessages,omitempty"`
 }
 
-func (o *V4StatusPagesIssuesCreateIssueRequestIssue) GetStateID() *int64 {
-	if o == nil {
+func (v *V4StatusPagesIssuesCreateIssueRequestIssue) GetStateID() *int64 {
+	if v == nil {
 		return nil
 	}
-	return o.StateID
+	return v.StateID
 }
 
-func (o *V4StatusPagesIssuesCreateIssueRequestIssue) GetStateMessages() []V4StatusPagesIssuesCreateIssueRequestStateMessage {
-	if o == nil {
+func (v *V4StatusPagesIssuesCreateIssueRequestIssue) GetStateMessages() []V4StatusPagesIssuesCreateIssueRequestStateMessage {
+	if v == nil {
 		return nil
 	}
-	return o.StateMessages
+	return v.StateMessages
 }
 
 type V4StatusPagesIssuesCreateIssueRequest struct {
@@ -82,30 +82,30 @@ type V4StatusPagesIssuesCreateIssueRequest struct {
 	Issues     []V4StatusPagesIssuesCreateIssueRequestIssue     `json:"issues"`
 }
 
-func (o *V4StatusPagesIssuesCreateIssueRequest) GetTitle() string {
-	if o == nil {
+func (v *V4StatusPagesIssuesCreateIssueRequest) GetTitle() string {
+	if v == nil {
 		return ""
 	}
-	return o.Title
+	return v.Title
 }
 
-func (o *V4StatusPagesIssuesCreateIssueRequest) GetStatusID() *int64 {
-	if o == nil {
+func (v *V4StatusPagesIssuesCreateIssueRequest) GetStatusID() *int64 {
+	if v == nil {
 		return nil
 	}
-	return o.StatusID
+	return v.StatusID
 }
 
-func (o *V4StatusPagesIssuesCreateIssueRequest) GetComponents() []V4StatusPagesIssuesCreateIssueRequestComponent {
-	if o == nil {
+func (v *V4StatusPagesIssuesCreateIssueRequest) GetComponents() []V4StatusPagesIssuesCreateIssueRequestComponent {
+	if v == nil {
 		return []V4StatusPagesIssuesCreateIssueRequestComponent{}
 	}
-	return o.Components
+	return v.Components
 }
 
-func (o *V4StatusPagesIssuesCreateIssueRequest) GetIssues() []V4StatusPagesIssuesCreateIssueRequestIssue {
-	if o == nil {
+func (v *V4StatusPagesIssuesCreateIssueRequest) GetIssues() []V4StatusPagesIssuesCreateIssueRequestIssue {
+	if v == nil {
 		return []V4StatusPagesIssuesCreateIssueRequestIssue{}
 	}
-	return o.Issues
+	return v.Issues
 }

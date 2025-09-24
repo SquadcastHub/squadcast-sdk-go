@@ -7,18 +7,18 @@ type AdditionalResponder struct {
 	Type string `json:"type"`
 }
 
-func (o *AdditionalResponder) GetID() string {
-	if o == nil {
+func (a *AdditionalResponder) GetID() string {
+	if a == nil {
 		return ""
 	}
-	return o.ID
+	return a.ID
 }
 
-func (o *AdditionalResponder) GetType() string {
-	if o == nil {
+func (a *AdditionalResponder) GetType() string {
+	if a == nil {
 		return ""
 	}
-	return o.Type
+	return a.Type
 }
 
 // V3IncidentsAdditionalRespondersAddAdditionalRespondersRequest - Request body for adding additional responders to an incident.
@@ -26,9 +26,9 @@ type V3IncidentsAdditionalRespondersAddAdditionalRespondersRequest struct {
 	AdditionalResponders []AdditionalResponder `json:"additional_responders"`
 }
 
-func (o *V3IncidentsAdditionalRespondersAddAdditionalRespondersRequest) GetAdditionalResponders() []AdditionalResponder {
-	if o == nil {
+func (v *V3IncidentsAdditionalRespondersAddAdditionalRespondersRequest) GetAdditionalResponders() []AdditionalResponder {
+	if v == nil {
 		return []AdditionalResponder{}
 	}
-	return o.AdditionalResponders
+	return v.AdditionalResponders
 }

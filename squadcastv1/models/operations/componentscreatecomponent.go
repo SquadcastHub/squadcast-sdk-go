@@ -11,18 +11,18 @@ type ComponentsCreateComponentRequest struct {
 	V4StatusPagesComponentsCreateComponentRequest components.V4StatusPagesComponentsCreateComponentRequest `request:"mediaType=application/json"`
 }
 
-func (o *ComponentsCreateComponentRequest) GetStatuspageID() string {
-	if o == nil {
+func (c *ComponentsCreateComponentRequest) GetStatuspageID() string {
+	if c == nil {
 		return ""
 	}
-	return o.StatuspageID
+	return c.StatuspageID
 }
 
-func (o *ComponentsCreateComponentRequest) GetV4StatusPagesComponentsCreateComponentRequest() components.V4StatusPagesComponentsCreateComponentRequest {
-	if o == nil {
+func (c *ComponentsCreateComponentRequest) GetV4StatusPagesComponentsCreateComponentRequest() components.V4StatusPagesComponentsCreateComponentRequest {
+	if c == nil {
 		return components.V4StatusPagesComponentsCreateComponentRequest{}
 	}
-	return o.V4StatusPagesComponentsCreateComponentRequest
+	return c.V4StatusPagesComponentsCreateComponentRequest
 }
 
 // ComponentsCreateComponentResponseBody - The request has succeeded.
@@ -30,11 +30,11 @@ type ComponentsCreateComponentResponseBody struct {
 	Data components.V4StatusPagesComponentsCreateComponentResponse `json:"data"`
 }
 
-func (o *ComponentsCreateComponentResponseBody) GetData() components.V4StatusPagesComponentsCreateComponentResponse {
-	if o == nil {
+func (c *ComponentsCreateComponentResponseBody) GetData() components.V4StatusPagesComponentsCreateComponentResponse {
+	if c == nil {
 		return components.V4StatusPagesComponentsCreateComponentResponse{}
 	}
-	return o.Data
+	return c.Data
 }
 
 type ComponentsCreateComponentResponse struct {
@@ -43,16 +43,16 @@ type ComponentsCreateComponentResponse struct {
 	Object *ComponentsCreateComponentResponseBody
 }
 
-func (o *ComponentsCreateComponentResponse) GetHTTPMeta() components.HTTPMetadata {
-	if o == nil {
+func (c *ComponentsCreateComponentResponse) GetHTTPMeta() components.HTTPMetadata {
+	if c == nil {
 		return components.HTTPMetadata{}
 	}
-	return o.HTTPMeta
+	return c.HTTPMeta
 }
 
-func (o *ComponentsCreateComponentResponse) GetObject() *ComponentsCreateComponentResponseBody {
-	if o == nil {
+func (c *ComponentsCreateComponentResponse) GetObject() *ComponentsCreateComponentResponseBody {
+	if c == nil {
 		return nil
 	}
-	return o.Object
+	return c.Object
 }

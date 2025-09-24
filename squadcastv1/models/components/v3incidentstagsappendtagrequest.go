@@ -9,9 +9,9 @@ type V3IncidentsTagsAppendTagRequest struct {
 	Tags *V3IncidentsTagsAppendTagRequestTags `json:"tags,omitempty"`
 }
 
-func (o *V3IncidentsTagsAppendTagRequest) GetTags() *V3IncidentsTagsAppendTagRequestTags {
-	if o == nil {
+func (v *V3IncidentsTagsAppendTagRequest) GetTags() *V3IncidentsTagsAppendTagRequestTags {
+	if v == nil {
 		return nil
 	}
-	return o.Tags
+	return v.Tags
 }

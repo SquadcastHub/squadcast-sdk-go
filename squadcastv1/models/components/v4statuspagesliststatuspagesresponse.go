@@ -7,18 +7,18 @@ type V4StatusPagesListStatusPagesResponseMeta struct {
 	OrgTotalCount int64 `json:"orgTotalCount"`
 }
 
-func (o *V4StatusPagesListStatusPagesResponseMeta) GetTotalCount() int64 {
-	if o == nil {
+func (v *V4StatusPagesListStatusPagesResponseMeta) GetTotalCount() int64 {
+	if v == nil {
 		return 0
 	}
-	return o.TotalCount
+	return v.TotalCount
 }
 
-func (o *V4StatusPagesListStatusPagesResponseMeta) GetOrgTotalCount() int64 {
-	if o == nil {
+func (v *V4StatusPagesListStatusPagesResponseMeta) GetOrgTotalCount() int64 {
+	if v == nil {
 		return 0
 	}
-	return o.OrgTotalCount
+	return v.OrgTotalCount
 }
 
 type V4StatusPagesListStatusPagesResponse struct {
@@ -26,16 +26,16 @@ type V4StatusPagesListStatusPagesResponse struct {
 	Meta V4StatusPagesListStatusPagesResponseMeta `json:"meta"`
 }
 
-func (o *V4StatusPagesListStatusPagesResponse) GetData() []V4StatusPagesStatusPage {
-	if o == nil {
+func (v *V4StatusPagesListStatusPagesResponse) GetData() []V4StatusPagesStatusPage {
+	if v == nil {
 		return []V4StatusPagesStatusPage{}
 	}
-	return o.Data
+	return v.Data
 }
 
-func (o *V4StatusPagesListStatusPagesResponse) GetMeta() V4StatusPagesListStatusPagesResponseMeta {
-	if o == nil {
+func (v *V4StatusPagesListStatusPagesResponse) GetMeta() V4StatusPagesListStatusPagesResponseMeta {
+	if v == nil {
 		return V4StatusPagesListStatusPagesResponseMeta{}
 	}
-	return o.Meta
+	return v.Meta
 }

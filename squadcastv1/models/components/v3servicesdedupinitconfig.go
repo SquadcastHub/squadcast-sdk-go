@@ -38,16 +38,16 @@ type V3ServicesDedupInitConfig struct {
 	TimeUnit   V3ServicesDedupInitConfigTimeUnit `json:"time_unit"`
 }
 
-func (o *V3ServicesDedupInitConfig) GetTimeWindow() int64 {
-	if o == nil {
+func (v *V3ServicesDedupInitConfig) GetTimeWindow() int64 {
+	if v == nil {
 		return 0
 	}
-	return o.TimeWindow
+	return v.TimeWindow
 }
 
-func (o *V3ServicesDedupInitConfig) GetTimeUnit() V3ServicesDedupInitConfigTimeUnit {
-	if o == nil {
+func (v *V3ServicesDedupInitConfig) GetTimeUnit() V3ServicesDedupInitConfigTimeUnit {
+	if v == nil {
 		return V3ServicesDedupInitConfigTimeUnit("")
 	}
-	return o.TimeUnit
+	return v.TimeUnit
 }

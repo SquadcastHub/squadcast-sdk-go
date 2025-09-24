@@ -23,16 +23,16 @@ func (v *V3IncidentsIncidentActionsCircleCIErrorMeta) UnmarshalJSON(data []byte)
 	return nil
 }
 
-func (o *V3IncidentsIncidentActionsCircleCIErrorMeta) GetStatusCode() int64 {
-	if o == nil {
+func (v *V3IncidentsIncidentActionsCircleCIErrorMeta) GetStatusCode() int64 {
+	if v == nil {
 		return 0
 	}
-	return o.StatusCode
+	return v.StatusCode
 }
 
-func (o *V3IncidentsIncidentActionsCircleCIErrorMeta) GetErrorMessage() string {
-	if o == nil {
+func (v *V3IncidentsIncidentActionsCircleCIErrorMeta) GetErrorMessage() string {
+	if v == nil {
 		return ""
 	}
-	return o.ErrorMessage
+	return v.ErrorMessage
 }

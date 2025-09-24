@@ -16,79 +16,79 @@ type V4UpdateRotationRequest struct {
 	EndsAfterIterations         *int64            `json:"endsAfterIterations,omitempty"`
 }
 
-func (o *V4UpdateRotationRequest) GetName() string {
-	if o == nil {
+func (v *V4UpdateRotationRequest) GetName() string {
+	if v == nil {
 		return ""
 	}
-	return o.Name
+	return v.Name
 }
 
-func (o *V4UpdateRotationRequest) GetColor() *string {
-	if o == nil {
+func (v *V4UpdateRotationRequest) GetColor() *string {
+	if v == nil {
 		return nil
 	}
-	return o.Color
+	return v.Color
 }
 
-func (o *V4UpdateRotationRequest) GetStartDate() string {
-	if o == nil {
+func (v *V4UpdateRotationRequest) GetStartDate() string {
+	if v == nil {
 		return ""
 	}
-	return o.StartDate
+	return v.StartDate
 }
 
-func (o *V4UpdateRotationRequest) GetPeriod() string {
-	if o == nil {
+func (v *V4UpdateRotationRequest) GetPeriod() string {
+	if v == nil {
 		return ""
 	}
-	return o.Period
+	return v.Period
 }
 
-func (o *V4UpdateRotationRequest) GetCustomPeriodFrequency() *int64 {
-	if o == nil {
+func (v *V4UpdateRotationRequest) GetCustomPeriodFrequency() *int64 {
+	if v == nil {
 		return nil
 	}
-	return o.CustomPeriodFrequency
+	return v.CustomPeriodFrequency
 }
 
-func (o *V4UpdateRotationRequest) GetCustomPeriodUnit() *string {
-	if o == nil {
+func (v *V4UpdateRotationRequest) GetCustomPeriodUnit() *string {
+	if v == nil {
 		return nil
 	}
-	return o.CustomPeriodUnit
+	return v.CustomPeriodUnit
 }
 
-func (o *V4UpdateRotationRequest) GetShiftTimeSlots() []V4ShiftTimeSlot {
-	if o == nil {
+func (v *V4UpdateRotationRequest) GetShiftTimeSlots() []V4ShiftTimeSlot {
+	if v == nil {
 		return nil
 	}
-	return o.ShiftTimeSlots
+	return v.ShiftTimeSlots
 }
 
-func (o *V4UpdateRotationRequest) GetChangeParticipantsFrequency() int64 {
-	if o == nil {
+func (v *V4UpdateRotationRequest) GetChangeParticipantsFrequency() int64 {
+	if v == nil {
 		return 0
 	}
-	return o.ChangeParticipantsFrequency
+	return v.ChangeParticipantsFrequency
 }
 
-func (o *V4UpdateRotationRequest) GetChangeParticipantsUnit() string {
-	if o == nil {
+func (v *V4UpdateRotationRequest) GetChangeParticipantsUnit() string {
+	if v == nil {
 		return ""
 	}
-	return o.ChangeParticipantsUnit
+	return v.ChangeParticipantsUnit
 }
 
-func (o *V4UpdateRotationRequest) GetEndDate() *string {
-	if o == nil {
+func (v *V4UpdateRotationRequest) GetEndDate() *string {
+	if v == nil {
 		return nil
 	}
-	return o.EndDate
+	return v.EndDate
 }
 
-func (o *V4UpdateRotationRequest) GetEndsAfterIterations() *int64 {
-	if o == nil {
+func (v *V4UpdateRotationRequest) GetEndsAfterIterations() *int64 {
+	if v == nil {
 		return nil
 	}
-	return o.EndsAfterIterations
+	return v.EndsAfterIterations
 }

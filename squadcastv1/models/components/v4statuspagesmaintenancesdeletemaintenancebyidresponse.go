@@ -28,51 +28,51 @@ func (v *V4StatusPagesMaintenancesDeleteMaintenanceByIDResponse) UnmarshalJSON(d
 	return nil
 }
 
-func (o *V4StatusPagesMaintenancesDeleteMaintenanceByIDResponse) GetID() int64 {
-	if o == nil {
+func (v *V4StatusPagesMaintenancesDeleteMaintenanceByIDResponse) GetID() int64 {
+	if v == nil {
 		return 0
 	}
-	return o.ID
+	return v.ID
 }
 
-func (o *V4StatusPagesMaintenancesDeleteMaintenanceByIDResponse) GetTitle() string {
-	if o == nil {
+func (v *V4StatusPagesMaintenancesDeleteMaintenanceByIDResponse) GetTitle() string {
+	if v == nil {
 		return ""
 	}
-	return o.Title
+	return v.Title
 }
 
-func (o *V4StatusPagesMaintenancesDeleteMaintenanceByIDResponse) GetPageID() int64 {
-	if o == nil {
+func (v *V4StatusPagesMaintenancesDeleteMaintenanceByIDResponse) GetPageID() int64 {
+	if v == nil {
 		return 0
 	}
-	return o.PageID
+	return v.PageID
 }
 
-func (o *V4StatusPagesMaintenancesDeleteMaintenanceByIDResponse) GetNote() string {
-	if o == nil {
+func (v *V4StatusPagesMaintenancesDeleteMaintenanceByIDResponse) GetNote() string {
+	if v == nil {
 		return ""
 	}
-	return o.Note
+	return v.Note
 }
 
-func (o *V4StatusPagesMaintenancesDeleteMaintenanceByIDResponse) GetComponents() []int64 {
-	if o == nil {
+func (v *V4StatusPagesMaintenancesDeleteMaintenanceByIDResponse) GetComponents() []int64 {
+	if v == nil {
 		return nil
 	}
-	return o.Components
+	return v.Components
 }
 
-func (o *V4StatusPagesMaintenancesDeleteMaintenanceByIDResponse) GetStartTime() time.Time {
-	if o == nil {
+func (v *V4StatusPagesMaintenancesDeleteMaintenanceByIDResponse) GetStartTime() time.Time {
+	if v == nil {
 		return time.Time{}
 	}
-	return o.StartTime
+	return v.StartTime
 }
 
-func (o *V4StatusPagesMaintenancesDeleteMaintenanceByIDResponse) GetEndTime() time.Time {
-	if o == nil {
+func (v *V4StatusPagesMaintenancesDeleteMaintenanceByIDResponse) GetEndTime() time.Time {
+	if v == nil {
 		return time.Time{}
 	}
-	return o.EndTime
+	return v.EndTime
 }

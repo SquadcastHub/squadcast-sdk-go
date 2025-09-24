@@ -41,37 +41,37 @@ type V4StatusPagesNewStatusPageComponentList struct {
 	Components        []V4StatusPagesNewStatusPageComponent       `json:"components,omitempty"`
 }
 
-func (o *V4StatusPagesNewStatusPageComponentList) GetType() V4StatusPagesNewStatusPageComponentListType {
-	if o == nil {
+func (v *V4StatusPagesNewStatusPageComponentList) GetType() V4StatusPagesNewStatusPageComponentListType {
+	if v == nil {
 		return V4StatusPagesNewStatusPageComponentListType("")
 	}
-	return o.Type
+	return v.Type
 }
 
-func (o *V4StatusPagesNewStatusPageComponentList) GetName() string {
-	if o == nil {
+func (v *V4StatusPagesNewStatusPageComponentList) GetName() string {
+	if v == nil {
 		return ""
 	}
-	return o.Name
+	return v.Name
 }
 
-func (o *V4StatusPagesNewStatusPageComponentList) GetAllowSubscription() *bool {
-	if o == nil {
+func (v *V4StatusPagesNewStatusPageComponentList) GetAllowSubscription() *bool {
+	if v == nil {
 		return nil
 	}
-	return o.AllowSubscription
+	return v.AllowSubscription
 }
 
-func (o *V4StatusPagesNewStatusPageComponentList) GetDescription() *string {
-	if o == nil {
+func (v *V4StatusPagesNewStatusPageComponentList) GetDescription() *string {
+	if v == nil {
 		return nil
 	}
-	return o.Description
+	return v.Description
 }
 
-func (o *V4StatusPagesNewStatusPageComponentList) GetComponents() []V4StatusPagesNewStatusPageComponent {
-	if o == nil {
+func (v *V4StatusPagesNewStatusPageComponentList) GetComponents() []V4StatusPagesNewStatusPageComponent {
+	if v == nil {
 		return nil
 	}
-	return o.Components
+	return v.Components
 }

@@ -8,16 +8,16 @@ type V3IncidentsTagsAssignTo struct {
 	Type *string `json:"type,omitempty"`
 }
 
-func (o *V3IncidentsTagsAssignTo) GetID() string {
-	if o == nil {
+func (v *V3IncidentsTagsAssignTo) GetID() string {
+	if v == nil {
 		return ""
 	}
-	return o.ID
+	return v.ID
 }
 
-func (o *V3IncidentsTagsAssignTo) GetType() *string {
-	if o == nil {
+func (v *V3IncidentsTagsAssignTo) GetType() *string {
+	if v == nil {
 		return nil
 	}
-	return o.Type
+	return v.Type
 }
