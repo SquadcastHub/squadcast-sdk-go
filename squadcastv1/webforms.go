@@ -1509,7 +1509,7 @@ func (s *Webforms) Update(ctx context.Context, webformID int64, v3WebformsCreate
 // Remove Webform
 // Remove a webform from the organization.
 // Requires `access_token` as a `Bearer {{token}}` in the `Authorization` header with `user-write` scope.
-func (s *Webforms) Remove(ctx context.Context, webformID int64, ownerID *string, opts ...operations.Option) (*operations.WebformsRemoveWebformResponse, error) {
+func (s *Webforms) Remove(ctx context.Context, webformID int64, ownerID string, opts ...operations.Option) (*operations.WebformsRemoveWebformResponse, error) {
 	request := operations.WebformsRemoveWebformRequest{
 		WebformID: webformID,
 		OwnerID:   ownerID,
@@ -2000,7 +2000,7 @@ func (s *Webforms) Remove(ctx context.Context, webformID int64, ownerID *string,
 // Get Webform By ID
 // Returns a webform details of the given `webformId` in the request param.
 // Requires `access_token` as a `Bearer {{token}}` in the `Authorization` header with `read` scope.
-func (s *Webforms) Get(ctx context.Context, webformID int64, ownerID *string, opts ...operations.Option) (*operations.WebformsGetWebformByIDResponse, error) {
+func (s *Webforms) Get(ctx context.Context, webformID int64, ownerID string, opts ...operations.Option) (*operations.WebformsGetWebformByIDResponse, error) {
 	request := operations.WebformsGetWebformByIDRequest{
 		WebformID: webformID,
 		OwnerID:   ownerID,

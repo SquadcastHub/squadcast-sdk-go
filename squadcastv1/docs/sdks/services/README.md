@@ -46,7 +46,7 @@ func main() {
         squadcastsdk.WithSecurity(os.Getenv("SQUADCASTSDK_BEARER_AUTH")),
     )
 
-    res, err := s.Services.List(ctx, nil, nil, nil)
+    res, err := s.Services.List(ctx, "<id>", nil, nil)
     if err != nil {
         log.Fatal(err)
     }
@@ -61,7 +61,7 @@ func main() {
 | Parameter                                                | Type                                                     | Required                                                 | Description                                              |
 | -------------------------------------------------------- | -------------------------------------------------------- | -------------------------------------------------------- | -------------------------------------------------------- |
 | `ctx`                                                    | [context.Context](https://pkg.go.dev/context#Context)    | :heavy_check_mark:                                       | The context to use for the request.                      |
-| `ownerID`                                                | **string*                                                | :heavy_minus_sign:                                       | N/A                                                      |
+| `ownerID`                                                | *string*                                                 | :heavy_check_mark:                                       | N/A                                                      |
 | `entityOwner`                                            | **string*                                                | :heavy_minus_sign:                                       | N/A                                                      |
 | `name`                                                   | **string*                                                | :heavy_minus_sign:                                       | N/A                                                      |
 | `opts`                                                   | [][operations.Option](../../models/operations/option.md) | :heavy_minus_sign:                                       | The options for this request.                            |

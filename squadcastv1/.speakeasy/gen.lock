@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 279dacab-faec-448f-bc08-f41bb3b1dd64
 management:
-  docChecksum: ca3f815a3fbf41a0590f978e49c52bac
+  docChecksum: 58d87809211e6d7e6bb7a17aaf340989
   docVersion: 1.0.0
-  speakeasyVersion: 1.623.0
-  generationVersion: 2.713.0
-  releaseVersion: 1.1.0
-  configChecksum: dc55bea293974edbe965c3f786ca0497
+  speakeasyVersion: 1.627.0
+  generationVersion: 2.715.0
+  releaseVersion: 1.1.1
+  configChecksum: d44d32c16d56a560f896d7f3579347fa
   repoURL: https://github.com/SquadcastHub/squadcast-sdk-go.git
   repoSubDirectory: squadcastv1
   installationURL: https://github.com/SquadcastHub/squadcast-sdk-go/squadcastv1
@@ -169,11 +169,6 @@ generatedFiles:
   - /models/apierrors/sloupdateslo.go
   - /models/apierrors/snoozenotificationssnoozeincidentnotifications.go
   - /models/apierrors/snoozenotificationsunsnoozeincidentnotifications.go
-  - /models/apierrors/squadscreatesquad.go
-  - /models/apierrors/squadsdeletesquad.go
-  - /models/apierrors/squadsgetsquadbyid.go
-  - /models/apierrors/squadsgetsquadbyteam.go
-  - /models/apierrors/squadsupdatesquad.go
   - /models/apierrors/statuspagescreatestatuspage.go
   - /models/apierrors/statuspagesdeletestatuspagebyid.go
   - /models/apierrors/statuspagesgetstatuspagebyid.go
@@ -442,9 +437,6 @@ generatedFiles:
   - /models/components/v3slosloviolatingincidentresponse.go
   - /models/components/v3sloslowithinsightsresponse.go
   - /models/components/v3slotimeintervaltype.go
-  - /models/components/v3squadscreatesquadrequest.go
-  - /models/components/v3squadssquadresponse.go
-  - /models/components/v3squadsupdatesquadrequest.go
   - /models/components/v3teamsabilities.go
   - /models/components/v3teamsaddbulkteammemberrequest.go
   - /models/components/v3teamsaddteammemberrequest.go
@@ -773,17 +765,13 @@ generatedFiles:
   - /models/operations/snoozenotificationssnoozeincidentnotifications.go
   - /models/operations/snoozenotificationsunsnoozeincidentnotifications.go
   - /models/operations/squadscreatesquad.go
-  - /models/operations/squadscreatesquadv4.go
   - /models/operations/squadsdeletesquad.go
   - /models/operations/squadsgetallsquads.go
   - /models/operations/squadsgetsquadbyid.go
-  - /models/operations/squadsgetsquadbyidv4.go
-  - /models/operations/squadsgetsquadbyteam.go
   - /models/operations/squadsremovesquadmember.go
   - /models/operations/squadsupdatesquad.go
   - /models/operations/squadsupdatesquadmember.go
   - /models/operations/squadsupdatesquadname.go
-  - /models/operations/squadsupdatesquadv4.go
   - /models/operations/statuspagescreatestatuspage.go
   - /models/operations/statuspagesdeletestatuspagebyid.go
   - /models/operations/statuspagesgetstatuspagebyid.go
@@ -2301,61 +2289,6 @@ generatedFiles:
   - docs/models/apierrors/snoozenotificationsunsnoozeincidentnotificationsserviceunavailableerror.md
   - docs/models/apierrors/snoozenotificationsunsnoozeincidentnotificationsunauthorizederror.md
   - docs/models/apierrors/snoozenotificationsunsnoozeincidentnotificationsunprocessableentityerror.md
-  - docs/models/apierrors/squadscreatesquadbadgatewayerror.md
-  - docs/models/apierrors/squadscreatesquadbadrequesterror.md
-  - docs/models/apierrors/squadscreatesquadconflicterror.md
-  - docs/models/apierrors/squadscreatesquadforbiddenerror.md
-  - docs/models/apierrors/squadscreatesquadgatewaytimeouterror.md
-  - docs/models/apierrors/squadscreatesquadinternalservererror.md
-  - docs/models/apierrors/squadscreatesquadnotfounderror.md
-  - docs/models/apierrors/squadscreatesquadpaymentrequirederror.md
-  - docs/models/apierrors/squadscreatesquadserviceunavailableerror.md
-  - docs/models/apierrors/squadscreatesquadunauthorizederror.md
-  - docs/models/apierrors/squadscreatesquadunprocessableentityerror.md
-  - docs/models/apierrors/squadsdeletesquadbadgatewayerror.md
-  - docs/models/apierrors/squadsdeletesquadbadrequesterror.md
-  - docs/models/apierrors/squadsdeletesquadconflicterror.md
-  - docs/models/apierrors/squadsdeletesquadforbiddenerror.md
-  - docs/models/apierrors/squadsdeletesquadgatewaytimeouterror.md
-  - docs/models/apierrors/squadsdeletesquadinternalservererror.md
-  - docs/models/apierrors/squadsdeletesquadnotfounderror.md
-  - docs/models/apierrors/squadsdeletesquadpaymentrequirederror.md
-  - docs/models/apierrors/squadsdeletesquadserviceunavailableerror.md
-  - docs/models/apierrors/squadsdeletesquadunauthorizederror.md
-  - docs/models/apierrors/squadsdeletesquadunprocessableentityerror.md
-  - docs/models/apierrors/squadsgetsquadbyidbadgatewayerror.md
-  - docs/models/apierrors/squadsgetsquadbyidbadrequesterror.md
-  - docs/models/apierrors/squadsgetsquadbyidconflicterror.md
-  - docs/models/apierrors/squadsgetsquadbyidforbiddenerror.md
-  - docs/models/apierrors/squadsgetsquadbyidgatewaytimeouterror.md
-  - docs/models/apierrors/squadsgetsquadbyidinternalservererror.md
-  - docs/models/apierrors/squadsgetsquadbyidnotfounderror.md
-  - docs/models/apierrors/squadsgetsquadbyidpaymentrequirederror.md
-  - docs/models/apierrors/squadsgetsquadbyidserviceunavailableerror.md
-  - docs/models/apierrors/squadsgetsquadbyidunauthorizederror.md
-  - docs/models/apierrors/squadsgetsquadbyidunprocessableentityerror.md
-  - docs/models/apierrors/squadsgetsquadbyteambadgatewayerror.md
-  - docs/models/apierrors/squadsgetsquadbyteambadrequesterror.md
-  - docs/models/apierrors/squadsgetsquadbyteamconflicterror.md
-  - docs/models/apierrors/squadsgetsquadbyteamforbiddenerror.md
-  - docs/models/apierrors/squadsgetsquadbyteamgatewaytimeouterror.md
-  - docs/models/apierrors/squadsgetsquadbyteaminternalservererror.md
-  - docs/models/apierrors/squadsgetsquadbyteamnotfounderror.md
-  - docs/models/apierrors/squadsgetsquadbyteampaymentrequirederror.md
-  - docs/models/apierrors/squadsgetsquadbyteamserviceunavailableerror.md
-  - docs/models/apierrors/squadsgetsquadbyteamunauthorizederror.md
-  - docs/models/apierrors/squadsgetsquadbyteamunprocessableentityerror.md
-  - docs/models/apierrors/squadsupdatesquadbadgatewayerror.md
-  - docs/models/apierrors/squadsupdatesquadbadrequesterror.md
-  - docs/models/apierrors/squadsupdatesquadconflicterror.md
-  - docs/models/apierrors/squadsupdatesquadforbiddenerror.md
-  - docs/models/apierrors/squadsupdatesquadgatewaytimeouterror.md
-  - docs/models/apierrors/squadsupdatesquadinternalservererror.md
-  - docs/models/apierrors/squadsupdatesquadnotfounderror.md
-  - docs/models/apierrors/squadsupdatesquadpaymentrequirederror.md
-  - docs/models/apierrors/squadsupdatesquadserviceunavailableerror.md
-  - docs/models/apierrors/squadsupdatesquadunauthorizederror.md
-  - docs/models/apierrors/squadsupdatesquadunprocessableentityerror.md
   - docs/models/apierrors/statuspagescreatestatuspagebadgatewayerror.md
   - docs/models/apierrors/statuspagescreatestatuspagebadrequesterror.md
   - docs/models/apierrors/statuspagescreatestatuspageconflicterror.md
@@ -3052,7 +2985,7 @@ generatedFiles:
   - docs/models/components/httpmetadata.md
   - docs/models/components/insights.md
   - docs/models/components/messageoverlay.md
-  - docs/models/components/owner.md
+  - docs/models/components/organization.md
   - docs/models/components/payload.md
   - docs/models/components/postmortems.md
   - docs/models/components/previous.md
@@ -3320,10 +3253,6 @@ generatedFiles:
   - docs/models/components/v3slosloviolatingincidentresponse.md
   - docs/models/components/v3sloslowithinsightsresponse.md
   - docs/models/components/v3slotimeintervaltype.md
-  - docs/models/components/v3squadscreatesquadrequest.md
-  - docs/models/components/v3squadssquadresponse.md
-  - docs/models/components/v3squadssquadresponseorganization.md
-  - docs/models/components/v3squadsupdatesquadrequest.md
   - docs/models/components/v3teamsabilities.md
   - docs/models/components/v3teamsaddbulkteammemberrequest.md
   - docs/models/components/v3teamsaddbulkteammemberrequestmember.md
@@ -3334,7 +3263,6 @@ generatedFiles:
   - docs/models/components/v3teamsteammember.md
   - docs/models/components/v3teamsteammemberresponse.md
   - docs/models/components/v3teamsteamresponse.md
-  - docs/models/components/v3teamsteamresponseorganization.md
   - docs/models/components/v3teamsteamrole.md
   - docs/models/components/v3teamsteamroleresponse.md
   - docs/models/components/v3teamsupdateteammemberrequest.md
@@ -4099,22 +4027,15 @@ generatedFiles:
   - docs/models/operations/snoozenotificationsunsnoozeincidentnotificationsresponsebody.md
   - docs/models/operations/squadscreatesquadresponse.md
   - docs/models/operations/squadscreatesquadresponsebody.md
-  - docs/models/operations/squadscreatesquadv4response.md
-  - docs/models/operations/squadscreatesquadv4responsebody.md
   - docs/models/operations/squadsdeletesquadrequest.md
   - docs/models/operations/squadsdeletesquadresponse.md
   - docs/models/operations/squadsdeletesquadresponsebody.md
+  - docs/models/operations/squadsgetallsquadsrequest.md
   - docs/models/operations/squadsgetallsquadsresponse.md
   - docs/models/operations/squadsgetallsquadsresponsebody.md
   - docs/models/operations/squadsgetsquadbyidrequest.md
   - docs/models/operations/squadsgetsquadbyidresponse.md
   - docs/models/operations/squadsgetsquadbyidresponsebody.md
-  - docs/models/operations/squadsgetsquadbyidv4request.md
-  - docs/models/operations/squadsgetsquadbyidv4response.md
-  - docs/models/operations/squadsgetsquadbyidv4responsebody.md
-  - docs/models/operations/squadsgetsquadbyteamrequest.md
-  - docs/models/operations/squadsgetsquadbyteamresponse.md
-  - docs/models/operations/squadsgetsquadbyteamresponsebody.md
   - docs/models/operations/squadsremovesquadmemberrequest.md
   - docs/models/operations/squadsremovesquadmemberresponse.md
   - docs/models/operations/squadsupdatesquadmemberrequest.md
@@ -4125,9 +4046,6 @@ generatedFiles:
   - docs/models/operations/squadsupdatesquadrequest.md
   - docs/models/operations/squadsupdatesquadresponse.md
   - docs/models/operations/squadsupdatesquadresponsebody.md
-  - docs/models/operations/squadsupdatesquadv4request.md
-  - docs/models/operations/squadsupdatesquadv4response.md
-  - docs/models/operations/squadsupdatesquadv4responsebody.md
   - docs/models/operations/statuspagescreatestatuspageresponse.md
   - docs/models/operations/statuspagescreatestatuspageresponsebody.md
   - docs/models/operations/statuspagesdeletestatuspagebyidrequest.md
@@ -4364,8 +4282,6 @@ generatedFiles:
   - docs/sdks/teams/README.md
   - docs/sdks/tokens/README.md
   - docs/sdks/users/README.md
-  - docs/sdks/v3/README.md
-  - docs/sdks/v3squads/README.md
   - docs/sdks/v4/README.md
   - docs/sdks/v4squads/README.md
   - docs/sdks/webforms/README.md
@@ -4449,8 +4365,6 @@ generatedFiles:
   - types/decimal.go
   - types/pointers.go
   - users.go
-  - v3.go
-  - v3squads.go
   - v4.go
   - v4squads.go
   - webforms.go
@@ -4524,6 +4438,9 @@ examples:
           application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
   EscalationPolicies_getEscalationPolicyByTeam:
     speakeasy-default-escalation-policies-get-escalation-policy-by-team:
+      parameters:
+        query:
+          owner_id: "<id>"
       responses:
         "200":
           application/json: {"data": [], "meta": {"total_count": 493363}}
@@ -7317,6 +7234,9 @@ examples:
           application/json: {"meta": {"status": 314563, "error_message": "<value>"}}
   Services_getServices:
     speakeasy-default-services-get-services:
+      parameters:
+        query:
+          owner_id: "<id>"
       responses:
         "200":
           application/json: {"data": [{"id": "<id>", "name": "<value>", "slug": "<value>", "email": "Celine.Langosh-OReilly78@yahoo.com", "escalation_policy_id": "<id>", "organization_id": "<id>", "api_key": "<value>", "description": "blah sarong team potentially generally how quiet cuckoo sand into", "owner": {"id": "<id>", "type": "team"}, "maintainer": {"id": "<id>", "type": "squad"}, "tags": [{"key": "<key>", "value": "<value>"}], "auto_pause_transient_alerts_config": {"is_enabled": true, "timeout_in_mins": 9977.04}, "intelligent_alerts_grouping_config": {"is_enabled": true, "rolling_window_in_mins": 1780.49}, "delay_notification_config": {"is_enabled": true}, "config": {"dedup_key_enabled": true}, "created_at": "2025-11-08T23:24:57.739Z", "updated_at": "2025-11-08T10:49:50.249Z"}]}
@@ -8605,12 +8525,12 @@ examples:
   Squads_createSquad:
     speakeasy-default-squads-create-squad:
       requestBody:
-        application/json: {"name": "<value>", "members": ["<value 1>"], "owner_id": "<id>"}
+        application/json: {"owner_id": "<id>", "name": "<value>", "members": [{"user_id": "<id>"}]}
       responses:
         "201":
-          application/json: {"data": {"id": "<id>", "name": "<value>", "slug": "<value>", "members": ["<value 1>"], "organization_id": "<id>", "owner": {"id": "<id>", "type": "<value>"}, "organization": {"id": "<id>", "name": "<value>", "slug": "<value>"}}}
+          application/json: {"data": {"organization_id": "<id>", "owner_id": "<id>", "id": "<id>", "name": "<value>", "slug": "<value>", "members": [{"user_id": "<id>"}], "created_at": "1719432496595", "created_by": "<value>"}}
         "400":
-          application/json: {"meta": {"status": 771376, "error_message": "<value>"}}
+          application/json: {"error": {"code": "<value>", "message": "<value>"}}
         "401":
           application/json: {"meta": {"status": 771376, "error_message": "<value>"}}
         "402":
@@ -8624,7 +8544,7 @@ examples:
         "422":
           application/json: {"meta": {"status": 771376, "error_message": "<value>"}}
         "500":
-          application/json: {"meta": {"status": 771376, "error_message": "<value>"}}
+          application/json: {"error": {"code": "<value>", "message": "<value>"}}
         "502":
           application/json: {"meta": {"status": 771376, "error_message": "<value>"}}
         "503":
@@ -8640,7 +8560,7 @@ examples:
         "204":
           '*/*': "0xF97E36c57A"
         "400":
-          application/json: {"meta": {"status": 361929, "error_message": "<value>"}}
+          application/json: {"error": {"code": "<value>", "message": "<value>"}}
         "401":
           application/json: {"meta": {"status": 361929, "error_message": "<value>"}}
         "402":
@@ -8654,7 +8574,7 @@ examples:
         "422":
           application/json: {"meta": {"status": 361929, "error_message": "<value>"}}
         "500":
-          application/json: {"meta": {"status": 361929, "error_message": "<value>"}}
+          application/json: {"error": {"code": "<value>", "message": "<value>"}}
         "502":
           application/json: {"meta": {"status": 361929, "error_message": "<value>"}}
         "503":
@@ -8668,9 +8588,9 @@ examples:
           squadID: "<id>"
       responses:
         "200":
-          application/json: {"data": {"id": "<id>", "name": "<value>", "slug": "<value>", "members": ["<value 1>", "<value 2>", "<value 3>"], "organization_id": "<id>", "owner": {"id": "<id>", "type": "<value>"}, "organization": {"id": "<id>", "name": "<value>", "slug": "<value>"}}}
+          application/json: {"data": {"id": "<id>", "org_id": "<id>", "team_id": "<id>", "name": "<value>", "members": [{"user_id": "<id>"}, {"user_id": "<id>"}, {"user_id": "<id>"}], "createdAt": "1734569689559", "updatedAt": "1735642423343"}}
         "400":
-          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
+          application/json: {"error": {"code": "<value>", "message": "<value>"}}
         "401":
           application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
         "402":
@@ -8684,7 +8604,7 @@ examples:
         "422":
           application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
         "500":
-          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
+          application/json: {"error": {"code": "<value>", "message": "<value>"}}
         "502":
           application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
         "503":
@@ -8700,9 +8620,9 @@ examples:
         application/json: {}
       responses:
         "200":
-          application/json: {"data": {"id": "<id>", "name": "<value>", "slug": "<value>", "members": ["<value 1>", "<value 2>"], "organization_id": "<id>", "owner": {"id": "<id>", "type": "<value>"}, "organization": {"id": "<id>", "name": "<value>", "slug": "<value>"}}}
+          application/json: {"data": {"id": "<id>", "org_id": "<id>", "team_id": "<id>", "name": "<value>", "members": [{"user_id": "<id>"}, {"user_id": "<id>"}], "createdAt": "1724410214666", "updatedAt": "1735607085331"}}
         "400":
-          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
+          application/json: {"error": {"code": "<value>", "message": "<value>"}}
         "401":
           application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
         "402":
@@ -8716,7 +8636,7 @@ examples:
         "422":
           application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
         "500":
-          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
+          application/json: {"error": {"code": "<value>", "message": "<value>"}}
         "502":
           application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
         "503":
@@ -8725,6 +8645,9 @@ examples:
           application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
   Squads_getAllSquads:
     speakeasy-default-squads-get-all-squads:
+      parameters:
+        query:
+          owner_id: "<id>"
       responses:
         "200":
           application/json: {"data": [], "pageInfo": {"pageSize": 264870, "hasNext": true, "hasPrevious": true}}
@@ -9329,6 +9252,8 @@ examples:
       parameters:
         path:
           webformId: 842504
+        query:
+          owner_id: "<id>"
       responses:
         "200":
           application/json: {"data": "<value>"}
@@ -9359,6 +9284,8 @@ examples:
       parameters:
         path:
           webformId: 831002
+        query:
+          owner_id: "<id>"
       responses:
         "200":
           application/json: {"data": {"id": 208940, "org_id": "<id>", "owner_id": "<id>", "name": "<value>", "is_cname": true, "public_url": "https://intelligent-dream.org/", "tags": {}, "is_captcha_enabled": false, "captcha_provider": "<value>", "captcha_secret": {"site_key": "<value>", "secret": "<value>"}, "form_owner_type": "<value>", "form_owner_id": "<id>", "form_owner_name": "<value>", "services": [], "input_field": [{"label": "<value>", "options": ["<value 1>", "<value 2>", "<value 3>"]}], "header": "<value>", "title": "<value>", "footer_text": "<value>", "footer_link": "<value>", "email_on": ["<value 1>", "<value 2>"], "incident_count": 147356, "mttr": 4072.86, "is_deleted": false, "deleted_at": "<value>"}}
@@ -10972,6 +10899,14 @@ examples:
 examplesVersion: 1.0.2
 releaseNotes: |
   ## Go SDK Changes Detected:
-  * `SquadcastSdk.Schedules.List()`:  `request.Request` **Changed** **Breaking** :warning:
-  * `SquadcastSdk.Schedules.Overrides.List()`:  `request.Request` **Changed** **Breaking** :warning:
-  * `SquadcastSdk.Schedules.Rotations.List()`:  `response.PageInfo` **Removed** **Breaking** :warning:
+  * `SquadcastSdk.EscalationPolicies.GetByTeam()`:  `request.OwnerId` **Changed** **Breaking** :warning:
+  * `SquadcastSdk.Services.List()`:  `request.OwnerId` **Changed** **Breaking** :warning:
+  * `SquadcastSdk.Squads.List()`:  `request.OwnerId` **Added** **Breaking** :warning:
+  * `SquadcastSdk.Webforms.Remove()`:  `request.OwnerId` **Changed** **Breaking** :warning:
+  * `SquadcastSdk.Webforms.Get()`:  `request.OwnerId` **Changed** **Breaking** :warning:
+  * `SquadcastSdk.Squads.SquadsDeleteSquad()`: **Added**
+  * `SquadcastSdk.V3.Squads.ListByTeam()`: **Deleted** **Breaking** :warning:
+  * `SquadcastSdk.Squads.Create()`: **Deleted** **Breaking** :warning:
+  * `SquadcastSdk.Squads.Delete()`: **Deleted** **Breaking** :warning:
+  * `SquadcastSdk.Squads.GetById()`: **Deleted** **Breaking** :warning:
+  * `SquadcastSdk.Squads.Update()`: **Deleted** **Breaking** :warning:

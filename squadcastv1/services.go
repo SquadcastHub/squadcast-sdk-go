@@ -49,7 +49,7 @@ func newServices(rootSDK *SquadcastSDK, sdkConfig config.SDKConfiguration, hooks
 }
 
 // List - Get All Services
-func (s *Services) List(ctx context.Context, ownerID *string, entityOwner *string, name *string, opts ...operations.Option) (*operations.ServicesGetServicesResponse, error) {
+func (s *Services) List(ctx context.Context, ownerID string, entityOwner *string, name *string, opts ...operations.Option) (*operations.ServicesGetServicesResponse, error) {
 	request := operations.ServicesGetServicesRequest{
 		OwnerID:     ownerID,
 		EntityOwner: entityOwner,

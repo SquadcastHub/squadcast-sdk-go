@@ -271,7 +271,7 @@ func main() {
         squadcastsdk.WithSecurity(os.Getenv("SQUADCASTSDK_BEARER_AUTH")),
     )
 
-    res, err := s.Webforms.Remove(ctx, 842504, nil)
+    res, err := s.Webforms.Remove(ctx, 842504, "<id>")
     if err != nil {
         log.Fatal(err)
     }
@@ -287,7 +287,7 @@ func main() {
 | -------------------------------------------------------- | -------------------------------------------------------- | -------------------------------------------------------- | -------------------------------------------------------- |
 | `ctx`                                                    | [context.Context](https://pkg.go.dev/context#Context)    | :heavy_check_mark:                                       | The context to use for the request.                      |
 | `webformID`                                              | *int64*                                                  | :heavy_check_mark:                                       | N/A                                                      |
-| `ownerID`                                                | **string*                                                | :heavy_minus_sign:                                       | N/A                                                      |
+| `ownerID`                                                | *string*                                                 | :heavy_check_mark:                                       | N/A                                                      |
 | `opts`                                                   | [][operations.Option](../../models/operations/option.md) | :heavy_minus_sign:                                       | The options for this request.                            |
 
 ### Response
@@ -336,7 +336,7 @@ func main() {
         squadcastsdk.WithSecurity(os.Getenv("SQUADCASTSDK_BEARER_AUTH")),
     )
 
-    res, err := s.Webforms.Get(ctx, 831002, nil)
+    res, err := s.Webforms.Get(ctx, 831002, "<id>")
     if err != nil {
         log.Fatal(err)
     }
@@ -352,7 +352,7 @@ func main() {
 | -------------------------------------------------------- | -------------------------------------------------------- | -------------------------------------------------------- | -------------------------------------------------------- |
 | `ctx`                                                    | [context.Context](https://pkg.go.dev/context#Context)    | :heavy_check_mark:                                       | The context to use for the request.                      |
 | `webformID`                                              | *int64*                                                  | :heavy_check_mark:                                       | N/A                                                      |
-| `ownerID`                                                | **string*                                                | :heavy_minus_sign:                                       | N/A                                                      |
+| `ownerID`                                                | *string*                                                 | :heavy_check_mark:                                       | N/A                                                      |
 | `opts`                                                   | [][operations.Option](../../models/operations/option.md) | :heavy_minus_sign:                                       | The options for this request.                            |
 
 ### Response

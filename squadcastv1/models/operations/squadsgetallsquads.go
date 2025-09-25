@@ -6,6 +6,17 @@ import (
 	"github.com/SquadcastHub/squadcast-sdk-go/squadcastv1/models/components"
 )
 
+type SquadsGetAllSquadsRequest struct {
+	OwnerID string `queryParam:"style=form,explode=true,name=owner_id"`
+}
+
+func (s *SquadsGetAllSquadsRequest) GetOwnerID() string {
+	if s == nil {
+		return ""
+	}
+	return s.OwnerID
+}
+
 // SquadsGetAllSquadsResponseBody - The request has succeeded.
 type SquadsGetAllSquadsResponseBody struct {
 	Data     []components.V4SquadsSquadResponse `json:"data"`

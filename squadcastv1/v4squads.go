@@ -35,8 +35,8 @@ func newV4Squads(rootSDK *SquadcastSDK, sdkConfig config.SDKConfiguration, hooks
 //
 // The role will be considered only if your organization is on the OBAC permission model; otherwise, the role field will be ignored, and only the member will be added to the squad.
 // Requires `access_token` as a `Bearer {{token}}` in the `Authorization` header with `squad-create` scope.
-func (s *V4Squads) Update(ctx context.Context, squadID string, v4SquadsUpdateSquadRequest components.V4SquadsUpdateSquadRequest, opts ...operations.Option) (*operations.SquadsUpdateSquadV4Response, error) {
-	request := operations.SquadsUpdateSquadV4Request{
+func (s *V4Squads) Update(ctx context.Context, squadID string, v4SquadsUpdateSquadRequest components.V4SquadsUpdateSquadRequest, opts ...operations.Option) (*operations.SquadsUpdateSquadResponse, error) {
+	request := operations.SquadsUpdateSquadRequest{
 		SquadID:                    squadID,
 		V4SquadsUpdateSquadRequest: v4SquadsUpdateSquadRequest,
 	}
@@ -69,7 +69,7 @@ func (s *V4Squads) Update(ctx context.Context, squadID string, v4SquadsUpdateSqu
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "Squads_updateSquadV4",
+		OperationID:      "Squads_updateSquad",
 		OAuth2Scopes:     []string{},
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
@@ -198,7 +198,7 @@ func (s *V4Squads) Update(ctx context.Context, squadID string, v4SquadsUpdateSqu
 		}
 	}
 
-	res := &operations.SquadsUpdateSquadV4Response{
+	res := &operations.SquadsUpdateSquadResponse{
 		HTTPMeta: components.HTTPMetadata{
 			Request:  req,
 			Response: httpRes,
@@ -214,7 +214,7 @@ func (s *V4Squads) Update(ctx context.Context, squadID string, v4SquadsUpdateSqu
 				return nil, err
 			}
 
-			var out operations.SquadsUpdateSquadV4ResponseBody
+			var out operations.SquadsUpdateSquadResponseBody
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
