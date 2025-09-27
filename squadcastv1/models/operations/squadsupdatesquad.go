@@ -8,7 +8,7 @@ import (
 
 type SquadsUpdateSquadRequest struct {
 	SquadID                    string                                `pathParam:"style=simple,explode=false,name=squadID"`
-	V3SquadsUpdateSquadRequest components.V3SquadsUpdateSquadRequest `request:"mediaType=application/json"`
+	V4SquadsUpdateSquadRequest components.V4SquadsUpdateSquadRequest `request:"mediaType=application/json"`
 }
 
 func (s *SquadsUpdateSquadRequest) GetSquadID() string {
@@ -18,21 +18,21 @@ func (s *SquadsUpdateSquadRequest) GetSquadID() string {
 	return s.SquadID
 }
 
-func (s *SquadsUpdateSquadRequest) GetV3SquadsUpdateSquadRequest() components.V3SquadsUpdateSquadRequest {
+func (s *SquadsUpdateSquadRequest) GetV4SquadsUpdateSquadRequest() components.V4SquadsUpdateSquadRequest {
 	if s == nil {
-		return components.V3SquadsUpdateSquadRequest{}
+		return components.V4SquadsUpdateSquadRequest{}
 	}
-	return s.V3SquadsUpdateSquadRequest
+	return s.V4SquadsUpdateSquadRequest
 }
 
 // SquadsUpdateSquadResponseBody - The request has succeeded.
 type SquadsUpdateSquadResponseBody struct {
-	Data components.V3SquadsSquadResponse `json:"data"`
+	Data components.V4SquadsSquadResponse `json:"data"`
 }
 
-func (s *SquadsUpdateSquadResponseBody) GetData() components.V3SquadsSquadResponse {
+func (s *SquadsUpdateSquadResponseBody) GetData() components.V4SquadsSquadResponse {
 	if s == nil {
-		return components.V3SquadsSquadResponse{}
+		return components.V4SquadsSquadResponse{}
 	}
 	return s.Data
 }

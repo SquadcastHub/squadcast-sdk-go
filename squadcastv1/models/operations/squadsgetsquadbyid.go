@@ -19,12 +19,12 @@ func (s *SquadsGetSquadByIDRequest) GetSquadID() string {
 
 // SquadsGetSquadByIDResponseBody - The request has succeeded.
 type SquadsGetSquadByIDResponseBody struct {
-	Data components.V3SquadsSquadResponse `json:"data"`
+	Data components.V4SquadsSquadResponse `json:"data"`
 }
 
-func (s *SquadsGetSquadByIDResponseBody) GetData() components.V3SquadsSquadResponse {
+func (s *SquadsGetSquadByIDResponseBody) GetData() components.V4SquadsSquadResponse {
 	if s == nil {
-		return components.V3SquadsSquadResponse{}
+		return components.V4SquadsSquadResponse{}
 	}
 	return s.Data
 }

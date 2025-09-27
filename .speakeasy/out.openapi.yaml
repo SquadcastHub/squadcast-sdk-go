@@ -13,7 +13,7 @@ tags:
   - name: "Status Pages/Maintenances"
   - name: "Status Pages/Components"
   - name: "Status Pages/Component groups"
-  - name: "Squads/V4"
+  - name: "Squads"
   - name: "Runbooks"
   - name: "Users/Api Token"
   - name: "Users"
@@ -51,7 +51,6 @@ tags:
   - name: "Incidents/Incident Actions"
   - name: "SLOs"
   - name: "Webforms"
-  - name: "Squads/V3"
 paths:
   "/v3/analyticsv2/organization":
     get:
@@ -375,7 +374,7 @@ paths:
       parameters:
         - name: "owner_id"
           in: "query"
-          required: false
+          required: true
           description: "here owner_id represents team_id, if  team_id is not provided, it will return escalation policies of all teams."
           schema:
             type: "string"
@@ -12125,7 +12124,7 @@ paths:
       parameters:
         - name: "owner_id"
           in: "query"
-          required: false
+          required: true
           schema:
             type: "string"
           explode: false
@@ -17868,685 +17867,6 @@ paths:
               type: "object"
       x-speakeasy-group: "slos"
       x-speakeasy-name-override: "markFalsePositive"
-  "/v3/squads":
-    get:
-      operationId: "Squads_getSquadByTeam"
-      summary: "Get Squad By team"
-      description: "This endpoint is used to get the squads details by team.\nRequires `access_token` as a `Bearer {{token}}` in the `Authorization` header with `squad-read` scope."
-      parameters:
-        - name: "owner_id"
-          in: "query"
-          required: true
-          schema:
-            type: "string"
-      responses:
-        "200":
-          description: "The request has succeeded."
-          content:
-            "application/json":
-              schema:
-                type: "object"
-                required:
-                  - "data"
-                properties:
-                  "data":
-                    type: "array"
-                    items: {"$ref": "#/components/schemas/V3.Squads.SquadResponse"}
-        "400":
-          description: "The server could not understand the request due to invalid syntax."
-          content:
-            "application/json":
-              schema:
-                type: "object"
-                properties:
-                  "meta": {"$ref": "#/components/schemas/Common.V3.ErrorMeta"}
-                required:
-                  - "meta"
-        "401":
-          description: "Access is unauthorized."
-          content:
-            "application/json":
-              schema:
-                type: "object"
-                properties:
-                  "meta": {"$ref": "#/components/schemas/Common.V3.ErrorMeta"}
-                required:
-                  - "meta"
-        "402":
-          description: "Client error"
-          content:
-            "application/json":
-              schema:
-                type: "object"
-                properties:
-                  "meta": {"$ref": "#/components/schemas/Common.V3.ErrorMeta"}
-                required:
-                  - "meta"
-        "403":
-          description: "Access is forbidden."
-          content:
-            "application/json":
-              schema:
-                type: "object"
-                properties:
-                  "meta": {"$ref": "#/components/schemas/Common.V3.ErrorMeta"}
-                required:
-                  - "meta"
-        "404":
-          description: "The server cannot find the requested resource."
-          content:
-            "application/json":
-              schema:
-                type: "object"
-                properties:
-                  "meta": {"$ref": "#/components/schemas/Common.V3.ErrorMeta"}
-                required:
-                  - "meta"
-        "409":
-          description: "The request conflicts with the current state of the server."
-          content:
-            "application/json":
-              schema:
-                type: "object"
-                properties:
-                  "meta": {"$ref": "#/components/schemas/Common.V3.ErrorMeta"}
-                required:
-                  - "meta"
-        "422":
-          description: "Client error"
-          content:
-            "application/json":
-              schema:
-                type: "object"
-                properties:
-                  "meta": {"$ref": "#/components/schemas/Common.V3.ErrorMeta"}
-                required:
-                  - "meta"
-        "500":
-          description: "Server error"
-          content:
-            "application/json":
-              schema:
-                type: "object"
-                properties:
-                  "meta": {"$ref": "#/components/schemas/Common.V3.ErrorMeta"}
-                required:
-                  - "meta"
-        "502":
-          description: "Server error"
-          content:
-            "application/json":
-              schema:
-                type: "object"
-                properties:
-                  "meta": {"$ref": "#/components/schemas/Common.V3.ErrorMeta"}
-                required:
-                  - "meta"
-        "503":
-          description: "Service unavailable."
-          content:
-            "application/json":
-              schema:
-                type: "object"
-                properties:
-                  "meta": {"$ref": "#/components/schemas/Common.V3.ErrorMeta"}
-                required:
-                  - "meta"
-        "504":
-          description: "Server error"
-          content:
-            "application/json":
-              schema:
-                type: "object"
-                properties:
-                  "meta": {"$ref": "#/components/schemas/Common.V3.ErrorMeta"}
-                required:
-                  - "meta"
-      tags:
-        - "Squads/V3"
-      x-speakeasy-group: "v3.squads"
-      x-speakeasy-name-override: "listByTeam"
-    post:
-      operationId: "Squads_createSquad"
-      summary: "Create Squad"
-      description: "This endpoint is used to create a new squad.\nRequires `access_token` as a `Bearer {{token}}` in the `Authorization` header with `squad-create` scope."
-      responses:
-        "201":
-          description: "The request has succeeded and a new resource has been created as a result."
-          content:
-            "application/json":
-              schema:
-                type: "object"
-                required:
-                  - "data"
-                properties:
-                  "data": {"$ref": "#/components/schemas/V3.Squads.SquadResponse"}
-        "400":
-          description: "The server could not understand the request due to invalid syntax."
-          content:
-            "application/json":
-              schema:
-                type: "object"
-                properties:
-                  "meta": {"$ref": "#/components/schemas/Common.V3.ErrorMeta"}
-                required:
-                  - "meta"
-        "401":
-          description: "Access is unauthorized."
-          content:
-            "application/json":
-              schema:
-                type: "object"
-                properties:
-                  "meta": {"$ref": "#/components/schemas/Common.V3.ErrorMeta"}
-                required:
-                  - "meta"
-        "402":
-          description: "Client error"
-          content:
-            "application/json":
-              schema:
-                type: "object"
-                properties:
-                  "meta": {"$ref": "#/components/schemas/Common.V3.ErrorMeta"}
-                required:
-                  - "meta"
-        "403":
-          description: "Access is forbidden."
-          content:
-            "application/json":
-              schema:
-                type: "object"
-                properties:
-                  "meta": {"$ref": "#/components/schemas/Common.V3.ErrorMeta"}
-                required:
-                  - "meta"
-        "404":
-          description: "The server cannot find the requested resource."
-          content:
-            "application/json":
-              schema:
-                type: "object"
-                properties:
-                  "meta": {"$ref": "#/components/schemas/Common.V3.ErrorMeta"}
-                required:
-                  - "meta"
-        "409":
-          description: "The request conflicts with the current state of the server."
-          content:
-            "application/json":
-              schema:
-                type: "object"
-                properties:
-                  "meta": {"$ref": "#/components/schemas/Common.V3.ErrorMeta"}
-                required:
-                  - "meta"
-        "422":
-          description: "Client error"
-          content:
-            "application/json":
-              schema:
-                type: "object"
-                properties:
-                  "meta": {"$ref": "#/components/schemas/Common.V3.ErrorMeta"}
-                required:
-                  - "meta"
-        "500":
-          description: "Server error"
-          content:
-            "application/json":
-              schema:
-                type: "object"
-                properties:
-                  "meta": {"$ref": "#/components/schemas/Common.V3.ErrorMeta"}
-                required:
-                  - "meta"
-        "502":
-          description: "Server error"
-          content:
-            "application/json":
-              schema:
-                type: "object"
-                properties:
-                  "meta": {"$ref": "#/components/schemas/Common.V3.ErrorMeta"}
-                required:
-                  - "meta"
-        "503":
-          description: "Service unavailable."
-          content:
-            "application/json":
-              schema:
-                type: "object"
-                properties:
-                  "meta": {"$ref": "#/components/schemas/Common.V3.ErrorMeta"}
-                required:
-                  - "meta"
-        "504":
-          description: "Server error"
-          content:
-            "application/json":
-              schema:
-                type: "object"
-                properties:
-                  "meta": {"$ref": "#/components/schemas/Common.V3.ErrorMeta"}
-                required:
-                  - "meta"
-      tags:
-        - "Squads/V3"
-      requestBody:
-        required: true
-        content:
-          "application/json":
-            schema: {"$ref": "#/components/schemas/V3.Squads.CreateSquadRequest"}
-      x-speakeasy-group: "squads"
-      x-speakeasy-name-override: "create"
-  "/v3/squads/{squadID}":
-    delete:
-      operationId: "Squads_deleteSquad"
-      summary: "Delete Squad"
-      description: "This endpoint is used to delete the squad. Squad should not be assigned to any incident or part of any escalation policy.\nRequires `access_token` as a `Bearer {{token}}` in the `Authorization` header with `squad-update` scope."
-      parameters:
-        - name: "squadID"
-          in: "path"
-          required: true
-          schema:
-            type: "string"
-      responses:
-        "204":
-          description: "There is no content to send for this request, but the headers may be useful. "
-          content:
-            "*/*":
-              schema:
-                type: "object"
-        "400":
-          description: "The server could not understand the request due to invalid syntax."
-          content:
-            "application/json":
-              schema:
-                type: "object"
-                properties:
-                  "meta": {"$ref": "#/components/schemas/Common.V3.ErrorMeta"}
-                required:
-                  - "meta"
-        "401":
-          description: "Access is unauthorized."
-          content:
-            "application/json":
-              schema:
-                type: "object"
-                properties:
-                  "meta": {"$ref": "#/components/schemas/Common.V3.ErrorMeta"}
-                required:
-                  - "meta"
-        "402":
-          description: "Client error"
-          content:
-            "application/json":
-              schema:
-                type: "object"
-                properties:
-                  "meta": {"$ref": "#/components/schemas/Common.V3.ErrorMeta"}
-                required:
-                  - "meta"
-        "403":
-          description: "Access is forbidden."
-          content:
-            "application/json":
-              schema:
-                type: "object"
-                properties:
-                  "meta": {"$ref": "#/components/schemas/Common.V3.ErrorMeta"}
-                required:
-                  - "meta"
-        "404":
-          description: "The server cannot find the requested resource."
-          content:
-            "application/json":
-              schema:
-                type: "object"
-                properties:
-                  "meta": {"$ref": "#/components/schemas/Common.V3.ErrorMeta"}
-                required:
-                  - "meta"
-        "409":
-          description: "The request conflicts with the current state of the server."
-          content:
-            "application/json":
-              schema:
-                type: "object"
-                properties:
-                  "meta": {"$ref": "#/components/schemas/Common.V3.ErrorMeta"}
-                required:
-                  - "meta"
-        "422":
-          description: "Client error"
-          content:
-            "application/json":
-              schema:
-                type: "object"
-                properties:
-                  "meta": {"$ref": "#/components/schemas/Common.V3.ErrorMeta"}
-                required:
-                  - "meta"
-        "500":
-          description: "Server error"
-          content:
-            "application/json":
-              schema:
-                type: "object"
-                properties:
-                  "meta": {"$ref": "#/components/schemas/Common.V3.ErrorMeta"}
-                required:
-                  - "meta"
-        "502":
-          description: "Server error"
-          content:
-            "application/json":
-              schema:
-                type: "object"
-                properties:
-                  "meta": {"$ref": "#/components/schemas/Common.V3.ErrorMeta"}
-                required:
-                  - "meta"
-        "503":
-          description: "Service unavailable."
-          content:
-            "application/json":
-              schema:
-                type: "object"
-                properties:
-                  "meta": {"$ref": "#/components/schemas/Common.V3.ErrorMeta"}
-                required:
-                  - "meta"
-        "504":
-          description: "Server error"
-          content:
-            "application/json":
-              schema:
-                type: "object"
-                properties:
-                  "meta": {"$ref": "#/components/schemas/Common.V3.ErrorMeta"}
-                required:
-                  - "meta"
-      tags:
-        - "Squads/V3"
-      x-speakeasy-group: "squads"
-      x-speakeasy-name-override: "delete"
-    get:
-      operationId: "Squads_getSquadById"
-      summary: "Get Squad By ID"
-      description: "This endpoint is used to get the squads details by id.\nRequires `access_token` as a `Bearer {{token}}` in the `Authorization` header with `squad-read` scope."
-      parameters:
-        - name: "squadID"
-          in: "path"
-          required: true
-          schema:
-            type: "string"
-      responses:
-        "200":
-          description: "The request has succeeded."
-          content:
-            "application/json":
-              schema:
-                type: "object"
-                required:
-                  - "data"
-                properties:
-                  "data": {"$ref": "#/components/schemas/V3.Squads.SquadResponse"}
-        "400":
-          description: "The server could not understand the request due to invalid syntax."
-          content:
-            "application/json":
-              schema:
-                type: "object"
-                properties:
-                  "meta": {"$ref": "#/components/schemas/Common.V3.ErrorMeta"}
-                required:
-                  - "meta"
-        "401":
-          description: "Access is unauthorized."
-          content:
-            "application/json":
-              schema:
-                type: "object"
-                properties:
-                  "meta": {"$ref": "#/components/schemas/Common.V3.ErrorMeta"}
-                required:
-                  - "meta"
-        "402":
-          description: "Client error"
-          content:
-            "application/json":
-              schema:
-                type: "object"
-                properties:
-                  "meta": {"$ref": "#/components/schemas/Common.V3.ErrorMeta"}
-                required:
-                  - "meta"
-        "403":
-          description: "Access is forbidden."
-          content:
-            "application/json":
-              schema:
-                type: "object"
-                properties:
-                  "meta": {"$ref": "#/components/schemas/Common.V3.ErrorMeta"}
-                required:
-                  - "meta"
-        "404":
-          description: "The server cannot find the requested resource."
-          content:
-            "application/json":
-              schema:
-                type: "object"
-                properties:
-                  "meta": {"$ref": "#/components/schemas/Common.V3.ErrorMeta"}
-                required:
-                  - "meta"
-        "409":
-          description: "The request conflicts with the current state of the server."
-          content:
-            "application/json":
-              schema:
-                type: "object"
-                properties:
-                  "meta": {"$ref": "#/components/schemas/Common.V3.ErrorMeta"}
-                required:
-                  - "meta"
-        "422":
-          description: "Client error"
-          content:
-            "application/json":
-              schema:
-                type: "object"
-                properties:
-                  "meta": {"$ref": "#/components/schemas/Common.V3.ErrorMeta"}
-                required:
-                  - "meta"
-        "500":
-          description: "Server error"
-          content:
-            "application/json":
-              schema:
-                type: "object"
-                properties:
-                  "meta": {"$ref": "#/components/schemas/Common.V3.ErrorMeta"}
-                required:
-                  - "meta"
-        "502":
-          description: "Server error"
-          content:
-            "application/json":
-              schema:
-                type: "object"
-                properties:
-                  "meta": {"$ref": "#/components/schemas/Common.V3.ErrorMeta"}
-                required:
-                  - "meta"
-        "503":
-          description: "Service unavailable."
-          content:
-            "application/json":
-              schema:
-                type: "object"
-                properties:
-                  "meta": {"$ref": "#/components/schemas/Common.V3.ErrorMeta"}
-                required:
-                  - "meta"
-        "504":
-          description: "Server error"
-          content:
-            "application/json":
-              schema:
-                type: "object"
-                properties:
-                  "meta": {"$ref": "#/components/schemas/Common.V3.ErrorMeta"}
-                required:
-                  - "meta"
-      tags:
-        - "Squads/V3"
-      x-speakeasy-group: "squads"
-      x-speakeasy-name-override: "getById"
-    put:
-      operationId: "Squads_updateSquad"
-      summary: "Update Squad"
-      description: "This endpoint is used to update the squads details.\nRequires `access_token` as a `Bearer {{token}}` in the `Authorization` header with `squad-update` scope."
-      parameters:
-        - name: "squadID"
-          in: "path"
-          required: true
-          schema:
-            type: "string"
-      responses:
-        "200":
-          description: "The request has succeeded."
-          content:
-            "application/json":
-              schema:
-                type: "object"
-                required:
-                  - "data"
-                properties:
-                  "data": {"$ref": "#/components/schemas/V3.Squads.SquadResponse"}
-        "400":
-          description: "The server could not understand the request due to invalid syntax."
-          content:
-            "application/json":
-              schema:
-                type: "object"
-                properties:
-                  "meta": {"$ref": "#/components/schemas/Common.V3.ErrorMeta"}
-                required:
-                  - "meta"
-        "401":
-          description: "Access is unauthorized."
-          content:
-            "application/json":
-              schema:
-                type: "object"
-                properties:
-                  "meta": {"$ref": "#/components/schemas/Common.V3.ErrorMeta"}
-                required:
-                  - "meta"
-        "402":
-          description: "Client error"
-          content:
-            "application/json":
-              schema:
-                type: "object"
-                properties:
-                  "meta": {"$ref": "#/components/schemas/Common.V3.ErrorMeta"}
-                required:
-                  - "meta"
-        "403":
-          description: "Access is forbidden."
-          content:
-            "application/json":
-              schema:
-                type: "object"
-                properties:
-                  "meta": {"$ref": "#/components/schemas/Common.V3.ErrorMeta"}
-                required:
-                  - "meta"
-        "404":
-          description: "The server cannot find the requested resource."
-          content:
-            "application/json":
-              schema:
-                type: "object"
-                properties:
-                  "meta": {"$ref": "#/components/schemas/Common.V3.ErrorMeta"}
-                required:
-                  - "meta"
-        "409":
-          description: "The request conflicts with the current state of the server."
-          content:
-            "application/json":
-              schema:
-                type: "object"
-                properties:
-                  "meta": {"$ref": "#/components/schemas/Common.V3.ErrorMeta"}
-                required:
-                  - "meta"
-        "422":
-          description: "Client error"
-          content:
-            "application/json":
-              schema:
-                type: "object"
-                properties:
-                  "meta": {"$ref": "#/components/schemas/Common.V3.ErrorMeta"}
-                required:
-                  - "meta"
-        "500":
-          description: "Server error"
-          content:
-            "application/json":
-              schema:
-                type: "object"
-                properties:
-                  "meta": {"$ref": "#/components/schemas/Common.V3.ErrorMeta"}
-                required:
-                  - "meta"
-        "502":
-          description: "Server error"
-          content:
-            "application/json":
-              schema:
-                type: "object"
-                properties:
-                  "meta": {"$ref": "#/components/schemas/Common.V3.ErrorMeta"}
-                required:
-                  - "meta"
-        "503":
-          description: "Service unavailable."
-          content:
-            "application/json":
-              schema:
-                type: "object"
-                properties:
-                  "meta": {"$ref": "#/components/schemas/Common.V3.ErrorMeta"}
-                required:
-                  - "meta"
-        "504":
-          description: "Server error"
-          content:
-            "application/json":
-              schema:
-                type: "object"
-                properties:
-                  "meta": {"$ref": "#/components/schemas/Common.V3.ErrorMeta"}
-                required:
-                  - "meta"
-      tags:
-        - "Squads/V3"
-      requestBody:
-        required: true
-        content:
-          "application/json":
-            schema: {"$ref": "#/components/schemas/V3.Squads.UpdateSquadRequest"}
-      x-speakeasy-group: "squads"
-      x-speakeasy-name-override: "update"
   "/v3/teams":
     get:
       operationId: "Teams_getAllTeams"
@@ -22019,7 +21339,7 @@ paths:
             type: "integer"
         - name: "owner_id"
           in: "query"
-          required: false
+          required: true
           schema:
             type: "string"
           explode: false
@@ -22160,7 +21480,7 @@ paths:
             type: "integer"
         - name: "owner_id"
           in: "query"
-          required: false
+          required: true
           schema:
             type: "string"
           explode: false
@@ -26267,6 +25587,12 @@ paths:
       operationId: "Squads_getAllSquads"
       summary: "Get All Squads"
       description: "This endpoint is used to get all the squads details of your organization.\nRequires `access_token` as a `Bearer {{token}}` in the `Authorization` header with `squad-read` scope."
+      parameters:
+        - name: "owner_id"
+          in: "query"
+          required: true
+          schema:
+            type: "string"
       responses:
         "200":
           description: "The request has succeeded."
@@ -26338,11 +25664,11 @@ paths:
             "application/json":
               schema: {"$ref": "#/components/schemas/Common.V4.Error"}
       tags:
-        - "Squads/V4"
+        - "Squads"
       x-speakeasy-group: "squads"
       x-speakeasy-name-override: "list"
     post:
-      operationId: "Squads_createSquadV4"
+      operationId: "Squads_createSquad"
       summary: "Create Squad"
       description: "This endpoint is used to create a new squad.\nThe role will be considered only if your organization is on the OBAC permission model; otherwise, the role field will be ignored, and only the member will be added to the squad.\n\nRequires `access_token` as a `Bearer {{token}}` in the `Authorization` header with `squad-create` scope."
       responses:
@@ -26412,7 +25738,7 @@ paths:
             "application/json":
               schema: {"$ref": "#/components/schemas/Common.V4.Error"}
       tags:
-        - "Squads/V4"
+        - "Squads"
       requestBody:
         required: true
         content:
@@ -26422,7 +25748,7 @@ paths:
       x-speakeasy-name-override: "create"
   "/v4/squads/{squadID}":
     get:
-      operationId: "Squads_getSquadByIdV4"
+      operationId: "Squads_getSquadById"
       summary: "Get Squad By ID"
       description: "This endpoint is used to get the squads details by id.\nRequires `access_token` as a `Bearer {{token}}` in the `Authorization` header with `squad-read` scope."
       parameters:
@@ -26498,11 +25824,11 @@ paths:
             "application/json":
               schema: {"$ref": "#/components/schemas/Common.V4.Error"}
       tags:
-        - "Squads/V4"
+        - "Squads"
       x-speakeasy-group: "squads.v4"
       x-speakeasy-name-override: "getById"
     put:
-      operationId: "Squads_updateSquadV4"
+      operationId: "Squads_updateSquad"
       summary: "Update Squad"
       description: "This endpoint is used to update squad.\n\nThe role will be considered only if your organization is on the OBAC permission model; otherwise, the role field will be ignored, and only the member will be added to the squad.\nRequires `access_token` as a `Bearer {{token}}` in the `Authorization` header with `squad-create` scope."
       parameters:
@@ -26578,7 +25904,7 @@ paths:
             "application/json":
               schema: {"$ref": "#/components/schemas/Common.V4.Error"}
       tags:
-        - "Squads/V4"
+        - "Squads"
       requestBody:
         required: true
         content:
@@ -26586,6 +25912,80 @@ paths:
             schema: {"$ref": "#/components/schemas/V4.Squads.UpdateSquadRequest"}
       x-speakeasy-group: "v4.squads"
       x-speakeasy-name-override: "update"
+    delete:
+      operationId: "Squads_deleteSquad"
+      summary: "Delete Squad"
+      description: "This endpoint is used to delete the squad. Squad should not be assigned to any incident or part of any escalation policy.\nRequires `access_token` as a `Bearer {{token}}` in the `Authorization` header with `squad-update` scope."
+      parameters:
+        - name: "squadID"
+          in: "path"
+          required: true
+          schema:
+            type: "string"
+      responses:
+        "204":
+          description: "There is no content to send for this request, but the headers may be useful. "
+          content:
+            "*/*":
+              schema:
+                type: "object"
+        "400":
+          description: "The server could not understand the request due to invalid syntax."
+          content:
+            "application/json":
+              schema: {"$ref": "#/components/schemas/Common.V4.Error"}
+        "401":
+          description: "Access is unauthorized."
+          content:
+            "application/json":
+              schema: {"$ref": "#/components/schemas/Common.V4.Error"}
+        "402":
+          description: "Client error"
+          content:
+            "application/json":
+              schema: {"$ref": "#/components/schemas/Common.V4.Error"}
+        "403":
+          description: "Access is forbidden."
+          content:
+            "application/json":
+              schema: {"$ref": "#/components/schemas/Common.V4.Error"}
+        "404":
+          description: "The server cannot find the requested resource."
+          content:
+            "application/json":
+              schema: {"$ref": "#/components/schemas/Common.V4.Error"}
+        "409":
+          description: "The request conflicts with the current state of the server."
+          content:
+            "application/json":
+              schema: {"$ref": "#/components/schemas/Common.V4.Error"}
+        "422":
+          description: "Client error"
+          content:
+            "application/json":
+              schema: {"$ref": "#/components/schemas/Common.V4.Error"}
+        "500":
+          description: "Server error"
+          content:
+            "application/json":
+              schema: {"$ref": "#/components/schemas/Common.V4.Error"}
+        "502":
+          description: "Server error"
+          content:
+            "application/json":
+              schema: {"$ref": "#/components/schemas/Common.V4.Error"}
+        "503":
+          description: "Service unavailable."
+          content:
+            "application/json":
+              schema: {"$ref": "#/components/schemas/Common.V4.Error"}
+        "504":
+          description: "Server error"
+          content:
+            "application/json":
+              schema: {"$ref": "#/components/schemas/Common.V4.Error"}
+      tags:
+        - "Squads"
   "/v4/squads/{squadID}/members/{memberID}":
     delete:
       operationId: "Squads_removeSquadMember"
@@ -26669,7 +26069,7 @@ paths:
             "application/json":
               schema: {"$ref": "#/components/schemas/Common.V4.Error"}
       tags:
-        - "Squads/V4"
+        - "Squads"
       x-speakeasy-group: "squads"
       x-speakeasy-name-override: "removeMember"
     put:
@@ -26754,7 +26154,7 @@ paths:
             "application/json":
               schema: {"$ref": "#/components/schemas/Common.V4.Error"}
       tags:
-        - "Squads/V4"
+        - "Squads"
       requestBody:
         required: true
         content:
@@ -26840,7 +26240,7 @@ paths:
             "application/json":
               schema: {"$ref": "#/components/schemas/Common.V4.Error"}
       tags:
-        - "Squads/V4"
+        - "Squads"
       requestBody:
         required: true
         content:
@@ -35830,80 +35230,6 @@ components:
         "auto_pause_transient_alerts_config": {"$ref": "#/components/schemas/V3.Services.APTAConfig"}
         "intelligent_alerts_grouping_config": {"$ref": "#/components/schemas/V3.Services.IAGConfig"}
         "delay_notification_config": {"$ref": "#/components/schemas/V3.Services.NotificationDelayConfigRequest"}
-    "V3.Squads.CreateSquadRequest":
-      type: "object"
-      required:
-        - "name"
-        - "members"
-        - "owner_id"
-      properties:
-        "name":
-          type: "string"
-        "members":
-          type: "array"
-          items:
-            type: "string"
-        "owner_id":
-          type: "string"
-    "V3.Squads.Squad":
-      type: "object"
-      required:
-        - "id"
-        - "name"
-        - "slug"
-        - "members"
-        - "organization_id"
-        - "owner"
-        - "organization"
-      properties:
-        "id":
-          type: "string"
-        "name":
-          type: "string"
-        "slug":
-          type: "string"
-        "members":
-          type: "array"
-          items:
-            type: "string"
-        "organization_id":
-          type: "string"
-        "owner":
-          type: "object"
-          properties:
-            "id":
-              type: "string"
-            "type":
-              type: "string"
-          required:
-            - "id"
-            - "type"
-        "organization":
-          type: "object"
-          properties:
-            "id":
-              type: "string"
-            "name":
-              type: "string"
-            "slug":
-              type: "string"
-          required:
-            - "id"
-            - "name"
-            - "slug"
-    "V3.Squads.SquadResponse":
-      type: "object"
-      allOf:
-        - {"$ref": "#/components/schemas/V3.Squads.Squad"}
-    "V3.Squads.UpdateSquadRequest":
-      type: "object"
-      properties:
-        "name":
-          type: "string"
-        "members":
-          type: "array"
-          items:
-            type: "string"
     "V3.Teams.Abilities":
       type: "object"
       properties:
@@ -38583,6 +37909,7 @@ components:
           type: "string"
         "role":
           type: "string"
+          description: "this field is required if you are using OBAC permission model"
     "V4.Squads.SquadResponse":
       type: "object"
       allOf:

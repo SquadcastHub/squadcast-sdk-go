@@ -7,14 +7,14 @@ import (
 )
 
 type ServicesGetServicesRequest struct {
-	OwnerID     *string `queryParam:"style=form,explode=false,name=owner_id"`
+	OwnerID     string  `queryParam:"style=form,explode=false,name=owner_id"`
 	EntityOwner *string `queryParam:"style=form,explode=false,name=entity_owner"`
 	Name        *string `queryParam:"style=form,explode=false,name=name"`
 }
 
-func (s *ServicesGetServicesRequest) GetOwnerID() *string {
+func (s *ServicesGetServicesRequest) GetOwnerID() string {
 	if s == nil {
-		return nil
+		return ""
 	}
 	return s.OwnerID
 }

@@ -36,7 +36,7 @@ func newSquadsV4(rootSDK *SquadcastSDK, sdkConfig config.SDKConfiguration, hooks
 // The role will be considered only if your organization is on the OBAC permission model; otherwise, the role field will be ignored, and only the member will be added to the squad.
 //
 // Requires `access_token` as a `Bearer {{token}}` in the `Authorization` header with `squad-create` scope.
-func (s *SquadsV4) Create(ctx context.Context, request components.V4SquadsCreateSquadRequest, opts ...operations.Option) (*operations.SquadsCreateSquadV4Response, error) {
+func (s *SquadsV4) Create(ctx context.Context, request components.V4SquadsCreateSquadRequest, opts ...operations.Option) (*operations.SquadsCreateSquadResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -65,7 +65,7 @@ func (s *SquadsV4) Create(ctx context.Context, request components.V4SquadsCreate
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "Squads_createSquadV4",
+		OperationID:      "Squads_createSquad",
 		OAuth2Scopes:     []string{},
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
@@ -194,7 +194,7 @@ func (s *SquadsV4) Create(ctx context.Context, request components.V4SquadsCreate
 		}
 	}
 
-	res := &operations.SquadsCreateSquadV4Response{
+	res := &operations.SquadsCreateSquadResponse{
 		HTTPMeta: components.HTTPMetadata{
 			Request:  req,
 			Response: httpRes,
@@ -210,7 +210,7 @@ func (s *SquadsV4) Create(ctx context.Context, request components.V4SquadsCreate
 				return nil, err
 			}
 
-			var out operations.SquadsCreateSquadV4ResponseBody
+			var out operations.SquadsCreateSquadResponseBody
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -318,8 +318,8 @@ func (s *SquadsV4) Create(ctx context.Context, request components.V4SquadsCreate
 // GetByID - Get Squad By ID
 // This endpoint is used to get the squads details by id.
 // Requires `access_token` as a `Bearer {{token}}` in the `Authorization` header with `squad-read` scope.
-func (s *SquadsV4) GetByID(ctx context.Context, squadID string, opts ...operations.Option) (*operations.SquadsGetSquadByIDV4Response, error) {
-	request := operations.SquadsGetSquadByIDV4Request{
+func (s *SquadsV4) GetByID(ctx context.Context, squadID string, opts ...operations.Option) (*operations.SquadsGetSquadByIDResponse, error) {
+	request := operations.SquadsGetSquadByIDRequest{
 		SquadID: squadID,
 	}
 
@@ -351,7 +351,7 @@ func (s *SquadsV4) GetByID(ctx context.Context, squadID string, opts ...operatio
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "Squads_getSquadByIdV4",
+		OperationID:      "Squads_getSquadById",
 		OAuth2Scopes:     []string{},
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
@@ -473,7 +473,7 @@ func (s *SquadsV4) GetByID(ctx context.Context, squadID string, opts ...operatio
 		}
 	}
 
-	res := &operations.SquadsGetSquadByIDV4Response{
+	res := &operations.SquadsGetSquadByIDResponse{
 		HTTPMeta: components.HTTPMetadata{
 			Request:  req,
 			Response: httpRes,
@@ -489,7 +489,7 @@ func (s *SquadsV4) GetByID(ctx context.Context, squadID string, opts ...operatio
 				return nil, err
 			}
 
-			var out operations.SquadsGetSquadByIDV4ResponseBody
+			var out operations.SquadsGetSquadByIDResponseBody
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}

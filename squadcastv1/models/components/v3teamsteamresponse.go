@@ -2,46 +2,46 @@
 
 package components
 
-type V3TeamsTeamResponseOrganization struct {
+type Organization struct {
 	ID   string `json:"id"`
 	Name string `json:"name"`
 	Slug string `json:"slug"`
 }
 
-func (v *V3TeamsTeamResponseOrganization) GetID() string {
-	if v == nil {
+func (o *Organization) GetID() string {
+	if o == nil {
 		return ""
 	}
-	return v.ID
+	return o.ID
 }
 
-func (v *V3TeamsTeamResponseOrganization) GetName() string {
-	if v == nil {
+func (o *Organization) GetName() string {
+	if o == nil {
 		return ""
 	}
-	return v.Name
+	return o.Name
 }
 
-func (v *V3TeamsTeamResponseOrganization) GetSlug() string {
-	if v == nil {
+func (o *Organization) GetSlug() string {
+	if o == nil {
 		return ""
 	}
-	return v.Slug
+	return o.Slug
 }
 
 type V3TeamsTeamResponse struct {
-	ID             string                          `json:"id"`
-	CreatedAt      string                          `json:"created_at"`
-	UpdatedAt      string                          `json:"updated_at"`
-	CreatedBy      string                          `json:"created_by"`
-	OrganizationID string                          `json:"organization_id"`
-	Name           string                          `json:"name"`
-	Description    string                          `json:"description"`
-	Slug           string                          `json:"slug"`
-	Members        []V3TeamsTeamMember             `json:"members"`
-	Roles          []V3TeamsTeamRole               `json:"roles"`
-	Default        bool                            `json:"default"`
-	Organization   V3TeamsTeamResponseOrganization `json:"organization"`
+	ID             string              `json:"id"`
+	CreatedAt      string              `json:"created_at"`
+	UpdatedAt      string              `json:"updated_at"`
+	CreatedBy      string              `json:"created_by"`
+	OrganizationID string              `json:"organization_id"`
+	Name           string              `json:"name"`
+	Description    string              `json:"description"`
+	Slug           string              `json:"slug"`
+	Members        []V3TeamsTeamMember `json:"members"`
+	Roles          []V3TeamsTeamRole   `json:"roles"`
+	Default        bool                `json:"default"`
+	Organization   Organization        `json:"organization"`
 }
 
 func (v *V3TeamsTeamResponse) GetID() string {
@@ -121,9 +121,9 @@ func (v *V3TeamsTeamResponse) GetDefault() bool {
 	return v.Default
 }
 
-func (v *V3TeamsTeamResponse) GetOrganization() V3TeamsTeamResponseOrganization {
+func (v *V3TeamsTeamResponse) GetOrganization() Organization {
 	if v == nil {
-		return V3TeamsTeamResponseOrganization{}
+		return Organization{}
 	}
 	return v.Organization
 }

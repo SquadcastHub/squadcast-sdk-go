@@ -34,7 +34,7 @@ func newEscalationPolicies(rootSDK *SquadcastSDK, sdkConfig config.SDKConfigurat
 // GetByTeam - Get Escalation Policy By team
 // Returns all escalation policy details of the given `ownerID` (teamId) in the request param.
 // Requires `access_token` as a `Bearer {{token}}` in the `Authorization` header with `read` scope.
-func (s *EscalationPolicies) GetByTeam(ctx context.Context, ownerID *string, pageNumber *string, pageSize *string, opts ...operations.Option) (*operations.EscalationPoliciesGetEscalationPolicyByTeamResponse, error) {
+func (s *EscalationPolicies) GetByTeam(ctx context.Context, ownerID string, pageNumber *string, pageSize *string, opts ...operations.Option) (*operations.EscalationPoliciesGetEscalationPolicyByTeamResponse, error) {
 	request := operations.EscalationPoliciesGetEscalationPolicyByTeamRequest{
 		OwnerID:    ownerID,
 		PageNumber: pageNumber,
