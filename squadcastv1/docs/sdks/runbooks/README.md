@@ -59,20 +59,20 @@ func main() {
 
 ### Errors
 
-| Error Type                                                     | Status Code                                                    | Content Type                                                   |
-| -------------------------------------------------------------- | -------------------------------------------------------------- | -------------------------------------------------------------- |
-| apierrors.RunbooksGetAllRunbooksByTeamBadRequestError          | 400                                                            | application/json                                               |
-| apierrors.RunbooksGetAllRunbooksByTeamUnauthorizedError        | 401                                                            | application/json                                               |
-| apierrors.RunbooksGetAllRunbooksByTeamPaymentRequiredError     | 402                                                            | application/json                                               |
-| apierrors.RunbooksGetAllRunbooksByTeamForbiddenError           | 403                                                            | application/json                                               |
-| apierrors.RunbooksGetAllRunbooksByTeamNotFoundError            | 404                                                            | application/json                                               |
-| apierrors.RunbooksGetAllRunbooksByTeamConflictError            | 409                                                            | application/json                                               |
-| apierrors.RunbooksGetAllRunbooksByTeamUnprocessableEntityError | 422                                                            | application/json                                               |
-| apierrors.RunbooksGetAllRunbooksByTeamInternalServerError      | 500                                                            | application/json                                               |
-| apierrors.RunbooksGetAllRunbooksByTeamBadGatewayError          | 502                                                            | application/json                                               |
-| apierrors.RunbooksGetAllRunbooksByTeamServiceUnavailableError  | 503                                                            | application/json                                               |
-| apierrors.RunbooksGetAllRunbooksByTeamGatewayTimeoutError      | 504                                                            | application/json                                               |
-| apierrors.APIError                                             | 4XX, 5XX                                                       | \*/\*                                                          |
+| Error Type                         | Status Code                        | Content Type                       |
+| ---------------------------------- | ---------------------------------- | ---------------------------------- |
+| apierrors.BadRequestError          | 400                                | application/json                   |
+| apierrors.UnauthorizedError        | 401                                | application/json                   |
+| apierrors.PaymentRequiredError     | 402                                | application/json                   |
+| apierrors.ForbiddenError           | 403                                | application/json                   |
+| apierrors.NotFoundError            | 404                                | application/json                   |
+| apierrors.ConflictError            | 409                                | application/json                   |
+| apierrors.UnprocessableEntityError | 422                                | application/json                   |
+| apierrors.InternalServerError      | 500                                | application/json                   |
+| apierrors.BadGatewayError          | 502                                | application/json                   |
+| apierrors.ServiceUnavailableError  | 503                                | application/json                   |
+| apierrors.GatewayTimeoutError      | 504                                | application/json                   |
+| apierrors.APIError                 | 4XX, 5XX                           | \*/\*                              |
 
 ## Create
 
@@ -132,20 +132,20 @@ func main() {
 
 ### Errors
 
-| Error Type                                              | Status Code                                             | Content Type                                            |
-| ------------------------------------------------------- | ------------------------------------------------------- | ------------------------------------------------------- |
-| apierrors.RunbooksCreateRunbookBadRequestError          | 400                                                     | application/json                                        |
-| apierrors.RunbooksCreateRunbookUnauthorizedError        | 401                                                     | application/json                                        |
-| apierrors.RunbooksCreateRunbookPaymentRequiredError     | 402                                                     | application/json                                        |
-| apierrors.RunbooksCreateRunbookForbiddenError           | 403                                                     | application/json                                        |
-| apierrors.RunbooksCreateRunbookNotFoundError            | 404                                                     | application/json                                        |
-| apierrors.RunbooksCreateRunbookConflictError            | 409                                                     | application/json                                        |
-| apierrors.RunbooksCreateRunbookUnprocessableEntityError | 422                                                     | application/json                                        |
-| apierrors.RunbooksCreateRunbookInternalServerError      | 500                                                     | application/json                                        |
-| apierrors.RunbooksCreateRunbookBadGatewayError          | 502                                                     | application/json                                        |
-| apierrors.RunbooksCreateRunbookServiceUnavailableError  | 503                                                     | application/json                                        |
-| apierrors.RunbooksCreateRunbookGatewayTimeoutError      | 504                                                     | application/json                                        |
-| apierrors.APIError                                      | 4XX, 5XX                                                | \*/\*                                                   |
+| Error Type                         | Status Code                        | Content Type                       |
+| ---------------------------------- | ---------------------------------- | ---------------------------------- |
+| apierrors.BadRequestError          | 400                                | application/json                   |
+| apierrors.UnauthorizedError        | 401                                | application/json                   |
+| apierrors.PaymentRequiredError     | 402                                | application/json                   |
+| apierrors.ForbiddenError           | 403                                | application/json                   |
+| apierrors.NotFoundError            | 404                                | application/json                   |
+| apierrors.ConflictError            | 409                                | application/json                   |
+| apierrors.UnprocessableEntityError | 422                                | application/json                   |
+| apierrors.InternalServerError      | 500                                | application/json                   |
+| apierrors.BadGatewayError          | 502                                | application/json                   |
+| apierrors.ServiceUnavailableError  | 503                                | application/json                   |
+| apierrors.GatewayTimeoutError      | 504                                | application/json                   |
+| apierrors.APIError                 | 4XX, 5XX                           | \*/\*                              |
 
 ## Remove
 
@@ -196,20 +196,20 @@ func main() {
 
 ### Errors
 
-| Error Type                                              | Status Code                                             | Content Type                                            |
-| ------------------------------------------------------- | ------------------------------------------------------- | ------------------------------------------------------- |
-| apierrors.RunbooksRemoveRunbookBadRequestError          | 400                                                     | application/json                                        |
-| apierrors.RunbooksRemoveRunbookUnauthorizedError        | 401                                                     | application/json                                        |
-| apierrors.RunbooksRemoveRunbookPaymentRequiredError     | 402                                                     | application/json                                        |
-| apierrors.RunbooksRemoveRunbookForbiddenError           | 403                                                     | application/json                                        |
-| apierrors.RunbooksRemoveRunbookNotFoundError            | 404                                                     | application/json                                        |
-| apierrors.RunbooksRemoveRunbookConflictError            | 409                                                     | application/json                                        |
-| apierrors.RunbooksRemoveRunbookUnprocessableEntityError | 422                                                     | application/json                                        |
-| apierrors.RunbooksRemoveRunbookInternalServerError      | 500                                                     | application/json                                        |
-| apierrors.RunbooksRemoveRunbookBadGatewayError          | 502                                                     | application/json                                        |
-| apierrors.RunbooksRemoveRunbookServiceUnavailableError  | 503                                                     | application/json                                        |
-| apierrors.RunbooksRemoveRunbookGatewayTimeoutError      | 504                                                     | application/json                                        |
-| apierrors.APIError                                      | 4XX, 5XX                                                | \*/\*                                                   |
+| Error Type                         | Status Code                        | Content Type                       |
+| ---------------------------------- | ---------------------------------- | ---------------------------------- |
+| apierrors.BadRequestError          | 400                                | application/json                   |
+| apierrors.UnauthorizedError        | 401                                | application/json                   |
+| apierrors.PaymentRequiredError     | 402                                | application/json                   |
+| apierrors.ForbiddenError           | 403                                | application/json                   |
+| apierrors.NotFoundError            | 404                                | application/json                   |
+| apierrors.ConflictError            | 409                                | application/json                   |
+| apierrors.UnprocessableEntityError | 422                                | application/json                   |
+| apierrors.InternalServerError      | 500                                | application/json                   |
+| apierrors.BadGatewayError          | 502                                | application/json                   |
+| apierrors.ServiceUnavailableError  | 503                                | application/json                   |
+| apierrors.GatewayTimeoutError      | 504                                | application/json                   |
+| apierrors.APIError                 | 4XX, 5XX                           | \*/\*                              |
 
 ## GetByID
 
@@ -260,20 +260,20 @@ func main() {
 
 ### Errors
 
-| Error Type                                               | Status Code                                              | Content Type                                             |
-| -------------------------------------------------------- | -------------------------------------------------------- | -------------------------------------------------------- |
-| apierrors.RunbooksGetRunbookByIDBadRequestError          | 400                                                      | application/json                                         |
-| apierrors.RunbooksGetRunbookByIDUnauthorizedError        | 401                                                      | application/json                                         |
-| apierrors.RunbooksGetRunbookByIDPaymentRequiredError     | 402                                                      | application/json                                         |
-| apierrors.RunbooksGetRunbookByIDForbiddenError           | 403                                                      | application/json                                         |
-| apierrors.RunbooksGetRunbookByIDNotFoundError            | 404                                                      | application/json                                         |
-| apierrors.RunbooksGetRunbookByIDConflictError            | 409                                                      | application/json                                         |
-| apierrors.RunbooksGetRunbookByIDUnprocessableEntityError | 422                                                      | application/json                                         |
-| apierrors.RunbooksGetRunbookByIDInternalServerError      | 500                                                      | application/json                                         |
-| apierrors.RunbooksGetRunbookByIDBadGatewayError          | 502                                                      | application/json                                         |
-| apierrors.RunbooksGetRunbookByIDServiceUnavailableError  | 503                                                      | application/json                                         |
-| apierrors.RunbooksGetRunbookByIDGatewayTimeoutError      | 504                                                      | application/json                                         |
-| apierrors.APIError                                       | 4XX, 5XX                                                 | \*/\*                                                    |
+| Error Type                         | Status Code                        | Content Type                       |
+| ---------------------------------- | ---------------------------------- | ---------------------------------- |
+| apierrors.BadRequestError          | 400                                | application/json                   |
+| apierrors.UnauthorizedError        | 401                                | application/json                   |
+| apierrors.PaymentRequiredError     | 402                                | application/json                   |
+| apierrors.ForbiddenError           | 403                                | application/json                   |
+| apierrors.NotFoundError            | 404                                | application/json                   |
+| apierrors.ConflictError            | 409                                | application/json                   |
+| apierrors.UnprocessableEntityError | 422                                | application/json                   |
+| apierrors.InternalServerError      | 500                                | application/json                   |
+| apierrors.BadGatewayError          | 502                                | application/json                   |
+| apierrors.ServiceUnavailableError  | 503                                | application/json                   |
+| apierrors.GatewayTimeoutError      | 504                                | application/json                   |
+| apierrors.APIError                 | 4XX, 5XX                           | \*/\*                              |
 
 ## Update
 
@@ -333,17 +333,17 @@ func main() {
 
 ### Errors
 
-| Error Type                                              | Status Code                                             | Content Type                                            |
-| ------------------------------------------------------- | ------------------------------------------------------- | ------------------------------------------------------- |
-| apierrors.RunbooksUpdateRunbookBadRequestError          | 400                                                     | application/json                                        |
-| apierrors.RunbooksUpdateRunbookUnauthorizedError        | 401                                                     | application/json                                        |
-| apierrors.RunbooksUpdateRunbookPaymentRequiredError     | 402                                                     | application/json                                        |
-| apierrors.RunbooksUpdateRunbookForbiddenError           | 403                                                     | application/json                                        |
-| apierrors.RunbooksUpdateRunbookNotFoundError            | 404                                                     | application/json                                        |
-| apierrors.RunbooksUpdateRunbookConflictError            | 409                                                     | application/json                                        |
-| apierrors.RunbooksUpdateRunbookUnprocessableEntityError | 422                                                     | application/json                                        |
-| apierrors.RunbooksUpdateRunbookInternalServerError      | 500                                                     | application/json                                        |
-| apierrors.RunbooksUpdateRunbookBadGatewayError          | 502                                                     | application/json                                        |
-| apierrors.RunbooksUpdateRunbookServiceUnavailableError  | 503                                                     | application/json                                        |
-| apierrors.RunbooksUpdateRunbookGatewayTimeoutError      | 504                                                     | application/json                                        |
-| apierrors.APIError                                      | 4XX, 5XX                                                | \*/\*                                                   |
+| Error Type                         | Status Code                        | Content Type                       |
+| ---------------------------------- | ---------------------------------- | ---------------------------------- |
+| apierrors.BadRequestError          | 400                                | application/json                   |
+| apierrors.UnauthorizedError        | 401                                | application/json                   |
+| apierrors.PaymentRequiredError     | 402                                | application/json                   |
+| apierrors.ForbiddenError           | 403                                | application/json                   |
+| apierrors.NotFoundError            | 404                                | application/json                   |
+| apierrors.ConflictError            | 409                                | application/json                   |
+| apierrors.UnprocessableEntityError | 422                                | application/json                   |
+| apierrors.InternalServerError      | 500                                | application/json                   |
+| apierrors.BadGatewayError          | 502                                | application/json                   |
+| apierrors.ServiceUnavailableError  | 503                                | application/json                   |
+| apierrors.GatewayTimeoutError      | 504                                | application/json                   |
+| apierrors.APIError                 | 4XX, 5XX                           | \*/\*                              |

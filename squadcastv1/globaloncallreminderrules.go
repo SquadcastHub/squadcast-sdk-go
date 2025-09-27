@@ -224,7 +224,7 @@ func (s *GlobalOncallReminderRules) Delete(ctx context.Context, ownerID string, 
 				return nil, err
 			}
 
-			var out apierrors.GlobalOncallReminderRulesDeleteGlobalOncallReminderRulesBadRequestError
+			var out apierrors.BadRequestError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -249,7 +249,7 @@ func (s *GlobalOncallReminderRules) Delete(ctx context.Context, ownerID string, 
 				return nil, err
 			}
 
-			var out apierrors.GlobalOncallReminderRulesDeleteGlobalOncallReminderRulesUnauthorizedError
+			var out apierrors.UnauthorizedError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -274,7 +274,7 @@ func (s *GlobalOncallReminderRules) Delete(ctx context.Context, ownerID string, 
 				return nil, err
 			}
 
-			var out apierrors.GlobalOncallReminderRulesDeleteGlobalOncallReminderRulesPaymentRequiredError
+			var out apierrors.PaymentRequiredError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -299,7 +299,7 @@ func (s *GlobalOncallReminderRules) Delete(ctx context.Context, ownerID string, 
 				return nil, err
 			}
 
-			var out apierrors.GlobalOncallReminderRulesDeleteGlobalOncallReminderRulesForbiddenError
+			var out apierrors.ForbiddenError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -324,7 +324,7 @@ func (s *GlobalOncallReminderRules) Delete(ctx context.Context, ownerID string, 
 				return nil, err
 			}
 
-			var out apierrors.GlobalOncallReminderRulesDeleteGlobalOncallReminderRulesNotFoundError
+			var out apierrors.NotFoundError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -349,7 +349,7 @@ func (s *GlobalOncallReminderRules) Delete(ctx context.Context, ownerID string, 
 				return nil, err
 			}
 
-			var out apierrors.GlobalOncallReminderRulesDeleteGlobalOncallReminderRulesConflictError
+			var out apierrors.ConflictError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -374,7 +374,7 @@ func (s *GlobalOncallReminderRules) Delete(ctx context.Context, ownerID string, 
 				return nil, err
 			}
 
-			var out apierrors.GlobalOncallReminderRulesDeleteGlobalOncallReminderRulesUnprocessableEntityError
+			var out apierrors.UnprocessableEntityError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -399,7 +399,7 @@ func (s *GlobalOncallReminderRules) Delete(ctx context.Context, ownerID string, 
 				return nil, err
 			}
 
-			var out apierrors.GlobalOncallReminderRulesDeleteGlobalOncallReminderRulesInternalServerError
+			var out apierrors.InternalServerError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -424,7 +424,7 @@ func (s *GlobalOncallReminderRules) Delete(ctx context.Context, ownerID string, 
 				return nil, err
 			}
 
-			var out apierrors.GlobalOncallReminderRulesDeleteGlobalOncallReminderRulesBadGatewayError
+			var out apierrors.BadGatewayError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -449,7 +449,7 @@ func (s *GlobalOncallReminderRules) Delete(ctx context.Context, ownerID string, 
 				return nil, err
 			}
 
-			var out apierrors.GlobalOncallReminderRulesDeleteGlobalOncallReminderRulesServiceUnavailableError
+			var out apierrors.ServiceUnavailableError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -474,7 +474,7 @@ func (s *GlobalOncallReminderRules) Delete(ctx context.Context, ownerID string, 
 				return nil, err
 			}
 
-			var out apierrors.GlobalOncallReminderRulesDeleteGlobalOncallReminderRulesGatewayTimeoutError
+			var out apierrors.GatewayTimeoutError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -713,7 +713,7 @@ func (s *GlobalOncallReminderRules) List(ctx context.Context, ownerID string, op
 				return nil, err
 			}
 
-			var out apierrors.GlobalOncallReminderRulesGetGlobalOncallReminderRulesBadRequestError
+			var out apierrors.BadRequestError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -738,7 +738,7 @@ func (s *GlobalOncallReminderRules) List(ctx context.Context, ownerID string, op
 				return nil, err
 			}
 
-			var out apierrors.GlobalOncallReminderRulesGetGlobalOncallReminderRulesUnauthorizedError
+			var out apierrors.UnauthorizedError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -763,7 +763,7 @@ func (s *GlobalOncallReminderRules) List(ctx context.Context, ownerID string, op
 				return nil, err
 			}
 
-			var out apierrors.GlobalOncallReminderRulesGetGlobalOncallReminderRulesPaymentRequiredError
+			var out apierrors.PaymentRequiredError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -788,7 +788,7 @@ func (s *GlobalOncallReminderRules) List(ctx context.Context, ownerID string, op
 				return nil, err
 			}
 
-			var out apierrors.GlobalOncallReminderRulesGetGlobalOncallReminderRulesForbiddenError
+			var out apierrors.ForbiddenError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -813,7 +813,7 @@ func (s *GlobalOncallReminderRules) List(ctx context.Context, ownerID string, op
 				return nil, err
 			}
 
-			var out apierrors.GlobalOncallReminderRulesGetGlobalOncallReminderRulesNotFoundError
+			var out apierrors.NotFoundError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -838,7 +838,7 @@ func (s *GlobalOncallReminderRules) List(ctx context.Context, ownerID string, op
 				return nil, err
 			}
 
-			var out apierrors.GlobalOncallReminderRulesGetGlobalOncallReminderRulesConflictError
+			var out apierrors.ConflictError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -863,7 +863,7 @@ func (s *GlobalOncallReminderRules) List(ctx context.Context, ownerID string, op
 				return nil, err
 			}
 
-			var out apierrors.GlobalOncallReminderRulesGetGlobalOncallReminderRulesUnprocessableEntityError
+			var out apierrors.UnprocessableEntityError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -888,7 +888,7 @@ func (s *GlobalOncallReminderRules) List(ctx context.Context, ownerID string, op
 				return nil, err
 			}
 
-			var out apierrors.GlobalOncallReminderRulesGetGlobalOncallReminderRulesInternalServerError
+			var out apierrors.InternalServerError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -913,7 +913,7 @@ func (s *GlobalOncallReminderRules) List(ctx context.Context, ownerID string, op
 				return nil, err
 			}
 
-			var out apierrors.GlobalOncallReminderRulesGetGlobalOncallReminderRulesBadGatewayError
+			var out apierrors.BadGatewayError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -938,7 +938,7 @@ func (s *GlobalOncallReminderRules) List(ctx context.Context, ownerID string, op
 				return nil, err
 			}
 
-			var out apierrors.GlobalOncallReminderRulesGetGlobalOncallReminderRulesServiceUnavailableError
+			var out apierrors.ServiceUnavailableError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -963,7 +963,7 @@ func (s *GlobalOncallReminderRules) List(ctx context.Context, ownerID string, op
 				return nil, err
 			}
 
-			var out apierrors.GlobalOncallReminderRulesGetGlobalOncallReminderRulesGatewayTimeoutError
+			var out apierrors.GatewayTimeoutError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -1200,7 +1200,7 @@ func (s *GlobalOncallReminderRules) Create(ctx context.Context, request componen
 				return nil, err
 			}
 
-			var out apierrors.GlobalOncallReminderRulesCreateGlobalOncallReminderRulesBadRequestError
+			var out apierrors.BadRequestError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -1225,7 +1225,7 @@ func (s *GlobalOncallReminderRules) Create(ctx context.Context, request componen
 				return nil, err
 			}
 
-			var out apierrors.GlobalOncallReminderRulesCreateGlobalOncallReminderRulesUnauthorizedError
+			var out apierrors.UnauthorizedError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -1250,7 +1250,7 @@ func (s *GlobalOncallReminderRules) Create(ctx context.Context, request componen
 				return nil, err
 			}
 
-			var out apierrors.GlobalOncallReminderRulesCreateGlobalOncallReminderRulesPaymentRequiredError
+			var out apierrors.PaymentRequiredError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -1275,7 +1275,7 @@ func (s *GlobalOncallReminderRules) Create(ctx context.Context, request componen
 				return nil, err
 			}
 
-			var out apierrors.GlobalOncallReminderRulesCreateGlobalOncallReminderRulesForbiddenError
+			var out apierrors.ForbiddenError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -1300,7 +1300,7 @@ func (s *GlobalOncallReminderRules) Create(ctx context.Context, request componen
 				return nil, err
 			}
 
-			var out apierrors.GlobalOncallReminderRulesCreateGlobalOncallReminderRulesNotFoundError
+			var out apierrors.NotFoundError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -1325,7 +1325,7 @@ func (s *GlobalOncallReminderRules) Create(ctx context.Context, request componen
 				return nil, err
 			}
 
-			var out apierrors.GlobalOncallReminderRulesCreateGlobalOncallReminderRulesConflictError
+			var out apierrors.ConflictError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -1350,7 +1350,7 @@ func (s *GlobalOncallReminderRules) Create(ctx context.Context, request componen
 				return nil, err
 			}
 
-			var out apierrors.GlobalOncallReminderRulesCreateGlobalOncallReminderRulesUnprocessableEntityError
+			var out apierrors.UnprocessableEntityError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -1375,7 +1375,7 @@ func (s *GlobalOncallReminderRules) Create(ctx context.Context, request componen
 				return nil, err
 			}
 
-			var out apierrors.GlobalOncallReminderRulesCreateGlobalOncallReminderRulesInternalServerError
+			var out apierrors.InternalServerError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -1400,7 +1400,7 @@ func (s *GlobalOncallReminderRules) Create(ctx context.Context, request componen
 				return nil, err
 			}
 
-			var out apierrors.GlobalOncallReminderRulesCreateGlobalOncallReminderRulesBadGatewayError
+			var out apierrors.BadGatewayError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -1425,7 +1425,7 @@ func (s *GlobalOncallReminderRules) Create(ctx context.Context, request componen
 				return nil, err
 			}
 
-			var out apierrors.GlobalOncallReminderRulesCreateGlobalOncallReminderRulesServiceUnavailableError
+			var out apierrors.ServiceUnavailableError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -1450,7 +1450,7 @@ func (s *GlobalOncallReminderRules) Create(ctx context.Context, request componen
 				return nil, err
 			}
 
-			var out apierrors.GlobalOncallReminderRulesCreateGlobalOncallReminderRulesGatewayTimeoutError
+			var out apierrors.GatewayTimeoutError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -1697,7 +1697,7 @@ func (s *GlobalOncallReminderRules) Update(ctx context.Context, ownerID string, 
 				return nil, err
 			}
 
-			var out apierrors.GlobalOncallReminderRulesUpdateGlobalOncallReminderRulesBadRequestError
+			var out apierrors.BadRequestError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -1722,7 +1722,7 @@ func (s *GlobalOncallReminderRules) Update(ctx context.Context, ownerID string, 
 				return nil, err
 			}
 
-			var out apierrors.GlobalOncallReminderRulesUpdateGlobalOncallReminderRulesUnauthorizedError
+			var out apierrors.UnauthorizedError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -1747,7 +1747,7 @@ func (s *GlobalOncallReminderRules) Update(ctx context.Context, ownerID string, 
 				return nil, err
 			}
 
-			var out apierrors.GlobalOncallReminderRulesUpdateGlobalOncallReminderRulesPaymentRequiredError
+			var out apierrors.PaymentRequiredError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -1772,7 +1772,7 @@ func (s *GlobalOncallReminderRules) Update(ctx context.Context, ownerID string, 
 				return nil, err
 			}
 
-			var out apierrors.GlobalOncallReminderRulesUpdateGlobalOncallReminderRulesForbiddenError
+			var out apierrors.ForbiddenError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -1797,7 +1797,7 @@ func (s *GlobalOncallReminderRules) Update(ctx context.Context, ownerID string, 
 				return nil, err
 			}
 
-			var out apierrors.GlobalOncallReminderRulesUpdateGlobalOncallReminderRulesNotFoundError
+			var out apierrors.NotFoundError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -1822,7 +1822,7 @@ func (s *GlobalOncallReminderRules) Update(ctx context.Context, ownerID string, 
 				return nil, err
 			}
 
-			var out apierrors.GlobalOncallReminderRulesUpdateGlobalOncallReminderRulesConflictError
+			var out apierrors.ConflictError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -1847,7 +1847,7 @@ func (s *GlobalOncallReminderRules) Update(ctx context.Context, ownerID string, 
 				return nil, err
 			}
 
-			var out apierrors.GlobalOncallReminderRulesUpdateGlobalOncallReminderRulesUnprocessableEntityError
+			var out apierrors.UnprocessableEntityError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -1872,7 +1872,7 @@ func (s *GlobalOncallReminderRules) Update(ctx context.Context, ownerID string, 
 				return nil, err
 			}
 
-			var out apierrors.GlobalOncallReminderRulesUpdateGlobalOncallReminderRulesInternalServerError
+			var out apierrors.InternalServerError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -1897,7 +1897,7 @@ func (s *GlobalOncallReminderRules) Update(ctx context.Context, ownerID string, 
 				return nil, err
 			}
 
-			var out apierrors.GlobalOncallReminderRulesUpdateGlobalOncallReminderRulesBadGatewayError
+			var out apierrors.BadGatewayError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -1922,7 +1922,7 @@ func (s *GlobalOncallReminderRules) Update(ctx context.Context, ownerID string, 
 				return nil, err
 			}
 
-			var out apierrors.GlobalOncallReminderRulesUpdateGlobalOncallReminderRulesServiceUnavailableError
+			var out apierrors.ServiceUnavailableError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -1947,7 +1947,7 @@ func (s *GlobalOncallReminderRules) Update(ctx context.Context, ownerID string, 
 				return nil, err
 			}
 
-			var out apierrors.GlobalOncallReminderRulesUpdateGlobalOncallReminderRulesGatewayTimeoutError
+			var out apierrors.GatewayTimeoutError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}

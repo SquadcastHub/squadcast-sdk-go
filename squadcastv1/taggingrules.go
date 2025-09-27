@@ -223,7 +223,7 @@ func (s *TaggingRules) Get(ctx context.Context, serviceID string, opts ...operat
 				return nil, err
 			}
 
-			var out apierrors.TaggingRulesGetTaggingRulesBadRequestError
+			var out apierrors.BadRequestError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -248,7 +248,7 @@ func (s *TaggingRules) Get(ctx context.Context, serviceID string, opts ...operat
 				return nil, err
 			}
 
-			var out apierrors.TaggingRulesGetTaggingRulesUnauthorizedError
+			var out apierrors.UnauthorizedError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -273,7 +273,7 @@ func (s *TaggingRules) Get(ctx context.Context, serviceID string, opts ...operat
 				return nil, err
 			}
 
-			var out apierrors.TaggingRulesGetTaggingRulesPaymentRequiredError
+			var out apierrors.PaymentRequiredError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -298,7 +298,7 @@ func (s *TaggingRules) Get(ctx context.Context, serviceID string, opts ...operat
 				return nil, err
 			}
 
-			var out apierrors.TaggingRulesGetTaggingRulesForbiddenError
+			var out apierrors.ForbiddenError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -323,7 +323,7 @@ func (s *TaggingRules) Get(ctx context.Context, serviceID string, opts ...operat
 				return nil, err
 			}
 
-			var out apierrors.TaggingRulesGetTaggingRulesNotFoundError
+			var out apierrors.NotFoundError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -348,7 +348,7 @@ func (s *TaggingRules) Get(ctx context.Context, serviceID string, opts ...operat
 				return nil, err
 			}
 
-			var out apierrors.TaggingRulesGetTaggingRulesConflictError
+			var out apierrors.ConflictError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -373,7 +373,7 @@ func (s *TaggingRules) Get(ctx context.Context, serviceID string, opts ...operat
 				return nil, err
 			}
 
-			var out apierrors.TaggingRulesGetTaggingRulesUnprocessableEntityError
+			var out apierrors.UnprocessableEntityError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -398,7 +398,7 @@ func (s *TaggingRules) Get(ctx context.Context, serviceID string, opts ...operat
 				return nil, err
 			}
 
-			var out apierrors.TaggingRulesGetTaggingRulesInternalServerError
+			var out apierrors.InternalServerError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -423,7 +423,7 @@ func (s *TaggingRules) Get(ctx context.Context, serviceID string, opts ...operat
 				return nil, err
 			}
 
-			var out apierrors.TaggingRulesGetTaggingRulesBadGatewayError
+			var out apierrors.BadGatewayError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -448,7 +448,7 @@ func (s *TaggingRules) Get(ctx context.Context, serviceID string, opts ...operat
 				return nil, err
 			}
 
-			var out apierrors.TaggingRulesGetTaggingRulesServiceUnavailableError
+			var out apierrors.ServiceUnavailableError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -473,7 +473,7 @@ func (s *TaggingRules) Get(ctx context.Context, serviceID string, opts ...operat
 				return nil, err
 			}
 
-			var out apierrors.TaggingRulesGetTaggingRulesGatewayTimeoutError
+			var out apierrors.GatewayTimeoutError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}

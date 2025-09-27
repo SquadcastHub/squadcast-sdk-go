@@ -229,7 +229,7 @@ func (s *Tokens) CreateUserToken(ctx context.Context, request operations.UsersCr
 				return nil, err
 			}
 
-			var out apierrors.UsersCreateTokenBadRequestError
+			var out apierrors.BadRequestError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -254,7 +254,7 @@ func (s *Tokens) CreateUserToken(ctx context.Context, request operations.UsersCr
 				return nil, err
 			}
 
-			var out apierrors.UsersCreateTokenUnauthorizedError
+			var out apierrors.UnauthorizedError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -279,7 +279,7 @@ func (s *Tokens) CreateUserToken(ctx context.Context, request operations.UsersCr
 				return nil, err
 			}
 
-			var out apierrors.UsersCreateTokenPaymentRequiredError
+			var out apierrors.PaymentRequiredError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -304,7 +304,7 @@ func (s *Tokens) CreateUserToken(ctx context.Context, request operations.UsersCr
 				return nil, err
 			}
 
-			var out apierrors.UsersCreateTokenForbiddenError
+			var out apierrors.ForbiddenError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -329,7 +329,7 @@ func (s *Tokens) CreateUserToken(ctx context.Context, request operations.UsersCr
 				return nil, err
 			}
 
-			var out apierrors.UsersCreateTokenNotFoundError
+			var out apierrors.NotFoundError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -354,7 +354,7 @@ func (s *Tokens) CreateUserToken(ctx context.Context, request operations.UsersCr
 				return nil, err
 			}
 
-			var out apierrors.UsersCreateTokenConflictError
+			var out apierrors.ConflictError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -379,7 +379,7 @@ func (s *Tokens) CreateUserToken(ctx context.Context, request operations.UsersCr
 				return nil, err
 			}
 
-			var out apierrors.UsersCreateTokenUnprocessableEntityError
+			var out apierrors.UnprocessableEntityError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -404,7 +404,7 @@ func (s *Tokens) CreateUserToken(ctx context.Context, request operations.UsersCr
 				return nil, err
 			}
 
-			var out apierrors.UsersCreateTokenInternalServerError
+			var out apierrors.InternalServerError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -429,7 +429,7 @@ func (s *Tokens) CreateUserToken(ctx context.Context, request operations.UsersCr
 				return nil, err
 			}
 
-			var out apierrors.UsersCreateTokenBadGatewayError
+			var out apierrors.BadGatewayError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -454,7 +454,7 @@ func (s *Tokens) CreateUserToken(ctx context.Context, request operations.UsersCr
 				return nil, err
 			}
 
-			var out apierrors.UsersCreateTokenServiceUnavailableError
+			var out apierrors.ServiceUnavailableError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -479,7 +479,7 @@ func (s *Tokens) CreateUserToken(ctx context.Context, request operations.UsersCr
 				return nil, err
 			}
 
-			var out apierrors.UsersCreateTokenGatewayTimeoutError
+			var out apierrors.GatewayTimeoutError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}

@@ -1188,10 +1188,10 @@ func (s *Squads) UpdateName(ctx context.Context, squadID string, v4SquadsUpdateS
 
 }
 
-// SquadsDeleteSquad - Delete Squad
+// Delete Squad
 // This endpoint is used to delete the squad. Squad should not be assigned to any incident or part of any escalation policy.
 // Requires `access_token` as a `Bearer {{token}}` in the `Authorization` header with `squad-update` scope.
-func (s *Squads) SquadsDeleteSquad(ctx context.Context, squadID string, opts ...operations.Option) (*operations.SquadsDeleteSquadResponse, error) {
+func (s *Squads) Delete(ctx context.Context, squadID string, opts ...operations.Option) (*operations.SquadsDeleteSquadResponse, error) {
 	request := operations.SquadsDeleteSquadRequest{
 		SquadID: squadID,
 	}

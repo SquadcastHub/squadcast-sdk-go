@@ -234,7 +234,7 @@ func (s *RulesetsRules) Create(ctx context.Context, gerID int64, alertSourceVers
 				return nil, err
 			}
 
-			var out apierrors.GlobalEventRulesCreateRuleBadRequestError
+			var out apierrors.BadRequestError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -259,7 +259,7 @@ func (s *RulesetsRules) Create(ctx context.Context, gerID int64, alertSourceVers
 				return nil, err
 			}
 
-			var out apierrors.GlobalEventRulesCreateRuleUnauthorizedError
+			var out apierrors.UnauthorizedError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -284,7 +284,7 @@ func (s *RulesetsRules) Create(ctx context.Context, gerID int64, alertSourceVers
 				return nil, err
 			}
 
-			var out apierrors.GlobalEventRulesCreateRulePaymentRequiredError
+			var out apierrors.PaymentRequiredError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -309,7 +309,7 @@ func (s *RulesetsRules) Create(ctx context.Context, gerID int64, alertSourceVers
 				return nil, err
 			}
 
-			var out apierrors.GlobalEventRulesCreateRuleForbiddenError
+			var out apierrors.ForbiddenError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -334,7 +334,7 @@ func (s *RulesetsRules) Create(ctx context.Context, gerID int64, alertSourceVers
 				return nil, err
 			}
 
-			var out apierrors.GlobalEventRulesCreateRuleNotFoundError
+			var out apierrors.NotFoundError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -359,7 +359,7 @@ func (s *RulesetsRules) Create(ctx context.Context, gerID int64, alertSourceVers
 				return nil, err
 			}
 
-			var out apierrors.GlobalEventRulesCreateRuleConflictError
+			var out apierrors.ConflictError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -384,7 +384,7 @@ func (s *RulesetsRules) Create(ctx context.Context, gerID int64, alertSourceVers
 				return nil, err
 			}
 
-			var out apierrors.GlobalEventRulesCreateRuleUnprocessableEntityError
+			var out apierrors.UnprocessableEntityError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -409,7 +409,7 @@ func (s *RulesetsRules) Create(ctx context.Context, gerID int64, alertSourceVers
 				return nil, err
 			}
 
-			var out apierrors.GlobalEventRulesCreateRuleInternalServerError
+			var out apierrors.InternalServerError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -434,7 +434,7 @@ func (s *RulesetsRules) Create(ctx context.Context, gerID int64, alertSourceVers
 				return nil, err
 			}
 
-			var out apierrors.GlobalEventRulesCreateRuleBadGatewayError
+			var out apierrors.BadGatewayError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -459,7 +459,7 @@ func (s *RulesetsRules) Create(ctx context.Context, gerID int64, alertSourceVers
 				return nil, err
 			}
 
-			var out apierrors.GlobalEventRulesCreateRuleServiceUnavailableError
+			var out apierrors.ServiceUnavailableError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -484,7 +484,7 @@ func (s *RulesetsRules) Create(ctx context.Context, gerID int64, alertSourceVers
 				return nil, err
 			}
 
-			var out apierrors.GlobalEventRulesCreateRuleGatewayTimeoutError
+			var out apierrors.GatewayTimeoutError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -722,7 +722,7 @@ func (s *RulesetsRules) GetByID(ctx context.Context, gerID int64, alertSourceVer
 				return nil, err
 			}
 
-			var out apierrors.GlobalEventRulesGetRuleByIDBadRequestError
+			var out apierrors.BadRequestError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -747,7 +747,7 @@ func (s *RulesetsRules) GetByID(ctx context.Context, gerID int64, alertSourceVer
 				return nil, err
 			}
 
-			var out apierrors.GlobalEventRulesGetRuleByIDUnauthorizedError
+			var out apierrors.UnauthorizedError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -772,7 +772,7 @@ func (s *RulesetsRules) GetByID(ctx context.Context, gerID int64, alertSourceVer
 				return nil, err
 			}
 
-			var out apierrors.GlobalEventRulesGetRuleByIDPaymentRequiredError
+			var out apierrors.PaymentRequiredError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -797,7 +797,7 @@ func (s *RulesetsRules) GetByID(ctx context.Context, gerID int64, alertSourceVer
 				return nil, err
 			}
 
-			var out apierrors.GlobalEventRulesGetRuleByIDForbiddenError
+			var out apierrors.ForbiddenError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -822,7 +822,7 @@ func (s *RulesetsRules) GetByID(ctx context.Context, gerID int64, alertSourceVer
 				return nil, err
 			}
 
-			var out apierrors.GlobalEventRulesGetRuleByIDNotFoundError
+			var out apierrors.NotFoundError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -847,7 +847,7 @@ func (s *RulesetsRules) GetByID(ctx context.Context, gerID int64, alertSourceVer
 				return nil, err
 			}
 
-			var out apierrors.GlobalEventRulesGetRuleByIDConflictError
+			var out apierrors.ConflictError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -872,7 +872,7 @@ func (s *RulesetsRules) GetByID(ctx context.Context, gerID int64, alertSourceVer
 				return nil, err
 			}
 
-			var out apierrors.GlobalEventRulesGetRuleByIDUnprocessableEntityError
+			var out apierrors.UnprocessableEntityError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -897,7 +897,7 @@ func (s *RulesetsRules) GetByID(ctx context.Context, gerID int64, alertSourceVer
 				return nil, err
 			}
 
-			var out apierrors.GlobalEventRulesGetRuleByIDInternalServerError
+			var out apierrors.InternalServerError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -922,7 +922,7 @@ func (s *RulesetsRules) GetByID(ctx context.Context, gerID int64, alertSourceVer
 				return nil, err
 			}
 
-			var out apierrors.GlobalEventRulesGetRuleByIDBadGatewayError
+			var out apierrors.BadGatewayError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -947,7 +947,7 @@ func (s *RulesetsRules) GetByID(ctx context.Context, gerID int64, alertSourceVer
 				return nil, err
 			}
 
-			var out apierrors.GlobalEventRulesGetRuleByIDServiceUnavailableError
+			var out apierrors.ServiceUnavailableError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -972,7 +972,7 @@ func (s *RulesetsRules) GetByID(ctx context.Context, gerID int64, alertSourceVer
 				return nil, err
 			}
 
-			var out apierrors.GlobalEventRulesGetRuleByIDGatewayTimeoutError
+			var out apierrors.GatewayTimeoutError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}

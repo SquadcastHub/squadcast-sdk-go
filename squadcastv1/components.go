@@ -223,7 +223,7 @@ func (s *Components) List(ctx context.Context, statuspageID string, opts ...oper
 				return nil, err
 			}
 
-			var out apierrors.ComponentsListComponentsBadRequestError
+			var out apierrors.BadRequestError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -248,7 +248,7 @@ func (s *Components) List(ctx context.Context, statuspageID string, opts ...oper
 				return nil, err
 			}
 
-			var out apierrors.ComponentsListComponentsUnauthorizedError
+			var out apierrors.UnauthorizedError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -273,7 +273,7 @@ func (s *Components) List(ctx context.Context, statuspageID string, opts ...oper
 				return nil, err
 			}
 
-			var out apierrors.ComponentsListComponentsPaymentRequiredError
+			var out apierrors.PaymentRequiredError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -298,7 +298,7 @@ func (s *Components) List(ctx context.Context, statuspageID string, opts ...oper
 				return nil, err
 			}
 
-			var out apierrors.ComponentsListComponentsForbiddenError
+			var out apierrors.ForbiddenError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -323,7 +323,7 @@ func (s *Components) List(ctx context.Context, statuspageID string, opts ...oper
 				return nil, err
 			}
 
-			var out apierrors.ComponentsListComponentsNotFoundError
+			var out apierrors.NotFoundError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -348,7 +348,7 @@ func (s *Components) List(ctx context.Context, statuspageID string, opts ...oper
 				return nil, err
 			}
 
-			var out apierrors.ComponentsListComponentsConflictError
+			var out apierrors.ConflictError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -373,7 +373,7 @@ func (s *Components) List(ctx context.Context, statuspageID string, opts ...oper
 				return nil, err
 			}
 
-			var out apierrors.ComponentsListComponentsUnprocessableEntityError
+			var out apierrors.UnprocessableEntityError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -398,7 +398,7 @@ func (s *Components) List(ctx context.Context, statuspageID string, opts ...oper
 				return nil, err
 			}
 
-			var out apierrors.ComponentsListComponentsInternalServerError
+			var out apierrors.InternalServerError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -423,7 +423,7 @@ func (s *Components) List(ctx context.Context, statuspageID string, opts ...oper
 				return nil, err
 			}
 
-			var out apierrors.ComponentsListComponentsBadGatewayError
+			var out apierrors.BadGatewayError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -448,7 +448,7 @@ func (s *Components) List(ctx context.Context, statuspageID string, opts ...oper
 				return nil, err
 			}
 
-			var out apierrors.ComponentsListComponentsServiceUnavailableError
+			var out apierrors.ServiceUnavailableError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -473,7 +473,7 @@ func (s *Components) List(ctx context.Context, statuspageID string, opts ...oper
 				return nil, err
 			}
 
-			var out apierrors.ComponentsListComponentsGatewayTimeoutError
+			var out apierrors.GatewayTimeoutError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -715,7 +715,7 @@ func (s *Components) Create(ctx context.Context, statuspageID string, v4StatusPa
 				return nil, err
 			}
 
-			var out apierrors.ComponentsCreateComponentBadRequestError
+			var out apierrors.BadRequestError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -740,7 +740,7 @@ func (s *Components) Create(ctx context.Context, statuspageID string, v4StatusPa
 				return nil, err
 			}
 
-			var out apierrors.ComponentsCreateComponentUnauthorizedError
+			var out apierrors.UnauthorizedError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -765,7 +765,7 @@ func (s *Components) Create(ctx context.Context, statuspageID string, v4StatusPa
 				return nil, err
 			}
 
-			var out apierrors.ComponentsCreateComponentPaymentRequiredError
+			var out apierrors.PaymentRequiredError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -790,7 +790,7 @@ func (s *Components) Create(ctx context.Context, statuspageID string, v4StatusPa
 				return nil, err
 			}
 
-			var out apierrors.ComponentsCreateComponentForbiddenError
+			var out apierrors.ForbiddenError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -815,7 +815,7 @@ func (s *Components) Create(ctx context.Context, statuspageID string, v4StatusPa
 				return nil, err
 			}
 
-			var out apierrors.ComponentsCreateComponentNotFoundError
+			var out apierrors.NotFoundError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -840,7 +840,7 @@ func (s *Components) Create(ctx context.Context, statuspageID string, v4StatusPa
 				return nil, err
 			}
 
-			var out apierrors.ComponentsCreateComponentConflictError
+			var out apierrors.ConflictError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -865,7 +865,7 @@ func (s *Components) Create(ctx context.Context, statuspageID string, v4StatusPa
 				return nil, err
 			}
 
-			var out apierrors.ComponentsCreateComponentUnprocessableEntityError
+			var out apierrors.UnprocessableEntityError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -890,7 +890,7 @@ func (s *Components) Create(ctx context.Context, statuspageID string, v4StatusPa
 				return nil, err
 			}
 
-			var out apierrors.ComponentsCreateComponentInternalServerError
+			var out apierrors.InternalServerError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -915,7 +915,7 @@ func (s *Components) Create(ctx context.Context, statuspageID string, v4StatusPa
 				return nil, err
 			}
 
-			var out apierrors.ComponentsCreateComponentBadGatewayError
+			var out apierrors.BadGatewayError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -940,7 +940,7 @@ func (s *Components) Create(ctx context.Context, statuspageID string, v4StatusPa
 				return nil, err
 			}
 
-			var out apierrors.ComponentsCreateComponentServiceUnavailableError
+			var out apierrors.ServiceUnavailableError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -965,7 +965,7 @@ func (s *Components) Create(ctx context.Context, statuspageID string, v4StatusPa
 				return nil, err
 			}
 
-			var out apierrors.ComponentsCreateComponentGatewayTimeoutError
+			var out apierrors.GatewayTimeoutError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -1200,7 +1200,7 @@ func (s *Components) DeleteByID(ctx context.Context, statuspageID string, compon
 				return nil, err
 			}
 
-			var out apierrors.ComponentsDeleteComponentByIDBadRequestError
+			var out apierrors.BadRequestError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -1225,7 +1225,7 @@ func (s *Components) DeleteByID(ctx context.Context, statuspageID string, compon
 				return nil, err
 			}
 
-			var out apierrors.ComponentsDeleteComponentByIDUnauthorizedError
+			var out apierrors.UnauthorizedError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -1250,7 +1250,7 @@ func (s *Components) DeleteByID(ctx context.Context, statuspageID string, compon
 				return nil, err
 			}
 
-			var out apierrors.ComponentsDeleteComponentByIDPaymentRequiredError
+			var out apierrors.PaymentRequiredError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -1275,7 +1275,7 @@ func (s *Components) DeleteByID(ctx context.Context, statuspageID string, compon
 				return nil, err
 			}
 
-			var out apierrors.ComponentsDeleteComponentByIDForbiddenError
+			var out apierrors.ForbiddenError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -1300,7 +1300,7 @@ func (s *Components) DeleteByID(ctx context.Context, statuspageID string, compon
 				return nil, err
 			}
 
-			var out apierrors.ComponentsDeleteComponentByIDNotFoundError
+			var out apierrors.NotFoundError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -1325,7 +1325,7 @@ func (s *Components) DeleteByID(ctx context.Context, statuspageID string, compon
 				return nil, err
 			}
 
-			var out apierrors.ComponentsDeleteComponentByIDConflictError
+			var out apierrors.ConflictError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -1350,7 +1350,7 @@ func (s *Components) DeleteByID(ctx context.Context, statuspageID string, compon
 				return nil, err
 			}
 
-			var out apierrors.ComponentsDeleteComponentByIDUnprocessableEntityError
+			var out apierrors.UnprocessableEntityError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -1375,7 +1375,7 @@ func (s *Components) DeleteByID(ctx context.Context, statuspageID string, compon
 				return nil, err
 			}
 
-			var out apierrors.ComponentsDeleteComponentByIDInternalServerError
+			var out apierrors.InternalServerError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -1400,7 +1400,7 @@ func (s *Components) DeleteByID(ctx context.Context, statuspageID string, compon
 				return nil, err
 			}
 
-			var out apierrors.ComponentsDeleteComponentByIDBadGatewayError
+			var out apierrors.BadGatewayError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -1425,7 +1425,7 @@ func (s *Components) DeleteByID(ctx context.Context, statuspageID string, compon
 				return nil, err
 			}
 
-			var out apierrors.ComponentsDeleteComponentByIDServiceUnavailableError
+			var out apierrors.ServiceUnavailableError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -1450,7 +1450,7 @@ func (s *Components) DeleteByID(ctx context.Context, statuspageID string, compon
 				return nil, err
 			}
 
-			var out apierrors.ComponentsDeleteComponentByIDGatewayTimeoutError
+			var out apierrors.GatewayTimeoutError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -1685,7 +1685,7 @@ func (s *Components) GetByID(ctx context.Context, statuspageID string, component
 				return nil, err
 			}
 
-			var out apierrors.ComponentsGetComponentByIDBadRequestError
+			var out apierrors.BadRequestError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -1710,7 +1710,7 @@ func (s *Components) GetByID(ctx context.Context, statuspageID string, component
 				return nil, err
 			}
 
-			var out apierrors.ComponentsGetComponentByIDUnauthorizedError
+			var out apierrors.UnauthorizedError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -1735,7 +1735,7 @@ func (s *Components) GetByID(ctx context.Context, statuspageID string, component
 				return nil, err
 			}
 
-			var out apierrors.ComponentsGetComponentByIDPaymentRequiredError
+			var out apierrors.PaymentRequiredError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -1760,7 +1760,7 @@ func (s *Components) GetByID(ctx context.Context, statuspageID string, component
 				return nil, err
 			}
 
-			var out apierrors.ComponentsGetComponentByIDForbiddenError
+			var out apierrors.ForbiddenError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -1785,7 +1785,7 @@ func (s *Components) GetByID(ctx context.Context, statuspageID string, component
 				return nil, err
 			}
 
-			var out apierrors.ComponentsGetComponentByIDNotFoundError
+			var out apierrors.NotFoundError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -1810,7 +1810,7 @@ func (s *Components) GetByID(ctx context.Context, statuspageID string, component
 				return nil, err
 			}
 
-			var out apierrors.ComponentsGetComponentByIDConflictError
+			var out apierrors.ConflictError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -1835,7 +1835,7 @@ func (s *Components) GetByID(ctx context.Context, statuspageID string, component
 				return nil, err
 			}
 
-			var out apierrors.ComponentsGetComponentByIDUnprocessableEntityError
+			var out apierrors.UnprocessableEntityError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -1860,7 +1860,7 @@ func (s *Components) GetByID(ctx context.Context, statuspageID string, component
 				return nil, err
 			}
 
-			var out apierrors.ComponentsGetComponentByIDInternalServerError
+			var out apierrors.InternalServerError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -1885,7 +1885,7 @@ func (s *Components) GetByID(ctx context.Context, statuspageID string, component
 				return nil, err
 			}
 
-			var out apierrors.ComponentsGetComponentByIDBadGatewayError
+			var out apierrors.BadGatewayError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -1910,7 +1910,7 @@ func (s *Components) GetByID(ctx context.Context, statuspageID string, component
 				return nil, err
 			}
 
-			var out apierrors.ComponentsGetComponentByIDServiceUnavailableError
+			var out apierrors.ServiceUnavailableError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -1935,7 +1935,7 @@ func (s *Components) GetByID(ctx context.Context, statuspageID string, component
 				return nil, err
 			}
 
-			var out apierrors.ComponentsGetComponentByIDGatewayTimeoutError
+			var out apierrors.GatewayTimeoutError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -2178,7 +2178,7 @@ func (s *Components) UpdateByID(ctx context.Context, statuspageID string, compon
 				return nil, err
 			}
 
-			var out apierrors.ComponentsUpdateComponentByIDBadRequestError
+			var out apierrors.BadRequestError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -2203,7 +2203,7 @@ func (s *Components) UpdateByID(ctx context.Context, statuspageID string, compon
 				return nil, err
 			}
 
-			var out apierrors.ComponentsUpdateComponentByIDUnauthorizedError
+			var out apierrors.UnauthorizedError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -2228,7 +2228,7 @@ func (s *Components) UpdateByID(ctx context.Context, statuspageID string, compon
 				return nil, err
 			}
 
-			var out apierrors.ComponentsUpdateComponentByIDPaymentRequiredError
+			var out apierrors.PaymentRequiredError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -2253,7 +2253,7 @@ func (s *Components) UpdateByID(ctx context.Context, statuspageID string, compon
 				return nil, err
 			}
 
-			var out apierrors.ComponentsUpdateComponentByIDForbiddenError
+			var out apierrors.ForbiddenError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -2278,7 +2278,7 @@ func (s *Components) UpdateByID(ctx context.Context, statuspageID string, compon
 				return nil, err
 			}
 
-			var out apierrors.ComponentsUpdateComponentByIDNotFoundError
+			var out apierrors.NotFoundError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -2303,7 +2303,7 @@ func (s *Components) UpdateByID(ctx context.Context, statuspageID string, compon
 				return nil, err
 			}
 
-			var out apierrors.ComponentsUpdateComponentByIDConflictError
+			var out apierrors.ConflictError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -2328,7 +2328,7 @@ func (s *Components) UpdateByID(ctx context.Context, statuspageID string, compon
 				return nil, err
 			}
 
-			var out apierrors.ComponentsUpdateComponentByIDUnprocessableEntityError
+			var out apierrors.UnprocessableEntityError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -2353,7 +2353,7 @@ func (s *Components) UpdateByID(ctx context.Context, statuspageID string, compon
 				return nil, err
 			}
 
-			var out apierrors.ComponentsUpdateComponentByIDInternalServerError
+			var out apierrors.InternalServerError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -2378,7 +2378,7 @@ func (s *Components) UpdateByID(ctx context.Context, statuspageID string, compon
 				return nil, err
 			}
 
-			var out apierrors.ComponentsUpdateComponentByIDBadGatewayError
+			var out apierrors.BadGatewayError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -2403,7 +2403,7 @@ func (s *Components) UpdateByID(ctx context.Context, statuspageID string, compon
 				return nil, err
 			}
 
-			var out apierrors.ComponentsUpdateComponentByIDServiceUnavailableError
+			var out apierrors.ServiceUnavailableError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -2428,7 +2428,7 @@ func (s *Components) UpdateByID(ctx context.Context, statuspageID string, compon
 				return nil, err
 			}
 
-			var out apierrors.ComponentsUpdateComponentByIDGatewayTimeoutError
+			var out apierrors.GatewayTimeoutError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}

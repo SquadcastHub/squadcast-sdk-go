@@ -231,7 +231,7 @@ func (s *DedupKey) Render(ctx context.Context, serviceID string, v3ServicesOverl
 				return nil, err
 			}
 
-			var out apierrors.OverlayRenderDedupKeyTemplateBadRequestError
+			var out apierrors.BadRequestError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -256,7 +256,7 @@ func (s *DedupKey) Render(ctx context.Context, serviceID string, v3ServicesOverl
 				return nil, err
 			}
 
-			var out apierrors.OverlayRenderDedupKeyTemplateUnauthorizedError
+			var out apierrors.UnauthorizedError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -281,7 +281,7 @@ func (s *DedupKey) Render(ctx context.Context, serviceID string, v3ServicesOverl
 				return nil, err
 			}
 
-			var out apierrors.OverlayRenderDedupKeyTemplatePaymentRequiredError
+			var out apierrors.PaymentRequiredError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -306,7 +306,7 @@ func (s *DedupKey) Render(ctx context.Context, serviceID string, v3ServicesOverl
 				return nil, err
 			}
 
-			var out apierrors.OverlayRenderDedupKeyTemplateForbiddenError
+			var out apierrors.ForbiddenError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -331,7 +331,7 @@ func (s *DedupKey) Render(ctx context.Context, serviceID string, v3ServicesOverl
 				return nil, err
 			}
 
-			var out apierrors.OverlayRenderDedupKeyTemplateNotFoundError
+			var out apierrors.NotFoundError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -356,7 +356,7 @@ func (s *DedupKey) Render(ctx context.Context, serviceID string, v3ServicesOverl
 				return nil, err
 			}
 
-			var out apierrors.OverlayRenderDedupKeyTemplateConflictError
+			var out apierrors.ConflictError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -381,7 +381,7 @@ func (s *DedupKey) Render(ctx context.Context, serviceID string, v3ServicesOverl
 				return nil, err
 			}
 
-			var out apierrors.OverlayRenderDedupKeyTemplateUnprocessableEntityError
+			var out apierrors.UnprocessableEntityError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -406,7 +406,7 @@ func (s *DedupKey) Render(ctx context.Context, serviceID string, v3ServicesOverl
 				return nil, err
 			}
 
-			var out apierrors.OverlayRenderDedupKeyTemplateInternalServerError
+			var out apierrors.InternalServerError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -431,7 +431,7 @@ func (s *DedupKey) Render(ctx context.Context, serviceID string, v3ServicesOverl
 				return nil, err
 			}
 
-			var out apierrors.OverlayRenderDedupKeyTemplateBadGatewayError
+			var out apierrors.BadGatewayError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -456,7 +456,7 @@ func (s *DedupKey) Render(ctx context.Context, serviceID string, v3ServicesOverl
 				return nil, err
 			}
 
-			var out apierrors.OverlayRenderDedupKeyTemplateServiceUnavailableError
+			var out apierrors.ServiceUnavailableError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -481,7 +481,7 @@ func (s *DedupKey) Render(ctx context.Context, serviceID string, v3ServicesOverl
 				return nil, err
 			}
 
-			var out apierrors.OverlayRenderDedupKeyTemplateGatewayTimeoutError
+			var out apierrors.GatewayTimeoutError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -711,7 +711,7 @@ func (s *DedupKey) Delete(ctx context.Context, serviceID string, alertSource str
 				return nil, err
 			}
 
-			var out apierrors.OverlayDeleteDedupKeyOverlayBadRequestError
+			var out apierrors.BadRequestError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -736,7 +736,7 @@ func (s *DedupKey) Delete(ctx context.Context, serviceID string, alertSource str
 				return nil, err
 			}
 
-			var out apierrors.OverlayDeleteDedupKeyOverlayUnauthorizedError
+			var out apierrors.UnauthorizedError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -761,7 +761,7 @@ func (s *DedupKey) Delete(ctx context.Context, serviceID string, alertSource str
 				return nil, err
 			}
 
-			var out apierrors.OverlayDeleteDedupKeyOverlayPaymentRequiredError
+			var out apierrors.PaymentRequiredError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -786,7 +786,7 @@ func (s *DedupKey) Delete(ctx context.Context, serviceID string, alertSource str
 				return nil, err
 			}
 
-			var out apierrors.OverlayDeleteDedupKeyOverlayForbiddenError
+			var out apierrors.ForbiddenError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -811,7 +811,7 @@ func (s *DedupKey) Delete(ctx context.Context, serviceID string, alertSource str
 				return nil, err
 			}
 
-			var out apierrors.OverlayDeleteDedupKeyOverlayNotFoundError
+			var out apierrors.NotFoundError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -836,7 +836,7 @@ func (s *DedupKey) Delete(ctx context.Context, serviceID string, alertSource str
 				return nil, err
 			}
 
-			var out apierrors.OverlayDeleteDedupKeyOverlayConflictError
+			var out apierrors.ConflictError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -861,7 +861,7 @@ func (s *DedupKey) Delete(ctx context.Context, serviceID string, alertSource str
 				return nil, err
 			}
 
-			var out apierrors.OverlayDeleteDedupKeyOverlayUnprocessableEntityError
+			var out apierrors.UnprocessableEntityError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -886,7 +886,7 @@ func (s *DedupKey) Delete(ctx context.Context, serviceID string, alertSource str
 				return nil, err
 			}
 
-			var out apierrors.OverlayDeleteDedupKeyOverlayInternalServerError
+			var out apierrors.InternalServerError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -911,7 +911,7 @@ func (s *DedupKey) Delete(ctx context.Context, serviceID string, alertSource str
 				return nil, err
 			}
 
-			var out apierrors.OverlayDeleteDedupKeyOverlayBadGatewayError
+			var out apierrors.BadGatewayError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -936,7 +936,7 @@ func (s *DedupKey) Delete(ctx context.Context, serviceID string, alertSource str
 				return nil, err
 			}
 
-			var out apierrors.OverlayDeleteDedupKeyOverlayServiceUnavailableError
+			var out apierrors.ServiceUnavailableError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -961,7 +961,7 @@ func (s *DedupKey) Delete(ctx context.Context, serviceID string, alertSource str
 				return nil, err
 			}
 
-			var out apierrors.OverlayDeleteDedupKeyOverlayGatewayTimeoutError
+			var out apierrors.GatewayTimeoutError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}

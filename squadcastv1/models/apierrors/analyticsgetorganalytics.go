@@ -4,159 +4,269 @@ package apierrors
 
 import (
 	"encoding/json"
+	"errors"
+	"fmt"
+	"github.com/SquadcastHub/squadcast-sdk-go/squadcastv1/internal/utils"
 	"github.com/SquadcastHub/squadcast-sdk-go/squadcastv1/models/components"
 )
 
-// AnalyticsGetOrgAnalyticsGatewayTimeoutError - Server error
-type AnalyticsGetOrgAnalyticsGatewayTimeoutError struct {
+// GatewayTimeoutError - Server error
+type GatewayTimeoutError struct {
 	// Represents a single response containing data of type T.
 	Meta     components.CommonV3ErrorMeta `json:"meta"`
 	HTTPMeta components.HTTPMetadata      `json:"-"`
 }
 
-var _ error = &AnalyticsGetOrgAnalyticsGatewayTimeoutError{}
+var _ error = &GatewayTimeoutError{}
 
-func (e *AnalyticsGetOrgAnalyticsGatewayTimeoutError) Error() string {
+func (e *GatewayTimeoutError) Error() string {
 	data, _ := json.Marshal(e)
 	return string(data)
 }
 
-// AnalyticsGetOrgAnalyticsServiceUnavailableError - Service unavailable.
-type AnalyticsGetOrgAnalyticsServiceUnavailableError struct {
+// ServiceUnavailableError - Service unavailable.
+type ServiceUnavailableError struct {
 	// Represents a single response containing data of type T.
 	Meta     components.CommonV3ErrorMeta `json:"meta"`
 	HTTPMeta components.HTTPMetadata      `json:"-"`
 }
 
-var _ error = &AnalyticsGetOrgAnalyticsServiceUnavailableError{}
+var _ error = &ServiceUnavailableError{}
 
-func (e *AnalyticsGetOrgAnalyticsServiceUnavailableError) Error() string {
+func (e *ServiceUnavailableError) Error() string {
 	data, _ := json.Marshal(e)
 	return string(data)
 }
 
-// AnalyticsGetOrgAnalyticsBadGatewayError - Server error
-type AnalyticsGetOrgAnalyticsBadGatewayError struct {
+// BadGatewayError - Server error
+type BadGatewayError struct {
 	// Represents a single response containing data of type T.
 	Meta     components.CommonV3ErrorMeta `json:"meta"`
 	HTTPMeta components.HTTPMetadata      `json:"-"`
 }
 
-var _ error = &AnalyticsGetOrgAnalyticsBadGatewayError{}
+var _ error = &BadGatewayError{}
 
-func (e *AnalyticsGetOrgAnalyticsBadGatewayError) Error() string {
+func (e *BadGatewayError) Error() string {
 	data, _ := json.Marshal(e)
 	return string(data)
 }
 
-// AnalyticsGetOrgAnalyticsInternalServerError - Server error
-type AnalyticsGetOrgAnalyticsInternalServerError struct {
+// InternalServerError - Server error
+type InternalServerError struct {
 	// Represents a single response containing data of type T.
 	Meta     components.CommonV3ErrorMeta `json:"meta"`
 	HTTPMeta components.HTTPMetadata      `json:"-"`
 }
 
-var _ error = &AnalyticsGetOrgAnalyticsInternalServerError{}
+var _ error = &InternalServerError{}
 
-func (e *AnalyticsGetOrgAnalyticsInternalServerError) Error() string {
+func (e *InternalServerError) Error() string {
 	data, _ := json.Marshal(e)
 	return string(data)
 }
 
-// AnalyticsGetOrgAnalyticsUnprocessableEntityError - Client error
-type AnalyticsGetOrgAnalyticsUnprocessableEntityError struct {
+// UnprocessableEntityError - Client error
+type UnprocessableEntityError struct {
 	// Represents a single response containing data of type T.
 	Meta     components.CommonV3ErrorMeta `json:"meta"`
 	HTTPMeta components.HTTPMetadata      `json:"-"`
 }
 
-var _ error = &AnalyticsGetOrgAnalyticsUnprocessableEntityError{}
+var _ error = &UnprocessableEntityError{}
 
-func (e *AnalyticsGetOrgAnalyticsUnprocessableEntityError) Error() string {
+func (e *UnprocessableEntityError) Error() string {
 	data, _ := json.Marshal(e)
 	return string(data)
 }
 
-// AnalyticsGetOrgAnalyticsConflictError - The request conflicts with the current state of the server.
-type AnalyticsGetOrgAnalyticsConflictError struct {
+// ConflictError - The request conflicts with the current state of the server.
+type ConflictError struct {
 	// Represents a single response containing data of type T.
 	Meta     components.CommonV3ErrorMeta `json:"meta"`
 	HTTPMeta components.HTTPMetadata      `json:"-"`
 }
 
-var _ error = &AnalyticsGetOrgAnalyticsConflictError{}
+var _ error = &ConflictError{}
 
-func (e *AnalyticsGetOrgAnalyticsConflictError) Error() string {
+func (e *ConflictError) Error() string {
 	data, _ := json.Marshal(e)
 	return string(data)
 }
 
-// AnalyticsGetOrgAnalyticsNotFoundError - The server cannot find the requested resource.
-type AnalyticsGetOrgAnalyticsNotFoundError struct {
+// NotFoundError - The server cannot find the requested resource.
+type NotFoundError struct {
 	// Represents a single response containing data of type T.
 	Meta     components.CommonV3ErrorMeta `json:"meta"`
 	HTTPMeta components.HTTPMetadata      `json:"-"`
 }
 
-var _ error = &AnalyticsGetOrgAnalyticsNotFoundError{}
+var _ error = &NotFoundError{}
 
-func (e *AnalyticsGetOrgAnalyticsNotFoundError) Error() string {
+func (e *NotFoundError) Error() string {
 	data, _ := json.Marshal(e)
 	return string(data)
 }
 
-// AnalyticsGetOrgAnalyticsForbiddenError - Access is forbidden.
-type AnalyticsGetOrgAnalyticsForbiddenError struct {
+// ForbiddenError - Access is forbidden.
+type ForbiddenError struct {
 	// Represents a single response containing data of type T.
 	Meta     components.CommonV3ErrorMeta `json:"meta"`
 	HTTPMeta components.HTTPMetadata      `json:"-"`
 }
 
-var _ error = &AnalyticsGetOrgAnalyticsForbiddenError{}
+var _ error = &ForbiddenError{}
 
-func (e *AnalyticsGetOrgAnalyticsForbiddenError) Error() string {
+func (e *ForbiddenError) Error() string {
 	data, _ := json.Marshal(e)
 	return string(data)
 }
 
-// AnalyticsGetOrgAnalyticsPaymentRequiredError - Client error
-type AnalyticsGetOrgAnalyticsPaymentRequiredError struct {
+// PaymentRequiredError - Client error
+type PaymentRequiredError struct {
 	// Represents a single response containing data of type T.
 	Meta     components.CommonV3ErrorMeta `json:"meta"`
 	HTTPMeta components.HTTPMetadata      `json:"-"`
 }
 
-var _ error = &AnalyticsGetOrgAnalyticsPaymentRequiredError{}
+var _ error = &PaymentRequiredError{}
 
-func (e *AnalyticsGetOrgAnalyticsPaymentRequiredError) Error() string {
+func (e *PaymentRequiredError) Error() string {
 	data, _ := json.Marshal(e)
 	return string(data)
 }
 
-// AnalyticsGetOrgAnalyticsUnauthorizedError - Access is unauthorized.
-type AnalyticsGetOrgAnalyticsUnauthorizedError struct {
+// UnauthorizedError - Access is unauthorized.
+type UnauthorizedError struct {
 	// Represents a single response containing data of type T.
 	Meta     components.CommonV3ErrorMeta `json:"meta"`
 	HTTPMeta components.HTTPMetadata      `json:"-"`
 }
 
-var _ error = &AnalyticsGetOrgAnalyticsUnauthorizedError{}
+var _ error = &UnauthorizedError{}
 
-func (e *AnalyticsGetOrgAnalyticsUnauthorizedError) Error() string {
+func (e *UnauthorizedError) Error() string {
 	data, _ := json.Marshal(e)
 	return string(data)
 }
 
-// AnalyticsGetOrgAnalyticsBadRequestError - The server could not understand the request due to invalid syntax.
-type AnalyticsGetOrgAnalyticsBadRequestError struct {
+// BadRequestError - The server could not understand the request due to invalid syntax.
+type BadRequestError struct {
 	// Represents a single response containing data of type T.
 	Meta     components.CommonV3ErrorMeta `json:"meta"`
 	HTTPMeta components.HTTPMetadata      `json:"-"`
 }
 
-var _ error = &AnalyticsGetOrgAnalyticsBadRequestError{}
+var _ error = &BadRequestError{}
 
-func (e *AnalyticsGetOrgAnalyticsBadRequestError) Error() string {
+func (e *BadRequestError) Error() string {
 	data, _ := json.Marshal(e)
 	return string(data)
+}
+
+type ResponseBodyError2 struct {
+	// Represents a single response containing data of type T.
+	Meta     components.CommonV3ErrorMeta `json:"meta"`
+	HTTPMeta components.HTTPMetadata      `json:"-"`
+}
+
+var _ error = &ResponseBodyError2{}
+
+func (e *ResponseBodyError2) Error() string {
+	data, _ := json.Marshal(e)
+	return string(data)
+}
+
+type ResponseBodyError1 struct {
+	// Represents the metadata for a CircleCI error response.
+	Meta     components.V3IncidentsIncidentActionsCircleCIErrorMeta `json:"meta"`
+	HTTPMeta components.HTTPMetadata                                `json:"-"`
+}
+
+var _ error = &ResponseBodyError1{}
+
+func (e *ResponseBodyError1) Error() string {
+	data, _ := json.Marshal(e)
+	return string(data)
+}
+
+type BadRequestType string
+
+const (
+	BadRequestTypeResponseBodyError1 BadRequestType = "ResponseBody_error_1"
+	BadRequestTypeResponseBodyError2 BadRequestType = "ResponseBody_error_2"
+)
+
+// BadRequest - Represents a CircleCI error response for a 400 status code.
+type BadRequest struct {
+	ResponseBodyError1 *ResponseBodyError1 `queryParam:"inline,name=ResponseBody"`
+	ResponseBodyError2 *ResponseBodyError2 `queryParam:"inline,name=ResponseBody"`
+
+	Type BadRequestType
+
+	HTTPMeta components.HTTPMetadata `json:"-"`
+}
+
+var _ error = &BadRequest{}
+
+func CreateBadRequestResponseBodyError1(responseBodyError1 ResponseBodyError1) BadRequest {
+	typ := BadRequestTypeResponseBodyError1
+
+	return BadRequest{
+		ResponseBodyError1: &responseBodyError1,
+		Type:               typ,
+	}
+}
+
+func CreateBadRequestResponseBodyError2(responseBodyError2 ResponseBodyError2) BadRequest {
+	typ := BadRequestTypeResponseBodyError2
+
+	return BadRequest{
+		ResponseBodyError2: &responseBodyError2,
+		Type:               typ,
+	}
+}
+
+func (u *BadRequest) UnmarshalJSON(data []byte) error {
+
+	var responseBodyError1 ResponseBodyError1 = ResponseBodyError1{}
+	if err := utils.UnmarshalJSON(data, &responseBodyError1, "", true, nil); err == nil {
+		u.ResponseBodyError1 = &responseBodyError1
+		u.Type = BadRequestTypeResponseBodyError1
+		return nil
+	}
+
+	var responseBodyError2 ResponseBodyError2 = ResponseBodyError2{}
+	if err := utils.UnmarshalJSON(data, &responseBodyError2, "", true, nil); err == nil {
+		u.ResponseBodyError2 = &responseBodyError2
+		u.Type = BadRequestTypeResponseBodyError2
+		return nil
+	}
+
+	return fmt.Errorf("could not unmarshal `%s` into any supported union types for BadRequest", string(data))
+}
+
+func (u BadRequest) MarshalJSON() ([]byte, error) {
+	if u.ResponseBodyError1 != nil {
+		return utils.MarshalJSON(u.ResponseBodyError1, "", true)
+	}
+
+	if u.ResponseBodyError2 != nil {
+		return utils.MarshalJSON(u.ResponseBodyError2, "", true)
+	}
+
+	return nil, errors.New("could not marshal union type BadRequest: all fields are null")
+}
+
+func (u BadRequest) Error() string {
+	switch u.Type {
+	case BadRequestTypeResponseBodyError1:
+		data, _ := json.Marshal(u.ResponseBodyError1)
+		return string(data)
+	case BadRequestTypeResponseBodyError2:
+		data, _ := json.Marshal(u.ResponseBodyError2)
+		return string(data)
+	default:
+		return "unknown error"
+	}
 }

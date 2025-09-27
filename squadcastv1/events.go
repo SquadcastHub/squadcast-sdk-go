@@ -233,7 +233,7 @@ func (s *Events) List(ctx context.Context, request operations.IncidentsGetIncide
 				return nil, err
 			}
 
-			var out apierrors.IncidentsGetIncidentEventsBadRequestError
+			var out apierrors.BadRequestError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -258,7 +258,7 @@ func (s *Events) List(ctx context.Context, request operations.IncidentsGetIncide
 				return nil, err
 			}
 
-			var out apierrors.IncidentsGetIncidentEventsUnauthorizedError
+			var out apierrors.UnauthorizedError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -283,7 +283,7 @@ func (s *Events) List(ctx context.Context, request operations.IncidentsGetIncide
 				return nil, err
 			}
 
-			var out apierrors.IncidentsGetIncidentEventsPaymentRequiredError
+			var out apierrors.PaymentRequiredError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -308,7 +308,7 @@ func (s *Events) List(ctx context.Context, request operations.IncidentsGetIncide
 				return nil, err
 			}
 
-			var out apierrors.IncidentsGetIncidentEventsForbiddenError
+			var out apierrors.ForbiddenError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -333,7 +333,7 @@ func (s *Events) List(ctx context.Context, request operations.IncidentsGetIncide
 				return nil, err
 			}
 
-			var out apierrors.IncidentsGetIncidentEventsNotFoundError
+			var out apierrors.NotFoundError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -358,7 +358,7 @@ func (s *Events) List(ctx context.Context, request operations.IncidentsGetIncide
 				return nil, err
 			}
 
-			var out apierrors.IncidentsGetIncidentEventsConflictError
+			var out apierrors.ConflictError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -383,7 +383,7 @@ func (s *Events) List(ctx context.Context, request operations.IncidentsGetIncide
 				return nil, err
 			}
 
-			var out apierrors.IncidentsGetIncidentEventsUnprocessableEntityError
+			var out apierrors.UnprocessableEntityError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -408,7 +408,7 @@ func (s *Events) List(ctx context.Context, request operations.IncidentsGetIncide
 				return nil, err
 			}
 
-			var out apierrors.IncidentsGetIncidentEventsInternalServerError
+			var out apierrors.InternalServerError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -433,7 +433,7 @@ func (s *Events) List(ctx context.Context, request operations.IncidentsGetIncide
 				return nil, err
 			}
 
-			var out apierrors.IncidentsGetIncidentEventsBadGatewayError
+			var out apierrors.BadGatewayError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -458,7 +458,7 @@ func (s *Events) List(ctx context.Context, request operations.IncidentsGetIncide
 				return nil, err
 			}
 
-			var out apierrors.IncidentsGetIncidentEventsServiceUnavailableError
+			var out apierrors.ServiceUnavailableError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -483,7 +483,7 @@ func (s *Events) List(ctx context.Context, request operations.IncidentsGetIncide
 				return nil, err
 			}
 
-			var out apierrors.IncidentsGetIncidentEventsGatewayTimeoutError
+			var out apierrors.GatewayTimeoutError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}

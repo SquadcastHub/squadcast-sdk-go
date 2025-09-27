@@ -68,17 +68,17 @@ func main() {
 
 ### Errors
 
-| Error Type                                                               | Status Code                                                              | Content Type                                                             |
-| ------------------------------------------------------------------------ | ------------------------------------------------------------------------ | ------------------------------------------------------------------------ |
-| apierrors.RoutingRulesCreateOrUpdateRoutingRulesBadRequestError          | 400                                                                      | application/json                                                         |
-| apierrors.RoutingRulesCreateOrUpdateRoutingRulesUnauthorizedError        | 401                                                                      | application/json                                                         |
-| apierrors.RoutingRulesCreateOrUpdateRoutingRulesPaymentRequiredError     | 402                                                                      | application/json                                                         |
-| apierrors.RoutingRulesCreateOrUpdateRoutingRulesForbiddenError           | 403                                                                      | application/json                                                         |
-| apierrors.RoutingRulesCreateOrUpdateRoutingRulesNotFoundError            | 404                                                                      | application/json                                                         |
-| apierrors.RoutingRulesCreateOrUpdateRoutingRulesConflictError            | 409                                                                      | application/json                                                         |
-| apierrors.RoutingRulesCreateOrUpdateRoutingRulesUnprocessableEntityError | 422                                                                      | application/json                                                         |
-| apierrors.RoutingRulesCreateOrUpdateRoutingRulesInternalServerError      | 500                                                                      | application/json                                                         |
-| apierrors.RoutingRulesCreateOrUpdateRoutingRulesBadGatewayError          | 502                                                                      | application/json                                                         |
-| apierrors.RoutingRulesCreateOrUpdateRoutingRulesServiceUnavailableError  | 503                                                                      | application/json                                                         |
-| apierrors.RoutingRulesCreateOrUpdateRoutingRulesGatewayTimeoutError      | 504                                                                      | application/json                                                         |
-| apierrors.APIError                                                       | 4XX, 5XX                                                                 | \*/\*                                                                    |
+| Error Type                         | Status Code                        | Content Type                       |
+| ---------------------------------- | ---------------------------------- | ---------------------------------- |
+| apierrors.BadRequestError          | 400                                | application/json                   |
+| apierrors.UnauthorizedError        | 401                                | application/json                   |
+| apierrors.PaymentRequiredError     | 402                                | application/json                   |
+| apierrors.ForbiddenError           | 403                                | application/json                   |
+| apierrors.NotFoundError            | 404                                | application/json                   |
+| apierrors.ConflictError            | 409                                | application/json                   |
+| apierrors.UnprocessableEntityError | 422                                | application/json                   |
+| apierrors.InternalServerError      | 500                                | application/json                   |
+| apierrors.BadGatewayError          | 502                                | application/json                   |
+| apierrors.ServiceUnavailableError  | 503                                | application/json                   |
+| apierrors.GatewayTimeoutError      | 504                                | application/json                   |
+| apierrors.APIError                 | 4XX, 5XX                           | \*/\*                              |

@@ -55,17 +55,17 @@ func main() {
 
 ### Errors
 
-| Error Type                                                    | Status Code                                                   | Content Type                                                  |
-| ------------------------------------------------------------- | ------------------------------------------------------------- | ------------------------------------------------------------- |
-| apierrors.TaggingRulesGetTaggingRulesBadRequestError          | 400                                                           | application/json                                              |
-| apierrors.TaggingRulesGetTaggingRulesUnauthorizedError        | 401                                                           | application/json                                              |
-| apierrors.TaggingRulesGetTaggingRulesPaymentRequiredError     | 402                                                           | application/json                                              |
-| apierrors.TaggingRulesGetTaggingRulesForbiddenError           | 403                                                           | application/json                                              |
-| apierrors.TaggingRulesGetTaggingRulesNotFoundError            | 404                                                           | application/json                                              |
-| apierrors.TaggingRulesGetTaggingRulesConflictError            | 409                                                           | application/json                                              |
-| apierrors.TaggingRulesGetTaggingRulesUnprocessableEntityError | 422                                                           | application/json                                              |
-| apierrors.TaggingRulesGetTaggingRulesInternalServerError      | 500                                                           | application/json                                              |
-| apierrors.TaggingRulesGetTaggingRulesBadGatewayError          | 502                                                           | application/json                                              |
-| apierrors.TaggingRulesGetTaggingRulesServiceUnavailableError  | 503                                                           | application/json                                              |
-| apierrors.TaggingRulesGetTaggingRulesGatewayTimeoutError      | 504                                                           | application/json                                              |
-| apierrors.APIError                                            | 4XX, 5XX                                                      | \*/\*                                                         |
+| Error Type                         | Status Code                        | Content Type                       |
+| ---------------------------------- | ---------------------------------- | ---------------------------------- |
+| apierrors.BadRequestError          | 400                                | application/json                   |
+| apierrors.UnauthorizedError        | 401                                | application/json                   |
+| apierrors.PaymentRequiredError     | 402                                | application/json                   |
+| apierrors.ForbiddenError           | 403                                | application/json                   |
+| apierrors.NotFoundError            | 404                                | application/json                   |
+| apierrors.ConflictError            | 409                                | application/json                   |
+| apierrors.UnprocessableEntityError | 422                                | application/json                   |
+| apierrors.InternalServerError      | 500                                | application/json                   |
+| apierrors.BadGatewayError          | 502                                | application/json                   |
+| apierrors.ServiceUnavailableError  | 503                                | application/json                   |
+| apierrors.GatewayTimeoutError      | 504                                | application/json                   |
+| apierrors.APIError                 | 4XX, 5XX                           | \*/\*                              |

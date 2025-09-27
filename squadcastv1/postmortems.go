@@ -225,7 +225,7 @@ func (s *Postmortems) DeleteByIncident(ctx context.Context, incidentID string, o
 				return nil, err
 			}
 
-			var out apierrors.PostmortemsDeletePostmortemByIncidentBadRequestError
+			var out apierrors.BadRequestError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -250,7 +250,7 @@ func (s *Postmortems) DeleteByIncident(ctx context.Context, incidentID string, o
 				return nil, err
 			}
 
-			var out apierrors.PostmortemsDeletePostmortemByIncidentUnauthorizedError
+			var out apierrors.UnauthorizedError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -275,7 +275,7 @@ func (s *Postmortems) DeleteByIncident(ctx context.Context, incidentID string, o
 				return nil, err
 			}
 
-			var out apierrors.PostmortemsDeletePostmortemByIncidentPaymentRequiredError
+			var out apierrors.PaymentRequiredError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -300,7 +300,7 @@ func (s *Postmortems) DeleteByIncident(ctx context.Context, incidentID string, o
 				return nil, err
 			}
 
-			var out apierrors.PostmortemsDeletePostmortemByIncidentForbiddenError
+			var out apierrors.ForbiddenError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -325,7 +325,7 @@ func (s *Postmortems) DeleteByIncident(ctx context.Context, incidentID string, o
 				return nil, err
 			}
 
-			var out apierrors.PostmortemsDeletePostmortemByIncidentNotFoundError
+			var out apierrors.NotFoundError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -350,7 +350,7 @@ func (s *Postmortems) DeleteByIncident(ctx context.Context, incidentID string, o
 				return nil, err
 			}
 
-			var out apierrors.PostmortemsDeletePostmortemByIncidentConflictError
+			var out apierrors.ConflictError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -375,7 +375,7 @@ func (s *Postmortems) DeleteByIncident(ctx context.Context, incidentID string, o
 				return nil, err
 			}
 
-			var out apierrors.PostmortemsDeletePostmortemByIncidentUnprocessableEntityError
+			var out apierrors.UnprocessableEntityError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -400,7 +400,7 @@ func (s *Postmortems) DeleteByIncident(ctx context.Context, incidentID string, o
 				return nil, err
 			}
 
-			var out apierrors.PostmortemsDeletePostmortemByIncidentInternalServerError
+			var out apierrors.InternalServerError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -425,7 +425,7 @@ func (s *Postmortems) DeleteByIncident(ctx context.Context, incidentID string, o
 				return nil, err
 			}
 
-			var out apierrors.PostmortemsDeletePostmortemByIncidentBadGatewayError
+			var out apierrors.BadGatewayError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -450,7 +450,7 @@ func (s *Postmortems) DeleteByIncident(ctx context.Context, incidentID string, o
 				return nil, err
 			}
 
-			var out apierrors.PostmortemsDeletePostmortemByIncidentServiceUnavailableError
+			var out apierrors.ServiceUnavailableError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -475,7 +475,7 @@ func (s *Postmortems) DeleteByIncident(ctx context.Context, incidentID string, o
 				return nil, err
 			}
 
-			var out apierrors.PostmortemsDeletePostmortemByIncidentGatewayTimeoutError
+			var out apierrors.GatewayTimeoutError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -711,7 +711,7 @@ func (s *Postmortems) GetByIncident(ctx context.Context, incidentID string, opts
 				return nil, err
 			}
 
-			var out apierrors.PostmortemsGetPostmortemByIncidentBadRequestError
+			var out apierrors.BadRequestError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -736,7 +736,7 @@ func (s *Postmortems) GetByIncident(ctx context.Context, incidentID string, opts
 				return nil, err
 			}
 
-			var out apierrors.PostmortemsGetPostmortemByIncidentUnauthorizedError
+			var out apierrors.UnauthorizedError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -761,7 +761,7 @@ func (s *Postmortems) GetByIncident(ctx context.Context, incidentID string, opts
 				return nil, err
 			}
 
-			var out apierrors.PostmortemsGetPostmortemByIncidentPaymentRequiredError
+			var out apierrors.PaymentRequiredError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -786,7 +786,7 @@ func (s *Postmortems) GetByIncident(ctx context.Context, incidentID string, opts
 				return nil, err
 			}
 
-			var out apierrors.PostmortemsGetPostmortemByIncidentForbiddenError
+			var out apierrors.ForbiddenError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -811,7 +811,7 @@ func (s *Postmortems) GetByIncident(ctx context.Context, incidentID string, opts
 				return nil, err
 			}
 
-			var out apierrors.PostmortemsGetPostmortemByIncidentNotFoundError
+			var out apierrors.NotFoundError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -836,7 +836,7 @@ func (s *Postmortems) GetByIncident(ctx context.Context, incidentID string, opts
 				return nil, err
 			}
 
-			var out apierrors.PostmortemsGetPostmortemByIncidentConflictError
+			var out apierrors.ConflictError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -861,7 +861,7 @@ func (s *Postmortems) GetByIncident(ctx context.Context, incidentID string, opts
 				return nil, err
 			}
 
-			var out apierrors.PostmortemsGetPostmortemByIncidentUnprocessableEntityError
+			var out apierrors.UnprocessableEntityError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -886,7 +886,7 @@ func (s *Postmortems) GetByIncident(ctx context.Context, incidentID string, opts
 				return nil, err
 			}
 
-			var out apierrors.PostmortemsGetPostmortemByIncidentInternalServerError
+			var out apierrors.InternalServerError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -911,7 +911,7 @@ func (s *Postmortems) GetByIncident(ctx context.Context, incidentID string, opts
 				return nil, err
 			}
 
-			var out apierrors.PostmortemsGetPostmortemByIncidentBadGatewayError
+			var out apierrors.BadGatewayError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -936,7 +936,7 @@ func (s *Postmortems) GetByIncident(ctx context.Context, incidentID string, opts
 				return nil, err
 			}
 
-			var out apierrors.PostmortemsGetPostmortemByIncidentServiceUnavailableError
+			var out apierrors.ServiceUnavailableError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -961,7 +961,7 @@ func (s *Postmortems) GetByIncident(ctx context.Context, incidentID string, opts
 				return nil, err
 			}
 
-			var out apierrors.PostmortemsGetPostmortemByIncidentGatewayTimeoutError
+			var out apierrors.GatewayTimeoutError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -1205,7 +1205,7 @@ func (s *Postmortems) Create(ctx context.Context, incidentID string, v3Incidents
 				return nil, err
 			}
 
-			var out apierrors.PostmortemsCreatePostmortemBadRequestError
+			var out apierrors.BadRequestError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -1230,7 +1230,7 @@ func (s *Postmortems) Create(ctx context.Context, incidentID string, v3Incidents
 				return nil, err
 			}
 
-			var out apierrors.PostmortemsCreatePostmortemUnauthorizedError
+			var out apierrors.UnauthorizedError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -1255,7 +1255,7 @@ func (s *Postmortems) Create(ctx context.Context, incidentID string, v3Incidents
 				return nil, err
 			}
 
-			var out apierrors.PostmortemsCreatePostmortemPaymentRequiredError
+			var out apierrors.PaymentRequiredError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -1280,7 +1280,7 @@ func (s *Postmortems) Create(ctx context.Context, incidentID string, v3Incidents
 				return nil, err
 			}
 
-			var out apierrors.PostmortemsCreatePostmortemForbiddenError
+			var out apierrors.ForbiddenError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -1305,7 +1305,7 @@ func (s *Postmortems) Create(ctx context.Context, incidentID string, v3Incidents
 				return nil, err
 			}
 
-			var out apierrors.PostmortemsCreatePostmortemNotFoundError
+			var out apierrors.NotFoundError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -1330,7 +1330,7 @@ func (s *Postmortems) Create(ctx context.Context, incidentID string, v3Incidents
 				return nil, err
 			}
 
-			var out apierrors.PostmortemsCreatePostmortemConflictError
+			var out apierrors.ConflictError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -1355,7 +1355,7 @@ func (s *Postmortems) Create(ctx context.Context, incidentID string, v3Incidents
 				return nil, err
 			}
 
-			var out apierrors.PostmortemsCreatePostmortemUnprocessableEntityError
+			var out apierrors.UnprocessableEntityError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -1380,7 +1380,7 @@ func (s *Postmortems) Create(ctx context.Context, incidentID string, v3Incidents
 				return nil, err
 			}
 
-			var out apierrors.PostmortemsCreatePostmortemInternalServerError
+			var out apierrors.InternalServerError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -1405,7 +1405,7 @@ func (s *Postmortems) Create(ctx context.Context, incidentID string, v3Incidents
 				return nil, err
 			}
 
-			var out apierrors.PostmortemsCreatePostmortemBadGatewayError
+			var out apierrors.BadGatewayError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -1430,7 +1430,7 @@ func (s *Postmortems) Create(ctx context.Context, incidentID string, v3Incidents
 				return nil, err
 			}
 
-			var out apierrors.PostmortemsCreatePostmortemServiceUnavailableError
+			var out apierrors.ServiceUnavailableError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -1455,7 +1455,7 @@ func (s *Postmortems) Create(ctx context.Context, incidentID string, v3Incidents
 				return nil, err
 			}
 
-			var out apierrors.PostmortemsCreatePostmortemGatewayTimeoutError
+			var out apierrors.GatewayTimeoutError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}

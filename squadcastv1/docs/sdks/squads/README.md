@@ -9,7 +9,7 @@
 * [RemoveMember](#removemember) - Remove Squad Member
 * [UpdateMemberRole](#updatememberrole) - Update Squad Member
 * [UpdateName](#updatename) - Update Squad Name
-* [SquadsDeleteSquad](#squadsdeletesquad) - Delete Squad
+* [Delete](#delete) - Delete Squad
 
 ## List
 
@@ -249,7 +249,7 @@ func main() {
 | apierrors.CommonV4Error           | 500, 502, 503, 504                | application/json                  |
 | apierrors.APIError                | 4XX, 5XX                          | \*/\*                             |
 
-## SquadsDeleteSquad
+## Delete
 
 This endpoint is used to delete the squad. Squad should not be assigned to any incident or part of any escalation policy.
 Requires `access_token` as a `Bearer {{token}}` in the `Authorization` header with `squad-update` scope.
@@ -274,7 +274,7 @@ func main() {
         squadcastsdk.WithSecurity(os.Getenv("SQUADCASTSDK_BEARER_AUTH")),
     )
 
-    res, err := s.Squads.SquadsDeleteSquad(ctx, "<id>")
+    res, err := s.Squads.Delete(ctx, "<id>")
     if err != nil {
         log.Fatal(err)
     }

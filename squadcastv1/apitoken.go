@@ -220,7 +220,7 @@ func (s *APIToken) Remove(ctx context.Context, refreshTokenID string, opts ...op
 				return nil, err
 			}
 
-			var out apierrors.UsersRemoveTokenBadRequestError
+			var out apierrors.BadRequestError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -245,7 +245,7 @@ func (s *APIToken) Remove(ctx context.Context, refreshTokenID string, opts ...op
 				return nil, err
 			}
 
-			var out apierrors.UsersRemoveTokenUnauthorizedError
+			var out apierrors.UnauthorizedError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -270,7 +270,7 @@ func (s *APIToken) Remove(ctx context.Context, refreshTokenID string, opts ...op
 				return nil, err
 			}
 
-			var out apierrors.UsersRemoveTokenPaymentRequiredError
+			var out apierrors.PaymentRequiredError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -295,7 +295,7 @@ func (s *APIToken) Remove(ctx context.Context, refreshTokenID string, opts ...op
 				return nil, err
 			}
 
-			var out apierrors.UsersRemoveTokenForbiddenError
+			var out apierrors.ForbiddenError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -320,7 +320,7 @@ func (s *APIToken) Remove(ctx context.Context, refreshTokenID string, opts ...op
 				return nil, err
 			}
 
-			var out apierrors.UsersRemoveTokenNotFoundError
+			var out apierrors.NotFoundError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -345,7 +345,7 @@ func (s *APIToken) Remove(ctx context.Context, refreshTokenID string, opts ...op
 				return nil, err
 			}
 
-			var out apierrors.UsersRemoveTokenConflictError
+			var out apierrors.ConflictError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -370,7 +370,7 @@ func (s *APIToken) Remove(ctx context.Context, refreshTokenID string, opts ...op
 				return nil, err
 			}
 
-			var out apierrors.UsersRemoveTokenUnprocessableEntityError
+			var out apierrors.UnprocessableEntityError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -395,7 +395,7 @@ func (s *APIToken) Remove(ctx context.Context, refreshTokenID string, opts ...op
 				return nil, err
 			}
 
-			var out apierrors.UsersRemoveTokenInternalServerError
+			var out apierrors.InternalServerError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -420,7 +420,7 @@ func (s *APIToken) Remove(ctx context.Context, refreshTokenID string, opts ...op
 				return nil, err
 			}
 
-			var out apierrors.UsersRemoveTokenBadGatewayError
+			var out apierrors.BadGatewayError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -445,7 +445,7 @@ func (s *APIToken) Remove(ctx context.Context, refreshTokenID string, opts ...op
 				return nil, err
 			}
 
-			var out apierrors.UsersRemoveTokenServiceUnavailableError
+			var out apierrors.ServiceUnavailableError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -470,7 +470,7 @@ func (s *APIToken) Remove(ctx context.Context, refreshTokenID string, opts ...op
 				return nil, err
 			}
 
-			var out apierrors.UsersRemoveTokenGatewayTimeoutError
+			var out apierrors.GatewayTimeoutError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}

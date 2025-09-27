@@ -2,7 +2,10 @@ module github.com/SquadcastHub/squadcast-sdk-go/squadcastv1
 
 go 1.22
 
-require github.com/stretchr/testify v1.11.1
+require (
+	github.com/ericlagergren/decimal v0.0.0-20240411145413-00de7ca16731
+	github.com/stretchr/testify v1.11.1
+)
 
 require (
 	github.com/davecgh/go-spew v1.1.1 // indirect

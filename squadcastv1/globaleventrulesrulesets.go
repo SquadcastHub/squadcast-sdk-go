@@ -221,7 +221,7 @@ func (s *GlobalEventRulesRulesets) Delete(ctx context.Context, gerID int64, aler
 				return nil, err
 			}
 
-			var out apierrors.GlobalEventRulesDeleteGerRulesetBadRequestError
+			var out apierrors.BadRequestError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -246,7 +246,7 @@ func (s *GlobalEventRulesRulesets) Delete(ctx context.Context, gerID int64, aler
 				return nil, err
 			}
 
-			var out apierrors.GlobalEventRulesDeleteGerRulesetUnauthorizedError
+			var out apierrors.UnauthorizedError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -271,7 +271,7 @@ func (s *GlobalEventRulesRulesets) Delete(ctx context.Context, gerID int64, aler
 				return nil, err
 			}
 
-			var out apierrors.GlobalEventRulesDeleteGerRulesetPaymentRequiredError
+			var out apierrors.PaymentRequiredError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -296,7 +296,7 @@ func (s *GlobalEventRulesRulesets) Delete(ctx context.Context, gerID int64, aler
 				return nil, err
 			}
 
-			var out apierrors.GlobalEventRulesDeleteGerRulesetForbiddenError
+			var out apierrors.ForbiddenError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -321,7 +321,7 @@ func (s *GlobalEventRulesRulesets) Delete(ctx context.Context, gerID int64, aler
 				return nil, err
 			}
 
-			var out apierrors.GlobalEventRulesDeleteGerRulesetNotFoundError
+			var out apierrors.NotFoundError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -346,7 +346,7 @@ func (s *GlobalEventRulesRulesets) Delete(ctx context.Context, gerID int64, aler
 				return nil, err
 			}
 
-			var out apierrors.GlobalEventRulesDeleteGerRulesetConflictError
+			var out apierrors.ConflictError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -371,7 +371,7 @@ func (s *GlobalEventRulesRulesets) Delete(ctx context.Context, gerID int64, aler
 				return nil, err
 			}
 
-			var out apierrors.GlobalEventRulesDeleteGerRulesetUnprocessableEntityError
+			var out apierrors.UnprocessableEntityError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -396,7 +396,7 @@ func (s *GlobalEventRulesRulesets) Delete(ctx context.Context, gerID int64, aler
 				return nil, err
 			}
 
-			var out apierrors.GlobalEventRulesDeleteGerRulesetInternalServerError
+			var out apierrors.InternalServerError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -421,7 +421,7 @@ func (s *GlobalEventRulesRulesets) Delete(ctx context.Context, gerID int64, aler
 				return nil, err
 			}
 
-			var out apierrors.GlobalEventRulesDeleteGerRulesetBadGatewayError
+			var out apierrors.BadGatewayError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -446,7 +446,7 @@ func (s *GlobalEventRulesRulesets) Delete(ctx context.Context, gerID int64, aler
 				return nil, err
 			}
 
-			var out apierrors.GlobalEventRulesDeleteGerRulesetServiceUnavailableError
+			var out apierrors.ServiceUnavailableError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -471,7 +471,7 @@ func (s *GlobalEventRulesRulesets) Delete(ctx context.Context, gerID int64, aler
 				return nil, err
 			}
 
-			var out apierrors.GlobalEventRulesDeleteGerRulesetGatewayTimeoutError
+			var out apierrors.GatewayTimeoutError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}

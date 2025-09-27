@@ -223,7 +223,7 @@ func (s *Overlay) GetKeyBasedDeduplicationOptin(ctx context.Context, serviceID s
 				return nil, err
 			}
 
-			var out apierrors.OverlayGetOptinForKeyBasedDeduplicationForAServiceBadRequestError
+			var out apierrors.BadRequestError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -248,7 +248,7 @@ func (s *Overlay) GetKeyBasedDeduplicationOptin(ctx context.Context, serviceID s
 				return nil, err
 			}
 
-			var out apierrors.OverlayGetOptinForKeyBasedDeduplicationForAServiceUnauthorizedError
+			var out apierrors.UnauthorizedError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -273,7 +273,7 @@ func (s *Overlay) GetKeyBasedDeduplicationOptin(ctx context.Context, serviceID s
 				return nil, err
 			}
 
-			var out apierrors.OverlayGetOptinForKeyBasedDeduplicationForAServicePaymentRequiredError
+			var out apierrors.PaymentRequiredError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -298,7 +298,7 @@ func (s *Overlay) GetKeyBasedDeduplicationOptin(ctx context.Context, serviceID s
 				return nil, err
 			}
 
-			var out apierrors.OverlayGetOptinForKeyBasedDeduplicationForAServiceForbiddenError
+			var out apierrors.ForbiddenError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -323,7 +323,7 @@ func (s *Overlay) GetKeyBasedDeduplicationOptin(ctx context.Context, serviceID s
 				return nil, err
 			}
 
-			var out apierrors.OverlayGetOptinForKeyBasedDeduplicationForAServiceNotFoundError
+			var out apierrors.NotFoundError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -348,7 +348,7 @@ func (s *Overlay) GetKeyBasedDeduplicationOptin(ctx context.Context, serviceID s
 				return nil, err
 			}
 
-			var out apierrors.OverlayGetOptinForKeyBasedDeduplicationForAServiceConflictError
+			var out apierrors.ConflictError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -373,7 +373,7 @@ func (s *Overlay) GetKeyBasedDeduplicationOptin(ctx context.Context, serviceID s
 				return nil, err
 			}
 
-			var out apierrors.OverlayGetOptinForKeyBasedDeduplicationForAServiceUnprocessableEntityError
+			var out apierrors.UnprocessableEntityError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -398,7 +398,7 @@ func (s *Overlay) GetKeyBasedDeduplicationOptin(ctx context.Context, serviceID s
 				return nil, err
 			}
 
-			var out apierrors.OverlayGetOptinForKeyBasedDeduplicationForAServiceInternalServerError
+			var out apierrors.InternalServerError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -423,7 +423,7 @@ func (s *Overlay) GetKeyBasedDeduplicationOptin(ctx context.Context, serviceID s
 				return nil, err
 			}
 
-			var out apierrors.OverlayGetOptinForKeyBasedDeduplicationForAServiceBadGatewayError
+			var out apierrors.BadGatewayError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -448,7 +448,7 @@ func (s *Overlay) GetKeyBasedDeduplicationOptin(ctx context.Context, serviceID s
 				return nil, err
 			}
 
-			var out apierrors.OverlayGetOptinForKeyBasedDeduplicationForAServiceServiceUnavailableError
+			var out apierrors.ServiceUnavailableError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -473,7 +473,7 @@ func (s *Overlay) GetKeyBasedDeduplicationOptin(ctx context.Context, serviceID s
 				return nil, err
 			}
 
-			var out apierrors.OverlayGetOptinForKeyBasedDeduplicationForAServiceGatewayTimeoutError
+			var out apierrors.GatewayTimeoutError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -715,7 +715,7 @@ func (s *Overlay) OptInForKeyBasedDeduplication(ctx context.Context, serviceID s
 				return nil, err
 			}
 
-			var out apierrors.OverlayOptinForKeyBasedDeduplicationForAServiceBadRequestError
+			var out apierrors.BadRequestError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -740,7 +740,7 @@ func (s *Overlay) OptInForKeyBasedDeduplication(ctx context.Context, serviceID s
 				return nil, err
 			}
 
-			var out apierrors.OverlayOptinForKeyBasedDeduplicationForAServiceUnauthorizedError
+			var out apierrors.UnauthorizedError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -765,7 +765,7 @@ func (s *Overlay) OptInForKeyBasedDeduplication(ctx context.Context, serviceID s
 				return nil, err
 			}
 
-			var out apierrors.OverlayOptinForKeyBasedDeduplicationForAServicePaymentRequiredError
+			var out apierrors.PaymentRequiredError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -790,7 +790,7 @@ func (s *Overlay) OptInForKeyBasedDeduplication(ctx context.Context, serviceID s
 				return nil, err
 			}
 
-			var out apierrors.OverlayOptinForKeyBasedDeduplicationForAServiceForbiddenError
+			var out apierrors.ForbiddenError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -815,7 +815,7 @@ func (s *Overlay) OptInForKeyBasedDeduplication(ctx context.Context, serviceID s
 				return nil, err
 			}
 
-			var out apierrors.OverlayOptinForKeyBasedDeduplicationForAServiceNotFoundError
+			var out apierrors.NotFoundError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -840,7 +840,7 @@ func (s *Overlay) OptInForKeyBasedDeduplication(ctx context.Context, serviceID s
 				return nil, err
 			}
 
-			var out apierrors.OverlayOptinForKeyBasedDeduplicationForAServiceConflictError
+			var out apierrors.ConflictError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -865,7 +865,7 @@ func (s *Overlay) OptInForKeyBasedDeduplication(ctx context.Context, serviceID s
 				return nil, err
 			}
 
-			var out apierrors.OverlayOptinForKeyBasedDeduplicationForAServiceUnprocessableEntityError
+			var out apierrors.UnprocessableEntityError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -890,7 +890,7 @@ func (s *Overlay) OptInForKeyBasedDeduplication(ctx context.Context, serviceID s
 				return nil, err
 			}
 
-			var out apierrors.OverlayOptinForKeyBasedDeduplicationForAServiceInternalServerError
+			var out apierrors.InternalServerError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -915,7 +915,7 @@ func (s *Overlay) OptInForKeyBasedDeduplication(ctx context.Context, serviceID s
 				return nil, err
 			}
 
-			var out apierrors.OverlayOptinForKeyBasedDeduplicationForAServiceBadGatewayError
+			var out apierrors.BadGatewayError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -940,7 +940,7 @@ func (s *Overlay) OptInForKeyBasedDeduplication(ctx context.Context, serviceID s
 				return nil, err
 			}
 
-			var out apierrors.OverlayOptinForKeyBasedDeduplicationForAServiceServiceUnavailableError
+			var out apierrors.ServiceUnavailableError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -965,7 +965,7 @@ func (s *Overlay) OptInForKeyBasedDeduplication(ctx context.Context, serviceID s
 				return nil, err
 			}
 
-			var out apierrors.OverlayOptinForKeyBasedDeduplicationForAServiceGatewayTimeoutError
+			var out apierrors.GatewayTimeoutError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}

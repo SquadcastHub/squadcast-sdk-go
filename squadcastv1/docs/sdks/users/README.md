@@ -62,20 +62,20 @@ func main() {
 
 ### Errors
 
-| Error Type                                         | Status Code                                        | Content Type                                       |
-| -------------------------------------------------- | -------------------------------------------------- | -------------------------------------------------- |
-| apierrors.UsersGetAllUsersBadRequestError          | 400                                                | application/json                                   |
-| apierrors.UsersGetAllUsersUnauthorizedError        | 401                                                | application/json                                   |
-| apierrors.UsersGetAllUsersPaymentRequiredError     | 402                                                | application/json                                   |
-| apierrors.UsersGetAllUsersForbiddenError           | 403                                                | application/json                                   |
-| apierrors.UsersGetAllUsersNotFoundError            | 404                                                | application/json                                   |
-| apierrors.UsersGetAllUsersConflictError            | 409                                                | application/json                                   |
-| apierrors.UsersGetAllUsersUnprocessableEntityError | 422                                                | application/json                                   |
-| apierrors.UsersGetAllUsersInternalServerError      | 500                                                | application/json                                   |
-| apierrors.UsersGetAllUsersBadGatewayError          | 502                                                | application/json                                   |
-| apierrors.UsersGetAllUsersServiceUnavailableError  | 503                                                | application/json                                   |
-| apierrors.UsersGetAllUsersGatewayTimeoutError      | 504                                                | application/json                                   |
-| apierrors.APIError                                 | 4XX, 5XX                                           | \*/\*                                              |
+| Error Type                         | Status Code                        | Content Type                       |
+| ---------------------------------- | ---------------------------------- | ---------------------------------- |
+| apierrors.BadRequestError          | 400                                | application/json                   |
+| apierrors.UnauthorizedError        | 401                                | application/json                   |
+| apierrors.PaymentRequiredError     | 402                                | application/json                   |
+| apierrors.ForbiddenError           | 403                                | application/json                   |
+| apierrors.NotFoundError            | 404                                | application/json                   |
+| apierrors.ConflictError            | 409                                | application/json                   |
+| apierrors.UnprocessableEntityError | 422                                | application/json                   |
+| apierrors.InternalServerError      | 500                                | application/json                   |
+| apierrors.BadGatewayError          | 502                                | application/json                   |
+| apierrors.ServiceUnavailableError  | 503                                | application/json                   |
+| apierrors.GatewayTimeoutError      | 504                                | application/json                   |
+| apierrors.APIError                 | 4XX, 5XX                           | \*/\*                              |
 
 ## Add
 
@@ -132,20 +132,20 @@ func main() {
 
 ### Errors
 
-| Error Type                                     | Status Code                                    | Content Type                                   |
-| ---------------------------------------------- | ---------------------------------------------- | ---------------------------------------------- |
-| apierrors.UsersAddUserBadRequestError          | 400                                            | application/json                               |
-| apierrors.UsersAddUserUnauthorizedError        | 401                                            | application/json                               |
-| apierrors.UsersAddUserPaymentRequiredError     | 402                                            | application/json                               |
-| apierrors.UsersAddUserForbiddenError           | 403                                            | application/json                               |
-| apierrors.UsersAddUserNotFoundError            | 404                                            | application/json                               |
-| apierrors.UsersAddUserConflictError            | 409                                            | application/json                               |
-| apierrors.UsersAddUserUnprocessableEntityError | 422                                            | application/json                               |
-| apierrors.UsersAddUserInternalServerError      | 500                                            | application/json                               |
-| apierrors.UsersAddUserBadGatewayError          | 502                                            | application/json                               |
-| apierrors.UsersAddUserServiceUnavailableError  | 503                                            | application/json                               |
-| apierrors.UsersAddUserGatewayTimeoutError      | 504                                            | application/json                               |
-| apierrors.APIError                             | 4XX, 5XX                                       | \*/\*                                          |
+| Error Type                         | Status Code                        | Content Type                       |
+| ---------------------------------- | ---------------------------------- | ---------------------------------- |
+| apierrors.BadRequestError          | 400                                | application/json                   |
+| apierrors.UnauthorizedError        | 401                                | application/json                   |
+| apierrors.PaymentRequiredError     | 402                                | application/json                   |
+| apierrors.ForbiddenError           | 403                                | application/json                   |
+| apierrors.NotFoundError            | 404                                | application/json                   |
+| apierrors.ConflictError            | 409                                | application/json                   |
+| apierrors.UnprocessableEntityError | 422                                | application/json                   |
+| apierrors.InternalServerError      | 500                                | application/json                   |
+| apierrors.BadGatewayError          | 502                                | application/json                   |
+| apierrors.ServiceUnavailableError  | 503                                | application/json                   |
+| apierrors.GatewayTimeoutError      | 504                                | application/json                   |
+| apierrors.APIError                 | 4XX, 5XX                           | \*/\*                              |
 
 ## UpdateOrgLevelPermissions
 
@@ -198,20 +198,20 @@ func main() {
 
 ### Errors
 
-| Error Type                                                       | Status Code                                                      | Content Type                                                     |
-| ---------------------------------------------------------------- | ---------------------------------------------------------------- | ---------------------------------------------------------------- |
-| apierrors.UsersUpdateOrgLevelPermissionsBadRequestError          | 400                                                              | application/json                                                 |
-| apierrors.UsersUpdateOrgLevelPermissionsUnauthorizedError        | 401                                                              | application/json                                                 |
-| apierrors.UsersUpdateOrgLevelPermissionsPaymentRequiredError     | 402                                                              | application/json                                                 |
-| apierrors.UsersUpdateOrgLevelPermissionsForbiddenError           | 403                                                              | application/json                                                 |
-| apierrors.UsersUpdateOrgLevelPermissionsNotFoundError            | 404                                                              | application/json                                                 |
-| apierrors.UsersUpdateOrgLevelPermissionsConflictError            | 409                                                              | application/json                                                 |
-| apierrors.UsersUpdateOrgLevelPermissionsUnprocessableEntityError | 422                                                              | application/json                                                 |
-| apierrors.UsersUpdateOrgLevelPermissionsInternalServerError      | 500                                                              | application/json                                                 |
-| apierrors.UsersUpdateOrgLevelPermissionsBadGatewayError          | 502                                                              | application/json                                                 |
-| apierrors.UsersUpdateOrgLevelPermissionsServiceUnavailableError  | 503                                                              | application/json                                                 |
-| apierrors.UsersUpdateOrgLevelPermissionsGatewayTimeoutError      | 504                                                              | application/json                                                 |
-| apierrors.APIError                                               | 4XX, 5XX                                                         | \*/\*                                                            |
+| Error Type                         | Status Code                        | Content Type                       |
+| ---------------------------------- | ---------------------------------- | ---------------------------------- |
+| apierrors.BadRequestError          | 400                                | application/json                   |
+| apierrors.UnauthorizedError        | 401                                | application/json                   |
+| apierrors.PaymentRequiredError     | 402                                | application/json                   |
+| apierrors.ForbiddenError           | 403                                | application/json                   |
+| apierrors.NotFoundError            | 404                                | application/json                   |
+| apierrors.ConflictError            | 409                                | application/json                   |
+| apierrors.UnprocessableEntityError | 422                                | application/json                   |
+| apierrors.InternalServerError      | 500                                | application/json                   |
+| apierrors.BadGatewayError          | 502                                | application/json                   |
+| apierrors.ServiceUnavailableError  | 503                                | application/json                   |
+| apierrors.GatewayTimeoutError      | 504                                | application/json                   |
+| apierrors.APIError                 | 4XX, 5XX                           | \*/\*                              |
 
 ## Delete
 
@@ -267,20 +267,20 @@ func main() {
 
 ### Errors
 
-| Error Type                                        | Status Code                                       | Content Type                                      |
-| ------------------------------------------------- | ------------------------------------------------- | ------------------------------------------------- |
-| apierrors.UsersDeleteUserBadRequestError          | 400                                               | application/json                                  |
-| apierrors.UsersDeleteUserUnauthorizedError        | 401                                               | application/json                                  |
-| apierrors.UsersDeleteUserPaymentRequiredError     | 402                                               | application/json                                  |
-| apierrors.UsersDeleteUserForbiddenError           | 403                                               | application/json                                  |
-| apierrors.UsersDeleteUserNotFoundError            | 404                                               | application/json                                  |
-| apierrors.UsersDeleteUserConflictError            | 409                                               | application/json                                  |
-| apierrors.UsersDeleteUserUnprocessableEntityError | 422                                               | application/json                                  |
-| apierrors.UsersDeleteUserInternalServerError      | 500                                               | application/json                                  |
-| apierrors.UsersDeleteUserBadGatewayError          | 502                                               | application/json                                  |
-| apierrors.UsersDeleteUserServiceUnavailableError  | 503                                               | application/json                                  |
-| apierrors.UsersDeleteUserGatewayTimeoutError      | 504                                               | application/json                                  |
-| apierrors.APIError                                | 4XX, 5XX                                          | \*/\*                                             |
+| Error Type                         | Status Code                        | Content Type                       |
+| ---------------------------------- | ---------------------------------- | ---------------------------------- |
+| apierrors.BadRequestError          | 400                                | application/json                   |
+| apierrors.UnauthorizedError        | 401                                | application/json                   |
+| apierrors.PaymentRequiredError     | 402                                | application/json                   |
+| apierrors.ForbiddenError           | 403                                | application/json                   |
+| apierrors.NotFoundError            | 404                                | application/json                   |
+| apierrors.ConflictError            | 409                                | application/json                   |
+| apierrors.UnprocessableEntityError | 422                                | application/json                   |
+| apierrors.InternalServerError      | 500                                | application/json                   |
+| apierrors.BadGatewayError          | 502                                | application/json                   |
+| apierrors.ServiceUnavailableError  | 503                                | application/json                   |
+| apierrors.GatewayTimeoutError      | 504                                | application/json                   |
+| apierrors.APIError                 | 4XX, 5XX                           | \*/\*                              |
 
 ## GetRoles
 
@@ -330,20 +330,20 @@ func main() {
 
 ### Errors
 
-| Error Type                                          | Status Code                                         | Content Type                                        |
-| --------------------------------------------------- | --------------------------------------------------- | --------------------------------------------------- |
-| apierrors.UsersGetUserRolesBadRequestError          | 400                                                 | application/json                                    |
-| apierrors.UsersGetUserRolesUnauthorizedError        | 401                                                 | application/json                                    |
-| apierrors.UsersGetUserRolesPaymentRequiredError     | 402                                                 | application/json                                    |
-| apierrors.UsersGetUserRolesForbiddenError           | 403                                                 | application/json                                    |
-| apierrors.UsersGetUserRolesNotFoundError            | 404                                                 | application/json                                    |
-| apierrors.UsersGetUserRolesConflictError            | 409                                                 | application/json                                    |
-| apierrors.UsersGetUserRolesUnprocessableEntityError | 422                                                 | application/json                                    |
-| apierrors.UsersGetUserRolesInternalServerError      | 500                                                 | application/json                                    |
-| apierrors.UsersGetUserRolesBadGatewayError          | 502                                                 | application/json                                    |
-| apierrors.UsersGetUserRolesServiceUnavailableError  | 503                                                 | application/json                                    |
-| apierrors.UsersGetUserRolesGatewayTimeoutError      | 504                                                 | application/json                                    |
-| apierrors.APIError                                  | 4XX, 5XX                                            | \*/\*                                               |
+| Error Type                         | Status Code                        | Content Type                       |
+| ---------------------------------- | ---------------------------------- | ---------------------------------- |
+| apierrors.BadRequestError          | 400                                | application/json                   |
+| apierrors.UnauthorizedError        | 401                                | application/json                   |
+| apierrors.PaymentRequiredError     | 402                                | application/json                   |
+| apierrors.ForbiddenError           | 403                                | application/json                   |
+| apierrors.NotFoundError            | 404                                | application/json                   |
+| apierrors.ConflictError            | 409                                | application/json                   |
+| apierrors.UnprocessableEntityError | 422                                | application/json                   |
+| apierrors.InternalServerError      | 500                                | application/json                   |
+| apierrors.BadGatewayError          | 502                                | application/json                   |
+| apierrors.ServiceUnavailableError  | 503                                | application/json                   |
+| apierrors.GatewayTimeoutError      | 504                                | application/json                   |
+| apierrors.APIError                 | 4XX, 5XX                           | \*/\*                              |
 
 ## RemoveFromOrg
 
@@ -394,20 +394,20 @@ func main() {
 
 ### Errors
 
-| Error Type                                               | Status Code                                              | Content Type                                             |
-| -------------------------------------------------------- | -------------------------------------------------------- | -------------------------------------------------------- |
-| apierrors.UsersRemoveUserFromOrgBadRequestError          | 400                                                      | application/json                                         |
-| apierrors.UsersRemoveUserFromOrgUnauthorizedError        | 401                                                      | application/json                                         |
-| apierrors.UsersRemoveUserFromOrgPaymentRequiredError     | 402                                                      | application/json                                         |
-| apierrors.UsersRemoveUserFromOrgForbiddenError           | 403                                                      | application/json                                         |
-| apierrors.UsersRemoveUserFromOrgNotFoundError            | 404                                                      | application/json                                         |
-| apierrors.UsersRemoveUserFromOrgConflictError            | 409                                                      | application/json                                         |
-| apierrors.UsersRemoveUserFromOrgUnprocessableEntityError | 422                                                      | application/json                                         |
-| apierrors.UsersRemoveUserFromOrgInternalServerError      | 500                                                      | application/json                                         |
-| apierrors.UsersRemoveUserFromOrgBadGatewayError          | 502                                                      | application/json                                         |
-| apierrors.UsersRemoveUserFromOrgServiceUnavailableError  | 503                                                      | application/json                                         |
-| apierrors.UsersRemoveUserFromOrgGatewayTimeoutError      | 504                                                      | application/json                                         |
-| apierrors.APIError                                       | 4XX, 5XX                                                 | \*/\*                                                    |
+| Error Type                         | Status Code                        | Content Type                       |
+| ---------------------------------- | ---------------------------------- | ---------------------------------- |
+| apierrors.BadRequestError          | 400                                | application/json                   |
+| apierrors.UnauthorizedError        | 401                                | application/json                   |
+| apierrors.PaymentRequiredError     | 402                                | application/json                   |
+| apierrors.ForbiddenError           | 403                                | application/json                   |
+| apierrors.NotFoundError            | 404                                | application/json                   |
+| apierrors.ConflictError            | 409                                | application/json                   |
+| apierrors.UnprocessableEntityError | 422                                | application/json                   |
+| apierrors.InternalServerError      | 500                                | application/json                   |
+| apierrors.BadGatewayError          | 502                                | application/json                   |
+| apierrors.ServiceUnavailableError  | 503                                | application/json                   |
+| apierrors.GatewayTimeoutError      | 504                                | application/json                   |
+| apierrors.APIError                 | 4XX, 5XX                           | \*/\*                              |
 
 ## GetByID
 
@@ -458,20 +458,20 @@ func main() {
 
 ### Errors
 
-| Error Type                                         | Status Code                                        | Content Type                                       |
-| -------------------------------------------------- | -------------------------------------------------- | -------------------------------------------------- |
-| apierrors.UsersGetUserByIDBadRequestError          | 400                                                | application/json                                   |
-| apierrors.UsersGetUserByIDUnauthorizedError        | 401                                                | application/json                                   |
-| apierrors.UsersGetUserByIDPaymentRequiredError     | 402                                                | application/json                                   |
-| apierrors.UsersGetUserByIDForbiddenError           | 403                                                | application/json                                   |
-| apierrors.UsersGetUserByIDNotFoundError            | 404                                                | application/json                                   |
-| apierrors.UsersGetUserByIDConflictError            | 409                                                | application/json                                   |
-| apierrors.UsersGetUserByIDUnprocessableEntityError | 422                                                | application/json                                   |
-| apierrors.UsersGetUserByIDInternalServerError      | 500                                                | application/json                                   |
-| apierrors.UsersGetUserByIDBadGatewayError          | 502                                                | application/json                                   |
-| apierrors.UsersGetUserByIDServiceUnavailableError  | 503                                                | application/json                                   |
-| apierrors.UsersGetUserByIDGatewayTimeoutError      | 504                                                | application/json                                   |
-| apierrors.APIError                                 | 4XX, 5XX                                           | \*/\*                                              |
+| Error Type                         | Status Code                        | Content Type                       |
+| ---------------------------------- | ---------------------------------- | ---------------------------------- |
+| apierrors.BadRequestError          | 400                                | application/json                   |
+| apierrors.UnauthorizedError        | 401                                | application/json                   |
+| apierrors.PaymentRequiredError     | 402                                | application/json                   |
+| apierrors.ForbiddenError           | 403                                | application/json                   |
+| apierrors.NotFoundError            | 404                                | application/json                   |
+| apierrors.ConflictError            | 409                                | application/json                   |
+| apierrors.UnprocessableEntityError | 422                                | application/json                   |
+| apierrors.InternalServerError      | 500                                | application/json                   |
+| apierrors.BadGatewayError          | 502                                | application/json                   |
+| apierrors.ServiceUnavailableError  | 503                                | application/json                   |
+| apierrors.GatewayTimeoutError      | 504                                | application/json                   |
+| apierrors.APIError                 | 4XX, 5XX                           | \*/\*                              |
 
 ## Update
 
@@ -526,17 +526,17 @@ func main() {
 
 ### Errors
 
-| Error Type                                            | Status Code                                           | Content Type                                          |
-| ----------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- |
-| apierrors.UsersUpdateUserByIDBadRequestError          | 400                                                   | application/json                                      |
-| apierrors.UsersUpdateUserByIDUnauthorizedError        | 401                                                   | application/json                                      |
-| apierrors.UsersUpdateUserByIDPaymentRequiredError     | 402                                                   | application/json                                      |
-| apierrors.UsersUpdateUserByIDForbiddenError           | 403                                                   | application/json                                      |
-| apierrors.UsersUpdateUserByIDNotFoundError            | 404                                                   | application/json                                      |
-| apierrors.UsersUpdateUserByIDConflictError            | 409                                                   | application/json                                      |
-| apierrors.UsersUpdateUserByIDUnprocessableEntityError | 422                                                   | application/json                                      |
-| apierrors.UsersUpdateUserByIDInternalServerError      | 500                                                   | application/json                                      |
-| apierrors.UsersUpdateUserByIDBadGatewayError          | 502                                                   | application/json                                      |
-| apierrors.UsersUpdateUserByIDServiceUnavailableError  | 503                                                   | application/json                                      |
-| apierrors.UsersUpdateUserByIDGatewayTimeoutError      | 504                                                   | application/json                                      |
-| apierrors.APIError                                    | 4XX, 5XX                                              | \*/\*                                                 |
+| Error Type                         | Status Code                        | Content Type                       |
+| ---------------------------------- | ---------------------------------- | ---------------------------------- |
+| apierrors.BadRequestError          | 400                                | application/json                   |
+| apierrors.UnauthorizedError        | 401                                | application/json                   |
+| apierrors.PaymentRequiredError     | 402                                | application/json                   |
+| apierrors.ForbiddenError           | 403                                | application/json                   |
+| apierrors.NotFoundError            | 404                                | application/json                   |
+| apierrors.ConflictError            | 409                                | application/json                   |
+| apierrors.UnprocessableEntityError | 422                                | application/json                   |
+| apierrors.InternalServerError      | 500                                | application/json                   |
+| apierrors.BadGatewayError          | 502                                | application/json                   |
+| apierrors.ServiceUnavailableError  | 503                                | application/json                   |
+| apierrors.GatewayTimeoutError      | 504                                | application/json                   |
+| apierrors.APIError                 | 4XX, 5XX                           | \*/\*                              |

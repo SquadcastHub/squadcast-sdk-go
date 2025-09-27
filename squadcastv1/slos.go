@@ -232,7 +232,7 @@ func (s *Slos) ListAll(ctx context.Context, ownerID string, offset string, limit
 				return nil, err
 			}
 
-			var out apierrors.SLOGetAllSLOsBadRequestError
+			var out apierrors.BadRequestError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -257,7 +257,7 @@ func (s *Slos) ListAll(ctx context.Context, ownerID string, offset string, limit
 				return nil, err
 			}
 
-			var out apierrors.SLOGetAllSLOsUnauthorizedError
+			var out apierrors.UnauthorizedError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -282,7 +282,7 @@ func (s *Slos) ListAll(ctx context.Context, ownerID string, offset string, limit
 				return nil, err
 			}
 
-			var out apierrors.SLOGetAllSLOsPaymentRequiredError
+			var out apierrors.PaymentRequiredError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -307,7 +307,7 @@ func (s *Slos) ListAll(ctx context.Context, ownerID string, offset string, limit
 				return nil, err
 			}
 
-			var out apierrors.SLOGetAllSLOsForbiddenError
+			var out apierrors.ForbiddenError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -332,7 +332,7 @@ func (s *Slos) ListAll(ctx context.Context, ownerID string, offset string, limit
 				return nil, err
 			}
 
-			var out apierrors.SLOGetAllSLOsNotFoundError
+			var out apierrors.NotFoundError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -357,7 +357,7 @@ func (s *Slos) ListAll(ctx context.Context, ownerID string, offset string, limit
 				return nil, err
 			}
 
-			var out apierrors.SLOGetAllSLOsConflictError
+			var out apierrors.ConflictError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -382,7 +382,7 @@ func (s *Slos) ListAll(ctx context.Context, ownerID string, offset string, limit
 				return nil, err
 			}
 
-			var out apierrors.SLOGetAllSLOsUnprocessableEntityError
+			var out apierrors.UnprocessableEntityError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -407,7 +407,7 @@ func (s *Slos) ListAll(ctx context.Context, ownerID string, offset string, limit
 				return nil, err
 			}
 
-			var out apierrors.SLOGetAllSLOsInternalServerError
+			var out apierrors.InternalServerError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -432,7 +432,7 @@ func (s *Slos) ListAll(ctx context.Context, ownerID string, offset string, limit
 				return nil, err
 			}
 
-			var out apierrors.SLOGetAllSLOsBadGatewayError
+			var out apierrors.BadGatewayError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -457,7 +457,7 @@ func (s *Slos) ListAll(ctx context.Context, ownerID string, offset string, limit
 				return nil, err
 			}
 
-			var out apierrors.SLOGetAllSLOsServiceUnavailableError
+			var out apierrors.ServiceUnavailableError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -482,7 +482,7 @@ func (s *Slos) ListAll(ctx context.Context, ownerID string, offset string, limit
 				return nil, err
 			}
 
-			var out apierrors.SLOGetAllSLOsGatewayTimeoutError
+			var out apierrors.GatewayTimeoutError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -721,7 +721,7 @@ func (s *Slos) Create(ctx context.Context, request components.V3SLOCreateSLORequ
 				return nil, err
 			}
 
-			var out apierrors.SLOCreateSLOBadRequestError
+			var out apierrors.BadRequestError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -746,7 +746,7 @@ func (s *Slos) Create(ctx context.Context, request components.V3SLOCreateSLORequ
 				return nil, err
 			}
 
-			var out apierrors.SLOCreateSLOUnauthorizedError
+			var out apierrors.UnauthorizedError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -771,7 +771,7 @@ func (s *Slos) Create(ctx context.Context, request components.V3SLOCreateSLORequ
 				return nil, err
 			}
 
-			var out apierrors.SLOCreateSLOPaymentRequiredError
+			var out apierrors.PaymentRequiredError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -796,7 +796,7 @@ func (s *Slos) Create(ctx context.Context, request components.V3SLOCreateSLORequ
 				return nil, err
 			}
 
-			var out apierrors.SLOCreateSLOForbiddenError
+			var out apierrors.ForbiddenError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -821,7 +821,7 @@ func (s *Slos) Create(ctx context.Context, request components.V3SLOCreateSLORequ
 				return nil, err
 			}
 
-			var out apierrors.SLOCreateSLONotFoundError
+			var out apierrors.NotFoundError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -846,7 +846,7 @@ func (s *Slos) Create(ctx context.Context, request components.V3SLOCreateSLORequ
 				return nil, err
 			}
 
-			var out apierrors.SLOCreateSLOConflictError
+			var out apierrors.ConflictError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -871,7 +871,7 @@ func (s *Slos) Create(ctx context.Context, request components.V3SLOCreateSLORequ
 				return nil, err
 			}
 
-			var out apierrors.SLOCreateSLOUnprocessableEntityError
+			var out apierrors.UnprocessableEntityError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -896,7 +896,7 @@ func (s *Slos) Create(ctx context.Context, request components.V3SLOCreateSLORequ
 				return nil, err
 			}
 
-			var out apierrors.SLOCreateSLOInternalServerError
+			var out apierrors.InternalServerError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -921,7 +921,7 @@ func (s *Slos) Create(ctx context.Context, request components.V3SLOCreateSLORequ
 				return nil, err
 			}
 
-			var out apierrors.SLOCreateSLOBadGatewayError
+			var out apierrors.BadGatewayError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -946,7 +946,7 @@ func (s *Slos) Create(ctx context.Context, request components.V3SLOCreateSLORequ
 				return nil, err
 			}
 
-			var out apierrors.SLOCreateSLOServiceUnavailableError
+			var out apierrors.ServiceUnavailableError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -971,7 +971,7 @@ func (s *Slos) Create(ctx context.Context, request components.V3SLOCreateSLORequ
 				return nil, err
 			}
 
-			var out apierrors.SLOCreateSLOGatewayTimeoutError
+			var out apierrors.GatewayTimeoutError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -1220,7 +1220,7 @@ func (s *Slos) Update(ctx context.Context, sloID int64, ownerID string, v3SLOCre
 				return nil, err
 			}
 
-			var out apierrors.SLOUpdateSLOBadRequestError
+			var out apierrors.BadRequestError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -1245,7 +1245,7 @@ func (s *Slos) Update(ctx context.Context, sloID int64, ownerID string, v3SLOCre
 				return nil, err
 			}
 
-			var out apierrors.SLOUpdateSLOUnauthorizedError
+			var out apierrors.UnauthorizedError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -1270,7 +1270,7 @@ func (s *Slos) Update(ctx context.Context, sloID int64, ownerID string, v3SLOCre
 				return nil, err
 			}
 
-			var out apierrors.SLOUpdateSLOPaymentRequiredError
+			var out apierrors.PaymentRequiredError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -1295,7 +1295,7 @@ func (s *Slos) Update(ctx context.Context, sloID int64, ownerID string, v3SLOCre
 				return nil, err
 			}
 
-			var out apierrors.SLOUpdateSLOForbiddenError
+			var out apierrors.ForbiddenError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -1320,7 +1320,7 @@ func (s *Slos) Update(ctx context.Context, sloID int64, ownerID string, v3SLOCre
 				return nil, err
 			}
 
-			var out apierrors.SLOUpdateSLONotFoundError
+			var out apierrors.NotFoundError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -1345,7 +1345,7 @@ func (s *Slos) Update(ctx context.Context, sloID int64, ownerID string, v3SLOCre
 				return nil, err
 			}
 
-			var out apierrors.SLOUpdateSLOConflictError
+			var out apierrors.ConflictError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -1370,7 +1370,7 @@ func (s *Slos) Update(ctx context.Context, sloID int64, ownerID string, v3SLOCre
 				return nil, err
 			}
 
-			var out apierrors.SLOUpdateSLOUnprocessableEntityError
+			var out apierrors.UnprocessableEntityError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -1395,7 +1395,7 @@ func (s *Slos) Update(ctx context.Context, sloID int64, ownerID string, v3SLOCre
 				return nil, err
 			}
 
-			var out apierrors.SLOUpdateSLOInternalServerError
+			var out apierrors.InternalServerError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -1420,7 +1420,7 @@ func (s *Slos) Update(ctx context.Context, sloID int64, ownerID string, v3SLOCre
 				return nil, err
 			}
 
-			var out apierrors.SLOUpdateSLOBadGatewayError
+			var out apierrors.BadGatewayError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -1445,7 +1445,7 @@ func (s *Slos) Update(ctx context.Context, sloID int64, ownerID string, v3SLOCre
 				return nil, err
 			}
 
-			var out apierrors.SLOUpdateSLOServiceUnavailableError
+			var out apierrors.ServiceUnavailableError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -1470,7 +1470,7 @@ func (s *Slos) Update(ctx context.Context, sloID int64, ownerID string, v3SLOCre
 				return nil, err
 			}
 
-			var out apierrors.SLOUpdateSLOGatewayTimeoutError
+			var out apierrors.GatewayTimeoutError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -1711,7 +1711,7 @@ func (s *Slos) Remove(ctx context.Context, sloID int64, ownerID string, opts ...
 				return nil, err
 			}
 
-			var out apierrors.SLORemoveSLOBadRequestError
+			var out apierrors.BadRequestError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -1736,7 +1736,7 @@ func (s *Slos) Remove(ctx context.Context, sloID int64, ownerID string, opts ...
 				return nil, err
 			}
 
-			var out apierrors.SLORemoveSLOUnauthorizedError
+			var out apierrors.UnauthorizedError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -1761,7 +1761,7 @@ func (s *Slos) Remove(ctx context.Context, sloID int64, ownerID string, opts ...
 				return nil, err
 			}
 
-			var out apierrors.SLORemoveSLOPaymentRequiredError
+			var out apierrors.PaymentRequiredError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -1786,7 +1786,7 @@ func (s *Slos) Remove(ctx context.Context, sloID int64, ownerID string, opts ...
 				return nil, err
 			}
 
-			var out apierrors.SLORemoveSLOForbiddenError
+			var out apierrors.ForbiddenError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -1811,7 +1811,7 @@ func (s *Slos) Remove(ctx context.Context, sloID int64, ownerID string, opts ...
 				return nil, err
 			}
 
-			var out apierrors.SLORemoveSLONotFoundError
+			var out apierrors.NotFoundError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -1836,7 +1836,7 @@ func (s *Slos) Remove(ctx context.Context, sloID int64, ownerID string, opts ...
 				return nil, err
 			}
 
-			var out apierrors.SLORemoveSLOConflictError
+			var out apierrors.ConflictError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -1861,7 +1861,7 @@ func (s *Slos) Remove(ctx context.Context, sloID int64, ownerID string, opts ...
 				return nil, err
 			}
 
-			var out apierrors.SLORemoveSLOUnprocessableEntityError
+			var out apierrors.UnprocessableEntityError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -1886,7 +1886,7 @@ func (s *Slos) Remove(ctx context.Context, sloID int64, ownerID string, opts ...
 				return nil, err
 			}
 
-			var out apierrors.SLORemoveSLOInternalServerError
+			var out apierrors.InternalServerError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -1911,7 +1911,7 @@ func (s *Slos) Remove(ctx context.Context, sloID int64, ownerID string, opts ...
 				return nil, err
 			}
 
-			var out apierrors.SLORemoveSLOBadGatewayError
+			var out apierrors.BadGatewayError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -1936,7 +1936,7 @@ func (s *Slos) Remove(ctx context.Context, sloID int64, ownerID string, opts ...
 				return nil, err
 			}
 
-			var out apierrors.SLORemoveSLOServiceUnavailableError
+			var out apierrors.ServiceUnavailableError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -1961,7 +1961,7 @@ func (s *Slos) Remove(ctx context.Context, sloID int64, ownerID string, opts ...
 				return nil, err
 			}
 
-			var out apierrors.SLORemoveSLOGatewayTimeoutError
+			var out apierrors.GatewayTimeoutError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -2202,7 +2202,7 @@ func (s *Slos) GetByID(ctx context.Context, sloID int64, ownerID string, opts ..
 				return nil, err
 			}
 
-			var out apierrors.SLOGetSLOByIDBadRequestError
+			var out apierrors.BadRequestError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -2227,7 +2227,7 @@ func (s *Slos) GetByID(ctx context.Context, sloID int64, ownerID string, opts ..
 				return nil, err
 			}
 
-			var out apierrors.SLOGetSLOByIDUnauthorizedError
+			var out apierrors.UnauthorizedError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -2252,7 +2252,7 @@ func (s *Slos) GetByID(ctx context.Context, sloID int64, ownerID string, opts ..
 				return nil, err
 			}
 
-			var out apierrors.SLOGetSLOByIDPaymentRequiredError
+			var out apierrors.PaymentRequiredError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -2277,7 +2277,7 @@ func (s *Slos) GetByID(ctx context.Context, sloID int64, ownerID string, opts ..
 				return nil, err
 			}
 
-			var out apierrors.SLOGetSLOByIDForbiddenError
+			var out apierrors.ForbiddenError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -2302,7 +2302,7 @@ func (s *Slos) GetByID(ctx context.Context, sloID int64, ownerID string, opts ..
 				return nil, err
 			}
 
-			var out apierrors.SLOGetSLOByIDNotFoundError
+			var out apierrors.NotFoundError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -2327,7 +2327,7 @@ func (s *Slos) GetByID(ctx context.Context, sloID int64, ownerID string, opts ..
 				return nil, err
 			}
 
-			var out apierrors.SLOGetSLOByIDConflictError
+			var out apierrors.ConflictError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -2352,7 +2352,7 @@ func (s *Slos) GetByID(ctx context.Context, sloID int64, ownerID string, opts ..
 				return nil, err
 			}
 
-			var out apierrors.SLOGetSLOByIDUnprocessableEntityError
+			var out apierrors.UnprocessableEntityError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -2377,7 +2377,7 @@ func (s *Slos) GetByID(ctx context.Context, sloID int64, ownerID string, opts ..
 				return nil, err
 			}
 
-			var out apierrors.SLOGetSLOByIDInternalServerError
+			var out apierrors.InternalServerError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -2402,7 +2402,7 @@ func (s *Slos) GetByID(ctx context.Context, sloID int64, ownerID string, opts ..
 				return nil, err
 			}
 
-			var out apierrors.SLOGetSLOByIDBadGatewayError
+			var out apierrors.BadGatewayError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -2427,7 +2427,7 @@ func (s *Slos) GetByID(ctx context.Context, sloID int64, ownerID string, opts ..
 				return nil, err
 			}
 
-			var out apierrors.SLOGetSLOByIDServiceUnavailableError
+			var out apierrors.ServiceUnavailableError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -2452,7 +2452,7 @@ func (s *Slos) GetByID(ctx context.Context, sloID int64, ownerID string, opts ..
 				return nil, err
 			}
 
-			var out apierrors.SLOGetSLOByIDGatewayTimeoutError
+			var out apierrors.GatewayTimeoutError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -2702,7 +2702,7 @@ func (s *Slos) MarkAffected(ctx context.Context, sloID int64, ownerID string, v3
 				return nil, err
 			}
 
-			var out apierrors.SLOMarkSLOAffectedBadRequestError
+			var out apierrors.BadRequestError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -2727,7 +2727,7 @@ func (s *Slos) MarkAffected(ctx context.Context, sloID int64, ownerID string, v3
 				return nil, err
 			}
 
-			var out apierrors.SLOMarkSLOAffectedUnauthorizedError
+			var out apierrors.UnauthorizedError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -2752,7 +2752,7 @@ func (s *Slos) MarkAffected(ctx context.Context, sloID int64, ownerID string, v3
 				return nil, err
 			}
 
-			var out apierrors.SLOMarkSLOAffectedPaymentRequiredError
+			var out apierrors.PaymentRequiredError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -2777,7 +2777,7 @@ func (s *Slos) MarkAffected(ctx context.Context, sloID int64, ownerID string, v3
 				return nil, err
 			}
 
-			var out apierrors.SLOMarkSLOAffectedForbiddenError
+			var out apierrors.ForbiddenError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -2802,7 +2802,7 @@ func (s *Slos) MarkAffected(ctx context.Context, sloID int64, ownerID string, v3
 				return nil, err
 			}
 
-			var out apierrors.SLOMarkSLOAffectedNotFoundError
+			var out apierrors.NotFoundError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -2827,7 +2827,7 @@ func (s *Slos) MarkAffected(ctx context.Context, sloID int64, ownerID string, v3
 				return nil, err
 			}
 
-			var out apierrors.SLOMarkSLOAffectedConflictError
+			var out apierrors.ConflictError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -2852,7 +2852,7 @@ func (s *Slos) MarkAffected(ctx context.Context, sloID int64, ownerID string, v3
 				return nil, err
 			}
 
-			var out apierrors.SLOMarkSLOAffectedUnprocessableEntityError
+			var out apierrors.UnprocessableEntityError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -2877,7 +2877,7 @@ func (s *Slos) MarkAffected(ctx context.Context, sloID int64, ownerID string, v3
 				return nil, err
 			}
 
-			var out apierrors.SLOMarkSLOAffectedInternalServerError
+			var out apierrors.InternalServerError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -2902,7 +2902,7 @@ func (s *Slos) MarkAffected(ctx context.Context, sloID int64, ownerID string, v3
 				return nil, err
 			}
 
-			var out apierrors.SLOMarkSLOAffectedBadGatewayError
+			var out apierrors.BadGatewayError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -2927,7 +2927,7 @@ func (s *Slos) MarkAffected(ctx context.Context, sloID int64, ownerID string, v3
 				return nil, err
 			}
 
-			var out apierrors.SLOMarkSLOAffectedServiceUnavailableError
+			var out apierrors.ServiceUnavailableError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -2952,7 +2952,7 @@ func (s *Slos) MarkAffected(ctx context.Context, sloID int64, ownerID string, v3
 				return nil, err
 			}
 
-			var out apierrors.SLOMarkSLOAffectedGatewayTimeoutError
+			var out apierrors.GatewayTimeoutError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -3194,7 +3194,7 @@ func (s *Slos) MarkFalsePositive(ctx context.Context, request operations.SLOMark
 				return nil, err
 			}
 
-			var out apierrors.SLOMarkSLOFalsePositiveBadRequestError
+			var out apierrors.BadRequestError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -3219,7 +3219,7 @@ func (s *Slos) MarkFalsePositive(ctx context.Context, request operations.SLOMark
 				return nil, err
 			}
 
-			var out apierrors.SLOMarkSLOFalsePositiveUnauthorizedError
+			var out apierrors.UnauthorizedError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -3244,7 +3244,7 @@ func (s *Slos) MarkFalsePositive(ctx context.Context, request operations.SLOMark
 				return nil, err
 			}
 
-			var out apierrors.SLOMarkSLOFalsePositivePaymentRequiredError
+			var out apierrors.PaymentRequiredError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -3269,7 +3269,7 @@ func (s *Slos) MarkFalsePositive(ctx context.Context, request operations.SLOMark
 				return nil, err
 			}
 
-			var out apierrors.SLOMarkSLOFalsePositiveForbiddenError
+			var out apierrors.ForbiddenError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -3294,7 +3294,7 @@ func (s *Slos) MarkFalsePositive(ctx context.Context, request operations.SLOMark
 				return nil, err
 			}
 
-			var out apierrors.SLOMarkSLOFalsePositiveNotFoundError
+			var out apierrors.NotFoundError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -3319,7 +3319,7 @@ func (s *Slos) MarkFalsePositive(ctx context.Context, request operations.SLOMark
 				return nil, err
 			}
 
-			var out apierrors.SLOMarkSLOFalsePositiveConflictError
+			var out apierrors.ConflictError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -3344,7 +3344,7 @@ func (s *Slos) MarkFalsePositive(ctx context.Context, request operations.SLOMark
 				return nil, err
 			}
 
-			var out apierrors.SLOMarkSLOFalsePositiveUnprocessableEntityError
+			var out apierrors.UnprocessableEntityError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -3369,7 +3369,7 @@ func (s *Slos) MarkFalsePositive(ctx context.Context, request operations.SLOMark
 				return nil, err
 			}
 
-			var out apierrors.SLOMarkSLOFalsePositiveInternalServerError
+			var out apierrors.InternalServerError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -3394,7 +3394,7 @@ func (s *Slos) MarkFalsePositive(ctx context.Context, request operations.SLOMark
 				return nil, err
 			}
 
-			var out apierrors.SLOMarkSLOFalsePositiveBadGatewayError
+			var out apierrors.BadGatewayError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -3419,7 +3419,7 @@ func (s *Slos) MarkFalsePositive(ctx context.Context, request operations.SLOMark
 				return nil, err
 			}
 
-			var out apierrors.SLOMarkSLOFalsePositiveServiceUnavailableError
+			var out apierrors.ServiceUnavailableError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -3444,7 +3444,7 @@ func (s *Slos) MarkFalsePositive(ctx context.Context, request operations.SLOMark
 				return nil, err
 			}
 
-			var out apierrors.SLOMarkSLOFalsePositiveGatewayTimeoutError
+			var out apierrors.GatewayTimeoutError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}

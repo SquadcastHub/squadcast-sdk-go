@@ -223,7 +223,7 @@ func (s *Issues) List(ctx context.Context, statuspageID string, opts ...operatio
 				return nil, err
 			}
 
-			var out apierrors.IssuesListIssuesBadRequestError
+			var out apierrors.BadRequestError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -248,7 +248,7 @@ func (s *Issues) List(ctx context.Context, statuspageID string, opts ...operatio
 				return nil, err
 			}
 
-			var out apierrors.IssuesListIssuesUnauthorizedError
+			var out apierrors.UnauthorizedError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -273,7 +273,7 @@ func (s *Issues) List(ctx context.Context, statuspageID string, opts ...operatio
 				return nil, err
 			}
 
-			var out apierrors.IssuesListIssuesPaymentRequiredError
+			var out apierrors.PaymentRequiredError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -298,7 +298,7 @@ func (s *Issues) List(ctx context.Context, statuspageID string, opts ...operatio
 				return nil, err
 			}
 
-			var out apierrors.IssuesListIssuesForbiddenError
+			var out apierrors.ForbiddenError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -323,7 +323,7 @@ func (s *Issues) List(ctx context.Context, statuspageID string, opts ...operatio
 				return nil, err
 			}
 
-			var out apierrors.IssuesListIssuesNotFoundError
+			var out apierrors.NotFoundError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -348,7 +348,7 @@ func (s *Issues) List(ctx context.Context, statuspageID string, opts ...operatio
 				return nil, err
 			}
 
-			var out apierrors.IssuesListIssuesConflictError
+			var out apierrors.ConflictError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -373,7 +373,7 @@ func (s *Issues) List(ctx context.Context, statuspageID string, opts ...operatio
 				return nil, err
 			}
 
-			var out apierrors.IssuesListIssuesUnprocessableEntityError
+			var out apierrors.UnprocessableEntityError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -398,7 +398,7 @@ func (s *Issues) List(ctx context.Context, statuspageID string, opts ...operatio
 				return nil, err
 			}
 
-			var out apierrors.IssuesListIssuesInternalServerError
+			var out apierrors.InternalServerError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -423,7 +423,7 @@ func (s *Issues) List(ctx context.Context, statuspageID string, opts ...operatio
 				return nil, err
 			}
 
-			var out apierrors.IssuesListIssuesBadGatewayError
+			var out apierrors.BadGatewayError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -448,7 +448,7 @@ func (s *Issues) List(ctx context.Context, statuspageID string, opts ...operatio
 				return nil, err
 			}
 
-			var out apierrors.IssuesListIssuesServiceUnavailableError
+			var out apierrors.ServiceUnavailableError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -473,7 +473,7 @@ func (s *Issues) List(ctx context.Context, statuspageID string, opts ...operatio
 				return nil, err
 			}
 
-			var out apierrors.IssuesListIssuesGatewayTimeoutError
+			var out apierrors.GatewayTimeoutError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -708,7 +708,7 @@ func (s *Issues) Delete(ctx context.Context, statuspageID string, issueID string
 				return nil, err
 			}
 
-			var out apierrors.IssuesDeleteIssueByIDBadRequestError
+			var out apierrors.BadRequestError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -733,7 +733,7 @@ func (s *Issues) Delete(ctx context.Context, statuspageID string, issueID string
 				return nil, err
 			}
 
-			var out apierrors.IssuesDeleteIssueByIDUnauthorizedError
+			var out apierrors.UnauthorizedError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -758,7 +758,7 @@ func (s *Issues) Delete(ctx context.Context, statuspageID string, issueID string
 				return nil, err
 			}
 
-			var out apierrors.IssuesDeleteIssueByIDPaymentRequiredError
+			var out apierrors.PaymentRequiredError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -783,7 +783,7 @@ func (s *Issues) Delete(ctx context.Context, statuspageID string, issueID string
 				return nil, err
 			}
 
-			var out apierrors.IssuesDeleteIssueByIDForbiddenError
+			var out apierrors.ForbiddenError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -808,7 +808,7 @@ func (s *Issues) Delete(ctx context.Context, statuspageID string, issueID string
 				return nil, err
 			}
 
-			var out apierrors.IssuesDeleteIssueByIDNotFoundError
+			var out apierrors.NotFoundError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -833,7 +833,7 @@ func (s *Issues) Delete(ctx context.Context, statuspageID string, issueID string
 				return nil, err
 			}
 
-			var out apierrors.IssuesDeleteIssueByIDConflictError
+			var out apierrors.ConflictError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -858,7 +858,7 @@ func (s *Issues) Delete(ctx context.Context, statuspageID string, issueID string
 				return nil, err
 			}
 
-			var out apierrors.IssuesDeleteIssueByIDUnprocessableEntityError
+			var out apierrors.UnprocessableEntityError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -883,7 +883,7 @@ func (s *Issues) Delete(ctx context.Context, statuspageID string, issueID string
 				return nil, err
 			}
 
-			var out apierrors.IssuesDeleteIssueByIDInternalServerError
+			var out apierrors.InternalServerError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -908,7 +908,7 @@ func (s *Issues) Delete(ctx context.Context, statuspageID string, issueID string
 				return nil, err
 			}
 
-			var out apierrors.IssuesDeleteIssueByIDBadGatewayError
+			var out apierrors.BadGatewayError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -933,7 +933,7 @@ func (s *Issues) Delete(ctx context.Context, statuspageID string, issueID string
 				return nil, err
 			}
 
-			var out apierrors.IssuesDeleteIssueByIDServiceUnavailableError
+			var out apierrors.ServiceUnavailableError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -958,7 +958,7 @@ func (s *Issues) Delete(ctx context.Context, statuspageID string, issueID string
 				return nil, err
 			}
 
-			var out apierrors.IssuesDeleteIssueByIDGatewayTimeoutError
+			var out apierrors.GatewayTimeoutError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -1193,7 +1193,7 @@ func (s *Issues) GetByID(ctx context.Context, statuspageID string, issueID strin
 				return nil, err
 			}
 
-			var out apierrors.IssuesGetIssueByIDBadRequestError
+			var out apierrors.BadRequestError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -1218,7 +1218,7 @@ func (s *Issues) GetByID(ctx context.Context, statuspageID string, issueID strin
 				return nil, err
 			}
 
-			var out apierrors.IssuesGetIssueByIDUnauthorizedError
+			var out apierrors.UnauthorizedError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -1243,7 +1243,7 @@ func (s *Issues) GetByID(ctx context.Context, statuspageID string, issueID strin
 				return nil, err
 			}
 
-			var out apierrors.IssuesGetIssueByIDPaymentRequiredError
+			var out apierrors.PaymentRequiredError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -1268,7 +1268,7 @@ func (s *Issues) GetByID(ctx context.Context, statuspageID string, issueID strin
 				return nil, err
 			}
 
-			var out apierrors.IssuesGetIssueByIDForbiddenError
+			var out apierrors.ForbiddenError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -1293,7 +1293,7 @@ func (s *Issues) GetByID(ctx context.Context, statuspageID string, issueID strin
 				return nil, err
 			}
 
-			var out apierrors.IssuesGetIssueByIDNotFoundError
+			var out apierrors.NotFoundError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -1318,7 +1318,7 @@ func (s *Issues) GetByID(ctx context.Context, statuspageID string, issueID strin
 				return nil, err
 			}
 
-			var out apierrors.IssuesGetIssueByIDConflictError
+			var out apierrors.ConflictError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -1343,7 +1343,7 @@ func (s *Issues) GetByID(ctx context.Context, statuspageID string, issueID strin
 				return nil, err
 			}
 
-			var out apierrors.IssuesGetIssueByIDUnprocessableEntityError
+			var out apierrors.UnprocessableEntityError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -1368,7 +1368,7 @@ func (s *Issues) GetByID(ctx context.Context, statuspageID string, issueID strin
 				return nil, err
 			}
 
-			var out apierrors.IssuesGetIssueByIDInternalServerError
+			var out apierrors.InternalServerError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -1393,7 +1393,7 @@ func (s *Issues) GetByID(ctx context.Context, statuspageID string, issueID strin
 				return nil, err
 			}
 
-			var out apierrors.IssuesGetIssueByIDBadGatewayError
+			var out apierrors.BadGatewayError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -1418,7 +1418,7 @@ func (s *Issues) GetByID(ctx context.Context, statuspageID string, issueID strin
 				return nil, err
 			}
 
-			var out apierrors.IssuesGetIssueByIDServiceUnavailableError
+			var out apierrors.ServiceUnavailableError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -1443,7 +1443,7 @@ func (s *Issues) GetByID(ctx context.Context, statuspageID string, issueID strin
 				return nil, err
 			}
 
-			var out apierrors.IssuesGetIssueByIDGatewayTimeoutError
+			var out apierrors.GatewayTimeoutError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -1677,7 +1677,7 @@ func (s *Issues) ListStates(ctx context.Context, statuspageID string, opts ...op
 				return nil, err
 			}
 
-			var out apierrors.IssuesListStatusPageIssueStatesBadRequestError
+			var out apierrors.BadRequestError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -1702,7 +1702,7 @@ func (s *Issues) ListStates(ctx context.Context, statuspageID string, opts ...op
 				return nil, err
 			}
 
-			var out apierrors.IssuesListStatusPageIssueStatesUnauthorizedError
+			var out apierrors.UnauthorizedError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -1727,7 +1727,7 @@ func (s *Issues) ListStates(ctx context.Context, statuspageID string, opts ...op
 				return nil, err
 			}
 
-			var out apierrors.IssuesListStatusPageIssueStatesPaymentRequiredError
+			var out apierrors.PaymentRequiredError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -1752,7 +1752,7 @@ func (s *Issues) ListStates(ctx context.Context, statuspageID string, opts ...op
 				return nil, err
 			}
 
-			var out apierrors.IssuesListStatusPageIssueStatesForbiddenError
+			var out apierrors.ForbiddenError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -1777,7 +1777,7 @@ func (s *Issues) ListStates(ctx context.Context, statuspageID string, opts ...op
 				return nil, err
 			}
 
-			var out apierrors.IssuesListStatusPageIssueStatesNotFoundError
+			var out apierrors.NotFoundError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -1802,7 +1802,7 @@ func (s *Issues) ListStates(ctx context.Context, statuspageID string, opts ...op
 				return nil, err
 			}
 
-			var out apierrors.IssuesListStatusPageIssueStatesConflictError
+			var out apierrors.ConflictError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -1827,7 +1827,7 @@ func (s *Issues) ListStates(ctx context.Context, statuspageID string, opts ...op
 				return nil, err
 			}
 
-			var out apierrors.IssuesListStatusPageIssueStatesUnprocessableEntityError
+			var out apierrors.UnprocessableEntityError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -1852,7 +1852,7 @@ func (s *Issues) ListStates(ctx context.Context, statuspageID string, opts ...op
 				return nil, err
 			}
 
-			var out apierrors.IssuesListStatusPageIssueStatesInternalServerError
+			var out apierrors.InternalServerError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -1877,7 +1877,7 @@ func (s *Issues) ListStates(ctx context.Context, statuspageID string, opts ...op
 				return nil, err
 			}
 
-			var out apierrors.IssuesListStatusPageIssueStatesBadGatewayError
+			var out apierrors.BadGatewayError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -1902,7 +1902,7 @@ func (s *Issues) ListStates(ctx context.Context, statuspageID string, opts ...op
 				return nil, err
 			}
 
-			var out apierrors.IssuesListStatusPageIssueStatesServiceUnavailableError
+			var out apierrors.ServiceUnavailableError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -1927,7 +1927,7 @@ func (s *Issues) ListStates(ctx context.Context, statuspageID string, opts ...op
 				return nil, err
 			}
 
-			var out apierrors.IssuesListStatusPageIssueStatesGatewayTimeoutError
+			var out apierrors.GatewayTimeoutError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}

@@ -232,7 +232,7 @@ func (s *CommunicationCard) Update(ctx context.Context, incidentID string, commu
 				return nil, err
 			}
 
-			var out apierrors.CommunicationCardsUpdateCommunicationCardBadRequestError
+			var out apierrors.BadRequestError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -257,7 +257,7 @@ func (s *CommunicationCard) Update(ctx context.Context, incidentID string, commu
 				return nil, err
 			}
 
-			var out apierrors.CommunicationCardsUpdateCommunicationCardUnauthorizedError
+			var out apierrors.UnauthorizedError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -282,7 +282,7 @@ func (s *CommunicationCard) Update(ctx context.Context, incidentID string, commu
 				return nil, err
 			}
 
-			var out apierrors.CommunicationCardsUpdateCommunicationCardPaymentRequiredError
+			var out apierrors.PaymentRequiredError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -307,7 +307,7 @@ func (s *CommunicationCard) Update(ctx context.Context, incidentID string, commu
 				return nil, err
 			}
 
-			var out apierrors.CommunicationCardsUpdateCommunicationCardForbiddenError
+			var out apierrors.ForbiddenError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -332,7 +332,7 @@ func (s *CommunicationCard) Update(ctx context.Context, incidentID string, commu
 				return nil, err
 			}
 
-			var out apierrors.CommunicationCardsUpdateCommunicationCardNotFoundError
+			var out apierrors.NotFoundError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -357,7 +357,7 @@ func (s *CommunicationCard) Update(ctx context.Context, incidentID string, commu
 				return nil, err
 			}
 
-			var out apierrors.CommunicationCardsUpdateCommunicationCardConflictError
+			var out apierrors.ConflictError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -382,7 +382,7 @@ func (s *CommunicationCard) Update(ctx context.Context, incidentID string, commu
 				return nil, err
 			}
 
-			var out apierrors.CommunicationCardsUpdateCommunicationCardUnprocessableEntityError
+			var out apierrors.UnprocessableEntityError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -407,7 +407,7 @@ func (s *CommunicationCard) Update(ctx context.Context, incidentID string, commu
 				return nil, err
 			}
 
-			var out apierrors.CommunicationCardsUpdateCommunicationCardInternalServerError
+			var out apierrors.InternalServerError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -432,7 +432,7 @@ func (s *CommunicationCard) Update(ctx context.Context, incidentID string, commu
 				return nil, err
 			}
 
-			var out apierrors.CommunicationCardsUpdateCommunicationCardBadGatewayError
+			var out apierrors.BadGatewayError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -457,7 +457,7 @@ func (s *CommunicationCard) Update(ctx context.Context, incidentID string, commu
 				return nil, err
 			}
 
-			var out apierrors.CommunicationCardsUpdateCommunicationCardServiceUnavailableError
+			var out apierrors.ServiceUnavailableError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -482,7 +482,7 @@ func (s *CommunicationCard) Update(ctx context.Context, incidentID string, commu
 				return nil, err
 			}
 
-			var out apierrors.CommunicationCardsUpdateCommunicationCardGatewayTimeoutError
+			var out apierrors.GatewayTimeoutError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
