@@ -2,7 +2,7 @@
 
 package squadcastsdk
 
-// Generated from OpenAPI doc version 1.0.0 and generator version 2.713.0
+// Generated from OpenAPI doc version 1.0.0 and generator version 2.716.10
 
 import (
 	"context"
@@ -71,14 +71,13 @@ type SquadcastSDK struct {
 	Services                      *Services
 	Overlays                      *Overlays
 	Slos                          *Slos
-	V3                            *V3
-	Squads                        *Squads
 	Teams                         *Teams
 	Webforms                      *Webforms
 	Workflows                     *Workflows
 	Schedules                     *Schedules
 	Overrides                     *Overrides
 	Rotations                     *Rotations
+	Squads                        *Squads
 	V4                            *V4
 	StatusPages                   *StatusPages
 
@@ -157,9 +156,9 @@ func WithTimeout(timeout time.Duration) SDKOption {
 // New creates a new instance of the SDK with the provided options
 func New(opts ...SDKOption) *SquadcastSDK {
 	sdk := &SquadcastSDK{
-		SDKVersion: "1.1.0",
+		SDKVersion: "1.1.1",
 		sdkConfiguration: config.SDKConfiguration{
-			UserAgent:  "speakeasy-sdk/go 1.1.0 2.713.0 1.0.0 github.com/SquadcastHub/squadcast-sdk-go/squadcastv1",
+			UserAgent:  "speakeasy-sdk/go 1.1.1 2.716.10 1.0.0 github.com/SquadcastHub/squadcast-sdk-go/squadcastv1",
 			ServerList: ServerList,
 		},
 		hooks: hooks.New(),
@@ -203,14 +202,13 @@ func New(opts ...SDKOption) *SquadcastSDK {
 	sdk.Services = newServices(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Overlays = newOverlays(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Slos = newSlos(sdk, sdk.sdkConfiguration, sdk.hooks)
-	sdk.V3 = newV3(sdk, sdk.sdkConfiguration, sdk.hooks)
-	sdk.Squads = newSquads(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Teams = newTeams(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Webforms = newWebforms(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Workflows = newWorkflows(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Schedules = newSchedules(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Overrides = newOverrides(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Rotations = newRotations(sdk, sdk.sdkConfiguration, sdk.hooks)
+	sdk.Squads = newSquads(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.V4 = newV4(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.StatusPages = newStatusPages(sdk, sdk.sdkConfiguration, sdk.hooks)
 

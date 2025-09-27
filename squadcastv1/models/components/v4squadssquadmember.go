@@ -3,8 +3,9 @@
 package components
 
 type V4SquadsSquadMember struct {
-	UserID string  `json:"user_id"`
-	Role   *string `json:"role,omitempty"`
+	UserID string `json:"user_id"`
+	// this field is required if you are using OBAC permission model
+	Role *string `json:"role,omitempty"`
 }
 
 func (v *V4SquadsSquadMember) GetUserID() string {

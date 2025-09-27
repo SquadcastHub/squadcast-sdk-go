@@ -16,7 +16,7 @@ Requires `access_token` as a `Bearer {{token}}` in the `Authorization` header wi
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="Squads_updateSquadV4" method="put" path="/v4/squads/{squadID}" -->
+<!-- UsageSnippet language="go" operationID="Squads_updateSquad" method="put" path="/v4/squads/{squadID}" -->
 ```go
 package main
 
@@ -56,7 +56,7 @@ func main() {
 
 ### Response
 
-**[*operations.SquadsUpdateSquadV4Response](../../models/operations/squadsupdatesquadv4response.md), error**
+**[*operations.SquadsUpdateSquadResponse](../../models/operations/squadsupdatesquadresponse.md), error**
 
 ### Errors
 

@@ -7,8 +7,8 @@ import (
 )
 
 type WebformsGetWebformByIDRequest struct {
-	WebformID int64   `pathParam:"style=simple,explode=false,name=webformId"`
-	OwnerID   *string `queryParam:"style=form,explode=false,name=owner_id"`
+	WebformID int64  `pathParam:"style=simple,explode=false,name=webformId"`
+	OwnerID   string `queryParam:"style=form,explode=false,name=owner_id"`
 }
 
 func (w *WebformsGetWebformByIDRequest) GetWebformID() int64 {
@@ -18,9 +18,9 @@ func (w *WebformsGetWebformByIDRequest) GetWebformID() int64 {
 	return w.WebformID
 }
 
-func (w *WebformsGetWebformByIDRequest) GetOwnerID() *string {
+func (w *WebformsGetWebformByIDRequest) GetOwnerID() string {
 	if w == nil {
-		return nil
+		return ""
 	}
 	return w.OwnerID
 }

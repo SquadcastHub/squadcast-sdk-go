@@ -8,12 +8,12 @@ import (
 
 // SquadsCreateSquadResponseBody - The request has succeeded and a new resource has been created as a result.
 type SquadsCreateSquadResponseBody struct {
-	Data components.V3SquadsSquadResponse `json:"data"`
+	Data components.V4SquadsCreateSquadResponse `json:"data"`
 }
 
-func (s *SquadsCreateSquadResponseBody) GetData() components.V3SquadsSquadResponse {
+func (s *SquadsCreateSquadResponseBody) GetData() components.V4SquadsCreateSquadResponse {
 	if s == nil {
-		return components.V3SquadsSquadResponse{}
+		return components.V4SquadsCreateSquadResponse{}
 	}
 	return s.Data
 }

@@ -8,14 +8,14 @@ import (
 
 type EscalationPoliciesGetEscalationPolicyByTeamRequest struct {
 	// here owner_id represents team_id, if  team_id is not provided, it will return escalation policies of all teams.
-	OwnerID    *string `queryParam:"style=form,explode=true,name=owner_id"`
+	OwnerID    string  `queryParam:"style=form,explode=true,name=owner_id"`
 	PageNumber *string `queryParam:"style=form,explode=true,name=page_number"`
 	PageSize   *string `queryParam:"style=form,explode=true,name=page_size"`
 }
 
-func (e *EscalationPoliciesGetEscalationPolicyByTeamRequest) GetOwnerID() *string {
+func (e *EscalationPoliciesGetEscalationPolicyByTeamRequest) GetOwnerID() string {
 	if e == nil {
-		return nil
+		return ""
 	}
 	return e.OwnerID
 }

@@ -17,7 +17,7 @@ Requires `access_token` as a `Bearer {{token}}` in the `Authorization` header wi
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="Squads_createSquadV4" method="post" path="/v4/squads" -->
+<!-- UsageSnippet language="go" operationID="Squads_createSquad" method="post" path="/v4/squads" -->
 ```go
 package main
 
@@ -64,7 +64,7 @@ func main() {
 
 ### Response
 
-**[*operations.SquadsCreateSquadV4Response](../../models/operations/squadscreatesquadv4response.md), error**
+**[*operations.SquadsCreateSquadResponse](../../models/operations/squadscreatesquadresponse.md), error**
 
 ### Errors
 
@@ -81,7 +81,7 @@ Requires `access_token` as a `Bearer {{token}}` in the `Authorization` header wi
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="Squads_getSquadByIdV4" method="get" path="/v4/squads/{squadID}" -->
+<!-- UsageSnippet language="go" operationID="Squads_getSquadById" method="get" path="/v4/squads/{squadID}" -->
 ```go
 package main
 
@@ -119,7 +119,7 @@ func main() {
 
 ### Response
 
-**[*operations.SquadsGetSquadByIDV4Response](../../models/operations/squadsgetsquadbyidv4response.md), error**
+**[*operations.SquadsGetSquadByIDResponse](../../models/operations/squadsgetsquadbyidresponse.md), error**
 
 ### Errors
 

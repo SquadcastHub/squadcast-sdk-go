@@ -427,14 +427,11 @@ func main() {
 
 ### [Squads](docs/sdks/squads/README.md)
 
-* [Create](docs/sdks/squads/README.md#create) - Create Squad
-* [Delete](docs/sdks/squads/README.md#delete) - Delete Squad
-* [GetByID](docs/sdks/squads/README.md#getbyid) - Get Squad By ID
-* [Update](docs/sdks/squads/README.md#update) - Update Squad
 * [List](docs/sdks/squads/README.md#list) - Get All Squads
 * [RemoveMember](docs/sdks/squads/README.md#removemember) - Remove Squad Member
 * [UpdateMemberRole](docs/sdks/squads/README.md#updatememberrole) - Update Squad Member
 * [UpdateName](docs/sdks/squads/README.md#updatename) - Update Squad Name
+* [SquadsDeleteSquad](docs/sdks/squads/README.md#squadsdeletesquad) - Delete Squad
 
 #### [Squads.V4](docs/sdks/squadsv4/README.md)
 
@@ -524,13 +521,6 @@ func main() {
 #### [Users.APIToken](docs/sdks/apitoken/README.md)
 
 * [Remove](docs/sdks/apitoken/README.md#remove) - Remove Token
-
-### [V3](docs/sdks/v3/README.md)
-
-
-#### [V3.Squads](docs/sdks/v3squads/README.md)
-
-* [ListByTeam](docs/sdks/v3squads/README.md#listbyteam) - Get Squad By team
 
 ### [V4](docs/sdks/v4/README.md)
 
