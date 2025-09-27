@@ -2312,8 +2312,8 @@ paths:
         content:
           "application/json":
             schema: {"$ref": "#/components/schemas/V3.Incidents.CommunicationCards.CreateSlackChannelRequest"}
-      x-speakeasy-name-override: "createSlackChannel"
       x-speakeasy-group: "communicationCards"
+      x-speakeasy-name-override: "createSlackChannel"
   "/v3/extensions/slack_v2/channel/archive":
     post:
       operationId: "CommunicationCards_archiveSlackChannel"
@@ -3296,8 +3296,8 @@ paths:
         content:
           "application/json":
             schema: {"$ref": "#/components/schemas/V3.GlobalEventRules.CreateRulesetRequest"}
-      x-speakeasy-name-override: "create"
       x-speakeasy-group: "globalEventRules.rulesets"
+      x-speakeasy-name-override: "create"
   "/v3/global-event-rules/{ger_id}/rulesets/{alert_source_version}/{alert_source_shortname}":
     delete:
       operationId: "GlobalEventRules_deleteGerRuleset"
@@ -3733,8 +3733,8 @@ paths:
         content:
           "application/json":
             schema: {"$ref": "#/components/schemas/V3.GlobalEventRules.UpdateRulesetRequest"}
-      x-speakeasy-name-override: "updateRuleset"
       x-speakeasy-group: "globalEventRules"
+      x-speakeasy-name-override: "updateRuleset"
   "/v3/global-event-rules/{ger_id}/rulesets/{alert_source_version}/{alert_source_shortname}/priority":
     patch:
       operationId: "GlobalEventRules_reorderRuleset"
@@ -4971,8 +4971,8 @@ paths:
                   - "meta"
       tags:
         - "Global Oncall Reminder Rules"
-      x-speakeasy-name-override: "list"
       x-speakeasy-group: "globalOncallReminderRules"
+      x-speakeasy-name-override: "list"
     post:
       operationId: "GlobalOncallReminderRules_createGlobalOncallReminderRules"
       summary: "Create Global Oncall Reminder Rules"
@@ -5104,8 +5104,8 @@ paths:
         content:
           "application/json":
             schema: {"$ref": "#/components/schemas/V3.GlobalOncallReminderRules.CreateGlobalOncallReminderRulesRequest"}
-      x-speakeasy-name-override: "create"
       x-speakeasy-group: "globalOncallReminderRules"
+      x-speakeasy-name-override: "create"
     put:
       operationId: "GlobalOncallReminderRules_updateGlobalOncallReminderRules"
       summary: "Update Global Oncall Reminder Rules"
@@ -6667,8 +6667,8 @@ paths:
         content:
           "application/json":
             schema: {"$ref": "#/components/schemas/V3.Incidents.CommunicationCards.UpdateCommunicationCardRequest"}
-      x-speakeasy-name-override: "update"
       x-speakeasy-group: "incidents.communicationCard"
+      x-speakeasy-name-override: "update"
   "/v3/incidents/{IncidentId}/runbooks":
     post:
       operationId: "Runbooks_attachRunbooks"
@@ -6809,8 +6809,8 @@ paths:
         content:
           "application/json":
             schema: {"$ref": "#/components/schemas/V3.Incidents.Runbooks.AttachRunbooksRequest"}
-      x-speakeasy-name-override: "attach"
       x-speakeasy-group: "incidents.runbooks"
+      x-speakeasy-name-override: "attach"
   "/v3/incidents/{IncidentId}/tags":
     put:
       operationId: "Tags_updateTag"
@@ -8494,8 +8494,8 @@ paths:
                   - "meta"
       tags:
         - "Incidents/Incident Actions"
-      x-speakeasy-name-override: "createInServicenow"
       x-speakeasy-group: "incidents.actions"
+      x-speakeasy-name-override: "createInServicenow"
   "/v3/incidents/{incidentID}/actions/webhook/{eventWebhookID}":
     post:
       operationId: "IncidentActions_triggerAWebhookManually"
@@ -8910,8 +8910,8 @@ paths:
         content:
           "application/json":
             schema: {"$ref": "#/components/schemas/V3.Incidents.AdditionalResponders.AddAdditionalRespondersRequest"}
-      x-speakeasy-name-override: "add"
       x-speakeasy-group: "incidents.additionalResponders"
+      x-speakeasy-name-override: "add"
   "/v3/incidents/{incidentID}/additional-responders/{responderID}":
     delete:
       operationId: "AdditionalResponders_removeAdditionalResponders"
@@ -9907,8 +9907,8 @@ paths:
                   - "meta"
       tags:
         - "Incidents/Postmortems"
-      x-speakeasy-name-override: "getByIncident"
       x-speakeasy-group: "incidents.postmortems"
+      x-speakeasy-name-override: "getByIncident"
     post:
       operationId: "Postmortems_createPostmortem"
       summary: "Create Postmortem"
@@ -10193,8 +10193,8 @@ paths:
         content:
           "application/json":
             schema: {"$ref": "#/components/schemas/V3.Incidents.Postmortems.UpdatePostmortemRequest"}
-      x-speakeasy-name-override: "updatePostmortem"
       x-speakeasy-group: "incidents"
+      x-speakeasy-name-override: "updatePostmortem"
   "/v3/incidents/{incidentID}/priority":
     patch:
       operationId: "Incidents_incidentPriorityUpdate"
@@ -13675,8 +13675,8 @@ paths:
         content:
           "application/json":
             schema: {"$ref": "#/components/schemas/V3.Services.DeduplicationRules.CreateDeduplicationRulesRequest"}
-      x-speakeasy-name-override: "createOrUpdate"
       x-speakeasy-group: "services.deduplicationRules"
+      x-speakeasy-name-override: "createOrUpdate"
   "/v3/services/{serviceID}/dependencies":
     post:
       operationId: "Dependencies_createOrUpdateDependencies"
@@ -15658,8 +15658,8 @@ paths:
                   - "meta"
       tags:
         - "Services/Overlay/Dedup Key Overlay"
-      x-speakeasy-name-override: "delete"
       x-speakeasy-group: "services.overlays.dedupKey"
+      x-speakeasy-name-override: "delete"
     get:
       operationId: "Overlay_getDedupKeyOverlayForAlertSource"
       summary: "Get Dedup Key Overlay for Alert Source"
@@ -15802,8 +15802,8 @@ paths:
                   - "meta"
       tags:
         - "Services/Overlay/Dedup Key Overlay"
-      x-speakeasy-name-override: "getDedupKey"
       x-speakeasy-group: "services.overlays"
+      x-speakeasy-name-override: "getDedupKey"
     put:
       operationId: "Overlay_updateDedupKeyOverlay"
       summary: "Update Dedup Key Overlay"
@@ -16099,8 +16099,8 @@ paths:
                   - "meta"
       tags:
         - "Services/Routing Rules"
-      x-speakeasy-name-override: "getRoutingRules"
       x-speakeasy-group: "services"
+      x-speakeasy-name-override: "getRoutingRules"
     post:
       operationId: "RoutingRules_createOrUpdateRoutingRules"
       summary: "Create or Update Routing Rules"
@@ -24535,8 +24535,8 @@ paths:
           "application/json":
             schema:
               type: "object"
-      x-speakeasy-name-override: "createIcalLink"
       x-speakeasy-group: "schedules"
+      x-speakeasy-name-override: "createIcalLink"
   "/v4/schedules/{scheduleID}/overrides":
     get:
       operationId: "Overrides_listOverrides"
@@ -24734,8 +24734,8 @@ paths:
         content:
           "application/json":
             schema: {"$ref": "#/components/schemas/V4.CreateScheduleOverrideRequest"}
-      x-speakeasy-name-override: "createScheduleOverride"
       x-speakeasy-group: "schedules"
+      x-speakeasy-name-override: "createScheduleOverride"
   "/v4/schedules/{scheduleID}/overrides/{overrideID}":
     delete:
       operationId: "Overrides_deleteScheduleOverride"
@@ -25152,8 +25152,8 @@ paths:
         content:
           "application/json":
             schema: {"$ref": "#/components/schemas/V4.CreateRotationRequest"}
-      x-speakeasy-name-override: "create"
       x-speakeasy-group: "rotations"
+      x-speakeasy-name-override: "create"
   "/v4/schedules/{scheduleID}/rotations/{rotationID}":
     delete:
       operationId: "Rotations_deleteRotation"
@@ -25580,8 +25580,8 @@ paths:
         content:
           "application/json":
             schema: {"$ref": "#/components/schemas/V4.UpdateRotationParticipantsRequest"}
-      x-speakeasy-name-override: "updateParticipants"
       x-speakeasy-group: "rotations"
+      x-speakeasy-name-override: "updateParticipants"
   "/v4/squads":
     get:
       operationId: "Squads_getAllSquads"
@@ -25986,6 +25986,7 @@ paths:
               schema: {"$ref": "#/components/schemas/Common.V4.Error"}
       tags:
         - "Squads"
+      x-speakeasy-name-override: "delete"
   "/v4/squads/{squadID}/members/{memberID}":
     delete:
       operationId: "Squads_removeSquadMember"
@@ -27073,8 +27074,8 @@ paths:
                   - "meta"
       tags:
         - "Status Pages/Components"
-      x-speakeasy-name-override: "list"
       x-speakeasy-group: "statusPages.components"
+      x-speakeasy-name-override: "list"
     post:
       operationId: "Components_createComponent"
       summary: "Create Component"
@@ -28320,8 +28321,8 @@ paths:
                   - "meta"
       tags:
         - "Status Pages/Issues"
-      x-speakeasy-name-override: "list"
       x-speakeasy-group: "statusPages.issues"
+      x-speakeasy-name-override: "list"
     post:
       operationId: "Issues_createIssue"
       summary: "Create Issue"
@@ -28599,8 +28600,8 @@ paths:
                   - "meta"
       tags:
         - "Status Pages/Issues"
-      x-speakeasy-name-override: "delete"
       x-speakeasy-group: "statusPages.issues"
+      x-speakeasy-name-override: "delete"
     get:
       operationId: "Issues_getIssueById"
       summary: "Get Issue By ID"
@@ -28738,8 +28739,8 @@ paths:
                   - "meta"
       tags:
         - "Status Pages/Issues"
-      x-speakeasy-name-override: "getById"
       x-speakeasy-group: "statusPages.issues"
+      x-speakeasy-name-override: "getById"
     put:
       operationId: "Issues_updateIssue"
       summary: "Update Issue"
@@ -29990,8 +29991,8 @@ paths:
                   - "meta"
       tags:
         - "Status Pages/Subscribers"
-      x-speakeasy-name-override: "list"
       x-speakeasy-group: "statusPages.subscribers"
+      x-speakeasy-name-override: "list"
 security:
   - BearerAuth: []
 components:

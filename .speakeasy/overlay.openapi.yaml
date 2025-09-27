@@ -1,7 +1,7 @@
 overlay: 1.0.0
 info:
   title: Speakeasy Suggestions - Squadcast
-  version: 0.0.1
+  version: 0.0.4
 actions:
   - target: $["paths"]["/v3/slo"]["post"]
     update:
@@ -10,6 +10,8 @@ actions:
     x-speakeasy-metadata:
       after: sdk.slos.create()
       before: sdk.SLOs.SLO_createSLO()
+      created_at: 1758938265544
+      reviewed_at: 1758938350343
       type: method-name
   - target: $["paths"]["/v3/services/{serviceID}/maintenance"]["post"]
     update:
@@ -18,6 +20,8 @@ actions:
     x-speakeasy-metadata:
       after: sdk.services.maintenanceMode.createOrUpdate()
       before: sdk.Services/Maintenance Mode.MaintenanceMode_createOrUpdateMaintenanceMode()
+      created_at: 1758938265544
+      reviewed_at: 1758938350343
       type: method-name
   - target: $["paths"]["/v3/services/{serviceID}/config"]["get"]
     update:
@@ -26,6 +30,8 @@ actions:
     x-speakeasy-metadata:
       after: sdk.services.overlay.getKeyBasedDeduplicationOptin()
       before: sdk.Services/Overlay.Overlay_getOptinForKeyBasedDeduplicationForAService()
+      created_at: 1758938265544
+      reviewed_at: 1758938350343
       type: method-name
   - target: $["paths"]["/v3/workflows/enable"]["put"]
     update:
@@ -33,6 +39,8 @@ actions:
     x-speakeasy-metadata:
       after: sdk.workflows.bulkEnableDisable()
       before: sdk.Workflows.Workflows_bulkEnabledisableWorkflows()
+      created_at: 1758938265544
+      reviewed_at: 1758938350343
       type: method-name
   - target: $["paths"]["/v4/schedules/{scheduleID}/actions"]["patch"]
     update:
@@ -41,6 +49,8 @@ actions:
     x-speakeasy-metadata:
       after: sdk.schedules.pauseResume()
       before: sdk.Schedule.Schedules_pauseresumeSchedule()
+      created_at: 1758938265544
+      reviewed_at: 1758938350343
       type: method-name
   - target: $["paths"]["/v3/services/{serviceID}/iag-config"]["put"]
     update:
@@ -48,6 +58,8 @@ actions:
     x-speakeasy-metadata:
       after: sdk.services.upsertIagConfig()
       before: sdk.Services.Services_createOrUpdateIAGConfig()
+      created_at: 1758938265544
+      reviewed_at: 1758938350343
       type: method-name
   - target: $["paths"]["/v4/schedules/{scheduleID}"]["delete"]
     update:
@@ -56,14 +68,18 @@ actions:
     x-speakeasy-metadata:
       after: sdk.schedules.delete()
       before: sdk.Schedule.Schedules_deleteSchedule()
+      created_at: 1758938265544
+      reviewed_at: 1758938350343
       type: method-name
   - target: $["paths"]["/v3/services/{serviceID}/routing-rules"]["get"]
     update:
-      x-speakeasy-name-override: getRoutingRules
       x-speakeasy-group: services
+      x-speakeasy-name-override: getRoutingRules
     x-speakeasy-metadata:
       after: sdk.services.getRoutingRules()
       before: sdk.Services/Routing Rules.RoutingRules_getRoutingRules()
+      created_at: 1758938265544
+      reviewed_at: 1758938350343
       type: method-name
   - target: $["paths"]["/v3/global-event-rules/{ger_id}"]["patch"]
     update:
@@ -72,6 +88,8 @@ actions:
     x-speakeasy-metadata:
       after: sdk.globalEventRules.updateById()
       before: sdk.Global Event Rules.GlobalEventRules_updateGlobalEventRuleById()
+      created_at: 1758938265544
+      reviewed_at: 1758938350343
       type: method-name
   - target: $["paths"]["/v3/workflows/{workflowID}/actions/{actionID}"]["patch"]
     update:
@@ -79,14 +97,18 @@ actions:
     x-speakeasy-metadata:
       after: sdk.workflows.updateAction()
       before: sdk.Workflows.Workflows_updateWorkflowAction()
+      created_at: 1758938265544
+      reviewed_at: 1758938350343
       type: method-name
   - target: $["paths"]["/v3/incidents/{incidentID}/additional-responders"]["put"]
     update:
-      x-speakeasy-name-override: add
       x-speakeasy-group: incidents.additionalResponders
+      x-speakeasy-name-override: add
     x-speakeasy-metadata:
       after: sdk.incidents.additionalResponders.add()
       before: sdk.Incidents/Additional Responders.AdditionalResponders_addAdditionalResponders()
+      created_at: 1758938265544
+      reviewed_at: 1758938350343
       type: method-name
   - target: $["paths"]["/v3/requests/status"]["post"]
     update:
@@ -94,6 +116,8 @@ actions:
     x-speakeasy-metadata:
       after: sdk.incidents.getStatusByRequestIds()
       before: sdk.Incidents.Incidents_getIncidentsStatusByRequestids()
+      created_at: 1758938265544
+      reviewed_at: 1758938350343
       type: method-name
   - target: $["paths"]["/v3/incidents/{incidentID}/actions/circleci/rebuild/{buildNumber}"]["post"]
     update:
@@ -102,6 +126,8 @@ actions:
     x-speakeasy-metadata:
       after: sdk.incidentActions.circleci.rebuild()
       before: sdk.Incidents/Incident Actions.IncidentActions_rebuildAProjectInCircleci()
+      created_at: 1758938265544
+      reviewed_at: 1758938350343
       type: method-name
   - target: $["paths"]["/v3/incidents/{incidentID}/priority"]["patch"]
     update:
@@ -109,6 +135,8 @@ actions:
     x-speakeasy-metadata:
       after: sdk.incidents.updatePriority()
       before: sdk.Incidents.Incidents_incidentPriorityUpdate()
+      created_at: 1758938265544
+      reviewed_at: 1758938350343
       type: method-name
   - target: $["paths"]["/v4/statuspages/{statuspageID}/maintenance/{maintenance_id}"]["get"]
     update:
@@ -117,14 +145,18 @@ actions:
     x-speakeasy-metadata:
       after: sdk.statusPages.getMaintenanceById()
       before: sdk.Status Pages/Maintenances.Maintenances_getMaintenanceById()
+      created_at: 1758938265544
+      reviewed_at: 1758938350343
       type: method-name
   - target: $["paths"]["/v3/incidents/{incidentID}/actions/servicenow/new"]["post"]
     update:
-      x-speakeasy-name-override: createInServicenow
       x-speakeasy-group: incidents.actions
+      x-speakeasy-name-override: createInServicenow
     x-speakeasy-metadata:
       after: sdk.incidents.actions.createInServicenow()
       before: sdk.Incidents/Incident Actions.IncidentActions_createAnIncidentInServicenow()
+      created_at: 1758938265544
+      reviewed_at: 1758938350343
       type: method-name
   - target: $["paths"]["/v4/schedules/{scheduleID}/overrides/{overrideID}"]["delete"]
     update:
@@ -133,6 +165,8 @@ actions:
     x-speakeasy-metadata:
       after: sdk.schedules.overrides.delete()
       before: sdk.Overrides.Overrides_deleteScheduleOverride()
+      created_at: 1758938265544
+      reviewed_at: 1758938350343
       type: method-name
   - target: $["paths"]["/v3/services/{serviceID}/overlays/custom-content/{alertSource}"]["get"]
     update:
@@ -141,6 +175,8 @@ actions:
     x-speakeasy-metadata:
       after: sdk.services.overlays.getCustomContent()
       before: sdk.Services/Overlay/Custom Content Templates.Overlay_getCustomContentTemplateOverlay()
+      created_at: 1758938265544
+      reviewed_at: 1758938350343
       type: method-name
   - target: $["paths"]["/v3/teams/{teamId}/members"]["get"]
     update:
@@ -149,6 +185,8 @@ actions:
     x-speakeasy-metadata:
       after: sdk.teams.members.getAll()
       before: sdk.Teams.Teams_getAllTeamMembers()
+      created_at: 1758938265544
+      reviewed_at: 1758938350343
       type: method-name
   - target: $["paths"]["/v3/services/{serviceID}"]["delete"]
     update:
@@ -156,6 +194,8 @@ actions:
     x-speakeasy-metadata:
       after: sdk.services.delete()
       before: sdk.Services.Services_deleteService()
+      created_at: 1758938265544
+      reviewed_at: 1758938350343
       type: method-name
   - target: $["paths"]["/v4/schedules"]["post"]
     update:
@@ -164,6 +204,8 @@ actions:
     x-speakeasy-metadata:
       after: sdk.schedules.create()
       before: sdk.Schedule.Schedules_createSchedule()
+      created_at: 1758938265544
+      reviewed_at: 1758938350343
       type: method-name
   - target: $["paths"]["/v4/squads"]["post"]
     update:
@@ -172,6 +214,8 @@ actions:
     x-speakeasy-metadata:
       after: sdk.squads.v4.create()
       before: sdk.Squads/V4.Squads_createSquadV4()
+      created_at: 1758938265544
+      reviewed_at: 1758938350343
       type: method-name
   - target: $["paths"]["/v4/statuspages/{statuspageID}/states"]["get"]
     update:
@@ -180,6 +224,8 @@ actions:
     x-speakeasy-metadata:
       after: sdk.statusPages.issues.listStates()
       before: sdk.Status Pages/Issues.Issues_listStatusPageIssueStates()
+      created_at: 1758938265544
+      reviewed_at: 1758938350343
       type: method-name
   - target: $["paths"]["/v3/runbooks/{runbookID}"]["put"]
     update:
@@ -187,6 +233,8 @@ actions:
     x-speakeasy-metadata:
       after: sdk.runbooks.update()
       before: sdk.Runbooks.Runbooks_updateRunbook()
+      created_at: 1758938265544
+      reviewed_at: 1758938350343
       type: method-name
   - target: $["paths"]["/v4/statuspages/{statuspageID}/issues"]["post"]
     update:
@@ -195,6 +243,8 @@ actions:
     x-speakeasy-metadata:
       after: sdk.statusPages.createIssue()
       before: sdk.Status Pages/Issues.Issues_createIssue()
+      created_at: 1758938265544
+      reviewed_at: 1758938350343
       type: method-name
   - target: $["paths"]["/v3/analyticsv2/team"]["get"]
     update:
@@ -202,6 +252,8 @@ actions:
     x-speakeasy-metadata:
       after: sdk.analytics.getTeam()
       before: sdk.Analytics.Analytics_getTeamAnalytics()
+      created_at: 1758938265544
+      reviewed_at: 1758938350343
       type: method-name
   - target: $["paths"]["/v3/global-event-rules/{ger_id}/rulesets/{alert_source_version}/{alert_source_shortname}/rules"]["post"]
     update:
@@ -210,6 +262,8 @@ actions:
     x-speakeasy-metadata:
       after: sdk.globalEventRules.rulesets.rules.create()
       before: sdk.Global Event Rules/Rulesets/Rules.GlobalEventRules_createRule()
+      created_at: 1758938265544
+      reviewed_at: 1758938350343
       type: method-name
   - target: $["paths"]["/v3/workflows/{workflowID}"]["get"]
     update:
@@ -217,6 +271,8 @@ actions:
     x-speakeasy-metadata:
       after: sdk.workflows.getById()
       before: sdk.Workflows.Workflows_getWorkflowById()
+      created_at: 1758938265544
+      reviewed_at: 1758938350343
       type: method-name
   - target: $["paths"]["/v3/global-event-rules/{ger_id}/rulesets/{alert_source_version}/{alert_source_shortname}"]["get"]
     update:
@@ -225,6 +281,8 @@ actions:
     x-speakeasy-metadata:
       after: sdk.globalEventRules.getRuleset()
       before: sdk.Global Event Rules/Rulesets.GlobalEventRules_getRuleset()
+      created_at: 1758938265544
+      reviewed_at: 1758938350343
       type: method-name
   - target: $["paths"]["/v3/services/{serviceID}/maintenance"]["get"]
     update:
@@ -233,6 +291,8 @@ actions:
     x-speakeasy-metadata:
       after: sdk.services.maintenanceMode.get()
       before: sdk.Services/Maintenance Mode.MaintenanceMode_getMaintenanceMode()
+      created_at: 1758938265544
+      reviewed_at: 1758938350343
       type: method-name
   - target: $["paths"]["/v3/squads"]["post"]
     update:
@@ -241,6 +301,8 @@ actions:
     x-speakeasy-metadata:
       after: sdk.squads.create()
       before: sdk.Squads/V3.Squads_createSquad()
+      created_at: 1758938265544
+      reviewed_at: 1758938350343
       type: method-name
   - target: $["paths"]["/v3/users/abilities"]["put"]
     update:
@@ -248,14 +310,18 @@ actions:
     x-speakeasy-metadata:
       after: sdk.users.updateOrgLevelPermissions()
       before: sdk.Users.Users_updateOrgLevelPermissions()
+      created_at: 1758938265544
+      reviewed_at: 1758938350343
       type: method-name
   - target: $["paths"]["/v4/statuspages/{statuspageID}/components"]["get"]
     update:
-      x-speakeasy-name-override: list
       x-speakeasy-group: statusPages.components
+      x-speakeasy-name-override: list
     x-speakeasy-metadata:
       after: sdk.statusPages.components.list()
       before: sdk.Status Pages/Components.Components_listComponents()
+      created_at: 1758938265544
+      reviewed_at: 1758938350343
       type: method-name
   - target: $["paths"]["/v3/extensions/msteams/config"]["get"]
     update:
@@ -264,6 +330,8 @@ actions:
     x-speakeasy-metadata:
       after: sdk.msteams.getConfig()
       before: sdk.Extensions/MSTeams.MSTeams_getMsteamsConfig()
+      created_at: 1758938265544
+      reviewed_at: 1758938350343
       type: method-name
   - target: $["paths"]["/v3/webform"]["get"]
     update:
@@ -271,6 +339,8 @@ actions:
     x-speakeasy-metadata:
       after: sdk.webforms.getAll()
       before: sdk.Webforms.Webforms_getAllWebforms()
+      created_at: 1758938265544
+      reviewed_at: 1758938350343
       type: method-name
   - target: $["paths"]["/v3/workflows/{workflowID}/actions/{actionID}"]["get"]
     update:
@@ -278,6 +348,8 @@ actions:
     x-speakeasy-metadata:
       after: sdk.workflows.getAction()
       before: sdk.Workflows.Workflows_getWorkflowActionById()
+      created_at: 1758938265544
+      reviewed_at: 1758938350343
       type: method-name
   - target: $["paths"]["/v3/incidents/{incidentID}/actions/jira/new/jira-cloud"]["post"]
     update:
@@ -286,6 +358,8 @@ actions:
     x-speakeasy-metadata:
       after: sdk.incidents.actions.createJiraCloudTicket()
       before: sdk.Incidents/Incident Actions.IncidentActions_createATicketOnJiraCloud()
+      created_at: 1758938265544
+      reviewed_at: 1758938350343
       type: method-name
   - target: $["paths"]["/v3/runbooks"]["post"]
     update:
@@ -293,6 +367,8 @@ actions:
     x-speakeasy-metadata:
       after: sdk.runbooks.create()
       before: sdk.Runbooks.Runbooks_createRunbook()
+      created_at: 1758938265544
+      reviewed_at: 1758938350343
       type: method-name
   - target: $["paths"]["/v3/workflows/{workflowID}/actions/{actionID}"]["delete"]
     update:
@@ -300,6 +376,8 @@ actions:
     x-speakeasy-metadata:
       after: sdk.workflows.deleteAction()
       before: sdk.Workflows.Workflows_deleteWorkflowAction()
+      created_at: 1758938265544
+      reviewed_at: 1758938350343
       type: method-name
   - target: $["paths"]["/v4/schedules/{scheduleID}/ical-link"]["get"]
     update:
@@ -308,14 +386,18 @@ actions:
     x-speakeasy-metadata:
       after: sdk.schedules.getIcalLink()
       before: sdk.Schedule/Export Schedule.Export_getScheduleIcalLink()
+      created_at: 1758938265544
+      reviewed_at: 1758938350343
       type: method-name
   - target: $["paths"]["/v3/incidents/{IncidentId}/runbooks"]["post"]
     update:
-      x-speakeasy-name-override: attach
       x-speakeasy-group: incidents.runbooks
+      x-speakeasy-name-override: attach
     x-speakeasy-metadata:
       after: sdk.incidents.runbooks.attach()
       before: sdk.Incidents/Runbooks.Runbooks_attachRunbooks()
+      created_at: 1758938265544
+      reviewed_at: 1758938350343
       type: method-name
   - target: $["paths"]["/v3/users/{userID}"]["put"]
     update:
@@ -323,14 +405,18 @@ actions:
     x-speakeasy-metadata:
       after: sdk.users.update()
       before: sdk.Users.Users_updateUserByID()
+      created_at: 1758938265544
+      reviewed_at: 1758938350343
       type: method-name
   - target: $["paths"]["/v3/incidents/{incidentID}/postmortem"]["get"]
     update:
-      x-speakeasy-name-override: getByIncident
       x-speakeasy-group: incidents.postmortems
+      x-speakeasy-name-override: getByIncident
     x-speakeasy-metadata:
       after: sdk.incidents.postmortems.getByIncident()
       before: sdk.Incidents/Postmortems.Postmortems_getPostmortemByIncident()
+      created_at: 1758938265544
+      reviewed_at: 1758938350343
       type: method-name
   - target: $["paths"]["/v3/incidents/{incidentID}/snooze"]["put"]
     update:
@@ -339,6 +425,8 @@ actions:
     x-speakeasy-metadata:
       after: sdk.incidents.snoozeNotifications.snooze()
       before: sdk.Incidents/Snooze Notifications.SnoozeNotifications_snoozeIncidentNotifications()
+      created_at: 1758938265544
+      reviewed_at: 1758938350343
       type: method-name
   - target: $["paths"]["/v3/global-event-rules/{ger_id}"]["delete"]
     update:
@@ -347,6 +435,8 @@ actions:
     x-speakeasy-metadata:
       after: sdk.globalEventRules.deleteRule()
       before: sdk.Global Event Rules.GlobalEventRules_deleteGlobalEventRuleById()
+      created_at: 1758938265544
+      reviewed_at: 1758938350343
       type: method-name
   - target: $["paths"]["/v4/schedules/{scheduleID}/change-timezone"]["patch"]
     update:
@@ -355,6 +445,8 @@ actions:
     x-speakeasy-metadata:
       after: sdk.schedules.changeTimezone()
       before: sdk.Schedule.Schedules_changeTimezone()
+      created_at: 1758938265544
+      reviewed_at: 1758938350343
       type: method-name
   - target: $["paths"]["/v3/incidents/priority"]["put"]
     update:
@@ -362,6 +454,8 @@ actions:
     x-speakeasy-metadata:
       after: sdk.incidents.bulkUpdatePriority()
       before: sdk.Incidents.Incidents_bulkIncidentsPriorityUpdate()
+      created_at: 1758938265544
+      reviewed_at: 1758938350343
       type: method-name
   - target: $["paths"]["/v3/incidents/{incidentID}/mark-slo-incident-false-postive/{value}"]["patch"]
     update:
@@ -369,6 +463,8 @@ actions:
     x-speakeasy-metadata:
       after: sdk.incidents.markSloFalsePositive()
       before: sdk.Incidents.Incidents_markIncidentSloFalsePositive()
+      created_at: 1758938265544
+      reviewed_at: 1758938350343
       type: method-name
   - target: $["paths"]["/v4/statuspages/{statuspageID}/status"]["get"]
     update:
@@ -377,6 +473,8 @@ actions:
     x-speakeasy-metadata:
       after: sdk.statusPages.getStatuses()
       before: sdk.Status Pages.StatusPages_listStatusPageStatuses()
+      created_at: 1758938265544
+      reviewed_at: 1758938350343
       type: method-name
   - target: $["paths"]["/v3/exports/{export_id}"]["get"]
     update:
@@ -385,6 +483,8 @@ actions:
     x-speakeasy-metadata:
       after: sdk.exports.getDetails()
       before: sdk.Export.Export_getExportDetails()
+      created_at: 1758938265544
+      reviewed_at: 1758938350343
       type: method-name
   - target: $["paths"]["/v3/incidents/{incidentID}/mark-as-non-transient"]["put"]
     update:
@@ -393,6 +493,8 @@ actions:
     x-speakeasy-metadata:
       after: sdk.incidents.autoPauseTransientAlerts.markAsNotTransient()
       before: sdk.Incidents/Auto Pause Transient Alerts (APTA).Apta_markAsNotTransient()
+      created_at: 1758938265544
+      reviewed_at: 1758938350343
       type: method-name
   - target: $["paths"]["/v3/teams/{teamId}"]["put"]
     update:
@@ -400,6 +502,8 @@ actions:
     x-speakeasy-metadata:
       after: sdk.teams.update()
       before: sdk.Teams.Teams_updateTeam()
+      created_at: 1758938265544
+      reviewed_at: 1758938350343
       type: method-name
   - target: $["paths"]["/v3/global-event-rules/{ger_id}"]["get"]
     update:
@@ -408,6 +512,8 @@ actions:
     x-speakeasy-metadata:
       after: sdk.globalEventRules.getById()
       before: sdk.Global Event Rules.GlobalEventRules_getGlobalEventRuleById()
+      created_at: 1758938265544
+      reviewed_at: 1758938350343
       type: method-name
   - target: $["paths"]["/v3/refresh-token/{refreshTokenID}"]["delete"]
     update:
@@ -416,6 +522,8 @@ actions:
     x-speakeasy-metadata:
       after: sdk.users.apiToken.remove()
       before: sdk.Users/Api Token.Users_removeToken()
+      created_at: 1758938265544
+      reviewed_at: 1758938350343
       type: method-name
   - target: $["paths"]["/v3/workflows/{workflowID}/logs"]["get"]
     update:
@@ -423,6 +531,8 @@ actions:
     x-speakeasy-metadata:
       after: sdk.workflows.getLogs()
       before: sdk.Workflows.Workflows_getWorkflowLogs()
+      created_at: 1758938265544
+      reviewed_at: 1758938350343
       type: method-name
   - target: $["paths"]["/v4/schedules/{scheduleID}/rotations/{rotationID}"]["put"]
     update:
@@ -431,6 +541,8 @@ actions:
     x-speakeasy-metadata:
       after: sdk.rotations.update()
       before: sdk.Rotation.Rotations_updateRotation()
+      created_at: 1758938265544
+      reviewed_at: 1758938350343
       type: method-name
   - target: $["paths"]["/v3/services/{serviceID}/suppression-rules"]["get"]
     update:
@@ -439,6 +551,8 @@ actions:
     x-speakeasy-metadata:
       after: sdk.services.suppressionRules.get()
       before: sdk.Services/Suppression Rules.SuppressionRules_getSuppressionRules()
+      created_at: 1758938265544
+      reviewed_at: 1758938350343
       type: method-name
   - target: $["paths"]["/v4/statuspages"]["get"]
     update:
@@ -447,6 +561,8 @@ actions:
     x-speakeasy-metadata:
       after: sdk.statusPages.list()
       before: sdk.Status Pages.StatusPages_listStatusPages()
+      created_at: 1758938265544
+      reviewed_at: 1758938350343
       type: method-name
   - target: $["paths"]["/v4/schedules/{scheduleID}/ical-link"]["delete"]
     update:
@@ -455,6 +571,8 @@ actions:
     x-speakeasy-metadata:
       after: sdk.schedules.export.deleteIcalLink()
       before: sdk.Schedule/Export Schedule.Export_deleteIcalLink()
+      created_at: 1758938265544
+      reviewed_at: 1758938350343
       type: method-name
   - target: $["paths"]["/v3/extensions/event-webhooks/{eventWebhookID}"]["delete"]
     update:
@@ -463,6 +581,8 @@ actions:
     x-speakeasy-metadata:
       after: sdk.extensions.webhooks.delete()
       before: sdk.Extensions/Webhooks.Webhooks_deleteWebhook()
+      created_at: 1758938265544
+      reviewed_at: 1758938350343
       type: method-name
   - target: $["paths"]["/v3/webform/{webformId}"]["put"]
     update:
@@ -470,6 +590,8 @@ actions:
     x-speakeasy-metadata:
       after: sdk.webforms.update()
       before: sdk.Webforms.Webforms_updateWebform()
+      created_at: 1758938265544
+      reviewed_at: 1758938350343
       type: method-name
   - target: $["paths"]["/v3/incidents/{incidentID}/acknowledge"]["post"]
     update:
@@ -477,6 +599,8 @@ actions:
     x-speakeasy-metadata:
       after: sdk.incidents.acknowledge()
       before: sdk.Incidents.Incidents_acknowledgeIncident()
+      created_at: 1758938265544
+      reviewed_at: 1758938350343
       type: method-name
   - target: $["paths"]["/v3/slo/{sloID}"]["get"]
     update:
@@ -485,6 +609,8 @@ actions:
     x-speakeasy-metadata:
       after: sdk.slos.getById()
       before: sdk.SLOs.SLO_getSLOById()
+      created_at: 1758938265544
+      reviewed_at: 1758938350343
       type: method-name
   - target: $["paths"]["/v4/statuspages/{statuspageID}/components"]["post"]
     update:
@@ -493,6 +619,8 @@ actions:
     x-speakeasy-metadata:
       after: sdk.statusPages.components.create()
       before: sdk.Status Pages/Components.Components_createComponent()
+      created_at: 1758938265544
+      reviewed_at: 1758938350343
       type: method-name
   - target: $["paths"]["/v3/incidents/{IncidentId}/warroom/{NoteId}"]["put"]
     update:
@@ -501,6 +629,8 @@ actions:
     x-speakeasy-metadata:
       after: sdk.incidents.notes.update()
       before: sdk.Incidents/Notes.Notes_updateNote()
+      created_at: 1758938265544
+      reviewed_at: 1758938350343
       type: method-name
   - target: $["paths"]["/v3/extensions/slack_v2/channel/archive"]["post"]
     update:
@@ -509,6 +639,8 @@ actions:
     x-speakeasy-metadata:
       after: sdk.communicationCards.archiveSlackChannel()
       before: sdk.Incidents/Communication Card.CommunicationCards_archiveSlackChannel()
+      created_at: 1758938265544
+      reviewed_at: 1758938350343
       type: method-name
   - target: $["paths"]["/v3/extensions/event-webhooks"]["get"]
     update:
@@ -517,14 +649,18 @@ actions:
     x-speakeasy-metadata:
       after: sdk.webhooks.getAll()
       before: sdk.Extensions/Webhooks.Webhooks_getAllWebhooks()
+      created_at: 1758938265544
+      reviewed_at: 1758938350343
       type: method-name
   - target: $["paths"]["/v4/schedules/{scheduleID}/overrides"]["post"]
     update:
-      x-speakeasy-name-override: createScheduleOverride
       x-speakeasy-group: schedules
+      x-speakeasy-name-override: createScheduleOverride
     x-speakeasy-metadata:
       after: sdk.schedules.createScheduleOverride()
       before: sdk.Overrides.Overrides_createScheduleOverride()
+      created_at: 1758938265544
+      reviewed_at: 1758938350343
       type: method-name
   - target: $["paths"]["/v3/services"]["post"]
     update:
@@ -532,6 +668,8 @@ actions:
     x-speakeasy-metadata:
       after: sdk.services.create()
       before: sdk.Services.Services_createService()
+      created_at: 1758938265544
+      reviewed_at: 1758938350343
       type: method-name
   - target: $["paths"]["/v4/schedules/{scheduleID}/rotations"]["get"]
     update:
@@ -540,6 +678,8 @@ actions:
     x-speakeasy-metadata:
       after: sdk.schedules.rotations.list()
       before: sdk.Rotation.Rotations_getScheduleRotations()
+      created_at: 1758938265544
+      reviewed_at: 1758938350343
       type: method-name
   - target: $["paths"]["/v4/squads/{squadID}/members/{memberID}"]["put"]
     update:
@@ -548,6 +688,8 @@ actions:
     x-speakeasy-metadata:
       after: sdk.squads.updateMemberRole()
       before: sdk.Squads/V4.Squads_updateSquadMember()
+      created_at: 1758938265544
+      reviewed_at: 1758938350343
       type: method-name
   - target: $["paths"]["/v4/statuspages/{statuspageID}/groups/{group_id}"]["delete"]
     update:
@@ -556,6 +698,8 @@ actions:
     x-speakeasy-metadata:
       after: sdk.statusPages.componentGroups.deleteById()
       before: sdk.Status Pages/Component groups.ComponentGroups_deleteComponentGroupById()
+      created_at: 1758938265544
+      reviewed_at: 1758938350343
       type: method-name
   - target: $["paths"]["/v3/squads/{squadID}"]["put"]
     update:
@@ -564,6 +708,8 @@ actions:
     x-speakeasy-metadata:
       after: sdk.squads.update()
       before: sdk.Squads/V3.Squads_updateSquad()
+      created_at: 1758938265544
+      reviewed_at: 1758938350343
       type: method-name
   - target: $["paths"]["/v4/statuspages/{statuspageID}/groups/{group_id}"]["get"]
     update:
@@ -572,6 +718,8 @@ actions:
     x-speakeasy-metadata:
       after: sdk.statusPages.componentGroups.getById()
       before: sdk.Status Pages/Component groups.ComponentGroups_getComponentGroupById()
+      created_at: 1758938265544
+      reviewed_at: 1758938350343
       type: method-name
   - target: $["paths"]["/v3/global-event-rules/{ger_id}/rulesets/{alert_source_version}/{alert_source_shortname}/rules/{rule_id}"]["get"]
     update:
@@ -580,6 +728,8 @@ actions:
     x-speakeasy-metadata:
       after: sdk.globalEventRules.rulesets.rules.getById()
       before: sdk.Global Event Rules/Rulesets/Rules.GlobalEventRules_getRuleById()
+      created_at: 1758938265544
+      reviewed_at: 1758938350343
       type: method-name
   - target: $["paths"]["/v4/statuspages/{statuspageID}/maintenance"]["post"]
     update:
@@ -588,6 +738,8 @@ actions:
     x-speakeasy-metadata:
       after: sdk.statusPages.maintenances.create()
       before: sdk.Status Pages/Maintenances.Maintenances_createMaintenance()
+      created_at: 1758938265544
+      reviewed_at: 1758938350343
       type: method-name
   - target: $["paths"]["/v3/slo/{sloID}"]["put"]
     update:
@@ -596,6 +748,8 @@ actions:
     x-speakeasy-metadata:
       after: sdk.slos.update()
       before: sdk.SLOs.SLO_updateSLO()
+      created_at: 1758938265544
+      reviewed_at: 1758938350343
       type: method-name
   - target: $["paths"]["/v3/global-event-rules/{ger_id}/rulesets/{alert_source_version}/{alert_source_shortname}/rules"]["get"]
     update:
@@ -604,6 +758,8 @@ actions:
     x-speakeasy-metadata:
       after: sdk.globalEventRules.rulesets.listRulesetRules()
       before: sdk.Global Event Rules/Rulesets/Rules.GlobalEventRules_listRulesetRules()
+      created_at: 1758938265544
+      reviewed_at: 1758938350343
       type: method-name
   - target: $["paths"]["/v3/services/{serviceID}/overlays/dedup-key"]["get"]
     update:
@@ -612,6 +768,8 @@ actions:
     x-speakeasy-metadata:
       after: sdk.services.getAllDedupKeyOverlays()
       before: sdk.Services/Overlay/Dedup Key Overlay.Overlay_getAllDedupKeyOverlayByService()
+      created_at: 1758938265544
+      reviewed_at: 1758938350343
       type: method-name
   - target: $["paths"]["/v3/squads"]["get"]
     update:
@@ -620,6 +778,8 @@ actions:
     x-speakeasy-metadata:
       after: sdk.v3.squads.listByTeam()
       before: sdk.Squads/V3.Squads_getSquadByTeam()
+      created_at: 1758938265544
+      reviewed_at: 1758938350343
       type: method-name
   - target: $["paths"]["/v3/incidents/{incidentID}/resolve"]["post"]
     update:
@@ -627,6 +787,8 @@ actions:
     x-speakeasy-metadata:
       after: sdk.incidents.resolve()
       before: sdk.Incidents.Incidents_resolveIncident()
+      created_at: 1758938265544
+      reviewed_at: 1758938350343
       type: method-name
   - target: $["paths"]["/v3/workflows/{workflowID}"]["delete"]
     update:
@@ -634,6 +796,8 @@ actions:
     x-speakeasy-metadata:
       after: sdk.workflows.delete()
       before: sdk.Workflows.Workflows_deleteWorkflow()
+      created_at: 1758938265544
+      reviewed_at: 1758938350343
       type: method-name
   - target: $["paths"]["/v3/services/{serviceID}/overlays/dedup-key/{alertSource}"]["put"]
     update:
@@ -642,6 +806,8 @@ actions:
     x-speakeasy-metadata:
       after: sdk.services.updateDedupKeyOverlay()
       before: sdk.Services/Overlay/Dedup Key Overlay.Overlay_updateDedupKeyOverlay()
+      created_at: 1758938265544
+      reviewed_at: 1758938350343
       type: method-name
   - target: $["paths"]["/v3/incidents/{incidentID}"]["get"]
     update:
@@ -649,6 +815,8 @@ actions:
     x-speakeasy-metadata:
       after: sdk.incidents.getById()
       before: sdk.Incidents.Incidents_getIncidentById()
+      created_at: 1758938265544
+      reviewed_at: 1758938350343
       type: method-name
   - target: $["paths"]["/v3/incidents/{incidentID}/reassign"]["post"]
     update:
@@ -656,6 +824,8 @@ actions:
     x-speakeasy-metadata:
       after: sdk.incidents.reassign()
       before: sdk.Incidents.Incidents_reassignIncident()
+      created_at: 1758938265544
+      reviewed_at: 1758938350343
       type: method-name
   - target: $["paths"]["/v3/global-event-rules/{ger_id}/rulesets/{alert_source_version}/{alert_source_shortname}/rules/{rule_id}"]["patch"]
     update:
@@ -664,6 +834,8 @@ actions:
     x-speakeasy-metadata:
       after: sdk.globalEventRules.updateRule()
       before: sdk.Global Event Rules/Rulesets/Rules.GlobalEventRules_updateRuleById()
+      created_at: 1758938265544
+      reviewed_at: 1758938350343
       type: method-name
   - target: $["paths"]["/v3/incidents/postmortem"]["get"]
     update:
@@ -672,14 +844,18 @@ actions:
     x-speakeasy-metadata:
       after: sdk.incidents.getAllPostmortems()
       before: sdk.Incidents/Postmortems.Postmortems_getAllPostmortems()
+      created_at: 1758938265544
+      reviewed_at: 1758938350343
       type: method-name
   - target: $["paths"]["/v3/services/{serviceID}/overlays/dedup-key/{alertSource}"]["get"]
     update:
-      x-speakeasy-name-override: getDedupKey
       x-speakeasy-group: services.overlays
+      x-speakeasy-name-override: getDedupKey
     x-speakeasy-metadata:
       after: sdk.services.overlays.getDedupKey()
       before: sdk.Services/Overlay/Dedup Key Overlay.Overlay_getDedupKeyOverlayForAlertSource()
+      created_at: 1758938265544
+      reviewed_at: 1758938350343
       type: method-name
   - target: $["paths"]["/v4/schedules/{scheduleID}/clone"]["post"]
     update:
@@ -688,14 +864,18 @@ actions:
     x-speakeasy-metadata:
       after: sdk.schedules.clone()
       before: sdk.Schedule.Schedules_cloneSchedule()
+      created_at: 1758938265544
+      reviewed_at: 1758938350343
       type: method-name
   - target: $["paths"]["/v3/incidents/{IncidentId}/communication_cards/{communicationCardId}"]["put"]
     update:
-      x-speakeasy-name-override: update
       x-speakeasy-group: incidents.communicationCard
+      x-speakeasy-name-override: update
     x-speakeasy-metadata:
       after: sdk.incidents.communicationCard.update()
       before: sdk.Incidents/Communication Card.CommunicationCards_updateCommunicationCard()
+      created_at: 1758938265544
+      reviewed_at: 1758938350343
       type: method-name
   - target: $["paths"]["/v3/services/{serviceID}/overlays/dedup-key/render"]["post"]
     update:
@@ -704,6 +884,8 @@ actions:
     x-speakeasy-metadata:
       after: sdk.services.overlays.dedupKey.render()
       before: sdk.Services/Overlay/Dedup Key Overlay.Overlay_renderDedupKeyTemplate()
+      created_at: 1758938265544
+      reviewed_at: 1758938350343
       type: method-name
   - target: $["paths"]["/v3/teams/{teamId}/members/bulk"]["post"]
     update:
@@ -711,14 +893,18 @@ actions:
     x-speakeasy-metadata:
       after: sdk.teams.addBulkMember()
       before: sdk.Teams.Teams_addBulkTeamMember()
+      created_at: 1758938265544
+      reviewed_at: 1758938350343
       type: method-name
   - target: $["paths"]["/v3/services/{serviceID}/deduplication-rules"]["post"]
     update:
-      x-speakeasy-name-override: createOrUpdate
       x-speakeasy-group: services.deduplicationRules
+      x-speakeasy-name-override: createOrUpdate
     x-speakeasy-metadata:
       after: sdk.services.deduplicationRules.createOrUpdate()
       before: sdk.Services/Deduplication Rules.DeduplicationRules_createOrUpdateDeduplicationRules()
+      created_at: 1758938265544
+      reviewed_at: 1758938350343
       type: method-name
   - target: $["paths"]["/v3/incidents/{IncidentId}/warroom/{NoteId}"]["delete"]
     update:
@@ -727,6 +913,8 @@ actions:
     x-speakeasy-metadata:
       after: sdk.incidents.notes.delete()
       before: sdk.Incidents/Notes.Notes_deleteNote()
+      created_at: 1758938265544
+      reviewed_at: 1758938350343
       type: method-name
   - target: $["paths"]["/v3/webform"]["post"]
     update:
@@ -734,6 +922,8 @@ actions:
     x-speakeasy-metadata:
       after: sdk.webforms.create()
       before: sdk.Webforms.Webforms_createWebform()
+      created_at: 1758938265544
+      reviewed_at: 1758938350343
       type: method-name
   - target: $["paths"]["/v3/incidents/acknowledge"]["post"]
     update:
@@ -741,6 +931,8 @@ actions:
     x-speakeasy-metadata:
       after: sdk.incidents.bulkAcknowledge()
       before: sdk.Incidents.Incidents_bulkAcknowledgeIncidents()
+      created_at: 1758938265544
+      reviewed_at: 1758938350343
       type: method-name
   - target: $["paths"]["/v3/squads/{squadID}"]["get"]
     update:
@@ -749,14 +941,18 @@ actions:
     x-speakeasy-metadata:
       after: sdk.squads.getById()
       before: sdk.Squads/V3.Squads_getSquadById()
+      created_at: 1758938265544
+      reviewed_at: 1758938350343
       type: method-name
   - target: $["paths"]["/v3/extensions/slack_v2/channel"]["post"]
     update:
-      x-speakeasy-name-override: createSlackChannel
       x-speakeasy-group: communicationCards
+      x-speakeasy-name-override: createSlackChannel
     x-speakeasy-metadata:
       after: sdk.communicationCards.createSlackChannel()
       before: sdk.Incidents/Communication Card.CommunicationCards_createSlackChannelInCommunicationCard()
+      created_at: 1758938265544
+      reviewed_at: 1758938350343
       type: method-name
   - target: $["paths"]["/v3/incidents/{IncidentId}/communication_cards"]["post"]
     update:
@@ -765,6 +961,8 @@ actions:
     x-speakeasy-metadata:
       after: sdk.incidents.communicationCards.create()
       before: sdk.Incidents/Communication Card.CommunicationCards_createCommunicationCard()
+      created_at: 1758938265544
+      reviewed_at: 1758938350343
       type: method-name
   - target: $["paths"]["/v3/extensions/event-webhooks/{eventWebhookID}"]["put"]
     update:
@@ -773,6 +971,8 @@ actions:
     x-speakeasy-metadata:
       after: sdk.webhooks.update()
       before: sdk.Extensions/Webhooks.Webhooks_updateWebhook()
+      created_at: 1758938265544
+      reviewed_at: 1758938350343
       type: method-name
   - target: $["paths"]["/v3/analyticsv2/organization"]["get"]
     update:
@@ -780,6 +980,8 @@ actions:
     x-speakeasy-metadata:
       after: sdk.analytics.getOrganization()
       before: sdk.Analytics.Analytics_getOrgAnalytics()
+      created_at: 1758938265544
+      reviewed_at: 1758938350343
       type: method-name
   - target: $["paths"]["/v3/services/{serviceID}/suppression-rules"]["post"]
     update:
@@ -788,6 +990,8 @@ actions:
     x-speakeasy-metadata:
       after: sdk.services.createOrUpdateSuppressionRules()
       before: sdk.Services/Suppression Rules.SuppressionRules_createOrUpdateSuppressionRules()
+      created_at: 1758938265544
+      reviewed_at: 1758938350343
       type: method-name
   - target: $["paths"]["/v3/escalation-policies"]["post"]
     update:
@@ -796,6 +1000,8 @@ actions:
     x-speakeasy-metadata:
       after: sdk.escalationPolicies.create()
       before: sdk.Escalation Policies.EscalationPolicies_createEscalationPolicies()
+      created_at: 1758938265544
+      reviewed_at: 1758938350343
       type: method-name
   - target: $["paths"]["/v3/slo/{sloID}"]["delete"]
     update:
@@ -804,6 +1010,8 @@ actions:
     x-speakeasy-metadata:
       after: sdk.slos.remove()
       before: sdk.SLOs.SLO_removeSLO()
+      created_at: 1758938265544
+      reviewed_at: 1758938350343
       type: method-name
   - target: $["paths"]["/v3/services"]["get"]
     update:
@@ -811,14 +1019,18 @@ actions:
     x-speakeasy-metadata:
       after: sdk.services.list()
       before: sdk.Services.Services_getServices()
+      created_at: 1758938265544
+      reviewed_at: 1758938350343
       type: method-name
   - target: $["paths"]["/v3/global-event-rules/{ger_id}/rulesets/{alert_source_version}/{alert_source_shortname}"]["patch"]
     update:
-      x-speakeasy-name-override: updateRuleset
       x-speakeasy-group: globalEventRules
+      x-speakeasy-name-override: updateRuleset
     x-speakeasy-metadata:
       after: sdk.globalEventRules.updateRuleset()
       before: sdk.Global Event Rules/Rulesets.GlobalEventRules_updateRuleset()
+      created_at: 1758938265544
+      reviewed_at: 1758938350343
       type: method-name
   - target: $["paths"]["/v3/teams/{teamId}/roles"]["get"]
     update:
@@ -826,6 +1038,8 @@ actions:
     x-speakeasy-metadata:
       after: sdk.teams.getAllRoles()
       before: sdk.Teams.Teams_getAllTeamRoles()
+      created_at: 1758938265544
+      reviewed_at: 1758938350343
       type: method-name
   - target: $["paths"]["/v4/squads/{squadID}/members/{memberID}"]["delete"]
     update:
@@ -834,6 +1048,8 @@ actions:
     x-speakeasy-metadata:
       after: sdk.squads.removeMember()
       before: sdk.Squads/V4.Squads_removeSquadMember()
+      created_at: 1758938265544
+      reviewed_at: 1758938350343
       type: method-name
   - target: $["paths"]["/v3/workflows/{workflowID}/actions"]["post"]
     update:
@@ -842,6 +1058,8 @@ actions:
     x-speakeasy-metadata:
       after: sdk.workflows.actions.create()
       before: sdk.Workflows.Workflows_createAction()
+      created_at: 1758938265544
+      reviewed_at: 1758938350343
       type: method-name
   - target: $["paths"]["/v3/escalation-policies/{escalationPolicyID}"]["get"]
     update:
@@ -850,6 +1068,8 @@ actions:
     x-speakeasy-metadata:
       after: sdk.escalationPolicies.getById()
       before: sdk.Escalation Policies.EscalationPolicies_getEscalationPolicyById()
+      created_at: 1758938265544
+      reviewed_at: 1758938350343
       type: method-name
   - target: $["paths"]["/v4/schedules"]["get"]
     update:
@@ -858,6 +1078,8 @@ actions:
     x-speakeasy-metadata:
       after: sdk.schedules.list()
       before: sdk.Schedule.Schedules_listSchedules()
+      created_at: 1758938265544
+      reviewed_at: 1758938350343
       type: method-name
   - target: $["paths"]["/v4/statuspages/{statuspageID}"]["delete"]
     update:
@@ -866,14 +1088,18 @@ actions:
     x-speakeasy-metadata:
       after: sdk.statusPages.deleteById()
       before: sdk.Status Pages.StatusPages_deleteStatusPageById()
+      created_at: 1758938265544
+      reviewed_at: 1758938350343
       type: method-name
   - target: $["paths"]["/v3/incidents/{incidentID}/postmortem"]["put"]
     update:
-      x-speakeasy-name-override: updatePostmortem
       x-speakeasy-group: incidents
+      x-speakeasy-name-override: updatePostmortem
     x-speakeasy-metadata:
       after: sdk.incidents.updatePostmortem()
       before: sdk.Incidents/Postmortems.Postmortems_updatePostmortemByIncident()
+      created_at: 1758938265544
+      reviewed_at: 1758938350343
       type: method-name
   - target: $["paths"]["/v4/statuspages/{statuspageID}/components/{component_id}"]["put"]
     update:
@@ -882,6 +1108,8 @@ actions:
     x-speakeasy-metadata:
       after: sdk.statusPages.components.updateById()
       before: sdk.Status Pages/Components.Components_updateComponentById()
+      created_at: 1758938265544
+      reviewed_at: 1758938350343
       type: method-name
   - target: $["paths"]["/v3/users"]["post"]
     update:
@@ -889,6 +1117,8 @@ actions:
     x-speakeasy-metadata:
       after: sdk.users.add()
       before: sdk.Users.Users_addUser()
+      created_at: 1758938265544
+      reviewed_at: 1758938350343
       type: method-name
   - target: $["paths"]["/v4/statuspages/{statuspageID}/maintenance/{maintenance_id}"]["put"]
     update:
@@ -897,6 +1127,8 @@ actions:
     x-speakeasy-metadata:
       after: sdk.statusPages.maintenances.updateById()
       before: sdk.Status Pages/Maintenances.Maintenances_updateMaintenanceById()
+      created_at: 1758938265544
+      reviewed_at: 1758938350343
       type: method-name
   - target: $["paths"]["/v4/statuspages/{statuspageID}"]["put"]
     update:
@@ -905,6 +1137,8 @@ actions:
     x-speakeasy-metadata:
       after: sdk.statusPages.updateById()
       before: sdk.Status Pages.StatusPages_updateStatusPageById()
+      created_at: 1758938265544
+      reviewed_at: 1758938350343
       type: method-name
   - target: $["paths"]["/v3/services/{serviceID}/deduplication-rules"]["get"]
     update:
@@ -913,6 +1147,8 @@ actions:
     x-speakeasy-metadata:
       after: sdk.services.deduplicationRules.get()
       before: sdk.Services/Deduplication Rules.DeduplicationRules_getDeduplicationRules()
+      created_at: 1758938265544
+      reviewed_at: 1758938350343
       type: method-name
   - target: $["paths"]["/v3/incidents/{incidentID}/additional-responders/{responderID}"]["delete"]
     update:
@@ -921,14 +1157,18 @@ actions:
     x-speakeasy-metadata:
       after: sdk.incidents.additionalResponders.delete()
       before: sdk.Incidents/Additional Responders.AdditionalResponders_removeAdditionalResponders()
+      created_at: 1758938265544
+      reviewed_at: 1758938350343
       type: method-name
   - target: $["paths"]["/v4/statuspages/{statuspageID}/issues/{issue_id}"]["delete"]
     update:
-      x-speakeasy-name-override: delete
       x-speakeasy-group: statusPages.issues
+      x-speakeasy-name-override: delete
     x-speakeasy-metadata:
       after: sdk.statusPages.issues.delete()
       before: sdk.Status Pages/Issues.Issues_deleteIssueById()
+      created_at: 1758938265544
+      reviewed_at: 1758938350343
       type: method-name
   - target: $["paths"]["/v4/squads/{squadID}/name"]["put"]
     update:
@@ -937,6 +1177,8 @@ actions:
     x-speakeasy-metadata:
       after: sdk.squads.updateName()
       before: sdk.Squads/V4.Squads_updateSquadName()
+      created_at: 1758938265544
+      reviewed_at: 1758938350343
       type: method-name
   - target: $["paths"]["/v3/runbooks/{runbookID}"]["get"]
     update:
@@ -944,6 +1186,8 @@ actions:
     x-speakeasy-metadata:
       after: sdk.runbooks.getById()
       before: sdk.Runbooks.Runbooks_getRunbookById()
+      created_at: 1758938265544
+      reviewed_at: 1758938350343
       type: method-name
   - target: $["paths"]["/v3/services/{serviceID}/config"]["patch"]
     update:
@@ -952,6 +1196,8 @@ actions:
     x-speakeasy-metadata:
       after: sdk.services.overlay.optInForKeyBasedDeduplication()
       before: sdk.Services/Overlay.Overlay_optinForKeyBasedDeduplicationForAService()
+      created_at: 1758938265544
+      reviewed_at: 1758938350343
       type: method-name
   - target: $["paths"]["/v3/incidents/{IncidentId}/warroom"]["post"]
     update:
@@ -960,6 +1206,8 @@ actions:
     x-speakeasy-metadata:
       after: sdk.incidents.notes.create()
       before: sdk.Incidents/Notes.Notes_createNotes()
+      created_at: 1758938265544
+      reviewed_at: 1758938350343
       type: method-name
   - target: $["paths"]["/v4/schedules/{scheduleID}/overrides"]["get"]
     update:
@@ -968,6 +1216,8 @@ actions:
     x-speakeasy-metadata:
       after: sdk.schedules.overrides.list()
       before: sdk.Overrides.Overrides_listOverrides()
+      created_at: 1758938265544
+      reviewed_at: 1758938350343
       type: method-name
   - target: $["paths"]["/v4/statuspages/{statuspageID}/maintenance"]["get"]
     update:
@@ -976,6 +1226,8 @@ actions:
     x-speakeasy-metadata:
       after: sdk.statusPages.listMaintenances()
       before: sdk.Status Pages/Maintenances.Maintenances_listMaintenances()
+      created_at: 1758938265544
+      reviewed_at: 1758938350343
       type: method-name
   - target: $["paths"]["/v3/slo/{sloID}/incident/{incidentID}/false-positive/{value}"]["patch"]
     update:
@@ -984,14 +1236,18 @@ actions:
     x-speakeasy-metadata:
       after: sdk.slos.markFalsePositive()
       before: sdk.SLOs.SLO_markSLOFalsePositive()
+      created_at: 1758938265544
+      reviewed_at: 1758938350343
       type: method-name
   - target: $["paths"]["/v4/schedules/{scheduleID}/rotations/{rotationID}/participants"]["put"]
     update:
-      x-speakeasy-name-override: updateParticipants
       x-speakeasy-group: rotations
+      x-speakeasy-name-override: updateParticipants
     x-speakeasy-metadata:
       after: sdk.rotations.updateParticipants()
       before: sdk.Rotation.Rotations_updateRotationParticipants()
+      created_at: 1758938265544
+      reviewed_at: 1758938350343
       type: method-name
   - target: $["paths"]["/v3/extensions/event-webhooks"]["post"]
     update:
@@ -1000,6 +1256,8 @@ actions:
     x-speakeasy-metadata:
       after: sdk.webhooks.create()
       before: sdk.Extensions/Webhooks.Webhooks_createWebhook()
+      created_at: 1758938265544
+      reviewed_at: 1758938350343
       type: method-name
   - target: $["paths"]["/v3/users/{userID}"]["delete"]
     update:
@@ -1007,6 +1265,8 @@ actions:
     x-speakeasy-metadata:
       after: sdk.users.removeFromOrg()
       before: sdk.Users.Users_removeUserFromOrg()
+      created_at: 1758938265544
+      reviewed_at: 1758938350343
       type: method-name
   - target: $["paths"]["/v4/squads/{squadID}"]["get"]
     update:
@@ -1015,6 +1275,8 @@ actions:
     x-speakeasy-metadata:
       after: sdk.squads.v4.getById()
       before: sdk.Squads/V4.Squads_getSquadByIdV4()
+      created_at: 1758938265544
+      reviewed_at: 1758938350343
       type: method-name
   - target: $["paths"]["/v3/teams/{teamId}/members/{memberId}"]["patch"]
     update:
@@ -1022,14 +1284,18 @@ actions:
     x-speakeasy-metadata:
       after: sdk.teams.updateMember()
       before: sdk.Teams.Teams_updateTeamMember()
+      created_at: 1758938265544
+      reviewed_at: 1758938350343
       type: method-name
   - target: $["paths"]["/v4/statuspages/{statuspageID}/issues"]["get"]
     update:
-      x-speakeasy-name-override: list
       x-speakeasy-group: statusPages.issues
+      x-speakeasy-name-override: list
     x-speakeasy-metadata:
       after: sdk.statusPages.issues.list()
       before: sdk.Status Pages/Issues.Issues_listIssues()
+      created_at: 1758938265544
+      reviewed_at: 1758938350343
       type: method-name
   - target: $["paths"]["/v3/incidents/{IncidentId}/communication_cards/{communicationCardId}"]["delete"]
     update:
@@ -1038,6 +1304,8 @@ actions:
     x-speakeasy-metadata:
       after: sdk.incidents.communicationCards.delete()
       before: sdk.Incidents/Communication Card.CommunicationCards_deleteCommunicationCard()
+      created_at: 1758938265544
+      reviewed_at: 1758938350343
       type: method-name
   - target: $["paths"]["/v3/incidents/{IncidentId}/warroom"]["get"]
     update:
@@ -1046,6 +1314,8 @@ actions:
     x-speakeasy-metadata:
       after: sdk.notes.list()
       before: sdk.Incidents/Notes.Notes_getAllNotes()
+      created_at: 1758938265544
+      reviewed_at: 1758938350343
       type: method-name
   - target: $["paths"]["/v3/global-event-rules"]["get"]
     update:
@@ -1054,6 +1324,8 @@ actions:
     x-speakeasy-metadata:
       after: sdk.globalEventRules.list()
       before: sdk.Global Event Rules.GlobalEventRules_listGlobalEventRules()
+      created_at: 1758938265544
+      reviewed_at: 1758938350343
       type: method-name
   - target: $["paths"]["/v3/users/{userID}"]["get"]
     update:
@@ -1061,6 +1333,8 @@ actions:
     x-speakeasy-metadata:
       after: sdk.users.getById()
       before: sdk.Users.Users_getUserById()
+      created_at: 1758938265544
+      reviewed_at: 1758938350343
       type: method-name
   - target: $["paths"]["/v3/global-event-rules/{ger_id}/rulesets/{alert_source_version}/{alert_source_shortname}/priority"]["patch"]
     update:
@@ -1069,6 +1343,8 @@ actions:
     x-speakeasy-metadata:
       after: sdk.globalEventRules.rulesets.reorder()
       before: sdk.Global Event Rules/Rulesets.GlobalEventRules_reorderRuleset()
+      created_at: 1758938265544
+      reviewed_at: 1758938350343
       type: method-name
   - target: $["paths"]["/v3/global-oncall-reminder-rules"]["put"]
     update:
@@ -1077,6 +1353,8 @@ actions:
     x-speakeasy-metadata:
       after: sdk.globalOncallReminderRules.update()
       before: sdk.Global Oncall Reminder Rules.GlobalOncallReminderRules_updateGlobalOncallReminderRules()
+      created_at: 1758938265544
+      reviewed_at: 1758938350343
       type: method-name
   - target: $["paths"]["/v4/schedules/{scheduleID}/overrides/{overrideID}"]["put"]
     update:
@@ -1084,6 +1362,8 @@ actions:
     x-speakeasy-metadata:
       after: sdk.overrides.update()
       before: sdk.Overrides.Overrides_updateScheduleOverride()
+      created_at: 1758938265544
+      reviewed_at: 1758938350343
       type: method-name
   - target: $["paths"]["/v4/statuspages/{statuspageID}/components/{component_id}"]["get"]
     update:
@@ -1092,14 +1372,18 @@ actions:
     x-speakeasy-metadata:
       after: sdk.statusPages.components.getById()
       before: sdk.Status Pages/Components.Components_getComponentById()
+      created_at: 1758938265544
+      reviewed_at: 1758938350343
       type: method-name
   - target: $["paths"]["/v4/statuspages/{statuspageID}/issues/{issue_id}"]["get"]
     update:
-      x-speakeasy-name-override: getById
       x-speakeasy-group: statusPages.issues
+      x-speakeasy-name-override: getById
     x-speakeasy-metadata:
       after: sdk.statusPages.issues.getById()
       before: sdk.Status Pages/Issues.Issues_getIssueById()
+      created_at: 1758938265544
+      reviewed_at: 1758938350343
       type: method-name
   - target: $["paths"]["/v4/schedules/{scheduleID}/rotations/{rotationID}"]["get"]
     update:
@@ -1108,6 +1392,8 @@ actions:
     x-speakeasy-metadata:
       after: sdk.rotations.getById()
       before: sdk.Rotation.Rotations_getScheduleRotationById()
+      created_at: 1758938265544
+      reviewed_at: 1758938350343
       type: method-name
   - target: $["paths"]["/v3/workflows/{workflowID}/actions/reorder"]["patch"]
     update:
@@ -1115,6 +1401,8 @@ actions:
     x-speakeasy-metadata:
       after: sdk.workflows.updateActionsOrder()
       before: sdk.Workflows.Workflows_updateActionsOrder()
+      created_at: 1758938265544
+      reviewed_at: 1758938350343
       type: method-name
   - target: $["paths"]["/v3/runbooks"]["get"]
     update:
@@ -1122,6 +1410,8 @@ actions:
     x-speakeasy-metadata:
       after: sdk.runbooks.listByTeam()
       before: sdk.Runbooks.Runbooks_getAllRunbooksByTeam()
+      created_at: 1758938265544
+      reviewed_at: 1758938350343
       type: method-name
   - target: $["paths"]["/v4/statuspages/{statuspageID}/components/{component_id}"]["delete"]
     update:
@@ -1130,6 +1420,8 @@ actions:
     x-speakeasy-metadata:
       after: sdk.statusPages.components.deleteById()
       before: sdk.Status Pages/Components.Components_deleteComponentById()
+      created_at: 1758938265544
+      reviewed_at: 1758938350343
       type: method-name
   - target: $["paths"]["/v3/teams/{teamId}/roles/{roleId}"]["put"]
     update:
@@ -1137,6 +1429,8 @@ actions:
     x-speakeasy-metadata:
       after: sdk.teams.updateRole()
       before: sdk.Teams.Teams_updateTeamRole()
+      created_at: 1758938265544
+      reviewed_at: 1758938350343
       type: method-name
   - target: $["paths"]["/v3/incidents/{incidentID}/mark-as-transient"]["put"]
     update:
@@ -1145,14 +1439,18 @@ actions:
     x-speakeasy-metadata:
       after: sdk.incidents.markAsTransient()
       before: sdk.Incidents/Auto Pause Transient Alerts (APTA).Apta_markAsTransient()
+      created_at: 1758938265544
+      reviewed_at: 1758938350343
       type: method-name
   - target: $["paths"]["/v3/services/{serviceID}/overlays/dedup-key/{alertSource}"]["delete"]
     update:
-      x-speakeasy-name-override: delete
       x-speakeasy-group: services.overlays.dedupKey
+      x-speakeasy-name-override: delete
     x-speakeasy-metadata:
       after: sdk.services.overlays.dedupKey.delete()
       before: sdk.Services/Overlay/Dedup Key Overlay.Overlay_deleteDedupKeyOverlay()
+      created_at: 1758938265544
+      reviewed_at: 1758938350343
       type: method-name
   - target: $["paths"]["/v4/schedules/{scheduleID}/rotations/{rotationID}"]["delete"]
     update:
@@ -1161,6 +1459,8 @@ actions:
     x-speakeasy-metadata:
       after: sdk.schedules.deleteRotation()
       before: sdk.Rotation.Rotations_deleteRotation()
+      created_at: 1758938265544
+      reviewed_at: 1758938350343
       type: method-name
   - target: $["paths"]["/v3/workflows"]["get"]
     update:
@@ -1168,6 +1468,8 @@ actions:
     x-speakeasy-metadata:
       after: sdk.workflows.list()
       before: sdk.Workflows.Workflows_listWorkflows()
+      created_at: 1758938265544
+      reviewed_at: 1758938350343
       type: method-name
   - target: $["paths"]["/v3/incidents/{incidentID}/actions/webhook/{eventWebhookID}"]["post"]
     update:
@@ -1176,6 +1478,8 @@ actions:
     x-speakeasy-metadata:
       after: sdk.incidents.actions.webhook.triggerManually()
       before: sdk.Incidents/Incident Actions.IncidentActions_triggerAWebhookManually()
+      created_at: 1758938265544
+      reviewed_at: 1758938350343
       type: method-name
   - target: $["paths"]["/v3/services/{serviceID}/overlays/custom-content/{alertSource}"]["put"]
     update:
@@ -1184,6 +1488,8 @@ actions:
     x-speakeasy-metadata:
       after: sdk.services.createOrUpdateNotificationTemplateOverlay()
       before: sdk.Services/Overlay/Custom Content Templates.Overlay_createOrUpdateNotificationTemplateOverlay()
+      created_at: 1758938265544
+      reviewed_at: 1758938350343
       type: method-name
   - target: $["paths"]["/v4/statuspages/{statuspageID}/issues/{issue_id}"]["put"]
     update:
@@ -1192,6 +1498,8 @@ actions:
     x-speakeasy-metadata:
       after: sdk.statusPages.updateIssue()
       before: sdk.Status Pages/Issues.Issues_updateIssue()
+      created_at: 1758938265544
+      reviewed_at: 1758938350343
       type: method-name
   - target: $["paths"]["/v3/workflows/{workflowID}/enable"]["patch"]
     update:
@@ -1199,14 +1507,18 @@ actions:
     x-speakeasy-metadata:
       after: sdk.workflows.toggleEnable()
       before: sdk.Workflows.Workflows_enabledisableWorkflow()
+      created_at: 1758938265544
+      reviewed_at: 1758938350343
       type: method-name
   - target: $["paths"]["/v3/global-oncall-reminder-rules"]["post"]
     update:
-      x-speakeasy-name-override: create
       x-speakeasy-group: globalOncallReminderRules
+      x-speakeasy-name-override: create
     x-speakeasy-metadata:
       after: sdk.globalOncallReminderRules.create()
       before: sdk.Global Oncall Reminder Rules.GlobalOncallReminderRules_createGlobalOncallReminderRules()
+      created_at: 1758938265544
+      reviewed_at: 1758938350343
       type: method-name
   - target: $["paths"]["/v3/global-event-rules/{ger_id}/rulesets/{alert_source_version}/{alert_source_shortname}/rules/{rule_id}/priority"]["patch"]
     update:
@@ -1215,6 +1527,8 @@ actions:
     x-speakeasy-metadata:
       after: sdk.globalEventRules.rules.reorderByIndex()
       before: sdk.Global Event Rules/Rulesets/Rules.GlobalEventRules_reorderRulesetByIndex()
+      created_at: 1758938265544
+      reviewed_at: 1758938350343
       type: method-name
   - target: $["paths"]["/v4/schedules/{scheduleID}/rotations/{rotationID}/participants"]["get"]
     update:
@@ -1223,6 +1537,8 @@ actions:
     x-speakeasy-metadata:
       after: sdk.rotations.getParticipants()
       before: sdk.Rotation.Rotations_getRotationParticipants()
+      created_at: 1758938265544
+      reviewed_at: 1758938350343
       type: method-name
   - target: $["paths"]["/v3/incidents/{IncidentId}/communication_cards"]["get"]
     update:
@@ -1231,6 +1547,8 @@ actions:
     x-speakeasy-metadata:
       after: sdk.incidents.communicationCards.getAll()
       before: sdk.Incidents/Communication Card.CommunicationCards_getAllCommunicationCard()
+      created_at: 1758938265544
+      reviewed_at: 1758938350343
       type: method-name
   - target: $["paths"]["/v4/statuspages/{statuspageID}/maintenance/{maintenance_id}"]["delete"]
     update:
@@ -1239,6 +1557,8 @@ actions:
     x-speakeasy-metadata:
       after: sdk.statusPages.maintenances.deleteById()
       before: sdk.Status Pages/Maintenances.Maintenances_deleteMaintenanceById()
+      created_at: 1758938265544
+      reviewed_at: 1758938350343
       type: method-name
   - target: $["paths"]["/v3/webform/{webformId}"]["get"]
     update:
@@ -1246,6 +1566,8 @@ actions:
     x-speakeasy-metadata:
       after: sdk.webforms.get()
       before: sdk.Webforms.Webforms_getWebformById()
+      created_at: 1758938265544
+      reviewed_at: 1758938350343
       type: method-name
   - target: $["paths"]["/v4/schedules/{scheduleID}"]["get"]
     update:
@@ -1254,6 +1576,8 @@ actions:
     x-speakeasy-metadata:
       after: sdk.schedules.getById()
       before: sdk.Schedule.Schedules_getScheduleById()
+      created_at: 1758938265544
+      reviewed_at: 1758938350343
       type: method-name
   - target: $["paths"]["/v3/services/{serviceID}/tagging-rules"]["post"]
     update:
@@ -1262,6 +1586,8 @@ actions:
     x-speakeasy-metadata:
       after: sdk.services.createOrUpdateTaggingRules()
       before: sdk.Services/Tagging Rules.TaggingRules_createOrUpdateTaggingRules()
+      created_at: 1758938265544
+      reviewed_at: 1758938350343
       type: method-name
   - target: $["paths"]["/v3/incidents/{incidentID}/postmortem"]["delete"]
     update:
@@ -1270,6 +1596,8 @@ actions:
     x-speakeasy-metadata:
       after: sdk.incidents.postmortems.deleteByIncident()
       before: sdk.Incidents/Postmortems.Postmortems_deletePostmortemByIncident()
+      created_at: 1758938265544
+      reviewed_at: 1758938350343
       type: method-name
   - target: $["paths"]["/v3/services/{serviceID}/tagging-rules"]["get"]
     update:
@@ -1278,6 +1606,8 @@ actions:
     x-speakeasy-metadata:
       after: sdk.services.taggingRules.get()
       before: sdk.Services/Tagging Rules.TaggingRules_getTaggingRules()
+      created_at: 1758938265544
+      reviewed_at: 1758938350343
       type: method-name
   - target: $["paths"]["/v4/squads/{squadID}"]["put"]
     update:
@@ -1286,6 +1616,8 @@ actions:
     x-speakeasy-metadata:
       after: sdk.v4.squads.update()
       before: sdk.Squads/V4.Squads_updateSquadV4()
+      created_at: 1758938265544
+      reviewed_at: 1758938350343
       type: method-name
   - target: $["paths"]["/v3/teams/{teamId}/members/{memberId}"]["delete"]
     update:
@@ -1293,6 +1625,8 @@ actions:
     x-speakeasy-metadata:
       after: sdk.teams.removeMember()
       before: sdk.Teams.Teams_removeTeamMember()
+      created_at: 1758938265544
+      reviewed_at: 1758938350343
       type: method-name
   - target: $["paths"]["/v3/workflows"]["post"]
     update:
@@ -1300,6 +1634,8 @@ actions:
     x-speakeasy-metadata:
       after: sdk.workflows.create()
       before: sdk.Workflows.Workflows_createWorkflow()
+      created_at: 1758938265544
+      reviewed_at: 1758938350343
       type: method-name
   - target: $["paths"]["/v4/statuspages"]["post"]
     update:
@@ -1308,6 +1644,8 @@ actions:
     x-speakeasy-metadata:
       after: sdk.statusPages.create()
       before: sdk.Status Pages.StatusPages_createStatusPage()
+      created_at: 1758938265544
+      reviewed_at: 1758938350343
       type: method-name
   - target: $["paths"]["/v3/services/{serviceID}/overlays/custom-content/render"]["post"]
     update:
@@ -1316,6 +1654,8 @@ actions:
     x-speakeasy-metadata:
       after: sdk.services.overlays.customContent.render()
       before: sdk.Services/Overlay/Custom Content Templates.Overlay_renderCustomContentOverlay()
+      created_at: 1758938265544
+      reviewed_at: 1758938350343
       type: method-name
   - target: $["paths"]["/v3/global-event-rules/{ger_id}/rulesets/{alert_source_version}/{alert_source_shortname}"]["delete"]
     update:
@@ -1324,6 +1664,8 @@ actions:
     x-speakeasy-metadata:
       after: sdk.globalEventRulesRulesets.delete()
       before: sdk.Global Event Rules/Rulesets.GlobalEventRules_deleteGerRuleset()
+      created_at: 1758938265544
+      reviewed_at: 1758938350343
       type: method-name
   - target: $["paths"]["/v3/services/{serviceID}/extensions"]["put"]
     update:
@@ -1332,14 +1674,18 @@ actions:
     x-speakeasy-metadata:
       after: sdk.services.extensions.updateSlack()
       before: sdk.Services/Extensions.Extensions_updateSlackExtension()
+      created_at: 1758938265544
+      reviewed_at: 1758938350343
       type: method-name
   - target: $["paths"]["/v4/schedules/{scheduleID}/ical-link"]["post"]
     update:
-      x-speakeasy-name-override: createIcalLink
       x-speakeasy-group: schedules
+      x-speakeasy-name-override: createIcalLink
     x-speakeasy-metadata:
       after: sdk.schedules.createIcalLink()
       before: sdk.Schedule/Export Schedule.Export_createScheduleIcalLink()
+      created_at: 1758938265544
+      reviewed_at: 1758938350343
       type: method-name
   - target: $["paths"]["/v3/incidents/{incidentID}/actions/jira/new/jira-server"]["post"]
     update:
@@ -1348,6 +1694,8 @@ actions:
     x-speakeasy-metadata:
       after: sdk.incidents.actions.createJiraServerTicket()
       before: sdk.Incidents/Incident Actions.IncidentActions_createATicketOnJiraServer()
+      created_at: 1758938265544
+      reviewed_at: 1758938350343
       type: method-name
   - target: $["paths"]["/v3/global-oncall-reminder-rules"]["delete"]
     update:
@@ -1356,6 +1704,8 @@ actions:
     x-speakeasy-metadata:
       after: sdk.globalOncallReminderRules.delete()
       before: sdk.Global Oncall Reminder Rules.GlobalOncallReminderRules_deleteGlobalOncallReminderRules()
+      created_at: 1758938265544
+      reviewed_at: 1758938350343
       type: method-name
   - target: $["paths"]["/v4/schedules/{scheduleID}"]["put"]
     update:
@@ -1364,6 +1714,8 @@ actions:
     x-speakeasy-metadata:
       after: sdk.schedules.update()
       before: sdk.Schedule.Schedules_updateSchedule()
+      created_at: 1758938265544
+      reviewed_at: 1758938350343
       type: method-name
   - target: $["paths"]["/v3/services/{serviceID}/routing-rules"]["post"]
     update:
@@ -1372,14 +1724,18 @@ actions:
     x-speakeasy-metadata:
       after: sdk.services.routingRules.createOrUpdate()
       before: sdk.Services/Routing Rules.RoutingRules_createOrUpdateRoutingRules()
+      created_at: 1758938265544
+      reviewed_at: 1758938350343
       type: method-name
   - target: $["paths"]["/v3/global-oncall-reminder-rules"]["get"]
     update:
-      x-speakeasy-name-override: list
       x-speakeasy-group: globalOncallReminderRules
+      x-speakeasy-name-override: list
     x-speakeasy-metadata:
       after: sdk.globalOncallReminderRules.list()
       before: sdk.Global Oncall Reminder Rules.GlobalOncallReminderRules_getGlobalOncallReminderRules()
+      created_at: 1758938265544
+      reviewed_at: 1758938350343
       type: method-name
   - target: $["paths"]["/v3/services/by-name"]["get"]
     update:
@@ -1387,6 +1743,8 @@ actions:
     x-speakeasy-metadata:
       after: sdk.services.getByName()
       before: sdk.Services.Services_getServicesByName()
+      created_at: 1758938265544
+      reviewed_at: 1758938350343
       type: method-name
   - target: $["paths"]["/v3/services/{serviceID}/overlays/custom-content/{alertSource}"]["delete"]
     update:
@@ -1395,6 +1753,8 @@ actions:
     x-speakeasy-metadata:
       after: sdk.overlays.deleteNotificationTemplate()
       before: sdk.Services/Overlay/Custom Content Templates.Overlay_deleteNotificationTemplateOverlay()
+      created_at: 1758938265544
+      reviewed_at: 1758938350343
       type: method-name
   - target: $["paths"]["/v3/incidents/{incidentID}/unsnooze"]["put"]
     update:
@@ -1403,6 +1763,8 @@ actions:
     x-speakeasy-metadata:
       after: sdk.incidents.unsnoozeNotifications()
       before: sdk.Incidents/Snooze Notifications.SnoozeNotifications_unsnoozeIncidentNotifications()
+      created_at: 1758938265544
+      reviewed_at: 1758938350343
       type: method-name
   - target: $["paths"]["/v3/extensions/event-webhooks/{eventWebhookID}"]["get"]
     update:
@@ -1411,6 +1773,8 @@ actions:
     x-speakeasy-metadata:
       after: sdk.extensions.webhooks.getById()
       before: sdk.Extensions/Webhooks.Webhooks_getWebhookById()
+      created_at: 1758938265544
+      reviewed_at: 1758938350343
       type: method-name
   - target: $["paths"]["/v3/incidents/{incidentID}/additional-responders"]["get"]
     update:
@@ -1419,6 +1783,8 @@ actions:
     x-speakeasy-metadata:
       after: sdk.incidents.additionalResponders.get()
       before: sdk.Incidents/Additional Responders.AdditionalResponders_getAdditionalResponders()
+      created_at: 1758938265544
+      reviewed_at: 1758938350343
       type: method-name
   - target: $["paths"]["/v3/services/{serviceID}/overlays/custom-content"]["get"]
     update:
@@ -1427,6 +1793,8 @@ actions:
     x-speakeasy-metadata:
       after: sdk.services.overlays.getCustomContentTemplates()
       before: sdk.Services/Overlay/Custom Content Templates.Overlay_getAllCustomContentTemplateOverlayByService()
+      created_at: 1758938265544
+      reviewed_at: 1758938350343
       type: method-name
   - target: $["paths"]["/v3/webform/{webformId}"]["delete"]
     update:
@@ -1434,6 +1802,8 @@ actions:
     x-speakeasy-metadata:
       after: sdk.webforms.remove()
       before: sdk.Webforms.Webforms_removeWebform()
+      created_at: 1758938265544
+      reviewed_at: 1758938350343
       type: method-name
   - target: $["paths"]["/v3/teams"]["post"]
     update:
@@ -1441,6 +1811,8 @@ actions:
     x-speakeasy-metadata:
       after: sdk.teams.create()
       before: sdk.Teams.Teams_createTeam()
+      created_at: 1758938265544
+      reviewed_at: 1758938350343
       type: method-name
   - target: $["paths"]["/v3/escalation-policies/{escalationPolicyID}"]["post"]
     update:
@@ -1449,6 +1821,8 @@ actions:
     x-speakeasy-metadata:
       after: sdk.escalationPolicies.update()
       before: sdk.Escalation Policies.EscalationPolicies_updateEscalationPolicy()
+      created_at: 1758938265544
+      reviewed_at: 1758938350343
       type: method-name
   - target: $["paths"]["/v3/teams/{teamId}"]["get"]
     update:
@@ -1456,6 +1830,8 @@ actions:
     x-speakeasy-metadata:
       after: sdk.teams.getById()
       before: sdk.Teams.Teams_getTeamById()
+      created_at: 1758938265544
+      reviewed_at: 1758938350343
       type: method-name
   - target: $["paths"]["/v3/incidents/export/async"]["post"]
     update:
@@ -1463,6 +1839,8 @@ actions:
     x-speakeasy-metadata:
       after: sdk.incidents.exportAsync()
       before: sdk.Incidents.Incidents_incidentExportAsync()
+      created_at: 1758938265544
+      reviewed_at: 1758938350343
       type: method-name
   - target: $["paths"]["/v4/statuspages/{statuspageID}/groups"]["post"]
     update:
@@ -1471,6 +1849,8 @@ actions:
     x-speakeasy-metadata:
       after: sdk.statusPages.componentGroups.create()
       before: sdk.Status Pages/Component groups.ComponentGroups_createComponentGroup()
+      created_at: 1758938265544
+      reviewed_at: 1758938350343
       type: method-name
   - target: $["paths"]["/v3/users/delete-user"]["put"]
     update:
@@ -1478,6 +1858,8 @@ actions:
     x-speakeasy-metadata:
       after: sdk.users.delete()
       before: sdk.Users.Users_deleteUser()
+      created_at: 1758938265544
+      reviewed_at: 1758938350343
       type: method-name
   - target: $["paths"]["/v3/services/{serviceID}"]["get"]
     update:
@@ -1485,6 +1867,8 @@ actions:
     x-speakeasy-metadata:
       after: sdk.services.getById()
       before: sdk.Services.Services_getServiceById()
+      created_at: 1758938265544
+      reviewed_at: 1758938350343
       type: method-name
   - target: $["paths"]["/v3/escalation-policies"]["get"]
     update:
@@ -1493,6 +1877,8 @@ actions:
     x-speakeasy-metadata:
       after: sdk.escalationPolicies.getByTeam()
       before: sdk.Escalation Policies.EscalationPolicies_getEscalationPolicyByTeam()
+      created_at: 1758938265544
+      reviewed_at: 1758938350343
       type: method-name
   - target: $["paths"]["/v3/teams/{teamId}/roles/{roleId}"]["delete"]
     update:
@@ -1500,14 +1886,18 @@ actions:
     x-speakeasy-metadata:
       after: sdk.teams.removeRole()
       before: sdk.Teams.Teams_removeTeamRole()
+      created_at: 1758938265544
+      reviewed_at: 1758938350343
       type: method-name
   - target: $["paths"]["/v4/schedules/{scheduleID}/rotations"]["post"]
     update:
-      x-speakeasy-name-override: create
       x-speakeasy-group: rotations
+      x-speakeasy-name-override: create
     x-speakeasy-metadata:
       after: sdk.rotations.create()
       before: sdk.Rotation.Rotations_createRotation()
+      created_at: 1758938265544
+      reviewed_at: 1758938350343
       type: method-name
   - target: $["paths"]["/v3/squads/{squadID}"]["delete"]
     update:
@@ -1516,14 +1906,18 @@ actions:
     x-speakeasy-metadata:
       after: sdk.squads.delete()
       before: sdk.Squads/V3.Squads_deleteSquad()
+      created_at: 1758938265544
+      reviewed_at: 1758938350343
       type: method-name
   - target: $["paths"]["/v4/statuspages/{statuspageID}/subscribers"]["get"]
     update:
-      x-speakeasy-name-override: list
       x-speakeasy-group: statusPages.subscribers
+      x-speakeasy-name-override: list
     x-speakeasy-metadata:
       after: sdk.statusPages.subscribers.list()
       before: sdk.Status Pages/Subscribers.StatusPages_listSubscribers()
+      created_at: 1758938265544
+      reviewed_at: 1758938350343
       type: method-name
   - target: $["paths"]["/v3/extensions/msteams/config"]["post"]
     update:
@@ -1532,6 +1926,8 @@ actions:
     x-speakeasy-metadata:
       after: sdk.extensions.msteams.upsertConfig()
       before: sdk.Extensions/MSTeams.MSTeams_createOrUpdateMsteamsConfiguration()
+      created_at: 1758938265544
+      reviewed_at: 1758938350343
       type: method-name
   - target: $["paths"]["/v3/teams/{teamId}/members"]["post"]
     update:
@@ -1539,6 +1935,8 @@ actions:
     x-speakeasy-metadata:
       after: sdk.teams.addMember()
       before: sdk.Teams.Teams_addTeamMember()
+      created_at: 1758938265544
+      reviewed_at: 1758938350343
       type: method-name
   - target: $["paths"]["/v3/services/{serviceID}/dependencies"]["post"]
     update:
@@ -1547,6 +1945,8 @@ actions:
     x-speakeasy-metadata:
       after: sdk.services.createOrUpdateDependencies()
       before: sdk.Services/Dependencies.Dependencies_createOrUpdateDependencies()
+      created_at: 1758938265544
+      reviewed_at: 1758938350343
       type: method-name
   - target: $["paths"]["/v3/services/{serviceID}"]["put"]
     update:
@@ -1554,6 +1954,8 @@ actions:
     x-speakeasy-metadata:
       after: sdk.services.update()
       before: sdk.Services.Services_updateService()
+      created_at: 1758938265544
+      reviewed_at: 1758938350343
       type: method-name
   - target: $["paths"]["/v3/escalation-policies/{escalationPolicyID}"]["delete"]
     update:
@@ -1562,6 +1964,8 @@ actions:
     x-speakeasy-metadata:
       after: sdk.escalationPolicies.remove()
       before: sdk.Escalation Policies.EscalationPolicies_removeEscalationPolicy()
+      created_at: 1758938265544
+      reviewed_at: 1758938350343
       type: method-name
   - target: $["paths"]["/v3/users"]["get"]
     update:
@@ -1569,6 +1973,8 @@ actions:
     x-speakeasy-metadata:
       after: sdk.users.getAll()
       before: sdk.Users.Users_getAllUsers()
+      created_at: 1758938265544
+      reviewed_at: 1758938350343
       type: method-name
   - target: $["paths"]["/v3/incidents/{IncidentId}/tags"]["patch"]
     update:
@@ -1577,6 +1983,8 @@ actions:
     x-speakeasy-metadata:
       after: sdk.incidents.tags.append()
       before: sdk.Incidents/Tags.Tags_appendTag()
+      created_at: 1758938265544
+      reviewed_at: 1758938350343
       type: method-name
   - target: $["paths"]["/v4/statuspages/{statuspageID}"]["get"]
     update:
@@ -1585,6 +1993,8 @@ actions:
     x-speakeasy-metadata:
       after: sdk.statusPages.getById()
       before: sdk.Status Pages.StatusPages_getStatusPageById()
+      created_at: 1758938265544
+      reviewed_at: 1758938350343
       type: method-name
   - target: $["paths"]["/v3/global-event-rules/{ger_id}/rulesets/{alert_source_version}/{alert_source_shortname}/rules/{rule_id}"]["delete"]
     update:
@@ -1593,6 +2003,8 @@ actions:
     x-speakeasy-metadata:
       after: sdk.globalEventRulesRulesetsRules.deleteById()
       before: sdk.Global Event Rules/Rulesets/Rules.GlobalEventRules_deleteRuleById()
+      created_at: 1758938265544
+      reviewed_at: 1758938350343
       type: method-name
   - target: $["paths"]["/v3/teams/{teamId}/roles"]["post"]
     update:
@@ -1600,6 +2012,8 @@ actions:
     x-speakeasy-metadata:
       after: sdk.teams.createRole()
       before: sdk.Teams.Teams_createTeamRole()
+      created_at: 1758938265544
+      reviewed_at: 1758938350343
       type: method-name
   - target: $["paths"]["/v3/teams/{teamId}"]["delete"]
     update:
@@ -1607,6 +2021,8 @@ actions:
     x-speakeasy-metadata:
       after: sdk.teams.delete()
       before: sdk.Teams.Teams_removeTeam()
+      created_at: 1758938265544
+      reviewed_at: 1758938350343
       type: method-name
   - target: $["paths"]["/v3/refresh-token"]["post"]
     update:
@@ -1615,6 +2031,8 @@ actions:
     x-speakeasy-metadata:
       after: sdk.tokens.createUserToken()
       before: sdk.Users/Api Token.Users_createToken()
+      created_at: 1758938265544
+      reviewed_at: 1758938350343
       type: method-name
   - target: $["paths"]["/v3/global-event-rules"]["post"]
     update:
@@ -1623,6 +2041,8 @@ actions:
     x-speakeasy-metadata:
       after: sdk.globalEventRules.create()
       before: sdk.Global Event Rules.GlobalEventRules_createGlobalEventRule()
+      created_at: 1758938265544
+      reviewed_at: 1758938350343
       type: method-name
   - target: $["paths"]["/v3/refresh-token"]["get"]
     update:
@@ -1631,6 +2051,8 @@ actions:
     x-speakeasy-metadata:
       after: sdk.apiTokens.list()
       before: sdk.Users/Api Token.Users_getAllTokens()
+      created_at: 1758938265544
+      reviewed_at: 1758938350343
       type: method-name
   - target: $["paths"]["/v3/users/roles"]["get"]
     update:
@@ -1638,6 +2060,8 @@ actions:
     x-speakeasy-metadata:
       after: sdk.users.getRoles()
       before: sdk.Users.Users_getUserRoles()
+      created_at: 1758938265544
+      reviewed_at: 1758938350343
       type: method-name
   - target: $["paths"]["/v3/incidents/{incidentID}/postmortem"]["post"]
     update:
@@ -1646,6 +2070,8 @@ actions:
     x-speakeasy-metadata:
       after: sdk.incidents.postmortems.create()
       before: sdk.Incidents/Postmortems.Postmortems_createPostmortem()
+      created_at: 1758938265544
+      reviewed_at: 1758938350343
       type: method-name
   - target: $["paths"]["/v4/squads"]["get"]
     update:
@@ -1654,6 +2080,8 @@ actions:
     x-speakeasy-metadata:
       after: sdk.squads.list()
       before: sdk.Squads/V4.Squads_getAllSquads()
+      created_at: 1758938265544
+      reviewed_at: 1758938350343
       type: method-name
   - target: $["paths"]["/v3/incidents/resolve"]["post"]
     update:
@@ -1661,6 +2089,8 @@ actions:
     x-speakeasy-metadata:
       after: sdk.incidents.bulkResolve()
       before: sdk.Incidents.Incidents_bulkResolveIncidents()
+      created_at: 1758938265544
+      reviewed_at: 1758938350343
       type: method-name
   - target: $["paths"]["/v4/schedules/{scheduleID}/overrides/{overrideID}"]["get"]
     update:
@@ -1668,6 +2098,8 @@ actions:
     x-speakeasy-metadata:
       after: sdk.overrides.getById()
       before: sdk.Overrides.Overrides_getOverrideById()
+      created_at: 1758938265544
+      reviewed_at: 1758938350343
       type: method-name
   - target: $["paths"]["/v3/incidents/{incidentID}/events"]["get"]
     update:
@@ -1676,6 +2108,8 @@ actions:
     x-speakeasy-metadata:
       after: sdk.incidents.events.list()
       before: sdk.Incidents.Incidents_getIncidentEvents()
+      created_at: 1758938265544
+      reviewed_at: 1758938350343
       type: method-name
   - target: $["paths"]["/v3/runbooks/{runbookID}"]["delete"]
     update:
@@ -1683,6 +2117,8 @@ actions:
     x-speakeasy-metadata:
       after: sdk.runbooks.remove()
       before: sdk.Runbooks.Runbooks_removeRunbook()
+      created_at: 1758938265544
+      reviewed_at: 1758938350344
       type: method-name
   - target: $["paths"]["/v3/teams"]["get"]
     update:
@@ -1690,6 +2126,8 @@ actions:
     x-speakeasy-metadata:
       after: sdk.teams.getAll()
       before: sdk.Teams.Teams_getAllTeams()
+      created_at: 1758938265544
+      reviewed_at: 1758938350344
       type: method-name
   - target: $["paths"]["/v3/incidents/export"]["get"]
     update:
@@ -1697,6 +2135,8 @@ actions:
     x-speakeasy-metadata:
       after: sdk.incidents.export()
       before: sdk.Incidents.Incidents_incidentExport()
+      created_at: 1758938265544
+      reviewed_at: 1758938350344
       type: method-name
   - target: $["paths"]["/v3/slo"]["get"]
     update:
@@ -1705,6 +2145,8 @@ actions:
     x-speakeasy-metadata:
       after: sdk.slos.listAll()
       before: sdk.SLOs.SLO_getAllSLOs()
+      created_at: 1758938265544
+      reviewed_at: 1758938350344
       type: method-name
   - target: $["paths"]["/v3/slo/{sloID}/incident"]["post"]
     update:
@@ -1713,6 +2155,8 @@ actions:
     x-speakeasy-metadata:
       after: sdk.slos.markAffected()
       before: sdk.SLOs.SLO_markSLOAffected()
+      created_at: 1758938265544
+      reviewed_at: 1758938350344
       type: method-name
   - target: $["paths"]["/v3/services/{serviceID}/apta-config"]["put"]
     update:
@@ -1720,6 +2164,8 @@ actions:
     x-speakeasy-metadata:
       after: sdk.services.createOrUpdateAptaConfig()
       before: sdk.Services.Services_createOrUpdateAPTAConfig()
+      created_at: 1758938265544
+      reviewed_at: 1758938350344
       type: method-name
   - target: $["paths"]["/v4/statuspages/{statuspageID}/groups"]["get"]
     update:
@@ -1728,6 +2174,8 @@ actions:
     x-speakeasy-metadata:
       after: sdk.statusPages.componentGroups.list()
       before: sdk.Status Pages/Component groups.ComponentGroups_listComponentGroups()
+      created_at: 1758938265544
+      reviewed_at: 1758938350344
       type: method-name
   - target: $["paths"]["/v3/services/{serviceID}/notification-delay-config"]["put"]
     update:
@@ -1735,6 +2183,8 @@ actions:
     x-speakeasy-metadata:
       after: sdk.services.updateNotificationDelayConfig()
       before: sdk.Services.Services_delayedNotificationConfig()
+      created_at: 1758938265544
+      reviewed_at: 1758938350344
       type: method-name
   - target: $["paths"]["/v4/schedules/{scheduleID}/ical-link"]["patch"]
     update:
@@ -1743,14 +2193,18 @@ actions:
     x-speakeasy-metadata:
       after: sdk.schedules.refreshIcalLink()
       before: sdk.Schedule/Export Schedule.Export_refreshScheduleIcalLink()
+      created_at: 1758938265544
+      reviewed_at: 1758938350344
       type: method-name
   - target: $["paths"]["/v3/global-event-rules/{ger_id}/rulesets"]["post"]
     update:
-      x-speakeasy-name-override: create
       x-speakeasy-group: globalEventRules.rulesets
+      x-speakeasy-name-override: create
     x-speakeasy-metadata:
       after: sdk.globalEventRules.rulesets.create()
       before: sdk.Global Event Rules/Rulesets.GlobalEventRules_createRuleset()
+      created_at: 1758938265544
+      reviewed_at: 1758938350344
       type: method-name
   - target: $["paths"]["/v3/incidents/{IncidentId}/tags"]["put"]
     update:
@@ -1759,6 +2213,8 @@ actions:
     x-speakeasy-metadata:
       after: sdk.incidents.tags.update()
       before: sdk.Incidents/Tags.Tags_updateTag()
+      created_at: 1758938265544
+      reviewed_at: 1758938350344
       type: method-name
   - target: $["paths"]["/v3/workflows/{workflowID}"]["patch"]
     update:
@@ -1766,4 +2222,15 @@ actions:
     x-speakeasy-metadata:
       after: sdk.workflows.update()
       before: sdk.Workflows.Workflows_updateWorkflow()
+      created_at: 1758938265544
+      reviewed_at: 1758938350344
+      type: method-name
+  - target: $["paths"]["/v4/squads/{squadID}"]["delete"]
+    update:
+      x-speakeasy-name-override: delete
+    x-speakeasy-metadata:
+      after: sdk.squads.delete()
+      before: sdk.Squads.Squads_deleteSquad()
+      created_at: 1758938430845
+      reviewed_at: 1758938435492
       type: method-name

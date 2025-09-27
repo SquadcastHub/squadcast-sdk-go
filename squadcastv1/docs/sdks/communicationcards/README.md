@@ -60,20 +60,20 @@ func main() {
 
 ### Errors
 
-| Error Type                                                                                | Status Code                                                                               | Content Type                                                                              |
-| ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- |
-| apierrors.CommunicationCardsCreateSlackChannelInCommunicationCardBadRequestError          | 400                                                                                       | application/json                                                                          |
-| apierrors.CommunicationCardsCreateSlackChannelInCommunicationCardUnauthorizedError        | 401                                                                                       | application/json                                                                          |
-| apierrors.CommunicationCardsCreateSlackChannelInCommunicationCardPaymentRequiredError     | 402                                                                                       | application/json                                                                          |
-| apierrors.CommunicationCardsCreateSlackChannelInCommunicationCardForbiddenError           | 403                                                                                       | application/json                                                                          |
-| apierrors.CommunicationCardsCreateSlackChannelInCommunicationCardNotFoundError            | 404                                                                                       | application/json                                                                          |
-| apierrors.CommunicationCardsCreateSlackChannelInCommunicationCardConflictError            | 409                                                                                       | application/json                                                                          |
-| apierrors.CommunicationCardsCreateSlackChannelInCommunicationCardUnprocessableEntityError | 422                                                                                       | application/json                                                                          |
-| apierrors.CommunicationCardsCreateSlackChannelInCommunicationCardInternalServerError      | 500                                                                                       | application/json                                                                          |
-| apierrors.CommunicationCardsCreateSlackChannelInCommunicationCardBadGatewayError          | 502                                                                                       | application/json                                                                          |
-| apierrors.CommunicationCardsCreateSlackChannelInCommunicationCardServiceUnavailableError  | 503                                                                                       | application/json                                                                          |
-| apierrors.CommunicationCardsCreateSlackChannelInCommunicationCardGatewayTimeoutError      | 504                                                                                       | application/json                                                                          |
-| apierrors.APIError                                                                        | 4XX, 5XX                                                                                  | \*/\*                                                                                     |
+| Error Type                         | Status Code                        | Content Type                       |
+| ---------------------------------- | ---------------------------------- | ---------------------------------- |
+| apierrors.BadRequestError          | 400                                | application/json                   |
+| apierrors.UnauthorizedError        | 401                                | application/json                   |
+| apierrors.PaymentRequiredError     | 402                                | application/json                   |
+| apierrors.ForbiddenError           | 403                                | application/json                   |
+| apierrors.NotFoundError            | 404                                | application/json                   |
+| apierrors.ConflictError            | 409                                | application/json                   |
+| apierrors.UnprocessableEntityError | 422                                | application/json                   |
+| apierrors.InternalServerError      | 500                                | application/json                   |
+| apierrors.BadGatewayError          | 502                                | application/json                   |
+| apierrors.ServiceUnavailableError  | 503                                | application/json                   |
+| apierrors.GatewayTimeoutError      | 504                                | application/json                   |
+| apierrors.APIError                 | 4XX, 5XX                           | \*/\*                              |
 
 ## ArchiveSlackChannel
 
@@ -126,17 +126,17 @@ func main() {
 
 ### Errors
 
-| Error Type                                                              | Status Code                                                             | Content Type                                                            |
-| ----------------------------------------------------------------------- | ----------------------------------------------------------------------- | ----------------------------------------------------------------------- |
-| apierrors.CommunicationCardsArchiveSlackChannelBadRequestError          | 400                                                                     | application/json                                                        |
-| apierrors.CommunicationCardsArchiveSlackChannelUnauthorizedError        | 401                                                                     | application/json                                                        |
-| apierrors.CommunicationCardsArchiveSlackChannelPaymentRequiredError     | 402                                                                     | application/json                                                        |
-| apierrors.CommunicationCardsArchiveSlackChannelForbiddenError           | 403                                                                     | application/json                                                        |
-| apierrors.CommunicationCardsArchiveSlackChannelNotFoundError            | 404                                                                     | application/json                                                        |
-| apierrors.CommunicationCardsArchiveSlackChannelConflictError            | 409                                                                     | application/json                                                        |
-| apierrors.CommunicationCardsArchiveSlackChannelUnprocessableEntityError | 422                                                                     | application/json                                                        |
-| apierrors.CommunicationCardsArchiveSlackChannelInternalServerError      | 500                                                                     | application/json                                                        |
-| apierrors.CommunicationCardsArchiveSlackChannelBadGatewayError          | 502                                                                     | application/json                                                        |
-| apierrors.CommunicationCardsArchiveSlackChannelServiceUnavailableError  | 503                                                                     | application/json                                                        |
-| apierrors.CommunicationCardsArchiveSlackChannelGatewayTimeoutError      | 504                                                                     | application/json                                                        |
-| apierrors.APIError                                                      | 4XX, 5XX                                                                | \*/\*                                                                   |
+| Error Type                         | Status Code                        | Content Type                       |
+| ---------------------------------- | ---------------------------------- | ---------------------------------- |
+| apierrors.BadRequestError          | 400                                | application/json                   |
+| apierrors.UnauthorizedError        | 401                                | application/json                   |
+| apierrors.PaymentRequiredError     | 402                                | application/json                   |
+| apierrors.ForbiddenError           | 403                                | application/json                   |
+| apierrors.NotFoundError            | 404                                | application/json                   |
+| apierrors.ConflictError            | 409                                | application/json                   |
+| apierrors.UnprocessableEntityError | 422                                | application/json                   |
+| apierrors.InternalServerError      | 500                                | application/json                   |
+| apierrors.BadGatewayError          | 502                                | application/json                   |
+| apierrors.ServiceUnavailableError  | 503                                | application/json                   |
+| apierrors.GatewayTimeoutError      | 504                                | application/json                   |
+| apierrors.APIError                 | 4XX, 5XX                           | \*/\*                              |

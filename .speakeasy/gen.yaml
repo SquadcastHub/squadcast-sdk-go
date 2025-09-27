@@ -5,6 +5,7 @@ generation:
     schemaPath: .speakeasy/out.openapi.yaml
   sdkClassName: SquadcastSdk
   maintainOpenAPIOrder: true
+  deduplicateErrors: true
   usageSnippets:
     optionalPropertyRendering: withExample
     sdkInitStyle: constructor
@@ -27,7 +28,7 @@ generation:
     generateNewTests: true
     skipResponseBodyAssertions: false
 go:
-  version: 1.1.1
+  version: 1.1.6
   additionalDependencies: {}
   allowUnknownFieldsInWeakUnions: false
   baseErrorName: SquadcastSDKError

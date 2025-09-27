@@ -223,7 +223,7 @@ func (s *SuppressionRules) Get(ctx context.Context, serviceID string, opts ...op
 				return nil, err
 			}
 
-			var out apierrors.SuppressionRulesGetSuppressionRulesBadRequestError
+			var out apierrors.BadRequestError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -248,7 +248,7 @@ func (s *SuppressionRules) Get(ctx context.Context, serviceID string, opts ...op
 				return nil, err
 			}
 
-			var out apierrors.SuppressionRulesGetSuppressionRulesUnauthorizedError
+			var out apierrors.UnauthorizedError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -273,7 +273,7 @@ func (s *SuppressionRules) Get(ctx context.Context, serviceID string, opts ...op
 				return nil, err
 			}
 
-			var out apierrors.SuppressionRulesGetSuppressionRulesPaymentRequiredError
+			var out apierrors.PaymentRequiredError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -298,7 +298,7 @@ func (s *SuppressionRules) Get(ctx context.Context, serviceID string, opts ...op
 				return nil, err
 			}
 
-			var out apierrors.SuppressionRulesGetSuppressionRulesForbiddenError
+			var out apierrors.ForbiddenError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -323,7 +323,7 @@ func (s *SuppressionRules) Get(ctx context.Context, serviceID string, opts ...op
 				return nil, err
 			}
 
-			var out apierrors.SuppressionRulesGetSuppressionRulesNotFoundError
+			var out apierrors.NotFoundError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -348,7 +348,7 @@ func (s *SuppressionRules) Get(ctx context.Context, serviceID string, opts ...op
 				return nil, err
 			}
 
-			var out apierrors.SuppressionRulesGetSuppressionRulesConflictError
+			var out apierrors.ConflictError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -373,7 +373,7 @@ func (s *SuppressionRules) Get(ctx context.Context, serviceID string, opts ...op
 				return nil, err
 			}
 
-			var out apierrors.SuppressionRulesGetSuppressionRulesUnprocessableEntityError
+			var out apierrors.UnprocessableEntityError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -398,7 +398,7 @@ func (s *SuppressionRules) Get(ctx context.Context, serviceID string, opts ...op
 				return nil, err
 			}
 
-			var out apierrors.SuppressionRulesGetSuppressionRulesInternalServerError
+			var out apierrors.InternalServerError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -423,7 +423,7 @@ func (s *SuppressionRules) Get(ctx context.Context, serviceID string, opts ...op
 				return nil, err
 			}
 
-			var out apierrors.SuppressionRulesGetSuppressionRulesBadGatewayError
+			var out apierrors.BadGatewayError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -448,7 +448,7 @@ func (s *SuppressionRules) Get(ctx context.Context, serviceID string, opts ...op
 				return nil, err
 			}
 
-			var out apierrors.SuppressionRulesGetSuppressionRulesServiceUnavailableError
+			var out apierrors.ServiceUnavailableError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -473,7 +473,7 @@ func (s *SuppressionRules) Get(ctx context.Context, serviceID string, opts ...op
 				return nil, err
 			}
 
-			var out apierrors.SuppressionRulesGetSuppressionRulesGatewayTimeoutError
+			var out apierrors.GatewayTimeoutError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}

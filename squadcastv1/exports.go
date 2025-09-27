@@ -224,7 +224,7 @@ func (s *Exports) GetDetails(ctx context.Context, exportID string, opts ...opera
 				return nil, err
 			}
 
-			var out apierrors.ExportGetExportDetailsBadRequestError
+			var out apierrors.BadRequestError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -249,7 +249,7 @@ func (s *Exports) GetDetails(ctx context.Context, exportID string, opts ...opera
 				return nil, err
 			}
 
-			var out apierrors.ExportGetExportDetailsUnauthorizedError
+			var out apierrors.UnauthorizedError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -274,7 +274,7 @@ func (s *Exports) GetDetails(ctx context.Context, exportID string, opts ...opera
 				return nil, err
 			}
 
-			var out apierrors.ExportGetExportDetailsPaymentRequiredError
+			var out apierrors.PaymentRequiredError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -299,7 +299,7 @@ func (s *Exports) GetDetails(ctx context.Context, exportID string, opts ...opera
 				return nil, err
 			}
 
-			var out apierrors.ExportGetExportDetailsForbiddenError
+			var out apierrors.ForbiddenError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -324,7 +324,7 @@ func (s *Exports) GetDetails(ctx context.Context, exportID string, opts ...opera
 				return nil, err
 			}
 
-			var out apierrors.ExportGetExportDetailsNotFoundError
+			var out apierrors.NotFoundError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -349,7 +349,7 @@ func (s *Exports) GetDetails(ctx context.Context, exportID string, opts ...opera
 				return nil, err
 			}
 
-			var out apierrors.ExportGetExportDetailsConflictError
+			var out apierrors.ConflictError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -374,7 +374,7 @@ func (s *Exports) GetDetails(ctx context.Context, exportID string, opts ...opera
 				return nil, err
 			}
 
-			var out apierrors.ExportGetExportDetailsUnprocessableEntityError
+			var out apierrors.UnprocessableEntityError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -399,7 +399,7 @@ func (s *Exports) GetDetails(ctx context.Context, exportID string, opts ...opera
 				return nil, err
 			}
 
-			var out apierrors.ExportGetExportDetailsInternalServerError
+			var out apierrors.InternalServerError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -424,7 +424,7 @@ func (s *Exports) GetDetails(ctx context.Context, exportID string, opts ...opera
 				return nil, err
 			}
 
-			var out apierrors.ExportGetExportDetailsBadGatewayError
+			var out apierrors.BadGatewayError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -449,7 +449,7 @@ func (s *Exports) GetDetails(ctx context.Context, exportID string, opts ...opera
 				return nil, err
 			}
 
-			var out apierrors.ExportGetExportDetailsServiceUnavailableError
+			var out apierrors.ServiceUnavailableError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -474,7 +474,7 @@ func (s *Exports) GetDetails(ctx context.Context, exportID string, opts ...opera
 				return nil, err
 			}
 
-			var out apierrors.ExportGetExportDetailsGatewayTimeoutError
+			var out apierrors.GatewayTimeoutError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}

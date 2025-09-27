@@ -58,20 +58,20 @@ func main() {
 
 ### Errors
 
-| Error Type                                                                  | Status Code                                                                 | Content Type                                                                |
-| --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
-| apierrors.CommunicationCardsGetAllCommunicationCardBadRequestError          | 400                                                                         | application/json                                                            |
-| apierrors.CommunicationCardsGetAllCommunicationCardUnauthorizedError        | 401                                                                         | application/json                                                            |
-| apierrors.CommunicationCardsGetAllCommunicationCardPaymentRequiredError     | 402                                                                         | application/json                                                            |
-| apierrors.CommunicationCardsGetAllCommunicationCardForbiddenError           | 403                                                                         | application/json                                                            |
-| apierrors.CommunicationCardsGetAllCommunicationCardNotFoundError            | 404                                                                         | application/json                                                            |
-| apierrors.CommunicationCardsGetAllCommunicationCardConflictError            | 409                                                                         | application/json                                                            |
-| apierrors.CommunicationCardsGetAllCommunicationCardUnprocessableEntityError | 422                                                                         | application/json                                                            |
-| apierrors.CommunicationCardsGetAllCommunicationCardInternalServerError      | 500                                                                         | application/json                                                            |
-| apierrors.CommunicationCardsGetAllCommunicationCardBadGatewayError          | 502                                                                         | application/json                                                            |
-| apierrors.CommunicationCardsGetAllCommunicationCardServiceUnavailableError  | 503                                                                         | application/json                                                            |
-| apierrors.CommunicationCardsGetAllCommunicationCardGatewayTimeoutError      | 504                                                                         | application/json                                                            |
-| apierrors.APIError                                                          | 4XX, 5XX                                                                    | \*/\*                                                                       |
+| Error Type                         | Status Code                        | Content Type                       |
+| ---------------------------------- | ---------------------------------- | ---------------------------------- |
+| apierrors.BadRequestError          | 400                                | application/json                   |
+| apierrors.UnauthorizedError        | 401                                | application/json                   |
+| apierrors.PaymentRequiredError     | 402                                | application/json                   |
+| apierrors.ForbiddenError           | 403                                | application/json                   |
+| apierrors.NotFoundError            | 404                                | application/json                   |
+| apierrors.ConflictError            | 409                                | application/json                   |
+| apierrors.UnprocessableEntityError | 422                                | application/json                   |
+| apierrors.InternalServerError      | 500                                | application/json                   |
+| apierrors.BadGatewayError          | 502                                | application/json                   |
+| apierrors.ServiceUnavailableError  | 503                                | application/json                   |
+| apierrors.GatewayTimeoutError      | 504                                | application/json                   |
+| apierrors.APIError                 | 4XX, 5XX                           | \*/\*                              |
 
 ## Create
 
@@ -127,20 +127,20 @@ func main() {
 
 ### Errors
 
-| Error Type                                                                  | Status Code                                                                 | Content Type                                                                |
-| --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
-| apierrors.CommunicationCardsCreateCommunicationCardBadRequestError          | 400                                                                         | application/json                                                            |
-| apierrors.CommunicationCardsCreateCommunicationCardUnauthorizedError        | 401                                                                         | application/json                                                            |
-| apierrors.CommunicationCardsCreateCommunicationCardPaymentRequiredError     | 402                                                                         | application/json                                                            |
-| apierrors.CommunicationCardsCreateCommunicationCardForbiddenError           | 403                                                                         | application/json                                                            |
-| apierrors.CommunicationCardsCreateCommunicationCardNotFoundError            | 404                                                                         | application/json                                                            |
-| apierrors.CommunicationCardsCreateCommunicationCardConflictError            | 409                                                                         | application/json                                                            |
-| apierrors.CommunicationCardsCreateCommunicationCardUnprocessableEntityError | 422                                                                         | application/json                                                            |
-| apierrors.CommunicationCardsCreateCommunicationCardInternalServerError      | 500                                                                         | application/json                                                            |
-| apierrors.CommunicationCardsCreateCommunicationCardBadGatewayError          | 502                                                                         | application/json                                                            |
-| apierrors.CommunicationCardsCreateCommunicationCardServiceUnavailableError  | 503                                                                         | application/json                                                            |
-| apierrors.CommunicationCardsCreateCommunicationCardGatewayTimeoutError      | 504                                                                         | application/json                                                            |
-| apierrors.APIError                                                          | 4XX, 5XX                                                                    | \*/\*                                                                       |
+| Error Type                         | Status Code                        | Content Type                       |
+| ---------------------------------- | ---------------------------------- | ---------------------------------- |
+| apierrors.BadRequestError          | 400                                | application/json                   |
+| apierrors.UnauthorizedError        | 401                                | application/json                   |
+| apierrors.PaymentRequiredError     | 402                                | application/json                   |
+| apierrors.ForbiddenError           | 403                                | application/json                   |
+| apierrors.NotFoundError            | 404                                | application/json                   |
+| apierrors.ConflictError            | 409                                | application/json                   |
+| apierrors.UnprocessableEntityError | 422                                | application/json                   |
+| apierrors.InternalServerError      | 500                                | application/json                   |
+| apierrors.BadGatewayError          | 502                                | application/json                   |
+| apierrors.ServiceUnavailableError  | 503                                | application/json                   |
+| apierrors.GatewayTimeoutError      | 504                                | application/json                   |
+| apierrors.APIError                 | 4XX, 5XX                           | \*/\*                              |
 
 ## Delete
 
@@ -193,17 +193,17 @@ func main() {
 
 ### Errors
 
-| Error Type                                                                  | Status Code                                                                 | Content Type                                                                |
-| --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
-| apierrors.CommunicationCardsDeleteCommunicationCardBadRequestError          | 400                                                                         | application/json                                                            |
-| apierrors.CommunicationCardsDeleteCommunicationCardUnauthorizedError        | 401                                                                         | application/json                                                            |
-| apierrors.CommunicationCardsDeleteCommunicationCardPaymentRequiredError     | 402                                                                         | application/json                                                            |
-| apierrors.CommunicationCardsDeleteCommunicationCardForbiddenError           | 403                                                                         | application/json                                                            |
-| apierrors.CommunicationCardsDeleteCommunicationCardNotFoundError            | 404                                                                         | application/json                                                            |
-| apierrors.CommunicationCardsDeleteCommunicationCardConflictError            | 409                                                                         | application/json                                                            |
-| apierrors.CommunicationCardsDeleteCommunicationCardUnprocessableEntityError | 422                                                                         | application/json                                                            |
-| apierrors.CommunicationCardsDeleteCommunicationCardInternalServerError      | 500                                                                         | application/json                                                            |
-| apierrors.CommunicationCardsDeleteCommunicationCardBadGatewayError          | 502                                                                         | application/json                                                            |
-| apierrors.CommunicationCardsDeleteCommunicationCardServiceUnavailableError  | 503                                                                         | application/json                                                            |
-| apierrors.CommunicationCardsDeleteCommunicationCardGatewayTimeoutError      | 504                                                                         | application/json                                                            |
-| apierrors.APIError                                                          | 4XX, 5XX                                                                    | \*/\*                                                                       |
+| Error Type                         | Status Code                        | Content Type                       |
+| ---------------------------------- | ---------------------------------- | ---------------------------------- |
+| apierrors.BadRequestError          | 400                                | application/json                   |
+| apierrors.UnauthorizedError        | 401                                | application/json                   |
+| apierrors.PaymentRequiredError     | 402                                | application/json                   |
+| apierrors.ForbiddenError           | 403                                | application/json                   |
+| apierrors.NotFoundError            | 404                                | application/json                   |
+| apierrors.ConflictError            | 409                                | application/json                   |
+| apierrors.UnprocessableEntityError | 422                                | application/json                   |
+| apierrors.InternalServerError      | 500                                | application/json                   |
+| apierrors.BadGatewayError          | 502                                | application/json                   |
+| apierrors.ServiceUnavailableError  | 503                                | application/json                   |
+| apierrors.GatewayTimeoutError      | 504                                | application/json                   |
+| apierrors.APIError                 | 4XX, 5XX                           | \*/\*                              |

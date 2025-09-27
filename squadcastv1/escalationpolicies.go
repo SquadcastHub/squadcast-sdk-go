@@ -232,7 +232,7 @@ func (s *EscalationPolicies) GetByTeam(ctx context.Context, ownerID string, page
 				return nil, err
 			}
 
-			var out apierrors.EscalationPoliciesGetEscalationPolicyByTeamBadRequestError
+			var out apierrors.BadRequestError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -257,7 +257,7 @@ func (s *EscalationPolicies) GetByTeam(ctx context.Context, ownerID string, page
 				return nil, err
 			}
 
-			var out apierrors.EscalationPoliciesGetEscalationPolicyByTeamUnauthorizedError
+			var out apierrors.UnauthorizedError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -282,7 +282,7 @@ func (s *EscalationPolicies) GetByTeam(ctx context.Context, ownerID string, page
 				return nil, err
 			}
 
-			var out apierrors.EscalationPoliciesGetEscalationPolicyByTeamPaymentRequiredError
+			var out apierrors.PaymentRequiredError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -307,7 +307,7 @@ func (s *EscalationPolicies) GetByTeam(ctx context.Context, ownerID string, page
 				return nil, err
 			}
 
-			var out apierrors.EscalationPoliciesGetEscalationPolicyByTeamForbiddenError
+			var out apierrors.ForbiddenError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -332,7 +332,7 @@ func (s *EscalationPolicies) GetByTeam(ctx context.Context, ownerID string, page
 				return nil, err
 			}
 
-			var out apierrors.EscalationPoliciesGetEscalationPolicyByTeamNotFoundError
+			var out apierrors.NotFoundError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -357,7 +357,7 @@ func (s *EscalationPolicies) GetByTeam(ctx context.Context, ownerID string, page
 				return nil, err
 			}
 
-			var out apierrors.EscalationPoliciesGetEscalationPolicyByTeamConflictError
+			var out apierrors.ConflictError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -382,7 +382,7 @@ func (s *EscalationPolicies) GetByTeam(ctx context.Context, ownerID string, page
 				return nil, err
 			}
 
-			var out apierrors.EscalationPoliciesGetEscalationPolicyByTeamUnprocessableEntityError
+			var out apierrors.UnprocessableEntityError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -407,7 +407,7 @@ func (s *EscalationPolicies) GetByTeam(ctx context.Context, ownerID string, page
 				return nil, err
 			}
 
-			var out apierrors.EscalationPoliciesGetEscalationPolicyByTeamInternalServerError
+			var out apierrors.InternalServerError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -432,7 +432,7 @@ func (s *EscalationPolicies) GetByTeam(ctx context.Context, ownerID string, page
 				return nil, err
 			}
 
-			var out apierrors.EscalationPoliciesGetEscalationPolicyByTeamBadGatewayError
+			var out apierrors.BadGatewayError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -457,7 +457,7 @@ func (s *EscalationPolicies) GetByTeam(ctx context.Context, ownerID string, page
 				return nil, err
 			}
 
-			var out apierrors.EscalationPoliciesGetEscalationPolicyByTeamServiceUnavailableError
+			var out apierrors.ServiceUnavailableError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -482,7 +482,7 @@ func (s *EscalationPolicies) GetByTeam(ctx context.Context, ownerID string, page
 				return nil, err
 			}
 
-			var out apierrors.EscalationPoliciesGetEscalationPolicyByTeamGatewayTimeoutError
+			var out apierrors.GatewayTimeoutError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -721,7 +721,7 @@ func (s *EscalationPolicies) Create(ctx context.Context, request components.V3Es
 				return nil, err
 			}
 
-			var out apierrors.EscalationPoliciesCreateEscalationPoliciesBadRequestError
+			var out apierrors.BadRequestError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -746,7 +746,7 @@ func (s *EscalationPolicies) Create(ctx context.Context, request components.V3Es
 				return nil, err
 			}
 
-			var out apierrors.EscalationPoliciesCreateEscalationPoliciesUnauthorizedError
+			var out apierrors.UnauthorizedError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -771,7 +771,7 @@ func (s *EscalationPolicies) Create(ctx context.Context, request components.V3Es
 				return nil, err
 			}
 
-			var out apierrors.EscalationPoliciesCreateEscalationPoliciesPaymentRequiredError
+			var out apierrors.PaymentRequiredError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -796,7 +796,7 @@ func (s *EscalationPolicies) Create(ctx context.Context, request components.V3Es
 				return nil, err
 			}
 
-			var out apierrors.EscalationPoliciesCreateEscalationPoliciesForbiddenError
+			var out apierrors.ForbiddenError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -821,7 +821,7 @@ func (s *EscalationPolicies) Create(ctx context.Context, request components.V3Es
 				return nil, err
 			}
 
-			var out apierrors.EscalationPoliciesCreateEscalationPoliciesNotFoundError
+			var out apierrors.NotFoundError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -846,7 +846,7 @@ func (s *EscalationPolicies) Create(ctx context.Context, request components.V3Es
 				return nil, err
 			}
 
-			var out apierrors.EscalationPoliciesCreateEscalationPoliciesConflictError
+			var out apierrors.ConflictError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -871,7 +871,7 @@ func (s *EscalationPolicies) Create(ctx context.Context, request components.V3Es
 				return nil, err
 			}
 
-			var out apierrors.EscalationPoliciesCreateEscalationPoliciesUnprocessableEntityError
+			var out apierrors.UnprocessableEntityError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -896,7 +896,7 @@ func (s *EscalationPolicies) Create(ctx context.Context, request components.V3Es
 				return nil, err
 			}
 
-			var out apierrors.EscalationPoliciesCreateEscalationPoliciesInternalServerError
+			var out apierrors.InternalServerError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -921,7 +921,7 @@ func (s *EscalationPolicies) Create(ctx context.Context, request components.V3Es
 				return nil, err
 			}
 
-			var out apierrors.EscalationPoliciesCreateEscalationPoliciesBadGatewayError
+			var out apierrors.BadGatewayError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -946,7 +946,7 @@ func (s *EscalationPolicies) Create(ctx context.Context, request components.V3Es
 				return nil, err
 			}
 
-			var out apierrors.EscalationPoliciesCreateEscalationPoliciesServiceUnavailableError
+			var out apierrors.ServiceUnavailableError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -971,7 +971,7 @@ func (s *EscalationPolicies) Create(ctx context.Context, request components.V3Es
 				return nil, err
 			}
 
-			var out apierrors.EscalationPoliciesCreateEscalationPoliciesGatewayTimeoutError
+			var out apierrors.GatewayTimeoutError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -1202,7 +1202,7 @@ func (s *EscalationPolicies) Remove(ctx context.Context, escalationPolicyID stri
 				return nil, err
 			}
 
-			var out apierrors.EscalationPoliciesRemoveEscalationPolicyBadRequestError
+			var out apierrors.BadRequestError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -1227,7 +1227,7 @@ func (s *EscalationPolicies) Remove(ctx context.Context, escalationPolicyID stri
 				return nil, err
 			}
 
-			var out apierrors.EscalationPoliciesRemoveEscalationPolicyUnauthorizedError
+			var out apierrors.UnauthorizedError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -1252,7 +1252,7 @@ func (s *EscalationPolicies) Remove(ctx context.Context, escalationPolicyID stri
 				return nil, err
 			}
 
-			var out apierrors.EscalationPoliciesRemoveEscalationPolicyPaymentRequiredError
+			var out apierrors.PaymentRequiredError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -1277,7 +1277,7 @@ func (s *EscalationPolicies) Remove(ctx context.Context, escalationPolicyID stri
 				return nil, err
 			}
 
-			var out apierrors.EscalationPoliciesRemoveEscalationPolicyForbiddenError
+			var out apierrors.ForbiddenError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -1302,7 +1302,7 @@ func (s *EscalationPolicies) Remove(ctx context.Context, escalationPolicyID stri
 				return nil, err
 			}
 
-			var out apierrors.EscalationPoliciesRemoveEscalationPolicyNotFoundError
+			var out apierrors.NotFoundError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -1327,7 +1327,7 @@ func (s *EscalationPolicies) Remove(ctx context.Context, escalationPolicyID stri
 				return nil, err
 			}
 
-			var out apierrors.EscalationPoliciesRemoveEscalationPolicyConflictError
+			var out apierrors.ConflictError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -1352,7 +1352,7 @@ func (s *EscalationPolicies) Remove(ctx context.Context, escalationPolicyID stri
 				return nil, err
 			}
 
-			var out apierrors.EscalationPoliciesRemoveEscalationPolicyUnprocessableEntityError
+			var out apierrors.UnprocessableEntityError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -1377,7 +1377,7 @@ func (s *EscalationPolicies) Remove(ctx context.Context, escalationPolicyID stri
 				return nil, err
 			}
 
-			var out apierrors.EscalationPoliciesRemoveEscalationPolicyInternalServerError
+			var out apierrors.InternalServerError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -1402,7 +1402,7 @@ func (s *EscalationPolicies) Remove(ctx context.Context, escalationPolicyID stri
 				return nil, err
 			}
 
-			var out apierrors.EscalationPoliciesRemoveEscalationPolicyBadGatewayError
+			var out apierrors.BadGatewayError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -1427,7 +1427,7 @@ func (s *EscalationPolicies) Remove(ctx context.Context, escalationPolicyID stri
 				return nil, err
 			}
 
-			var out apierrors.EscalationPoliciesRemoveEscalationPolicyServiceUnavailableError
+			var out apierrors.ServiceUnavailableError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -1452,7 +1452,7 @@ func (s *EscalationPolicies) Remove(ctx context.Context, escalationPolicyID stri
 				return nil, err
 			}
 
-			var out apierrors.EscalationPoliciesRemoveEscalationPolicyGatewayTimeoutError
+			var out apierrors.GatewayTimeoutError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -1688,7 +1688,7 @@ func (s *EscalationPolicies) GetByID(ctx context.Context, escalationPolicyID str
 				return nil, err
 			}
 
-			var out apierrors.EscalationPoliciesGetEscalationPolicyByIDBadRequestError
+			var out apierrors.BadRequestError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -1713,7 +1713,7 @@ func (s *EscalationPolicies) GetByID(ctx context.Context, escalationPolicyID str
 				return nil, err
 			}
 
-			var out apierrors.EscalationPoliciesGetEscalationPolicyByIDUnauthorizedError
+			var out apierrors.UnauthorizedError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -1738,7 +1738,7 @@ func (s *EscalationPolicies) GetByID(ctx context.Context, escalationPolicyID str
 				return nil, err
 			}
 
-			var out apierrors.EscalationPoliciesGetEscalationPolicyByIDPaymentRequiredError
+			var out apierrors.PaymentRequiredError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -1763,7 +1763,7 @@ func (s *EscalationPolicies) GetByID(ctx context.Context, escalationPolicyID str
 				return nil, err
 			}
 
-			var out apierrors.EscalationPoliciesGetEscalationPolicyByIDForbiddenError
+			var out apierrors.ForbiddenError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -1788,7 +1788,7 @@ func (s *EscalationPolicies) GetByID(ctx context.Context, escalationPolicyID str
 				return nil, err
 			}
 
-			var out apierrors.EscalationPoliciesGetEscalationPolicyByIDNotFoundError
+			var out apierrors.NotFoundError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -1813,7 +1813,7 @@ func (s *EscalationPolicies) GetByID(ctx context.Context, escalationPolicyID str
 				return nil, err
 			}
 
-			var out apierrors.EscalationPoliciesGetEscalationPolicyByIDConflictError
+			var out apierrors.ConflictError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -1838,7 +1838,7 @@ func (s *EscalationPolicies) GetByID(ctx context.Context, escalationPolicyID str
 				return nil, err
 			}
 
-			var out apierrors.EscalationPoliciesGetEscalationPolicyByIDUnprocessableEntityError
+			var out apierrors.UnprocessableEntityError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -1863,7 +1863,7 @@ func (s *EscalationPolicies) GetByID(ctx context.Context, escalationPolicyID str
 				return nil, err
 			}
 
-			var out apierrors.EscalationPoliciesGetEscalationPolicyByIDInternalServerError
+			var out apierrors.InternalServerError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -1888,7 +1888,7 @@ func (s *EscalationPolicies) GetByID(ctx context.Context, escalationPolicyID str
 				return nil, err
 			}
 
-			var out apierrors.EscalationPoliciesGetEscalationPolicyByIDBadGatewayError
+			var out apierrors.BadGatewayError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -1913,7 +1913,7 @@ func (s *EscalationPolicies) GetByID(ctx context.Context, escalationPolicyID str
 				return nil, err
 			}
 
-			var out apierrors.EscalationPoliciesGetEscalationPolicyByIDServiceUnavailableError
+			var out apierrors.ServiceUnavailableError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -1938,7 +1938,7 @@ func (s *EscalationPolicies) GetByID(ctx context.Context, escalationPolicyID str
 				return nil, err
 			}
 
-			var out apierrors.EscalationPoliciesGetEscalationPolicyByIDGatewayTimeoutError
+			var out apierrors.GatewayTimeoutError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -2182,7 +2182,7 @@ func (s *EscalationPolicies) Update(ctx context.Context, escalationPolicyID stri
 				return nil, err
 			}
 
-			var out apierrors.EscalationPoliciesUpdateEscalationPolicyBadRequestError
+			var out apierrors.BadRequestError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -2207,7 +2207,7 @@ func (s *EscalationPolicies) Update(ctx context.Context, escalationPolicyID stri
 				return nil, err
 			}
 
-			var out apierrors.EscalationPoliciesUpdateEscalationPolicyUnauthorizedError
+			var out apierrors.UnauthorizedError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -2232,7 +2232,7 @@ func (s *EscalationPolicies) Update(ctx context.Context, escalationPolicyID stri
 				return nil, err
 			}
 
-			var out apierrors.EscalationPoliciesUpdateEscalationPolicyPaymentRequiredError
+			var out apierrors.PaymentRequiredError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -2257,7 +2257,7 @@ func (s *EscalationPolicies) Update(ctx context.Context, escalationPolicyID stri
 				return nil, err
 			}
 
-			var out apierrors.EscalationPoliciesUpdateEscalationPolicyForbiddenError
+			var out apierrors.ForbiddenError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -2282,7 +2282,7 @@ func (s *EscalationPolicies) Update(ctx context.Context, escalationPolicyID stri
 				return nil, err
 			}
 
-			var out apierrors.EscalationPoliciesUpdateEscalationPolicyNotFoundError
+			var out apierrors.NotFoundError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -2307,7 +2307,7 @@ func (s *EscalationPolicies) Update(ctx context.Context, escalationPolicyID stri
 				return nil, err
 			}
 
-			var out apierrors.EscalationPoliciesUpdateEscalationPolicyConflictError
+			var out apierrors.ConflictError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -2332,7 +2332,7 @@ func (s *EscalationPolicies) Update(ctx context.Context, escalationPolicyID stri
 				return nil, err
 			}
 
-			var out apierrors.EscalationPoliciesUpdateEscalationPolicyUnprocessableEntityError
+			var out apierrors.UnprocessableEntityError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -2357,7 +2357,7 @@ func (s *EscalationPolicies) Update(ctx context.Context, escalationPolicyID stri
 				return nil, err
 			}
 
-			var out apierrors.EscalationPoliciesUpdateEscalationPolicyInternalServerError
+			var out apierrors.InternalServerError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -2382,7 +2382,7 @@ func (s *EscalationPolicies) Update(ctx context.Context, escalationPolicyID stri
 				return nil, err
 			}
 
-			var out apierrors.EscalationPoliciesUpdateEscalationPolicyBadGatewayError
+			var out apierrors.BadGatewayError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -2407,7 +2407,7 @@ func (s *EscalationPolicies) Update(ctx context.Context, escalationPolicyID stri
 				return nil, err
 			}
 
-			var out apierrors.EscalationPoliciesUpdateEscalationPolicyServiceUnavailableError
+			var out apierrors.ServiceUnavailableError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -2432,7 +2432,7 @@ func (s *EscalationPolicies) Update(ctx context.Context, escalationPolicyID stri
 				return nil, err
 			}
 
-			var out apierrors.EscalationPoliciesUpdateEscalationPolicyGatewayTimeoutError
+			var out apierrors.GatewayTimeoutError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}

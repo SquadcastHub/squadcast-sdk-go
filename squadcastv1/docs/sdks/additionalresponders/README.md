@@ -59,20 +59,20 @@ func main() {
 
 ### Errors
 
-| Error Type                                                                    | Status Code                                                                   | Content Type                                                                  |
-| ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
-| apierrors.AdditionalRespondersGetAdditionalRespondersBadRequestError          | 400                                                                           | application/json                                                              |
-| apierrors.AdditionalRespondersGetAdditionalRespondersUnauthorizedError        | 401                                                                           | application/json                                                              |
-| apierrors.AdditionalRespondersGetAdditionalRespondersPaymentRequiredError     | 402                                                                           | application/json                                                              |
-| apierrors.AdditionalRespondersGetAdditionalRespondersForbiddenError           | 403                                                                           | application/json                                                              |
-| apierrors.AdditionalRespondersGetAdditionalRespondersNotFoundError            | 404                                                                           | application/json                                                              |
-| apierrors.AdditionalRespondersGetAdditionalRespondersConflictError            | 409                                                                           | application/json                                                              |
-| apierrors.AdditionalRespondersGetAdditionalRespondersUnprocessableEntityError | 422                                                                           | application/json                                                              |
-| apierrors.AdditionalRespondersGetAdditionalRespondersInternalServerError      | 500                                                                           | application/json                                                              |
-| apierrors.AdditionalRespondersGetAdditionalRespondersBadGatewayError          | 502                                                                           | application/json                                                              |
-| apierrors.AdditionalRespondersGetAdditionalRespondersServiceUnavailableError  | 503                                                                           | application/json                                                              |
-| apierrors.AdditionalRespondersGetAdditionalRespondersGatewayTimeoutError      | 504                                                                           | application/json                                                              |
-| apierrors.APIError                                                            | 4XX, 5XX                                                                      | \*/\*                                                                         |
+| Error Type                         | Status Code                        | Content Type                       |
+| ---------------------------------- | ---------------------------------- | ---------------------------------- |
+| apierrors.BadRequestError          | 400                                | application/json                   |
+| apierrors.UnauthorizedError        | 401                                | application/json                   |
+| apierrors.PaymentRequiredError     | 402                                | application/json                   |
+| apierrors.ForbiddenError           | 403                                | application/json                   |
+| apierrors.NotFoundError            | 404                                | application/json                   |
+| apierrors.ConflictError            | 409                                | application/json                   |
+| apierrors.UnprocessableEntityError | 422                                | application/json                   |
+| apierrors.InternalServerError      | 500                                | application/json                   |
+| apierrors.BadGatewayError          | 502                                | application/json                   |
+| apierrors.ServiceUnavailableError  | 503                                | application/json                   |
+| apierrors.GatewayTimeoutError      | 504                                | application/json                   |
+| apierrors.APIError                 | 4XX, 5XX                           | \*/\*                              |
 
 ## Add
 
@@ -128,20 +128,20 @@ func main() {
 
 ### Errors
 
-| Error Type                                                                    | Status Code                                                                   | Content Type                                                                  |
-| ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
-| apierrors.AdditionalRespondersAddAdditionalRespondersBadRequestError          | 400                                                                           | application/json                                                              |
-| apierrors.AdditionalRespondersAddAdditionalRespondersUnauthorizedError        | 401                                                                           | application/json                                                              |
-| apierrors.AdditionalRespondersAddAdditionalRespondersPaymentRequiredError     | 402                                                                           | application/json                                                              |
-| apierrors.AdditionalRespondersAddAdditionalRespondersForbiddenError           | 403                                                                           | application/json                                                              |
-| apierrors.AdditionalRespondersAddAdditionalRespondersNotFoundError            | 404                                                                           | application/json                                                              |
-| apierrors.AdditionalRespondersAddAdditionalRespondersConflictError            | 409                                                                           | application/json                                                              |
-| apierrors.AdditionalRespondersAddAdditionalRespondersUnprocessableEntityError | 422                                                                           | application/json                                                              |
-| apierrors.AdditionalRespondersAddAdditionalRespondersInternalServerError      | 500                                                                           | application/json                                                              |
-| apierrors.AdditionalRespondersAddAdditionalRespondersBadGatewayError          | 502                                                                           | application/json                                                              |
-| apierrors.AdditionalRespondersAddAdditionalRespondersServiceUnavailableError  | 503                                                                           | application/json                                                              |
-| apierrors.AdditionalRespondersAddAdditionalRespondersGatewayTimeoutError      | 504                                                                           | application/json                                                              |
-| apierrors.APIError                                                            | 4XX, 5XX                                                                      | \*/\*                                                                         |
+| Error Type                         | Status Code                        | Content Type                       |
+| ---------------------------------- | ---------------------------------- | ---------------------------------- |
+| apierrors.BadRequestError          | 400                                | application/json                   |
+| apierrors.UnauthorizedError        | 401                                | application/json                   |
+| apierrors.PaymentRequiredError     | 402                                | application/json                   |
+| apierrors.ForbiddenError           | 403                                | application/json                   |
+| apierrors.NotFoundError            | 404                                | application/json                   |
+| apierrors.ConflictError            | 409                                | application/json                   |
+| apierrors.UnprocessableEntityError | 422                                | application/json                   |
+| apierrors.InternalServerError      | 500                                | application/json                   |
+| apierrors.BadGatewayError          | 502                                | application/json                   |
+| apierrors.ServiceUnavailableError  | 503                                | application/json                   |
+| apierrors.GatewayTimeoutError      | 504                                | application/json                   |
+| apierrors.APIError                 | 4XX, 5XX                           | \*/\*                              |
 
 ## Delete
 
@@ -194,17 +194,17 @@ func main() {
 
 ### Errors
 
-| Error Type                                                                       | Status Code                                                                      | Content Type                                                                     |
-| -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- |
-| apierrors.AdditionalRespondersRemoveAdditionalRespondersBadRequestError          | 400                                                                              | application/json                                                                 |
-| apierrors.AdditionalRespondersRemoveAdditionalRespondersUnauthorizedError        | 401                                                                              | application/json                                                                 |
-| apierrors.AdditionalRespondersRemoveAdditionalRespondersPaymentRequiredError     | 402                                                                              | application/json                                                                 |
-| apierrors.AdditionalRespondersRemoveAdditionalRespondersForbiddenError           | 403                                                                              | application/json                                                                 |
-| apierrors.AdditionalRespondersRemoveAdditionalRespondersNotFoundError            | 404                                                                              | application/json                                                                 |
-| apierrors.AdditionalRespondersRemoveAdditionalRespondersConflictError            | 409                                                                              | application/json                                                                 |
-| apierrors.AdditionalRespondersRemoveAdditionalRespondersUnprocessableEntityError | 422                                                                              | application/json                                                                 |
-| apierrors.AdditionalRespondersRemoveAdditionalRespondersInternalServerError      | 500                                                                              | application/json                                                                 |
-| apierrors.AdditionalRespondersRemoveAdditionalRespondersBadGatewayError          | 502                                                                              | application/json                                                                 |
-| apierrors.AdditionalRespondersRemoveAdditionalRespondersServiceUnavailableError  | 503                                                                              | application/json                                                                 |
-| apierrors.AdditionalRespondersRemoveAdditionalRespondersGatewayTimeoutError      | 504                                                                              | application/json                                                                 |
-| apierrors.APIError                                                               | 4XX, 5XX                                                                         | \*/\*                                                                            |
+| Error Type                         | Status Code                        | Content Type                       |
+| ---------------------------------- | ---------------------------------- | ---------------------------------- |
+| apierrors.BadRequestError          | 400                                | application/json                   |
+| apierrors.UnauthorizedError        | 401                                | application/json                   |
+| apierrors.PaymentRequiredError     | 402                                | application/json                   |
+| apierrors.ForbiddenError           | 403                                | application/json                   |
+| apierrors.NotFoundError            | 404                                | application/json                   |
+| apierrors.ConflictError            | 409                                | application/json                   |
+| apierrors.UnprocessableEntityError | 422                                | application/json                   |
+| apierrors.InternalServerError      | 500                                | application/json                   |
+| apierrors.BadGatewayError          | 502                                | application/json                   |
+| apierrors.ServiceUnavailableError  | 503                                | application/json                   |
+| apierrors.GatewayTimeoutError      | 504                                | application/json                   |
+| apierrors.APIError                 | 4XX, 5XX                           | \*/\*                              |

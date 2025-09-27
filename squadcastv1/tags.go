@@ -231,7 +231,7 @@ func (s *Tags) Update(ctx context.Context, incidentID string, v3IncidentsTagsUpd
 				return nil, err
 			}
 
-			var out apierrors.TagsUpdateTagBadRequestError
+			var out apierrors.BadRequestError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -256,7 +256,7 @@ func (s *Tags) Update(ctx context.Context, incidentID string, v3IncidentsTagsUpd
 				return nil, err
 			}
 
-			var out apierrors.TagsUpdateTagUnauthorizedError
+			var out apierrors.UnauthorizedError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -281,7 +281,7 @@ func (s *Tags) Update(ctx context.Context, incidentID string, v3IncidentsTagsUpd
 				return nil, err
 			}
 
-			var out apierrors.TagsUpdateTagPaymentRequiredError
+			var out apierrors.PaymentRequiredError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -306,7 +306,7 @@ func (s *Tags) Update(ctx context.Context, incidentID string, v3IncidentsTagsUpd
 				return nil, err
 			}
 
-			var out apierrors.TagsUpdateTagForbiddenError
+			var out apierrors.ForbiddenError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -331,7 +331,7 @@ func (s *Tags) Update(ctx context.Context, incidentID string, v3IncidentsTagsUpd
 				return nil, err
 			}
 
-			var out apierrors.TagsUpdateTagNotFoundError
+			var out apierrors.NotFoundError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -356,7 +356,7 @@ func (s *Tags) Update(ctx context.Context, incidentID string, v3IncidentsTagsUpd
 				return nil, err
 			}
 
-			var out apierrors.TagsUpdateTagConflictError
+			var out apierrors.ConflictError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -381,7 +381,7 @@ func (s *Tags) Update(ctx context.Context, incidentID string, v3IncidentsTagsUpd
 				return nil, err
 			}
 
-			var out apierrors.TagsUpdateTagUnprocessableEntityError
+			var out apierrors.UnprocessableEntityError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -406,7 +406,7 @@ func (s *Tags) Update(ctx context.Context, incidentID string, v3IncidentsTagsUpd
 				return nil, err
 			}
 
-			var out apierrors.TagsUpdateTagInternalServerError
+			var out apierrors.InternalServerError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -431,7 +431,7 @@ func (s *Tags) Update(ctx context.Context, incidentID string, v3IncidentsTagsUpd
 				return nil, err
 			}
 
-			var out apierrors.TagsUpdateTagBadGatewayError
+			var out apierrors.BadGatewayError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -456,7 +456,7 @@ func (s *Tags) Update(ctx context.Context, incidentID string, v3IncidentsTagsUpd
 				return nil, err
 			}
 
-			var out apierrors.TagsUpdateTagServiceUnavailableError
+			var out apierrors.ServiceUnavailableError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -481,7 +481,7 @@ func (s *Tags) Update(ctx context.Context, incidentID string, v3IncidentsTagsUpd
 				return nil, err
 			}
 
-			var out apierrors.TagsUpdateTagGatewayTimeoutError
+			var out apierrors.GatewayTimeoutError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -723,7 +723,7 @@ func (s *Tags) Append(ctx context.Context, incidentID string, v3IncidentsTagsApp
 				return nil, err
 			}
 
-			var out apierrors.TagsAppendTagBadRequestError
+			var out apierrors.BadRequestError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -748,7 +748,7 @@ func (s *Tags) Append(ctx context.Context, incidentID string, v3IncidentsTagsApp
 				return nil, err
 			}
 
-			var out apierrors.TagsAppendTagUnauthorizedError
+			var out apierrors.UnauthorizedError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -773,7 +773,7 @@ func (s *Tags) Append(ctx context.Context, incidentID string, v3IncidentsTagsApp
 				return nil, err
 			}
 
-			var out apierrors.TagsAppendTagPaymentRequiredError
+			var out apierrors.PaymentRequiredError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -798,7 +798,7 @@ func (s *Tags) Append(ctx context.Context, incidentID string, v3IncidentsTagsApp
 				return nil, err
 			}
 
-			var out apierrors.TagsAppendTagForbiddenError
+			var out apierrors.ForbiddenError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -823,7 +823,7 @@ func (s *Tags) Append(ctx context.Context, incidentID string, v3IncidentsTagsApp
 				return nil, err
 			}
 
-			var out apierrors.TagsAppendTagNotFoundError
+			var out apierrors.NotFoundError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -848,7 +848,7 @@ func (s *Tags) Append(ctx context.Context, incidentID string, v3IncidentsTagsApp
 				return nil, err
 			}
 
-			var out apierrors.TagsAppendTagConflictError
+			var out apierrors.ConflictError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -873,7 +873,7 @@ func (s *Tags) Append(ctx context.Context, incidentID string, v3IncidentsTagsApp
 				return nil, err
 			}
 
-			var out apierrors.TagsAppendTagUnprocessableEntityError
+			var out apierrors.UnprocessableEntityError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -898,7 +898,7 @@ func (s *Tags) Append(ctx context.Context, incidentID string, v3IncidentsTagsApp
 				return nil, err
 			}
 
-			var out apierrors.TagsAppendTagInternalServerError
+			var out apierrors.InternalServerError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -923,7 +923,7 @@ func (s *Tags) Append(ctx context.Context, incidentID string, v3IncidentsTagsApp
 				return nil, err
 			}
 
-			var out apierrors.TagsAppendTagBadGatewayError
+			var out apierrors.BadGatewayError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -948,7 +948,7 @@ func (s *Tags) Append(ctx context.Context, incidentID string, v3IncidentsTagsApp
 				return nil, err
 			}
 
-			var out apierrors.TagsAppendTagServiceUnavailableError
+			var out apierrors.ServiceUnavailableError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -973,7 +973,7 @@ func (s *Tags) Append(ctx context.Context, incidentID string, v3IncidentsTagsApp
 				return nil, err
 			}
 
-			var out apierrors.TagsAppendTagGatewayTimeoutError
+			var out apierrors.GatewayTimeoutError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}

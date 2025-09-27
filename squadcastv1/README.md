@@ -431,7 +431,7 @@ func main() {
 * [RemoveMember](docs/sdks/squads/README.md#removemember) - Remove Squad Member
 * [UpdateMemberRole](docs/sdks/squads/README.md#updatememberrole) - Update Squad Member
 * [UpdateName](docs/sdks/squads/README.md#updatename) - Update Squad Name
-* [SquadsDeleteSquad](docs/sdks/squads/README.md#squadsdeletesquad) - Delete Squad
+* [Delete](docs/sdks/squads/README.md#delete) - Delete Squad
 
 #### [Squads.V4](docs/sdks/squadsv4/README.md)
 
@@ -662,20 +662,20 @@ By Default, an API error will return `apierrors.APIError`. When custom error res
 
 For example, the `GetOrganization` function may return the following errors:
 
-| Error Type                                                 | Status Code | Content Type     |
-| ---------------------------------------------------------- | ----------- | ---------------- |
-| apierrors.AnalyticsGetOrgAnalyticsBadRequestError          | 400         | application/json |
-| apierrors.AnalyticsGetOrgAnalyticsUnauthorizedError        | 401         | application/json |
-| apierrors.AnalyticsGetOrgAnalyticsPaymentRequiredError     | 402         | application/json |
-| apierrors.AnalyticsGetOrgAnalyticsForbiddenError           | 403         | application/json |
-| apierrors.AnalyticsGetOrgAnalyticsNotFoundError            | 404         | application/json |
-| apierrors.AnalyticsGetOrgAnalyticsConflictError            | 409         | application/json |
-| apierrors.AnalyticsGetOrgAnalyticsUnprocessableEntityError | 422         | application/json |
-| apierrors.AnalyticsGetOrgAnalyticsInternalServerError      | 500         | application/json |
-| apierrors.AnalyticsGetOrgAnalyticsBadGatewayError          | 502         | application/json |
-| apierrors.AnalyticsGetOrgAnalyticsServiceUnavailableError  | 503         | application/json |
-| apierrors.AnalyticsGetOrgAnalyticsGatewayTimeoutError      | 504         | application/json |
-| apierrors.APIError                                         | 4XX, 5XX    | \*/\*            |
+| Error Type                         | Status Code | Content Type     |
+| ---------------------------------- | ----------- | ---------------- |
+| apierrors.BadRequestError          | 400         | application/json |
+| apierrors.UnauthorizedError        | 401         | application/json |
+| apierrors.PaymentRequiredError     | 402         | application/json |
+| apierrors.ForbiddenError           | 403         | application/json |
+| apierrors.NotFoundError            | 404         | application/json |
+| apierrors.ConflictError            | 409         | application/json |
+| apierrors.UnprocessableEntityError | 422         | application/json |
+| apierrors.InternalServerError      | 500         | application/json |
+| apierrors.BadGatewayError          | 502         | application/json |
+| apierrors.ServiceUnavailableError  | 503         | application/json |
+| apierrors.GatewayTimeoutError      | 504         | application/json |
+| apierrors.APIError                 | 4XX, 5XX    | \*/\*            |
 
 ### Example
 
@@ -701,67 +701,67 @@ func main() {
 	res, err := s.Analytics.GetOrganization(ctx, "<value>", "<value>", nil, nil)
 	if err != nil {
 
-		var e *apierrors.AnalyticsGetOrgAnalyticsBadRequestError
+		var e *apierrors.BadRequestError
 		if errors.As(err, &e) {
 			// handle error
 			log.Fatal(e.Error())
 		}
 
-		var e *apierrors.AnalyticsGetOrgAnalyticsUnauthorizedError
+		var e *apierrors.UnauthorizedError
 		if errors.As(err, &e) {
 			// handle error
 			log.Fatal(e.Error())
 		}
 
-		var e *apierrors.AnalyticsGetOrgAnalyticsPaymentRequiredError
+		var e *apierrors.PaymentRequiredError
 		if errors.As(err, &e) {
 			// handle error
 			log.Fatal(e.Error())
 		}
 
-		var e *apierrors.AnalyticsGetOrgAnalyticsForbiddenError
+		var e *apierrors.ForbiddenError
 		if errors.As(err, &e) {
 			// handle error
 			log.Fatal(e.Error())
 		}
 
-		var e *apierrors.AnalyticsGetOrgAnalyticsNotFoundError
+		var e *apierrors.NotFoundError
 		if errors.As(err, &e) {
 			// handle error
 			log.Fatal(e.Error())
 		}
 
-		var e *apierrors.AnalyticsGetOrgAnalyticsConflictError
+		var e *apierrors.ConflictError
 		if errors.As(err, &e) {
 			// handle error
 			log.Fatal(e.Error())
 		}
 
-		var e *apierrors.AnalyticsGetOrgAnalyticsUnprocessableEntityError
+		var e *apierrors.UnprocessableEntityError
 		if errors.As(err, &e) {
 			// handle error
 			log.Fatal(e.Error())
 		}
 
-		var e *apierrors.AnalyticsGetOrgAnalyticsInternalServerError
+		var e *apierrors.InternalServerError
 		if errors.As(err, &e) {
 			// handle error
 			log.Fatal(e.Error())
 		}
 
-		var e *apierrors.AnalyticsGetOrgAnalyticsBadGatewayError
+		var e *apierrors.BadGatewayError
 		if errors.As(err, &e) {
 			// handle error
 			log.Fatal(e.Error())
 		}
 
-		var e *apierrors.AnalyticsGetOrgAnalyticsServiceUnavailableError
+		var e *apierrors.ServiceUnavailableError
 		if errors.As(err, &e) {
 			// handle error
 			log.Fatal(e.Error())
 		}
 
-		var e *apierrors.AnalyticsGetOrgAnalyticsGatewayTimeoutError
+		var e *apierrors.GatewayTimeoutError
 		if errors.As(err, &e) {
 			// handle error
 			log.Fatal(e.Error())

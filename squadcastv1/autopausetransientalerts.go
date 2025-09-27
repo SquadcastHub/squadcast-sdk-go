@@ -223,7 +223,7 @@ func (s *AutoPauseTransientAlerts) MarkAsNotTransient(ctx context.Context, incid
 				return nil, err
 			}
 
-			var out apierrors.AptaMarkAsNotTransientBadRequestError
+			var out apierrors.BadRequestError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -248,7 +248,7 @@ func (s *AutoPauseTransientAlerts) MarkAsNotTransient(ctx context.Context, incid
 				return nil, err
 			}
 
-			var out apierrors.AptaMarkAsNotTransientUnauthorizedError
+			var out apierrors.UnauthorizedError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -273,7 +273,7 @@ func (s *AutoPauseTransientAlerts) MarkAsNotTransient(ctx context.Context, incid
 				return nil, err
 			}
 
-			var out apierrors.AptaMarkAsNotTransientPaymentRequiredError
+			var out apierrors.PaymentRequiredError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -298,7 +298,7 @@ func (s *AutoPauseTransientAlerts) MarkAsNotTransient(ctx context.Context, incid
 				return nil, err
 			}
 
-			var out apierrors.AptaMarkAsNotTransientForbiddenError
+			var out apierrors.ForbiddenError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -323,7 +323,7 @@ func (s *AutoPauseTransientAlerts) MarkAsNotTransient(ctx context.Context, incid
 				return nil, err
 			}
 
-			var out apierrors.AptaMarkAsNotTransientNotFoundError
+			var out apierrors.NotFoundError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -348,7 +348,7 @@ func (s *AutoPauseTransientAlerts) MarkAsNotTransient(ctx context.Context, incid
 				return nil, err
 			}
 
-			var out apierrors.AptaMarkAsNotTransientConflictError
+			var out apierrors.ConflictError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -373,7 +373,7 @@ func (s *AutoPauseTransientAlerts) MarkAsNotTransient(ctx context.Context, incid
 				return nil, err
 			}
 
-			var out apierrors.AptaMarkAsNotTransientUnprocessableEntityError
+			var out apierrors.UnprocessableEntityError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -398,7 +398,7 @@ func (s *AutoPauseTransientAlerts) MarkAsNotTransient(ctx context.Context, incid
 				return nil, err
 			}
 
-			var out apierrors.AptaMarkAsNotTransientInternalServerError
+			var out apierrors.InternalServerError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -423,7 +423,7 @@ func (s *AutoPauseTransientAlerts) MarkAsNotTransient(ctx context.Context, incid
 				return nil, err
 			}
 
-			var out apierrors.AptaMarkAsNotTransientBadGatewayError
+			var out apierrors.BadGatewayError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -448,7 +448,7 @@ func (s *AutoPauseTransientAlerts) MarkAsNotTransient(ctx context.Context, incid
 				return nil, err
 			}
 
-			var out apierrors.AptaMarkAsNotTransientServiceUnavailableError
+			var out apierrors.ServiceUnavailableError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -473,7 +473,7 @@ func (s *AutoPauseTransientAlerts) MarkAsNotTransient(ctx context.Context, incid
 				return nil, err
 			}
 
-			var out apierrors.AptaMarkAsNotTransientGatewayTimeoutError
+			var out apierrors.GatewayTimeoutError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}

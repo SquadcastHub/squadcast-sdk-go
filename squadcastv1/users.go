@@ -225,7 +225,7 @@ func (s *Users) GetAll(ctx context.Context, opts ...operations.Option) (*operati
 				return nil, err
 			}
 
-			var out apierrors.UsersGetAllUsersBadRequestError
+			var out apierrors.BadRequestError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -250,7 +250,7 @@ func (s *Users) GetAll(ctx context.Context, opts ...operations.Option) (*operati
 				return nil, err
 			}
 
-			var out apierrors.UsersGetAllUsersUnauthorizedError
+			var out apierrors.UnauthorizedError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -275,7 +275,7 @@ func (s *Users) GetAll(ctx context.Context, opts ...operations.Option) (*operati
 				return nil, err
 			}
 
-			var out apierrors.UsersGetAllUsersPaymentRequiredError
+			var out apierrors.PaymentRequiredError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -300,7 +300,7 @@ func (s *Users) GetAll(ctx context.Context, opts ...operations.Option) (*operati
 				return nil, err
 			}
 
-			var out apierrors.UsersGetAllUsersForbiddenError
+			var out apierrors.ForbiddenError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -325,7 +325,7 @@ func (s *Users) GetAll(ctx context.Context, opts ...operations.Option) (*operati
 				return nil, err
 			}
 
-			var out apierrors.UsersGetAllUsersNotFoundError
+			var out apierrors.NotFoundError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -350,7 +350,7 @@ func (s *Users) GetAll(ctx context.Context, opts ...operations.Option) (*operati
 				return nil, err
 			}
 
-			var out apierrors.UsersGetAllUsersConflictError
+			var out apierrors.ConflictError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -375,7 +375,7 @@ func (s *Users) GetAll(ctx context.Context, opts ...operations.Option) (*operati
 				return nil, err
 			}
 
-			var out apierrors.UsersGetAllUsersUnprocessableEntityError
+			var out apierrors.UnprocessableEntityError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -400,7 +400,7 @@ func (s *Users) GetAll(ctx context.Context, opts ...operations.Option) (*operati
 				return nil, err
 			}
 
-			var out apierrors.UsersGetAllUsersInternalServerError
+			var out apierrors.InternalServerError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -425,7 +425,7 @@ func (s *Users) GetAll(ctx context.Context, opts ...operations.Option) (*operati
 				return nil, err
 			}
 
-			var out apierrors.UsersGetAllUsersBadGatewayError
+			var out apierrors.BadGatewayError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -450,7 +450,7 @@ func (s *Users) GetAll(ctx context.Context, opts ...operations.Option) (*operati
 				return nil, err
 			}
 
-			var out apierrors.UsersGetAllUsersServiceUnavailableError
+			var out apierrors.ServiceUnavailableError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -475,7 +475,7 @@ func (s *Users) GetAll(ctx context.Context, opts ...operations.Option) (*operati
 				return nil, err
 			}
 
-			var out apierrors.UsersGetAllUsersGatewayTimeoutError
+			var out apierrors.GatewayTimeoutError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -714,7 +714,7 @@ func (s *Users) Add(ctx context.Context, request components.V3UsersAddUserReques
 				return nil, err
 			}
 
-			var out apierrors.UsersAddUserBadRequestError
+			var out apierrors.BadRequestError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -739,7 +739,7 @@ func (s *Users) Add(ctx context.Context, request components.V3UsersAddUserReques
 				return nil, err
 			}
 
-			var out apierrors.UsersAddUserUnauthorizedError
+			var out apierrors.UnauthorizedError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -764,7 +764,7 @@ func (s *Users) Add(ctx context.Context, request components.V3UsersAddUserReques
 				return nil, err
 			}
 
-			var out apierrors.UsersAddUserPaymentRequiredError
+			var out apierrors.PaymentRequiredError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -789,7 +789,7 @@ func (s *Users) Add(ctx context.Context, request components.V3UsersAddUserReques
 				return nil, err
 			}
 
-			var out apierrors.UsersAddUserForbiddenError
+			var out apierrors.ForbiddenError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -814,7 +814,7 @@ func (s *Users) Add(ctx context.Context, request components.V3UsersAddUserReques
 				return nil, err
 			}
 
-			var out apierrors.UsersAddUserNotFoundError
+			var out apierrors.NotFoundError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -839,7 +839,7 @@ func (s *Users) Add(ctx context.Context, request components.V3UsersAddUserReques
 				return nil, err
 			}
 
-			var out apierrors.UsersAddUserConflictError
+			var out apierrors.ConflictError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -864,7 +864,7 @@ func (s *Users) Add(ctx context.Context, request components.V3UsersAddUserReques
 				return nil, err
 			}
 
-			var out apierrors.UsersAddUserUnprocessableEntityError
+			var out apierrors.UnprocessableEntityError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -889,7 +889,7 @@ func (s *Users) Add(ctx context.Context, request components.V3UsersAddUserReques
 				return nil, err
 			}
 
-			var out apierrors.UsersAddUserInternalServerError
+			var out apierrors.InternalServerError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -914,7 +914,7 @@ func (s *Users) Add(ctx context.Context, request components.V3UsersAddUserReques
 				return nil, err
 			}
 
-			var out apierrors.UsersAddUserBadGatewayError
+			var out apierrors.BadGatewayError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -939,7 +939,7 @@ func (s *Users) Add(ctx context.Context, request components.V3UsersAddUserReques
 				return nil, err
 			}
 
-			var out apierrors.UsersAddUserServiceUnavailableError
+			var out apierrors.ServiceUnavailableError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -964,7 +964,7 @@ func (s *Users) Add(ctx context.Context, request components.V3UsersAddUserReques
 				return nil, err
 			}
 
-			var out apierrors.UsersAddUserGatewayTimeoutError
+			var out apierrors.GatewayTimeoutError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -1201,7 +1201,7 @@ func (s *Users) UpdateOrgLevelPermissions(ctx context.Context, request component
 				return nil, err
 			}
 
-			var out apierrors.UsersUpdateOrgLevelPermissionsBadRequestError
+			var out apierrors.BadRequestError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -1226,7 +1226,7 @@ func (s *Users) UpdateOrgLevelPermissions(ctx context.Context, request component
 				return nil, err
 			}
 
-			var out apierrors.UsersUpdateOrgLevelPermissionsUnauthorizedError
+			var out apierrors.UnauthorizedError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -1251,7 +1251,7 @@ func (s *Users) UpdateOrgLevelPermissions(ctx context.Context, request component
 				return nil, err
 			}
 
-			var out apierrors.UsersUpdateOrgLevelPermissionsPaymentRequiredError
+			var out apierrors.PaymentRequiredError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -1276,7 +1276,7 @@ func (s *Users) UpdateOrgLevelPermissions(ctx context.Context, request component
 				return nil, err
 			}
 
-			var out apierrors.UsersUpdateOrgLevelPermissionsForbiddenError
+			var out apierrors.ForbiddenError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -1301,7 +1301,7 @@ func (s *Users) UpdateOrgLevelPermissions(ctx context.Context, request component
 				return nil, err
 			}
 
-			var out apierrors.UsersUpdateOrgLevelPermissionsNotFoundError
+			var out apierrors.NotFoundError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -1326,7 +1326,7 @@ func (s *Users) UpdateOrgLevelPermissions(ctx context.Context, request component
 				return nil, err
 			}
 
-			var out apierrors.UsersUpdateOrgLevelPermissionsConflictError
+			var out apierrors.ConflictError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -1351,7 +1351,7 @@ func (s *Users) UpdateOrgLevelPermissions(ctx context.Context, request component
 				return nil, err
 			}
 
-			var out apierrors.UsersUpdateOrgLevelPermissionsUnprocessableEntityError
+			var out apierrors.UnprocessableEntityError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -1376,7 +1376,7 @@ func (s *Users) UpdateOrgLevelPermissions(ctx context.Context, request component
 				return nil, err
 			}
 
-			var out apierrors.UsersUpdateOrgLevelPermissionsInternalServerError
+			var out apierrors.InternalServerError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -1401,7 +1401,7 @@ func (s *Users) UpdateOrgLevelPermissions(ctx context.Context, request component
 				return nil, err
 			}
 
-			var out apierrors.UsersUpdateOrgLevelPermissionsBadGatewayError
+			var out apierrors.BadGatewayError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -1426,7 +1426,7 @@ func (s *Users) UpdateOrgLevelPermissions(ctx context.Context, request component
 				return nil, err
 			}
 
-			var out apierrors.UsersUpdateOrgLevelPermissionsServiceUnavailableError
+			var out apierrors.ServiceUnavailableError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -1451,7 +1451,7 @@ func (s *Users) UpdateOrgLevelPermissions(ctx context.Context, request component
 				return nil, err
 			}
 
-			var out apierrors.UsersUpdateOrgLevelPermissionsGatewayTimeoutError
+			var out apierrors.GatewayTimeoutError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -1689,7 +1689,7 @@ func (s *Users) Delete(ctx context.Context, request operations.UsersDeleteUserRe
 				return nil, err
 			}
 
-			var out apierrors.UsersDeleteUserBadRequestError
+			var out apierrors.BadRequestError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -1714,7 +1714,7 @@ func (s *Users) Delete(ctx context.Context, request operations.UsersDeleteUserRe
 				return nil, err
 			}
 
-			var out apierrors.UsersDeleteUserUnauthorizedError
+			var out apierrors.UnauthorizedError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -1739,7 +1739,7 @@ func (s *Users) Delete(ctx context.Context, request operations.UsersDeleteUserRe
 				return nil, err
 			}
 
-			var out apierrors.UsersDeleteUserPaymentRequiredError
+			var out apierrors.PaymentRequiredError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -1764,7 +1764,7 @@ func (s *Users) Delete(ctx context.Context, request operations.UsersDeleteUserRe
 				return nil, err
 			}
 
-			var out apierrors.UsersDeleteUserForbiddenError
+			var out apierrors.ForbiddenError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -1789,7 +1789,7 @@ func (s *Users) Delete(ctx context.Context, request operations.UsersDeleteUserRe
 				return nil, err
 			}
 
-			var out apierrors.UsersDeleteUserNotFoundError
+			var out apierrors.NotFoundError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -1814,7 +1814,7 @@ func (s *Users) Delete(ctx context.Context, request operations.UsersDeleteUserRe
 				return nil, err
 			}
 
-			var out apierrors.UsersDeleteUserConflictError
+			var out apierrors.ConflictError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -1839,7 +1839,7 @@ func (s *Users) Delete(ctx context.Context, request operations.UsersDeleteUserRe
 				return nil, err
 			}
 
-			var out apierrors.UsersDeleteUserUnprocessableEntityError
+			var out apierrors.UnprocessableEntityError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -1864,7 +1864,7 @@ func (s *Users) Delete(ctx context.Context, request operations.UsersDeleteUserRe
 				return nil, err
 			}
 
-			var out apierrors.UsersDeleteUserInternalServerError
+			var out apierrors.InternalServerError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -1889,7 +1889,7 @@ func (s *Users) Delete(ctx context.Context, request operations.UsersDeleteUserRe
 				return nil, err
 			}
 
-			var out apierrors.UsersDeleteUserBadGatewayError
+			var out apierrors.BadGatewayError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -1914,7 +1914,7 @@ func (s *Users) Delete(ctx context.Context, request operations.UsersDeleteUserRe
 				return nil, err
 			}
 
-			var out apierrors.UsersDeleteUserServiceUnavailableError
+			var out apierrors.ServiceUnavailableError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -1939,7 +1939,7 @@ func (s *Users) Delete(ctx context.Context, request operations.UsersDeleteUserRe
 				return nil, err
 			}
 
-			var out apierrors.UsersDeleteUserGatewayTimeoutError
+			var out apierrors.GatewayTimeoutError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -2171,7 +2171,7 @@ func (s *Users) GetRoles(ctx context.Context, opts ...operations.Option) (*opera
 				return nil, err
 			}
 
-			var out apierrors.UsersGetUserRolesBadRequestError
+			var out apierrors.BadRequestError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -2196,7 +2196,7 @@ func (s *Users) GetRoles(ctx context.Context, opts ...operations.Option) (*opera
 				return nil, err
 			}
 
-			var out apierrors.UsersGetUserRolesUnauthorizedError
+			var out apierrors.UnauthorizedError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -2221,7 +2221,7 @@ func (s *Users) GetRoles(ctx context.Context, opts ...operations.Option) (*opera
 				return nil, err
 			}
 
-			var out apierrors.UsersGetUserRolesPaymentRequiredError
+			var out apierrors.PaymentRequiredError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -2246,7 +2246,7 @@ func (s *Users) GetRoles(ctx context.Context, opts ...operations.Option) (*opera
 				return nil, err
 			}
 
-			var out apierrors.UsersGetUserRolesForbiddenError
+			var out apierrors.ForbiddenError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -2271,7 +2271,7 @@ func (s *Users) GetRoles(ctx context.Context, opts ...operations.Option) (*opera
 				return nil, err
 			}
 
-			var out apierrors.UsersGetUserRolesNotFoundError
+			var out apierrors.NotFoundError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -2296,7 +2296,7 @@ func (s *Users) GetRoles(ctx context.Context, opts ...operations.Option) (*opera
 				return nil, err
 			}
 
-			var out apierrors.UsersGetUserRolesConflictError
+			var out apierrors.ConflictError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -2321,7 +2321,7 @@ func (s *Users) GetRoles(ctx context.Context, opts ...operations.Option) (*opera
 				return nil, err
 			}
 
-			var out apierrors.UsersGetUserRolesUnprocessableEntityError
+			var out apierrors.UnprocessableEntityError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -2346,7 +2346,7 @@ func (s *Users) GetRoles(ctx context.Context, opts ...operations.Option) (*opera
 				return nil, err
 			}
 
-			var out apierrors.UsersGetUserRolesInternalServerError
+			var out apierrors.InternalServerError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -2371,7 +2371,7 @@ func (s *Users) GetRoles(ctx context.Context, opts ...operations.Option) (*opera
 				return nil, err
 			}
 
-			var out apierrors.UsersGetUserRolesBadGatewayError
+			var out apierrors.BadGatewayError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -2396,7 +2396,7 @@ func (s *Users) GetRoles(ctx context.Context, opts ...operations.Option) (*opera
 				return nil, err
 			}
 
-			var out apierrors.UsersGetUserRolesServiceUnavailableError
+			var out apierrors.ServiceUnavailableError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -2421,7 +2421,7 @@ func (s *Users) GetRoles(ctx context.Context, opts ...operations.Option) (*opera
 				return nil, err
 			}
 
-			var out apierrors.UsersGetUserRolesGatewayTimeoutError
+			var out apierrors.GatewayTimeoutError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -2652,7 +2652,7 @@ func (s *Users) RemoveFromOrg(ctx context.Context, userID string, opts ...operat
 				return nil, err
 			}
 
-			var out apierrors.UsersRemoveUserFromOrgBadRequestError
+			var out apierrors.BadRequestError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -2677,7 +2677,7 @@ func (s *Users) RemoveFromOrg(ctx context.Context, userID string, opts ...operat
 				return nil, err
 			}
 
-			var out apierrors.UsersRemoveUserFromOrgUnauthorizedError
+			var out apierrors.UnauthorizedError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -2702,7 +2702,7 @@ func (s *Users) RemoveFromOrg(ctx context.Context, userID string, opts ...operat
 				return nil, err
 			}
 
-			var out apierrors.UsersRemoveUserFromOrgPaymentRequiredError
+			var out apierrors.PaymentRequiredError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -2727,7 +2727,7 @@ func (s *Users) RemoveFromOrg(ctx context.Context, userID string, opts ...operat
 				return nil, err
 			}
 
-			var out apierrors.UsersRemoveUserFromOrgForbiddenError
+			var out apierrors.ForbiddenError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -2752,7 +2752,7 @@ func (s *Users) RemoveFromOrg(ctx context.Context, userID string, opts ...operat
 				return nil, err
 			}
 
-			var out apierrors.UsersRemoveUserFromOrgNotFoundError
+			var out apierrors.NotFoundError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -2777,7 +2777,7 @@ func (s *Users) RemoveFromOrg(ctx context.Context, userID string, opts ...operat
 				return nil, err
 			}
 
-			var out apierrors.UsersRemoveUserFromOrgConflictError
+			var out apierrors.ConflictError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -2802,7 +2802,7 @@ func (s *Users) RemoveFromOrg(ctx context.Context, userID string, opts ...operat
 				return nil, err
 			}
 
-			var out apierrors.UsersRemoveUserFromOrgUnprocessableEntityError
+			var out apierrors.UnprocessableEntityError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -2827,7 +2827,7 @@ func (s *Users) RemoveFromOrg(ctx context.Context, userID string, opts ...operat
 				return nil, err
 			}
 
-			var out apierrors.UsersRemoveUserFromOrgInternalServerError
+			var out apierrors.InternalServerError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -2852,7 +2852,7 @@ func (s *Users) RemoveFromOrg(ctx context.Context, userID string, opts ...operat
 				return nil, err
 			}
 
-			var out apierrors.UsersRemoveUserFromOrgBadGatewayError
+			var out apierrors.BadGatewayError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -2877,7 +2877,7 @@ func (s *Users) RemoveFromOrg(ctx context.Context, userID string, opts ...operat
 				return nil, err
 			}
 
-			var out apierrors.UsersRemoveUserFromOrgServiceUnavailableError
+			var out apierrors.ServiceUnavailableError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -2902,7 +2902,7 @@ func (s *Users) RemoveFromOrg(ctx context.Context, userID string, opts ...operat
 				return nil, err
 			}
 
-			var out apierrors.UsersRemoveUserFromOrgGatewayTimeoutError
+			var out apierrors.GatewayTimeoutError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -3138,7 +3138,7 @@ func (s *Users) GetByID(ctx context.Context, userID string, opts ...operations.O
 				return nil, err
 			}
 
-			var out apierrors.UsersGetUserByIDBadRequestError
+			var out apierrors.BadRequestError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -3163,7 +3163,7 @@ func (s *Users) GetByID(ctx context.Context, userID string, opts ...operations.O
 				return nil, err
 			}
 
-			var out apierrors.UsersGetUserByIDUnauthorizedError
+			var out apierrors.UnauthorizedError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -3188,7 +3188,7 @@ func (s *Users) GetByID(ctx context.Context, userID string, opts ...operations.O
 				return nil, err
 			}
 
-			var out apierrors.UsersGetUserByIDPaymentRequiredError
+			var out apierrors.PaymentRequiredError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -3213,7 +3213,7 @@ func (s *Users) GetByID(ctx context.Context, userID string, opts ...operations.O
 				return nil, err
 			}
 
-			var out apierrors.UsersGetUserByIDForbiddenError
+			var out apierrors.ForbiddenError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -3238,7 +3238,7 @@ func (s *Users) GetByID(ctx context.Context, userID string, opts ...operations.O
 				return nil, err
 			}
 
-			var out apierrors.UsersGetUserByIDNotFoundError
+			var out apierrors.NotFoundError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -3263,7 +3263,7 @@ func (s *Users) GetByID(ctx context.Context, userID string, opts ...operations.O
 				return nil, err
 			}
 
-			var out apierrors.UsersGetUserByIDConflictError
+			var out apierrors.ConflictError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -3288,7 +3288,7 @@ func (s *Users) GetByID(ctx context.Context, userID string, opts ...operations.O
 				return nil, err
 			}
 
-			var out apierrors.UsersGetUserByIDUnprocessableEntityError
+			var out apierrors.UnprocessableEntityError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -3313,7 +3313,7 @@ func (s *Users) GetByID(ctx context.Context, userID string, opts ...operations.O
 				return nil, err
 			}
 
-			var out apierrors.UsersGetUserByIDInternalServerError
+			var out apierrors.InternalServerError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -3338,7 +3338,7 @@ func (s *Users) GetByID(ctx context.Context, userID string, opts ...operations.O
 				return nil, err
 			}
 
-			var out apierrors.UsersGetUserByIDBadGatewayError
+			var out apierrors.BadGatewayError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -3363,7 +3363,7 @@ func (s *Users) GetByID(ctx context.Context, userID string, opts ...operations.O
 				return nil, err
 			}
 
-			var out apierrors.UsersGetUserByIDServiceUnavailableError
+			var out apierrors.ServiceUnavailableError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -3388,7 +3388,7 @@ func (s *Users) GetByID(ctx context.Context, userID string, opts ...operations.O
 				return nil, err
 			}
 
-			var out apierrors.UsersGetUserByIDGatewayTimeoutError
+			var out apierrors.GatewayTimeoutError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -3632,7 +3632,7 @@ func (s *Users) Update(ctx context.Context, userID string, v3UsersUpdateUserRequ
 				return nil, err
 			}
 
-			var out apierrors.UsersUpdateUserByIDBadRequestError
+			var out apierrors.BadRequestError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -3657,7 +3657,7 @@ func (s *Users) Update(ctx context.Context, userID string, v3UsersUpdateUserRequ
 				return nil, err
 			}
 
-			var out apierrors.UsersUpdateUserByIDUnauthorizedError
+			var out apierrors.UnauthorizedError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -3682,7 +3682,7 @@ func (s *Users) Update(ctx context.Context, userID string, v3UsersUpdateUserRequ
 				return nil, err
 			}
 
-			var out apierrors.UsersUpdateUserByIDPaymentRequiredError
+			var out apierrors.PaymentRequiredError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -3707,7 +3707,7 @@ func (s *Users) Update(ctx context.Context, userID string, v3UsersUpdateUserRequ
 				return nil, err
 			}
 
-			var out apierrors.UsersUpdateUserByIDForbiddenError
+			var out apierrors.ForbiddenError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -3732,7 +3732,7 @@ func (s *Users) Update(ctx context.Context, userID string, v3UsersUpdateUserRequ
 				return nil, err
 			}
 
-			var out apierrors.UsersUpdateUserByIDNotFoundError
+			var out apierrors.NotFoundError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -3757,7 +3757,7 @@ func (s *Users) Update(ctx context.Context, userID string, v3UsersUpdateUserRequ
 				return nil, err
 			}
 
-			var out apierrors.UsersUpdateUserByIDConflictError
+			var out apierrors.ConflictError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -3782,7 +3782,7 @@ func (s *Users) Update(ctx context.Context, userID string, v3UsersUpdateUserRequ
 				return nil, err
 			}
 
-			var out apierrors.UsersUpdateUserByIDUnprocessableEntityError
+			var out apierrors.UnprocessableEntityError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -3807,7 +3807,7 @@ func (s *Users) Update(ctx context.Context, userID string, v3UsersUpdateUserRequ
 				return nil, err
 			}
 
-			var out apierrors.UsersUpdateUserByIDInternalServerError
+			var out apierrors.InternalServerError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -3832,7 +3832,7 @@ func (s *Users) Update(ctx context.Context, userID string, v3UsersUpdateUserRequ
 				return nil, err
 			}
 
-			var out apierrors.UsersUpdateUserByIDBadGatewayError
+			var out apierrors.BadGatewayError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -3857,7 +3857,7 @@ func (s *Users) Update(ctx context.Context, userID string, v3UsersUpdateUserRequ
 				return nil, err
 			}
 
-			var out apierrors.UsersUpdateUserByIDServiceUnavailableError
+			var out apierrors.ServiceUnavailableError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -3882,7 +3882,7 @@ func (s *Users) Update(ctx context.Context, userID string, v3UsersUpdateUserRequ
 				return nil, err
 			}
 
-			var out apierrors.UsersUpdateUserByIDGatewayTimeoutError
+			var out apierrors.GatewayTimeoutError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}

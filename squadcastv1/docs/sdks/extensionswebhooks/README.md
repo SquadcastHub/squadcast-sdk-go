@@ -57,20 +57,20 @@ func main() {
 
 ### Errors
 
-| Error Type                                              | Status Code                                             | Content Type                                            |
-| ------------------------------------------------------- | ------------------------------------------------------- | ------------------------------------------------------- |
-| apierrors.WebhooksDeleteWebhookBadRequestError          | 400                                                     | application/json                                        |
-| apierrors.WebhooksDeleteWebhookUnauthorizedError        | 401                                                     | application/json                                        |
-| apierrors.WebhooksDeleteWebhookPaymentRequiredError     | 402                                                     | application/json                                        |
-| apierrors.WebhooksDeleteWebhookForbiddenError           | 403                                                     | application/json                                        |
-| apierrors.WebhooksDeleteWebhookNotFoundError            | 404                                                     | application/json                                        |
-| apierrors.WebhooksDeleteWebhookConflictError            | 409                                                     | application/json                                        |
-| apierrors.WebhooksDeleteWebhookUnprocessableEntityError | 422                                                     | application/json                                        |
-| apierrors.WebhooksDeleteWebhookInternalServerError      | 500                                                     | application/json                                        |
-| apierrors.WebhooksDeleteWebhookBadGatewayError          | 502                                                     | application/json                                        |
-| apierrors.WebhooksDeleteWebhookServiceUnavailableError  | 503                                                     | application/json                                        |
-| apierrors.WebhooksDeleteWebhookGatewayTimeoutError      | 504                                                     | application/json                                        |
-| apierrors.APIError                                      | 4XX, 5XX                                                | \*/\*                                                   |
+| Error Type                         | Status Code                        | Content Type                       |
+| ---------------------------------- | ---------------------------------- | ---------------------------------- |
+| apierrors.BadRequestError          | 400                                | application/json                   |
+| apierrors.UnauthorizedError        | 401                                | application/json                   |
+| apierrors.PaymentRequiredError     | 402                                | application/json                   |
+| apierrors.ForbiddenError           | 403                                | application/json                   |
+| apierrors.NotFoundError            | 404                                | application/json                   |
+| apierrors.ConflictError            | 409                                | application/json                   |
+| apierrors.UnprocessableEntityError | 422                                | application/json                   |
+| apierrors.InternalServerError      | 500                                | application/json                   |
+| apierrors.BadGatewayError          | 502                                | application/json                   |
+| apierrors.ServiceUnavailableError  | 503                                | application/json                   |
+| apierrors.GatewayTimeoutError      | 504                                | application/json                   |
+| apierrors.APIError                 | 4XX, 5XX                           | \*/\*                              |
 
 ## GetByID
 
@@ -121,17 +121,17 @@ func main() {
 
 ### Errors
 
-| Error Type                                               | Status Code                                              | Content Type                                             |
-| -------------------------------------------------------- | -------------------------------------------------------- | -------------------------------------------------------- |
-| apierrors.WebhooksGetWebhookByIDBadRequestError          | 400                                                      | application/json                                         |
-| apierrors.WebhooksGetWebhookByIDUnauthorizedError        | 401                                                      | application/json                                         |
-| apierrors.WebhooksGetWebhookByIDPaymentRequiredError     | 402                                                      | application/json                                         |
-| apierrors.WebhooksGetWebhookByIDForbiddenError           | 403                                                      | application/json                                         |
-| apierrors.WebhooksGetWebhookByIDNotFoundError            | 404                                                      | application/json                                         |
-| apierrors.WebhooksGetWebhookByIDConflictError            | 409                                                      | application/json                                         |
-| apierrors.WebhooksGetWebhookByIDUnprocessableEntityError | 422                                                      | application/json                                         |
-| apierrors.WebhooksGetWebhookByIDInternalServerError      | 500                                                      | application/json                                         |
-| apierrors.WebhooksGetWebhookByIDBadGatewayError          | 502                                                      | application/json                                         |
-| apierrors.WebhooksGetWebhookByIDServiceUnavailableError  | 503                                                      | application/json                                         |
-| apierrors.WebhooksGetWebhookByIDGatewayTimeoutError      | 504                                                      | application/json                                         |
-| apierrors.APIError                                       | 4XX, 5XX                                                 | \*/\*                                                    |
+| Error Type                         | Status Code                        | Content Type                       |
+| ---------------------------------- | ---------------------------------- | ---------------------------------- |
+| apierrors.BadRequestError          | 400                                | application/json                   |
+| apierrors.UnauthorizedError        | 401                                | application/json                   |
+| apierrors.PaymentRequiredError     | 402                                | application/json                   |
+| apierrors.ForbiddenError           | 403                                | application/json                   |
+| apierrors.NotFoundError            | 404                                | application/json                   |
+| apierrors.ConflictError            | 409                                | application/json                   |
+| apierrors.UnprocessableEntityError | 422                                | application/json                   |
+| apierrors.InternalServerError      | 500                                | application/json                   |
+| apierrors.BadGatewayError          | 502                                | application/json                   |
+| apierrors.ServiceUnavailableError  | 503                                | application/json                   |
+| apierrors.GatewayTimeoutError      | 504                                | application/json                   |
+| apierrors.APIError                 | 4XX, 5XX                           | \*/\*                              |

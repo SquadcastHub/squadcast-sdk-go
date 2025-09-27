@@ -56,17 +56,17 @@ func main() {
 
 ### Errors
 
-| Error Type                                                                 | Status Code                                                                | Content Type                                                               |
-| -------------------------------------------------------------------------- | -------------------------------------------------------------------------- | -------------------------------------------------------------------------- |
-| apierrors.OverlayDeleteNotificationTemplateOverlayBadRequestError          | 400                                                                        | application/json                                                           |
-| apierrors.OverlayDeleteNotificationTemplateOverlayUnauthorizedError        | 401                                                                        | application/json                                                           |
-| apierrors.OverlayDeleteNotificationTemplateOverlayPaymentRequiredError     | 402                                                                        | application/json                                                           |
-| apierrors.OverlayDeleteNotificationTemplateOverlayForbiddenError           | 403                                                                        | application/json                                                           |
-| apierrors.OverlayDeleteNotificationTemplateOverlayNotFoundError            | 404                                                                        | application/json                                                           |
-| apierrors.OverlayDeleteNotificationTemplateOverlayConflictError            | 409                                                                        | application/json                                                           |
-| apierrors.OverlayDeleteNotificationTemplateOverlayUnprocessableEntityError | 422                                                                        | application/json                                                           |
-| apierrors.OverlayDeleteNotificationTemplateOverlayInternalServerError      | 500                                                                        | application/json                                                           |
-| apierrors.OverlayDeleteNotificationTemplateOverlayBadGatewayError          | 502                                                                        | application/json                                                           |
-| apierrors.OverlayDeleteNotificationTemplateOverlayServiceUnavailableError  | 503                                                                        | application/json                                                           |
-| apierrors.OverlayDeleteNotificationTemplateOverlayGatewayTimeoutError      | 504                                                                        | application/json                                                           |
-| apierrors.APIError                                                         | 4XX, 5XX                                                                   | \*/\*                                                                      |
+| Error Type                         | Status Code                        | Content Type                       |
+| ---------------------------------- | ---------------------------------- | ---------------------------------- |
+| apierrors.BadRequestError          | 400                                | application/json                   |
+| apierrors.UnauthorizedError        | 401                                | application/json                   |
+| apierrors.PaymentRequiredError     | 402                                | application/json                   |
+| apierrors.ForbiddenError           | 403                                | application/json                   |
+| apierrors.NotFoundError            | 404                                | application/json                   |
+| apierrors.ConflictError            | 409                                | application/json                   |
+| apierrors.UnprocessableEntityError | 422                                | application/json                   |
+| apierrors.InternalServerError      | 500                                | application/json                   |
+| apierrors.BadGatewayError          | 502                                | application/json                   |
+| apierrors.ServiceUnavailableError  | 503                                | application/json                   |
+| apierrors.GatewayTimeoutError      | 504                                | application/json                   |
+| apierrors.APIError                 | 4XX, 5XX                           | \*/\*                              |

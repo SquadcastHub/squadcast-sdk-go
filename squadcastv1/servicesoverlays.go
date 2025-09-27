@@ -228,7 +228,7 @@ func (s *ServicesOverlays) GetCustomContentTemplates(ctx context.Context, servic
 				return nil, err
 			}
 
-			var out apierrors.OverlayGetAllCustomContentTemplateOverlayByServiceBadRequestError
+			var out apierrors.BadRequestError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -253,7 +253,7 @@ func (s *ServicesOverlays) GetCustomContentTemplates(ctx context.Context, servic
 				return nil, err
 			}
 
-			var out apierrors.OverlayGetAllCustomContentTemplateOverlayByServiceUnauthorizedError
+			var out apierrors.UnauthorizedError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -278,7 +278,7 @@ func (s *ServicesOverlays) GetCustomContentTemplates(ctx context.Context, servic
 				return nil, err
 			}
 
-			var out apierrors.OverlayGetAllCustomContentTemplateOverlayByServicePaymentRequiredError
+			var out apierrors.PaymentRequiredError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -303,7 +303,7 @@ func (s *ServicesOverlays) GetCustomContentTemplates(ctx context.Context, servic
 				return nil, err
 			}
 
-			var out apierrors.OverlayGetAllCustomContentTemplateOverlayByServiceForbiddenError
+			var out apierrors.ForbiddenError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -328,7 +328,7 @@ func (s *ServicesOverlays) GetCustomContentTemplates(ctx context.Context, servic
 				return nil, err
 			}
 
-			var out apierrors.OverlayGetAllCustomContentTemplateOverlayByServiceNotFoundError
+			var out apierrors.NotFoundError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -353,7 +353,7 @@ func (s *ServicesOverlays) GetCustomContentTemplates(ctx context.Context, servic
 				return nil, err
 			}
 
-			var out apierrors.OverlayGetAllCustomContentTemplateOverlayByServiceConflictError
+			var out apierrors.ConflictError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -378,7 +378,7 @@ func (s *ServicesOverlays) GetCustomContentTemplates(ctx context.Context, servic
 				return nil, err
 			}
 
-			var out apierrors.OverlayGetAllCustomContentTemplateOverlayByServiceUnprocessableEntityError
+			var out apierrors.UnprocessableEntityError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -403,7 +403,7 @@ func (s *ServicesOverlays) GetCustomContentTemplates(ctx context.Context, servic
 				return nil, err
 			}
 
-			var out apierrors.OverlayGetAllCustomContentTemplateOverlayByServiceInternalServerError
+			var out apierrors.InternalServerError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -428,7 +428,7 @@ func (s *ServicesOverlays) GetCustomContentTemplates(ctx context.Context, servic
 				return nil, err
 			}
 
-			var out apierrors.OverlayGetAllCustomContentTemplateOverlayByServiceBadGatewayError
+			var out apierrors.BadGatewayError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -453,7 +453,7 @@ func (s *ServicesOverlays) GetCustomContentTemplates(ctx context.Context, servic
 				return nil, err
 			}
 
-			var out apierrors.OverlayGetAllCustomContentTemplateOverlayByServiceServiceUnavailableError
+			var out apierrors.ServiceUnavailableError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -478,7 +478,7 @@ func (s *ServicesOverlays) GetCustomContentTemplates(ctx context.Context, servic
 				return nil, err
 			}
 
-			var out apierrors.OverlayGetAllCustomContentTemplateOverlayByServiceGatewayTimeoutError
+			var out apierrors.GatewayTimeoutError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -713,7 +713,7 @@ func (s *ServicesOverlays) GetCustomContent(ctx context.Context, serviceID strin
 				return nil, err
 			}
 
-			var out apierrors.OverlayGetCustomContentTemplateOverlayBadRequestError
+			var out apierrors.BadRequestError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -738,7 +738,7 @@ func (s *ServicesOverlays) GetCustomContent(ctx context.Context, serviceID strin
 				return nil, err
 			}
 
-			var out apierrors.OverlayGetCustomContentTemplateOverlayUnauthorizedError
+			var out apierrors.UnauthorizedError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -763,7 +763,7 @@ func (s *ServicesOverlays) GetCustomContent(ctx context.Context, serviceID strin
 				return nil, err
 			}
 
-			var out apierrors.OverlayGetCustomContentTemplateOverlayPaymentRequiredError
+			var out apierrors.PaymentRequiredError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -788,7 +788,7 @@ func (s *ServicesOverlays) GetCustomContent(ctx context.Context, serviceID strin
 				return nil, err
 			}
 
-			var out apierrors.OverlayGetCustomContentTemplateOverlayForbiddenError
+			var out apierrors.ForbiddenError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -813,7 +813,7 @@ func (s *ServicesOverlays) GetCustomContent(ctx context.Context, serviceID strin
 				return nil, err
 			}
 
-			var out apierrors.OverlayGetCustomContentTemplateOverlayNotFoundError
+			var out apierrors.NotFoundError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -838,7 +838,7 @@ func (s *ServicesOverlays) GetCustomContent(ctx context.Context, serviceID strin
 				return nil, err
 			}
 
-			var out apierrors.OverlayGetCustomContentTemplateOverlayConflictError
+			var out apierrors.ConflictError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -863,7 +863,7 @@ func (s *ServicesOverlays) GetCustomContent(ctx context.Context, serviceID strin
 				return nil, err
 			}
 
-			var out apierrors.OverlayGetCustomContentTemplateOverlayUnprocessableEntityError
+			var out apierrors.UnprocessableEntityError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -888,7 +888,7 @@ func (s *ServicesOverlays) GetCustomContent(ctx context.Context, serviceID strin
 				return nil, err
 			}
 
-			var out apierrors.OverlayGetCustomContentTemplateOverlayInternalServerError
+			var out apierrors.InternalServerError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -913,7 +913,7 @@ func (s *ServicesOverlays) GetCustomContent(ctx context.Context, serviceID strin
 				return nil, err
 			}
 
-			var out apierrors.OverlayGetCustomContentTemplateOverlayBadGatewayError
+			var out apierrors.BadGatewayError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -938,7 +938,7 @@ func (s *ServicesOverlays) GetCustomContent(ctx context.Context, serviceID strin
 				return nil, err
 			}
 
-			var out apierrors.OverlayGetCustomContentTemplateOverlayServiceUnavailableError
+			var out apierrors.ServiceUnavailableError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -963,7 +963,7 @@ func (s *ServicesOverlays) GetCustomContent(ctx context.Context, serviceID strin
 				return nil, err
 			}
 
-			var out apierrors.OverlayGetCustomContentTemplateOverlayGatewayTimeoutError
+			var out apierrors.GatewayTimeoutError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -1198,7 +1198,7 @@ func (s *ServicesOverlays) GetDedupKey(ctx context.Context, serviceID string, al
 				return nil, err
 			}
 
-			var out apierrors.OverlayGetDedupKeyOverlayForAlertSourceBadRequestError
+			var out apierrors.BadRequestError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -1223,7 +1223,7 @@ func (s *ServicesOverlays) GetDedupKey(ctx context.Context, serviceID string, al
 				return nil, err
 			}
 
-			var out apierrors.OverlayGetDedupKeyOverlayForAlertSourceUnauthorizedError
+			var out apierrors.UnauthorizedError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -1248,7 +1248,7 @@ func (s *ServicesOverlays) GetDedupKey(ctx context.Context, serviceID string, al
 				return nil, err
 			}
 
-			var out apierrors.OverlayGetDedupKeyOverlayForAlertSourcePaymentRequiredError
+			var out apierrors.PaymentRequiredError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -1273,7 +1273,7 @@ func (s *ServicesOverlays) GetDedupKey(ctx context.Context, serviceID string, al
 				return nil, err
 			}
 
-			var out apierrors.OverlayGetDedupKeyOverlayForAlertSourceForbiddenError
+			var out apierrors.ForbiddenError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -1298,7 +1298,7 @@ func (s *ServicesOverlays) GetDedupKey(ctx context.Context, serviceID string, al
 				return nil, err
 			}
 
-			var out apierrors.OverlayGetDedupKeyOverlayForAlertSourceNotFoundError
+			var out apierrors.NotFoundError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -1323,7 +1323,7 @@ func (s *ServicesOverlays) GetDedupKey(ctx context.Context, serviceID string, al
 				return nil, err
 			}
 
-			var out apierrors.OverlayGetDedupKeyOverlayForAlertSourceConflictError
+			var out apierrors.ConflictError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -1348,7 +1348,7 @@ func (s *ServicesOverlays) GetDedupKey(ctx context.Context, serviceID string, al
 				return nil, err
 			}
 
-			var out apierrors.OverlayGetDedupKeyOverlayForAlertSourceUnprocessableEntityError
+			var out apierrors.UnprocessableEntityError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -1373,7 +1373,7 @@ func (s *ServicesOverlays) GetDedupKey(ctx context.Context, serviceID string, al
 				return nil, err
 			}
 
-			var out apierrors.OverlayGetDedupKeyOverlayForAlertSourceInternalServerError
+			var out apierrors.InternalServerError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -1398,7 +1398,7 @@ func (s *ServicesOverlays) GetDedupKey(ctx context.Context, serviceID string, al
 				return nil, err
 			}
 
-			var out apierrors.OverlayGetDedupKeyOverlayForAlertSourceBadGatewayError
+			var out apierrors.BadGatewayError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -1423,7 +1423,7 @@ func (s *ServicesOverlays) GetDedupKey(ctx context.Context, serviceID string, al
 				return nil, err
 			}
 
-			var out apierrors.OverlayGetDedupKeyOverlayForAlertSourceServiceUnavailableError
+			var out apierrors.ServiceUnavailableError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -1448,7 +1448,7 @@ func (s *ServicesOverlays) GetDedupKey(ctx context.Context, serviceID string, al
 				return nil, err
 			}
 
-			var out apierrors.OverlayGetDedupKeyOverlayForAlertSourceGatewayTimeoutError
+			var out apierrors.GatewayTimeoutError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}

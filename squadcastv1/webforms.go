@@ -232,7 +232,7 @@ func (s *Webforms) GetAll(ctx context.Context, ownerID string, pageNumber *strin
 				return nil, err
 			}
 
-			var out apierrors.WebformsGetAllWebformsBadRequestError
+			var out apierrors.BadRequestError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -257,7 +257,7 @@ func (s *Webforms) GetAll(ctx context.Context, ownerID string, pageNumber *strin
 				return nil, err
 			}
 
-			var out apierrors.WebformsGetAllWebformsUnauthorizedError
+			var out apierrors.UnauthorizedError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -282,7 +282,7 @@ func (s *Webforms) GetAll(ctx context.Context, ownerID string, pageNumber *strin
 				return nil, err
 			}
 
-			var out apierrors.WebformsGetAllWebformsPaymentRequiredError
+			var out apierrors.PaymentRequiredError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -307,7 +307,7 @@ func (s *Webforms) GetAll(ctx context.Context, ownerID string, pageNumber *strin
 				return nil, err
 			}
 
-			var out apierrors.WebformsGetAllWebformsForbiddenError
+			var out apierrors.ForbiddenError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -332,7 +332,7 @@ func (s *Webforms) GetAll(ctx context.Context, ownerID string, pageNumber *strin
 				return nil, err
 			}
 
-			var out apierrors.WebformsGetAllWebformsNotFoundError
+			var out apierrors.NotFoundError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -357,7 +357,7 @@ func (s *Webforms) GetAll(ctx context.Context, ownerID string, pageNumber *strin
 				return nil, err
 			}
 
-			var out apierrors.WebformsGetAllWebformsConflictError
+			var out apierrors.ConflictError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -382,7 +382,7 @@ func (s *Webforms) GetAll(ctx context.Context, ownerID string, pageNumber *strin
 				return nil, err
 			}
 
-			var out apierrors.WebformsGetAllWebformsUnprocessableEntityError
+			var out apierrors.UnprocessableEntityError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -407,7 +407,7 @@ func (s *Webforms) GetAll(ctx context.Context, ownerID string, pageNumber *strin
 				return nil, err
 			}
 
-			var out apierrors.WebformsGetAllWebformsInternalServerError
+			var out apierrors.InternalServerError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -432,7 +432,7 @@ func (s *Webforms) GetAll(ctx context.Context, ownerID string, pageNumber *strin
 				return nil, err
 			}
 
-			var out apierrors.WebformsGetAllWebformsBadGatewayError
+			var out apierrors.BadGatewayError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -457,7 +457,7 @@ func (s *Webforms) GetAll(ctx context.Context, ownerID string, pageNumber *strin
 				return nil, err
 			}
 
-			var out apierrors.WebformsGetAllWebformsServiceUnavailableError
+			var out apierrors.ServiceUnavailableError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -482,7 +482,7 @@ func (s *Webforms) GetAll(ctx context.Context, ownerID string, pageNumber *strin
 				return nil, err
 			}
 
-			var out apierrors.WebformsGetAllWebformsGatewayTimeoutError
+			var out apierrors.GatewayTimeoutError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -721,7 +721,7 @@ func (s *Webforms) Create(ctx context.Context, request components.V3WebformsCrea
 				return nil, err
 			}
 
-			var out apierrors.WebformsCreateWebformBadRequestError
+			var out apierrors.BadRequestError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -746,7 +746,7 @@ func (s *Webforms) Create(ctx context.Context, request components.V3WebformsCrea
 				return nil, err
 			}
 
-			var out apierrors.WebformsCreateWebformUnauthorizedError
+			var out apierrors.UnauthorizedError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -771,7 +771,7 @@ func (s *Webforms) Create(ctx context.Context, request components.V3WebformsCrea
 				return nil, err
 			}
 
-			var out apierrors.WebformsCreateWebformPaymentRequiredError
+			var out apierrors.PaymentRequiredError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -796,7 +796,7 @@ func (s *Webforms) Create(ctx context.Context, request components.V3WebformsCrea
 				return nil, err
 			}
 
-			var out apierrors.WebformsCreateWebformForbiddenError
+			var out apierrors.ForbiddenError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -821,7 +821,7 @@ func (s *Webforms) Create(ctx context.Context, request components.V3WebformsCrea
 				return nil, err
 			}
 
-			var out apierrors.WebformsCreateWebformNotFoundError
+			var out apierrors.NotFoundError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -846,7 +846,7 @@ func (s *Webforms) Create(ctx context.Context, request components.V3WebformsCrea
 				return nil, err
 			}
 
-			var out apierrors.WebformsCreateWebformConflictError
+			var out apierrors.ConflictError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -871,7 +871,7 @@ func (s *Webforms) Create(ctx context.Context, request components.V3WebformsCrea
 				return nil, err
 			}
 
-			var out apierrors.WebformsCreateWebformUnprocessableEntityError
+			var out apierrors.UnprocessableEntityError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -896,7 +896,7 @@ func (s *Webforms) Create(ctx context.Context, request components.V3WebformsCrea
 				return nil, err
 			}
 
-			var out apierrors.WebformsCreateWebformInternalServerError
+			var out apierrors.InternalServerError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -921,7 +921,7 @@ func (s *Webforms) Create(ctx context.Context, request components.V3WebformsCrea
 				return nil, err
 			}
 
-			var out apierrors.WebformsCreateWebformBadGatewayError
+			var out apierrors.BadGatewayError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -946,7 +946,7 @@ func (s *Webforms) Create(ctx context.Context, request components.V3WebformsCrea
 				return nil, err
 			}
 
-			var out apierrors.WebformsCreateWebformServiceUnavailableError
+			var out apierrors.ServiceUnavailableError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -971,7 +971,7 @@ func (s *Webforms) Create(ctx context.Context, request components.V3WebformsCrea
 				return nil, err
 			}
 
-			var out apierrors.WebformsCreateWebformGatewayTimeoutError
+			var out apierrors.GatewayTimeoutError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -1215,7 +1215,7 @@ func (s *Webforms) Update(ctx context.Context, webformID int64, v3WebformsCreate
 				return nil, err
 			}
 
-			var out apierrors.WebformsUpdateWebformBadRequestError
+			var out apierrors.BadRequestError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -1240,7 +1240,7 @@ func (s *Webforms) Update(ctx context.Context, webformID int64, v3WebformsCreate
 				return nil, err
 			}
 
-			var out apierrors.WebformsUpdateWebformUnauthorizedError
+			var out apierrors.UnauthorizedError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -1265,7 +1265,7 @@ func (s *Webforms) Update(ctx context.Context, webformID int64, v3WebformsCreate
 				return nil, err
 			}
 
-			var out apierrors.WebformsUpdateWebformPaymentRequiredError
+			var out apierrors.PaymentRequiredError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -1290,7 +1290,7 @@ func (s *Webforms) Update(ctx context.Context, webformID int64, v3WebformsCreate
 				return nil, err
 			}
 
-			var out apierrors.WebformsUpdateWebformForbiddenError
+			var out apierrors.ForbiddenError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -1315,7 +1315,7 @@ func (s *Webforms) Update(ctx context.Context, webformID int64, v3WebformsCreate
 				return nil, err
 			}
 
-			var out apierrors.WebformsUpdateWebformNotFoundError
+			var out apierrors.NotFoundError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -1340,7 +1340,7 @@ func (s *Webforms) Update(ctx context.Context, webformID int64, v3WebformsCreate
 				return nil, err
 			}
 
-			var out apierrors.WebformsUpdateWebformConflictError
+			var out apierrors.ConflictError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -1365,7 +1365,7 @@ func (s *Webforms) Update(ctx context.Context, webformID int64, v3WebformsCreate
 				return nil, err
 			}
 
-			var out apierrors.WebformsUpdateWebformUnprocessableEntityError
+			var out apierrors.UnprocessableEntityError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -1390,7 +1390,7 @@ func (s *Webforms) Update(ctx context.Context, webformID int64, v3WebformsCreate
 				return nil, err
 			}
 
-			var out apierrors.WebformsUpdateWebformInternalServerError
+			var out apierrors.InternalServerError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -1415,7 +1415,7 @@ func (s *Webforms) Update(ctx context.Context, webformID int64, v3WebformsCreate
 				return nil, err
 			}
 
-			var out apierrors.WebformsUpdateWebformBadGatewayError
+			var out apierrors.BadGatewayError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -1440,7 +1440,7 @@ func (s *Webforms) Update(ctx context.Context, webformID int64, v3WebformsCreate
 				return nil, err
 			}
 
-			var out apierrors.WebformsUpdateWebformServiceUnavailableError
+			var out apierrors.ServiceUnavailableError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -1465,7 +1465,7 @@ func (s *Webforms) Update(ctx context.Context, webformID int64, v3WebformsCreate
 				return nil, err
 			}
 
-			var out apierrors.WebformsUpdateWebformGatewayTimeoutError
+			var out apierrors.GatewayTimeoutError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -1706,7 +1706,7 @@ func (s *Webforms) Remove(ctx context.Context, webformID int64, ownerID string, 
 				return nil, err
 			}
 
-			var out apierrors.WebformsRemoveWebformBadRequestError
+			var out apierrors.BadRequestError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -1731,7 +1731,7 @@ func (s *Webforms) Remove(ctx context.Context, webformID int64, ownerID string, 
 				return nil, err
 			}
 
-			var out apierrors.WebformsRemoveWebformUnauthorizedError
+			var out apierrors.UnauthorizedError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -1756,7 +1756,7 @@ func (s *Webforms) Remove(ctx context.Context, webformID int64, ownerID string, 
 				return nil, err
 			}
 
-			var out apierrors.WebformsRemoveWebformPaymentRequiredError
+			var out apierrors.PaymentRequiredError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -1781,7 +1781,7 @@ func (s *Webforms) Remove(ctx context.Context, webformID int64, ownerID string, 
 				return nil, err
 			}
 
-			var out apierrors.WebformsRemoveWebformForbiddenError
+			var out apierrors.ForbiddenError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -1806,7 +1806,7 @@ func (s *Webforms) Remove(ctx context.Context, webformID int64, ownerID string, 
 				return nil, err
 			}
 
-			var out apierrors.WebformsRemoveWebformNotFoundError
+			var out apierrors.NotFoundError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -1831,7 +1831,7 @@ func (s *Webforms) Remove(ctx context.Context, webformID int64, ownerID string, 
 				return nil, err
 			}
 
-			var out apierrors.WebformsRemoveWebformConflictError
+			var out apierrors.ConflictError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -1856,7 +1856,7 @@ func (s *Webforms) Remove(ctx context.Context, webformID int64, ownerID string, 
 				return nil, err
 			}
 
-			var out apierrors.WebformsRemoveWebformUnprocessableEntityError
+			var out apierrors.UnprocessableEntityError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -1881,7 +1881,7 @@ func (s *Webforms) Remove(ctx context.Context, webformID int64, ownerID string, 
 				return nil, err
 			}
 
-			var out apierrors.WebformsRemoveWebformInternalServerError
+			var out apierrors.InternalServerError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -1906,7 +1906,7 @@ func (s *Webforms) Remove(ctx context.Context, webformID int64, ownerID string, 
 				return nil, err
 			}
 
-			var out apierrors.WebformsRemoveWebformBadGatewayError
+			var out apierrors.BadGatewayError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -1931,7 +1931,7 @@ func (s *Webforms) Remove(ctx context.Context, webformID int64, ownerID string, 
 				return nil, err
 			}
 
-			var out apierrors.WebformsRemoveWebformServiceUnavailableError
+			var out apierrors.ServiceUnavailableError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -1956,7 +1956,7 @@ func (s *Webforms) Remove(ctx context.Context, webformID int64, ownerID string, 
 				return nil, err
 			}
 
-			var out apierrors.WebformsRemoveWebformGatewayTimeoutError
+			var out apierrors.GatewayTimeoutError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -2197,7 +2197,7 @@ func (s *Webforms) Get(ctx context.Context, webformID int64, ownerID string, opt
 				return nil, err
 			}
 
-			var out apierrors.WebformsGetWebformByIDBadRequestError
+			var out apierrors.BadRequestError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -2222,7 +2222,7 @@ func (s *Webforms) Get(ctx context.Context, webformID int64, ownerID string, opt
 				return nil, err
 			}
 
-			var out apierrors.WebformsGetWebformByIDUnauthorizedError
+			var out apierrors.UnauthorizedError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -2247,7 +2247,7 @@ func (s *Webforms) Get(ctx context.Context, webformID int64, ownerID string, opt
 				return nil, err
 			}
 
-			var out apierrors.WebformsGetWebformByIDPaymentRequiredError
+			var out apierrors.PaymentRequiredError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -2272,7 +2272,7 @@ func (s *Webforms) Get(ctx context.Context, webformID int64, ownerID string, opt
 				return nil, err
 			}
 
-			var out apierrors.WebformsGetWebformByIDForbiddenError
+			var out apierrors.ForbiddenError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -2297,7 +2297,7 @@ func (s *Webforms) Get(ctx context.Context, webformID int64, ownerID string, opt
 				return nil, err
 			}
 
-			var out apierrors.WebformsGetWebformByIDNotFoundError
+			var out apierrors.NotFoundError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -2322,7 +2322,7 @@ func (s *Webforms) Get(ctx context.Context, webformID int64, ownerID string, opt
 				return nil, err
 			}
 
-			var out apierrors.WebformsGetWebformByIDConflictError
+			var out apierrors.ConflictError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -2347,7 +2347,7 @@ func (s *Webforms) Get(ctx context.Context, webformID int64, ownerID string, opt
 				return nil, err
 			}
 
-			var out apierrors.WebformsGetWebformByIDUnprocessableEntityError
+			var out apierrors.UnprocessableEntityError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -2372,7 +2372,7 @@ func (s *Webforms) Get(ctx context.Context, webformID int64, ownerID string, opt
 				return nil, err
 			}
 
-			var out apierrors.WebformsGetWebformByIDInternalServerError
+			var out apierrors.InternalServerError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -2397,7 +2397,7 @@ func (s *Webforms) Get(ctx context.Context, webformID int64, ownerID string, opt
 				return nil, err
 			}
 
-			var out apierrors.WebformsGetWebformByIDBadGatewayError
+			var out apierrors.BadGatewayError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -2422,7 +2422,7 @@ func (s *Webforms) Get(ctx context.Context, webformID int64, ownerID string, opt
 				return nil, err
 			}
 
-			var out apierrors.WebformsGetWebformByIDServiceUnavailableError
+			var out apierrors.ServiceUnavailableError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -2447,7 +2447,7 @@ func (s *Webforms) Get(ctx context.Context, webformID int64, ownerID string, opt
 				return nil, err
 			}
 
-			var out apierrors.WebformsGetWebformByIDGatewayTimeoutError
+			var out apierrors.GatewayTimeoutError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}

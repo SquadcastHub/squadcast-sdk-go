@@ -228,7 +228,7 @@ func (s *Workflows) List(ctx context.Context, request operations.WorkflowsListWo
 				return nil, err
 			}
 
-			var out apierrors.WorkflowsListWorkflowsBadRequestError
+			var out apierrors.BadRequestError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -253,7 +253,7 @@ func (s *Workflows) List(ctx context.Context, request operations.WorkflowsListWo
 				return nil, err
 			}
 
-			var out apierrors.WorkflowsListWorkflowsUnauthorizedError
+			var out apierrors.UnauthorizedError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -278,7 +278,7 @@ func (s *Workflows) List(ctx context.Context, request operations.WorkflowsListWo
 				return nil, err
 			}
 
-			var out apierrors.WorkflowsListWorkflowsPaymentRequiredError
+			var out apierrors.PaymentRequiredError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -303,7 +303,7 @@ func (s *Workflows) List(ctx context.Context, request operations.WorkflowsListWo
 				return nil, err
 			}
 
-			var out apierrors.WorkflowsListWorkflowsForbiddenError
+			var out apierrors.ForbiddenError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -328,7 +328,7 @@ func (s *Workflows) List(ctx context.Context, request operations.WorkflowsListWo
 				return nil, err
 			}
 
-			var out apierrors.WorkflowsListWorkflowsNotFoundError
+			var out apierrors.NotFoundError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -353,7 +353,7 @@ func (s *Workflows) List(ctx context.Context, request operations.WorkflowsListWo
 				return nil, err
 			}
 
-			var out apierrors.WorkflowsListWorkflowsConflictError
+			var out apierrors.ConflictError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -378,7 +378,7 @@ func (s *Workflows) List(ctx context.Context, request operations.WorkflowsListWo
 				return nil, err
 			}
 
-			var out apierrors.WorkflowsListWorkflowsUnprocessableEntityError
+			var out apierrors.UnprocessableEntityError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -403,7 +403,7 @@ func (s *Workflows) List(ctx context.Context, request operations.WorkflowsListWo
 				return nil, err
 			}
 
-			var out apierrors.WorkflowsListWorkflowsInternalServerError
+			var out apierrors.InternalServerError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -428,7 +428,7 @@ func (s *Workflows) List(ctx context.Context, request operations.WorkflowsListWo
 				return nil, err
 			}
 
-			var out apierrors.WorkflowsListWorkflowsBadGatewayError
+			var out apierrors.BadGatewayError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -453,7 +453,7 @@ func (s *Workflows) List(ctx context.Context, request operations.WorkflowsListWo
 				return nil, err
 			}
 
-			var out apierrors.WorkflowsListWorkflowsServiceUnavailableError
+			var out apierrors.ServiceUnavailableError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -478,7 +478,7 @@ func (s *Workflows) List(ctx context.Context, request operations.WorkflowsListWo
 				return nil, err
 			}
 
-			var out apierrors.WorkflowsListWorkflowsGatewayTimeoutError
+			var out apierrors.GatewayTimeoutError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -716,7 +716,7 @@ func (s *Workflows) Create(ctx context.Context, request components.V3WorkflowsCr
 				return nil, err
 			}
 
-			var out apierrors.WorkflowsCreateWorkflowBadRequestError
+			var out apierrors.BadRequestError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -741,7 +741,7 @@ func (s *Workflows) Create(ctx context.Context, request components.V3WorkflowsCr
 				return nil, err
 			}
 
-			var out apierrors.WorkflowsCreateWorkflowUnauthorizedError
+			var out apierrors.UnauthorizedError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -766,7 +766,7 @@ func (s *Workflows) Create(ctx context.Context, request components.V3WorkflowsCr
 				return nil, err
 			}
 
-			var out apierrors.WorkflowsCreateWorkflowPaymentRequiredError
+			var out apierrors.PaymentRequiredError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -791,7 +791,7 @@ func (s *Workflows) Create(ctx context.Context, request components.V3WorkflowsCr
 				return nil, err
 			}
 
-			var out apierrors.WorkflowsCreateWorkflowForbiddenError
+			var out apierrors.ForbiddenError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -816,7 +816,7 @@ func (s *Workflows) Create(ctx context.Context, request components.V3WorkflowsCr
 				return nil, err
 			}
 
-			var out apierrors.WorkflowsCreateWorkflowNotFoundError
+			var out apierrors.NotFoundError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -841,7 +841,7 @@ func (s *Workflows) Create(ctx context.Context, request components.V3WorkflowsCr
 				return nil, err
 			}
 
-			var out apierrors.WorkflowsCreateWorkflowConflictError
+			var out apierrors.ConflictError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -866,7 +866,7 @@ func (s *Workflows) Create(ctx context.Context, request components.V3WorkflowsCr
 				return nil, err
 			}
 
-			var out apierrors.WorkflowsCreateWorkflowUnprocessableEntityError
+			var out apierrors.UnprocessableEntityError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -891,7 +891,7 @@ func (s *Workflows) Create(ctx context.Context, request components.V3WorkflowsCr
 				return nil, err
 			}
 
-			var out apierrors.WorkflowsCreateWorkflowInternalServerError
+			var out apierrors.InternalServerError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -916,7 +916,7 @@ func (s *Workflows) Create(ctx context.Context, request components.V3WorkflowsCr
 				return nil, err
 			}
 
-			var out apierrors.WorkflowsCreateWorkflowBadGatewayError
+			var out apierrors.BadGatewayError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -941,7 +941,7 @@ func (s *Workflows) Create(ctx context.Context, request components.V3WorkflowsCr
 				return nil, err
 			}
 
-			var out apierrors.WorkflowsCreateWorkflowServiceUnavailableError
+			var out apierrors.ServiceUnavailableError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -966,7 +966,7 @@ func (s *Workflows) Create(ctx context.Context, request components.V3WorkflowsCr
 				return nil, err
 			}
 
-			var out apierrors.WorkflowsCreateWorkflowGatewayTimeoutError
+			var out apierrors.GatewayTimeoutError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -1199,7 +1199,7 @@ func (s *Workflows) BulkEnableDisable(ctx context.Context, request components.V3
 				return nil, err
 			}
 
-			var out apierrors.WorkflowsBulkEnabledisableWorkflowsBadRequestError
+			var out apierrors.BadRequestError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -1224,7 +1224,7 @@ func (s *Workflows) BulkEnableDisable(ctx context.Context, request components.V3
 				return nil, err
 			}
 
-			var out apierrors.WorkflowsBulkEnabledisableWorkflowsUnauthorizedError
+			var out apierrors.UnauthorizedError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -1249,7 +1249,7 @@ func (s *Workflows) BulkEnableDisable(ctx context.Context, request components.V3
 				return nil, err
 			}
 
-			var out apierrors.WorkflowsBulkEnabledisableWorkflowsPaymentRequiredError
+			var out apierrors.PaymentRequiredError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -1274,7 +1274,7 @@ func (s *Workflows) BulkEnableDisable(ctx context.Context, request components.V3
 				return nil, err
 			}
 
-			var out apierrors.WorkflowsBulkEnabledisableWorkflowsForbiddenError
+			var out apierrors.ForbiddenError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -1299,7 +1299,7 @@ func (s *Workflows) BulkEnableDisable(ctx context.Context, request components.V3
 				return nil, err
 			}
 
-			var out apierrors.WorkflowsBulkEnabledisableWorkflowsNotFoundError
+			var out apierrors.NotFoundError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -1324,7 +1324,7 @@ func (s *Workflows) BulkEnableDisable(ctx context.Context, request components.V3
 				return nil, err
 			}
 
-			var out apierrors.WorkflowsBulkEnabledisableWorkflowsConflictError
+			var out apierrors.ConflictError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -1349,7 +1349,7 @@ func (s *Workflows) BulkEnableDisable(ctx context.Context, request components.V3
 				return nil, err
 			}
 
-			var out apierrors.WorkflowsBulkEnabledisableWorkflowsUnprocessableEntityError
+			var out apierrors.UnprocessableEntityError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -1374,7 +1374,7 @@ func (s *Workflows) BulkEnableDisable(ctx context.Context, request components.V3
 				return nil, err
 			}
 
-			var out apierrors.WorkflowsBulkEnabledisableWorkflowsInternalServerError
+			var out apierrors.InternalServerError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -1399,7 +1399,7 @@ func (s *Workflows) BulkEnableDisable(ctx context.Context, request components.V3
 				return nil, err
 			}
 
-			var out apierrors.WorkflowsBulkEnabledisableWorkflowsBadGatewayError
+			var out apierrors.BadGatewayError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -1424,7 +1424,7 @@ func (s *Workflows) BulkEnableDisable(ctx context.Context, request components.V3
 				return nil, err
 			}
 
-			var out apierrors.WorkflowsBulkEnabledisableWorkflowsServiceUnavailableError
+			var out apierrors.ServiceUnavailableError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -1449,7 +1449,7 @@ func (s *Workflows) BulkEnableDisable(ctx context.Context, request components.V3
 				return nil, err
 			}
 
-			var out apierrors.WorkflowsBulkEnabledisableWorkflowsGatewayTimeoutError
+			var out apierrors.GatewayTimeoutError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -1679,7 +1679,7 @@ func (s *Workflows) Delete(ctx context.Context, workflowID string, opts ...opera
 				return nil, err
 			}
 
-			var out apierrors.WorkflowsDeleteWorkflowBadRequestError
+			var out apierrors.BadRequestError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -1704,7 +1704,7 @@ func (s *Workflows) Delete(ctx context.Context, workflowID string, opts ...opera
 				return nil, err
 			}
 
-			var out apierrors.WorkflowsDeleteWorkflowUnauthorizedError
+			var out apierrors.UnauthorizedError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -1729,7 +1729,7 @@ func (s *Workflows) Delete(ctx context.Context, workflowID string, opts ...opera
 				return nil, err
 			}
 
-			var out apierrors.WorkflowsDeleteWorkflowPaymentRequiredError
+			var out apierrors.PaymentRequiredError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -1754,7 +1754,7 @@ func (s *Workflows) Delete(ctx context.Context, workflowID string, opts ...opera
 				return nil, err
 			}
 
-			var out apierrors.WorkflowsDeleteWorkflowForbiddenError
+			var out apierrors.ForbiddenError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -1779,7 +1779,7 @@ func (s *Workflows) Delete(ctx context.Context, workflowID string, opts ...opera
 				return nil, err
 			}
 
-			var out apierrors.WorkflowsDeleteWorkflowNotFoundError
+			var out apierrors.NotFoundError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -1804,7 +1804,7 @@ func (s *Workflows) Delete(ctx context.Context, workflowID string, opts ...opera
 				return nil, err
 			}
 
-			var out apierrors.WorkflowsDeleteWorkflowConflictError
+			var out apierrors.ConflictError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -1829,7 +1829,7 @@ func (s *Workflows) Delete(ctx context.Context, workflowID string, opts ...opera
 				return nil, err
 			}
 
-			var out apierrors.WorkflowsDeleteWorkflowUnprocessableEntityError
+			var out apierrors.UnprocessableEntityError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -1854,7 +1854,7 @@ func (s *Workflows) Delete(ctx context.Context, workflowID string, opts ...opera
 				return nil, err
 			}
 
-			var out apierrors.WorkflowsDeleteWorkflowInternalServerError
+			var out apierrors.InternalServerError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -1879,7 +1879,7 @@ func (s *Workflows) Delete(ctx context.Context, workflowID string, opts ...opera
 				return nil, err
 			}
 
-			var out apierrors.WorkflowsDeleteWorkflowBadGatewayError
+			var out apierrors.BadGatewayError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -1904,7 +1904,7 @@ func (s *Workflows) Delete(ctx context.Context, workflowID string, opts ...opera
 				return nil, err
 			}
 
-			var out apierrors.WorkflowsDeleteWorkflowServiceUnavailableError
+			var out apierrors.ServiceUnavailableError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -1929,7 +1929,7 @@ func (s *Workflows) Delete(ctx context.Context, workflowID string, opts ...opera
 				return nil, err
 			}
 
-			var out apierrors.WorkflowsDeleteWorkflowGatewayTimeoutError
+			var out apierrors.GatewayTimeoutError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -2164,7 +2164,7 @@ func (s *Workflows) GetByID(ctx context.Context, workflowID string, opts ...oper
 				return nil, err
 			}
 
-			var out apierrors.WorkflowsGetWorkflowByIDBadRequestError
+			var out apierrors.BadRequestError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -2189,7 +2189,7 @@ func (s *Workflows) GetByID(ctx context.Context, workflowID string, opts ...oper
 				return nil, err
 			}
 
-			var out apierrors.WorkflowsGetWorkflowByIDUnauthorizedError
+			var out apierrors.UnauthorizedError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -2214,7 +2214,7 @@ func (s *Workflows) GetByID(ctx context.Context, workflowID string, opts ...oper
 				return nil, err
 			}
 
-			var out apierrors.WorkflowsGetWorkflowByIDPaymentRequiredError
+			var out apierrors.PaymentRequiredError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -2239,7 +2239,7 @@ func (s *Workflows) GetByID(ctx context.Context, workflowID string, opts ...oper
 				return nil, err
 			}
 
-			var out apierrors.WorkflowsGetWorkflowByIDForbiddenError
+			var out apierrors.ForbiddenError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -2264,7 +2264,7 @@ func (s *Workflows) GetByID(ctx context.Context, workflowID string, opts ...oper
 				return nil, err
 			}
 
-			var out apierrors.WorkflowsGetWorkflowByIDNotFoundError
+			var out apierrors.NotFoundError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -2289,7 +2289,7 @@ func (s *Workflows) GetByID(ctx context.Context, workflowID string, opts ...oper
 				return nil, err
 			}
 
-			var out apierrors.WorkflowsGetWorkflowByIDConflictError
+			var out apierrors.ConflictError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -2314,7 +2314,7 @@ func (s *Workflows) GetByID(ctx context.Context, workflowID string, opts ...oper
 				return nil, err
 			}
 
-			var out apierrors.WorkflowsGetWorkflowByIDUnprocessableEntityError
+			var out apierrors.UnprocessableEntityError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -2339,7 +2339,7 @@ func (s *Workflows) GetByID(ctx context.Context, workflowID string, opts ...oper
 				return nil, err
 			}
 
-			var out apierrors.WorkflowsGetWorkflowByIDInternalServerError
+			var out apierrors.InternalServerError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -2364,7 +2364,7 @@ func (s *Workflows) GetByID(ctx context.Context, workflowID string, opts ...oper
 				return nil, err
 			}
 
-			var out apierrors.WorkflowsGetWorkflowByIDBadGatewayError
+			var out apierrors.BadGatewayError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -2389,7 +2389,7 @@ func (s *Workflows) GetByID(ctx context.Context, workflowID string, opts ...oper
 				return nil, err
 			}
 
-			var out apierrors.WorkflowsGetWorkflowByIDServiceUnavailableError
+			var out apierrors.ServiceUnavailableError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -2414,7 +2414,7 @@ func (s *Workflows) GetByID(ctx context.Context, workflowID string, opts ...oper
 				return nil, err
 			}
 
-			var out apierrors.WorkflowsGetWorkflowByIDGatewayTimeoutError
+			var out apierrors.GatewayTimeoutError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -2657,7 +2657,7 @@ func (s *Workflows) Update(ctx context.Context, workflowID string, v3WorkflowsCr
 				return nil, err
 			}
 
-			var out apierrors.WorkflowsUpdateWorkflowBadRequestError
+			var out apierrors.BadRequestError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -2682,7 +2682,7 @@ func (s *Workflows) Update(ctx context.Context, workflowID string, v3WorkflowsCr
 				return nil, err
 			}
 
-			var out apierrors.WorkflowsUpdateWorkflowUnauthorizedError
+			var out apierrors.UnauthorizedError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -2707,7 +2707,7 @@ func (s *Workflows) Update(ctx context.Context, workflowID string, v3WorkflowsCr
 				return nil, err
 			}
 
-			var out apierrors.WorkflowsUpdateWorkflowPaymentRequiredError
+			var out apierrors.PaymentRequiredError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -2732,7 +2732,7 @@ func (s *Workflows) Update(ctx context.Context, workflowID string, v3WorkflowsCr
 				return nil, err
 			}
 
-			var out apierrors.WorkflowsUpdateWorkflowForbiddenError
+			var out apierrors.ForbiddenError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -2757,7 +2757,7 @@ func (s *Workflows) Update(ctx context.Context, workflowID string, v3WorkflowsCr
 				return nil, err
 			}
 
-			var out apierrors.WorkflowsUpdateWorkflowNotFoundError
+			var out apierrors.NotFoundError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -2782,7 +2782,7 @@ func (s *Workflows) Update(ctx context.Context, workflowID string, v3WorkflowsCr
 				return nil, err
 			}
 
-			var out apierrors.WorkflowsUpdateWorkflowConflictError
+			var out apierrors.ConflictError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -2807,7 +2807,7 @@ func (s *Workflows) Update(ctx context.Context, workflowID string, v3WorkflowsCr
 				return nil, err
 			}
 
-			var out apierrors.WorkflowsUpdateWorkflowUnprocessableEntityError
+			var out apierrors.UnprocessableEntityError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -2832,7 +2832,7 @@ func (s *Workflows) Update(ctx context.Context, workflowID string, v3WorkflowsCr
 				return nil, err
 			}
 
-			var out apierrors.WorkflowsUpdateWorkflowInternalServerError
+			var out apierrors.InternalServerError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -2857,7 +2857,7 @@ func (s *Workflows) Update(ctx context.Context, workflowID string, v3WorkflowsCr
 				return nil, err
 			}
 
-			var out apierrors.WorkflowsUpdateWorkflowBadGatewayError
+			var out apierrors.BadGatewayError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -2882,7 +2882,7 @@ func (s *Workflows) Update(ctx context.Context, workflowID string, v3WorkflowsCr
 				return nil, err
 			}
 
-			var out apierrors.WorkflowsUpdateWorkflowServiceUnavailableError
+			var out apierrors.ServiceUnavailableError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -2907,7 +2907,7 @@ func (s *Workflows) Update(ctx context.Context, workflowID string, v3WorkflowsCr
 				return nil, err
 			}
 
-			var out apierrors.WorkflowsUpdateWorkflowGatewayTimeoutError
+			var out apierrors.GatewayTimeoutError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -3150,7 +3150,7 @@ func (s *Workflows) UpdateActionsOrder(ctx context.Context, workflowID string, v
 				return nil, err
 			}
 
-			var out apierrors.WorkflowsUpdateActionsOrderBadRequestError
+			var out apierrors.BadRequestError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -3175,7 +3175,7 @@ func (s *Workflows) UpdateActionsOrder(ctx context.Context, workflowID string, v
 				return nil, err
 			}
 
-			var out apierrors.WorkflowsUpdateActionsOrderUnauthorizedError
+			var out apierrors.UnauthorizedError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -3200,7 +3200,7 @@ func (s *Workflows) UpdateActionsOrder(ctx context.Context, workflowID string, v
 				return nil, err
 			}
 
-			var out apierrors.WorkflowsUpdateActionsOrderPaymentRequiredError
+			var out apierrors.PaymentRequiredError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -3225,7 +3225,7 @@ func (s *Workflows) UpdateActionsOrder(ctx context.Context, workflowID string, v
 				return nil, err
 			}
 
-			var out apierrors.WorkflowsUpdateActionsOrderForbiddenError
+			var out apierrors.ForbiddenError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -3250,7 +3250,7 @@ func (s *Workflows) UpdateActionsOrder(ctx context.Context, workflowID string, v
 				return nil, err
 			}
 
-			var out apierrors.WorkflowsUpdateActionsOrderNotFoundError
+			var out apierrors.NotFoundError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -3275,7 +3275,7 @@ func (s *Workflows) UpdateActionsOrder(ctx context.Context, workflowID string, v
 				return nil, err
 			}
 
-			var out apierrors.WorkflowsUpdateActionsOrderConflictError
+			var out apierrors.ConflictError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -3300,7 +3300,7 @@ func (s *Workflows) UpdateActionsOrder(ctx context.Context, workflowID string, v
 				return nil, err
 			}
 
-			var out apierrors.WorkflowsUpdateActionsOrderUnprocessableEntityError
+			var out apierrors.UnprocessableEntityError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -3325,7 +3325,7 @@ func (s *Workflows) UpdateActionsOrder(ctx context.Context, workflowID string, v
 				return nil, err
 			}
 
-			var out apierrors.WorkflowsUpdateActionsOrderInternalServerError
+			var out apierrors.InternalServerError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -3350,7 +3350,7 @@ func (s *Workflows) UpdateActionsOrder(ctx context.Context, workflowID string, v
 				return nil, err
 			}
 
-			var out apierrors.WorkflowsUpdateActionsOrderBadGatewayError
+			var out apierrors.BadGatewayError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -3375,7 +3375,7 @@ func (s *Workflows) UpdateActionsOrder(ctx context.Context, workflowID string, v
 				return nil, err
 			}
 
-			var out apierrors.WorkflowsUpdateActionsOrderServiceUnavailableError
+			var out apierrors.ServiceUnavailableError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -3400,7 +3400,7 @@ func (s *Workflows) UpdateActionsOrder(ctx context.Context, workflowID string, v
 				return nil, err
 			}
 
-			var out apierrors.WorkflowsUpdateActionsOrderGatewayTimeoutError
+			var out apierrors.GatewayTimeoutError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -3631,7 +3631,7 @@ func (s *Workflows) DeleteAction(ctx context.Context, workflowID string, actionI
 				return nil, err
 			}
 
-			var out apierrors.WorkflowsDeleteWorkflowActionBadRequestError
+			var out apierrors.BadRequestError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -3656,7 +3656,7 @@ func (s *Workflows) DeleteAction(ctx context.Context, workflowID string, actionI
 				return nil, err
 			}
 
-			var out apierrors.WorkflowsDeleteWorkflowActionUnauthorizedError
+			var out apierrors.UnauthorizedError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -3681,7 +3681,7 @@ func (s *Workflows) DeleteAction(ctx context.Context, workflowID string, actionI
 				return nil, err
 			}
 
-			var out apierrors.WorkflowsDeleteWorkflowActionPaymentRequiredError
+			var out apierrors.PaymentRequiredError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -3706,7 +3706,7 @@ func (s *Workflows) DeleteAction(ctx context.Context, workflowID string, actionI
 				return nil, err
 			}
 
-			var out apierrors.WorkflowsDeleteWorkflowActionForbiddenError
+			var out apierrors.ForbiddenError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -3731,7 +3731,7 @@ func (s *Workflows) DeleteAction(ctx context.Context, workflowID string, actionI
 				return nil, err
 			}
 
-			var out apierrors.WorkflowsDeleteWorkflowActionNotFoundError
+			var out apierrors.NotFoundError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -3756,7 +3756,7 @@ func (s *Workflows) DeleteAction(ctx context.Context, workflowID string, actionI
 				return nil, err
 			}
 
-			var out apierrors.WorkflowsDeleteWorkflowActionConflictError
+			var out apierrors.ConflictError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -3781,7 +3781,7 @@ func (s *Workflows) DeleteAction(ctx context.Context, workflowID string, actionI
 				return nil, err
 			}
 
-			var out apierrors.WorkflowsDeleteWorkflowActionUnprocessableEntityError
+			var out apierrors.UnprocessableEntityError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -3806,7 +3806,7 @@ func (s *Workflows) DeleteAction(ctx context.Context, workflowID string, actionI
 				return nil, err
 			}
 
-			var out apierrors.WorkflowsDeleteWorkflowActionInternalServerError
+			var out apierrors.InternalServerError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -3831,7 +3831,7 @@ func (s *Workflows) DeleteAction(ctx context.Context, workflowID string, actionI
 				return nil, err
 			}
 
-			var out apierrors.WorkflowsDeleteWorkflowActionBadGatewayError
+			var out apierrors.BadGatewayError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -3856,7 +3856,7 @@ func (s *Workflows) DeleteAction(ctx context.Context, workflowID string, actionI
 				return nil, err
 			}
 
-			var out apierrors.WorkflowsDeleteWorkflowActionServiceUnavailableError
+			var out apierrors.ServiceUnavailableError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -3881,7 +3881,7 @@ func (s *Workflows) DeleteAction(ctx context.Context, workflowID string, actionI
 				return nil, err
 			}
 
-			var out apierrors.WorkflowsDeleteWorkflowActionGatewayTimeoutError
+			var out apierrors.GatewayTimeoutError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -4117,7 +4117,7 @@ func (s *Workflows) GetAction(ctx context.Context, workflowID string, actionID s
 				return nil, err
 			}
 
-			var out apierrors.WorkflowsGetWorkflowActionByIDBadRequestError
+			var out apierrors.BadRequestError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -4142,7 +4142,7 @@ func (s *Workflows) GetAction(ctx context.Context, workflowID string, actionID s
 				return nil, err
 			}
 
-			var out apierrors.WorkflowsGetWorkflowActionByIDUnauthorizedError
+			var out apierrors.UnauthorizedError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -4167,7 +4167,7 @@ func (s *Workflows) GetAction(ctx context.Context, workflowID string, actionID s
 				return nil, err
 			}
 
-			var out apierrors.WorkflowsGetWorkflowActionByIDPaymentRequiredError
+			var out apierrors.PaymentRequiredError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -4192,7 +4192,7 @@ func (s *Workflows) GetAction(ctx context.Context, workflowID string, actionID s
 				return nil, err
 			}
 
-			var out apierrors.WorkflowsGetWorkflowActionByIDForbiddenError
+			var out apierrors.ForbiddenError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -4217,7 +4217,7 @@ func (s *Workflows) GetAction(ctx context.Context, workflowID string, actionID s
 				return nil, err
 			}
 
-			var out apierrors.WorkflowsGetWorkflowActionByIDNotFoundError
+			var out apierrors.NotFoundError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -4242,7 +4242,7 @@ func (s *Workflows) GetAction(ctx context.Context, workflowID string, actionID s
 				return nil, err
 			}
 
-			var out apierrors.WorkflowsGetWorkflowActionByIDConflictError
+			var out apierrors.ConflictError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -4267,7 +4267,7 @@ func (s *Workflows) GetAction(ctx context.Context, workflowID string, actionID s
 				return nil, err
 			}
 
-			var out apierrors.WorkflowsGetWorkflowActionByIDUnprocessableEntityError
+			var out apierrors.UnprocessableEntityError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -4292,7 +4292,7 @@ func (s *Workflows) GetAction(ctx context.Context, workflowID string, actionID s
 				return nil, err
 			}
 
-			var out apierrors.WorkflowsGetWorkflowActionByIDInternalServerError
+			var out apierrors.InternalServerError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -4317,7 +4317,7 @@ func (s *Workflows) GetAction(ctx context.Context, workflowID string, actionID s
 				return nil, err
 			}
 
-			var out apierrors.WorkflowsGetWorkflowActionByIDBadGatewayError
+			var out apierrors.BadGatewayError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -4342,7 +4342,7 @@ func (s *Workflows) GetAction(ctx context.Context, workflowID string, actionID s
 				return nil, err
 			}
 
-			var out apierrors.WorkflowsGetWorkflowActionByIDServiceUnavailableError
+			var out apierrors.ServiceUnavailableError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -4367,7 +4367,7 @@ func (s *Workflows) GetAction(ctx context.Context, workflowID string, actionID s
 				return nil, err
 			}
 
-			var out apierrors.WorkflowsGetWorkflowActionByIDGatewayTimeoutError
+			var out apierrors.GatewayTimeoutError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -4611,7 +4611,7 @@ func (s *Workflows) UpdateAction(ctx context.Context, workflowID string, actionI
 				return nil, err
 			}
 
-			var out apierrors.WorkflowsUpdateWorkflowActionBadRequestError
+			var out apierrors.BadRequestError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -4636,7 +4636,7 @@ func (s *Workflows) UpdateAction(ctx context.Context, workflowID string, actionI
 				return nil, err
 			}
 
-			var out apierrors.WorkflowsUpdateWorkflowActionUnauthorizedError
+			var out apierrors.UnauthorizedError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -4661,7 +4661,7 @@ func (s *Workflows) UpdateAction(ctx context.Context, workflowID string, actionI
 				return nil, err
 			}
 
-			var out apierrors.WorkflowsUpdateWorkflowActionPaymentRequiredError
+			var out apierrors.PaymentRequiredError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -4686,7 +4686,7 @@ func (s *Workflows) UpdateAction(ctx context.Context, workflowID string, actionI
 				return nil, err
 			}
 
-			var out apierrors.WorkflowsUpdateWorkflowActionForbiddenError
+			var out apierrors.ForbiddenError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -4711,7 +4711,7 @@ func (s *Workflows) UpdateAction(ctx context.Context, workflowID string, actionI
 				return nil, err
 			}
 
-			var out apierrors.WorkflowsUpdateWorkflowActionNotFoundError
+			var out apierrors.NotFoundError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -4736,7 +4736,7 @@ func (s *Workflows) UpdateAction(ctx context.Context, workflowID string, actionI
 				return nil, err
 			}
 
-			var out apierrors.WorkflowsUpdateWorkflowActionConflictError
+			var out apierrors.ConflictError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -4761,7 +4761,7 @@ func (s *Workflows) UpdateAction(ctx context.Context, workflowID string, actionI
 				return nil, err
 			}
 
-			var out apierrors.WorkflowsUpdateWorkflowActionUnprocessableEntityError
+			var out apierrors.UnprocessableEntityError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -4786,7 +4786,7 @@ func (s *Workflows) UpdateAction(ctx context.Context, workflowID string, actionI
 				return nil, err
 			}
 
-			var out apierrors.WorkflowsUpdateWorkflowActionInternalServerError
+			var out apierrors.InternalServerError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -4811,7 +4811,7 @@ func (s *Workflows) UpdateAction(ctx context.Context, workflowID string, actionI
 				return nil, err
 			}
 
-			var out apierrors.WorkflowsUpdateWorkflowActionBadGatewayError
+			var out apierrors.BadGatewayError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -4836,7 +4836,7 @@ func (s *Workflows) UpdateAction(ctx context.Context, workflowID string, actionI
 				return nil, err
 			}
 
-			var out apierrors.WorkflowsUpdateWorkflowActionServiceUnavailableError
+			var out apierrors.ServiceUnavailableError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -4861,7 +4861,7 @@ func (s *Workflows) UpdateAction(ctx context.Context, workflowID string, actionI
 				return nil, err
 			}
 
-			var out apierrors.WorkflowsUpdateWorkflowActionGatewayTimeoutError
+			var out apierrors.GatewayTimeoutError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -5099,7 +5099,7 @@ func (s *Workflows) ToggleEnable(ctx context.Context, workflowID string, v3Workf
 				return nil, err
 			}
 
-			var out apierrors.WorkflowsEnabledisableWorkflowBadRequestError
+			var out apierrors.BadRequestError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -5124,7 +5124,7 @@ func (s *Workflows) ToggleEnable(ctx context.Context, workflowID string, v3Workf
 				return nil, err
 			}
 
-			var out apierrors.WorkflowsEnabledisableWorkflowUnauthorizedError
+			var out apierrors.UnauthorizedError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -5149,7 +5149,7 @@ func (s *Workflows) ToggleEnable(ctx context.Context, workflowID string, v3Workf
 				return nil, err
 			}
 
-			var out apierrors.WorkflowsEnabledisableWorkflowPaymentRequiredError
+			var out apierrors.PaymentRequiredError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -5174,7 +5174,7 @@ func (s *Workflows) ToggleEnable(ctx context.Context, workflowID string, v3Workf
 				return nil, err
 			}
 
-			var out apierrors.WorkflowsEnabledisableWorkflowForbiddenError
+			var out apierrors.ForbiddenError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -5199,7 +5199,7 @@ func (s *Workflows) ToggleEnable(ctx context.Context, workflowID string, v3Workf
 				return nil, err
 			}
 
-			var out apierrors.WorkflowsEnabledisableWorkflowNotFoundError
+			var out apierrors.NotFoundError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -5224,7 +5224,7 @@ func (s *Workflows) ToggleEnable(ctx context.Context, workflowID string, v3Workf
 				return nil, err
 			}
 
-			var out apierrors.WorkflowsEnabledisableWorkflowConflictError
+			var out apierrors.ConflictError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -5249,7 +5249,7 @@ func (s *Workflows) ToggleEnable(ctx context.Context, workflowID string, v3Workf
 				return nil, err
 			}
 
-			var out apierrors.WorkflowsEnabledisableWorkflowUnprocessableEntityError
+			var out apierrors.UnprocessableEntityError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -5274,7 +5274,7 @@ func (s *Workflows) ToggleEnable(ctx context.Context, workflowID string, v3Workf
 				return nil, err
 			}
 
-			var out apierrors.WorkflowsEnabledisableWorkflowInternalServerError
+			var out apierrors.InternalServerError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -5299,7 +5299,7 @@ func (s *Workflows) ToggleEnable(ctx context.Context, workflowID string, v3Workf
 				return nil, err
 			}
 
-			var out apierrors.WorkflowsEnabledisableWorkflowBadGatewayError
+			var out apierrors.BadGatewayError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -5324,7 +5324,7 @@ func (s *Workflows) ToggleEnable(ctx context.Context, workflowID string, v3Workf
 				return nil, err
 			}
 
-			var out apierrors.WorkflowsEnabledisableWorkflowServiceUnavailableError
+			var out apierrors.ServiceUnavailableError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -5349,7 +5349,7 @@ func (s *Workflows) ToggleEnable(ctx context.Context, workflowID string, v3Workf
 				return nil, err
 			}
 
-			var out apierrors.WorkflowsEnabledisableWorkflowGatewayTimeoutError
+			var out apierrors.GatewayTimeoutError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -5590,7 +5590,7 @@ func (s *Workflows) GetLogs(ctx context.Context, workflowID string, pageSize *st
 				return nil, err
 			}
 
-			var out apierrors.WorkflowsGetWorkflowLogsBadRequestError
+			var out apierrors.BadRequestError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -5615,7 +5615,7 @@ func (s *Workflows) GetLogs(ctx context.Context, workflowID string, pageSize *st
 				return nil, err
 			}
 
-			var out apierrors.WorkflowsGetWorkflowLogsUnauthorizedError
+			var out apierrors.UnauthorizedError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -5640,7 +5640,7 @@ func (s *Workflows) GetLogs(ctx context.Context, workflowID string, pageSize *st
 				return nil, err
 			}
 
-			var out apierrors.WorkflowsGetWorkflowLogsPaymentRequiredError
+			var out apierrors.PaymentRequiredError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -5665,7 +5665,7 @@ func (s *Workflows) GetLogs(ctx context.Context, workflowID string, pageSize *st
 				return nil, err
 			}
 
-			var out apierrors.WorkflowsGetWorkflowLogsForbiddenError
+			var out apierrors.ForbiddenError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -5690,7 +5690,7 @@ func (s *Workflows) GetLogs(ctx context.Context, workflowID string, pageSize *st
 				return nil, err
 			}
 
-			var out apierrors.WorkflowsGetWorkflowLogsNotFoundError
+			var out apierrors.NotFoundError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -5715,7 +5715,7 @@ func (s *Workflows) GetLogs(ctx context.Context, workflowID string, pageSize *st
 				return nil, err
 			}
 
-			var out apierrors.WorkflowsGetWorkflowLogsConflictError
+			var out apierrors.ConflictError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -5740,7 +5740,7 @@ func (s *Workflows) GetLogs(ctx context.Context, workflowID string, pageSize *st
 				return nil, err
 			}
 
-			var out apierrors.WorkflowsGetWorkflowLogsUnprocessableEntityError
+			var out apierrors.UnprocessableEntityError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -5765,7 +5765,7 @@ func (s *Workflows) GetLogs(ctx context.Context, workflowID string, pageSize *st
 				return nil, err
 			}
 
-			var out apierrors.WorkflowsGetWorkflowLogsInternalServerError
+			var out apierrors.InternalServerError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -5790,7 +5790,7 @@ func (s *Workflows) GetLogs(ctx context.Context, workflowID string, pageSize *st
 				return nil, err
 			}
 
-			var out apierrors.WorkflowsGetWorkflowLogsBadGatewayError
+			var out apierrors.BadGatewayError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -5815,7 +5815,7 @@ func (s *Workflows) GetLogs(ctx context.Context, workflowID string, pageSize *st
 				return nil, err
 			}
 
-			var out apierrors.WorkflowsGetWorkflowLogsServiceUnavailableError
+			var out apierrors.ServiceUnavailableError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -5840,7 +5840,7 @@ func (s *Workflows) GetLogs(ctx context.Context, workflowID string, pageSize *st
 				return nil, err
 			}
 
-			var out apierrors.WorkflowsGetWorkflowLogsGatewayTimeoutError
+			var out apierrors.GatewayTimeoutError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}

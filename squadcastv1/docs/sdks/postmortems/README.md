@@ -58,20 +58,20 @@ func main() {
 
 ### Errors
 
-| Error Type                                                              | Status Code                                                             | Content Type                                                            |
-| ----------------------------------------------------------------------- | ----------------------------------------------------------------------- | ----------------------------------------------------------------------- |
-| apierrors.PostmortemsDeletePostmortemByIncidentBadRequestError          | 400                                                                     | application/json                                                        |
-| apierrors.PostmortemsDeletePostmortemByIncidentUnauthorizedError        | 401                                                                     | application/json                                                        |
-| apierrors.PostmortemsDeletePostmortemByIncidentPaymentRequiredError     | 402                                                                     | application/json                                                        |
-| apierrors.PostmortemsDeletePostmortemByIncidentForbiddenError           | 403                                                                     | application/json                                                        |
-| apierrors.PostmortemsDeletePostmortemByIncidentNotFoundError            | 404                                                                     | application/json                                                        |
-| apierrors.PostmortemsDeletePostmortemByIncidentConflictError            | 409                                                                     | application/json                                                        |
-| apierrors.PostmortemsDeletePostmortemByIncidentUnprocessableEntityError | 422                                                                     | application/json                                                        |
-| apierrors.PostmortemsDeletePostmortemByIncidentInternalServerError      | 500                                                                     | application/json                                                        |
-| apierrors.PostmortemsDeletePostmortemByIncidentBadGatewayError          | 502                                                                     | application/json                                                        |
-| apierrors.PostmortemsDeletePostmortemByIncidentServiceUnavailableError  | 503                                                                     | application/json                                                        |
-| apierrors.PostmortemsDeletePostmortemByIncidentGatewayTimeoutError      | 504                                                                     | application/json                                                        |
-| apierrors.APIError                                                      | 4XX, 5XX                                                                | \*/\*                                                                   |
+| Error Type                         | Status Code                        | Content Type                       |
+| ---------------------------------- | ---------------------------------- | ---------------------------------- |
+| apierrors.BadRequestError          | 400                                | application/json                   |
+| apierrors.UnauthorizedError        | 401                                | application/json                   |
+| apierrors.PaymentRequiredError     | 402                                | application/json                   |
+| apierrors.ForbiddenError           | 403                                | application/json                   |
+| apierrors.NotFoundError            | 404                                | application/json                   |
+| apierrors.ConflictError            | 409                                | application/json                   |
+| apierrors.UnprocessableEntityError | 422                                | application/json                   |
+| apierrors.InternalServerError      | 500                                | application/json                   |
+| apierrors.BadGatewayError          | 502                                | application/json                   |
+| apierrors.ServiceUnavailableError  | 503                                | application/json                   |
+| apierrors.GatewayTimeoutError      | 504                                | application/json                   |
+| apierrors.APIError                 | 4XX, 5XX                           | \*/\*                              |
 
 ## GetByIncident
 
@@ -122,20 +122,20 @@ func main() {
 
 ### Errors
 
-| Error Type                                                           | Status Code                                                          | Content Type                                                         |
-| -------------------------------------------------------------------- | -------------------------------------------------------------------- | -------------------------------------------------------------------- |
-| apierrors.PostmortemsGetPostmortemByIncidentBadRequestError          | 400                                                                  | application/json                                                     |
-| apierrors.PostmortemsGetPostmortemByIncidentUnauthorizedError        | 401                                                                  | application/json                                                     |
-| apierrors.PostmortemsGetPostmortemByIncidentPaymentRequiredError     | 402                                                                  | application/json                                                     |
-| apierrors.PostmortemsGetPostmortemByIncidentForbiddenError           | 403                                                                  | application/json                                                     |
-| apierrors.PostmortemsGetPostmortemByIncidentNotFoundError            | 404                                                                  | application/json                                                     |
-| apierrors.PostmortemsGetPostmortemByIncidentConflictError            | 409                                                                  | application/json                                                     |
-| apierrors.PostmortemsGetPostmortemByIncidentUnprocessableEntityError | 422                                                                  | application/json                                                     |
-| apierrors.PostmortemsGetPostmortemByIncidentInternalServerError      | 500                                                                  | application/json                                                     |
-| apierrors.PostmortemsGetPostmortemByIncidentBadGatewayError          | 502                                                                  | application/json                                                     |
-| apierrors.PostmortemsGetPostmortemByIncidentServiceUnavailableError  | 503                                                                  | application/json                                                     |
-| apierrors.PostmortemsGetPostmortemByIncidentGatewayTimeoutError      | 504                                                                  | application/json                                                     |
-| apierrors.APIError                                                   | 4XX, 5XX                                                             | \*/\*                                                                |
+| Error Type                         | Status Code                        | Content Type                       |
+| ---------------------------------- | ---------------------------------- | ---------------------------------- |
+| apierrors.BadRequestError          | 400                                | application/json                   |
+| apierrors.UnauthorizedError        | 401                                | application/json                   |
+| apierrors.PaymentRequiredError     | 402                                | application/json                   |
+| apierrors.ForbiddenError           | 403                                | application/json                   |
+| apierrors.NotFoundError            | 404                                | application/json                   |
+| apierrors.ConflictError            | 409                                | application/json                   |
+| apierrors.UnprocessableEntityError | 422                                | application/json                   |
+| apierrors.InternalServerError      | 500                                | application/json                   |
+| apierrors.BadGatewayError          | 502                                | application/json                   |
+| apierrors.ServiceUnavailableError  | 503                                | application/json                   |
+| apierrors.GatewayTimeoutError      | 504                                | application/json                   |
+| apierrors.APIError                 | 4XX, 5XX                           | \*/\*                              |
 
 ## Create
 
@@ -197,17 +197,17 @@ func main() {
 
 ### Errors
 
-| Error Type                                                    | Status Code                                                   | Content Type                                                  |
-| ------------------------------------------------------------- | ------------------------------------------------------------- | ------------------------------------------------------------- |
-| apierrors.PostmortemsCreatePostmortemBadRequestError          | 400                                                           | application/json                                              |
-| apierrors.PostmortemsCreatePostmortemUnauthorizedError        | 401                                                           | application/json                                              |
-| apierrors.PostmortemsCreatePostmortemPaymentRequiredError     | 402                                                           | application/json                                              |
-| apierrors.PostmortemsCreatePostmortemForbiddenError           | 403                                                           | application/json                                              |
-| apierrors.PostmortemsCreatePostmortemNotFoundError            | 404                                                           | application/json                                              |
-| apierrors.PostmortemsCreatePostmortemConflictError            | 409                                                           | application/json                                              |
-| apierrors.PostmortemsCreatePostmortemUnprocessableEntityError | 422                                                           | application/json                                              |
-| apierrors.PostmortemsCreatePostmortemInternalServerError      | 500                                                           | application/json                                              |
-| apierrors.PostmortemsCreatePostmortemBadGatewayError          | 502                                                           | application/json                                              |
-| apierrors.PostmortemsCreatePostmortemServiceUnavailableError  | 503                                                           | application/json                                              |
-| apierrors.PostmortemsCreatePostmortemGatewayTimeoutError      | 504                                                           | application/json                                              |
-| apierrors.APIError                                            | 4XX, 5XX                                                      | \*/\*                                                         |
+| Error Type                         | Status Code                        | Content Type                       |
+| ---------------------------------- | ---------------------------------- | ---------------------------------- |
+| apierrors.BadRequestError          | 400                                | application/json                   |
+| apierrors.UnauthorizedError        | 401                                | application/json                   |
+| apierrors.PaymentRequiredError     | 402                                | application/json                   |
+| apierrors.ForbiddenError           | 403                                | application/json                   |
+| apierrors.NotFoundError            | 404                                | application/json                   |
+| apierrors.ConflictError            | 409                                | application/json                   |
+| apierrors.UnprocessableEntityError | 422                                | application/json                   |
+| apierrors.InternalServerError      | 500                                | application/json                   |
+| apierrors.BadGatewayError          | 502                                | application/json                   |
+| apierrors.ServiceUnavailableError  | 503                                | application/json                   |
+| apierrors.GatewayTimeoutError      | 504                                | application/json                   |
+| apierrors.APIError                 | 4XX, 5XX                           | \*/\*                              |
