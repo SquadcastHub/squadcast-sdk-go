@@ -65,7 +65,7 @@ func (s *DeduplicationRules) Get(ctx context.Context, serviceID string, opts ...
 		BaseURL:          baseURL,
 		Context:          ctx,
 		OperationID:      "DeduplicationRules_getDeduplicationRules",
-		OAuth2Scopes:     []string{},
+		OAuth2Scopes:     nil,
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -550,7 +550,7 @@ func (s *DeduplicationRules) CreateOrUpdate(ctx context.Context, serviceID strin
 		BaseURL:          baseURL,
 		Context:          ctx,
 		OperationID:      "DeduplicationRules_createOrUpdateDeduplicationRules",
-		OAuth2Scopes:     []string{},
+		OAuth2Scopes:     nil,
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "V3ServicesDeduplicationRulesCreateDeduplicationRulesRequest", "json", `request:"mediaType=application/json"`)

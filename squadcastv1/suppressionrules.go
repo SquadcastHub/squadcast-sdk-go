@@ -65,7 +65,7 @@ func (s *SuppressionRules) Get(ctx context.Context, serviceID string, opts ...op
 		BaseURL:          baseURL,
 		Context:          ctx,
 		OperationID:      "SuppressionRules_getSuppressionRules",
-		OAuth2Scopes:     []string{},
+		OAuth2Scopes:     nil,
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 

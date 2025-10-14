@@ -68,7 +68,7 @@ func (s *GlobalEventRules) List(ctx context.Context, request operations.GlobalEv
 		BaseURL:          baseURL,
 		Context:          ctx,
 		OperationID:      "GlobalEventRules_listGlobalEventRules",
-		OAuth2Scopes:     []string{},
+		OAuth2Scopes:     nil,
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -553,7 +553,7 @@ func (s *GlobalEventRules) Create(ctx context.Context, request components.V3Glob
 		BaseURL:          baseURL,
 		Context:          ctx,
 		OperationID:      "GlobalEventRules_createGlobalEventRule",
-		OAuth2Scopes:     []string{},
+		OAuth2Scopes:     nil,
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "Request", "json", `request:"mediaType=application/json"`)
@@ -1045,7 +1045,7 @@ func (s *GlobalEventRules) DeleteRule(ctx context.Context, gerID int64, opts ...
 		BaseURL:          baseURL,
 		Context:          ctx,
 		OperationID:      "GlobalEventRules_deleteGlobalEventRuleById",
-		OAuth2Scopes:     []string{},
+		OAuth2Scopes:     nil,
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -1525,7 +1525,7 @@ func (s *GlobalEventRules) GetByID(ctx context.Context, gerID int64, opts ...ope
 		BaseURL:          baseURL,
 		Context:          ctx,
 		OperationID:      "GlobalEventRules_getGlobalEventRuleById",
-		OAuth2Scopes:     []string{},
+		OAuth2Scopes:     nil,
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -2011,7 +2011,7 @@ func (s *GlobalEventRules) UpdateByID(ctx context.Context, gerID int64, v3Global
 		BaseURL:          baseURL,
 		Context:          ctx,
 		OperationID:      "GlobalEventRules_updateGlobalEventRuleById",
-		OAuth2Scopes:     []string{},
+		OAuth2Scopes:     nil,
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "V3GlobalEventRulesUpdateGlobalEventRuleRequest", "json", `request:"mediaType=application/json"`)
@@ -2505,7 +2505,7 @@ func (s *GlobalEventRules) GetRuleset(ctx context.Context, gerID int64, alertSou
 		BaseURL:          baseURL,
 		Context:          ctx,
 		OperationID:      "GlobalEventRules_getRuleset",
-		OAuth2Scopes:     []string{},
+		OAuth2Scopes:     nil,
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -2993,7 +2993,7 @@ func (s *GlobalEventRules) UpdateRuleset(ctx context.Context, gerID int64, alert
 		BaseURL:          baseURL,
 		Context:          ctx,
 		OperationID:      "GlobalEventRules_updateRuleset",
-		OAuth2Scopes:     []string{},
+		OAuth2Scopes:     nil,
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "V3GlobalEventRulesUpdateRulesetRequest", "json", `request:"mediaType=application/json"`)
@@ -3481,7 +3481,7 @@ func (s *GlobalEventRules) UpdateRule(ctx context.Context, request operations.Gl
 		BaseURL:          baseURL,
 		Context:          ctx,
 		OperationID:      "GlobalEventRules_updateRuleById",
-		OAuth2Scopes:     []string{},
+		OAuth2Scopes:     nil,
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "V3GlobalEventRulesUpdateRuleRequest", "json", `request:"mediaType=application/json"`)

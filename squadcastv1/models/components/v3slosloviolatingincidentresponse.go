@@ -29,7 +29,7 @@ func (v V3SLOSLOViolatingIncidentResponse) MarshalJSON() ([]byte, error) {
 }
 
 func (v *V3SLOSLOViolatingIncidentResponse) UnmarshalJSON(data []byte) error {
-	if err := utils.UnmarshalJSON(data, &v, "", false, []string{"id", "owner_type", "owner_id", "org_id", "slo_id", "incident_id", "slis", "error_budget_spent", "is_false_positive", "start_time", "end_time", "created_at", "updated_at", "deleted_at"}); err != nil {
+	if err := utils.UnmarshalJSON(data, &v, "", false, []string{"id", "owner_type", "owner_id", "org_id", "slo_id", "incident_id", "slis", "error_budget_spent", "is_false_positive", "start_time", "end_time", "created_at", "updated_at"}); err != nil {
 		return err
 	}
 	return nil

@@ -3,10 +3,10 @@ id: 279dacab-faec-448f-bc08-f41bb3b1dd64
 management:
   docChecksum: 6eeeaaa9001b7902792dd7c3a2d8b805
   docVersion: 1.0.0
-  speakeasyVersion: 1.631.4
-  generationVersion: 2.716.16
-  releaseVersion: 1.1.7
-  configChecksum: 5deaa94d5a0dc81253ef5387acd0217d
+  speakeasyVersion: 1.636.3
+  generationVersion: 2.723.11
+  releaseVersion: 1.2.0
+  configChecksum: 627785a26af09f61f5c0c98e5cf2ceaa
   repoURL: https://github.com/SquadcastHub/squadcast-sdk-go.git
   repoSubDirectory: squadcastv1
   installationURL: https://github.com/SquadcastHub/squadcast-sdk-go/squadcastv1
@@ -23,14 +23,14 @@ features:
     globalSecurityCallbacks: 0.1.0
     globalSecurityFlattening: 0.1.0
     globalServerURLs: 2.82.3
-    groups: 2.81.2
+    groups: 2.81.3
     intellisenseMarkdownSupport: 0.1.0
     nameOverrides: 2.81.2
-    nullables: 0.2.0
+    nullables: 0.2.1
     responseFormat: 0.1.2
     retries: 2.84.2
     sdkHooks: 0.2.0
-    unions: 2.85.14
+    unions: 2.86.0
     uploadStreams: 0.1.0
 generatedFiles:
   - .devcontainer/README.md
@@ -1945,14 +1945,12 @@ generatedFiles:
   - docs/sdks/events/README.md
   - docs/sdks/export/README.md
   - docs/sdks/exports/README.md
-  - docs/sdks/extensions/README.md
   - docs/sdks/extensionsmsteams/README.md
   - docs/sdks/extensionswebhooks/README.md
   - docs/sdks/globaleventrules/README.md
   - docs/sdks/globaleventrulesrulesets/README.md
   - docs/sdks/globaleventrulesrulesetsrules/README.md
   - docs/sdks/globaloncallreminderrules/README.md
-  - docs/sdks/incidentactions/README.md
   - docs/sdks/incidents/README.md
   - docs/sdks/incidentsactions/README.md
   - docs/sdks/incidentscommunicationcards/README.md
@@ -1982,7 +1980,6 @@ generatedFiles:
   - docs/sdks/servicesoverlays/README.md
   - docs/sdks/slos/README.md
   - docs/sdks/snoozenotifications/README.md
-  - docs/sdks/squadcastsdk/README.md
   - docs/sdks/squads/README.md
   - docs/sdks/squadsv4/README.md
   - docs/sdks/statuspages/README.md
@@ -1993,7 +1990,6 @@ generatedFiles:
   - docs/sdks/teams/README.md
   - docs/sdks/tokens/README.md
   - docs/sdks/users/README.md
-  - docs/sdks/v4/README.md
   - docs/sdks/v4squads/README.md
   - docs/sdks/webforms/README.md
   - docs/sdks/webhook/README.md
@@ -8607,7 +8603,3 @@ examples:
         "504":
           application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
 examplesVersion: 1.0.2
-releaseNotes: |
-  ## Go SDK Changes Detected:
-  * `SquadcastSdk.Squads.Delete()`: **Added**
-  * `SquadcastSdk.Squads.SquadsDeleteSquad()`: **Deleted** **Breaking** :warning:

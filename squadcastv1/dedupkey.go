@@ -66,7 +66,7 @@ func (s *DedupKey) Render(ctx context.Context, serviceID string, v3ServicesOverl
 		BaseURL:          baseURL,
 		Context:          ctx,
 		OperationID:      "Overlay_renderDedupKeyTemplate",
-		OAuth2Scopes:     []string{},
+		OAuth2Scopes:     nil,
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "V3ServicesOverlayRenderDedupKeyTemplateRequest", "json", `request:"mediaType=application/json"`)
@@ -558,7 +558,7 @@ func (s *DedupKey) Delete(ctx context.Context, serviceID string, alertSource str
 		BaseURL:          baseURL,
 		Context:          ctx,
 		OperationID:      "Overlay_deleteDedupKeyOverlay",
-		OAuth2Scopes:     []string{},
+		OAuth2Scopes:     nil,
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 

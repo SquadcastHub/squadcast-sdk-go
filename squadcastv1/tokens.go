@@ -64,7 +64,7 @@ func (s *Tokens) CreateUserToken(ctx context.Context, request operations.UsersCr
 		BaseURL:          baseURL,
 		Context:          ctx,
 		OperationID:      "Users_createToken",
-		OAuth2Scopes:     []string{},
+		OAuth2Scopes:     nil,
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "Request", "json", `request:"mediaType=application/json"`)

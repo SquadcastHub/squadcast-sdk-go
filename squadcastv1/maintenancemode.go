@@ -65,7 +65,7 @@ func (s *MaintenanceMode) Get(ctx context.Context, serviceID string, opts ...ope
 		BaseURL:          baseURL,
 		Context:          ctx,
 		OperationID:      "MaintenanceMode_getMaintenanceMode",
-		OAuth2Scopes:     []string{},
+		OAuth2Scopes:     nil,
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -550,7 +550,7 @@ func (s *MaintenanceMode) CreateOrUpdate(ctx context.Context, serviceID string, 
 		BaseURL:          baseURL,
 		Context:          ctx,
 		OperationID:      "MaintenanceMode_createOrUpdateMaintenanceMode",
-		OAuth2Scopes:     []string{},
+		OAuth2Scopes:     nil,
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "V3ServicesMaintenanceModeCreateOrUpdateMaintenanceModeRequest", "json", `request:"mediaType=application/json"`)

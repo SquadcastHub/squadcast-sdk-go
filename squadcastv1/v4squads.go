@@ -70,7 +70,7 @@ func (s *V4Squads) Update(ctx context.Context, squadID string, v4SquadsUpdateSqu
 		BaseURL:          baseURL,
 		Context:          ctx,
 		OperationID:      "Squads_updateSquad",
-		OAuth2Scopes:     []string{},
+		OAuth2Scopes:     nil,
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "V4SquadsUpdateSquadRequest", "json", `request:"mediaType=application/json"`)

@@ -70,7 +70,7 @@ func (s *ServicesOverlays) GetCustomContentTemplates(ctx context.Context, servic
 		BaseURL:          baseURL,
 		Context:          ctx,
 		OperationID:      "Overlay_getAllCustomContentTemplateOverlayByService",
-		OAuth2Scopes:     []string{},
+		OAuth2Scopes:     nil,
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -555,7 +555,7 @@ func (s *ServicesOverlays) GetCustomContent(ctx context.Context, serviceID strin
 		BaseURL:          baseURL,
 		Context:          ctx,
 		OperationID:      "Overlay_getCustomContentTemplateOverlay",
-		OAuth2Scopes:     []string{},
+		OAuth2Scopes:     nil,
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -1040,7 +1040,7 @@ func (s *ServicesOverlays) GetDedupKey(ctx context.Context, serviceID string, al
 		BaseURL:          baseURL,
 		Context:          ctx,
 		OperationID:      "Overlay_getDedupKeyOverlayForAlertSource",
-		OAuth2Scopes:     []string{},
+		OAuth2Scopes:     nil,
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 

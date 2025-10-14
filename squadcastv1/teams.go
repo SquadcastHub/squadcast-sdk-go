@@ -67,7 +67,7 @@ func (s *Teams) GetAll(ctx context.Context, opts ...operations.Option) (*operati
 		BaseURL:          baseURL,
 		Context:          ctx,
 		OperationID:      "Teams_getAllTeams",
-		OAuth2Scopes:     []string{},
+		OAuth2Scopes:     nil,
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -549,7 +549,7 @@ func (s *Teams) Create(ctx context.Context, request components.V3TeamsCreateTeam
 		BaseURL:          baseURL,
 		Context:          ctx,
 		OperationID:      "Teams_createTeam",
-		OAuth2Scopes:     []string{},
+		OAuth2Scopes:     nil,
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "Request", "json", `request:"mediaType=application/json"`)
@@ -1042,7 +1042,7 @@ func (s *Teams) GetByID(ctx context.Context, teamID string, opts ...operations.O
 		BaseURL:          baseURL,
 		Context:          ctx,
 		OperationID:      "Teams_getTeamById",
-		OAuth2Scopes:     []string{},
+		OAuth2Scopes:     nil,
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -1529,7 +1529,7 @@ func (s *Teams) Update(ctx context.Context, teamID string, v3TeamsUpdateTeamRequ
 		BaseURL:          baseURL,
 		Context:          ctx,
 		OperationID:      "Teams_updateTeam",
-		OAuth2Scopes:     []string{},
+		OAuth2Scopes:     nil,
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "V3TeamsUpdateTeamRequest", "json", `request:"mediaType=application/json"`)
@@ -2022,7 +2022,7 @@ func (s *Teams) Delete(ctx context.Context, teamID string, opts ...operations.Op
 		BaseURL:          baseURL,
 		Context:          ctx,
 		OperationID:      "Teams_removeTeam",
-		OAuth2Scopes:     []string{},
+		OAuth2Scopes:     nil,
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -2504,7 +2504,7 @@ func (s *Teams) AddMember(ctx context.Context, teamID string, v3TeamsAddTeamMemb
 		BaseURL:          baseURL,
 		Context:          ctx,
 		OperationID:      "Teams_addTeamMember",
-		OAuth2Scopes:     []string{},
+		OAuth2Scopes:     nil,
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "V3TeamsAddTeamMemberRequest", "json", `request:"mediaType=application/json"`)
@@ -2998,7 +2998,7 @@ func (s *Teams) AddBulkMember(ctx context.Context, teamID string, v3TeamsAddBulk
 		BaseURL:          baseURL,
 		Context:          ctx,
 		OperationID:      "Teams_addBulkTeamMember",
-		OAuth2Scopes:     []string{},
+		OAuth2Scopes:     nil,
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "V3TeamsAddBulkTeamMemberRequest", "json", `request:"mediaType=application/json"`)
@@ -3492,7 +3492,7 @@ func (s *Teams) RemoveMember(ctx context.Context, teamID string, memberID string
 		BaseURL:          baseURL,
 		Context:          ctx,
 		OperationID:      "Teams_removeTeamMember",
-		OAuth2Scopes:     []string{},
+		OAuth2Scopes:     nil,
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -3975,7 +3975,7 @@ func (s *Teams) UpdateMember(ctx context.Context, teamID string, memberID string
 		BaseURL:          baseURL,
 		Context:          ctx,
 		OperationID:      "Teams_updateTeamMember",
-		OAuth2Scopes:     []string{},
+		OAuth2Scopes:     nil,
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "V3TeamsUpdateTeamMemberRequest", "json", `request:"mediaType=application/json"`)
@@ -4468,7 +4468,7 @@ func (s *Teams) GetAllRoles(ctx context.Context, teamID string, opts ...operatio
 		BaseURL:          baseURL,
 		Context:          ctx,
 		OperationID:      "Teams_getAllTeamRoles",
-		OAuth2Scopes:     []string{},
+		OAuth2Scopes:     nil,
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -4955,7 +4955,7 @@ func (s *Teams) CreateRole(ctx context.Context, teamID string, v3TeamsCreateTeam
 		BaseURL:          baseURL,
 		Context:          ctx,
 		OperationID:      "Teams_createTeamRole",
-		OAuth2Scopes:     []string{},
+		OAuth2Scopes:     nil,
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "V3TeamsCreateTeamRoleRequest", "json", `request:"mediaType=application/json"`)
@@ -5449,7 +5449,7 @@ func (s *Teams) RemoveRole(ctx context.Context, teamID string, roleID string, op
 		BaseURL:          baseURL,
 		Context:          ctx,
 		OperationID:      "Teams_removeTeamRole",
-		OAuth2Scopes:     []string{},
+		OAuth2Scopes:     nil,
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -5932,7 +5932,7 @@ func (s *Teams) UpdateRole(ctx context.Context, teamID string, roleID string, v3
 		BaseURL:          baseURL,
 		Context:          ctx,
 		OperationID:      "Teams_updateTeamRole",
-		OAuth2Scopes:     []string{},
+		OAuth2Scopes:     nil,
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "V3TeamsUpdateTeamRoleRequest", "json", `request:"mediaType=application/json"`)

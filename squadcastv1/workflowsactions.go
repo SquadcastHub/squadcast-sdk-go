@@ -67,7 +67,7 @@ func (s *WorkflowsActions) Create(ctx context.Context, workflowID string, v3Work
 		BaseURL:          baseURL,
 		Context:          ctx,
 		OperationID:      "Workflows_createAction",
-		OAuth2Scopes:     []string{},
+		OAuth2Scopes:     nil,
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "V3WorkflowsActionRequest", "json", `request:"mediaType=application/json"`)

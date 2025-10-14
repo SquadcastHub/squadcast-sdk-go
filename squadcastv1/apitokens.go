@@ -64,7 +64,7 @@ func (s *APITokens) List(ctx context.Context, opts ...operations.Option) (*opera
 		BaseURL:          baseURL,
 		Context:          ctx,
 		OperationID:      "Users_getAllTokens",
-		OAuth2Scopes:     []string{},
+		OAuth2Scopes:     nil,
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 

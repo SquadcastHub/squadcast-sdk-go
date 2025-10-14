@@ -66,7 +66,7 @@ func (s *IncidentsRunbooks) Attach(ctx context.Context, incidentID string, v3Inc
 		BaseURL:          baseURL,
 		Context:          ctx,
 		OperationID:      "Runbooks_attachRunbooks",
-		OAuth2Scopes:     []string{},
+		OAuth2Scopes:     nil,
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "V3IncidentsRunbooksAttachRunbooksRequest", "json", `request:"mediaType=application/json"`)

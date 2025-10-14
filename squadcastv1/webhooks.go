@@ -69,7 +69,7 @@ func (s *Webhooks) GetAll(ctx context.Context, pageLimit *string, offset *string
 		BaseURL:          baseURL,
 		Context:          ctx,
 		OperationID:      "Webhooks_getAllWebhooks",
-		OAuth2Scopes:     []string{},
+		OAuth2Scopes:     nil,
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -555,7 +555,7 @@ func (s *Webhooks) Create(ctx context.Context, request components.V3ExtensionsWe
 		BaseURL:          baseURL,
 		Context:          ctx,
 		OperationID:      "Webhooks_createWebhook",
-		OAuth2Scopes:     []string{},
+		OAuth2Scopes:     nil,
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "Request", "json", `request:"mediaType=application/json"`)
@@ -1049,7 +1049,7 @@ func (s *Webhooks) Update(ctx context.Context, eventWebhookID string, v3Extensio
 		BaseURL:          baseURL,
 		Context:          ctx,
 		OperationID:      "Webhooks_updateWebhook",
-		OAuth2Scopes:     []string{},
+		OAuth2Scopes:     nil,
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "V3ExtensionsWebhooksWebhook", "json", `request:"mediaType=application/json"`)

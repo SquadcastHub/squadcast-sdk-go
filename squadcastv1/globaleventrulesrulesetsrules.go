@@ -69,7 +69,7 @@ func (s *GlobalEventRulesRulesetsRules) DeleteByID(ctx context.Context, gerID in
 		BaseURL:          baseURL,
 		Context:          ctx,
 		OperationID:      "GlobalEventRules_deleteRuleById",
-		OAuth2Scopes:     []string{},
+		OAuth2Scopes:     nil,
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 

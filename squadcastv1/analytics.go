@@ -70,7 +70,7 @@ func (s *Analytics) GetOrganization(ctx context.Context, from string, to string,
 		BaseURL:          baseURL,
 		Context:          ctx,
 		OperationID:      "Analytics_getOrgAnalytics",
-		OAuth2Scopes:     []string{},
+		OAuth2Scopes:     nil,
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -555,7 +555,7 @@ func (s *Analytics) GetTeam(ctx context.Context, request operations.AnalyticsGet
 		BaseURL:          baseURL,
 		Context:          ctx,
 		OperationID:      "Analytics_getTeamAnalytics",
-		OAuth2Scopes:     []string{},
+		OAuth2Scopes:     nil,
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 

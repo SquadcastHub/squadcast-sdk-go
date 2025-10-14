@@ -66,7 +66,7 @@ func (s *Tags) Update(ctx context.Context, incidentID string, v3IncidentsTagsUpd
 		BaseURL:          baseURL,
 		Context:          ctx,
 		OperationID:      "Tags_updateTag",
-		OAuth2Scopes:     []string{},
+		OAuth2Scopes:     nil,
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "V3IncidentsTagsUpdateTagRequest", "json", `request:"mediaType=application/json"`)
@@ -558,7 +558,7 @@ func (s *Tags) Append(ctx context.Context, incidentID string, v3IncidentsTagsApp
 		BaseURL:          baseURL,
 		Context:          ctx,
 		OperationID:      "Tags_appendTag",
-		OAuth2Scopes:     []string{},
+		OAuth2Scopes:     nil,
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "V3IncidentsTagsAppendTagRequest", "json", `request:"mediaType=application/json"`)

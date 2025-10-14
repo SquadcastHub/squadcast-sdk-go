@@ -70,7 +70,7 @@ func (s *Slos) ListAll(ctx context.Context, ownerID string, offset string, limit
 		BaseURL:          baseURL,
 		Context:          ctx,
 		OperationID:      "SLO_getAllSLOs",
-		OAuth2Scopes:     []string{},
+		OAuth2Scopes:     nil,
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -556,7 +556,7 @@ func (s *Slos) Create(ctx context.Context, request components.V3SLOCreateSLORequ
 		BaseURL:          baseURL,
 		Context:          ctx,
 		OperationID:      "SLO_createSLO",
-		OAuth2Scopes:     []string{},
+		OAuth2Scopes:     nil,
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "Request", "json", `request:"mediaType=application/json"`)
@@ -1051,7 +1051,7 @@ func (s *Slos) Update(ctx context.Context, sloID int64, ownerID string, v3SLOCre
 		BaseURL:          baseURL,
 		Context:          ctx,
 		OperationID:      "SLO_updateSLO",
-		OAuth2Scopes:     []string{},
+		OAuth2Scopes:     nil,
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "V3SLOCreateSLORequest", "json", `request:"mediaType=application/json"`)
@@ -1549,7 +1549,7 @@ func (s *Slos) Remove(ctx context.Context, sloID int64, ownerID string, opts ...
 		BaseURL:          baseURL,
 		Context:          ctx,
 		OperationID:      "SLO_removeSLO",
-		OAuth2Scopes:     []string{},
+		OAuth2Scopes:     nil,
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -2040,7 +2040,7 @@ func (s *Slos) GetByID(ctx context.Context, sloID int64, ownerID string, opts ..
 		BaseURL:          baseURL,
 		Context:          ctx,
 		OperationID:      "SLO_getSLOById",
-		OAuth2Scopes:     []string{},
+		OAuth2Scopes:     nil,
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -2533,7 +2533,7 @@ func (s *Slos) MarkAffected(ctx context.Context, sloID int64, ownerID string, v3
 		BaseURL:          baseURL,
 		Context:          ctx,
 		OperationID:      "SLO_markSLOAffected",
-		OAuth2Scopes:     []string{},
+		OAuth2Scopes:     nil,
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "V3SLOMarkSLOAffectedRequest", "json", `request:"mediaType=application/json"`)
@@ -3025,7 +3025,7 @@ func (s *Slos) MarkFalsePositive(ctx context.Context, request operations.SLOMark
 		BaseURL:          baseURL,
 		Context:          ctx,
 		OperationID:      "SLO_markSLOFalsePositive",
-		OAuth2Scopes:     []string{},
+		OAuth2Scopes:     nil,
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "RequestBody", "json", `request:"mediaType=application/json"`)

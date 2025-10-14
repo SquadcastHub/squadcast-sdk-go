@@ -66,7 +66,7 @@ func (s *Workflows) List(ctx context.Context, request operations.WorkflowsListWo
 		BaseURL:          baseURL,
 		Context:          ctx,
 		OperationID:      "Workflows_listWorkflows",
-		OAuth2Scopes:     []string{},
+		OAuth2Scopes:     nil,
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -551,7 +551,7 @@ func (s *Workflows) Create(ctx context.Context, request components.V3WorkflowsCr
 		BaseURL:          baseURL,
 		Context:          ctx,
 		OperationID:      "Workflows_createWorkflow",
-		OAuth2Scopes:     []string{},
+		OAuth2Scopes:     nil,
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "Request", "json", `request:"mediaType=application/json"`)
@@ -1039,7 +1039,7 @@ func (s *Workflows) BulkEnableDisable(ctx context.Context, request components.V3
 		BaseURL:          baseURL,
 		Context:          ctx,
 		OperationID:      "Workflows_bulkEnabledisableWorkflows",
-		OAuth2Scopes:     []string{},
+		OAuth2Scopes:     nil,
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "Request", "json", `request:"mediaType=application/json"`)
@@ -1526,7 +1526,7 @@ func (s *Workflows) Delete(ctx context.Context, workflowID string, opts ...opera
 		BaseURL:          baseURL,
 		Context:          ctx,
 		OperationID:      "Workflows_deleteWorkflow",
-		OAuth2Scopes:     []string{},
+		OAuth2Scopes:     nil,
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -2006,7 +2006,7 @@ func (s *Workflows) GetByID(ctx context.Context, workflowID string, opts ...oper
 		BaseURL:          baseURL,
 		Context:          ctx,
 		OperationID:      "Workflows_getWorkflowById",
-		OAuth2Scopes:     []string{},
+		OAuth2Scopes:     nil,
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -2492,7 +2492,7 @@ func (s *Workflows) Update(ctx context.Context, workflowID string, v3WorkflowsCr
 		BaseURL:          baseURL,
 		Context:          ctx,
 		OperationID:      "Workflows_updateWorkflow",
-		OAuth2Scopes:     []string{},
+		OAuth2Scopes:     nil,
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "V3WorkflowsCreateWorkflowRequestUpdate", "json", `request:"mediaType=application/json"`)
@@ -2985,7 +2985,7 @@ func (s *Workflows) UpdateActionsOrder(ctx context.Context, workflowID string, v
 		BaseURL:          baseURL,
 		Context:          ctx,
 		OperationID:      "Workflows_updateActionsOrder",
-		OAuth2Scopes:     []string{},
+		OAuth2Scopes:     nil,
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "V3WorkflowsUpdateActionsOrderRequest", "json", `request:"mediaType=application/json"`)
@@ -3478,7 +3478,7 @@ func (s *Workflows) DeleteAction(ctx context.Context, workflowID string, actionI
 		BaseURL:          baseURL,
 		Context:          ctx,
 		OperationID:      "Workflows_deleteWorkflowAction",
-		OAuth2Scopes:     []string{},
+		OAuth2Scopes:     nil,
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -3959,7 +3959,7 @@ func (s *Workflows) GetAction(ctx context.Context, workflowID string, actionID s
 		BaseURL:          baseURL,
 		Context:          ctx,
 		OperationID:      "Workflows_getWorkflowActionById",
-		OAuth2Scopes:     []string{},
+		OAuth2Scopes:     nil,
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -4446,7 +4446,7 @@ func (s *Workflows) UpdateAction(ctx context.Context, workflowID string, actionI
 		BaseURL:          baseURL,
 		Context:          ctx,
 		OperationID:      "Workflows_updateWorkflowAction",
-		OAuth2Scopes:     []string{},
+		OAuth2Scopes:     nil,
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "V3WorkflowsActionRequestUpdate", "json", `request:"mediaType=application/json"`)
@@ -4939,7 +4939,7 @@ func (s *Workflows) ToggleEnable(ctx context.Context, workflowID string, v3Workf
 		BaseURL:          baseURL,
 		Context:          ctx,
 		OperationID:      "Workflows_enabledisableWorkflow",
-		OAuth2Scopes:     []string{},
+		OAuth2Scopes:     nil,
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "V3WorkflowsEnableDisableWorkflowRequest", "json", `request:"mediaType=application/json"`)
@@ -5428,7 +5428,7 @@ func (s *Workflows) GetLogs(ctx context.Context, workflowID string, pageSize *st
 		BaseURL:          baseURL,
 		Context:          ctx,
 		OperationID:      "Workflows_getWorkflowLogs",
-		OAuth2Scopes:     []string{},
+		OAuth2Scopes:     nil,
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 

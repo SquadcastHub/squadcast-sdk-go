@@ -85,7 +85,7 @@ func (s *Services) List(ctx context.Context, ownerID string, entityOwner *string
 		BaseURL:          baseURL,
 		Context:          ctx,
 		OperationID:      "Services_getServices",
-		OAuth2Scopes:     []string{},
+		OAuth2Scopes:     nil,
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -574,7 +574,7 @@ func (s *Services) Create(ctx context.Context, ownerID string, v3ServicesCreateS
 		BaseURL:          baseURL,
 		Context:          ctx,
 		OperationID:      "Services_createService",
-		OAuth2Scopes:     []string{},
+		OAuth2Scopes:     nil,
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "V3ServicesCreateServiceRequest", "json", `request:"mediaType=application/json"`)
@@ -1070,7 +1070,7 @@ func (s *Services) GetByName(ctx context.Context, name string, ownerID string, o
 		BaseURL:          baseURL,
 		Context:          ctx,
 		OperationID:      "Services_getServicesByName",
-		OAuth2Scopes:     []string{},
+		OAuth2Scopes:     nil,
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -1558,7 +1558,7 @@ func (s *Services) GetByID(ctx context.Context, serviceID string, opts ...operat
 		BaseURL:          baseURL,
 		Context:          ctx,
 		OperationID:      "Services_getServiceById",
-		OAuth2Scopes:     []string{},
+		OAuth2Scopes:     nil,
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -2043,7 +2043,7 @@ func (s *Services) Update(ctx context.Context, serviceID string, v3ServicesUpdat
 		BaseURL:          baseURL,
 		Context:          ctx,
 		OperationID:      "Services_updateService",
-		OAuth2Scopes:     []string{},
+		OAuth2Scopes:     nil,
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "V3ServicesUpdateServiceRequest", "json", `request:"mediaType=application/json"`)
@@ -2534,7 +2534,7 @@ func (s *Services) Delete(ctx context.Context, serviceID string, opts ...operati
 		BaseURL:          baseURL,
 		Context:          ctx,
 		OperationID:      "Services_deleteService",
-		OAuth2Scopes:     []string{},
+		OAuth2Scopes:     nil,
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -3014,7 +3014,7 @@ func (s *Services) CreateOrUpdateAptaConfig(ctx context.Context, serviceID strin
 		BaseURL:          baseURL,
 		Context:          ctx,
 		OperationID:      "Services_createOrUpdateAPTAConfig",
-		OAuth2Scopes:     []string{},
+		OAuth2Scopes:     nil,
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "V3ServicesAPTAConfigRequest", "json", `request:"mediaType=application/json"`)
@@ -3506,7 +3506,7 @@ func (s *Services) UpsertIagConfig(ctx context.Context, serviceID string, v3Serv
 		BaseURL:          baseURL,
 		Context:          ctx,
 		OperationID:      "Services_createOrUpdateIAGConfig",
-		OAuth2Scopes:     []string{},
+		OAuth2Scopes:     nil,
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "V3ServicesIAGConfigRequest", "json", `request:"mediaType=application/json"`)
@@ -3998,7 +3998,7 @@ func (s *Services) UpdateNotificationDelayConfig(ctx context.Context, serviceID 
 		BaseURL:          baseURL,
 		Context:          ctx,
 		OperationID:      "Services_delayedNotificationConfig",
-		OAuth2Scopes:     []string{},
+		OAuth2Scopes:     nil,
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "V3ServicesNotificationDelayConfigRequest", "json", `request:"mediaType=application/json"`)
@@ -4490,7 +4490,7 @@ func (s *Services) CreateOrUpdateDependencies(ctx context.Context, serviceID str
 		BaseURL:          baseURL,
 		Context:          ctx,
 		OperationID:      "Dependencies_createOrUpdateDependencies",
-		OAuth2Scopes:     []string{},
+		OAuth2Scopes:     nil,
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "V3ServicesDependenciesCreateOrUpdateDependenciesRequest", "json", `request:"mediaType=application/json"`)
@@ -4983,7 +4983,7 @@ func (s *Services) CreateOrUpdateNotificationTemplateOverlay(ctx context.Context
 		BaseURL:          baseURL,
 		Context:          ctx,
 		OperationID:      "Overlay_createOrUpdateNotificationTemplateOverlay",
-		OAuth2Scopes:     []string{},
+		OAuth2Scopes:     nil,
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "V3ServicesOverlayUpdateCustomContentTemplateOverlayRequest", "json", `request:"mediaType=application/json"`)
@@ -5474,7 +5474,7 @@ func (s *Services) GetAllDedupKeyOverlays(ctx context.Context, serviceID string,
 		BaseURL:          baseURL,
 		Context:          ctx,
 		OperationID:      "Overlay_getAllDedupKeyOverlayByService",
-		OAuth2Scopes:     []string{},
+		OAuth2Scopes:     nil,
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -5960,7 +5960,7 @@ func (s *Services) UpdateDedupKeyOverlay(ctx context.Context, serviceID string, 
 		BaseURL:          baseURL,
 		Context:          ctx,
 		OperationID:      "Overlay_updateDedupKeyOverlay",
-		OAuth2Scopes:     []string{},
+		OAuth2Scopes:     nil,
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "V3ServicesOverlayUpdateDedupKeyOverlayRequest", "json", `request:"mediaType=application/json"`)
@@ -6451,7 +6451,7 @@ func (s *Services) GetRoutingRules(ctx context.Context, serviceID string, opts .
 		BaseURL:          baseURL,
 		Context:          ctx,
 		OperationID:      "RoutingRules_getRoutingRules",
-		OAuth2Scopes:     []string{},
+		OAuth2Scopes:     nil,
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -6936,7 +6936,7 @@ func (s *Services) CreateOrUpdateSuppressionRules(ctx context.Context, serviceID
 		BaseURL:          baseURL,
 		Context:          ctx,
 		OperationID:      "SuppressionRules_createOrUpdateSuppressionRules",
-		OAuth2Scopes:     []string{},
+		OAuth2Scopes:     nil,
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "V3ServicesSuppressionRulesCreateOrUpdateSuppressionRulesRequest", "json", `request:"mediaType=application/json"`)
@@ -7428,7 +7428,7 @@ func (s *Services) CreateOrUpdateTaggingRules(ctx context.Context, serviceID str
 		BaseURL:          baseURL,
 		Context:          ctx,
 		OperationID:      "TaggingRules_createOrUpdateTaggingRules",
-		OAuth2Scopes:     []string{},
+		OAuth2Scopes:     nil,
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "V3ServicesTaggingRulesCreateOrUpdateTaggingRulesRequest", "json", `request:"mediaType=application/json"`)

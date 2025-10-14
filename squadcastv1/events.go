@@ -71,7 +71,7 @@ func (s *Events) List(ctx context.Context, request operations.IncidentsGetIncide
 		BaseURL:          baseURL,
 		Context:          ctx,
 		OperationID:      "Incidents_getIncidentEvents",
-		OAuth2Scopes:     []string{},
+		OAuth2Scopes:     nil,
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 

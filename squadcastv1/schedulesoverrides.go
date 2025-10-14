@@ -61,7 +61,7 @@ func (s *SchedulesOverrides) List(ctx context.Context, request operations.Overri
 		BaseURL:          baseURL,
 		Context:          ctx,
 		OperationID:      "Overrides_listOverrides",
-		OAuth2Scopes:     []string{},
+		OAuth2Scopes:     nil,
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -343,7 +343,7 @@ func (s *SchedulesOverrides) Delete(ctx context.Context, scheduleID string, over
 		BaseURL:          baseURL,
 		Context:          ctx,
 		OperationID:      "Overrides_deleteScheduleOverride",
-		OAuth2Scopes:     []string{},
+		OAuth2Scopes:     nil,
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 

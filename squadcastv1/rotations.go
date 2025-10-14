@@ -66,7 +66,7 @@ func (s *Rotations) Create(ctx context.Context, scheduleID string, v4CreateRotat
 		BaseURL:          baseURL,
 		Context:          ctx,
 		OperationID:      "Rotations_createRotation",
-		OAuth2Scopes:     []string{},
+		OAuth2Scopes:     nil,
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "V4CreateRotationRequest", "json", `request:"mediaType=application/json"`)
@@ -351,7 +351,7 @@ func (s *Rotations) GetByID(ctx context.Context, scheduleID string, rotationID s
 		BaseURL:          baseURL,
 		Context:          ctx,
 		OperationID:      "Rotations_getScheduleRotationById",
-		OAuth2Scopes:     []string{},
+		OAuth2Scopes:     nil,
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -630,7 +630,7 @@ func (s *Rotations) Update(ctx context.Context, scheduleID string, rotationID st
 		BaseURL:          baseURL,
 		Context:          ctx,
 		OperationID:      "Rotations_updateRotation",
-		OAuth2Scopes:     []string{},
+		OAuth2Scopes:     nil,
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "V4UpdateRotationRequest", "json", `request:"mediaType=application/json"`)
@@ -915,7 +915,7 @@ func (s *Rotations) GetParticipants(ctx context.Context, scheduleID string, rota
 		BaseURL:          baseURL,
 		Context:          ctx,
 		OperationID:      "Rotations_getRotationParticipants",
-		OAuth2Scopes:     []string{},
+		OAuth2Scopes:     nil,
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -1194,7 +1194,7 @@ func (s *Rotations) UpdateParticipants(ctx context.Context, scheduleID string, r
 		BaseURL:          baseURL,
 		Context:          ctx,
 		OperationID:      "Rotations_updateRotationParticipants",
-		OAuth2Scopes:     []string{},
+		OAuth2Scopes:     nil,
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "V4UpdateRotationParticipantsRequest", "json", `request:"mediaType=application/json"`)

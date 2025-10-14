@@ -69,7 +69,7 @@ func (s *Schedules) List(ctx context.Context, request operations.SchedulesListSc
 		BaseURL:          baseURL,
 		Context:          ctx,
 		OperationID:      "Schedules_listSchedules",
-		OAuth2Scopes:     []string{},
+		OAuth2Scopes:     nil,
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -346,7 +346,7 @@ func (s *Schedules) Create(ctx context.Context, request components.V4CreateSched
 		BaseURL:          baseURL,
 		Context:          ctx,
 		OperationID:      "Schedules_createSchedule",
-		OAuth2Scopes:     []string{},
+		OAuth2Scopes:     nil,
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "Request", "json", `request:"mediaType=application/json"`)
@@ -630,7 +630,7 @@ func (s *Schedules) Delete(ctx context.Context, scheduleID string, opts ...opera
 		BaseURL:          baseURL,
 		Context:          ctx,
 		OperationID:      "Schedules_deleteSchedule",
-		OAuth2Scopes:     []string{},
+		OAuth2Scopes:     nil,
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -902,7 +902,7 @@ func (s *Schedules) GetByID(ctx context.Context, scheduleID string, opts ...oper
 		BaseURL:          baseURL,
 		Context:          ctx,
 		OperationID:      "Schedules_getScheduleById",
-		OAuth2Scopes:     []string{},
+		OAuth2Scopes:     nil,
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -1180,7 +1180,7 @@ func (s *Schedules) Update(ctx context.Context, scheduleID string, v4UpdateSched
 		BaseURL:          baseURL,
 		Context:          ctx,
 		OperationID:      "Schedules_updateSchedule",
-		OAuth2Scopes:     []string{},
+		OAuth2Scopes:     nil,
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "V4UpdateScheduleRequest", "json", `request:"mediaType=application/json"`)
@@ -1465,7 +1465,7 @@ func (s *Schedules) PauseResume(ctx context.Context, scheduleID string, requestB
 		BaseURL:          baseURL,
 		Context:          ctx,
 		OperationID:      "Schedules_pauseresumeSchedule",
-		OAuth2Scopes:     []string{},
+		OAuth2Scopes:     nil,
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "RequestBody", "json", `request:"mediaType=application/json"`)
@@ -1750,7 +1750,7 @@ func (s *Schedules) ChangeTimezone(ctx context.Context, scheduleID string, reque
 		BaseURL:          baseURL,
 		Context:          ctx,
 		OperationID:      "Schedules_changeTimezone",
-		OAuth2Scopes:     []string{},
+		OAuth2Scopes:     nil,
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "RequestBody", "json", `request:"mediaType=application/json"`)
@@ -2035,7 +2035,7 @@ func (s *Schedules) Clone(ctx context.Context, scheduleID string, requestBody op
 		BaseURL:          baseURL,
 		Context:          ctx,
 		OperationID:      "Schedules_cloneSchedule",
-		OAuth2Scopes:     []string{},
+		OAuth2Scopes:     nil,
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "RequestBody", "json", `request:"mediaType=application/json"`)
@@ -2320,7 +2320,7 @@ func (s *Schedules) GetIcalLink(ctx context.Context, scheduleID string, myOnCall
 		BaseURL:          baseURL,
 		Context:          ctx,
 		OperationID:      "Export_getScheduleIcalLink",
-		OAuth2Scopes:     []string{},
+		OAuth2Scopes:     nil,
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -2603,7 +2603,7 @@ func (s *Schedules) RefreshIcalLink(ctx context.Context, scheduleID string, myOn
 		BaseURL:          baseURL,
 		Context:          ctx,
 		OperationID:      "Export_refreshScheduleIcalLink",
-		OAuth2Scopes:     []string{},
+		OAuth2Scopes:     nil,
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "RequestBody", "json", `request:"mediaType=application/json"`)
@@ -2893,7 +2893,7 @@ func (s *Schedules) CreateIcalLink(ctx context.Context, scheduleID string, myOnC
 		BaseURL:          baseURL,
 		Context:          ctx,
 		OperationID:      "Export_createScheduleIcalLink",
-		OAuth2Scopes:     []string{},
+		OAuth2Scopes:     nil,
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "RequestBody", "json", `request:"mediaType=application/json"`)
@@ -3182,7 +3182,7 @@ func (s *Schedules) CreateScheduleOverride(ctx context.Context, scheduleID strin
 		BaseURL:          baseURL,
 		Context:          ctx,
 		OperationID:      "Overrides_createScheduleOverride",
-		OAuth2Scopes:     []string{},
+		OAuth2Scopes:     nil,
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "V4CreateScheduleOverrideRequest", "json", `request:"mediaType=application/json"`)
@@ -3467,7 +3467,7 @@ func (s *Schedules) DeleteRotation(ctx context.Context, scheduleID string, rotat
 		BaseURL:          baseURL,
 		Context:          ctx,
 		OperationID:      "Rotations_deleteRotation",
-		OAuth2Scopes:     []string{},
+		OAuth2Scopes:     nil,
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 

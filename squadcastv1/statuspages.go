@@ -80,7 +80,7 @@ func (s *StatusPages) List(ctx context.Context, pageSize string, pageNumber stri
 		BaseURL:          baseURL,
 		Context:          ctx,
 		OperationID:      "StatusPages_listStatusPages",
-		OAuth2Scopes:     []string{},
+		OAuth2Scopes:     nil,
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -564,7 +564,7 @@ func (s *StatusPages) Create(ctx context.Context, request components.V4StatusPag
 		BaseURL:          baseURL,
 		Context:          ctx,
 		OperationID:      "StatusPages_createStatusPage",
-		OAuth2Scopes:     []string{},
+		OAuth2Scopes:     nil,
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "Request", "json", `request:"mediaType=application/json"`)
@@ -1055,7 +1055,7 @@ func (s *StatusPages) DeleteByID(ctx context.Context, statuspageID string, opts 
 		BaseURL:          baseURL,
 		Context:          ctx,
 		OperationID:      "StatusPages_deleteStatusPageById",
-		OAuth2Scopes:     []string{},
+		OAuth2Scopes:     nil,
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -1539,7 +1539,7 @@ func (s *StatusPages) GetByID(ctx context.Context, statuspageID string, opts ...
 		BaseURL:          baseURL,
 		Context:          ctx,
 		OperationID:      "StatusPages_getStatusPageById",
-		OAuth2Scopes:     []string{},
+		OAuth2Scopes:     nil,
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -2024,7 +2024,7 @@ func (s *StatusPages) UpdateByID(ctx context.Context, statuspageID string, v4Sta
 		BaseURL:          baseURL,
 		Context:          ctx,
 		OperationID:      "StatusPages_updateStatusPageById",
-		OAuth2Scopes:     []string{},
+		OAuth2Scopes:     nil,
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "V4StatusPagesUpdateStatusPageByIDRequest", "json", `request:"mediaType=application/json"`)
@@ -2516,7 +2516,7 @@ func (s *StatusPages) CreateIssue(ctx context.Context, statuspageID string, v4St
 		BaseURL:          baseURL,
 		Context:          ctx,
 		OperationID:      "Issues_createIssue",
-		OAuth2Scopes:     []string{},
+		OAuth2Scopes:     nil,
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "V4StatusPagesIssuesCreateIssueRequest", "json", `request:"mediaType=application/json"`)
@@ -3009,7 +3009,7 @@ func (s *StatusPages) UpdateIssue(ctx context.Context, statuspageID string, issu
 		BaseURL:          baseURL,
 		Context:          ctx,
 		OperationID:      "Issues_updateIssue",
-		OAuth2Scopes:     []string{},
+		OAuth2Scopes:     nil,
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "V4StatusPagesIssuesUpdateIssueRequest", "json", `request:"mediaType=application/json"`)
@@ -3502,7 +3502,7 @@ func (s *StatusPages) ListMaintenances(ctx context.Context, statuspageID string,
 		BaseURL:          baseURL,
 		Context:          ctx,
 		OperationID:      "Maintenances_listMaintenances",
-		OAuth2Scopes:     []string{},
+		OAuth2Scopes:     nil,
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -3991,7 +3991,7 @@ func (s *StatusPages) GetMaintenanceByID(ctx context.Context, statuspageID strin
 		BaseURL:          baseURL,
 		Context:          ctx,
 		OperationID:      "Maintenances_getMaintenanceById",
-		OAuth2Scopes:     []string{},
+		OAuth2Scopes:     nil,
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -4475,7 +4475,7 @@ func (s *StatusPages) GetStatuses(ctx context.Context, statuspageID string, opts
 		BaseURL:          baseURL,
 		Context:          ctx,
 		OperationID:      "StatusPages_listStatusPageStatuses",
-		OAuth2Scopes:     []string{},
+		OAuth2Scopes:     nil,
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 

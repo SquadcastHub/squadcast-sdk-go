@@ -67,7 +67,7 @@ func (s *CommunicationCard) Update(ctx context.Context, incidentID string, commu
 		BaseURL:          baseURL,
 		Context:          ctx,
 		OperationID:      "CommunicationCards_updateCommunicationCard",
-		OAuth2Scopes:     []string{},
+		OAuth2Scopes:     nil,
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "V3IncidentsCommunicationCardsUpdateCommunicationCardRequest", "json", `request:"mediaType=application/json"`)

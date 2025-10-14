@@ -68,7 +68,7 @@ func (s *IncidentsActions) CreateJiraCloudTicket(ctx context.Context, incidentID
 		BaseURL:          baseURL,
 		Context:          ctx,
 		OperationID:      "IncidentActions_createATicketOnJiraCloud",
-		OAuth2Scopes:     []string{},
+		OAuth2Scopes:     nil,
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -552,7 +552,7 @@ func (s *IncidentsActions) CreateJiraServerTicket(ctx context.Context, incidentI
 		BaseURL:          baseURL,
 		Context:          ctx,
 		OperationID:      "IncidentActions_createATicketOnJiraServer",
-		OAuth2Scopes:     []string{},
+		OAuth2Scopes:     nil,
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -1036,7 +1036,7 @@ func (s *IncidentsActions) CreateInServicenow(ctx context.Context, incidentID st
 		BaseURL:          baseURL,
 		Context:          ctx,
 		OperationID:      "IncidentActions_createAnIncidentInServicenow",
-		OAuth2Scopes:     []string{},
+		OAuth2Scopes:     nil,
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 

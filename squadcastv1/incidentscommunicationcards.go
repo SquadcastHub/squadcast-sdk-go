@@ -67,7 +67,7 @@ func (s *IncidentsCommunicationCards) GetAll(ctx context.Context, incidentID str
 		BaseURL:          baseURL,
 		Context:          ctx,
 		OperationID:      "CommunicationCards_getAllCommunicationCard",
-		OAuth2Scopes:     []string{},
+		OAuth2Scopes:     nil,
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -552,7 +552,7 @@ func (s *IncidentsCommunicationCards) Create(ctx context.Context, incidentID str
 		BaseURL:          baseURL,
 		Context:          ctx,
 		OperationID:      "CommunicationCards_createCommunicationCard",
-		OAuth2Scopes:     []string{},
+		OAuth2Scopes:     nil,
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "V3IncidentsCommunicationCardsCreateCommunicationCardRequest", "json", `request:"mediaType=application/json"`)
@@ -1047,7 +1047,7 @@ func (s *IncidentsCommunicationCards) Delete(ctx context.Context, incidentID str
 		BaseURL:          baseURL,
 		Context:          ctx,
 		OperationID:      "CommunicationCards_deleteCommunicationCard",
-		OAuth2Scopes:     []string{},
+		OAuth2Scopes:     nil,
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 

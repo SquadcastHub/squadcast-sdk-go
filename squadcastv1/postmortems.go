@@ -67,7 +67,7 @@ func (s *Postmortems) DeleteByIncident(ctx context.Context, incidentID string, o
 		BaseURL:          baseURL,
 		Context:          ctx,
 		OperationID:      "Postmortems_deletePostmortemByIncident",
-		OAuth2Scopes:     []string{},
+		OAuth2Scopes:     nil,
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -553,7 +553,7 @@ func (s *Postmortems) GetByIncident(ctx context.Context, incidentID string, opts
 		BaseURL:          baseURL,
 		Context:          ctx,
 		OperationID:      "Postmortems_getPostmortemByIncident",
-		OAuth2Scopes:     []string{},
+		OAuth2Scopes:     nil,
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -1040,7 +1040,7 @@ func (s *Postmortems) Create(ctx context.Context, incidentID string, v3Incidents
 		BaseURL:          baseURL,
 		Context:          ctx,
 		OperationID:      "Postmortems_createPostmortem",
-		OAuth2Scopes:     []string{},
+		OAuth2Scopes:     nil,
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "V3IncidentsPostmortemsCreatePostmortemRequest", "json", `request:"mediaType=application/json"`)

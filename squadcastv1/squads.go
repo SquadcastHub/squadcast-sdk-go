@@ -71,7 +71,7 @@ func (s *Squads) List(ctx context.Context, ownerID string, opts ...operations.Op
 		BaseURL:          baseURL,
 		Context:          ctx,
 		OperationID:      "Squads_getAllSquads",
-		OAuth2Scopes:     []string{},
+		OAuth2Scopes:     nil,
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -359,7 +359,7 @@ func (s *Squads) RemoveMember(ctx context.Context, squadID string, memberID stri
 		BaseURL:          baseURL,
 		Context:          ctx,
 		OperationID:      "Squads_removeSquadMember",
-		OAuth2Scopes:     []string{},
+		OAuth2Scopes:     nil,
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -648,7 +648,7 @@ func (s *Squads) UpdateMemberRole(ctx context.Context, squadID string, memberID 
 		BaseURL:          baseURL,
 		Context:          ctx,
 		OperationID:      "Squads_updateSquadMember",
-		OAuth2Scopes:     []string{},
+		OAuth2Scopes:     nil,
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "V4SquadsUpdateSquadMemberRequest", "json", `request:"mediaType=application/json"`)
@@ -939,7 +939,7 @@ func (s *Squads) UpdateName(ctx context.Context, squadID string, v4SquadsUpdateS
 		BaseURL:          baseURL,
 		Context:          ctx,
 		OperationID:      "Squads_updateSquadName",
-		OAuth2Scopes:     []string{},
+		OAuth2Scopes:     nil,
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "V4SquadsUpdateSquadNameRequest", "json", `request:"mediaType=application/json"`)
@@ -1225,7 +1225,7 @@ func (s *Squads) Delete(ctx context.Context, squadID string, opts ...operations.
 		BaseURL:          baseURL,
 		Context:          ctx,
 		OperationID:      "Squads_deleteSquad",
-		OAuth2Scopes:     []string{},
+		OAuth2Scopes:     nil,
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 

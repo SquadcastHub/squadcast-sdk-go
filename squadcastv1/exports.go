@@ -66,7 +66,7 @@ func (s *Exports) GetDetails(ctx context.Context, exportID string, opts ...opera
 		BaseURL:          baseURL,
 		Context:          ctx,
 		OperationID:      "Export_getExportDetails",
-		OAuth2Scopes:     []string{},
+		OAuth2Scopes:     nil,
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 

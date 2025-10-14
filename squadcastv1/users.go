@@ -67,7 +67,7 @@ func (s *Users) GetAll(ctx context.Context, opts ...operations.Option) (*operati
 		BaseURL:          baseURL,
 		Context:          ctx,
 		OperationID:      "Users_getAllUsers",
-		OAuth2Scopes:     []string{},
+		OAuth2Scopes:     nil,
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -549,7 +549,7 @@ func (s *Users) Add(ctx context.Context, request components.V3UsersAddUserReques
 		BaseURL:          baseURL,
 		Context:          ctx,
 		OperationID:      "Users_addUser",
-		OAuth2Scopes:     []string{},
+		OAuth2Scopes:     nil,
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "Request", "json", `request:"mediaType=application/json"`)
@@ -1036,7 +1036,7 @@ func (s *Users) UpdateOrgLevelPermissions(ctx context.Context, request component
 		BaseURL:          baseURL,
 		Context:          ctx,
 		OperationID:      "Users_updateOrgLevelPermissions",
-		OAuth2Scopes:     []string{},
+		OAuth2Scopes:     nil,
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "Request", "json", `request:"mediaType=application/json"`)
@@ -1524,7 +1524,7 @@ func (s *Users) Delete(ctx context.Context, request operations.UsersDeleteUserRe
 		BaseURL:          baseURL,
 		Context:          ctx,
 		OperationID:      "Users_deleteUser",
-		OAuth2Scopes:     []string{},
+		OAuth2Scopes:     nil,
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "Request", "json", `request:"mediaType=application/json"`)
@@ -2013,7 +2013,7 @@ func (s *Users) GetRoles(ctx context.Context, opts ...operations.Option) (*opera
 		BaseURL:          baseURL,
 		Context:          ctx,
 		OperationID:      "Users_getUserRoles",
-		OAuth2Scopes:     []string{},
+		OAuth2Scopes:     nil,
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -2499,7 +2499,7 @@ func (s *Users) RemoveFromOrg(ctx context.Context, userID string, opts ...operat
 		BaseURL:          baseURL,
 		Context:          ctx,
 		OperationID:      "Users_removeUserFromOrg",
-		OAuth2Scopes:     []string{},
+		OAuth2Scopes:     nil,
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -2980,7 +2980,7 @@ func (s *Users) GetByID(ctx context.Context, userID string, opts ...operations.O
 		BaseURL:          baseURL,
 		Context:          ctx,
 		OperationID:      "Users_getUserById",
-		OAuth2Scopes:     []string{},
+		OAuth2Scopes:     nil,
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -3467,7 +3467,7 @@ func (s *Users) Update(ctx context.Context, userID string, v3UsersUpdateUserRequ
 		BaseURL:          baseURL,
 		Context:          ctx,
 		OperationID:      "Users_updateUserByID",
-		OAuth2Scopes:     []string{},
+		OAuth2Scopes:     nil,
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "V3UsersUpdateUserRequest", "json", `request:"mediaType=application/json"`)

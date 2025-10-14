@@ -68,7 +68,7 @@ func (s *GlobalEventRulesRulesets) Delete(ctx context.Context, gerID int64, aler
 		BaseURL:          baseURL,
 		Context:          ctx,
 		OperationID:      "GlobalEventRules_deleteGerRuleset",
-		OAuth2Scopes:     []string{},
+		OAuth2Scopes:     nil,
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
