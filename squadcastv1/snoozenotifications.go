@@ -66,7 +66,7 @@ func (s *SnoozeNotifications) Snooze(ctx context.Context, incidentID string, v3I
 		BaseURL:          baseURL,
 		Context:          ctx,
 		OperationID:      "SnoozeNotifications_snoozeIncidentNotifications",
-		OAuth2Scopes:     []string{},
+		OAuth2Scopes:     nil,
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "V3IncidentsSnoozeNotificationsSnoozeIncidentRequest", "json", `request:"mediaType=application/json"`)

@@ -66,7 +66,7 @@ func (s *RoutingRules) CreateOrUpdate(ctx context.Context, serviceID string, v3S
 		BaseURL:          baseURL,
 		Context:          ctx,
 		OperationID:      "RoutingRules_createOrUpdateRoutingRules",
-		OAuth2Scopes:     []string{},
+		OAuth2Scopes:     nil,
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "V3ServicesRoutingRulesCreateOrUpdateRoutingRulesRequest", "json", `request:"mediaType=application/json"`)

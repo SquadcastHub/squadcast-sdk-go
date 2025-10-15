@@ -70,7 +70,7 @@ func (s *Webforms) GetAll(ctx context.Context, ownerID string, pageNumber *strin
 		BaseURL:          baseURL,
 		Context:          ctx,
 		OperationID:      "Webforms_getAllWebforms",
-		OAuth2Scopes:     []string{},
+		OAuth2Scopes:     nil,
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -556,7 +556,7 @@ func (s *Webforms) Create(ctx context.Context, request components.V3WebformsCrea
 		BaseURL:          baseURL,
 		Context:          ctx,
 		OperationID:      "Webforms_createWebform",
-		OAuth2Scopes:     []string{},
+		OAuth2Scopes:     nil,
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "Request", "json", `request:"mediaType=application/json"`)
@@ -1050,7 +1050,7 @@ func (s *Webforms) Update(ctx context.Context, webformID int64, v3WebformsCreate
 		BaseURL:          baseURL,
 		Context:          ctx,
 		OperationID:      "Webforms_updateWebform",
-		OAuth2Scopes:     []string{},
+		OAuth2Scopes:     nil,
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "V3WebformsCreateOrUpdateWebformRequest", "json", `request:"mediaType=application/json"`)
@@ -1544,7 +1544,7 @@ func (s *Webforms) Remove(ctx context.Context, webformID int64, ownerID string, 
 		BaseURL:          baseURL,
 		Context:          ctx,
 		OperationID:      "Webforms_removeWebform",
-		OAuth2Scopes:     []string{},
+		OAuth2Scopes:     nil,
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -2035,7 +2035,7 @@ func (s *Webforms) Get(ctx context.Context, webformID int64, ownerID string, opt
 		BaseURL:          baseURL,
 		Context:          ctx,
 		OperationID:      "Webforms_getWebformById",
-		OAuth2Scopes:     []string{},
+		OAuth2Scopes:     nil,
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 

@@ -67,7 +67,7 @@ func (s *APIToken) Remove(ctx context.Context, refreshTokenID string, opts ...op
 		BaseURL:          baseURL,
 		Context:          ctx,
 		OperationID:      "Users_removeToken",
-		OAuth2Scopes:     []string{},
+		OAuth2Scopes:     nil,
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 

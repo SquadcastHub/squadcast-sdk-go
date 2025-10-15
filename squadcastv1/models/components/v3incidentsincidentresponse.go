@@ -114,7 +114,7 @@ func (v V3IncidentsIncidentResponse) MarshalJSON() ([]byte, error) {
 }
 
 func (v *V3IncidentsIncidentResponse) UnmarshalJSON(data []byte) error {
-	if err := utils.UnmarshalJSON(data, &v, "", false, []string{"id", "service_id", "alert_source_id", "organization_id", "incidentNumber", "message", "assignedTo", "additional_responders", "description", "status", "timeOfCreation", "updated_at", "tags", "logs", "analytics", "pinned_messages", "deleted", "event_count", "dedup_data", "owner", "access_control", "relevantUsers", "relevantEscalationPolicies", "relevantSquads", "relevantSchedules", "relevantPeopleLogs", "responseNotes", "attachments", "is_child", "children", "did_auto_pause", "did_auto_pause_timeout", "auto_pause_ends_at", "manually_marked_transient_alert_feedback_type", "classification_id", "grouped_alert_count", "has_priority", "snooze_details", "did_notification_delay", "notification_delay_policy", "digest_id"}); err != nil {
+	if err := utils.UnmarshalJSON(data, &v, "", false, []string{"id", "service_id", "alert_source_id", "organization_id", "incidentNumber", "message", "assignedTo", "additional_responders", "description", "status", "timeOfCreation", "updated_at", "tags", "logs", "analytics", "deleted", "event_count", "dedup_data", "owner", "is_child", "children", "did_auto_pause", "did_auto_pause_timeout", "auto_pause_ends_at", "manually_marked_transient_alert_feedback_type", "classification_id", "grouped_alert_count", "has_priority", "snooze_details", "did_notification_delay", "notification_delay_policy", "digest_id"}); err != nil {
 		return err
 	}
 	return nil

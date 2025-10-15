@@ -87,7 +87,7 @@ func (s *Incidents) BulkAcknowledge(ctx context.Context, request components.V3In
 		BaseURL:          baseURL,
 		Context:          ctx,
 		OperationID:      "Incidents_bulkAcknowledgeIncidents",
-		OAuth2Scopes:     []string{},
+		OAuth2Scopes:     nil,
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "Request", "json", `request:"mediaType=application/json"`)
@@ -593,7 +593,7 @@ func (s *Incidents) Export(ctx context.Context, request operations.IncidentsInci
 		BaseURL:          baseURL,
 		Context:          ctx,
 		OperationID:      "Incidents_incidentExport",
-		OAuth2Scopes:     []string{},
+		OAuth2Scopes:     nil,
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -1031,7 +1031,7 @@ func (s *Incidents) ExportAsync(ctx context.Context, request components.V3Incide
 		BaseURL:          baseURL,
 		Context:          ctx,
 		OperationID:      "Incidents_incidentExportAsync",
-		OAuth2Scopes:     []string{},
+		OAuth2Scopes:     nil,
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "Request", "json", `request:"mediaType=application/json"`)
@@ -1516,7 +1516,7 @@ func (s *Incidents) BulkUpdatePriority(ctx context.Context, request components.V
 		BaseURL:          baseURL,
 		Context:          ctx,
 		OperationID:      "Incidents_bulkIncidentsPriorityUpdate",
-		OAuth2Scopes:     []string{},
+		OAuth2Scopes:     nil,
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "Request", "json", `request:"mediaType=application/json"`)
@@ -2000,7 +2000,7 @@ func (s *Incidents) BulkResolve(ctx context.Context, request components.V3Incide
 		BaseURL:          baseURL,
 		Context:          ctx,
 		OperationID:      "Incidents_bulkResolveIncidents",
-		OAuth2Scopes:     []string{},
+		OAuth2Scopes:     nil,
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "Request", "json", `request:"mediaType=application/json"`)
@@ -2493,7 +2493,7 @@ func (s *Incidents) GetByID(ctx context.Context, incidentID string, opts ...oper
 		BaseURL:          baseURL,
 		Context:          ctx,
 		OperationID:      "Incidents_getIncidentById",
-		OAuth2Scopes:     []string{},
+		OAuth2Scopes:     nil,
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -2979,7 +2979,7 @@ func (s *Incidents) Acknowledge(ctx context.Context, incidentID string, opts ...
 		BaseURL:          baseURL,
 		Context:          ctx,
 		OperationID:      "Incidents_acknowledgeIncident",
-		OAuth2Scopes:     []string{},
+		OAuth2Scopes:     nil,
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -3467,7 +3467,7 @@ func (s *Incidents) MarkSloFalsePositive(ctx context.Context, incidentID string,
 		BaseURL:          baseURL,
 		Context:          ctx,
 		OperationID:      "Incidents_markIncidentSloFalsePositive",
-		OAuth2Scopes:     []string{},
+		OAuth2Scopes:     nil,
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -3955,7 +3955,7 @@ func (s *Incidents) UpdatePriority(ctx context.Context, incidentID string, v3Inc
 		BaseURL:          baseURL,
 		Context:          ctx,
 		OperationID:      "Incidents_incidentPriorityUpdate",
-		OAuth2Scopes:     []string{},
+		OAuth2Scopes:     nil,
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "V3IncidentsIncidentPriorityUpdateRequest", "json", `request:"mediaType=application/json"`)
@@ -4450,7 +4450,7 @@ func (s *Incidents) Reassign(ctx context.Context, incidentID string, v3Incidents
 		BaseURL:          baseURL,
 		Context:          ctx,
 		OperationID:      "Incidents_reassignIncident",
-		OAuth2Scopes:     []string{},
+		OAuth2Scopes:     nil,
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "V3IncidentsReassignIncidentRequest", "json", `request:"mediaType=application/json"`)
@@ -4947,7 +4947,7 @@ func (s *Incidents) Resolve(ctx context.Context, incidentID string, v3IncidentsR
 		BaseURL:          baseURL,
 		Context:          ctx,
 		OperationID:      "Incidents_resolveIncident",
-		OAuth2Scopes:     []string{},
+		OAuth2Scopes:     nil,
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "V3IncidentsResolveIncidentRequest", "json", `request:"mediaType=application/json"`)
@@ -5445,7 +5445,7 @@ func (s *Incidents) GetStatusByRequestIds(ctx context.Context, request component
 		BaseURL:          baseURL,
 		Context:          ctx,
 		OperationID:      "Incidents_getIncidentsStatusByRequestids",
-		OAuth2Scopes:     []string{},
+		OAuth2Scopes:     nil,
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "Request", "json", `request:"mediaType=application/json"`)
@@ -5941,7 +5941,7 @@ func (s *Incidents) GetAllPostmortems(ctx context.Context, fromDate string, toDa
 		BaseURL:          baseURL,
 		Context:          ctx,
 		OperationID:      "Postmortems_getAllPostmortems",
-		OAuth2Scopes:     []string{},
+		OAuth2Scopes:     nil,
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -6429,7 +6429,7 @@ func (s *Incidents) MarkAsTransient(ctx context.Context, incidentID string, opts
 		BaseURL:          baseURL,
 		Context:          ctx,
 		OperationID:      "Apta_markAsTransient",
-		OAuth2Scopes:     []string{},
+		OAuth2Scopes:     nil,
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -6916,7 +6916,7 @@ func (s *Incidents) UpdatePostmortem(ctx context.Context, incidentID string, v3I
 		BaseURL:          baseURL,
 		Context:          ctx,
 		OperationID:      "Postmortems_updatePostmortemByIncident",
-		OAuth2Scopes:     []string{},
+		OAuth2Scopes:     nil,
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "V3IncidentsPostmortemsUpdatePostmortemRequest", "json", `request:"mediaType=application/json"`)
@@ -7408,7 +7408,7 @@ func (s *Incidents) UnsnoozeNotifications(ctx context.Context, incidentID string
 		BaseURL:          baseURL,
 		Context:          ctx,
 		OperationID:      "SnoozeNotifications_unsnoozeIncidentNotifications",
-		OAuth2Scopes:     []string{},
+		OAuth2Scopes:     nil,
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "V3IncidentsSnoozeNotificationsUnsnoozeIncidentRequest", "json", `request:"mediaType=application/json"`)

@@ -63,7 +63,7 @@ func (s *ExtensionsMsteams) UpsertConfig(ctx context.Context, request components
 		BaseURL:          baseURL,
 		Context:          ctx,
 		OperationID:      "MSTeams_createOrUpdateMsteamsConfiguration",
-		OAuth2Scopes:     []string{},
+		OAuth2Scopes:     nil,
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "Request", "json", `request:"mediaType=application/json"`)

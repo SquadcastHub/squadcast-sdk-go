@@ -67,7 +67,7 @@ func (s *Members) GetAll(ctx context.Context, teamID string, opts ...operations.
 		BaseURL:          baseURL,
 		Context:          ctx,
 		OperationID:      "Teams_getAllTeamMembers",
-		OAuth2Scopes:     []string{},
+		OAuth2Scopes:     nil,
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 

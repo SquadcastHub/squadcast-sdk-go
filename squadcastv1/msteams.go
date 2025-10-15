@@ -64,7 +64,7 @@ func (s *Msteams) GetConfig(ctx context.Context, opts ...operations.Option) (*op
 		BaseURL:          baseURL,
 		Context:          ctx,
 		OperationID:      "MSTeams_getMsteamsConfig",
-		OAuth2Scopes:     []string{},
+		OAuth2Scopes:     nil,
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 

@@ -67,7 +67,7 @@ func (s *Notes) List(ctx context.Context, incidentID string, opts ...operations.
 		BaseURL:          baseURL,
 		Context:          ctx,
 		OperationID:      "Notes_getAllNotes",
-		OAuth2Scopes:     []string{},
+		OAuth2Scopes:     nil,
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 

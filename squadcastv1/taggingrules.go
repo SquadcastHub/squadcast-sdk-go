@@ -65,7 +65,7 @@ func (s *TaggingRules) Get(ctx context.Context, serviceID string, opts ...operat
 		BaseURL:          baseURL,
 		Context:          ctx,
 		OperationID:      "TaggingRules_getTaggingRules",
-		OAuth2Scopes:     []string{},
+		OAuth2Scopes:     nil,
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 

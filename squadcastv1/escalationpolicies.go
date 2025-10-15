@@ -70,7 +70,7 @@ func (s *EscalationPolicies) GetByTeam(ctx context.Context, ownerID string, page
 		BaseURL:          baseURL,
 		Context:          ctx,
 		OperationID:      "EscalationPolicies_getEscalationPolicyByTeam",
-		OAuth2Scopes:     []string{},
+		OAuth2Scopes:     nil,
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -556,7 +556,7 @@ func (s *EscalationPolicies) Create(ctx context.Context, request components.V3Es
 		BaseURL:          baseURL,
 		Context:          ctx,
 		OperationID:      "EscalationPolicies_createEscalationPolicies",
-		OAuth2Scopes:     []string{},
+		OAuth2Scopes:     nil,
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "Request", "json", `request:"mediaType=application/json"`)
@@ -1049,7 +1049,7 @@ func (s *EscalationPolicies) Remove(ctx context.Context, escalationPolicyID stri
 		BaseURL:          baseURL,
 		Context:          ctx,
 		OperationID:      "EscalationPolicies_removeEscalationPolicy",
-		OAuth2Scopes:     []string{},
+		OAuth2Scopes:     nil,
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -1530,7 +1530,7 @@ func (s *EscalationPolicies) GetByID(ctx context.Context, escalationPolicyID str
 		BaseURL:          baseURL,
 		Context:          ctx,
 		OperationID:      "EscalationPolicies_getEscalationPolicyById",
-		OAuth2Scopes:     []string{},
+		OAuth2Scopes:     nil,
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -2017,7 +2017,7 @@ func (s *EscalationPolicies) Update(ctx context.Context, escalationPolicyID stri
 		BaseURL:          baseURL,
 		Context:          ctx,
 		OperationID:      "EscalationPolicies_updateEscalationPolicy",
-		OAuth2Scopes:     []string{},
+		OAuth2Scopes:     nil,
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "V3EscalationPoliciesUpdateEscalationPolicyRequest", "raw", `request:"mediaType=text/plain"`)

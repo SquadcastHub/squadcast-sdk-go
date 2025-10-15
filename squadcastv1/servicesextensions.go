@@ -66,7 +66,7 @@ func (s *ServicesExtensions) UpdateSlack(ctx context.Context, serviceID string, 
 		BaseURL:          baseURL,
 		Context:          ctx,
 		OperationID:      "Extensions_updateSlackExtension",
-		OAuth2Scopes:     []string{},
+		OAuth2Scopes:     nil,
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "V3ServicesExtensionsUpdateSlackExtensionRequest", "json", `request:"mediaType=application/json"`)

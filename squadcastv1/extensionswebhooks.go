@@ -67,7 +67,7 @@ func (s *ExtensionsWebhooks) Delete(ctx context.Context, eventWebhookID string, 
 		BaseURL:          baseURL,
 		Context:          ctx,
 		OperationID:      "Webhooks_deleteWebhook",
-		OAuth2Scopes:     []string{},
+		OAuth2Scopes:     nil,
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -548,7 +548,7 @@ func (s *ExtensionsWebhooks) GetByID(ctx context.Context, eventWebhookID string,
 		BaseURL:          baseURL,
 		Context:          ctx,
 		OperationID:      "Webhooks_getWebhookById",
-		OAuth2Scopes:     []string{},
+		OAuth2Scopes:     nil,
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 

@@ -66,7 +66,7 @@ func (s *Overlays) DeleteNotificationTemplate(ctx context.Context, serviceID str
 		BaseURL:          baseURL,
 		Context:          ctx,
 		OperationID:      "Overlay_deleteNotificationTemplateOverlay",
-		OAuth2Scopes:     []string{},
+		OAuth2Scopes:     nil,
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 

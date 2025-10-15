@@ -65,7 +65,7 @@ func (s *SchedulesRotations) List(ctx context.Context, scheduleID string, opts .
 		BaseURL:          baseURL,
 		Context:          ctx,
 		OperationID:      "Rotations_getScheduleRotations",
-		OAuth2Scopes:     []string{},
+		OAuth2Scopes:     nil,
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 

@@ -66,7 +66,7 @@ func (s *Maintenances) Create(ctx context.Context, statuspageID string, v4Status
 		BaseURL:          baseURL,
 		Context:          ctx,
 		OperationID:      "Maintenances_createMaintenance",
-		OAuth2Scopes:     []string{},
+		OAuth2Scopes:     nil,
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "V4StatusPagesMaintenancesCreateMaintenanceRequest", "json", `request:"mediaType=application/json"`)
@@ -558,7 +558,7 @@ func (s *Maintenances) DeleteByID(ctx context.Context, statuspageID string, main
 		BaseURL:          baseURL,
 		Context:          ctx,
 		OperationID:      "Maintenances_deleteMaintenanceById",
-		OAuth2Scopes:     []string{},
+		OAuth2Scopes:     nil,
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -1044,7 +1044,7 @@ func (s *Maintenances) UpdateByID(ctx context.Context, statuspageID string, main
 		BaseURL:          baseURL,
 		Context:          ctx,
 		OperationID:      "Maintenances_updateMaintenanceById",
-		OAuth2Scopes:     []string{},
+		OAuth2Scopes:     nil,
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "V4StatusPagesMaintenancesUpdateMaintenanceByIDRequest", "json", `request:"mediaType=application/json"`)

@@ -65,7 +65,7 @@ func (s *AutoPauseTransientAlerts) MarkAsNotTransient(ctx context.Context, incid
 		BaseURL:          baseURL,
 		Context:          ctx,
 		OperationID:      "Apta_markAsNotTransient",
-		OAuth2Scopes:     []string{},
+		OAuth2Scopes:     nil,
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 

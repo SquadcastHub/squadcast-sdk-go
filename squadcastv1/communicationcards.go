@@ -62,7 +62,7 @@ func (s *CommunicationCards) CreateSlackChannel(ctx context.Context, request com
 		BaseURL:          baseURL,
 		Context:          ctx,
 		OperationID:      "CommunicationCards_createSlackChannelInCommunicationCard",
-		OAuth2Scopes:     []string{},
+		OAuth2Scopes:     nil,
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "Request", "json", `request:"mediaType=application/json"`)
@@ -549,7 +549,7 @@ func (s *CommunicationCards) ArchiveSlackChannel(ctx context.Context, request co
 		BaseURL:          baseURL,
 		Context:          ctx,
 		OperationID:      "CommunicationCards_archiveSlackChannel",
-		OAuth2Scopes:     []string{},
+		OAuth2Scopes:     nil,
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "Request", "json", `request:"mediaType=application/json"`)

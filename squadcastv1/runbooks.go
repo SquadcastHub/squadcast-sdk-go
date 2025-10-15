@@ -64,7 +64,7 @@ func (s *Runbooks) ListByTeam(ctx context.Context, opts ...operations.Option) (*
 		BaseURL:          baseURL,
 		Context:          ctx,
 		OperationID:      "Runbooks_getAllRunbooksByTeam",
-		OAuth2Scopes:     []string{},
+		OAuth2Scopes:     nil,
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -546,7 +546,7 @@ func (s *Runbooks) Create(ctx context.Context, request components.V3RunbooksCrea
 		BaseURL:          baseURL,
 		Context:          ctx,
 		OperationID:      "Runbooks_createRunbook",
-		OAuth2Scopes:     []string{},
+		OAuth2Scopes:     nil,
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "Request", "json", `request:"mediaType=application/json"`)
@@ -1039,7 +1039,7 @@ func (s *Runbooks) Remove(ctx context.Context, runbookID string, opts ...operati
 		BaseURL:          baseURL,
 		Context:          ctx,
 		OperationID:      "Runbooks_removeRunbook",
-		OAuth2Scopes:     []string{},
+		OAuth2Scopes:     nil,
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -1520,7 +1520,7 @@ func (s *Runbooks) GetByID(ctx context.Context, runbookID string, opts ...operat
 		BaseURL:          baseURL,
 		Context:          ctx,
 		OperationID:      "Runbooks_getRunbookById",
-		OAuth2Scopes:     []string{},
+		OAuth2Scopes:     nil,
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -2007,7 +2007,7 @@ func (s *Runbooks) Update(ctx context.Context, runbookID string, v3RunbooksUpdat
 		BaseURL:          baseURL,
 		Context:          ctx,
 		OperationID:      "Runbooks_updateRunbook",
-		OAuth2Scopes:     []string{},
+		OAuth2Scopes:     nil,
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "V3RunbooksUpdateRunbookRequest", "json", `request:"mediaType=application/json"`)

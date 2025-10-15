@@ -70,7 +70,7 @@ func (s *Rulesets) Create(ctx context.Context, gerID int64, v3GlobalEventRulesCr
 		BaseURL:          baseURL,
 		Context:          ctx,
 		OperationID:      "GlobalEventRules_createRuleset",
-		OAuth2Scopes:     []string{},
+		OAuth2Scopes:     nil,
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "V3GlobalEventRulesCreateRulesetRequest", "json", `request:"mediaType=application/json"`)
@@ -565,7 +565,7 @@ func (s *Rulesets) Reorder(ctx context.Context, gerID int64, alertSourceVersion 
 		BaseURL:          baseURL,
 		Context:          ctx,
 		OperationID:      "GlobalEventRules_reorderRuleset",
-		OAuth2Scopes:     []string{},
+		OAuth2Scopes:     nil,
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "V3GlobalEventRulesReorderRulesetRequest", "json", `request:"mediaType=application/json"`)
@@ -778,7 +778,7 @@ func (s *Rulesets) ListRulesetRules(ctx context.Context, request operations.Glob
 		BaseURL:          baseURL,
 		Context:          ctx,
 		OperationID:      "GlobalEventRules_listRulesetRules",
-		OAuth2Scopes:     []string{},
+		OAuth2Scopes:     nil,
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 

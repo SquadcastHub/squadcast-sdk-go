@@ -52,7 +52,7 @@ func (v V3ServicesOverlayOverlayResponse) MarshalJSON() ([]byte, error) {
 }
 
 func (v *V3ServicesOverlayOverlayResponse) UnmarshalJSON(data []byte) error {
-	if err := utils.UnmarshalJSON(data, &v, "", false, []string{"created_at", "updated_at", "deleted_at", "org_id", "service_id", "alert_source_version", "alert_source_shortname", "overlay_template_type", "overlay", "created_by", "updated_by", "alert_source_type"}); err != nil {
+	if err := utils.UnmarshalJSON(data, &v, "", false, []string{"created_at", "updated_at", "org_id", "service_id", "alert_source_version", "alert_source_shortname", "overlay_template_type", "overlay", "created_by", "updated_by", "alert_source_type"}); err != nil {
 		return err
 	}
 	return nil

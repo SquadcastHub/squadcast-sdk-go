@@ -19,7 +19,7 @@ func (v V3IncidentsTagsSnoozeDetails) MarshalJSON() ([]byte, error) {
 }
 
 func (v *V3IncidentsTagsSnoozeDetails) UnmarshalJSON(data []byte) error {
-	if err := utils.UnmarshalJSON(data, &v, "", false, []string{"is_snoozed", "start_time", "end_time", "total_time_in_mins"}); err != nil {
+	if err := utils.UnmarshalJSON(data, &v, "", false, []string{"is_snoozed", "total_time_in_mins"}); err != nil {
 		return err
 	}
 	return nil

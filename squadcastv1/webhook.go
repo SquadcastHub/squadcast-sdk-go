@@ -66,7 +66,7 @@ func (s *Webhook) TriggerManually(ctx context.Context, incidentID string, eventW
 		BaseURL:          baseURL,
 		Context:          ctx,
 		OperationID:      "IncidentActions_triggerAWebhookManually",
-		OAuth2Scopes:     []string{},
+		OAuth2Scopes:     nil,
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 

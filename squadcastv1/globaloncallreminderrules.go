@@ -67,7 +67,7 @@ func (s *GlobalOncallReminderRules) Delete(ctx context.Context, ownerID string, 
 		BaseURL:          baseURL,
 		Context:          ctx,
 		OperationID:      "GlobalOncallReminderRules_deleteGlobalOncallReminderRules",
-		OAuth2Scopes:     []string{},
+		OAuth2Scopes:     nil,
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -551,7 +551,7 @@ func (s *GlobalOncallReminderRules) List(ctx context.Context, ownerID string, op
 		BaseURL:          baseURL,
 		Context:          ctx,
 		OperationID:      "GlobalOncallReminderRules_getGlobalOncallReminderRules",
-		OAuth2Scopes:     []string{},
+		OAuth2Scopes:     nil,
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -1035,7 +1035,7 @@ func (s *GlobalOncallReminderRules) Create(ctx context.Context, request componen
 		BaseURL:          baseURL,
 		Context:          ctx,
 		OperationID:      "GlobalOncallReminderRules_createGlobalOncallReminderRules",
-		OAuth2Scopes:     []string{},
+		OAuth2Scopes:     nil,
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "Request", "json", `request:"mediaType=application/json"`)
@@ -1528,7 +1528,7 @@ func (s *GlobalOncallReminderRules) Update(ctx context.Context, ownerID string, 
 		BaseURL:          baseURL,
 		Context:          ctx,
 		OperationID:      "GlobalOncallReminderRules_updateGlobalOncallReminderRules",
-		OAuth2Scopes:     []string{},
+		OAuth2Scopes:     nil,
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "V3GlobalOncallReminderRulesUpdateGlobalOncallReminderRulesRequest", "json", `request:"mediaType=application/json"`)

@@ -149,9 +149,6 @@ func main() {
 
 * [GetDetails](docs/sdks/exports/README.md#getdetails) - Get Export Details
 
-### [Extensions](docs/sdks/extensions/README.md)
-
-
 #### [Extensions.Msteams](docs/sdks/extensionsmsteams/README.md)
 
 * [UpsertConfig](docs/sdks/extensionsmsteams/README.md#upsertconfig) - Create Or Update MSTeams Configuration
@@ -201,9 +198,6 @@ func main() {
 * [List](docs/sdks/globaloncallreminderrules/README.md#list) - Get Global Oncall Reminder Rules
 * [Create](docs/sdks/globaloncallreminderrules/README.md#create) - Create Global Oncall Reminder Rules
 * [Update](docs/sdks/globaloncallreminderrules/README.md#update) - Update Global Oncall Reminder Rules
-
-### [IncidentActions](docs/sdks/incidentactions/README.md)
-
 
 #### [IncidentActions.Circleci](docs/sdks/circleci/README.md)
 
@@ -424,7 +418,6 @@ func main() {
 * [MarkAffected](docs/sdks/slos/README.md#markaffected) - Mark SLO Affected
 * [MarkFalsePositive](docs/sdks/slos/README.md#markfalsepositive) - Mark SLO False Positive
 
-
 ### [Squads](docs/sdks/squads/README.md)
 
 * [List](docs/sdks/squads/README.md#list) - Get All Squads
@@ -521,9 +514,6 @@ func main() {
 #### [Users.APIToken](docs/sdks/apitoken/README.md)
 
 * [Remove](docs/sdks/apitoken/README.md#remove) - Remove Token
-
-### [V4](docs/sdks/v4/README.md)
-
 
 #### [V4.Squads](docs/sdks/v4squads/README.md)
 

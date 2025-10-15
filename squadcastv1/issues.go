@@ -65,7 +65,7 @@ func (s *Issues) List(ctx context.Context, statuspageID string, opts ...operatio
 		BaseURL:          baseURL,
 		Context:          ctx,
 		OperationID:      "Issues_listIssues",
-		OAuth2Scopes:     []string{},
+		OAuth2Scopes:     nil,
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -550,7 +550,7 @@ func (s *Issues) Delete(ctx context.Context, statuspageID string, issueID string
 		BaseURL:          baseURL,
 		Context:          ctx,
 		OperationID:      "Issues_deleteIssueById",
-		OAuth2Scopes:     []string{},
+		OAuth2Scopes:     nil,
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -1035,7 +1035,7 @@ func (s *Issues) GetByID(ctx context.Context, statuspageID string, issueID strin
 		BaseURL:          baseURL,
 		Context:          ctx,
 		OperationID:      "Issues_getIssueById",
-		OAuth2Scopes:     []string{},
+		OAuth2Scopes:     nil,
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -1519,7 +1519,7 @@ func (s *Issues) ListStates(ctx context.Context, statuspageID string, opts ...op
 		BaseURL:          baseURL,
 		Context:          ctx,
 		OperationID:      "Issues_listStatusPageIssueStates",
-		OAuth2Scopes:     []string{},
+		OAuth2Scopes:     nil,
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 

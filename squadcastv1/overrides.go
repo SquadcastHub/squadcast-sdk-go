@@ -66,7 +66,7 @@ func (s *Overrides) GetByID(ctx context.Context, scheduleID string, overrideID s
 		BaseURL:          baseURL,
 		Context:          ctx,
 		OperationID:      "Overrides_getOverrideById",
-		OAuth2Scopes:     []string{},
+		OAuth2Scopes:     nil,
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -345,7 +345,7 @@ func (s *Overrides) Update(ctx context.Context, scheduleID string, overrideID st
 		BaseURL:          baseURL,
 		Context:          ctx,
 		OperationID:      "Overrides_updateScheduleOverride",
-		OAuth2Scopes:     []string{},
+		OAuth2Scopes:     nil,
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "V4UpdateScheduleOverrideRequest", "json", `request:"mediaType=application/json"`)

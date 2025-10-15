@@ -57,7 +57,7 @@ func (v V3IncidentsIncidentEventResponse) MarshalJSON() ([]byte, error) {
 }
 
 func (v *V3IncidentsIncidentEventResponse) UnmarshalJSON(data []byte) error {
-	if err := utils.UnmarshalJSON(data, &v, "", false, []string{"incident_id", "alert_source_id", "message", "description", "time_of_creation", "tags", "payload"}); err != nil {
+	if err := utils.UnmarshalJSON(data, &v, "", false, []string{"incident_id", "alert_source_id", "message", "description", "time_of_creation", "payload"}); err != nil {
 		return err
 	}
 	return nil

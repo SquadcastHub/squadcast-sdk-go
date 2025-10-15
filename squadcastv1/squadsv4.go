@@ -66,7 +66,7 @@ func (s *SquadsV4) Create(ctx context.Context, request components.V4SquadsCreate
 		BaseURL:          baseURL,
 		Context:          ctx,
 		OperationID:      "Squads_createSquad",
-		OAuth2Scopes:     []string{},
+		OAuth2Scopes:     nil,
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "Request", "json", `request:"mediaType=application/json"`)
@@ -352,7 +352,7 @@ func (s *SquadsV4) GetByID(ctx context.Context, squadID string, opts ...operatio
 		BaseURL:          baseURL,
 		Context:          ctx,
 		OperationID:      "Squads_getSquadById",
-		OAuth2Scopes:     []string{},
+		OAuth2Scopes:     nil,
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 

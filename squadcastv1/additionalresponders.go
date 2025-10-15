@@ -68,7 +68,7 @@ func (s *AdditionalResponders) Get(ctx context.Context, incidentID string, opts 
 		BaseURL:          baseURL,
 		Context:          ctx,
 		OperationID:      "AdditionalResponders_getAdditionalResponders",
-		OAuth2Scopes:     []string{},
+		OAuth2Scopes:     nil,
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -556,7 +556,7 @@ func (s *AdditionalResponders) Add(ctx context.Context, incidentID string, v3Inc
 		BaseURL:          baseURL,
 		Context:          ctx,
 		OperationID:      "AdditionalResponders_addAdditionalResponders",
-		OAuth2Scopes:     []string{},
+		OAuth2Scopes:     nil,
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "V3IncidentsAdditionalRespondersAddAdditionalRespondersRequest", "json", `request:"mediaType=application/json"`)
@@ -1051,7 +1051,7 @@ func (s *AdditionalResponders) Delete(ctx context.Context, incidentID string, re
 		BaseURL:          baseURL,
 		Context:          ctx,
 		OperationID:      "AdditionalResponders_removeAdditionalResponders",
-		OAuth2Scopes:     []string{},
+		OAuth2Scopes:     nil,
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 

@@ -65,7 +65,7 @@ func (s *ComponentGroups) List(ctx context.Context, statuspageID string, opts ..
 		BaseURL:          baseURL,
 		Context:          ctx,
 		OperationID:      "ComponentGroups_listComponentGroups",
-		OAuth2Scopes:     []string{},
+		OAuth2Scopes:     nil,
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -550,7 +550,7 @@ func (s *ComponentGroups) Create(ctx context.Context, statuspageID string, v4Sta
 		BaseURL:          baseURL,
 		Context:          ctx,
 		OperationID:      "ComponentGroups_createComponentGroup",
-		OAuth2Scopes:     []string{},
+		OAuth2Scopes:     nil,
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "V4StatusPagesComponentGroupsCreateComponentGroupRequest", "json", `request:"mediaType=application/json"`)
@@ -1042,7 +1042,7 @@ func (s *ComponentGroups) DeleteByID(ctx context.Context, statuspageID string, g
 		BaseURL:          baseURL,
 		Context:          ctx,
 		OperationID:      "ComponentGroups_deleteComponentGroupById",
-		OAuth2Scopes:     []string{},
+		OAuth2Scopes:     nil,
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -1527,7 +1527,7 @@ func (s *ComponentGroups) GetByID(ctx context.Context, statuspageID string, grou
 		BaseURL:          baseURL,
 		Context:          ctx,
 		OperationID:      "ComponentGroups_getComponentGroupById",
-		OAuth2Scopes:     []string{},
+		OAuth2Scopes:     nil,
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 

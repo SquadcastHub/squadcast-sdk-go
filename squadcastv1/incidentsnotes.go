@@ -66,7 +66,7 @@ func (s *IncidentsNotes) Create(ctx context.Context, incidentID string, v3Incide
 		BaseURL:          baseURL,
 		Context:          ctx,
 		OperationID:      "Notes_createNotes",
-		OAuth2Scopes:     []string{},
+		OAuth2Scopes:     nil,
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "V3IncidentsNotesCreateNoteRequest", "json", `request:"mediaType=application/json"`)
@@ -561,7 +561,7 @@ func (s *IncidentsNotes) Delete(ctx context.Context, incidentID string, noteID s
 		BaseURL:          baseURL,
 		Context:          ctx,
 		OperationID:      "Notes_deleteNote",
-		OAuth2Scopes:     []string{},
+		OAuth2Scopes:     nil,
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -1043,7 +1043,7 @@ func (s *IncidentsNotes) Update(ctx context.Context, incidentID string, noteID s
 		BaseURL:          baseURL,
 		Context:          ctx,
 		OperationID:      "Notes_updateNote",
-		OAuth2Scopes:     []string{},
+		OAuth2Scopes:     nil,
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "V3IncidentsNotesUpdateNoteRequest", "json", `request:"mediaType=application/json"`)

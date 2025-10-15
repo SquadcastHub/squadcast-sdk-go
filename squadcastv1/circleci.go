@@ -67,7 +67,7 @@ func (s *Circleci) Rebuild(ctx context.Context, incidentID string, buildNumber s
 		BaseURL:          baseURL,
 		Context:          ctx,
 		OperationID:      "IncidentActions_rebuildAProjectInCircleci",
-		OAuth2Scopes:     []string{},
+		OAuth2Scopes:     nil,
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "V3IncidentsIncidentActionsRebuildCircleCIProjectRequest", "json", `request:"mediaType=application/json"`)

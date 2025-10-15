@@ -66,7 +66,7 @@ func (s *CustomContent) Render(ctx context.Context, serviceID string, v3Services
 		BaseURL:          baseURL,
 		Context:          ctx,
 		OperationID:      "Overlay_renderCustomContentOverlay",
-		OAuth2Scopes:     []string{},
+		OAuth2Scopes:     nil,
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "V3ServicesOverlayRenderCustomContentOverlayRequest", "json", `request:"mediaType=application/json"`)

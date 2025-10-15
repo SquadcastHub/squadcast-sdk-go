@@ -69,7 +69,7 @@ func (s *RulesetsRules) Create(ctx context.Context, gerID int64, alertSourceVers
 		BaseURL:          baseURL,
 		Context:          ctx,
 		OperationID:      "GlobalEventRules_createRule",
-		OAuth2Scopes:     []string{},
+		OAuth2Scopes:     nil,
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "V3GlobalEventRulesCreateOrUpdateRuleRequest", "json", `request:"mediaType=application/json"`)
@@ -564,7 +564,7 @@ func (s *RulesetsRules) GetByID(ctx context.Context, gerID int64, alertSourceVer
 		BaseURL:          baseURL,
 		Context:          ctx,
 		OperationID:      "GlobalEventRules_getRuleById",
-		OAuth2Scopes:     []string{},
+		OAuth2Scopes:     nil,
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 

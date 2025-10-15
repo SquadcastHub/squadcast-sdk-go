@@ -65,7 +65,7 @@ func (s *Components) List(ctx context.Context, statuspageID string, opts ...oper
 		BaseURL:          baseURL,
 		Context:          ctx,
 		OperationID:      "Components_listComponents",
-		OAuth2Scopes:     []string{},
+		OAuth2Scopes:     nil,
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -550,7 +550,7 @@ func (s *Components) Create(ctx context.Context, statuspageID string, v4StatusPa
 		BaseURL:          baseURL,
 		Context:          ctx,
 		OperationID:      "Components_createComponent",
-		OAuth2Scopes:     []string{},
+		OAuth2Scopes:     nil,
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "V4StatusPagesComponentsCreateComponentRequest", "json", `request:"mediaType=application/json"`)
@@ -1042,7 +1042,7 @@ func (s *Components) DeleteByID(ctx context.Context, statuspageID string, compon
 		BaseURL:          baseURL,
 		Context:          ctx,
 		OperationID:      "Components_deleteComponentById",
-		OAuth2Scopes:     []string{},
+		OAuth2Scopes:     nil,
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -1527,7 +1527,7 @@ func (s *Components) GetByID(ctx context.Context, statuspageID string, component
 		BaseURL:          baseURL,
 		Context:          ctx,
 		OperationID:      "Components_getComponentById",
-		OAuth2Scopes:     []string{},
+		OAuth2Scopes:     nil,
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -2013,7 +2013,7 @@ func (s *Components) UpdateByID(ctx context.Context, statuspageID string, compon
 		BaseURL:          baseURL,
 		Context:          ctx,
 		OperationID:      "Components_updateComponentById",
-		OAuth2Scopes:     []string{},
+		OAuth2Scopes:     nil,
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "V4StatusPagesComponentsUpdateComponentByIDRequest", "json", `request:"mediaType=application/json"`)

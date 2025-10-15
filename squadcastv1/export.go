@@ -16,26 +16,6 @@ import (
 	"net/http"
 )
 
-// Incident Export
-// - This endpoint is used to export the incident details into a `csv` or `json` file.
-// - Requires `access_token` as a `Bearer {{token}}` in the `Authorization` header.
-// - Header field/value: `Content-Type`: `text/csv`
-//
-// Query Params:
-//
-// ```
-// type: csv or json
-// start_time: filter by date range
-// end_time: filter by date range
-// services: filter by services
-// sources: filter by alert sources
-// assigned_to: filter by assignee
-// status: filter by incident status
-// slo_affecting: filetr by slo affected
-// slos: filter by slos
-// tags: filter by tags key=value
-//
-//	```
 type Export struct {
 	rootSDK          *SquadcastSDK
 	sdkConfiguration config.SDKConfiguration
@@ -86,7 +66,7 @@ func (s *Export) DeleteIcalLink(ctx context.Context, scheduleID string, myOnCall
 		BaseURL:          baseURL,
 		Context:          ctx,
 		OperationID:      "Export_deleteIcalLink",
-		OAuth2Scopes:     []string{},
+		OAuth2Scopes:     nil,
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 

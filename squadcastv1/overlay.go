@@ -65,7 +65,7 @@ func (s *Overlay) GetKeyBasedDeduplicationOptin(ctx context.Context, serviceID s
 		BaseURL:          baseURL,
 		Context:          ctx,
 		OperationID:      "Overlay_getOptinForKeyBasedDeduplicationForAService",
-		OAuth2Scopes:     []string{},
+		OAuth2Scopes:     nil,
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -550,7 +550,7 @@ func (s *Overlay) OptInForKeyBasedDeduplication(ctx context.Context, serviceID s
 		BaseURL:          baseURL,
 		Context:          ctx,
 		OperationID:      "Overlay_optinForKeyBasedDeduplicationForAService",
-		OAuth2Scopes:     []string{},
+		OAuth2Scopes:     nil,
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "V3ServicesOverlayOptInForKeyBasedDeduplicationRequest", "json", `request:"mediaType=application/json"`)

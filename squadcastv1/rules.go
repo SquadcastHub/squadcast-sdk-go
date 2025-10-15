@@ -62,7 +62,7 @@ func (s *Rules) ReorderByIndex(ctx context.Context, request operations.GlobalEve
 		BaseURL:          baseURL,
 		Context:          ctx,
 		OperationID:      "GlobalEventRules_reorderRulesetByIndex",
-		OAuth2Scopes:     []string{},
+		OAuth2Scopes:     nil,
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "V3GlobalEventRulesReorderRuleRequest", "json", `request:"mediaType=application/json"`)

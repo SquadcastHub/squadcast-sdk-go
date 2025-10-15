@@ -65,7 +65,7 @@ func (s *Subscribers) List(ctx context.Context, statuspageID string, opts ...ope
 		BaseURL:          baseURL,
 		Context:          ctx,
 		OperationID:      "StatusPages_listSubscribers",
-		OAuth2Scopes:     []string{},
+		OAuth2Scopes:     nil,
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
