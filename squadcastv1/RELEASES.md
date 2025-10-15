@@ -20,7 +20,7 @@ Based on:
 ### Releases
 - [Go v1.1.7] https://github.com/SquadcastHub/squadcast-sdk-go/releases/tag/squadcastv1/v1.1.7 - squadcastv1
 
-## 2025-10-14 00:31:46
+## 2025-10-15 00:33:40
 ### Changes
 Based on:
 - OpenAPI Doc  
