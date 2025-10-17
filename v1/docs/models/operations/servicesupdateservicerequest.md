@@ -1,0 +1,9 @@
+# ServicesUpdateServiceRequest
+
+
+## Fields
+
+| Field                                                                                                  | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
+| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
+| `ServiceID`                                                                                            | *string*                                                                                               | :heavy_check_mark:                                                                                     | N/A                                                                                                    |
+| `V3ServicesUpdateServiceRequest`                                                                       | [components.V3ServicesUpdateServiceRequest](../../models/components/v3servicesupdateservicerequest.md) | :heavy_check_mark:                                                                                     | N/A                                                                                                    |

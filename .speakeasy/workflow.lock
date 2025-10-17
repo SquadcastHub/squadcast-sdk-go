@@ -1,4 +1,4 @@
-speakeasyVersion: 1.636.3
+speakeasyVersion: 1.637.0
 sources:
     Squadcast:
         sourceNamespace: squadcast
@@ -6,7 +6,7 @@ sources:
         sourceBlobDigest: sha256:b7b9a264673f05aba36bae15175865d3e0ca033d09c587bb8b5b0bc845cdd584
         tags:
             - latest
-            - speakeasy-sdk-regen-1760401923
+            - speakeasy-sdk-regen-staging-1760682139
             - 1.0.0
 targets:
     squadcast-sdk:
@@ -15,7 +15,7 @@ targets:
         sourceRevisionDigest: sha256:8e9774505213cbee0a6308bdf24ca882723fd66bd1350be0d33c9b7c72905862
         sourceBlobDigest: sha256:b7b9a264673f05aba36bae15175865d3e0ca033d09c587bb8b5b0bc845cdd584
         codeSamplesNamespace: squadcast-go-code-samples
-        codeSamplesRevisionDigest: sha256:056e2bc84adf9adc2c4aebb9fdd1db67327931e2c6f6c13371a290ce7b9d8f3f
+        codeSamplesRevisionDigest: sha256:d9a648f710dc1b89d0531f4db65910a59aba9149913ff2f03292ffd49818bb24
 workflow:
     workflowVersion: 1.0.0
     speakeasyVersion: latest
@@ -34,7 +34,7 @@ workflow:
         squadcast-sdk:
             target: go
             source: Squadcast
-            output: squadcastv1
+            output: v1
             codeSamples:
                 registry:
                     location: registry.speakeasyapi.dev/swo/incident-response/squadcast-go-code-samples

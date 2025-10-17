@@ -1,0 +1,10 @@
+# SLOMarkSLOAffectedRequest
+
+
+## Fields
+
+| Field                                                                                            | Type                                                                                             | Required                                                                                         | Description                                                                                      |
+| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
+| `SloID`                                                                                          | *int64*                                                                                          | :heavy_check_mark:                                                                               | N/A                                                                                              |
+| `OwnerID`                                                                                        | *string*                                                                                         | :heavy_check_mark:                                                                               | N/A                                                                                              |
+| `V3SLOMarkSLOAffectedRequest`                                                                    | [components.V3SLOMarkSLOAffectedRequest](../../models/components/v3slomarksloaffectedrequest.md) | :heavy_check_mark:                                                                               | N/A                                                                                              |

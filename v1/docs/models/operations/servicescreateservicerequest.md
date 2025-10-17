@@ -1,0 +1,9 @@
+# ServicesCreateServiceRequest
+
+
+## Fields
+
+| Field                                                                                                  | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
+| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
+| `OwnerID`                                                                                              | *string*                                                                                               | :heavy_check_mark:                                                                                     | N/A                                                                                                    |
+| `V3ServicesCreateServiceRequest`                                                                       | [components.V3ServicesCreateServiceRequest](../../models/components/v3servicescreateservicerequest.md) | :heavy_check_mark:                                                                                     | N/A                                                                                                    |

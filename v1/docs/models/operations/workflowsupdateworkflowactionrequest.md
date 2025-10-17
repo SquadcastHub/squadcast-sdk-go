@@ -1,0 +1,10 @@
+# WorkflowsUpdateWorkflowActionRequest
+
+
+## Fields
+
+| Field                                                                                                  | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
+| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
+| `WorkflowID`                                                                                           | *string*                                                                                               | :heavy_check_mark:                                                                                     | N/A                                                                                                    |
+| `ActionID`                                                                                             | *string*                                                                                               | :heavy_check_mark:                                                                                     | N/A                                                                                                    |
+| `V3WorkflowsActionRequestUpdate`                                                                       | [components.V3WorkflowsActionRequestUpdate](../../models/components/v3workflowsactionrequestupdate.md) | :heavy_check_mark:                                                                                     | N/A                                                                                                    |

@@ -1,0 +1,9 @@
+# TagsUpdateTagRequest
+
+
+## Fields
+
+| Field                                                                                                    | Type                                                                                                     | Required                                                                                                 | Description                                                                                              |
+| -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
+| `IncidentID`                                                                                             | *string*                                                                                                 | :heavy_check_mark:                                                                                       | N/A                                                                                                      |
+| `V3IncidentsTagsUpdateTagRequest`                                                                        | [components.V3IncidentsTagsUpdateTagRequest](../../models/components/v3incidentstagsupdatetagrequest.md) | :heavy_check_mark:                                                                                       | N/A                                                                                                      |

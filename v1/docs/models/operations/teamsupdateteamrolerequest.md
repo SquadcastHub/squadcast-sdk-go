@@ -1,0 +1,10 @@
+# TeamsUpdateTeamRoleRequest
+
+
+## Fields
+
+| Field                                                                                              | Type                                                                                               | Required                                                                                           | Description                                                                                        |
+| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
+| `TeamID`                                                                                           | *string*                                                                                           | :heavy_check_mark:                                                                                 | N/A                                                                                                |
+| `RoleID`                                                                                           | *string*                                                                                           | :heavy_check_mark:                                                                                 | N/A                                                                                                |
+| `V3TeamsUpdateTeamRoleRequest`                                                                     | [components.V3TeamsUpdateTeamRoleRequest](../../models/components/v3teamsupdateteamrolerequest.md) | :heavy_check_mark:                                                                                 | N/A                                                                                                |

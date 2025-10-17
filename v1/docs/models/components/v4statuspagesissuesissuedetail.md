@@ -1,0 +1,9 @@
+# V4StatusPagesIssuesIssueDetail
+
+
+## Fields
+
+| Field                                                                                                                | Type                                                                                                                 | Required                                                                                                             | Description                                                                                                          |
+| -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- |
+| `State`                                                                                                              | [*components.V4StatusPagesIssuesComponentStatus](../../models/components/v4statuspagesissuescomponentstatus.md)      | :heavy_minus_sign:                                                                                                   | N/A                                                                                                                  |
+| `StateMessages`                                                                                                      | [][components.V4StatusPagesIssuesIssueStateMessage](../../models/components/v4statuspagesissuesissuestatemessage.md) | :heavy_minus_sign:                                                                                                   | N/A                                                                                                                  |

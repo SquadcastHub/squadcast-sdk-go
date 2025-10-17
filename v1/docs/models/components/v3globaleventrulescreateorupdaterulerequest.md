@@ -1,0 +1,10 @@
+# V3GlobalEventRulesCreateOrUpdateRuleRequest
+
+
+## Fields
+
+| Field                                                                                              | Type                                                                                               | Required                                                                                           | Description                                                                                        |
+| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
+| `Description`                                                                                      | *string*                                                                                           | :heavy_check_mark:                                                                                 | N/A                                                                                                |
+| `Expression`                                                                                       | *string*                                                                                           | :heavy_check_mark:                                                                                 | N/A                                                                                                |
+| `Action`                                                                                           | [components.V3GlobalEventRulesRuleAction](../../models/components/v3globaleventrulesruleaction.md) | :heavy_check_mark:                                                                                 | N/A                                                                                                |

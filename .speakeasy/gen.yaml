@@ -23,6 +23,8 @@ generation:
     hoistGlobalSecurity: true
   inferSSEOverload: true
   sdkHooksConfigAccess: true
+  schemas:
+    allOfMergeStrategy: shallowMerge
   tests:
     generateTests: false
     generateNewTests: true

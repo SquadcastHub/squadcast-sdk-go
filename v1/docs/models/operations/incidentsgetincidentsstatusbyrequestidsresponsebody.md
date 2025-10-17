@@ -1,0 +1,11 @@
+# IncidentsGetIncidentsStatusByRequestidsResponseBody
+
+The request has succeeded.
+
+
+## Fields
+
+| Field                                                                                                                            | Type                                                                                                                             | Required                                                                                                                         | Description                                                                                                                      |
+| -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- |
+| `RequestsStatus`                                                                                                                 | [operations.RequestsStatus](../../models/operations/requestsstatus.md)                                                           | :heavy_check_mark:                                                                                                               | N/A                                                                                                                              |
+| `Meta`                                                                                                                           | [operations.IncidentsGetIncidentsStatusByRequestidsMeta](../../models/operations/incidentsgetincidentsstatusbyrequestidsmeta.md) | :heavy_check_mark:                                                                                                               | N/A                                                                                                                              |

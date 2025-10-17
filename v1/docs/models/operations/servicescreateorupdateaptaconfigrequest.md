@@ -1,0 +1,9 @@
+# ServicesCreateOrUpdateAPTAConfigRequest
+
+
+## Fields
+
+| Field                                                                                            | Type                                                                                             | Required                                                                                         | Description                                                                                      |
+| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
+| `ServiceID`                                                                                      | *string*                                                                                         | :heavy_check_mark:                                                                               | N/A                                                                                              |
+| `V3ServicesAPTAConfigRequest`                                                                    | [components.V3ServicesAPTAConfigRequest](../../models/components/v3servicesaptaconfigrequest.md) | :heavy_check_mark:                                                                               | N/A                                                                                              |

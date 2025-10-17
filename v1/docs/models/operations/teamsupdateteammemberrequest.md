@@ -1,0 +1,10 @@
+# TeamsUpdateTeamMemberRequest
+
+
+## Fields
+
+| Field                                                                                                  | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
+| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
+| `TeamID`                                                                                               | *string*                                                                                               | :heavy_check_mark:                                                                                     | N/A                                                                                                    |
+| `MemberID`                                                                                             | *string*                                                                                               | :heavy_check_mark:                                                                                     | N/A                                                                                                    |
+| `V3TeamsUpdateTeamMemberRequest`                                                                       | [components.V3TeamsUpdateTeamMemberRequest](../../models/components/v3teamsupdateteammemberrequest.md) | :heavy_check_mark:                                                                                     | N/A                                                                                                    |
