@@ -1,0 +1,9 @@
+# V3WorkflowsMsTeamsMessageUser
+
+
+## Fields
+
+| Field                                                                                                        | Type                                                                                                         | Required                                                                                                     | Description                                                                                                  |
+| ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ |
+| `Name`                                                                                                       | [components.V3WorkflowsMsTeamsMessageUserName](../../models/components/v3workflowsmsteamsmessageusername.md) | :heavy_check_mark:                                                                                           | N/A                                                                                                          |
+| `Data`                                                                                                       | [components.V3WorkflowsMsTeamsMessageUserData](../../models/components/v3workflowsmsteamsmessageuserdata.md) | :heavy_check_mark:                                                                                           | N/A                                                                                                          |
