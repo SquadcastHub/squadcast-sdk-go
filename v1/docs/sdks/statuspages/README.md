@@ -40,12 +40,24 @@ func main() {
         squadcastsdk.WithSecurity(os.Getenv("SQUADCASTSDK_BEARER_AUTH")),
     )
 
-    res, err := s.StatusPages.List(ctx, "<value>", "<value>", "<value>", "<id>")
+    res, err := s.StatusPages.List(ctx, 301790, 172386, "<value>", "<id>")
     if err != nil {
         log.Fatal(err)
     }
     if res.V4StatusPagesListStatusPagesResponse != nil {
-        // handle response
+        for {
+            // handle items
+
+            res, err = res.Next()
+
+            if err != nil {
+                // handle error
+            }
+
+            if res == nil {
+                break
+            }
+        }
     }
 }
 ```
@@ -55,8 +67,8 @@ func main() {
 | Parameter                                                | Type                                                     | Required                                                 | Description                                              |
 | -------------------------------------------------------- | -------------------------------------------------------- | -------------------------------------------------------- | -------------------------------------------------------- |
 | `ctx`                                                    | [context.Context](https://pkg.go.dev/context#Context)    | :heavy_check_mark:                                       | The context to use for the request.                      |
-| `pageSize`                                               | *string*                                                 | :heavy_check_mark:                                       | N/A                                                      |
-| `pageNumber`                                             | *string*                                                 | :heavy_check_mark:                                       | N/A                                                      |
+| `pageSize`                                               | *int64*                                                  | :heavy_check_mark:                                       | N/A                                                      |
+| `pageNumber`                                             | *int64*                                                  | :heavy_check_mark:                                       | N/A                                                      |
 | `filtersIsPublic`                                        | *string*                                                 | :heavy_check_mark:                                       | N/A                                                      |
 | `teamID`                                                 | *string*                                                 | :heavy_check_mark:                                       | N/A                                                      |
 | `opts`                                                   | [][operations.Option](../../models/operations/option.md) | :heavy_minus_sign:                                       | The options for this request.                            |

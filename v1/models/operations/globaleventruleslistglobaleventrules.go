@@ -8,8 +8,8 @@ import (
 
 type GlobalEventRulesListGlobalEventRulesRequest struct {
 	OwnerID        string   `queryParam:"style=form,explode=true,name=owner_id"`
-	PageSize       *string  `queryParam:"style=form,explode=true,name=page_size"`
-	PageNumber     *string  `queryParam:"style=form,explode=true,name=page_number"`
+	PageSize       *int64   `queryParam:"style=form,explode=true,name=page_size"`
+	PageNumber     *int64   `queryParam:"style=form,explode=true,name=page_number"`
 	FiltersOwnerID []string `queryParam:"style=form,explode=true,name=filters.owner_id[]"`
 	FiltersSearch  *string  `queryParam:"style=form,explode=true,name=filters.search"`
 }
@@ -21,14 +21,14 @@ func (g *GlobalEventRulesListGlobalEventRulesRequest) GetOwnerID() string {
 	return g.OwnerID
 }
 
-func (g *GlobalEventRulesListGlobalEventRulesRequest) GetPageSize() *string {
+func (g *GlobalEventRulesListGlobalEventRulesRequest) GetPageSize() *int64 {
 	if g == nil {
 		return nil
 	}
 	return g.PageSize
 }
 
-func (g *GlobalEventRulesListGlobalEventRulesRequest) GetPageNumber() *string {
+func (g *GlobalEventRulesListGlobalEventRulesRequest) GetPageNumber() *int64 {
 	if g == nil {
 		return nil
 	}
@@ -84,6 +84,8 @@ type GlobalEventRulesListGlobalEventRulesResponse struct {
 	HTTPMeta components.HTTPMetadata `json:"-"`
 	// The request has succeeded.
 	Object *GlobalEventRulesListGlobalEventRulesResponseBody
+
+	Next func() (*GlobalEventRulesListGlobalEventRulesResponse, error)
 }
 
 func (g *GlobalEventRulesListGlobalEventRulesResponse) GetHTTPMeta() components.HTTPMetadata {
