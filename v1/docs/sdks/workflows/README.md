@@ -50,7 +50,19 @@ func main() {
         log.Fatal(err)
     }
     if res.V3WorkflowsListWorkflowAPIResponse != nil {
-        // handle response
+        for {
+            // handle items
+
+            res, err = res.Next()
+
+            if err != nil {
+                // handle error
+            }
+
+            if res == nil {
+                break
+            }
+        }
     }
 }
 ```
@@ -781,7 +793,19 @@ func main() {
         log.Fatal(err)
     }
     if res.V3WorkflowsGetWorkflowLogsResponse != nil {
-        // handle response
+        for {
+            // handle items
+
+            res, err = res.Next()
+
+            if err != nil {
+                // handle error
+            }
+
+            if res == nil {
+                break
+            }
+        }
     }
 }
 ```
@@ -792,8 +816,8 @@ func main() {
 | -------------------------------------------------------- | -------------------------------------------------------- | -------------------------------------------------------- | -------------------------------------------------------- |
 | `ctx`                                                    | [context.Context](https://pkg.go.dev/context#Context)    | :heavy_check_mark:                                       | The context to use for the request.                      |
 | `workflowID`                                             | *string*                                                 | :heavy_check_mark:                                       | N/A                                                      |
-| `pageSize`                                               | **string*                                                | :heavy_minus_sign:                                       | N/A                                                      |
-| `pageNumber`                                             | **string*                                                | :heavy_minus_sign:                                       | N/A                                                      |
+| `pageSize`                                               | **int64*                                                 | :heavy_minus_sign:                                       | N/A                                                      |
+| `pageNumber`                                             | **int64*                                                 | :heavy_minus_sign:                                       | N/A                                                      |
 | `opts`                                                   | [][operations.Option](../../models/operations/option.md) | :heavy_minus_sign:                                       | The options for this request.                            |
 
 ### Response

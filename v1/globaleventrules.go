@@ -13,6 +13,7 @@ import (
 	"github.com/SquadcastHub/squadcast-sdk-go/v1/models/components"
 	"github.com/SquadcastHub/squadcast-sdk-go/v1/models/operations"
 	"github.com/SquadcastHub/squadcast-sdk-go/v1/retry"
+	"github.com/spyzhov/ajson"
 	"net/http"
 	"net/url"
 )
@@ -198,6 +199,56 @@ func (s *GlobalEventRules) List(ctx context.Context, request operations.GlobalEv
 			Request:  req,
 			Response: httpRes,
 		},
+	}
+	res.Next = func() (*operations.GlobalEventRulesListGlobalEventRulesResponse, error) {
+		rawBody, err := utils.ConsumeRawBody(httpRes)
+		if err != nil {
+			return nil, err
+		}
+
+		b, err := ajson.Unmarshal(rawBody)
+		if err != nil {
+			return nil, err
+		}
+		var p int64 = 1
+		if request.PageNumber != nil {
+			p = *request.PageNumber
+		}
+		nP := int64(p + 1)
+		r, err := ajson.Eval(b, "$.data")
+		if err != nil {
+			return nil, err
+		}
+		if !r.IsArray() {
+			return nil, nil
+		}
+		arr, err := r.GetArray()
+		if err != nil {
+			return nil, err
+		}
+		if len(arr) == 0 {
+			return nil, nil
+		}
+
+		l := 0
+		if request.PageSize != nil {
+			l = int(*request.PageSize)
+		}
+		if len(arr) < l {
+			return nil, nil
+		}
+
+		return s.List(
+			ctx,
+			operations.GlobalEventRulesListGlobalEventRulesRequest{
+				OwnerID:        request.OwnerID,
+				PageSize:       request.PageSize,
+				PageNumber:     &nP,
+				FiltersOwnerID: request.FiltersOwnerID,
+				FiltersSearch:  request.FiltersSearch,
+			},
+			opts...,
+		)
 	}
 
 	switch {
