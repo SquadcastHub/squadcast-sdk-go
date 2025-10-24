@@ -3,7 +3,7 @@
 package operations
 
 import (
-	"github.com/SquadcastHub/squadcast-sdk-go/v1/models/components"
+	"github.com/SquadcastHub/squadcast-sdk-go/models/components"
 )
 
 // UsersAddUserResponseBody - The request has succeeded and a new resource has been created as a result.

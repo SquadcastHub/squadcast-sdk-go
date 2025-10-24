@@ -14,7 +14,7 @@ import (
 	"time"
 	"unsafe"
 
-	"github.com/SquadcastHub/squadcast-sdk-go/v1/types"
+	"github.com/SquadcastHub/squadcast-sdk-go/types"
 )
 
 func MarshalJSON(v interface{}, tag reflect.StructTag, topLevel bool) ([]byte, error) {

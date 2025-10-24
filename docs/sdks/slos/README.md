@@ -27,7 +27,7 @@ package main
 import(
 	"context"
 	"os"
-	squadcastsdk "github.com/SquadcastHub/squadcast-sdk-go/v1"
+	squadcastsdk "github.com/SquadcastHub/squadcast-sdk-go"
 	"log"
 )
 
@@ -93,9 +93,9 @@ package main
 import(
 	"context"
 	"os"
-	squadcastsdk "github.com/SquadcastHub/squadcast-sdk-go/v1"
-	"github.com/SquadcastHub/squadcast-sdk-go/v1/models/components"
-	"github.com/SquadcastHub/squadcast-sdk-go/v1/types"
+	squadcastsdk "github.com/SquadcastHub/squadcast-sdk-go"
+	"github.com/SquadcastHub/squadcast-sdk-go/models/components"
+	"github.com/SquadcastHub/squadcast-sdk-go/types"
 	"log"
 )
 
@@ -174,9 +174,9 @@ package main
 import(
 	"context"
 	"os"
-	squadcastsdk "github.com/SquadcastHub/squadcast-sdk-go/v1"
-	"github.com/SquadcastHub/squadcast-sdk-go/v1/models/components"
-	"github.com/SquadcastHub/squadcast-sdk-go/v1/types"
+	squadcastsdk "github.com/SquadcastHub/squadcast-sdk-go"
+	"github.com/SquadcastHub/squadcast-sdk-go/models/components"
+	"github.com/SquadcastHub/squadcast-sdk-go/types"
 	"log"
 )
 
@@ -261,7 +261,7 @@ package main
 import(
 	"context"
 	"os"
-	squadcastsdk "github.com/SquadcastHub/squadcast-sdk-go/v1"
+	squadcastsdk "github.com/SquadcastHub/squadcast-sdk-go"
 	"log"
 )
 
@@ -326,7 +326,7 @@ package main
 import(
 	"context"
 	"os"
-	squadcastsdk "github.com/SquadcastHub/squadcast-sdk-go/v1"
+	squadcastsdk "github.com/SquadcastHub/squadcast-sdk-go"
 	"log"
 )
 
@@ -392,8 +392,8 @@ package main
 import(
 	"context"
 	"os"
-	squadcastsdk "github.com/SquadcastHub/squadcast-sdk-go/v1"
-	"github.com/SquadcastHub/squadcast-sdk-go/v1/models/components"
+	squadcastsdk "github.com/SquadcastHub/squadcast-sdk-go"
+	"github.com/SquadcastHub/squadcast-sdk-go/models/components"
 	"log"
 )
 
@@ -468,8 +468,8 @@ package main
 import(
 	"context"
 	"os"
-	squadcastsdk "github.com/SquadcastHub/squadcast-sdk-go/v1"
-	"github.com/SquadcastHub/squadcast-sdk-go/v1/models/operations"
+	squadcastsdk "github.com/SquadcastHub/squadcast-sdk-go"
+	"github.com/SquadcastHub/squadcast-sdk-go/models/operations"
 	"log"
 )
 

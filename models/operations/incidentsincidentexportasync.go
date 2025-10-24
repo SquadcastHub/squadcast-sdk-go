@@ -3,7 +3,7 @@
 package operations
 
 import (
-	"github.com/SquadcastHub/squadcast-sdk-go/v1/models/components"
+	"github.com/SquadcastHub/squadcast-sdk-go/models/components"
 )
 
 // IncidentsIncidentExportAsyncBody - The body type of the operation request or response.

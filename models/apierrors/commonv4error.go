@@ -4,7 +4,7 @@ package apierrors
 
 import (
 	"encoding/json"
-	"github.com/SquadcastHub/squadcast-sdk-go/v1/models/components"
+	"github.com/SquadcastHub/squadcast-sdk-go/models/components"
 )
 
 type CommonV4Error struct {

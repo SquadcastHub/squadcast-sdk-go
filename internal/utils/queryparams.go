@@ -12,8 +12,8 @@ import (
 	"reflect"
 	"time"
 
-	"github.com/SquadcastHub/squadcast-sdk-go/v1/optionalnullable"
-	"github.com/SquadcastHub/squadcast-sdk-go/v1/types"
+	"github.com/SquadcastHub/squadcast-sdk-go/optionalnullable"
+	"github.com/SquadcastHub/squadcast-sdk-go/types"
 )
 
 func PopulateQueryParams(_ context.Context, req *http.Request, queryParams interface{}, globals interface{}) error {

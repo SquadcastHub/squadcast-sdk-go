@@ -53,7 +53,7 @@ Developer-friendly & type-safe Go SDK specifically catered to leverage *squadcas
 
 To add the SDK as a dependency to your project:
 ```bash
-go get github.com/SquadcastHub/squadcast-sdk-go/v1
+go get github.com/SquadcastHub/squadcast-sdk-go
 ```
 <!-- End SDK Installation [installation] -->
 
@@ -67,7 +67,7 @@ package main
 
 import (
 	"context"
-	squadcastsdk "github.com/SquadcastHub/squadcast-sdk-go/v1"
+	squadcastsdk "github.com/SquadcastHub/squadcast-sdk-go"
 	"log"
 	"os"
 )
@@ -108,7 +108,7 @@ package main
 
 import (
 	"context"
-	squadcastsdk "github.com/SquadcastHub/squadcast-sdk-go/v1"
+	squadcastsdk "github.com/SquadcastHub/squadcast-sdk-go"
 	"log"
 	"os"
 )
@@ -583,7 +583,7 @@ package main
 
 import (
 	"context"
-	squadcastsdk "github.com/SquadcastHub/squadcast-sdk-go/v1"
+	squadcastsdk "github.com/SquadcastHub/squadcast-sdk-go"
 	"log"
 	"os"
 )
@@ -630,8 +630,8 @@ package main
 
 import (
 	"context"
-	squadcastsdk "github.com/SquadcastHub/squadcast-sdk-go/v1"
-	"github.com/SquadcastHub/squadcast-sdk-go/v1/retry"
+	squadcastsdk "github.com/SquadcastHub/squadcast-sdk-go"
+	"github.com/SquadcastHub/squadcast-sdk-go/retry"
 	"log"
 	"models/operations"
 	"os"
@@ -671,8 +671,8 @@ package main
 
 import (
 	"context"
-	squadcastsdk "github.com/SquadcastHub/squadcast-sdk-go/v1"
-	"github.com/SquadcastHub/squadcast-sdk-go/v1/retry"
+	squadcastsdk "github.com/SquadcastHub/squadcast-sdk-go"
+	"github.com/SquadcastHub/squadcast-sdk-go/retry"
 	"log"
 	"os"
 )
@@ -739,8 +739,8 @@ package main
 import (
 	"context"
 	"errors"
-	squadcastsdk "github.com/SquadcastHub/squadcast-sdk-go/v1"
-	"github.com/SquadcastHub/squadcast-sdk-go/v1/models/apierrors"
+	squadcastsdk "github.com/SquadcastHub/squadcast-sdk-go"
+	"github.com/SquadcastHub/squadcast-sdk-go/models/apierrors"
 	"log"
 	"os"
 )
@@ -843,7 +843,7 @@ package main
 
 import (
 	"context"
-	squadcastsdk "github.com/SquadcastHub/squadcast-sdk-go/v1"
+	squadcastsdk "github.com/SquadcastHub/squadcast-sdk-go"
 	"log"
 	"os"
 )
@@ -886,7 +886,7 @@ import (
 	"net/http"
 	"time"
 
-	"github.com/SquadcastHub/squadcast-sdk-go/v1"
+	"github.com/SquadcastHub/squadcast-sdk-go"
 )
 
 var (

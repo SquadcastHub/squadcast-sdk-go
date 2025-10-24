@@ -23,7 +23,7 @@ package main
 import(
 	"context"
 	"os"
-	squadcastsdk "github.com/SquadcastHub/squadcast-sdk-go/v1"
+	squadcastsdk "github.com/SquadcastHub/squadcast-sdk-go"
 	"log"
 )
 
@@ -86,7 +86,7 @@ package main
 import(
 	"context"
 	"os"
-	squadcastsdk "github.com/SquadcastHub/squadcast-sdk-go/v1"
+	squadcastsdk "github.com/SquadcastHub/squadcast-sdk-go"
 	"log"
 )
 
@@ -149,8 +149,8 @@ package main
 import(
 	"context"
 	"os"
-	squadcastsdk "github.com/SquadcastHub/squadcast-sdk-go/v1"
-	"github.com/SquadcastHub/squadcast-sdk-go/v1/models/components"
+	squadcastsdk "github.com/SquadcastHub/squadcast-sdk-go"
+	"github.com/SquadcastHub/squadcast-sdk-go/models/components"
 	"log"
 )
 
@@ -217,8 +217,8 @@ package main
 import(
 	"context"
 	"os"
-	squadcastsdk "github.com/SquadcastHub/squadcast-sdk-go/v1"
-	"github.com/SquadcastHub/squadcast-sdk-go/v1/models/components"
+	squadcastsdk "github.com/SquadcastHub/squadcast-sdk-go"
+	"github.com/SquadcastHub/squadcast-sdk-go/models/components"
 	"log"
 )
 
