@@ -6,7 +6,7 @@ import (
 	"context"
 	"errors"
 	"fmt"
-	"github.com/SquadcastHub/squadcast-sdk-go/v1/retry"
+	"github.com/SquadcastHub/squadcast-sdk-go/retry"
 	"io"
 	"math"
 	"math/rand"

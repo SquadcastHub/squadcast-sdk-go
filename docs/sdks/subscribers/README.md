@@ -20,7 +20,7 @@ package main
 import(
 	"context"
 	"os"
-	squadcastsdk "github.com/SquadcastHub/squadcast-sdk-go/v1"
+	squadcastsdk "github.com/SquadcastHub/squadcast-sdk-go"
 	"log"
 )
 

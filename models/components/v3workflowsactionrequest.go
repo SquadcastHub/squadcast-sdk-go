@@ -6,7 +6,7 @@ import (
 	"encoding/json"
 	"errors"
 	"fmt"
-	"github.com/SquadcastHub/squadcast-sdk-go/v1/internal/utils"
+	"github.com/SquadcastHub/squadcast-sdk-go/internal/utils"
 )
 
 type V3WorkflowsActionRequestName string

@@ -4,7 +4,7 @@ package config
 
 import (
 	"context"
-	"github.com/SquadcastHub/squadcast-sdk-go/v1/retry"
+	"github.com/SquadcastHub/squadcast-sdk-go/retry"
 	"net/http"
 	"time"
 )

@@ -3,7 +3,7 @@
 package components
 
 import (
-	"github.com/SquadcastHub/squadcast-sdk-go/v1/internal/utils"
+	"github.com/SquadcastHub/squadcast-sdk-go/internal/utils"
 )
 
 // V3IncidentsIncidentActionsCircleCIErrorMeta - Represents the metadata for a CircleCI error response.
