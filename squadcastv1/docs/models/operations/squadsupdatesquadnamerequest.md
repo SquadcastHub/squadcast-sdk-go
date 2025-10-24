@@ -1,9 +1,0 @@
-# SquadsUpdateSquadNameRequest
-
-
-## Fields
-
-| Field                                                                                                  | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
-| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
-| `SquadID`                                                                                              | *string*                                                                                               | :heavy_check_mark:                                                                                     | N/A                                                                                                    |
-| `V4SquadsUpdateSquadNameRequest`                                                                       | [components.V4SquadsUpdateSquadNameRequest](../../models/components/v4squadsupdatesquadnamerequest.md) | :heavy_check_mark:                                                                                     | N/A                                                                                                    |

@@ -1,9 +1,0 @@
-# TeamsGetAllTeamsResponse
-
-
-## Fields
-
-| Field                                                                                               | Type                                                                                                | Required                                                                                            | Description                                                                                         |
-| --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- |
-| `HTTPMeta`                                                                                          | [components.HTTPMetadata](../../models/components/httpmetadata.md)                                  | :heavy_check_mark:                                                                                  | N/A                                                                                                 |
-| `Object`                                                                                            | [*operations.TeamsGetAllTeamsResponseBody](../../models/operations/teamsgetallteamsresponsebody.md) | :heavy_minus_sign:                                                                                  | The request has succeeded.                                                                          |

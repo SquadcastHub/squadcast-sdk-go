@@ -1,9 +1,0 @@
-# WorkflowsUpdateActionsOrderRequest
-
-
-## Fields
-
-| Field                                                                                                              | Type                                                                                                               | Required                                                                                                           | Description                                                                                                        |
-| ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ |
-| `WorkflowID`                                                                                                       | *string*                                                                                                           | :heavy_check_mark:                                                                                                 | N/A                                                                                                                |
-| `V3WorkflowsUpdateActionsOrderRequest`                                                                             | [components.V3WorkflowsUpdateActionsOrderRequest](../../models/components/v3workflowsupdateactionsorderrequest.md) | :heavy_check_mark:                                                                                                 | N/A                                                                                                                |

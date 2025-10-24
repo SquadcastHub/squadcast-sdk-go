@@ -1,9 +1,0 @@
-# V3WorkflowsSqMakeHTTPCallUpdate
-
-
-## Fields
-
-| Field                                                                                                             | Type                                                                                                              | Required                                                                                                          | Description                                                                                                       |
-| ----------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- |
-| `Name`                                                                                                            | [components.V3WorkflowsSqMakeHTTPCallUpdateName](../../models/components/v3workflowssqmakehttpcallupdatename.md)  | :heavy_check_mark:                                                                                                | N/A                                                                                                               |
-| `Data`                                                                                                            | [*components.V3WorkflowsSqMakeHTTPCallUpdateData](../../models/components/v3workflowssqmakehttpcallupdatedata.md) | :heavy_minus_sign:                                                                                                | N/A                                                                                                               |

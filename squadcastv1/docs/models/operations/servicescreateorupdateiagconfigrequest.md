@@ -1,9 +1,0 @@
-# ServicesCreateOrUpdateIAGConfigRequest
-
-
-## Fields
-
-| Field                                                                                          | Type                                                                                           | Required                                                                                       | Description                                                                                    |
-| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
-| `ServiceID`                                                                                    | *string*                                                                                       | :heavy_check_mark:                                                                             | N/A                                                                                            |
-| `V3ServicesIAGConfigRequest`                                                                   | [components.V3ServicesIAGConfigRequest](../../models/components/v3servicesiagconfigrequest.md) | :heavy_check_mark:                                                                             | N/A                                                                                            |

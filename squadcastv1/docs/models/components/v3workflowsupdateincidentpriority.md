@@ -1,9 +1,0 @@
-# V3WorkflowsUpdateIncidentPriority
-
-
-## Fields
-
-| Field                                                                                                                | Type                                                                                                                 | Required                                                                                                             | Description                                                                                                          |
-| -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- |
-| `Name`                                                                                                               | [components.V3WorkflowsUpdateIncidentPriorityName](../../models/components/v3workflowsupdateincidentpriorityname.md) | :heavy_check_mark:                                                                                                   | N/A                                                                                                                  |
-| `Data`                                                                                                               | [components.V3WorkflowsUpdateIncidentPriorityData](../../models/components/v3workflowsupdateincidentprioritydata.md) | :heavy_check_mark:                                                                                                   | N/A                                                                                                                  |

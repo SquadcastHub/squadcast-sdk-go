@@ -1,9 +1,0 @@
-# TeamsCreateTeamResponse
-
-
-## Fields
-
-| Field                                                                                             | Type                                                                                              | Required                                                                                          | Description                                                                                       |
-| ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- |
-| `HTTPMeta`                                                                                        | [components.HTTPMetadata](../../models/components/httpmetadata.md)                                | :heavy_check_mark:                                                                                | N/A                                                                                               |
-| `Object`                                                                                          | [*operations.TeamsCreateTeamResponseBody](../../models/operations/teamscreateteamresponsebody.md) | :heavy_minus_sign:                                                                                | The request has succeeded and a new resource has been created as a result.                        |

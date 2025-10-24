@@ -1,9 +1,0 @@
-# SquadsRemoveSquadMemberResponse
-
-
-## Fields
-
-| Field                                                                                                         | Type                                                                                                          | Required                                                                                                      | Description                                                                                                   |
-| ------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- |
-| `HTTPMeta`                                                                                                    | [components.HTTPMetadata](../../models/components/httpmetadata.md)                                            | :heavy_check_mark:                                                                                            | N/A                                                                                                           |
-| `V4SquadsRemoveSquadMemberResponse`                                                                           | [*components.V4SquadsRemoveSquadMemberResponse](../../models/components/v4squadsremovesquadmemberresponse.md) | :heavy_minus_sign:                                                                                            | The request has succeeded.                                                                                    |

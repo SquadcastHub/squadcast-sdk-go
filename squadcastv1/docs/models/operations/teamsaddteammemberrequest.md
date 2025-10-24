@@ -1,9 +1,0 @@
-# TeamsAddTeamMemberRequest
-
-
-## Fields
-
-| Field                                                                                            | Type                                                                                             | Required                                                                                         | Description                                                                                      |
-| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
-| `TeamID`                                                                                         | *string*                                                                                         | :heavy_check_mark:                                                                               | N/A                                                                                              |
-| `V3TeamsAddTeamMemberRequest`                                                                    | [components.V3TeamsAddTeamMemberRequest](../../models/components/v3teamsaddteammemberrequest.md) | :heavy_check_mark:                                                                               | N/A                                                                                              |
