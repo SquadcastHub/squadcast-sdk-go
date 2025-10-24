@@ -1,9 +1,0 @@
-# IncidentsResolveIncidentRequest
-
-
-## Fields
-
-| Field                                                                                                        | Type                                                                                                         | Required                                                                                                     | Description                                                                                                  |
-| ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ |
-| `IncidentID`                                                                                                 | *string*                                                                                                     | :heavy_check_mark:                                                                                           | N/A                                                                                                          |
-| `V3IncidentsResolveIncidentRequest`                                                                          | [components.V3IncidentsResolveIncidentRequest](../../models/components/v3incidentsresolveincidentrequest.md) | :heavy_check_mark:                                                                                           | N/A                                                                                                          |

@@ -1,9 +1,0 @@
-# SquadsUpdateSquadMemberResponse
-
-
-## Fields
-
-| Field                                                                                                         | Type                                                                                                          | Required                                                                                                      | Description                                                                                                   |
-| ------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- |
-| `HTTPMeta`                                                                                                    | [components.HTTPMetadata](../../models/components/httpmetadata.md)                                            | :heavy_check_mark:                                                                                            | N/A                                                                                                           |
-| `V4SquadsUpdateSquadMemberResponse`                                                                           | [*components.V4SquadsUpdateSquadMemberResponse](../../models/components/v4squadsupdatesquadmemberresponse.md) | :heavy_minus_sign:                                                                                            | The request has succeeded and a new resource has been created as a result.                                    |

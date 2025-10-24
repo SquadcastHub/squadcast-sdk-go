@@ -1,9 +1,0 @@
-# IncidentsReassignIncidentRequest
-
-
-## Fields
-
-| Field                                                                                                          | Type                                                                                                           | Required                                                                                                       | Description                                                                                                    |
-| -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- |
-| `IncidentID`                                                                                                   | *string*                                                                                                       | :heavy_check_mark:                                                                                             | N/A                                                                                                            |
-| `V3IncidentsReassignIncidentRequest`                                                                           | [components.V3IncidentsReassignIncidentRequest](../../models/components/v3incidentsreassignincidentrequest.md) | :heavy_check_mark:                                                                                             | N/A                                                                                                            |

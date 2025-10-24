@@ -1,9 +1,0 @@
-# WebhooksUpdateWebhookRequest
-
-
-## Fields
-
-| Field                                                                                            | Type                                                                                             | Required                                                                                         | Description                                                                                      |
-| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
-| `EventWebhookID`                                                                                 | *string*                                                                                         | :heavy_check_mark:                                                                               | N/A                                                                                              |
-| `V3ExtensionsWebhooksWebhook`                                                                    | [components.V3ExtensionsWebhooksWebhook](../../models/components/v3extensionswebhookswebhook.md) | :heavy_check_mark:                                                                               | N/A                                                                                              |
