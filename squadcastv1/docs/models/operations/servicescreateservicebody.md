@@ -1,0 +1,10 @@
+# ServicesCreateServiceBody
+
+The body type of the operation request or response.
+
+
+## Fields
+
+| Field                                                                                        | Type                                                                                         | Required                                                                                     | Description                                                                                  |
+| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| `Data`                                                                                       | [components.V3ServicesServiceResponse](../../models/components/v3servicesserviceresponse.md) | :heavy_check_mark:                                                                           | N/A                                                                                          |

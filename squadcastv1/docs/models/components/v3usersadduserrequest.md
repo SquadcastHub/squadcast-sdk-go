@@ -1,0 +1,11 @@
+# V3UsersAddUserRequest
+
+
+## Fields
+
+| Field                                                                                        | Type                                                                                         | Required                                                                                     | Description                                                                                  |
+| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| `Email`                                                                                      | *string*                                                                                     | :heavy_check_mark:                                                                           | N/A                                                                                          |
+| `Role`                                                                                       | [components.V3UsersAddUserRequestRole](../../models/components/v3usersadduserrequestrole.md) | :heavy_check_mark:                                                                           | N/A                                                                                          |
+| `FirstName`                                                                                  | *string*                                                                                     | :heavy_check_mark:                                                                           | N/A                                                                                          |
+| `LastName`                                                                                   | *string*                                                                                     | :heavy_check_mark:                                                                           | N/A                                                                                          |

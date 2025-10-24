@@ -1,0 +1,9 @@
+# IssuesCreateIssueRequest
+
+
+## Fields
+
+| Field                                                                                                                | Type                                                                                                                 | Required                                                                                                             | Description                                                                                                          |
+| -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- |
+| `StatuspageID`                                                                                                       | *string*                                                                                                             | :heavy_check_mark:                                                                                                   | N/A                                                                                                                  |
+| `V4StatusPagesIssuesCreateIssueRequest`                                                                              | [components.V4StatusPagesIssuesCreateIssueRequest](../../models/components/v4statuspagesissuescreateissuerequest.md) | :heavy_check_mark:                                                                                                   | N/A                                                                                                                  |

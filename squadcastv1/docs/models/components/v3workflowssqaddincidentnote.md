@@ -1,0 +1,9 @@
+# V3WorkflowsSqAddIncidentNote
+
+
+## Fields
+
+| Field                                                                                                      | Type                                                                                                       | Required                                                                                                   | Description                                                                                                |
+| ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
+| `Name`                                                                                                     | [components.V3WorkflowsSqAddIncidentNoteName](../../models/components/v3workflowssqaddincidentnotename.md) | :heavy_check_mark:                                                                                         | N/A                                                                                                        |
+| `Data`                                                                                                     | [components.V3WorkflowsSqAddIncidentNoteData](../../models/components/v3workflowssqaddincidentnotedata.md) | :heavy_check_mark:                                                                                         | N/A                                                                                                        |
