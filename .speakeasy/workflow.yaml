@@ -15,7 +15,7 @@ targets:
     squadcast-sdk:
         target: go
         source: Squadcast
-        output: v1
+        output: squadcastv1
         codeSamples:
             registry:
                 location: registry.speakeasyapi.dev/swo/incident-response/squadcast-go-code-samples
