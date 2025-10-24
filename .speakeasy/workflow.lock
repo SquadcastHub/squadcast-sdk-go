@@ -6,6 +6,7 @@ sources:
         sourceBlobDigest: sha256:3cffe56606c933039d1aff60f85362cc68d12c51e3d1d3db3b889296027d8f77
         tags:
             - latest
+            - speakeasy-sdk-regen-1761301187
             - 1.0.0
 targets:
     squadcast-sdk:
@@ -14,7 +15,7 @@ targets:
         sourceRevisionDigest: sha256:ed0fcbcd0bbd50e67d4c0cf48618f4ed644cbecbe540b6264abe0c58dae64692
         sourceBlobDigest: sha256:3cffe56606c933039d1aff60f85362cc68d12c51e3d1d3db3b889296027d8f77
         codeSamplesNamespace: squadcast-go-code-samples
-        codeSamplesRevisionDigest: sha256:169b3de3af8aad34df45d7872b260ca30064882a38bd9b83e9b6e593ced8c78c
+        codeSamplesRevisionDigest: sha256:764d4cd428d0d82fd06940c8c34d0ab3dd3b37480c25316666463c62addf07d6
 workflow:
     workflowVersion: 1.0.0
     speakeasyVersion: latest

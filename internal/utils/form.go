@@ -10,8 +10,8 @@ import (
 	"strings"
 	"time"
 
-	"github.com/SquadcastHub/squadcast-sdk-go/optionalnullable"
-	"github.com/SquadcastHub/squadcast-sdk-go/types"
+	"github.com/SquadcastHub/squadcast-sdk-go/v1/optionalnullable"
+	"github.com/SquadcastHub/squadcast-sdk-go/v1/types"
 )
 
 func populateForm(paramName string, explode bool, objType reflect.Type, objValue reflect.Value, delimiter string, defaultValue *string, getFieldName func(reflect.StructField) string) url.Values {

@@ -5,7 +5,7 @@ package components
 import (
 	"encoding/json"
 	"fmt"
-	"github.com/SquadcastHub/squadcast-sdk-go/internal/utils"
+	"github.com/SquadcastHub/squadcast-sdk-go/v1/internal/utils"
 )
 
 type V3WorkflowsSqTriggerManualWebhookUpdateName string
