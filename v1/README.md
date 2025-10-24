@@ -37,6 +37,7 @@ Developer-friendly & type-safe Go SDK specifically catered to leverage *squadcas
   * [SDK Example Usage](#sdk-example-usage)
   * [Authentication](#authentication)
   * [Available Resources and Operations](#available-resources-and-operations)
+  * [Pagination](#pagination)
   * [Retries](#retries)
   * [Error Handling](#error-handling)
   * [Server Selection](#server-selection)
@@ -568,6 +569,55 @@ func main() {
 
 </details>
 <!-- End Available Resources and Operations [operations] -->
+
+<!-- Start Pagination [pagination] -->
+## Pagination
+
+Some of the endpoints in this SDK support pagination. To use pagination, you make your SDK calls as usual, but the
+returned response object will have a `Next` method that can be called to pull down the next group of results. If the
+return value of `Next` is `nil`, then there are no more pages to be fetched.
+
+Here's an example of one such pagination call:
+```go
+package main
+
+import (
+	"context"
+	squadcastsdk "github.com/SquadcastHub/squadcast-sdk-go/v1"
+	"log"
+	"os"
+)
+
+func main() {
+	ctx := context.Background()
+
+	s := squadcastsdk.New(
+		squadcastsdk.WithSecurity(os.Getenv("SQUADCASTSDK_BEARER_AUTH")),
+	)
+
+	res, err := s.EscalationPolicies.GetByTeam(ctx, "<id>", nil, nil)
+	if err != nil {
+		log.Fatal(err)
+	}
+	if res.Object != nil {
+		for {
+			// handle items
+
+			res, err = res.Next()
+
+			if err != nil {
+				// handle error
+			}
+
+			if res == nil {
+				break
+			}
+		}
+	}
+}
+
+```
+<!-- End Pagination [pagination] -->
 
 <!-- Start Retries [retries] -->
 ## Retries

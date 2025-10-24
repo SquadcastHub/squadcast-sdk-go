@@ -7,22 +7,22 @@ import (
 )
 
 type StatusPagesListStatusPagesRequest struct {
-	PageSize        string `queryParam:"style=form,explode=false,name=pageSize"`
-	PageNumber      string `queryParam:"style=form,explode=false,name=pageNumber"`
+	PageSize        int64  `queryParam:"style=form,explode=false,name=pageSize"`
+	PageNumber      int64  `queryParam:"style=form,explode=false,name=pageNumber"`
 	FiltersIsPublic string `queryParam:"style=form,explode=false,name=filters.isPublic"`
 	TeamID          string `queryParam:"style=form,explode=false,name=teamID"`
 }
 
-func (s *StatusPagesListStatusPagesRequest) GetPageSize() string {
+func (s *StatusPagesListStatusPagesRequest) GetPageSize() int64 {
 	if s == nil {
-		return ""
+		return 0
 	}
 	return s.PageSize
 }
 
-func (s *StatusPagesListStatusPagesRequest) GetPageNumber() string {
+func (s *StatusPagesListStatusPagesRequest) GetPageNumber() int64 {
 	if s == nil {
-		return ""
+		return 0
 	}
 	return s.PageNumber
 }
@@ -45,6 +45,8 @@ type StatusPagesListStatusPagesResponse struct {
 	HTTPMeta components.HTTPMetadata `json:"-"`
 	// The request has succeeded.
 	V4StatusPagesListStatusPagesResponse *components.V4StatusPagesListStatusPagesResponse
+
+	Next func() (*StatusPagesListStatusPagesResponse, error)
 }
 
 func (s *StatusPagesListStatusPagesResponse) GetHTTPMeta() components.HTTPMetadata {

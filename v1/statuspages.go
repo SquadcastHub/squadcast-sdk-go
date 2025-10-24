@@ -13,6 +13,7 @@ import (
 	"github.com/SquadcastHub/squadcast-sdk-go/v1/models/components"
 	"github.com/SquadcastHub/squadcast-sdk-go/v1/models/operations"
 	"github.com/SquadcastHub/squadcast-sdk-go/v1/retry"
+	"github.com/spyzhov/ajson"
 	"net/http"
 	"net/url"
 )
@@ -43,7 +44,7 @@ func newStatusPages(rootSDK *SquadcastSDK, sdkConfig config.SDKConfiguration, ho
 }
 
 // List Status Pages
-func (s *StatusPages) List(ctx context.Context, pageSize string, pageNumber string, filtersIsPublic string, teamID string, opts ...operations.Option) (*operations.StatusPagesListStatusPagesResponse, error) {
+func (s *StatusPages) List(ctx context.Context, pageSize int64, pageNumber int64, filtersIsPublic string, teamID string, opts ...operations.Option) (*operations.StatusPagesListStatusPagesResponse, error) {
 	request := operations.StatusPagesListStatusPagesRequest{
 		PageSize:        pageSize,
 		PageNumber:      pageNumber,
@@ -210,6 +211,47 @@ func (s *StatusPages) List(ctx context.Context, pageSize string, pageNumber stri
 			Request:  req,
 			Response: httpRes,
 		},
+	}
+	res.Next = func() (*operations.StatusPagesListStatusPagesResponse, error) {
+		rawBody, err := utils.ConsumeRawBody(httpRes)
+		if err != nil {
+			return nil, err
+		}
+
+		b, err := ajson.Unmarshal(rawBody)
+		if err != nil {
+			return nil, err
+		}
+		p := pageNumber
+		nP := int64(p + 1)
+		r, err := ajson.Eval(b, "$.data")
+		if err != nil {
+			return nil, err
+		}
+		if !r.IsArray() {
+			return nil, nil
+		}
+		arr, err := r.GetArray()
+		if err != nil {
+			return nil, err
+		}
+		if len(arr) == 0 {
+			return nil, nil
+		}
+
+		l := int(pageSize)
+		if len(arr) < l {
+			return nil, nil
+		}
+
+		return s.List(
+			ctx,
+			pageSize,
+			nP,
+			filtersIsPublic,
+			teamID,
+			opts...,
+		)
 	}
 
 	switch {

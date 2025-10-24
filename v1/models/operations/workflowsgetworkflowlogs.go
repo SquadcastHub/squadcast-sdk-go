@@ -7,9 +7,9 @@ import (
 )
 
 type WorkflowsGetWorkflowLogsRequest struct {
-	WorkflowID string  `pathParam:"style=simple,explode=false,name=workflowID"`
-	PageSize   *string `queryParam:"style=form,explode=false,name=page_size"`
-	PageNumber *string `queryParam:"style=form,explode=false,name=page_number"`
+	WorkflowID string `pathParam:"style=simple,explode=false,name=workflowID"`
+	PageSize   *int64 `queryParam:"style=form,explode=false,name=page_size"`
+	PageNumber *int64 `queryParam:"style=form,explode=false,name=page_number"`
 }
 
 func (w *WorkflowsGetWorkflowLogsRequest) GetWorkflowID() string {
@@ -19,14 +19,14 @@ func (w *WorkflowsGetWorkflowLogsRequest) GetWorkflowID() string {
 	return w.WorkflowID
 }
 
-func (w *WorkflowsGetWorkflowLogsRequest) GetPageSize() *string {
+func (w *WorkflowsGetWorkflowLogsRequest) GetPageSize() *int64 {
 	if w == nil {
 		return nil
 	}
 	return w.PageSize
 }
 
-func (w *WorkflowsGetWorkflowLogsRequest) GetPageNumber() *string {
+func (w *WorkflowsGetWorkflowLogsRequest) GetPageNumber() *int64 {
 	if w == nil {
 		return nil
 	}
@@ -37,6 +37,8 @@ type WorkflowsGetWorkflowLogsResponse struct {
 	HTTPMeta components.HTTPMetadata `json:"-"`
 	// The request has succeeded.
 	V3WorkflowsGetWorkflowLogsResponse *components.V3WorkflowsGetWorkflowLogsResponse
+
+	Next func() (*WorkflowsGetWorkflowLogsResponse, error)
 }
 
 func (w *WorkflowsGetWorkflowLogsResponse) GetHTTPMeta() components.HTTPMetadata {

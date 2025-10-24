@@ -8,9 +8,9 @@ import (
 
 type EscalationPoliciesGetEscalationPolicyByTeamRequest struct {
 	// here owner_id represents team_id, if  team_id is not provided, it will return escalation policies of all teams.
-	OwnerID    string  `queryParam:"style=form,explode=true,name=owner_id"`
-	PageNumber *string `queryParam:"style=form,explode=true,name=page_number"`
-	PageSize   *string `queryParam:"style=form,explode=true,name=page_size"`
+	OwnerID    string `queryParam:"style=form,explode=true,name=owner_id"`
+	PageNumber *int64 `queryParam:"style=form,explode=true,name=page_number"`
+	PageSize   *int64 `queryParam:"style=form,explode=true,name=page_size"`
 }
 
 func (e *EscalationPoliciesGetEscalationPolicyByTeamRequest) GetOwnerID() string {
@@ -20,14 +20,14 @@ func (e *EscalationPoliciesGetEscalationPolicyByTeamRequest) GetOwnerID() string
 	return e.OwnerID
 }
 
-func (e *EscalationPoliciesGetEscalationPolicyByTeamRequest) GetPageNumber() *string {
+func (e *EscalationPoliciesGetEscalationPolicyByTeamRequest) GetPageNumber() *int64 {
 	if e == nil {
 		return nil
 	}
 	return e.PageNumber
 }
 
-func (e *EscalationPoliciesGetEscalationPolicyByTeamRequest) GetPageSize() *string {
+func (e *EscalationPoliciesGetEscalationPolicyByTeamRequest) GetPageSize() *int64 {
 	if e == nil {
 		return nil
 	}
@@ -69,6 +69,8 @@ type EscalationPoliciesGetEscalationPolicyByTeamResponse struct {
 	HTTPMeta components.HTTPMetadata `json:"-"`
 	// The request has succeeded.
 	Object *EscalationPoliciesGetEscalationPolicyByTeamResponseBody
+
+	Next func() (*EscalationPoliciesGetEscalationPolicyByTeamResponse, error)
 }
 
 func (e *EscalationPoliciesGetEscalationPolicyByTeamResponse) GetHTTPMeta() components.HTTPMetadata {

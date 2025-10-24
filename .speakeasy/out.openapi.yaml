@@ -382,12 +382,12 @@ paths:
           in: "query"
           required: false
           schema:
-            type: "string"
+            type: "integer"
         - name: "page_size"
           in: "query"
           required: false
           schema:
-            type: "string"
+            type: "integer"
         - name: "authorization"
           in: "header"
           required: true
@@ -527,6 +527,7 @@ paths:
                   - "meta"
       tags:
         - "Escalation Policies"
+      x-speakeasy-pagination: {"type": "offsetLimit", "inputs": [{"name": "page_number", "in": "parameters", "type": "page"}, {"name": "page_size", "in": "parameters", "type": "limit"}], "outputs": {"results": "$.data"}}
       x-speakeasy-group: "escalationPolicies"
       x-speakeasy-name-override: "getByTeam"
     post:
@@ -2463,12 +2464,12 @@ paths:
           in: "query"
           required: false
           schema:
-            type: "string"
+            type: "integer"
         - name: "page_number"
           in: "query"
           required: false
           schema:
-            type: "string"
+            type: "integer"
         - name: "filters.owner_id[]"
           in: "query"
           required: false
@@ -2614,6 +2615,7 @@ paths:
                   - "meta"
       tags:
         - "Global Event Rules"
+      x-speakeasy-pagination: {"type": "offsetLimit", "inputs": [{"name": "page_number", "in": "parameters", "type": "page"}, {"name": "page_size", "in": "parameters", "type": "limit"}], "outputs": {"results": "$.data"}}
       x-speakeasy-group: "globalEventRules"
       x-speakeasy-name-override: "list"
     post:
@@ -3801,12 +3803,12 @@ paths:
           in: "query"
           required: false
           schema:
-            type: "string"
+            type: "integer"
         - name: "page_number"
           in: "query"
           required: false
           schema:
-            type: "string"
+            type: "integer"
         - name: "filters.search"
           in: "query"
           required: false
@@ -3945,6 +3947,7 @@ paths:
                   - "meta"
       tags:
         - "Global Event Rules/Rulesets/Rules"
+      x-speakeasy-pagination: {"type": "offsetLimit", "inputs": [{"name": "page_number", "in": "parameters", "type": "page"}, {"name": "page_size", "in": "parameters", "type": "limit"}], "outputs": {"results": "$.data"}}
       x-speakeasy-group: "globalEventRules.rulesets"
       x-speakeasy-name-override: "listRulesetRules"
     post:
@@ -20908,12 +20911,12 @@ paths:
           in: "query"
           required: false
           schema:
-            type: "string"
+            type: "integer"
         - name: "page_size"
           in: "query"
           required: false
           schema:
-            type: "string"
+            type: "integer"
       responses:
         "200":
           description: "The request has succeeded."
@@ -21048,6 +21051,7 @@ paths:
                   - "meta"
       tags:
         - "Webforms"
+      x-speakeasy-pagination: {"type": "offsetLimit", "inputs": [{"name": "page_number", "in": "parameters", "type": "page"}, {"name": "page_size", "in": "parameters", "type": "limit"}], "outputs": {"results": "$.data"}}
       x-speakeasy-name-override: "getAll"
     post:
       operationId: "Webforms_createWebform"
@@ -21624,13 +21628,13 @@ paths:
           in: "query"
           required: false
           schema:
-            type: "string"
+            type: "integer"
           explode: false
         - name: "page_number"
           in: "query"
           required: false
           schema:
-            type: "string"
+            type: "integer"
           explode: false
         - name: "search"
           in: "query"
@@ -21810,6 +21814,7 @@ paths:
                   - "meta"
       tags:
         - "Workflows"
+      x-speakeasy-pagination: {"type": "offsetLimit", "inputs": [{"name": "page_number", "in": "parameters", "type": "page"}, {"name": "page_size", "in": "parameters", "type": "limit"}], "outputs": {"results": "$.data"}}
       x-speakeasy-name-override: "list"
     post:
       operationId: "Workflows_createWorkflow"
@@ -23314,13 +23319,13 @@ paths:
           in: "query"
           required: false
           schema:
-            type: "string"
+            type: "integer"
           explode: false
         - name: "page_number"
           in: "query"
           required: false
           schema:
-            type: "string"
+            type: "integer"
           explode: false
       responses:
         "200":
@@ -23440,6 +23445,7 @@ paths:
                   - "meta"
       tags:
         - "Workflows"
+      x-speakeasy-pagination: {"type": "offsetLimit", "inputs": [{"name": "page_number", "in": "parameters", "type": "page"}, {"name": "page_size", "in": "parameters", "type": "limit"}], "outputs": {"results": "$.data"}}
       x-speakeasy-name-override: "getLogs"
   "/v4/schedules":
     get:
@@ -23602,6 +23608,7 @@ paths:
               schema: {"$ref": "#/components/schemas/Common.V4.Error"}
       tags:
         - "Schedule"
+      x-speakeasy-pagination: {"type": "cursor", "inputs": [{"name": "cursor", "in": "parameters", "type": "cursor"}, {"name": "pageSize", "in": "parameters", "type": "limit"}], "outputs": {"results": "$.data", "nextCursor": "$.pageInfo.nextCursor"}}
       x-speakeasy-group: "schedules"
       x-speakeasy-name-override: "list"
     post:
@@ -26258,13 +26265,13 @@ paths:
           in: "query"
           required: true
           schema:
-            type: "string"
+            type: "integer"
           explode: false
         - name: "pageNumber"
           in: "query"
           required: true
           schema:
-            type: "string"
+            type: "integer"
           explode: false
         - name: "filters.isPublic"
           in: "query"
@@ -26396,6 +26403,7 @@ paths:
                   - "meta"
       tags:
         - "Status Pages"
+      x-speakeasy-pagination: {"type": "offsetLimit", "inputs": [{"name": "pageNumber", "in": "parameters", "type": "page"}, {"name": "pageSize", "in": "parameters", "type": "limit"}], "outputs": {"results": "$.data"}}
       x-speakeasy-group: "statusPages"
       x-speakeasy-name-override: "list"
     post:

@@ -13,6 +13,7 @@ import (
 	"github.com/SquadcastHub/squadcast-sdk-go/v1/models/components"
 	"github.com/SquadcastHub/squadcast-sdk-go/v1/models/operations"
 	"github.com/SquadcastHub/squadcast-sdk-go/v1/retry"
+	"github.com/spyzhov/ajson"
 	"net/http"
 	"net/url"
 )
@@ -34,7 +35,7 @@ func newWebforms(rootSDK *SquadcastSDK, sdkConfig config.SDKConfiguration, hooks
 // GetAll - Get All Webforms
 // Returns all webforms of the given `owner_id` (teamId) in the request param.
 // Requires `access_token` as a `Bearer {{token}}` in the `Authorization` header with `read` scope.
-func (s *Webforms) GetAll(ctx context.Context, ownerID string, pageNumber *string, pageSize *string, opts ...operations.Option) (*operations.WebformsGetAllWebformsResponse, error) {
+func (s *Webforms) GetAll(ctx context.Context, ownerID string, pageNumber *int64, pageSize *int64, opts ...operations.Option) (*operations.WebformsGetAllWebformsResponse, error) {
 	request := operations.WebformsGetAllWebformsRequest{
 		OwnerID:    ownerID,
 		PageNumber: pageNumber,
@@ -200,6 +201,52 @@ func (s *Webforms) GetAll(ctx context.Context, ownerID string, pageNumber *strin
 			Request:  req,
 			Response: httpRes,
 		},
+	}
+	res.Next = func() (*operations.WebformsGetAllWebformsResponse, error) {
+		rawBody, err := utils.ConsumeRawBody(httpRes)
+		if err != nil {
+			return nil, err
+		}
+
+		b, err := ajson.Unmarshal(rawBody)
+		if err != nil {
+			return nil, err
+		}
+		var p int64 = 1
+		if pageNumber != nil {
+			p = *pageNumber
+		}
+		nP := int64(p + 1)
+		r, err := ajson.Eval(b, "$.data")
+		if err != nil {
+			return nil, err
+		}
+		if !r.IsArray() {
+			return nil, nil
+		}
+		arr, err := r.GetArray()
+		if err != nil {
+			return nil, err
+		}
+		if len(arr) == 0 {
+			return nil, nil
+		}
+
+		l := 0
+		if pageSize != nil {
+			l = int(*pageSize)
+		}
+		if len(arr) < l {
+			return nil, nil
+		}
+
+		return s.GetAll(
+			ctx,
+			ownerID,
+			&nP,
+			pageSize,
+			opts...,
+		)
 	}
 
 	switch {
