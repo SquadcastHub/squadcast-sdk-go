@@ -8,8 +8,8 @@ import (
 
 type WorkflowsListWorkflowsRequest struct {
 	OwnerID    string   `queryParam:"style=form,explode=false,name=owner_id"`
-	PageSize   *string  `queryParam:"style=form,explode=false,name=page_size"`
-	PageNumber *string  `queryParam:"style=form,explode=false,name=page_number"`
+	PageSize   *int64   `queryParam:"style=form,explode=false,name=page_size"`
+	PageNumber *int64   `queryParam:"style=form,explode=false,name=page_number"`
 	Search     *string  `queryParam:"style=form,explode=false,name=search"`
 	Event      []string `queryParam:"style=form,explode=false,name=event"`
 	Actions    []string `queryParam:"style=form,explode=false,name=actions"`
@@ -27,14 +27,14 @@ func (w *WorkflowsListWorkflowsRequest) GetOwnerID() string {
 	return w.OwnerID
 }
 
-func (w *WorkflowsListWorkflowsRequest) GetPageSize() *string {
+func (w *WorkflowsListWorkflowsRequest) GetPageSize() *int64 {
 	if w == nil {
 		return nil
 	}
 	return w.PageSize
 }
 
-func (w *WorkflowsListWorkflowsRequest) GetPageNumber() *string {
+func (w *WorkflowsListWorkflowsRequest) GetPageNumber() *int64 {
 	if w == nil {
 		return nil
 	}
@@ -101,6 +101,8 @@ type WorkflowsListWorkflowsResponse struct {
 	HTTPMeta components.HTTPMetadata `json:"-"`
 	// The request has succeeded.
 	V3WorkflowsListWorkflowAPIResponse *components.V3WorkflowsListWorkflowAPIResponse
+
+	Next func() (*WorkflowsListWorkflowsResponse, error)
 }
 
 func (w *WorkflowsListWorkflowsResponse) GetHTTPMeta() components.HTTPMetadata {

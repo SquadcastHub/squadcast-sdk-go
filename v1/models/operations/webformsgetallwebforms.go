@@ -7,9 +7,9 @@ import (
 )
 
 type WebformsGetAllWebformsRequest struct {
-	OwnerID    string  `queryParam:"style=form,explode=false,name=owner_id"`
-	PageNumber *string `queryParam:"style=form,explode=true,name=page_number"`
-	PageSize   *string `queryParam:"style=form,explode=true,name=page_size"`
+	OwnerID    string `queryParam:"style=form,explode=false,name=owner_id"`
+	PageNumber *int64 `queryParam:"style=form,explode=true,name=page_number"`
+	PageSize   *int64 `queryParam:"style=form,explode=true,name=page_size"`
 }
 
 func (w *WebformsGetAllWebformsRequest) GetOwnerID() string {
@@ -19,14 +19,14 @@ func (w *WebformsGetAllWebformsRequest) GetOwnerID() string {
 	return w.OwnerID
 }
 
-func (w *WebformsGetAllWebformsRequest) GetPageNumber() *string {
+func (w *WebformsGetAllWebformsRequest) GetPageNumber() *int64 {
 	if w == nil {
 		return nil
 	}
 	return w.PageNumber
 }
 
-func (w *WebformsGetAllWebformsRequest) GetPageSize() *string {
+func (w *WebformsGetAllWebformsRequest) GetPageSize() *int64 {
 	if w == nil {
 		return nil
 	}
@@ -68,6 +68,8 @@ type WebformsGetAllWebformsResponse struct {
 	HTTPMeta components.HTTPMetadata `json:"-"`
 	// The request has succeeded.
 	Object *WebformsGetAllWebformsResponseBody
+
+	Next func() (*WebformsGetAllWebformsResponse, error)
 }
 
 func (w *WebformsGetAllWebformsResponse) GetHTTPMeta() components.HTTPMetadata {

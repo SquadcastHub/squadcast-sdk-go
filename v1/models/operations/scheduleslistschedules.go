@@ -137,6 +137,8 @@ type SchedulesListSchedulesResponse struct {
 	HTTPMeta components.HTTPMetadata `json:"-"`
 	// The request has succeeded.
 	Object *SchedulesListSchedulesResponseBody
+
+	Next func() (*SchedulesListSchedulesResponse, error)
 }
 
 func (s *SchedulesListSchedulesResponse) GetHTTPMeta() components.HTTPMetadata {

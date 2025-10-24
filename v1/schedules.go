@@ -13,8 +13,11 @@ import (
 	"github.com/SquadcastHub/squadcast-sdk-go/v1/models/components"
 	"github.com/SquadcastHub/squadcast-sdk-go/v1/models/operations"
 	"github.com/SquadcastHub/squadcast-sdk-go/v1/retry"
+	"github.com/spyzhov/ajson"
 	"net/http"
 	"net/url"
+	"strconv"
+	"strings"
 )
 
 type Schedules struct {
@@ -199,6 +202,85 @@ func (s *Schedules) List(ctx context.Context, request operations.SchedulesListSc
 			Request:  req,
 			Response: httpRes,
 		},
+	}
+	res.Next = func() (*operations.SchedulesListSchedulesResponse, error) {
+		rawBody, err := utils.ConsumeRawBody(httpRes)
+		if err != nil {
+			return nil, err
+		}
+
+		b, err := ajson.Unmarshal(rawBody)
+		if err != nil {
+			return nil, err
+		}
+		nC, err := ajson.Eval(b, "$.pageInfo.nextCursor")
+		if err != nil {
+			return nil, err
+		}
+		var nCVal string
+
+		if nC.IsNumeric() {
+			numVal, err := nC.GetNumeric()
+			if err != nil {
+				return nil, err
+			}
+			// GetNumeric returns as float64 so convert to the appropriate type.
+			nCVal = strconv.FormatFloat(numVal, 'f', 0, 64)
+		} else {
+			val, err := nC.Value()
+			if err != nil {
+				return nil, err
+			}
+			if val == nil {
+				return nil, nil
+			}
+			nCVal = val.(string)
+			if strings.TrimSpace(nCVal) == "" {
+				return nil, nil
+			}
+		}
+		r, err := ajson.Eval(b, "$.data")
+		if err != nil {
+			return nil, err
+		}
+		if !r.IsArray() {
+			return nil, nil
+		}
+		arr, err := r.GetArray()
+		if err != nil {
+			return nil, err
+		}
+		if len(arr) == 0 {
+			return nil, nil
+		}
+
+		l := 0
+		if request.PageSize != nil {
+			l = int(*request.PageSize)
+		}
+		if len(arr) < l {
+			return nil, nil
+		}
+
+		return s.List(
+			ctx,
+			operations.SchedulesListSchedulesRequest{
+				TeamID:                  request.TeamID,
+				ScheduleIDs:             request.ScheduleIDs,
+				Participants:            request.Participants,
+				ScheduleName:            request.ScheduleName,
+				MyOnCall:                request.MyOnCall,
+				YouAndYourSquads:        request.YouAndYourSquads,
+				Search:                  request.Search,
+				HidePaused:              request.HidePaused,
+				OwnerID:                 request.OwnerID,
+				EscalationPolicies:      request.EscalationPolicies,
+				WithoutEscalationPolicy: request.WithoutEscalationPolicy,
+				PageSize:                request.PageSize,
+				Cursor:                  &nCVal,
+			},
+			opts...,
+		)
 	}
 
 	switch {

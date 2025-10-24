@@ -13,6 +13,7 @@ import (
 	"github.com/SquadcastHub/squadcast-sdk-go/v1/models/components"
 	"github.com/SquadcastHub/squadcast-sdk-go/v1/models/operations"
 	"github.com/SquadcastHub/squadcast-sdk-go/v1/retry"
+	"github.com/spyzhov/ajson"
 	"net/http"
 	"net/url"
 )
@@ -196,6 +197,62 @@ func (s *Workflows) List(ctx context.Context, request operations.WorkflowsListWo
 			Request:  req,
 			Response: httpRes,
 		},
+	}
+	res.Next = func() (*operations.WorkflowsListWorkflowsResponse, error) {
+		rawBody, err := utils.ConsumeRawBody(httpRes)
+		if err != nil {
+			return nil, err
+		}
+
+		b, err := ajson.Unmarshal(rawBody)
+		if err != nil {
+			return nil, err
+		}
+		var p int64 = 1
+		if request.PageNumber != nil {
+			p = *request.PageNumber
+		}
+		nP := int64(p + 1)
+		r, err := ajson.Eval(b, "$.data")
+		if err != nil {
+			return nil, err
+		}
+		if !r.IsArray() {
+			return nil, nil
+		}
+		arr, err := r.GetArray()
+		if err != nil {
+			return nil, err
+		}
+		if len(arr) == 0 {
+			return nil, nil
+		}
+
+		l := 0
+		if request.PageSize != nil {
+			l = int(*request.PageSize)
+		}
+		if len(arr) < l {
+			return nil, nil
+		}
+
+		return s.List(
+			ctx,
+			operations.WorkflowsListWorkflowsRequest{
+				OwnerID:    request.OwnerID,
+				PageSize:   request.PageSize,
+				PageNumber: &nP,
+				Search:     request.Search,
+				Event:      request.Event,
+				Actions:    request.Actions,
+				Tags:       request.Tags,
+				Owner:      request.Owner,
+				CreatedBy:  request.CreatedBy,
+				UpdatedBy:  request.UpdatedBy,
+				Enabled:    request.Enabled,
+			},
+			opts...,
+		)
 	}
 
 	switch {
@@ -5392,7 +5449,7 @@ func (s *Workflows) ToggleEnable(ctx context.Context, workflowID string, v3Workf
 
 // GetLogs - Get Workflow Logs
 // Get workflow logs
-func (s *Workflows) GetLogs(ctx context.Context, workflowID string, pageSize *string, pageNumber *string, opts ...operations.Option) (*operations.WorkflowsGetWorkflowLogsResponse, error) {
+func (s *Workflows) GetLogs(ctx context.Context, workflowID string, pageSize *int64, pageNumber *int64, opts ...operations.Option) (*operations.WorkflowsGetWorkflowLogsResponse, error) {
 	request := operations.WorkflowsGetWorkflowLogsRequest{
 		WorkflowID: workflowID,
 		PageSize:   pageSize,
@@ -5558,6 +5615,52 @@ func (s *Workflows) GetLogs(ctx context.Context, workflowID string, pageSize *st
 			Request:  req,
 			Response: httpRes,
 		},
+	}
+	res.Next = func() (*operations.WorkflowsGetWorkflowLogsResponse, error) {
+		rawBody, err := utils.ConsumeRawBody(httpRes)
+		if err != nil {
+			return nil, err
+		}
+
+		b, err := ajson.Unmarshal(rawBody)
+		if err != nil {
+			return nil, err
+		}
+		var p int64 = 1
+		if pageNumber != nil {
+			p = *pageNumber
+		}
+		nP := int64(p + 1)
+		r, err := ajson.Eval(b, "$.data")
+		if err != nil {
+			return nil, err
+		}
+		if !r.IsArray() {
+			return nil, nil
+		}
+		arr, err := r.GetArray()
+		if err != nil {
+			return nil, err
+		}
+		if len(arr) == 0 {
+			return nil, nil
+		}
+
+		l := 0
+		if pageSize != nil {
+			l = int(*pageSize)
+		}
+		if len(arr) < l {
+			return nil, nil
+		}
+
+		return s.GetLogs(
+			ctx,
+			workflowID,
+			pageSize,
+			&nP,
+			opts...,
+		)
 	}
 
 	switch {

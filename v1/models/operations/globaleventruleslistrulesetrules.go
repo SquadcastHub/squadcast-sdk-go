@@ -10,8 +10,8 @@ type GlobalEventRulesListRulesetRulesRequest struct {
 	GerID                int64   `pathParam:"style=simple,explode=false,name=ger_id"`
 	AlertSourceVersion   string  `pathParam:"style=simple,explode=false,name=alert_source_version"`
 	AlertSourceShortname string  `pathParam:"style=simple,explode=false,name=alert_source_shortname"`
-	PageSize             *string `queryParam:"style=form,explode=true,name=page_size"`
-	PageNumber           *string `queryParam:"style=form,explode=true,name=page_number"`
+	PageSize             *int64  `queryParam:"style=form,explode=true,name=page_size"`
+	PageNumber           *int64  `queryParam:"style=form,explode=true,name=page_number"`
 	FiltersSearch        *string `queryParam:"style=form,explode=true,name=filters.search"`
 }
 
@@ -36,14 +36,14 @@ func (g *GlobalEventRulesListRulesetRulesRequest) GetAlertSourceShortname() stri
 	return g.AlertSourceShortname
 }
 
-func (g *GlobalEventRulesListRulesetRulesRequest) GetPageSize() *string {
+func (g *GlobalEventRulesListRulesetRulesRequest) GetPageSize() *int64 {
 	if g == nil {
 		return nil
 	}
 	return g.PageSize
 }
 
-func (g *GlobalEventRulesListRulesetRulesRequest) GetPageNumber() *string {
+func (g *GlobalEventRulesListRulesetRulesRequest) GetPageNumber() *int64 {
 	if g == nil {
 		return nil
 	}
@@ -92,6 +92,8 @@ type GlobalEventRulesListRulesetRulesResponse struct {
 	HTTPMeta components.HTTPMetadata `json:"-"`
 	// The request has succeeded.
 	Object *GlobalEventRulesListRulesetRulesResponseBody
+
+	Next func() (*GlobalEventRulesListRulesetRulesResponse, error)
 }
 
 func (g *GlobalEventRulesListRulesetRulesResponse) GetHTTPMeta() components.HTTPMetadata {

@@ -2,7 +2,7 @@
 
 package squadcastsdk
 
-// Generated from OpenAPI doc version 1.0.0 and generator version 2.727.9
+// Generated from OpenAPI doc version 1.0.0 and generator version 2.730.0
 
 import (
 	"context"
@@ -156,9 +156,9 @@ func WithTimeout(timeout time.Duration) SDKOption {
 // New creates a new instance of the SDK with the provided options
 func New(opts ...SDKOption) *SquadcastSDK {
 	sdk := &SquadcastSDK{
-		SDKVersion: "1.2.0",
+		SDKVersion: "1.3.0",
 		sdkConfiguration: config.SDKConfiguration{
-			UserAgent:  "speakeasy-sdk/go 1.2.0 2.727.9 1.0.0 github.com/SquadcastHub/squadcast-sdk-go/v1",
+			UserAgent:  "speakeasy-sdk/go 1.3.0 2.730.0 1.0.0 github.com/SquadcastHub/squadcast-sdk-go/v1",
 			ServerList: ServerList,
 		},
 		hooks: hooks.New(),
