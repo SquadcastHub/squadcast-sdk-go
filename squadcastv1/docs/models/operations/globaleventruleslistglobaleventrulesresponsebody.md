@@ -1,0 +1,11 @@
+# GlobalEventRulesListGlobalEventRulesResponseBody
+
+The request has succeeded.
+
+
+## Fields
+
+| Field                                                                                                                      | Type                                                                                                                       | Required                                                                                                                   | Description                                                                                                                |
+| -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- |
+| `Data`                                                                                                                     | [][components.V3GlobalEventRulesGlobalEventRuleInList](../../models/components/v3globaleventrulesglobaleventruleinlist.md) | :heavy_check_mark:                                                                                                         | N/A                                                                                                                        |
+| `Meta`                                                                                                                     | [operations.GlobalEventRulesListGlobalEventRulesMeta](../../models/operations/globaleventruleslistglobaleventrulesmeta.md) | :heavy_check_mark:                                                                                                         | N/A                                                                                                                        |
