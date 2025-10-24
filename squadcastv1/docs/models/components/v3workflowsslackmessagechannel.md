@@ -1,9 +1,0 @@
-# V3WorkflowsSlackMessageChannel
-
-
-## Fields
-
-| Field                                                                                                          | Type                                                                                                           | Required                                                                                                       | Description                                                                                                    |
-| -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- |
-| `Name`                                                                                                         | [components.V3WorkflowsSlackMessageChannelName](../../models/components/v3workflowsslackmessagechannelname.md) | :heavy_check_mark:                                                                                             | N/A                                                                                                            |
-| `Data`                                                                                                         | [components.V3WorkflowsSlackMessageChannelData](../../models/components/v3workflowsslackmessagechanneldata.md) | :heavy_check_mark:                                                                                             | N/A                                                                                                            |

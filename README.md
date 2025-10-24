@@ -1,6 +1,6 @@
 # squadcastsdk
 
-Developer-friendly & type-safe Go SDK specifically catered to leverage *squadcastsdk* API.
+Developer-friendly & type-safe Go SDK specifically catered to leverage *Squadcast* API.
 
 <div align="left" style="margin-bottom: 0;">
     <a href="https://www.speakeasy.com/?utm_source=squadcastsdk&utm_campaign=go" class="badge-link">
@@ -20,8 +20,6 @@ Developer-friendly & type-safe Go SDK specifically catered to leverage *squadcas
 
 
 <br /><br />
-> [!IMPORTANT]
-> This SDK is not yet ready for production use. To complete setup please follow the steps outlined in your [workspace](https://app.speakeasy.com/org/swo/incident-response). Delete this section before > publishing to a package manager.
 
 <!-- Start Summary [summary] -->
 ## Summary

@@ -1,9 +1,0 @@
-# TagsAppendTagRequest
-
-
-## Fields
-
-| Field                                                                                                    | Type                                                                                                     | Required                                                                                                 | Description                                                                                              |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
-| `IncidentID`                                                                                             | *string*                                                                                                 | :heavy_check_mark:                                                                                       | N/A                                                                                                      |
-| `V3IncidentsTagsAppendTagRequest`                                                                        | [components.V3IncidentsTagsAppendTagRequest](../../models/components/v3incidentstagsappendtagrequest.md) | :heavy_check_mark:                                                                                       | N/A                                                                                                      |

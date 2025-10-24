@@ -1,9 +1,0 @@
-# NotesCreateNotesRequest
-
-
-## Fields
-
-| Field                                                                                                        | Type                                                                                                         | Required                                                                                                     | Description                                                                                                  |
-| ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ |
-| `IncidentID`                                                                                                 | *string*                                                                                                     | :heavy_check_mark:                                                                                           | Required                                                                                                     |
-| `V3IncidentsNotesCreateNoteRequest`                                                                          | [components.V3IncidentsNotesCreateNoteRequest](../../models/components/v3incidentsnotescreatenoterequest.md) | :heavy_check_mark:                                                                                           | N/A                                                                                                          |
