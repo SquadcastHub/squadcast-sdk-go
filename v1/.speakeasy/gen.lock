@@ -5,8 +5,8 @@ management:
   docVersion: 1.0.0
   speakeasyVersion: 1.639.1
   generationVersion: 2.730.0
-  releaseVersion: 1.3.0
-  configChecksum: 4f8c309f4e379eb2aca50b012fd1d0d5
+  releaseVersion: 1.3.2
+  configChecksum: 9b22b697b26d71710abb39dcd58878c8
   repoURL: https://github.com/SquadcastHub/squadcast-sdk-go.git
   repoSubDirectory: v1
   installationURL: https://github.com/SquadcastHub/squadcast-sdk-go/v1
@@ -7626,8 +7626,8 @@ examples:
     speakeasy-default-status-pages-list-status-pages:
       parameters:
         query:
-          pageSize: null
-          pageNumber: null
+          pageSize: 301790
+          pageNumber: 172386
           filters.isPublic: "<value>"
           teamID: "<id>"
       responses:
@@ -8465,12 +8465,3 @@ examples:
         "504":
           application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
 examplesVersion: 1.0.2
-releaseNotes: |
-  ## Go SDK Changes Detected:
-  * `SquadcastSdk.EscalationPolicies.GetByTeam()`:  `request` **Changed** **Breaking** :warning:
-  * `SquadcastSdk.GlobalEventRules.List()`:  `request.Request` **Changed** **Breaking** :warning:
-  * `SquadcastSdk.GlobalEventRules.Rulesets.ListRulesetRules()`:  `request.Request` **Changed** **Breaking** :warning:
-  * `SquadcastSdk.Webforms.GetAll()`:  `request` **Changed** **Breaking** :warning:
-  * `SquadcastSdk.Workflows.List()`:  `request.Request` **Changed** **Breaking** :warning:
-  * `SquadcastSdk.Workflows.GetLogs()`:  `request` **Changed** **Breaking** :warning:
-  * `SquadcastSdk.StatusPages.List()`:  `request` **Changed** **Breaking** :warning:
