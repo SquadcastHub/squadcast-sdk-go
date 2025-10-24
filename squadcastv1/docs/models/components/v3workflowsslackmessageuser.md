@@ -1,9 +1,0 @@
-# V3WorkflowsSlackMessageUser
-
-
-## Fields
-
-| Field                                                                                                    | Type                                                                                                     | Required                                                                                                 | Description                                                                                              |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
-| `Name`                                                                                                   | [components.V3WorkflowsSlackMessageUserName](../../models/components/v3workflowsslackmessageusername.md) | :heavy_check_mark:                                                                                       | N/A                                                                                                      |
-| `Data`                                                                                                   | [components.V3WorkflowsSlackMessageUserData](../../models/components/v3workflowsslackmessageuserdata.md) | :heavy_check_mark:                                                                                       | N/A                                                                                                      |

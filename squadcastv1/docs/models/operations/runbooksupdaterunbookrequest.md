@@ -1,9 +1,0 @@
-# RunbooksUpdateRunbookRequest
-
-
-## Fields
-
-| Field                                                                                                  | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
-| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
-| `RunbookID`                                                                                            | *string*                                                                                               | :heavy_check_mark:                                                                                     | N/A                                                                                                    |
-| `V3RunbooksUpdateRunbookRequest`                                                                       | [components.V3RunbooksUpdateRunbookRequest](../../models/components/v3runbooksupdaterunbookrequest.md) | :heavy_check_mark:                                                                                     | N/A                                                                                                    |

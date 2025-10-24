@@ -1,9 +1,0 @@
-# TeamsCreateTeamRoleRequest
-
-
-## Fields
-
-| Field                                                                                              | Type                                                                                               | Required                                                                                           | Description                                                                                        |
-| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
-| `TeamID`                                                                                           | *string*                                                                                           | :heavy_check_mark:                                                                                 | N/A                                                                                                |
-| `V3TeamsCreateTeamRoleRequest`                                                                     | [components.V3TeamsCreateTeamRoleRequest](../../models/components/v3teamscreateteamrolerequest.md) | :heavy_check_mark:                                                                                 | N/A                                                                                                |

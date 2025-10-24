@@ -1,9 +1,0 @@
-# TeamsCreateTeamRoleResponse
-
-
-## Fields
-
-| Field                                                                                                     | Type                                                                                                      | Required                                                                                                  | Description                                                                                               |
-| --------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- |
-| `HTTPMeta`                                                                                                | [components.HTTPMetadata](../../models/components/httpmetadata.md)                                        | :heavy_check_mark:                                                                                        | N/A                                                                                                       |
-| `Object`                                                                                                  | [*operations.TeamsCreateTeamRoleResponseBody](../../models/operations/teamscreateteamroleresponsebody.md) | :heavy_minus_sign:                                                                                        | The request has succeeded and a new resource has been created as a result.                                |
