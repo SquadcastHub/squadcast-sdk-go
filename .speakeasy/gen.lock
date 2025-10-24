@@ -5,8 +5,10 @@ management:
   docVersion: 1.0.0
   speakeasyVersion: 1.639.1
   generationVersion: 2.730.0
-  releaseVersion: 1.3.2
-  configChecksum: 7b1fad330e4f6f38ac63598902a81b27
+  releaseVersion: 1.3.3
+  configChecksum: c271577ec5888e297b7358831861fc55
+  repoURL: https://github.com/SquadcastHub/squadcast-sdk-go.git
+  installationURL: https://github.com/SquadcastHub/squadcast-sdk-go
 features:
   go:
     additionalDependencies: 0.1.0

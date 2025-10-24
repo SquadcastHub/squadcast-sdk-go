@@ -7,11 +7,11 @@ package squadcastsdk
 import (
 	"context"
 	"fmt"
-	"github.com/SquadcastHub/squadcast-sdk-go/internal/config"
-	"github.com/SquadcastHub/squadcast-sdk-go/internal/hooks"
-	"github.com/SquadcastHub/squadcast-sdk-go/internal/utils"
-	"github.com/SquadcastHub/squadcast-sdk-go/models/components"
-	"github.com/SquadcastHub/squadcast-sdk-go/retry"
+	"github.com/SquadcastHub/squadcast-sdk-go/v1/internal/config"
+	"github.com/SquadcastHub/squadcast-sdk-go/v1/internal/hooks"
+	"github.com/SquadcastHub/squadcast-sdk-go/v1/internal/utils"
+	"github.com/SquadcastHub/squadcast-sdk-go/v1/models/components"
+	"github.com/SquadcastHub/squadcast-sdk-go/v1/retry"
 	"net/http"
 	"time"
 )
@@ -156,9 +156,9 @@ func WithTimeout(timeout time.Duration) SDKOption {
 // New creates a new instance of the SDK with the provided options
 func New(opts ...SDKOption) *SquadcastSDK {
 	sdk := &SquadcastSDK{
-		SDKVersion: "1.3.2",
+		SDKVersion: "1.3.3",
 		sdkConfiguration: config.SDKConfiguration{
-			UserAgent:  "speakeasy-sdk/go 1.3.2 2.730.0 1.0.0 github.com/SquadcastHub/squadcast-sdk-go",
+			UserAgent:  "speakeasy-sdk/go 1.3.3 2.730.0 1.0.0 github.com/SquadcastHub/squadcast-sdk-go/v1",
 			ServerList: ServerList,
 		},
 		hooks: hooks.New(),

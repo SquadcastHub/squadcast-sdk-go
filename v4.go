@@ -3,8 +3,8 @@
 package squadcastsdk
 
 import (
-	"github.com/SquadcastHub/squadcast-sdk-go/internal/config"
-	"github.com/SquadcastHub/squadcast-sdk-go/internal/hooks"
+	"github.com/SquadcastHub/squadcast-sdk-go/v1/internal/config"
+	"github.com/SquadcastHub/squadcast-sdk-go/v1/internal/hooks"
 )
 
 type V4 struct {
