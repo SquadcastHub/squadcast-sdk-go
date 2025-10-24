@@ -1,9 +1,11 @@
-module github.com/SquadcastHub/squadcast-sdk-go/squadcastv1
+module github.com/SquadcastHub/squadcast-sdk-go
 
 go 1.22
 
 require (
+	github.com/SquadcastHub/squadcast-sdk-go/squadcastv1 v1.2.0
 	github.com/ericlagergren/decimal v0.0.0-20240411145413-00de7ca16731
+	github.com/spyzhov/ajson v0.8.0
 	github.com/stretchr/testify v1.11.1
 )
 
