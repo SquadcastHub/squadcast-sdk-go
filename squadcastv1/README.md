@@ -23,6 +23,7 @@ Developer-friendly & type-safe Go SDK specifically catered to leverage *squadcas
   * [SDK Example Usage](#sdk-example-usage)
   * [Authentication](#authentication)
   * [Available Resources and Operations](#available-resources-and-operations)
+  * [Pagination](#pagination)
   * [Retries](#retries)
   * [Error Handling](#error-handling)
   * [Server Selection](#server-selection)
@@ -38,7 +39,7 @@ Developer-friendly & type-safe Go SDK specifically catered to leverage *squadcas
 
 To add the SDK as a dependency to your project:
 ```bash
-go get github.com/SquadcastHub/squadcast-sdk-go/squadcastv1
+go get github.com/SquadcastHub/squadcast-sdk-go
 ```
 <!-- End SDK Installation [installation] -->
 
@@ -52,7 +53,7 @@ package main
 
 import (
 	"context"
-	squadcastsdk "github.com/SquadcastHub/squadcast-sdk-go/squadcastv1"
+	squadcastsdk "github.com/SquadcastHub/squadcast-sdk-go"
 	"log"
 	"os"
 )
@@ -93,7 +94,7 @@ package main
 
 import (
 	"context"
-	squadcastsdk "github.com/SquadcastHub/squadcast-sdk-go/squadcastv1"
+	squadcastsdk "github.com/SquadcastHub/squadcast-sdk-go"
 	"log"
 	"os"
 )
@@ -555,6 +556,55 @@ func main() {
 </details>
 <!-- End Available Resources and Operations [operations] -->
 
+<!-- Start Pagination [pagination] -->
+## Pagination
+
+Some of the endpoints in this SDK support pagination. To use pagination, you make your SDK calls as usual, but the
+returned response object will have a `Next` method that can be called to pull down the next group of results. If the
+return value of `Next` is `nil`, then there are no more pages to be fetched.
+
+Here's an example of one such pagination call:
+```go
+package main
+
+import (
+	"context"
+	squadcastsdk "github.com/SquadcastHub/squadcast-sdk-go"
+	"log"
+	"os"
+)
+
+func main() {
+	ctx := context.Background()
+
+	s := squadcastsdk.New(
+		squadcastsdk.WithSecurity(os.Getenv("SQUADCASTSDK_BEARER_AUTH")),
+	)
+
+	res, err := s.EscalationPolicies.GetByTeam(ctx, "<id>", nil, nil)
+	if err != nil {
+		log.Fatal(err)
+	}
+	if res.Object != nil {
+		for {
+			// handle items
+
+			res, err = res.Next()
+
+			if err != nil {
+				// handle error
+			}
+
+			if res == nil {
+				break
+			}
+		}
+	}
+}
+
+```
+<!-- End Pagination [pagination] -->
+
 <!-- Start Retries [retries] -->
 ## Retries
 
@@ -566,8 +616,8 @@ package main
 
 import (
 	"context"
-	squadcastsdk "github.com/SquadcastHub/squadcast-sdk-go/squadcastv1"
-	"github.com/SquadcastHub/squadcast-sdk-go/squadcastv1/retry"
+	squadcastsdk "github.com/SquadcastHub/squadcast-sdk-go"
+	"github.com/SquadcastHub/squadcast-sdk-go/retry"
 	"log"
 	"models/operations"
 	"os"
@@ -607,8 +657,8 @@ package main
 
 import (
 	"context"
-	squadcastsdk "github.com/SquadcastHub/squadcast-sdk-go/squadcastv1"
-	"github.com/SquadcastHub/squadcast-sdk-go/squadcastv1/retry"
+	squadcastsdk "github.com/SquadcastHub/squadcast-sdk-go"
+	"github.com/SquadcastHub/squadcast-sdk-go/retry"
 	"log"
 	"os"
 )
@@ -675,8 +725,8 @@ package main
 import (
 	"context"
 	"errors"
-	squadcastsdk "github.com/SquadcastHub/squadcast-sdk-go/squadcastv1"
-	"github.com/SquadcastHub/squadcast-sdk-go/squadcastv1/models/apierrors"
+	squadcastsdk "github.com/SquadcastHub/squadcast-sdk-go"
+	"github.com/SquadcastHub/squadcast-sdk-go/models/apierrors"
 	"log"
 	"os"
 )
@@ -779,7 +829,7 @@ package main
 
 import (
 	"context"
-	squadcastsdk "github.com/SquadcastHub/squadcast-sdk-go/squadcastv1"
+	squadcastsdk "github.com/SquadcastHub/squadcast-sdk-go"
 	"log"
 	"os"
 )
@@ -822,7 +872,7 @@ import (
 	"net/http"
 	"time"
 
-	"github.com/SquadcastHub/squadcast-sdk-go/squadcastv1"
+	"github.com/SquadcastHub/squadcast-sdk-go"
 )
 
 var (
