@@ -1,0 +1,9 @@
+# AuditLogsExportAuditLogsResponse
+
+
+## Fields
+
+| Field                                                                                                           | Type                                                                                                            | Required                                                                                                        | Description                                                                                                     |
+| --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- |
+| `HTTPMeta`                                                                                                      | [components.HTTPMetadata](../../models/components/httpmetadata.md)                                              | :heavy_check_mark:                                                                                              | N/A                                                                                                             |
+| `V3AuditLogsExportAuditLogsResponse`                                                                            | [*components.V3AuditLogsExportAuditLogsResponse](../../models/components/v3auditlogsexportauditlogsresponse.md) | :heavy_minus_sign:                                                                                              | The request has succeeded.                                                                                      |
