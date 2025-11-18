@@ -1,0 +1,9 @@
+# AuditLogsListAuditLogsResponse
+
+
+## Fields
+
+| Field                                                                                                       | Type                                                                                                        | Required                                                                                                    | Description                                                                                                 |
+| ----------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- |
+| `HTTPMeta`                                                                                                  | [components.HTTPMetadata](../../models/components/httpmetadata.md)                                          | :heavy_check_mark:                                                                                          | N/A                                                                                                         |
+| `V3AuditLogsListAuditLogsResponse`                                                                          | [*components.V3AuditLogsListAuditLogsResponse](../../models/components/v3auditlogslistauditlogsresponse.md) | :heavy_minus_sign:                                                                                          | The request has succeeded.                                                                                  |
