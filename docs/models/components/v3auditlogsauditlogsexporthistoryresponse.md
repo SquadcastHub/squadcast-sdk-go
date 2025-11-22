@@ -1,0 +1,17 @@
+# V3AuditLogsAuditLogsExportHistoryResponse
+
+Response model for audit logs export history
+
+
+## Fields
+
+| Field                                                                          | Type                                                                           | Required                                                                       | Description                                                                    |
+| ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ |
+| `ID`                                                                           | *string*                                                                       | :heavy_check_mark:                                                             | N/A                                                                            |
+| `Name`                                                                         | *string*                                                                       | :heavy_check_mark:                                                             | N/A                                                                            |
+| `Description`                                                                  | *string*                                                                       | :heavy_check_mark:                                                             | N/A                                                                            |
+| `ExportedAt`                                                                   | *string*                                                                       | :heavy_check_mark:                                                             | N/A                                                                            |
+| `RequestedBy`                                                                  | [components.V3AuditLogsActor](../../models/components/v3auditlogsactor.md)     | :heavy_check_mark:                                                             | Represents an actor (user) in audit logs                                       |
+| `DownloadLink`                                                                 | *string*                                                                       | :heavy_check_mark:                                                             | N/A                                                                            |
+| `Status`                                                                       | *string*                                                                       | :heavy_check_mark:                                                             | N/A                                                                            |
+| `Filters`                                                                      | [components.V3AuditLogsFilters](../../models/components/v3auditlogsfilters.md) | :heavy_check_mark:                                                             | Represents filters used in audit log queries                                   |
