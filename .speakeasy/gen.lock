@@ -5,8 +5,8 @@ management:
   docVersion: 1.0.0
   speakeasyVersion: 1.660.0
   generationVersion: 2.760.2
-  releaseVersion: 1.4.0
-  configChecksum: 1d1ceb798bbea058545d06c88f7f7752
+  releaseVersion: 1.4.1
+  configChecksum: d0289152eaf9417fd0a561346666bc8f
   repoURL: https://github.com/SquadcastHub/squadcast-sdk-go.git
   installationURL: https://github.com/SquadcastHub/squadcast-sdk-go
 features:
@@ -8665,10 +8665,3 @@ examples:
         "504":
           application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
 examplesVersion: 1.0.2
-releaseNotes: |
-  ## Go SDK Changes Detected:
-  * `SquadcastSdk.AuditLogs.AuditLogsListAuditLogs()`: **Added**
-  * `SquadcastSdk.AuditLogs.AuditLogsExportAuditLogs()`: **Added**
-  * `SquadcastSdk.AuditLogs.AuditLogsListAuditLogsExportHistory()`: **Added**
-  * `SquadcastSdk.AuditLogs.AuditLogsGetAuditLogsExportHistoryById()`: **Added**
-  * `SquadcastSdk.AuditLogs.AuditLogsGetAuditLogById()`: **Added**

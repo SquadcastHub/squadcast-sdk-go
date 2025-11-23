@@ -157,9 +157,9 @@ func WithTimeout(timeout time.Duration) SDKOption {
 // New creates a new instance of the SDK with the provided options
 func New(opts ...SDKOption) *SquadcastSDK {
 	sdk := &SquadcastSDK{
-		SDKVersion: "1.4.0",
+		SDKVersion: "1.4.1",
 		sdkConfiguration: config.SDKConfiguration{
-			UserAgent:  "speakeasy-sdk/go 1.4.0 2.760.2 1.0.0 github.com/SquadcastHub/squadcast-sdk-go",
+			UserAgent:  "speakeasy-sdk/go 1.4.1 2.760.2 1.0.0 github.com/SquadcastHub/squadcast-sdk-go",
 			ServerList: ServerList,
 		},
 		hooks: hooks.New(),
