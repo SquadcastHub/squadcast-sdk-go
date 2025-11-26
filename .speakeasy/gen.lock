@@ -1,18 +1,18 @@
 lockVersion: 2.0.0
 id: 7a7261d5-2250-476e-aec3-fbdbd07e5853
 management:
-  docChecksum: 769e6824627e79042648a6973d8b77f1
+  docChecksum: d421cf64ccdf2fd1e3a91f14e780f862
   docVersion: 1.0.0
-  speakeasyVersion: 1.639.2
-  generationVersion: 2.730.5
-  releaseVersion: 1.3.4
-  configChecksum: 92d00a97c64d991270f6c979857301d2
+  speakeasyVersion: 1.661.2
+  generationVersion: 2.763.3
+  releaseVersion: 1.4.0
+  configChecksum: ae92ae05c56e95618c65cb490c7fd424
   repoURL: https://github.com/SquadcastHub/squadcast-sdk-go.git
   installationURL: https://github.com/SquadcastHub/squadcast-sdk-go
 features:
   go:
     additionalDependencies: 0.1.0
-    core: 3.12.0
+    core: 3.13.3
     defaultEnabledRetries: 0.2.0
     devContainers: 2.90.0
     envVarSecurityUsage: 0.3.2
@@ -21,7 +21,7 @@ features:
     globalSecurity: 2.82.12
     globalSecurityCallbacks: 0.1.0
     globalSecurityFlattening: 0.1.0
-    globalServerURLs: 2.82.3
+    globalServerURLs: 2.83.0
     groups: 2.81.3
     intellisenseMarkdownSupport: 0.1.0
     nameOverrides: 2.81.2
@@ -30,7 +30,7 @@ features:
     responseFormat: 0.1.2
     retries: 2.84.2
     sdkHooks: 0.2.0
-    unions: 2.87.0
+    unions: 2.87.2
     uploadStreams: 0.1.0
 generatedFiles:
   - .devcontainer/README.md
@@ -48,6 +48,18 @@ generatedFiles:
   - /models/components/httpmetadata.go
   - /models/components/security.go
   - /models/components/v3analyticsanalyticsresponse.go
+  - /models/components/v3auditlogsactor.go
+  - /models/components/v3auditlogsauditlogidresponse.go
+  - /models/components/v3auditlogsauditlogresponse.go
+  - /models/components/v3auditlogsauditlogsexporthistoryresponse.go
+  - /models/components/v3auditlogsexportauditlogsrequest.go
+  - /models/components/v3auditlogsexportauditlogsresponse.go
+  - /models/components/v3auditlogsfilters.go
+  - /models/components/v3auditlogsgetauditlogbyidresponse.go
+  - /models/components/v3auditlogsgetauditlogexporthistorybyidresponse.go
+  - /models/components/v3auditlogslistauditlogsexporthistoryresponse.go
+  - /models/components/v3auditlogslistauditlogsresponse.go
+  - /models/components/v3auditlogsteam.go
   - /models/components/v3escalationpoliciescreateescalationpolicyrequest.go
   - /models/components/v3escalationpoliciesescalationentity.go
   - /models/components/v3escalationpoliciesescalationpolicyresponse.go
@@ -424,6 +436,11 @@ generatedFiles:
   - /models/operations/analyticsgetteamanalytics.go
   - /models/operations/aptamarkasnottransient.go
   - /models/operations/aptamarkastransient.go
+  - /models/operations/auditlogsexportauditlogs.go
+  - /models/operations/auditlogsgetauditlogbyid.go
+  - /models/operations/auditlogsgetauditlogsexporthistorybyid.go
+  - /models/operations/auditlogslistauditlogs.go
+  - /models/operations/auditlogslistauditlogsexporthistory.go
   - /models/operations/communicationcardsarchiveslackchannel.go
   - /models/operations/communicationcardscreatecommunicationcard.go
   - /models/operations/communicationcardscreateslackchannelincommunicationcard.go
@@ -647,6 +664,7 @@ generatedFiles:
   - analytics.go
   - apitoken.go
   - apitokens.go
+  - auditlogs.go
   - autopausetransientalerts.go
   - circleci.go
   - communicationcard.go
@@ -691,6 +709,8 @@ generatedFiles:
   - docs/models/components/entity.md
   - docs/models/components/error.md
   - docs/models/components/escalationpolicies.md
+  - docs/models/components/exporttype.md
+  - docs/models/components/filters.md
   - docs/models/components/ger.md
   - docs/models/components/globaloncallreminderrules.md
   - docs/models/components/httpmetadata.md
@@ -720,6 +740,22 @@ generatedFiles:
   - docs/models/components/urlobj.md
   - docs/models/components/user.md
   - docs/models/components/v3analyticsanalyticsresponse.md
+  - docs/models/components/v3auditlogsactor.md
+  - docs/models/components/v3auditlogsauditlogidresponse.md
+  - docs/models/components/v3auditlogsauditlogidresponsemeta.md
+  - docs/models/components/v3auditlogsauditlogresponse.md
+  - docs/models/components/v3auditlogsauditlogsexporthistoryresponse.md
+  - docs/models/components/v3auditlogsexportauditlogsrequest.md
+  - docs/models/components/v3auditlogsexportauditlogsresponse.md
+  - docs/models/components/v3auditlogsexportauditlogsresponsedata.md
+  - docs/models/components/v3auditlogsfilters.md
+  - docs/models/components/v3auditlogsgetauditlogbyidresponse.md
+  - docs/models/components/v3auditlogsgetauditlogexporthistorybyidresponse.md
+  - docs/models/components/v3auditlogslistauditlogsexporthistoryresponse.md
+  - docs/models/components/v3auditlogslistauditlogsexporthistoryresponsemetadata.md
+  - docs/models/components/v3auditlogslistauditlogsresponse.md
+  - docs/models/components/v3auditlogslistauditlogsresponsemetadata.md
+  - docs/models/components/v3auditlogsteam.md
   - docs/models/components/v3escalationpoliciescreateescalationpolicyrequest.md
   - docs/models/components/v3escalationpoliciesescalationentity.md
   - docs/models/components/v3escalationpoliciesescalationentitytype.md
@@ -1271,6 +1307,16 @@ generatedFiles:
   - docs/models/operations/aptamarkastransientrequest.md
   - docs/models/operations/aptamarkastransientresponse.md
   - docs/models/operations/aptamarkastransientresponsebody.md
+  - docs/models/operations/auditlogsexportauditlogsresponse.md
+  - docs/models/operations/auditlogsgetauditlogbyidrequest.md
+  - docs/models/operations/auditlogsgetauditlogbyidresponse.md
+  - docs/models/operations/auditlogsgetauditlogsexporthistorybyidrequest.md
+  - docs/models/operations/auditlogsgetauditlogsexporthistorybyidresponse.md
+  - docs/models/operations/auditlogslistauditlogsexporthistoryrequest.md
+  - docs/models/operations/auditlogslistauditlogsexporthistoryresponse.md
+  - docs/models/operations/auditlogslistauditlogsrequest.md
+  - docs/models/operations/auditlogslistauditlogsresponse.md
+  - docs/models/operations/client.md
   - docs/models/operations/communicationcardsarchiveslackchannelresponse.md
   - docs/models/operations/communicationcardsarchiveslackchannelresponsebody.md
   - docs/models/operations/communicationcardscreatecommunicationcardrequest.md
@@ -1932,6 +1978,7 @@ generatedFiles:
   - docs/sdks/analytics/README.md
   - docs/sdks/apitoken/README.md
   - docs/sdks/apitokens/README.md
+  - docs/sdks/auditlogs/README.md
   - docs/sdks/autopausetransientalerts/README.md
   - docs/sdks/circleci/README.md
   - docs/sdks/communicationcard/README.md
@@ -1996,6 +2043,7 @@ generatedFiles:
   - docs/sdks/webhooks/README.md
   - docs/sdks/workflows/README.md
   - docs/sdks/workflowsactions/README.md
+  - docs/types/date.md
   - escalationpolicies.go
   - events.go
   - export.go
@@ -8463,4 +8511,164 @@ examples:
           application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
         "504":
           application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
+  AuditLogs_listAuditLogs:
+    speakeasy-default-audit-logs-list-audit-logs:
+      parameters:
+        query:
+          pageSize: 832442
+          pageNumber: 555332
+          startDate: "2023-03-04"
+          endDate: "2024-08-07"
+      responses:
+        "200":
+          application/json: {"data": [{"id": 55666, "resource": "<value>", "action": "<value>", "actor": {"userID": "<id>", "userName": "Camylle.Douglas", "userEmail": "<value>", "fullName": "Mildred Turner"}, "client": "<value>", "timestamp": "<value>", "team": {"id": "<id>", "name": "<value>", "isDeleted": true}}], "metadata": {"totalCount": 844582}}
+        "400":
+          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
+        "401":
+          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
+        "402":
+          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
+        "403":
+          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
+        "404":
+          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
+        "409":
+          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
+        "422":
+          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
+        "500":
+          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
+        "502":
+          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
+        "503":
+          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
+        "504":
+          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
+  AuditLogs_exportAuditLogs:
+    speakeasy-default-audit-logs-export-audit-logs:
+      requestBody:
+        application/json: {"filters": {"startDate": "2025-07-29", "endDate": "2023-09-09"}, "name": "<value>", "exportType": "json"}
+      responses:
+        "200":
+          application/json: {"data": {"id": "<id>", "message": "<value>"}}
+        "400":
+          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
+        "401":
+          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
+        "402":
+          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
+        "403":
+          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
+        "404":
+          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
+        "409":
+          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
+        "422":
+          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
+        "500":
+          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
+        "502":
+          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
+        "503":
+          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
+        "504":
+          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
+  AuditLogs_listAuditLogsExportHistory:
+    speakeasy-default-audit-logs-list-audit-logs-export-history:
+      parameters:
+        query:
+          pageSize: 159672
+          pageNumber: 351281
+      responses:
+        "200":
+          application/json: {"data": [], "metadata": {"totalCount": 971269}}
+        "400":
+          application/json: {"meta": {"status": 961591, "error_message": "<value>"}}
+        "401":
+          application/json: {"meta": {"status": 961591, "error_message": "<value>"}}
+        "402":
+          application/json: {"meta": {"status": 961591, "error_message": "<value>"}}
+        "403":
+          application/json: {"meta": {"status": 961591, "error_message": "<value>"}}
+        "404":
+          application/json: {"meta": {"status": 961591, "error_message": "<value>"}}
+        "409":
+          application/json: {"meta": {"status": 961591, "error_message": "<value>"}}
+        "422":
+          application/json: {"meta": {"status": 961591, "error_message": "<value>"}}
+        "500":
+          application/json: {"meta": {"status": 961591, "error_message": "<value>"}}
+        "502":
+          application/json: {"meta": {"status": 961591, "error_message": "<value>"}}
+        "503":
+          application/json: {"meta": {"status": 961591, "error_message": "<value>"}}
+        "504":
+          application/json: {"meta": {"status": 961591, "error_message": "<value>"}}
+  AuditLogs_getAuditLogsExportHistoryById:
+    speakeasy-default-audit-logs-get-audit-logs-export-history-by-id:
+      parameters:
+        path:
+          id: "<id>"
+      responses:
+        "200":
+          application/json: {"data": {"id": "<id>", "name": "<value>", "description": "dial woot commonly usher yuck", "exportedAt": "<value>", "requestedBy": {"userID": "<id>", "userName": "Beth.Jaskolski", "userEmail": "<value>", "fullName": "Amber Metz"}, "downloadLink": "<value>", "status": "<value>", "filters": {"startDate": "2024-04-07", "endDate": "2023-05-10"}}}
+        "400":
+          application/json: {"meta": {"status": 21588, "error_message": "<value>"}}
+        "401":
+          application/json: {"meta": {"status": 21588, "error_message": "<value>"}}
+        "402":
+          application/json: {"meta": {"status": 21588, "error_message": "<value>"}}
+        "403":
+          application/json: {"meta": {"status": 21588, "error_message": "<value>"}}
+        "404":
+          application/json: {"meta": {"status": 21588, "error_message": "<value>"}}
+        "409":
+          application/json: {"meta": {"status": 21588, "error_message": "<value>"}}
+        "422":
+          application/json: {"meta": {"status": 21588, "error_message": "<value>"}}
+        "500":
+          application/json: {"meta": {"status": 21588, "error_message": "<value>"}}
+        "502":
+          application/json: {"meta": {"status": 21588, "error_message": "<value>"}}
+        "503":
+          application/json: {"meta": {"status": 21588, "error_message": "<value>"}}
+        "504":
+          application/json: {"meta": {"status": 21588, "error_message": "<value>"}}
+  AuditLogs_getAuditLogById:
+    speakeasy-default-audit-logs-get-audit-log-by-id:
+      parameters:
+        path:
+          id: "<id>"
+      responses:
+        "200":
+          application/json: {"data": {"id": 587064, "resource": "<value>", "action": "<value>", "actor": {"userID": "<id>", "userName": "Jaleel_Becker", "userEmail": "<value>", "fullName": "Andres Kub"}, "client": "<value>", "timestamp": "<value>", "timezone": "Europe/Moscow", "team": {"id": "<id>", "name": "<value>", "isDeleted": false}, "tokenType": "<value>", "ipAddress": "233.161.142.91", "additionalInfo": "<value>", "userAgent": "<value>"}}
+        "400":
+          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
+        "401":
+          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
+        "402":
+          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
+        "403":
+          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
+        "404":
+          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
+        "409":
+          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
+        "422":
+          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
+        "500":
+          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
+        "502":
+          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
+        "503":
+          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
+        "504":
+          application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
 examplesVersion: 1.0.2
+releaseNotes: |
+  ## Go SDK Changes Detected:
+  * `SquadcastSdk.AuditLogs.AuditLogsListAuditLogs()`: **Added**
+  * `SquadcastSdk.AuditLogs.AuditLogsExportAuditLogs()`: **Added**
+  * `SquadcastSdk.AuditLogs.AuditLogsListAuditLogsExportHistory()`: **Added**
+  * `SquadcastSdk.AuditLogs.AuditLogsGetAuditLogsExportHistoryById()`: **Added**
+  * `SquadcastSdk.AuditLogs.AuditLogsGetAuditLogById()`: **Added**
