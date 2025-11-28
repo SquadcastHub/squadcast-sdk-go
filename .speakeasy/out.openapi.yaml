@@ -51,6 +51,7 @@ tags:
   - name: "Incidents/Incident Actions"
   - name: "SLOs"
   - name: "Webforms"
+  - name: "Audit Logs"
 paths:
   "/v3/analyticsv2/organization":
     get:
@@ -366,6 +367,724 @@ paths:
       tags:
         - "Analytics"
       x-speakeasy-name-override: "getTeam"
+  "/v3/audit-logs":
+    get:
+      operationId: "AuditLogs_listAuditLogs"
+      summary: "List all Audit Logs"
+      description: "List all Audit Logs\nReturns array of audit logs for given team and filters"
+      parameters:
+        - name: "pageSize"
+          in: "query"
+          required: true
+          schema:
+            type: "integer"
+          explode: false
+        - name: "pageNumber"
+          in: "query"
+          required: true
+          schema:
+            type: "integer"
+          explode: false
+        - name: "startDate"
+          in: "query"
+          required: true
+          schema:
+            type: "string"
+            format: "date"
+          explode: false
+        - name: "endDate"
+          in: "query"
+          required: true
+          schema:
+            type: "string"
+            format: "date"
+          explode: false
+        - name: "action[]"
+          in: "query"
+          required: false
+          schema:
+            type: "array"
+            items:
+              type: "string"
+          explode: false
+        - name: "resource[]"
+          in: "query"
+          required: false
+          schema:
+            type: "array"
+            items:
+              type: "string"
+          explode: false
+        - name: "actor[]"
+          in: "query"
+          required: false
+          schema:
+            type: "array"
+            items:
+              type: "string"
+          explode: false
+        - name: "team[]"
+          in: "query"
+          required: false
+          schema:
+            type: "array"
+            items:
+              type: "string"
+          explode: false
+        - name: "client[]"
+          in: "query"
+          required: false
+          schema:
+            type: "array"
+            items:
+              type: "string"
+              enum:
+                - "web"
+                - "mobile"
+                - "terraform"
+          explode: false
+      responses:
+        "200":
+          description: "The request has succeeded."
+          content:
+            "application/json":
+              schema: {"$ref": "#/components/schemas/V3.AuditLogs.ListAuditLogsResponse"}
+        "400":
+          description: "The server could not understand the request due to invalid syntax."
+          content:
+            "application/json":
+              schema:
+                type: "object"
+                properties:
+                  "meta": {"$ref": "#/components/schemas/Common.V3.ErrorMeta"}
+                required:
+                  - "meta"
+        "401":
+          description: "Access is unauthorized."
+          content:
+            "application/json":
+              schema:
+                type: "object"
+                properties:
+                  "meta": {"$ref": "#/components/schemas/Common.V3.ErrorMeta"}
+                required:
+                  - "meta"
+        "402":
+          description: "Client error"
+          content:
+            "application/json":
+              schema:
+                type: "object"
+                properties:
+                  "meta": {"$ref": "#/components/schemas/Common.V3.ErrorMeta"}
+                required:
+                  - "meta"
+        "403":
+          description: "Access is forbidden."
+          content:
+            "application/json":
+              schema:
+                type: "object"
+                properties:
+                  "meta": {"$ref": "#/components/schemas/Common.V3.ErrorMeta"}
+                required:
+                  - "meta"
+        "404":
+          description: "The server cannot find the requested resource."
+          content:
+            "application/json":
+              schema:
+                type: "object"
+                properties:
+                  "meta": {"$ref": "#/components/schemas/Common.V3.ErrorMeta"}
+                required:
+                  - "meta"
+        "409":
+          description: "The request conflicts with the current state of the server."
+          content:
+            "application/json":
+              schema:
+                type: "object"
+                properties:
+                  "meta": {"$ref": "#/components/schemas/Common.V3.ErrorMeta"}
+                required:
+                  - "meta"
+        "422":
+          description: "Client error"
+          content:
+            "application/json":
+              schema:
+                type: "object"
+                properties:
+                  "meta": {"$ref": "#/components/schemas/Common.V3.ErrorMeta"}
+                required:
+                  - "meta"
+        "500":
+          description: "Server error"
+          content:
+            "application/json":
+              schema:
+                type: "object"
+                properties:
+                  "meta": {"$ref": "#/components/schemas/Common.V3.ErrorMeta"}
+                required:
+                  - "meta"
+        "502":
+          description: "Server error"
+          content:
+            "application/json":
+              schema:
+                type: "object"
+                properties:
+                  "meta": {"$ref": "#/components/schemas/Common.V3.ErrorMeta"}
+                required:
+                  - "meta"
+        "503":
+          description: "Service unavailable."
+          content:
+            "application/json":
+              schema:
+                type: "object"
+                properties:
+                  "meta": {"$ref": "#/components/schemas/Common.V3.ErrorMeta"}
+                required:
+                  - "meta"
+        "504":
+          description: "Server error"
+          content:
+            "application/json":
+              schema:
+                type: "object"
+                properties:
+                  "meta": {"$ref": "#/components/schemas/Common.V3.ErrorMeta"}
+                required:
+                  - "meta"
+      tags:
+        - "Audit Logs"
+      x-speakeasy-pagination: {"type": "offsetLimit", "inputs": [{"name": "pageNumber", "in": "parameters", "type": "page"}, {"name": "pageSize", "in": "parameters", "type": "limit"}], "outputs": {"results": "$.data"}}
+  "/v3/audit-logs/export":
+    post:
+      operationId: "AuditLogs_exportAuditLogs"
+      summary: "Initiate an asynchronous export of audit logs based on the provided filters. The export file will be generated and available for download. Use 'Get details of Audit Logs export history by ID' API to retrieve the download URL."
+      description: "Export Audit logs\nInitiates export of audit logs based on provided filters"
+      responses:
+        "200":
+          description: "The request has succeeded."
+          content:
+            "application/json":
+              schema: {"$ref": "#/components/schemas/V3.AuditLogs.ExportAuditLogsResponse"}
+        "400":
+          description: "The server could not understand the request due to invalid syntax."
+          content:
+            "application/json":
+              schema:
+                type: "object"
+                properties:
+                  "meta": {"$ref": "#/components/schemas/Common.V3.ErrorMeta"}
+                required:
+                  - "meta"
+        "401":
+          description: "Access is unauthorized."
+          content:
+            "application/json":
+              schema:
+                type: "object"
+                properties:
+                  "meta": {"$ref": "#/components/schemas/Common.V3.ErrorMeta"}
+                required:
+                  - "meta"
+        "402":
+          description: "Client error"
+          content:
+            "application/json":
+              schema:
+                type: "object"
+                properties:
+                  "meta": {"$ref": "#/components/schemas/Common.V3.ErrorMeta"}
+                required:
+                  - "meta"
+        "403":
+          description: "Access is forbidden."
+          content:
+            "application/json":
+              schema:
+                type: "object"
+                properties:
+                  "meta": {"$ref": "#/components/schemas/Common.V3.ErrorMeta"}
+                required:
+                  - "meta"
+        "404":
+          description: "The server cannot find the requested resource."
+          content:
+            "application/json":
+              schema:
+                type: "object"
+                properties:
+                  "meta": {"$ref": "#/components/schemas/Common.V3.ErrorMeta"}
+                required:
+                  - "meta"
+        "409":
+          description: "The request conflicts with the current state of the server."
+          content:
+            "application/json":
+              schema:
+                type: "object"
+                properties:
+                  "meta": {"$ref": "#/components/schemas/Common.V3.ErrorMeta"}
+                required:
+                  - "meta"
+        "422":
+          description: "Client error"
+          content:
+            "application/json":
+              schema:
+                type: "object"
+                properties:
+                  "meta": {"$ref": "#/components/schemas/Common.V3.ErrorMeta"}
+                required:
+                  - "meta"
+        "500":
+          description: "Server error"
+          content:
+            "application/json":
+              schema:
+                type: "object"
+                properties:
+                  "meta": {"$ref": "#/components/schemas/Common.V3.ErrorMeta"}
+                required:
+                  - "meta"
+        "502":
+          description: "Server error"
+          content:
+            "application/json":
+              schema:
+                type: "object"
+                properties:
+                  "meta": {"$ref": "#/components/schemas/Common.V3.ErrorMeta"}
+                required:
+                  - "meta"
+        "503":
+          description: "Service unavailable."
+          content:
+            "application/json":
+              schema:
+                type: "object"
+                properties:
+                  "meta": {"$ref": "#/components/schemas/Common.V3.ErrorMeta"}
+                required:
+                  - "meta"
+        "504":
+          description: "Server error"
+          content:
+            "application/json":
+              schema:
+                type: "object"
+                properties:
+                  "meta": {"$ref": "#/components/schemas/Common.V3.ErrorMeta"}
+                required:
+                  - "meta"
+      tags:
+        - "Audit Logs"
+      requestBody:
+        required: true
+        content:
+          "application/json":
+            schema: {"$ref": "#/components/schemas/V3.AuditLogs.ExportAuditLogsRequest"}
+  "/v3/audit-logs/export/history":
+    get:
+      operationId: "AuditLogs_listAuditLogsExportHistory"
+      summary: "List all Audit Logs export history"
+      description: "List all Audit Logs export history\nReturns array of audit logs export history"
+      parameters:
+        - name: "pageSize"
+          in: "query"
+          required: true
+          schema:
+            type: "integer"
+          explode: false
+        - name: "pageNumber"
+          in: "query"
+          required: true
+          schema:
+            type: "integer"
+          explode: false
+      responses:
+        "200":
+          description: "The request has succeeded."
+          content:
+            "application/json":
+              schema: {"$ref": "#/components/schemas/V3.AuditLogs.ListAuditLogsExportHistoryResponse"}
+        "400":
+          description: "The server could not understand the request due to invalid syntax."
+          content:
+            "application/json":
+              schema:
+                type: "object"
+                properties:
+                  "meta": {"$ref": "#/components/schemas/Common.V3.ErrorMeta"}
+                required:
+                  - "meta"
+        "401":
+          description: "Access is unauthorized."
+          content:
+            "application/json":
+              schema:
+                type: "object"
+                properties:
+                  "meta": {"$ref": "#/components/schemas/Common.V3.ErrorMeta"}
+                required:
+                  - "meta"
+        "402":
+          description: "Client error"
+          content:
+            "application/json":
+              schema:
+                type: "object"
+                properties:
+                  "meta": {"$ref": "#/components/schemas/Common.V3.ErrorMeta"}
+                required:
+                  - "meta"
+        "403":
+          description: "Access is forbidden."
+          content:
+            "application/json":
+              schema:
+                type: "object"
+                properties:
+                  "meta": {"$ref": "#/components/schemas/Common.V3.ErrorMeta"}
+                required:
+                  - "meta"
+        "404":
+          description: "The server cannot find the requested resource."
+          content:
+            "application/json":
+              schema:
+                type: "object"
+                properties:
+                  "meta": {"$ref": "#/components/schemas/Common.V3.ErrorMeta"}
+                required:
+                  - "meta"
+        "409":
+          description: "The request conflicts with the current state of the server."
+          content:
+            "application/json":
+              schema:
+                type: "object"
+                properties:
+                  "meta": {"$ref": "#/components/schemas/Common.V3.ErrorMeta"}
+                required:
+                  - "meta"
+        "422":
+          description: "Client error"
+          content:
+            "application/json":
+              schema:
+                type: "object"
+                properties:
+                  "meta": {"$ref": "#/components/schemas/Common.V3.ErrorMeta"}
+                required:
+                  - "meta"
+        "500":
+          description: "Server error"
+          content:
+            "application/json":
+              schema:
+                type: "object"
+                properties:
+                  "meta": {"$ref": "#/components/schemas/Common.V3.ErrorMeta"}
+                required:
+                  - "meta"
+        "502":
+          description: "Server error"
+          content:
+            "application/json":
+              schema:
+                type: "object"
+                properties:
+                  "meta": {"$ref": "#/components/schemas/Common.V3.ErrorMeta"}
+                required:
+                  - "meta"
+        "503":
+          description: "Service unavailable."
+          content:
+            "application/json":
+              schema:
+                type: "object"
+                properties:
+                  "meta": {"$ref": "#/components/schemas/Common.V3.ErrorMeta"}
+                required:
+                  - "meta"
+        "504":
+          description: "Server error"
+          content:
+            "application/json":
+              schema:
+                type: "object"
+                properties:
+                  "meta": {"$ref": "#/components/schemas/Common.V3.ErrorMeta"}
+                required:
+                  - "meta"
+      tags:
+        - "Audit Logs"
+      x-speakeasy-pagination: {"type": "offsetLimit", "inputs": [{"name": "pageNumber", "in": "parameters", "type": "page"}, {"name": "pageSize", "in": "parameters", "type": "limit"}], "outputs": {"results": "$.data"}}
+  "/v3/audit-logs/export/history/{id}":
+    get:
+      operationId: "AuditLogs_getAuditLogsExportHistoryById"
+      summary: "Get details of Audit Logs export history by ID"
+      description: "Get details of Audit Logs export history by ID\nReturns audit log export history details for the specified ID"
+      parameters:
+        - name: "id"
+          in: "path"
+          required: true
+          schema:
+            type: "string"
+      responses:
+        "200":
+          description: "The request has succeeded."
+          content:
+            "application/json":
+              schema: {"$ref": "#/components/schemas/V3.AuditLogs.GetAuditLogExportHistoryByIDResponse"}
+        "400":
+          description: "The server could not understand the request due to invalid syntax."
+          content:
+            "application/json":
+              schema:
+                type: "object"
+                properties:
+                  "meta": {"$ref": "#/components/schemas/Common.V3.ErrorMeta"}
+                required:
+                  - "meta"
+        "401":
+          description: "Access is unauthorized."
+          content:
+            "application/json":
+              schema:
+                type: "object"
+                properties:
+                  "meta": {"$ref": "#/components/schemas/Common.V3.ErrorMeta"}
+                required:
+                  - "meta"
+        "402":
+          description: "Client error"
+          content:
+            "application/json":
+              schema:
+                type: "object"
+                properties:
+                  "meta": {"$ref": "#/components/schemas/Common.V3.ErrorMeta"}
+                required:
+                  - "meta"
+        "403":
+          description: "Access is forbidden."
+          content:
+            "application/json":
+              schema:
+                type: "object"
+                properties:
+                  "meta": {"$ref": "#/components/schemas/Common.V3.ErrorMeta"}
+                required:
+                  - "meta"
+        "404":
+          description: "The server cannot find the requested resource."
+          content:
+            "application/json":
+              schema:
+                type: "object"
+                properties:
+                  "meta": {"$ref": "#/components/schemas/Common.V3.ErrorMeta"}
+                required:
+                  - "meta"
+        "409":
+          description: "The request conflicts with the current state of the server."
+          content:
+            "application/json":
+              schema:
+                type: "object"
+                properties:
+                  "meta": {"$ref": "#/components/schemas/Common.V3.ErrorMeta"}
+                required:
+                  - "meta"
+        "422":
+          description: "Client error"
+          content:
+            "application/json":
+              schema:
+                type: "object"
+                properties:
+                  "meta": {"$ref": "#/components/schemas/Common.V3.ErrorMeta"}
+                required:
+                  - "meta"
+        "500":
+          description: "Server error"
+          content:
+            "application/json":
+              schema:
+                type: "object"
+                properties:
+                  "meta": {"$ref": "#/components/schemas/Common.V3.ErrorMeta"}
+                required:
+                  - "meta"
+        "502":
+          description: "Server error"
+          content:
+            "application/json":
+              schema:
+                type: "object"
+                properties:
+                  "meta": {"$ref": "#/components/schemas/Common.V3.ErrorMeta"}
+                required:
+                  - "meta"
+        "503":
+          description: "Service unavailable."
+          content:
+            "application/json":
+              schema:
+                type: "object"
+                properties:
+                  "meta": {"$ref": "#/components/schemas/Common.V3.ErrorMeta"}
+                required:
+                  - "meta"
+        "504":
+          description: "Server error"
+          content:
+            "application/json":
+              schema:
+                type: "object"
+                properties:
+                  "meta": {"$ref": "#/components/schemas/Common.V3.ErrorMeta"}
+                required:
+                  - "meta"
+      tags:
+        - "Audit Logs"
+  "/v3/audit-logs/{id}":
+    get:
+      operationId: "AuditLogs_getAuditLogById"
+      summary: "Get audit log by ID"
+      description: "Get audit log by ID\nReturns audit log details for the specified ID"
+      parameters:
+        - name: "id"
+          in: "path"
+          required: true
+          schema:
+            type: "string"
+      responses:
+        "200":
+          description: "The request has succeeded."
+          content:
+            "application/json":
+              schema: {"$ref": "#/components/schemas/V3.AuditLogs.GetAuditLogByIDResponse"}
+        "400":
+          description: "The server could not understand the request due to invalid syntax."
+          content:
+            "application/json":
+              schema:
+                type: "object"
+                properties:
+                  "meta": {"$ref": "#/components/schemas/Common.V3.ErrorMeta"}
+                required:
+                  - "meta"
+        "401":
+          description: "Access is unauthorized."
+          content:
+            "application/json":
+              schema:
+                type: "object"
+                properties:
+                  "meta": {"$ref": "#/components/schemas/Common.V3.ErrorMeta"}
+                required:
+                  - "meta"
+        "402":
+          description: "Client error"
+          content:
+            "application/json":
+              schema:
+                type: "object"
+                properties:
+                  "meta": {"$ref": "#/components/schemas/Common.V3.ErrorMeta"}
+                required:
+                  - "meta"
+        "403":
+          description: "Access is forbidden."
+          content:
+            "application/json":
+              schema:
+                type: "object"
+                properties:
+                  "meta": {"$ref": "#/components/schemas/Common.V3.ErrorMeta"}
+                required:
+                  - "meta"
+        "404":
+          description: "The server cannot find the requested resource."
+          content:
+            "application/json":
+              schema:
+                type: "object"
+                properties:
+                  "meta": {"$ref": "#/components/schemas/Common.V3.ErrorMeta"}
+                required:
+                  - "meta"
+        "409":
+          description: "The request conflicts with the current state of the server."
+          content:
+            "application/json":
+              schema:
+                type: "object"
+                properties:
+                  "meta": {"$ref": "#/components/schemas/Common.V3.ErrorMeta"}
+                required:
+                  - "meta"
+        "422":
+          description: "Client error"
+          content:
+            "application/json":
+              schema:
+                type: "object"
+                properties:
+                  "meta": {"$ref": "#/components/schemas/Common.V3.ErrorMeta"}
+                required:
+                  - "meta"
+        "500":
+          description: "Server error"
+          content:
+            "application/json":
+              schema:
+                type: "object"
+                properties:
+                  "meta": {"$ref": "#/components/schemas/Common.V3.ErrorMeta"}
+                required:
+                  - "meta"
+        "502":
+          description: "Server error"
+          content:
+            "application/json":
+              schema:
+                type: "object"
+                properties:
+                  "meta": {"$ref": "#/components/schemas/Common.V3.ErrorMeta"}
+                required:
+                  - "meta"
+        "503":
+          description: "Service unavailable."
+          content:
+            "application/json":
+              schema:
+                type: "object"
+                properties:
+                  "meta": {"$ref": "#/components/schemas/Common.V3.ErrorMeta"}
+                required:
+                  - "meta"
+        "504":
+          description: "Server error"
+          content:
+            "application/json":
+              schema:
+                type: "object"
+                properties:
+                  "meta": {"$ref": "#/components/schemas/Common.V3.ErrorMeta"}
+                required:
+                  - "meta"
+      tags:
+        - "Audit Logs"
   "/v3/escalation-policies":
     get:
       operationId: "EscalationPolicies_getEscalationPolicyByTeam"
@@ -30286,6 +31005,321 @@ components:
           type: "number"
         "mttr":
           type: "number"
+    "V3.AuditLogs.Actor":
+      type: "object"
+      required:
+        - "userID"
+        - "userName"
+        - "userEmail"
+        - "fullName"
+      properties:
+        "userID":
+          type: "string"
+        "userName":
+          type: "string"
+        "userEmail":
+          type: "string"
+        "fullName":
+          type: "string"
+      description: "Represents an actor (user) in audit logs"
+    "V3.AuditLogs.AuditLogIDResponse":
+      type: "object"
+      required:
+        - "id"
+        - "resource"
+        - "action"
+        - "actor"
+        - "client"
+        - "timestamp"
+        - "timezone"
+        - "team"
+        - "tokenType"
+        - "ipAddress"
+        - "additionalInfo"
+        - "userAgent"
+      properties:
+        "id":
+          type: "integer"
+          format: "int32"
+        "resource":
+          type: "string"
+        "action":
+          type: "string"
+        "actor": {"$ref": "#/components/schemas/V3.AuditLogs.Actor"}
+        "client":
+          type: "string"
+        "timestamp":
+          type: "string"
+        "timezone":
+          type: "string"
+        "team": {"$ref": "#/components/schemas/V3.AuditLogs.Team"}
+        "tokenType":
+          type: "string"
+        "ipAddress":
+          type: "string"
+        "additionalInfo":
+          type: "string"
+        "meta":
+          anyOf:
+            - type: "object"
+              unevaluatedProperties: {}
+            - type: "null"
+        "userAgent":
+          type: "string"
+      description: "Represents detailed audit log entry response"
+    "V3.AuditLogs.AuditLogResponse":
+      type: "object"
+      required:
+        - "id"
+        - "resource"
+        - "action"
+        - "actor"
+        - "client"
+        - "timestamp"
+        - "team"
+      properties:
+        "id":
+          type: "integer"
+          format: "int32"
+        "resource":
+          type: "string"
+        "action":
+          type: "string"
+        "actor": {"$ref": "#/components/schemas/V3.AuditLogs.Actor"}
+        "client":
+          type: "string"
+        "timestamp":
+          type: "string"
+        "team": {"$ref": "#/components/schemas/V3.AuditLogs.Team"}
+      description: "Represents an audit log entry response"
+    "V3.AuditLogs.AuditLogsExportHistoryResponse":
+      type: "object"
+      required:
+        - "id"
+        - "name"
+        - "description"
+        - "exportedAt"
+        - "requestedBy"
+        - "downloadLink"
+        - "status"
+        - "filters"
+      properties:
+        "id":
+          type: "string"
+        "name":
+          type: "string"
+        "description":
+          type: "string"
+        "exportedAt":
+          type: "string"
+        "requestedBy": {"$ref": "#/components/schemas/V3.AuditLogs.Actor"}
+        "downloadLink":
+          type: "string"
+        "status":
+          type: "string"
+        "filters": {"$ref": "#/components/schemas/V3.AuditLogs.Filters"}
+      description: "Response model for audit logs export history"
+    "V3.AuditLogs.ExportAuditLogsRequest":
+      type: "object"
+      required:
+        - "filters"
+        - "name"
+        - "exportType"
+      properties:
+        "filters":
+          type: "object"
+          properties:
+            "startDate":
+              type: "string"
+              format: "date"
+            "endDate":
+              type: "string"
+              format: "date"
+            "resource":
+              type: "array"
+              items:
+                type: "string"
+            "action":
+              type: "array"
+              items:
+                type: "string"
+            "actor":
+              type: "array"
+              items:
+                type: "string"
+            "team":
+              type: "array"
+              items:
+                type: "string"
+            "client":
+              type: "array"
+              items:
+                type: "string"
+          required:
+            - "startDate"
+            - "endDate"
+        "name":
+          type: "string"
+          minLength: 1
+          maxLength: 100
+          pattern: "^\\S"
+        "description":
+          type: "string"
+          maxLength: 300
+        "exportType":
+          type: "string"
+          enum:
+            - "csv"
+            - "json"
+      description: "Request model for exporting audit logs"
+    "V3.AuditLogs.ExportAuditLogsResponse":
+      type: "object"
+      required:
+        - "data"
+      properties:
+        "data":
+          type: "object"
+          properties:
+            "id":
+              type: "string"
+            "message":
+              type: "string"
+          required:
+            - "id"
+            - "message"
+      description: "Response model for exporting audit logs"
+    "V3.AuditLogs.Filters":
+      type: "object"
+      required:
+        - "startDate"
+        - "endDate"
+      properties:
+        "startDate":
+          type: "string"
+          format: "date"
+        "endDate":
+          type: "string"
+          format: "date"
+        "resource":
+          anyOf:
+            - type: "array"
+              items:
+                type: "string"
+            - type: "null"
+        "action":
+          anyOf:
+            - type: "array"
+              items:
+                type: "string"
+            - type: "null"
+        "actor":
+          anyOf:
+            - type: "array"
+              items: {"$ref": "#/components/schemas/V3.AuditLogs.Actor"}
+            - type: "null"
+        "team":
+          anyOf:
+            - type: "array"
+              items: {"$ref": "#/components/schemas/V3.AuditLogs.Team"}
+            - type: "null"
+        "client":
+          anyOf:
+            - type: "array"
+              items:
+                type: "string"
+            - type: "null"
+      description: "Represents filters used in audit log queries"
+    "V3.AuditLogs.GetAuditLogByIDResponse":
+      type: "object"
+      required:
+        - "data"
+      properties:
+        "data": {"$ref": "#/components/schemas/V3.AuditLogs.AuditLogIDResponse"}
+      description: "Response model for getting audit log by ID"
+    "V3.AuditLogs.GetAuditLogExportHistoryByIDResponse":
+      type: "object"
+      required:
+        - "data"
+      properties:
+        "data": {"$ref": "#/components/schemas/V3.AuditLogs.AuditLogsExportHistoryResponse"}
+      description: "Response model for getting audit log export history by ID"
+    "V3.AuditLogs.GetFiltersResponse":
+      type: "object"
+      required:
+        - "data"
+      properties:
+        "data": {"$ref": "#/components/schemas/V3.AuditLogs.GetFiltersResponseData"}
+      description: "Response model for getting available filters"
+    "V3.AuditLogs.GetFiltersResponseData":
+      type: "object"
+      required:
+        - "resources"
+        - "resourceToActionsMap"
+        - "clients"
+      properties:
+        "resources":
+          type: "array"
+          items:
+            type: "string"
+        "resourceToActionsMap":
+          type: "object"
+          unevaluatedProperties:
+            type: "array"
+            items:
+              type: "string"
+        "clients":
+          type: "array"
+          items:
+            type: "string"
+      description: "Model for available filters data"
+    "V3.AuditLogs.ListAuditLogsExportHistoryResponse":
+      type: "object"
+      required:
+        - "data"
+        - "metadata"
+      properties:
+        "data":
+          type: "array"
+          items: {"$ref": "#/components/schemas/V3.AuditLogs.AuditLogsExportHistoryResponse"}
+        "metadata":
+          type: "object"
+          properties:
+            "totalCount":
+              type: "integer"
+          required:
+            - "totalCount"
+      description: "Response model for listing audit logs export history"
+    "V3.AuditLogs.ListAuditLogsResponse":
+      type: "object"
+      required:
+        - "data"
+        - "metadata"
+      properties:
+        "data":
+          type: "array"
+          items: {"$ref": "#/components/schemas/V3.AuditLogs.AuditLogResponse"}
+        "metadata":
+          type: "object"
+          properties:
+            "totalCount":
+              type: "integer"
+          required:
+            - "totalCount"
+      description: "Response model for listing audit logs"
+    "V3.AuditLogs.Team":
+      type: "object"
+      required:
+        - "id"
+        - "name"
+        - "isDeleted"
+      properties:
+        "id":
+          type: "string"
+        "name":
+          type: "string"
+        "isDeleted":
+          type: "boolean"
+      description: "Represents a team in audit logs"
     "V3.EscalationPolicies.CreateEscalationPolicyRequest":
       type: "object"
       required:
