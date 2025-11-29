@@ -1,4 +1,4 @@
-speakeasyVersion: 1.662.0
+speakeasyVersion: 1.665.0
 sources:
     Squadcast:
         sourceNamespace: squadcast
@@ -15,7 +15,7 @@ targets:
         sourceRevisionDigest: sha256:cbdda5a8fe7996c415b6643b5e45c1b65cd283a5d212bf3917ebe965bb88ba71
         sourceBlobDigest: sha256:5fc9c75cce5279ac8c6a450514415e0ccffe5d390e4a4d01758a1104be51c0a1
         codeSamplesNamespace: squadcast-go-code-samples
-        codeSamplesRevisionDigest: sha256:5a952641a20b382c0afff83344db7100e4688741290aca248db80d51602f7ad6
+        codeSamplesRevisionDigest: sha256:e018d8d5259cf671f0191c97027568f0141f40f7ebb9bd056fd2e7d20a17e217
 workflow:
     workflowVersion: 1.0.0
     speakeasyVersion: latest

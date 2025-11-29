@@ -3,16 +3,16 @@ id: 7a7261d5-2250-476e-aec3-fbdbd07e5853
 management:
   docChecksum: d421cf64ccdf2fd1e3a91f14e780f862
   docVersion: 1.0.0
-  speakeasyVersion: 1.662.0
-  generationVersion: 2.763.3
-  releaseVersion: 1.4.0
-  configChecksum: ae92ae05c56e95618c65cb490c7fd424
+  speakeasyVersion: 1.665.0
+  generationVersion: 2.767.2
+  releaseVersion: 1.5.0
+  configChecksum: ee4c708c4bd2a5b399a80077c17d7319
   repoURL: https://github.com/SquadcastHub/squadcast-sdk-go.git
   installationURL: https://github.com/SquadcastHub/squadcast-sdk-go
 features:
   go:
     additionalDependencies: 0.1.0
-    core: 3.13.3
+    core: 3.13.5
     defaultEnabledRetries: 0.2.0
     devContainers: 2.90.0
     envVarSecurityUsage: 0.3.2
@@ -29,7 +29,7 @@ features:
     pagination: 2.82.5
     responseFormat: 0.1.2
     retries: 2.84.2
-    sdkHooks: 0.2.0
+    sdkHooks: 0.3.0
     unions: 2.87.2
     uploadStreams: 0.1.0
 generatedFiles:
@@ -8665,10 +8665,3 @@ examples:
         "504":
           application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
 examplesVersion: 1.0.2
-releaseNotes: |
-  ## Go SDK Changes Detected:
-  * `SquadcastSdk.AuditLogs.AuditLogsListAuditLogs()`: **Added**
-  * `SquadcastSdk.AuditLogs.AuditLogsExportAuditLogs()`: **Added**
-  * `SquadcastSdk.AuditLogs.AuditLogsListAuditLogsExportHistory()`: **Added**
-  * `SquadcastSdk.AuditLogs.AuditLogsGetAuditLogsExportHistoryById()`: **Added**
-  * `SquadcastSdk.AuditLogs.AuditLogsGetAuditLogById()`: **Added**
