@@ -2,7 +2,7 @@
 
 package squadcastsdk
 
-// Generated from OpenAPI doc version 1.0.0 and generator version 2.730.5
+// Generated from OpenAPI doc version 1.0.0 and generator version 2.767.2
 
 import (
 	"context"
@@ -51,6 +51,7 @@ func Pointer[T any](v T) *T { return &v }
 type SquadcastSDK struct {
 	SDKVersion                    string
 	Analytics                     *Analytics
+	AuditLogs                     *AuditLogs
 	EscalationPolicies            *EscalationPolicies
 	Exports                       *Exports
 	Webhooks                      *Webhooks
@@ -156,9 +157,9 @@ func WithTimeout(timeout time.Duration) SDKOption {
 // New creates a new instance of the SDK with the provided options
 func New(opts ...SDKOption) *SquadcastSDK {
 	sdk := &SquadcastSDK{
-		SDKVersion: "1.3.4",
+		SDKVersion: "1.4.0",
 		sdkConfiguration: config.SDKConfiguration{
-			UserAgent:  "speakeasy-sdk/go 1.3.4 2.730.5 1.0.0 github.com/SquadcastHub/squadcast-sdk-go",
+			UserAgent:  "speakeasy-sdk/go 1.4.0 2.767.2 1.0.0 github.com/SquadcastHub/squadcast-sdk-go",
 			ServerList: ServerList,
 		},
 		hooks: hooks.New(),
@@ -182,6 +183,7 @@ func New(opts ...SDKOption) *SquadcastSDK {
 	sdk.sdkConfiguration = sdk.hooks.SDKInit(sdk.sdkConfiguration)
 
 	sdk.Analytics = newAnalytics(sdk, sdk.sdkConfiguration, sdk.hooks)
+	sdk.AuditLogs = newAuditLogs(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.EscalationPolicies = newEscalationPolicies(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Exports = newExports(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Webhooks = newWebhooks(sdk, sdk.sdkConfiguration, sdk.hooks)
