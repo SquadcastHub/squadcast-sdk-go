@@ -19,3 +19,13 @@ Based on:
 - [go v1.4.0] .
 ### Releases
 - [Go v1.4.0] https://github.com/SquadcastHub/squadcast-sdk-go/releases/tag/v1.4.0 - .
+
+## 2025-12-01 00:42:58
+### Changes
+Based on:
+- OpenAPI Doc  
+- Speakeasy CLI 1.665.0 (2.767.2) https://github.com/speakeasy-api/speakeasy
+### Generated
+- [go v1.4.1] .
+### Releases
+- [Go v1.4.1] https://github.com/SquadcastHub/squadcast-sdk-go/releases/tag/v1.4.1 - .
