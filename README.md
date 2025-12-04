@@ -40,6 +40,7 @@ Developer-friendly & type-safe Go SDK specifically catered to leverage *Squadcas
   * [Error Handling](#error-handling)
   * [Server Selection](#server-selection)
   * [Custom HTTP Client](#custom-http-client)
+  * [Special Types](#special-types)
 * [Development](#development)
   * [Maturity](#maturity)
   * [Contributions](#contributions)
@@ -144,6 +145,14 @@ func main() {
 ### [APITokens](docs/sdks/apitokens/README.md)
 
 * [List](docs/sdks/apitokens/README.md#list) - Get All Tokens
+
+### [AuditLogs](docs/sdks/auditlogs/README.md)
+
+* [AuditLogsListAuditLogs](docs/sdks/auditlogs/README.md#auditlogslistauditlogs) - List all Audit Logs
+* [AuditLogsExportAuditLogs](docs/sdks/auditlogs/README.md#auditlogsexportauditlogs) - Initiate an asynchronous export of audit logs based on the provided filters. The export file will be generated and available for download. Use 'Get details of Audit Logs export history by ID' API to retrieve the download URL.
+* [AuditLogsListAuditLogsExportHistory](docs/sdks/auditlogs/README.md#auditlogslistauditlogsexporthistory) - List all Audit Logs export history
+* [AuditLogsGetAuditLogsExportHistoryByID](docs/sdks/auditlogs/README.md#auditlogsgetauditlogsexporthistorybyid) - Get details of Audit Logs export history by ID
+* [AuditLogsGetAuditLogByID](docs/sdks/auditlogs/README.md#auditlogsgetauditlogbyid) - Get audit log by ID
 
 ### [CommunicationCards](docs/sdks/communicationcards/README.md)
 
@@ -582,6 +591,8 @@ package main
 import (
 	"context"
 	squadcastsdk "github.com/SquadcastHub/squadcast-sdk-go"
+	"github.com/SquadcastHub/squadcast-sdk-go/models/operations"
+	"github.com/SquadcastHub/squadcast-sdk-go/types"
 	"log"
 	"os"
 )
@@ -593,11 +604,16 @@ func main() {
 		squadcastsdk.WithSecurity(os.Getenv("SQUADCASTSDK_BEARER_AUTH")),
 	)
 
-	res, err := s.EscalationPolicies.GetByTeam(ctx, "<id>", nil, nil)
+	res, err := s.AuditLogs.AuditLogsListAuditLogs(ctx, operations.AuditLogsListAuditLogsRequest{
+		PageSize:   832442,
+		PageNumber: 555332,
+		StartDate:  types.MustDateFromString("2023-03-04"),
+		EndDate:    types.MustDateFromString("2024-08-07"),
+	})
 	if err != nil {
 		log.Fatal(err)
 	}
-	if res.Object != nil {
+	if res.V3AuditLogsListAuditLogsResponse != nil {
 		for {
 			// handle items
 
@@ -895,6 +911,32 @@ var (
 
 This can be a convenient way to configure timeouts, cookies, proxies, custom headers, and other low-level configuration.
 <!-- End Custom HTTP Client [http-client] -->
+
+<!-- Start Special Types [types] -->
+## Special Types
+
+This SDK defines the following custom types to assist with marshalling and unmarshalling data.
+
+### Date
+
+`types.Date` is a wrapper around time.Time that allows for JSON marshaling a date string formatted as "2006-01-02".
+
+#### Usage
+
+```go
+d1 := types.NewDate(time.Now()) // returns *types.Date
+
+d2 := types.DateFromTime(time.Now()) // returns types.Date
+
+d3, err := types.NewDateFromString("2019-01-01") // returns *types.Date, error
+
+d4, err := types.DateFromString("2019-01-01") // returns types.Date, error
+
+d5 := types.MustNewDateFromString("2019-01-01") // returns *types.Date and panics on error
+
+d6 := types.MustDateFromString("2019-01-01") // returns types.Date and panics on error
+```
+<!-- End Special Types [types] -->
 
 <!-- Placeholder for Future Speakeasy SDK Sections -->
 

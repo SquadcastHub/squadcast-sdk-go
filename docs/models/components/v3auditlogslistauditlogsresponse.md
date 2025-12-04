@@ -1,0 +1,11 @@
+# V3AuditLogsListAuditLogsResponse
+
+Response model for listing audit logs
+
+
+## Fields
+
+| Field                                                                                                                      | Type                                                                                                                       | Required                                                                                                                   | Description                                                                                                                |
+| -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- |
+| `Data`                                                                                                                     | [][components.V3AuditLogsAuditLogResponse](../../models/components/v3auditlogsauditlogresponse.md)                         | :heavy_check_mark:                                                                                                         | N/A                                                                                                                        |
+| `Metadata`                                                                                                                 | [components.V3AuditLogsListAuditLogsResponseMetadata](../../models/components/v3auditlogslistauditlogsresponsemetadata.md) | :heavy_check_mark:                                                                                                         | N/A                                                                                                                        |
