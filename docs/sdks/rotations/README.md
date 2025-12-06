@@ -1,5 +1,4 @@
 # Rotations
-(*Rotations*)
 
 ## Overview
 

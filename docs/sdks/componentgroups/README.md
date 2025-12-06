@@ -1,5 +1,4 @@
-# ComponentGroups
-(*StatusPages.ComponentGroups*)
+# StatusPages.ComponentGroups
 
 ## Overview
 

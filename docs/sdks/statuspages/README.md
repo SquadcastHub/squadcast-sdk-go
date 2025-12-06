@@ -1,5 +1,4 @@
 # StatusPages
-(*StatusPages*)
 
 ## Overview
 

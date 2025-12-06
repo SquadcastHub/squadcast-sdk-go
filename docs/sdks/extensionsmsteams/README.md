@@ -1,5 +1,4 @@
-# ExtensionsMsteams
-(*Extensions.Msteams*)
+# Extensions.Msteams
 
 ## Overview
 

@@ -1,5 +1,4 @@
-# WorkflowsActions
-(*Workflows.Actions*)
+# Workflows.Actions
 
 ## Overview
 
