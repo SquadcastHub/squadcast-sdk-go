@@ -5,14 +5,14 @@ management:
   docVersion: 1.0.0
   speakeasyVersion: 1.669.1
   generationVersion: 2.772.0
-  releaseVersion: 1.4.0
-  configChecksum: 8789eb5081ddbb52fc84ee45c6b3ad37
+  releaseVersion: 1.4.1
+  configChecksum: e5f3cbb5374c561ca5e68cc4627b0cc6
   repoURL: https://github.com/SquadcastHub/squadcast-sdk-go.git
   installationURL: https://github.com/SquadcastHub/squadcast-sdk-go
 persistentEdits:
-  generation_id: 2f67c674-edf9-4cd2-a1d3-00fabcf93b5a
-  pristine_commit_hash: f54d9f818e1cc05515a963693f7ac3b6f990a092
-  pristine_tree_hash: 349fa6d7fd8c3290eadf57e6cef105128da09625
+  generation_id: 9d4bf74a-d353-4ede-bfc7-004cefacb0cc
+  pristine_commit_hash: ccb476972ca3a2ed134d14378369afe1aaee8e01
+  pristine_tree_hash: 01feced2baad28c77e933af98e98b8b8a0df50ef
 features:
   go:
     additionalDependencies: 0.1.0
@@ -8323,8 +8323,8 @@ trackedFiles:
     pristine_git_object: 01dd9829f087765325e4f0a72ea19c7e2b542d30
   squadcastsdk.go:
     id: dd0a0897c51f
-    last_write_checksum: sha1:d8b5c0a73fc4d1d7649a05e8c2a87dcb4effd659
-    pristine_git_object: bf6f648671f355ea28fc1b98226d72d5876abf85
+    last_write_checksum: sha1:06c459b808aca224e234905a8fb849763cda58c1
+    pristine_git_object: ffd39ce79340a5fc23efbf866f0bc54baeae8419
   squads.go:
     id: 33f49cb23a78
     last_write_checksum: sha1:e0103d5bd6f8307b12e192bb4ac125d635ca762e
@@ -14948,13 +14948,6 @@ examples:
         "504":
           application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
 examplesVersion: 1.0.2
-releaseNotes: |
-  ## Go SDK Changes:
-  * `SquadcastSdk.AuditLogs.AuditLogsListAuditLogs()`: **Added**
-  * `SquadcastSdk.AuditLogs.AuditLogsExportAuditLogs()`: **Added**
-  * `SquadcastSdk.AuditLogs.AuditLogsListAuditLogsExportHistory()`: **Added**
-  * `SquadcastSdk.AuditLogs.AuditLogsGetAuditLogsExportHistoryById()`: **Added**
-  * `SquadcastSdk.AuditLogs.AuditLogsGetAuditLogById()`: **Added**
 generatedFiles:
   - .devcontainer/README.md
   - .devcontainer/devcontainer.json
