@@ -1,5 +1,4 @@
-# IncidentsRunbooks
-(*Incidents.Runbooks*)
+# Incidents.Runbooks
 
 ## Overview
 

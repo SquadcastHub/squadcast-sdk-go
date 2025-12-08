@@ -1,5 +1,4 @@
-# V4Squads
-(*V4.Squads*)
+# V4.Squads
 
 ## Overview
 

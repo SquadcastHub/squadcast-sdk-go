@@ -1,5 +1,4 @@
 # EscalationPolicies
-(*EscalationPolicies*)
 
 ## Overview
 

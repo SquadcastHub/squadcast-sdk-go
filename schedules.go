@@ -21,6 +21,27 @@ import (
 )
 
 type Schedules struct {
+	// Incident Export
+	// - This endpoint is used to export the incident details into a `csv` or `json` file.
+	// - Requires `access_token` as a `Bearer {{token}}` in the `Authorization` header.
+	// - Header field/value: `Content-Type`: `text/csv`
+	//
+	//
+	// Query Params:
+	//
+	// ```
+	// type: csv or json
+	// start_time: filter by date range
+	// end_time: filter by date range
+	// services: filter by services
+	// sources: filter by alert sources
+	// assigned_to: filter by assignee
+	// status: filter by incident status
+	// slo_affecting: filetr by slo affected
+	// slos: filter by slos
+	// tags: filter by tags key=value
+	//
+	//  ```
 	Export    *Export
 	Overrides *SchedulesOverrides
 	Rotations *SchedulesRotations
@@ -94,7 +115,7 @@ func (s *Schedules) List(ctx context.Context, request operations.SchedulesListSc
 	req.Header.Set("Accept", "application/json")
 	req.Header.Set("User-Agent", s.sdkConfiguration.UserAgent)
 
-	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -2424,7 +2445,7 @@ func (s *Schedules) GetIcalLink(ctx context.Context, scheduleID string, myOnCall
 	req.Header.Set("Accept", "application/json")
 	req.Header.Set("User-Agent", s.sdkConfiguration.UserAgent)
 
-	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -2714,7 +2735,7 @@ func (s *Schedules) RefreshIcalLink(ctx context.Context, scheduleID string, myOn
 		req.Header.Set("Content-Type", reqContentType)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -3004,7 +3025,7 @@ func (s *Schedules) CreateIcalLink(ctx context.Context, scheduleID string, myOnC
 		req.Header.Set("Content-Type", reqContentType)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, nil, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

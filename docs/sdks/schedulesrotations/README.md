@@ -1,5 +1,4 @@
-# SchedulesRotations
-(*Schedules.Rotations*)
+# Schedules.Rotations
 
 ## Overview
 

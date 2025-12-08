@@ -1,5 +1,4 @@
-# ServicesOverlays
-(*Services.Overlays*)
+# Services.Overlays
 
 ## Overview
 

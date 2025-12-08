@@ -1,5 +1,4 @@
 # GlobalEventRulesRulesetsRules
-(*GlobalEventRulesRulesetsRules*)
 
 ## Overview
 

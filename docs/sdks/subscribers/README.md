@@ -1,5 +1,4 @@
-# Subscribers
-(*StatusPages.Subscribers*)
+# StatusPages.Subscribers
 
 ## Overview
 

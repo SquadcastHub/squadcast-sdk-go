@@ -1,5 +1,4 @@
-# SnoozeNotifications
-(*Incidents.SnoozeNotifications*)
+# Incidents.SnoozeNotifications
 
 ## Overview
 

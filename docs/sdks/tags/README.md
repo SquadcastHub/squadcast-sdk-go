@@ -1,5 +1,4 @@
-# Tags
-(*Incidents.Tags*)
+# Incidents.Tags
 
 ## Overview
 
