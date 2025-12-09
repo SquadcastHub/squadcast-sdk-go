@@ -26,7 +26,7 @@ func (v V3SLOSLOMonitoringCheck) MarshalJSON() ([]byte, error) {
 }
 
 func (v *V3SLOSLOMonitoringCheck) UnmarshalJSON(data []byte) error {
-	if err := utils.UnmarshalJSON(data, &v, "", false, []string{"name", "owner_type", "owner_id"}); err != nil {
+	if err := utils.UnmarshalJSON(data, &v, "", false, nil); err != nil {
 		return err
 	}
 	return nil

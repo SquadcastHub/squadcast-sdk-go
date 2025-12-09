@@ -21,7 +21,7 @@ func (v V3ServicesSuppressionRulesSuppressionRulesContainerResponse) MarshalJSON
 }
 
 func (v *V3ServicesSuppressionRulesSuppressionRulesContainerResponse) UnmarshalJSON(data []byte) error {
-	if err := utils.UnmarshalJSON(data, &v, "", false, []string{"id", "created_at", "updated_at", "service_id", "organization_id", "rules"}); err != nil {
+	if err := utils.UnmarshalJSON(data, &v, "", false, nil); err != nil {
 		return err
 	}
 	return nil

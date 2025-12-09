@@ -23,7 +23,7 @@ func (v V3AuditLogsFilters) MarshalJSON() ([]byte, error) {
 }
 
 func (v *V3AuditLogsFilters) UnmarshalJSON(data []byte) error {
-	if err := utils.UnmarshalJSON(data, &v, "", false, []string{"startDate", "endDate"}); err != nil {
+	if err := utils.UnmarshalJSON(data, &v, "", false, nil); err != nil {
 		return err
 	}
 	return nil

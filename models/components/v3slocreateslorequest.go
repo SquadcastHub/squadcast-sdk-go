@@ -34,7 +34,7 @@ func (v V3SLOCreateSLORequest) MarshalJSON() ([]byte, error) {
 }
 
 func (v *V3SLOCreateSLORequest) UnmarshalJSON(data []byte) error {
-	if err := utils.UnmarshalJSON(data, &v, "", false, []string{"name", "time_interval_type", "service_ids", "slis", "target_slo", "start_time", "end_time", "duration_in_days", "owner_type", "owner_id", "slo_owner_id", "slo_owner_type"}); err != nil {
+	if err := utils.UnmarshalJSON(data, &v, "", false, nil); err != nil {
 		return err
 	}
 	return nil

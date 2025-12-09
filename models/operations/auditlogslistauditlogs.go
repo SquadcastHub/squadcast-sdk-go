@@ -56,7 +56,7 @@ func (a AuditLogsListAuditLogsRequest) MarshalJSON() ([]byte, error) {
 }
 
 func (a *AuditLogsListAuditLogsRequest) UnmarshalJSON(data []byte) error {
-	if err := utils.UnmarshalJSON(data, &a, "", false, []string{"pageSize", "pageNumber", "startDate", "endDate"}); err != nil {
+	if err := utils.UnmarshalJSON(data, &a, "", false, nil); err != nil {
 		return err
 	}
 	return nil

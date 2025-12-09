@@ -19,7 +19,7 @@ func (v V3IncidentsResponseNote) MarshalJSON() ([]byte, error) {
 }
 
 func (v *V3IncidentsResponseNote) UnmarshalJSON(data []byte) error {
-	if err := utils.UnmarshalJSON(data, &v, "", false, []string{"timeOfNote", "note", "userId"}); err != nil {
+	if err := utils.UnmarshalJSON(data, &v, "", false, nil); err != nil {
 		return err
 	}
 	return nil

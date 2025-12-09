@@ -199,8 +199,8 @@ const (
 
 // BadRequest - Represents a CircleCI error response for a 400 status code.
 type BadRequest struct {
-	ResponseBodyError1 *ResponseBodyError1 `queryParam:"inline,name=ResponseBody"`
-	ResponseBodyError2 *ResponseBodyError2 `queryParam:"inline,name=ResponseBody"`
+	ResponseBodyError1 *ResponseBodyError1 `queryParam:"inline,name=ResponseBody" union:"member"`
+	ResponseBodyError2 *ResponseBodyError2 `queryParam:"inline,name=ResponseBody" union:"member"`
 
 	Type BadRequestType
 

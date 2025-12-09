@@ -108,24 +108,24 @@ const (
 )
 
 type V3WorkflowsActionResponse struct {
-	V3WorkflowsActionResponseSqAttachRunbooks *V3WorkflowsActionResponseSqAttachRunbooks `queryParam:"inline,name=V3_Workflows_ActionResponse"`
-	V3WorkflowsSqMarkIncidentSLOAffecting     *V3WorkflowsSqMarkIncidentSLOAffecting     `queryParam:"inline,name=V3_Workflows_ActionResponse"`
-	V3WorkflowsSqTriggerManualWebhook         *V3WorkflowsSqTriggerManualWebhook         `queryParam:"inline,name=V3_Workflows_ActionResponse"`
-	V3WorkflowsUpdateIncidentPriority         *V3WorkflowsUpdateIncidentPriority         `queryParam:"inline,name=V3_Workflows_ActionResponse"`
-	V3WorkflowsSqCreateStatusPageIssue        *V3WorkflowsSqCreateStatusPageIssue        `queryParam:"inline,name=V3_Workflows_ActionResponse"`
-	V3WorkflowsSqAddIncidentNote              *V3WorkflowsSqAddIncidentNote              `queryParam:"inline,name=V3_Workflows_ActionResponse"`
-	V3WorkflowsSlackArchiveChannel            *V3WorkflowsSlackArchiveChannel            `queryParam:"inline,name=V3_Workflows_ActionResponse"`
-	V3WorkflowsSqAddCommunicationChannel      *V3WorkflowsSqAddCommunicationChannel      `queryParam:"inline,name=V3_Workflows_ActionResponse"`
-	V3WorkflowsSlackMessageChannel            *V3WorkflowsSlackMessageChannel            `queryParam:"inline,name=V3_Workflows_ActionResponse"`
-	V3WorkflowsSlackMessageUser               *V3WorkflowsSlackMessageUser               `queryParam:"inline,name=V3_Workflows_ActionResponse"`
-	V3WorkflowsSqMakeHTTPCall                 *V3WorkflowsSqMakeHTTPCall                 `queryParam:"inline,name=V3_Workflows_ActionResponse"`
-	V3WorkflowsSlackCreateIncidentChannel     *V3WorkflowsSlackCreateIncidentChannel     `queryParam:"inline,name=V3_Workflows_ActionResponse"`
-	V3WorkflowsJiraCreateTicket               *V3WorkflowsJiraCreateTicket               `queryParam:"inline,name=V3_Workflows_ActionResponse"`
-	V3WorkflowsMsTeamsMessageChannel          *V3WorkflowsMsTeamsMessageChannel          `queryParam:"inline,name=V3_Workflows_ActionResponse"`
-	V3WorkflowsMsTeamsMessageUser             *V3WorkflowsMsTeamsMessageUser             `queryParam:"inline,name=V3_Workflows_ActionResponse"`
-	V3WorkflowsSqSendEmail                    *V3WorkflowsSqSendEmail                    `queryParam:"inline,name=V3_Workflows_ActionResponse"`
-	V3WorkflowsMsTeamsCreateMeetingLink       *V3WorkflowsMsTeamsCreateMeetingLink       `queryParam:"inline,name=V3_Workflows_ActionResponse"`
-	Any                                       any                                        `queryParam:"inline,name=V3_Workflows_ActionResponse"`
+	V3WorkflowsActionResponseSqAttachRunbooks *V3WorkflowsActionResponseSqAttachRunbooks `queryParam:"inline,name=V3_Workflows_ActionResponse" union:"member"`
+	V3WorkflowsSqMarkIncidentSLOAffecting     *V3WorkflowsSqMarkIncidentSLOAffecting     `queryParam:"inline,name=V3_Workflows_ActionResponse" union:"member"`
+	V3WorkflowsSqTriggerManualWebhook         *V3WorkflowsSqTriggerManualWebhook         `queryParam:"inline,name=V3_Workflows_ActionResponse" union:"member"`
+	V3WorkflowsUpdateIncidentPriority         *V3WorkflowsUpdateIncidentPriority         `queryParam:"inline,name=V3_Workflows_ActionResponse" union:"member"`
+	V3WorkflowsSqCreateStatusPageIssue        *V3WorkflowsSqCreateStatusPageIssue        `queryParam:"inline,name=V3_Workflows_ActionResponse" union:"member"`
+	V3WorkflowsSqAddIncidentNote              *V3WorkflowsSqAddIncidentNote              `queryParam:"inline,name=V3_Workflows_ActionResponse" union:"member"`
+	V3WorkflowsSlackArchiveChannel            *V3WorkflowsSlackArchiveChannel            `queryParam:"inline,name=V3_Workflows_ActionResponse" union:"member"`
+	V3WorkflowsSqAddCommunicationChannel      *V3WorkflowsSqAddCommunicationChannel      `queryParam:"inline,name=V3_Workflows_ActionResponse" union:"member"`
+	V3WorkflowsSlackMessageChannel            *V3WorkflowsSlackMessageChannel            `queryParam:"inline,name=V3_Workflows_ActionResponse" union:"member"`
+	V3WorkflowsSlackMessageUser               *V3WorkflowsSlackMessageUser               `queryParam:"inline,name=V3_Workflows_ActionResponse" union:"member"`
+	V3WorkflowsSqMakeHTTPCall                 *V3WorkflowsSqMakeHTTPCall                 `queryParam:"inline,name=V3_Workflows_ActionResponse" union:"member"`
+	V3WorkflowsSlackCreateIncidentChannel     *V3WorkflowsSlackCreateIncidentChannel     `queryParam:"inline,name=V3_Workflows_ActionResponse" union:"member"`
+	V3WorkflowsJiraCreateTicket               *V3WorkflowsJiraCreateTicket               `queryParam:"inline,name=V3_Workflows_ActionResponse" union:"member"`
+	V3WorkflowsMsTeamsMessageChannel          *V3WorkflowsMsTeamsMessageChannel          `queryParam:"inline,name=V3_Workflows_ActionResponse" union:"member"`
+	V3WorkflowsMsTeamsMessageUser             *V3WorkflowsMsTeamsMessageUser             `queryParam:"inline,name=V3_Workflows_ActionResponse" union:"member"`
+	V3WorkflowsSqSendEmail                    *V3WorkflowsSqSendEmail                    `queryParam:"inline,name=V3_Workflows_ActionResponse" union:"member"`
+	V3WorkflowsMsTeamsCreateMeetingLink       *V3WorkflowsMsTeamsCreateMeetingLink       `queryParam:"inline,name=V3_Workflows_ActionResponse" union:"member"`
+	Any                                       any                                        `queryParam:"inline,name=V3_Workflows_ActionResponse" union:"member"`
 
 	Type V3WorkflowsActionResponseType
 }

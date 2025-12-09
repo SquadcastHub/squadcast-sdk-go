@@ -23,7 +23,7 @@ func (v V3IncidentsTagsPinnedMessage) MarshalJSON() ([]byte, error) {
 }
 
 func (v *V3IncidentsTagsPinnedMessage) UnmarshalJSON(data []byte) error {
-	if err := utils.UnmarshalJSON(data, &v, "", false, []string{"message", "message_sender_id", "time", "time_of_pinning", "message_id", "message_pinned_by", "message_sender_name"}); err != nil {
+	if err := utils.UnmarshalJSON(data, &v, "", false, nil); err != nil {
 		return err
 	}
 	return nil

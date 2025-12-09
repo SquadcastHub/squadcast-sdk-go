@@ -26,7 +26,7 @@ func (v V4StatusPagesIssuesGetIssueByIDResponse) MarshalJSON() ([]byte, error) {
 }
 
 func (v *V4StatusPagesIssuesGetIssueByIDResponse) UnmarshalJSON(data []byte) error {
-	if err := utils.UnmarshalJSON(data, &v, "", false, []string{"id", "title", "lastUpdatedAt", "components", "issues", "currentIssueState", "pageStatus", "underMaintenance", "statusMaintenance", "pageID", "isMigrated"}); err != nil {
+	if err := utils.UnmarshalJSON(data, &v, "", false, nil); err != nil {
 		return err
 	}
 	return nil
