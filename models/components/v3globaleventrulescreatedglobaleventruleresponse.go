@@ -26,7 +26,7 @@ func (v V3GlobalEventRulesCreatedGlobalEventRuleResponse) MarshalJSON() ([]byte,
 }
 
 func (v *V3GlobalEventRulesCreatedGlobalEventRuleResponse) UnmarshalJSON(data []byte) error {
-	if err := utils.UnmarshalJSON(data, &v, "", false, []string{"id", "owner_id", "name", "description", "routing_key", "created_at", "created_by", "updated_at", "updated_by"}); err != nil {
+	if err := utils.UnmarshalJSON(data, &v, "", false, nil); err != nil {
 		return err
 	}
 	return nil

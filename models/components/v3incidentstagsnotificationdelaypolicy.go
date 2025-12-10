@@ -20,7 +20,7 @@ func (v V3IncidentsTagsNotificationDelayPolicy) MarshalJSON() ([]byte, error) {
 }
 
 func (v *V3IncidentsTagsNotificationDelayPolicy) UnmarshalJSON(data []byte) error {
-	if err := utils.UnmarshalJSON(data, &v, "", false, []string{"is_notification_delayed", "delayed_until", "assign_to"}); err != nil {
+	if err := utils.UnmarshalJSON(data, &v, "", false, nil); err != nil {
 		return err
 	}
 	return nil

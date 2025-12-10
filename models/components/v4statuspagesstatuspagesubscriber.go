@@ -22,7 +22,7 @@ func (v V4StatusPagesStatusPageSubscriber) MarshalJSON() ([]byte, error) {
 }
 
 func (v *V4StatusPagesStatusPageSubscriber) UnmarshalJSON(data []byte) error {
-	if err := utils.UnmarshalJSON(data, &v, "", false, []string{"id", "type", "emailID", "webhookURL", "status", "subscribedOn"}); err != nil {
+	if err := utils.UnmarshalJSON(data, &v, "", false, nil); err != nil {
 		return err
 	}
 	return nil

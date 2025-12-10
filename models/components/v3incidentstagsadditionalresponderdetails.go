@@ -22,7 +22,7 @@ func (v V3IncidentsTagsAdditionalResponderDetails) MarshalJSON() ([]byte, error)
 }
 
 func (v *V3IncidentsTagsAdditionalResponderDetails) UnmarshalJSON(data []byte) error {
-	if err := utils.UnmarshalJSON(data, &v, "", false, []string{"id", "type", "timeOfAssignment", "reason", "name", "last_notified_at"}); err != nil {
+	if err := utils.UnmarshalJSON(data, &v, "", false, nil); err != nil {
 		return err
 	}
 	return nil

@@ -46,7 +46,7 @@ func (v V3SLOSLODetailedResponse) MarshalJSON() ([]byte, error) {
 }
 
 func (v *V3SLOSLODetailedResponse) UnmarshalJSON(data []byte) error {
-	if err := utils.UnmarshalJSON(data, &v, "", false, []string{"id", "name", "time_interval_type", "service_ids", "slis", "target_slo", "start_time", "end_time", "allocated_error_budget", "is_active", "owner_type", "owner_id", "org_id"}); err != nil {
+	if err := utils.UnmarshalJSON(data, &v, "", false, nil); err != nil {
 		return err
 	}
 	return nil

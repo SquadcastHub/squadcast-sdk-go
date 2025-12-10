@@ -1,5 +1,4 @@
-# Webhook
-(*Incidents.Actions.Webhook*)
+# Incidents.Actions.Webhook
 
 ## Overview
 

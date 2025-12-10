@@ -26,7 +26,7 @@ func (v V3RunbooksUpdationInfo) MarshalJSON() ([]byte, error) {
 }
 
 func (v *V3RunbooksUpdationInfo) UnmarshalJSON(data []byte) error {
-	if err := utils.UnmarshalJSON(data, &v, "", false, []string{"user_name", "username_for_display", "user_id", "at"}); err != nil {
+	if err := utils.UnmarshalJSON(data, &v, "", false, nil); err != nil {
 		return err
 	}
 	return nil

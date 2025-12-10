@@ -16,8 +16,8 @@ const (
 )
 
 type Status struct {
-	Str     *string `queryParam:"inline,name=status"`
-	Integer *int64  `queryParam:"inline,name=status"`
+	Str     *string `queryParam:"inline,name=status" union:"member"`
+	Integer *int64  `queryParam:"inline,name=status" union:"member"`
 
 	Type StatusType
 }

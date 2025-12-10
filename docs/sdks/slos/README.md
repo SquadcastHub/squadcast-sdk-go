@@ -1,5 +1,4 @@
 # Slos
-(*Slos*)
 
 ## Overview
 

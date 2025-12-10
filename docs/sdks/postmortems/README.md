@@ -1,5 +1,4 @@
-# Postmortems
-(*Incidents.Postmortems*)
+# Incidents.Postmortems
 
 ## Overview
 
