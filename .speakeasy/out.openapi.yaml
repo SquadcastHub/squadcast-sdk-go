@@ -5972,7 +5972,7 @@ paths:
     post:
       operationId: "Incidents_bulkAcknowledgeIncidents"
       summary: "Bulk Acknowledge Incidents"
-      description: "- This endpoint is used to bulk acknowledge the incident by IDs.\n- Requires `access_token` as a `Bearer {{token}}` in the `Authorization` header."
+      description: "- This endpoint is used to bulk acknowledge the incident by IDs. The API can handle a maximum of 100 incident IDs in a single request with 10 such calls per minute.\"\n- Requires `access_token` as a `Bearer {{token}}` in the `Authorization` header."
       responses:
         "200":
           description: "The request has succeeded."
@@ -6689,7 +6689,7 @@ paths:
     post:
       operationId: "Incidents_bulkResolveIncidents"
       summary: "Bulk Resolve Incidents"
-      description: "- This endpoint is used to bulk resolve the incident by IDs.\n- Requires `access_token` as a `Bearer {{token}}` in the `Authorization` header."
+      description: "- This endpoint is used to bulk resolve the incident by IDs. The API can handle a maximum of 100 incident IDs in a single request with 10 such calls per minute.\"\n- Requires `access_token` as a `Bearer {{token}}` in the `Authorization` header."
       responses:
         "200":
           description: "The request has succeeded."
@@ -32647,6 +32647,7 @@ components:
           type: "array"
           items:
             type: "string"
+          maxItems: 100
       description: "Request body for bulk incident operations (acknowledge, resolve)."
     "V3.Incidents.BulkIncidentsPriorityUpdateRequest":
       type: "object"

@@ -55,7 +55,7 @@ func newIncidents(rootSDK *SquadcastSDK, sdkConfig config.SDKConfiguration, hook
 }
 
 // BulkAcknowledge - Bulk Acknowledge Incidents
-// - This endpoint is used to bulk acknowledge the incident by IDs.
+// - This endpoint is used to bulk acknowledge the incident by IDs. The API can handle a maximum of 100 incident IDs in a single request with 10 such calls per minute."
 // - Requires `access_token` as a `Bearer {{token}}` in the `Authorization` header.
 func (s *Incidents) BulkAcknowledge(ctx context.Context, request components.V3IncidentsBulkIncidentIDsRequest, opts ...operations.Option) (*operations.IncidentsBulkAcknowledgeIncidentsResponse, error) {
 	o := operations.Options{}
@@ -1968,7 +1968,7 @@ func (s *Incidents) BulkUpdatePriority(ctx context.Context, request components.V
 }
 
 // BulkResolve - Bulk Resolve Incidents
-// - This endpoint is used to bulk resolve the incident by IDs.
+// - This endpoint is used to bulk resolve the incident by IDs. The API can handle a maximum of 100 incident IDs in a single request with 10 such calls per minute."
 // - Requires `access_token` as a `Bearer {{token}}` in the `Authorization` header.
 func (s *Incidents) BulkResolve(ctx context.Context, request components.V3IncidentsBulkIncidentIDsRequest, opts ...operations.Option) (*operations.IncidentsBulkResolveIncidentsResponse, error) {
 	o := operations.Options{}

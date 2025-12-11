@@ -1,18 +1,18 @@
 lockVersion: 2.0.0
 id: 7a7261d5-2250-476e-aec3-fbdbd07e5853
 management:
-  docChecksum: d421cf64ccdf2fd1e3a91f14e780f862
+  docChecksum: 6f9245994c7886a3ec3beefcc9d24179
   docVersion: 1.0.0
-  speakeasyVersion: 1.674.0
-  generationVersion: 2.778.0
-  releaseVersion: 1.4.0
-  configChecksum: 8789eb5081ddbb52fc84ee45c6b3ad37
+  speakeasyVersion: 1.675.4
+  generationVersion: 2.779.2
+  releaseVersion: 1.4.1
+  configChecksum: e5f3cbb5374c561ca5e68cc4627b0cc6
   repoURL: https://github.com/SquadcastHub/squadcast-sdk-go.git
   installationURL: https://github.com/SquadcastHub/squadcast-sdk-go
 persistentEdits:
-  generation_id: 83dd3b41-a096-43bb-803c-3da7af659d24
-  pristine_commit_hash: c179ae9fff812d2a72e8cdde777753aa55543778
-  pristine_tree_hash: ca96f01679752001f0a17cedf8bd94b99ae86097
+  generation_id: 8b487c71-9ec7-47fe-ac4f-37630f276670
+  pristine_commit_hash: 79a776c8469db69fa715a240125e526c9357d4f1
+  pristine_tree_hash: b376ed46b85873fed134fed8ec591b0bbb098a79
 features:
   go:
     additionalDependencies: 0.1.0
@@ -5411,8 +5411,8 @@ trackedFiles:
     pristine_git_object: 60dc67dd335cc5e9317fe88e9ff0eebd94686c79
   docs/sdks/incidents/README.md:
     id: 6ce620b07518
-    last_write_checksum: sha1:02ebc1952db7fb778e58b15268e345a6d197c672
-    pristine_git_object: 1ecb4e78974ec0315d8fcde2b4d9e850ec41df29
+    last_write_checksum: sha1:0beb4c0f89a7b9b57cd30128976c1b5d4dae775d
+    pristine_git_object: 01c8d53b646e38da5886e211f8abc66d777e8e8d
   docs/sdks/incidentsactions/README.md:
     id: c4891acabbd7
     last_write_checksum: sha1:34a1897c3f1be2092293c1092d4932961a6d594f
@@ -5603,8 +5603,8 @@ trackedFiles:
     pristine_git_object: dbe7aa2891185e34aa15de99b7b8cf3e8bdec240
   export.go:
     id: d363dc655a95
-    last_write_checksum: sha1:ea54a7de242abccd94eb6df1b37bf7f15fe1b96c
-    pristine_git_object: 22f6d566af2d05ed260a2efe9667de62928445e2
+    last_write_checksum: sha1:de78dce9ed5aa27edcee5ec6ef27177054e87881
+    pristine_git_object: 33b75b38ccccb6f6a80b65dff392f42ba5905630
   exports.go:
     id: 99a147928f19
     last_write_checksum: sha1:545cbc3e4bee5f8d145e0559c14153a5f91354fb
@@ -5639,16 +5639,16 @@ trackedFiles:
     pristine_git_object: 23d991e9fd51bf14f5ebe54ab434f6606848b0d8
   go.mod:
     id: c47645c391ad
-    last_write_checksum: sha1:5a47ed16f1706a2e2e990995dc2261b80340ee3e
-    pristine_git_object: 0d52085bba96f966283d7eeeddbf6661d254ff6f
+    last_write_checksum: sha1:65b380573cb943bfa38a65a44633593f70e32df8
+    pristine_git_object: f84361e354d9576cf7ea2db22b874282b6b122db
   incidentactions.go:
     id: 32acef3a66e1
     last_write_checksum: sha1:ba96ea8cc4b9081e95f06ab820ac96b6aa108496
     pristine_git_object: 6fdf5bfcf1ff48e05da0bc4f7d4304b767d5e41d
   incidents.go:
     id: ad38bd844f1f
-    last_write_checksum: sha1:fcc4e1f2c94730a3c9b116736405d3d78a791f9a
-    pristine_git_object: 3a4d8dd3124c63782747043bcd36aa4fa9fd09b8
+    last_write_checksum: sha1:d228da2e48d6b175c82041238eed32411587442f
+    pristine_git_object: ed545cd82610cf213d0707a8d94583af6ecb20b5
   incidentsactions.go:
     id: da4049ddead6
     last_write_checksum: sha1:0c41222042456749a92d8634ad93f0434ff6e5b9
@@ -8331,8 +8331,8 @@ trackedFiles:
     pristine_git_object: 01dd9829f087765325e4f0a72ea19c7e2b542d30
   squadcastsdk.go:
     id: dd0a0897c51f
-    last_write_checksum: sha1:c8cd247d53e9a59335ec39f40be83e95e0950338
-    pristine_git_object: d40bdb1e9d0de8da14b4d7da57f97ad81d7530cd
+    last_write_checksum: sha1:6a1018b7b5a4a470a139fed0c75c89c133a2c27e
+    pristine_git_object: acce82a1b22cc803d939ca6d6ffaf9ec0ac05291
   squads.go:
     id: 33f49cb23a78
     last_write_checksum: sha1:e0103d5bd6f8307b12e192bb4ac125d635ca762e
@@ -14956,13 +14956,6 @@ examples:
         "504":
           application/json: {"meta": {"status": "<value>", "error_message": "<value>"}}
 examplesVersion: 1.0.2
-releaseNotes: |
-  ## Go SDK Changes:
-  * `SquadcastSdk.AuditLogs.AuditLogsListAuditLogs()`: **Added**
-  * `SquadcastSdk.AuditLogs.AuditLogsExportAuditLogs()`: **Added**
-  * `SquadcastSdk.AuditLogs.AuditLogsListAuditLogsExportHistory()`: **Added**
-  * `SquadcastSdk.AuditLogs.AuditLogsGetAuditLogsExportHistoryById()`: **Added**
-  * `SquadcastSdk.AuditLogs.AuditLogsGetAuditLogById()`: **Added**
 generatedFiles:
   - .devcontainer/README.md
   - .devcontainer/devcontainer.json
