@@ -1,5 +1,4 @@
-# CustomContent
-(*Services.Overlays.CustomContent*)
+# Services.Overlays.CustomContent
 
 ## Overview
 

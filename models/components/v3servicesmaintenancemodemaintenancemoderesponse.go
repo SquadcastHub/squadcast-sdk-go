@@ -25,7 +25,7 @@ func (v V3ServicesMaintenanceModeMaintenanceModeResponse) MarshalJSON() ([]byte,
 }
 
 func (v *V3ServicesMaintenanceModeMaintenanceModeResponse) UnmarshalJSON(data []byte) error {
-	if err := utils.UnmarshalJSON(data, &v, "", false, []string{"service_id", "maintenance_from", "maintenance_till", "repetition_daily", "repetition_weekly", "repetition_two_weekly", "repetition_three_weekly", "repetition_monthly", "deleted", "repeat_till"}); err != nil {
+	if err := utils.UnmarshalJSON(data, &v, "", false, nil); err != nil {
 		return err
 	}
 	return nil

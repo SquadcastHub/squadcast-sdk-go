@@ -1,5 +1,4 @@
-# Issues
-(*StatusPages.Issues*)
+# StatusPages.Issues
 
 ## Overview
 

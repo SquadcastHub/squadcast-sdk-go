@@ -50,7 +50,7 @@ func (v V3ServicesServiceResponse) MarshalJSON() ([]byte, error) {
 }
 
 func (v *V3ServicesServiceResponse) UnmarshalJSON(data []byte) error {
-	if err := utils.UnmarshalJSON(data, &v, "", false, []string{"id", "name", "slug", "email", "escalation_policy_id", "organization_id", "api_key", "description", "owner", "maintainer", "tags", "auto_pause_transient_alerts_config", "intelligent_alerts_grouping_config", "delay_notification_config", "config", "created_at", "updated_at"}); err != nil {
+	if err := utils.UnmarshalJSON(data, &v, "", false, nil); err != nil {
 		return err
 	}
 	return nil

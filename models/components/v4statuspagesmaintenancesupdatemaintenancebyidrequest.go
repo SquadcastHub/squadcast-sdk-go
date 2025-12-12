@@ -20,7 +20,7 @@ func (v V4StatusPagesMaintenancesUpdateMaintenanceByIDRequest) MarshalJSON() ([]
 }
 
 func (v *V4StatusPagesMaintenancesUpdateMaintenanceByIDRequest) UnmarshalJSON(data []byte) error {
-	if err := utils.UnmarshalJSON(data, &v, "", false, []string{"title", "note", "startTime", "endTime"}); err != nil {
+	if err := utils.UnmarshalJSON(data, &v, "", false, nil); err != nil {
 		return err
 	}
 	return nil

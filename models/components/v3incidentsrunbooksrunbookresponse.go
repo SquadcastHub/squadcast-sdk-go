@@ -18,7 +18,7 @@ func (s Step) MarshalJSON() ([]byte, error) {
 }
 
 func (s *Step) UnmarshalJSON(data []byte) error {
-	if err := utils.UnmarshalJSON(data, &s, "", false, []string{"content", "completed"}); err != nil {
+	if err := utils.UnmarshalJSON(data, &s, "", false, nil); err != nil {
 		return err
 	}
 	return nil
@@ -60,7 +60,7 @@ func (v V3IncidentsRunbooksRunbookResponse) MarshalJSON() ([]byte, error) {
 }
 
 func (v *V3IncidentsRunbooksRunbookResponse) UnmarshalJSON(data []byte) error {
-	if err := utils.UnmarshalJSON(data, &v, "", false, []string{"incident_id", "runbook_id", "name", "steps"}); err != nil {
+	if err := utils.UnmarshalJSON(data, &v, "", false, nil); err != nil {
 		return err
 	}
 	return nil

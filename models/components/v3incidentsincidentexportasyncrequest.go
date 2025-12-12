@@ -23,7 +23,7 @@ func (v V3IncidentsIncidentExportAsyncRequest) MarshalJSON() ([]byte, error) {
 }
 
 func (v *V3IncidentsIncidentExportAsyncRequest) UnmarshalJSON(data []byte) error {
-	if err := utils.UnmarshalJSON(data, &v, "", false, []string{"owner_id", "type", "start_time", "end_time", "incident_filters"}); err != nil {
+	if err := utils.UnmarshalJSON(data, &v, "", false, nil); err != nil {
 		return err
 	}
 	return nil
