@@ -1,5 +1,4 @@
-# TaggingRules
-(*Services.TaggingRules*)
+# Services.TaggingRules
 
 ## Overview
 

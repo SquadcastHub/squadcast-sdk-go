@@ -1,5 +1,4 @@
 # Notes
-(*Notes*)
 
 ## Overview
 

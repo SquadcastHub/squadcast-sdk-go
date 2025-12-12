@@ -26,7 +26,7 @@ func (v V3SLOSLOAction) MarshalJSON() ([]byte, error) {
 }
 
 func (v *V3SLOSLOAction) UnmarshalJSON(data []byte) error {
-	if err := utils.UnmarshalJSON(data, &v, "", false, []string{"type"}); err != nil {
+	if err := utils.UnmarshalJSON(data, &v, "", false, nil); err != nil {
 		return err
 	}
 	return nil

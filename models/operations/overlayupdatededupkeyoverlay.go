@@ -89,8 +89,8 @@ const (
 
 // OverlayUpdateDedupKeyOverlayResponseBody - The request has succeeded.
 type OverlayUpdateDedupKeyOverlayResponseBody struct {
-	ResponseBody1 *ResponseBody1 `queryParam:"inline,name=ResponseBody"`
-	ResponseBody2 *ResponseBody2 `queryParam:"inline,name=ResponseBody"`
+	ResponseBody1 *ResponseBody1 `queryParam:"inline,name=ResponseBody" union:"member"`
+	ResponseBody2 *ResponseBody2 `queryParam:"inline,name=ResponseBody" union:"member"`
 
 	Type OverlayUpdateDedupKeyOverlayResponseBodyType
 }

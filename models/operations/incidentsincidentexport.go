@@ -36,7 +36,7 @@ func (i IncidentsIncidentExportRequest) MarshalJSON() ([]byte, error) {
 }
 
 func (i *IncidentsIncidentExportRequest) UnmarshalJSON(data []byte) error {
-	if err := utils.UnmarshalJSON(data, &i, "", false, []string{"start_time", "end_time", "type", "owner_id"}); err != nil {
+	if err := utils.UnmarshalJSON(data, &i, "", false, nil); err != nil {
 		return err
 	}
 	return nil

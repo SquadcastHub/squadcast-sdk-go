@@ -1,5 +1,4 @@
-# ExtensionsWebhooks
-(*Extensions.Webhooks*)
+# Extensions.Webhooks
 
 ## Overview
 

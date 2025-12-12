@@ -1,0 +1,9 @@
+# AuditLogsGetAuditLogByIDResponse
+
+
+## Fields
+
+| Field                                                                                                           | Type                                                                                                            | Required                                                                                                        | Description                                                                                                     |
+| --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- |
+| `HTTPMeta`                                                                                                      | [components.HTTPMetadata](../../models/components/httpmetadata.md)                                              | :heavy_check_mark:                                                                                              | N/A                                                                                                             |
+| `V3AuditLogsGetAuditLogByIDResponse`                                                                            | [*components.V3AuditLogsGetAuditLogByIDResponse](../../models/components/v3auditlogsgetauditlogbyidresponse.md) | :heavy_minus_sign:                                                                                              | The request has succeeded.                                                                                      |
